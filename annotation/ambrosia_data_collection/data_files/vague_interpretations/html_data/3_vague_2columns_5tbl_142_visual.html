@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Reporters</h2><table><thead>
+<tr><th>ReporterID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emily.white@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Green</td><td>david.green@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Reporters.ReporterID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Importance of Investigative Journalism</td><td>Investigative journalism is essential...</td><td>2022-07-01 08:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Climate Change and Its Impact on Society</td><td>Climate change has far-reaching effects...</td><td>2022-07-02 10:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>Technology Advances in News Reporting</td><td>Advances in technology have revolutionized...</td><td>2022-07-03 12:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>Coverage of Conflicts Around the World</td><td>Journalists play a crucial role in reporting...</td><td>2022-07-04 14:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>Freedom of the Press and its Role in Democracy</td><td>A free press is vital to maintaining...</td><td>2022-07-05 16:00:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>SourceID</th><th>Name</th><th>ContactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Associated Press</td><td>https://www.apnews.com/contact</td></tr>
+<tr><td>2</td><td>Reuters</td><td>https://www.reuters.com/contact</td></tr>
+<tr><td>3</td><td>Bloomberg</td><td>https://www.bloomberg.com/contact</td></tr>
+<tr><td>4</td><td>CNN</td><td>https://edition.cnn.com/contacts</td></tr>
+<tr><td>5</td><td>Al Jazeera</td><td>http://www.aljazeera.net/aboutus/contacts</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleSources</h2><table><thead>
+<tr><th>ArticleSourceID</th><th>ArticleID</th><th>SourceID</th><th>Quote</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th>(&#8594; Sources.SourceID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Quote from Associated Press source</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Quote from Reuters source</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Quote from Bloomberg source</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Quote from CNN source</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Quote from Al Jazeera source</td></tr>
+</tbody></table></div>
+
+<div><h2>PressConferences</h2><table><thead>
+<tr><th>ConferenceID</th><th><span style="color:#990000">Date</span></th><th><span style="color:#990000">Time</span></th><th>Location</th><th>Subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-07-06</td><td>10:00:00</td><td>Washington DC</td><td>President's Annual Address</td></tr>
+<tr><td>2</td><td>2022-07-07</td><td>14:00:00</td><td>New York City</td><td>United Nations Summit</td></tr>
+<tr><td>3</td><td>2022-07-08</td><td>16:00:00</td><td>London</td><td>G7 Leaders Meeting</td></tr>
+<tr><td>4</td><td>2022-07-09</td><td>08:00:00</td><td>Paris</td><td>EU Climate Conference</td></tr>
+<tr><td>5</td><td>2022-07-10</td><td>12:00:00</td><td>Tokyo</td><td>Asia Pacific Economic Cooperation (APEC)</td></tr>
+</tbody></table></div>
+
+<div><h2>ReportersAttending</h2><table><thead>
+<tr><th>ReporterAttendeeID</th><th>ReporterID</th><th>ConferenceID</th></tr>
+<tr><th></th><th>(&#8594; Reporters.ReporterID)</th><th>(&#8594; PressConferences.ConferenceID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

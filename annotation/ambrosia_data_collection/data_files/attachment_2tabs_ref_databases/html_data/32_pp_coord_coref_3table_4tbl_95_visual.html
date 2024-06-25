@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Stars</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Mia Zhang</span></td></tr>
+<tr><td>2</td><td>John Doe</td></tr>
+<tr><td>3</td><td>Jane Smith</td></tr>
+<tr><td>4</td><td>Alice Johnson</td></tr>
+<tr><td>5</td><td>Bob Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Western_Movies</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>star_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Stars.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Good, The Bad and The Ugly</td><td>1966</td><td>1</td></tr>
+<tr><td>2</td><td>Once Upon a Time in the West</td><td>1968</td><td>2</td></tr>
+<tr><td>3</td><td>A Fistful of Dollars</td><td>1964</td><td>3</td></tr>
+<tr><td>4</td><td>For a Few Dollars More</td><td>1965</td><td>4</td></tr>
+<tr><td>5</td><td>High Plains Drifter</td><td>1973</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Science_Fiction_Movies</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>star_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Stars.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Blade Runner</td><td>1982</td><td>1</td></tr>
+<tr><td>2</td><td>Alien</td><td>1979</td><td>2</td></tr>
+<tr><td>3</td><td>Star Wars</td><td>1977</td><td>3</td></tr>
+<tr><td>4</td><td>Eternal Sunshine of the Spotless Mind</td><td>2004</td><td>4</td></tr>
+<tr><td>5</td><td>Inception</td><td>2010</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Clint</td><td>Eastwood</td><td>1930-05-31</td></tr>
+<tr><td>2</td><td>Henry</td><td>Fonda</td><td>1905-18-16</td></tr>
+<tr><td>3</td><td>Lee</td><td>Van Cleef</td><td>1925-01-9</td></tr>
+<tr><td>4</td><td>Charles</td><td>Bronson</td><td>1921-11-03</td></tr>
+<tr><td>5</td><td>Sergio</td><td>Leone</td><td>1929-01-03</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>id</th><th>movie_title</th><th>actor_id</th><th>character_name</th></tr>
+<tr><th></th><th></th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Good, The Bad and The Ugly</td><td>1</td><td>Monco</td></tr>
+<tr><td>2</td><td>Once Upon a Time in the West</td><td>2</td><td>Harmonica</td></tr>
+<tr><td>3</td><td>A Fistful of Dollars</td><td>3</td><td>Joe</td></tr>
+<tr><td>4</td><td>For a Few Dollars More</td><td>4</td><td>Colonel Douglas Mortimer</td></tr>
+<tr><td>5</td><td>High Plains Drifter</td><td>5</td><td>Nathan Burdette</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Genres</h2><table><thead>
+<tr><th>id</th><th>genre_type</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action & Adventure</td><td>Exciting stories full of action and adventure.</td></tr>
+<tr><td>2</td><td>Drama</td><td>Films that focus on realistic characters and situations.</td></tr>
+<tr><td>3</td><td>Comedy</td><td>Funny movies meant to entertain and make people laugh.</td></tr>
+<tr><td>4</td><td>Romance</td><td>Love stories focusing on relationships between two people.</td></tr>
+<tr><td>5</td><td>Horror</td><td>Scary films intended to frighten viewers.</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>genre_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movie_Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Good, The Bad and The Ugly</td><td>1966</td><td>1</td></tr>
+<tr><td>2</td><td>Once Upon a Time in the West</td><td>1968</td><td>2</td></tr>
+<tr><td>3</td><td>A Fistful of Dollars</td><td>1964</td><td>3</td></tr>
+<tr><td>4</td><td>For a Few Dollars More</td><td>1965</td><td>4</td></tr>
+<tr><td>5</td><td>High Plains Drifter</td><td>1973</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

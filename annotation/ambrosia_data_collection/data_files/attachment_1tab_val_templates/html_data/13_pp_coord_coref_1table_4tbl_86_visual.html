@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">reporters</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#186e16"><span style="color:#186e16">role</span></span></th><th><span style="color:#1430b2">deadline</span></th><th>assigned_newsroom</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; newsrooms.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#186e16">Reporter</span></td><td><span style="color:#1430b2">2021-03-18 16:39:07</span></td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#186e16">Reporter</span></td><td>2021-03-22 16:39:07</td><td>2</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td><span style="color:#186e16">Photographer</span></td><td><span style="color:#1430b2">2021-03-18 16:39:07</span></td><td>3</td></tr>
+<tr><td>4</td><td>Anna Brown</td><td><span style="color:#186e16">Photographer</span></td><td>2021-03-22 16:39:07</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>storyIdeas</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>pitchDate</th><th>assignedTo</th><th>status</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; reporters.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Climate Change Impact</td><td>Impact of climate change on coastal cities</td><td>2021-03-15 16:39:07</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Technology Advancement</td><td>Latest advancements in artificial intelligence</td><td>2021-03-15 16:39:07</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Covid Vaccine Rollout</td><td>Global rollout of Covid vaccine</td><td>2021-03-15 16:39:07</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Space Exploration</td><td>Recent achievements in space exploration</td><td>2021-03-15 16:39:07</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>Economic Recovery</td><td>Strategies for economic recovery post pandemic</td><td>2021-03-15 16:39:07</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>publications</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publishDate</th><th>associatedStoryId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; storyIdeas.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Climate Crisis</td><td>Effects of climate change on human life...</td><td>2021-03-16 16:39:07</td><td>1</td></tr>
+<tr><td>2</td><td>AI Revolution</td><td>Artificial Intelligence has changed our lives like never before...</td><td>2021-03-16 16:39:07</td><td>2</td></tr>
+<tr><td>3</td><td>Vaccination Drive</td><td>How the global vaccination drive against COVID...</td><td>2021-03-16 16:39:07</td><td>3</td></tr>
+<tr><td>4</td><td>New Horizons in Space</td><td>Astronomers have discovered new celestial bodies...</td><td>2021-03-16 16:39:07</td><td>4</td></tr>
+<tr><td>5</td><td>Post Pandemic Economy</td><td>What does a post-COVID economy look like? ...</td><td>2021-03-16 16:39:07</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>readershipStats</h2><table><thead>
+<tr><th>id</th><th>publicationId</th><th>numPageViews</th><th>avgTimeSpentReading</th></tr>
+<tr><th></th><th>(&#8594; publications.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>200</td><td>10</td></tr>
+<tr><td>2</td><td>2</td><td>400</td><td>20</td></tr>
+<tr><td>3</td><td>3</td><td>150</td><td>5</td></tr>
+<tr><td>4</td><td>4</td><td>300</td><td>15</td></tr>
+<tr><td>5</td><td>5</td><td>250</td><td>12</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Film_Festivals</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York International Documentary Festival</td><td>New York City</td></tr>
+<tr><td>2</td><td>Los Angeles Short Film Festival</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Austin Experimental Film Festival</td><td>Austin</td></tr>
+<tr><td>4</td><td>International Animation Film Festival</td><td>London</td></tr>
+<tr><td>5</td><td>World Narrative Film Festival</td><td>Toronto</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Categories</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">category_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Documentary_Films</td></tr>
+<tr><td>2</td><td>Narrative_Films</td></tr>
+<tr><td>3</td><td>Experimental_Films</td></tr>
+<tr><td>4</td><td>Animation_Films</td></tr>
+<tr><td>5</td><td>Short_Films</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Festivals_Categories</h2><table><thead>
+<tr><th>film_festival_id</th><th>category_id</th></tr>
+<tr><th>(&#8594; Film_Festivals.id)</th><th>(&#8594; Categories.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

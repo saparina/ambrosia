@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Streamings</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>duration</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie A</td><td>120</td><td>Action</td></tr>
+<tr><td>2</td><td>TV Show B</td><td>60</td><td>Drama</td></tr>
+<tr><td>3</td><td>Documentary C</td><td>90</td><td>Education</td></tr>
+<tr><td>4</td><td>Anime D</td><td>30</td><td>Animation</td></tr>
+<tr><td>5</td><td>Cartoon E</td><td>24</td><td>Kids</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Data_Usage_Settings</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Unlimited</td><td>No restrictions on usage.</td></tr>
+<tr><td>2</td><td>Wifi_Only</td><td>Stream only when connected to WiFi.</td></tr>
+<tr><td>3</td><td>Mobile_Limited</td><td>Limit usage to mobile network with a certain amount of data per month.</td></tr>
+<tr><td>4</td><td>PAYG</td><td>Pay as you go - pay for what you use.</td></tr>
+</tbody></table></div>
+
+<div><h2>Streamings_Data_Usage_Settings</h2><table><thead>
+<tr><th>streaming_id</th><th>data_usage_setting_id</th></tr>
+<tr><th>(&#8594; Streamings.id)</th><th>(&#8594; Data_Usage_Settings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

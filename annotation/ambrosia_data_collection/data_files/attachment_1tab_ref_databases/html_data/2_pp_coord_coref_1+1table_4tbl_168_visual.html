@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>UK</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>Canada</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>Australia</td></tr>
+<tr><td>5</td><td>Charlie White</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Books</span></h2><table><thead>
+<tr><th>ISBN</th><th><span style="color:#990000"><span style="color:#990000">Title</span></span></th><th>YearOfPublication</th><th>Genre</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1234567890123</td><td><span style="color:#990000">Science Fiction Book</span></td><td><span style="color:#006600">2018</span></td><td>Science Fiction</td><td>1</td></tr>
+<tr><td>9876543210987</td><td>Another Science Fiction Book</td><td>2020</td><td>Science Fiction</td><td>1</td></tr>
+<tr><td>1122334455667</td><td><span style="color:#990000">Romance Book</span></td><td><span style="color:#006600">2018</span></td><td>Romance</td><td>2</td></tr>
+<tr><td>665544332211</td><td>Yet Another Romance Book</td><td>2019</td><td>Romance</td><td>2</td></tr>
+<tr><td>778899110000</td><td>Mystery Book</td><td>2017</td><td>Mystery</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Publisher A</td><td>New York</td></tr>
+<tr><td>2</td><td>Publisher B</td><td>London</td></tr>
+<tr><td>3</td><td>Publisher C</td><td>Toronto</td></tr>
+<tr><td>4</td><td>Publisher D</td><td>Sydney</td></tr>
+<tr><td>5</td><td>Publisher E</td><td>Berlin</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">BookPublishingHistory</span></h2><table><thead>
+<tr><th>PublishingID</th><th>ISBN</th><th>PublisherID</th><th><span style="color:#006600">YearOfPublication</span></th></tr>
+<tr><th></th><th>(&#8594; Books.ISBN)</th><th>(&#8594; Publishers.PublisherID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1234567890123</td><td>1</td><td><span style="color:#006600">2018</span></td></tr>
+<tr><td>2</td><td>9876543210987</td><td>2</td><td>2020</td></tr>
+<tr><td>3</td><td>1122334455667</td><td>3</td><td><span style="color:#006600">2018</span></td></tr>
+<tr><td>4</td><td>665544332211</td><td>4</td><td>2019</td></tr>
+<tr><td>5</td><td>778899110000</td><td>5</td><td>2017</td></tr>
+</tbody></table></div>
+
+<div><h2>SalesData</h2><table><thead>
+<tr><th>SaleID</th><th>ISBN</th><th>QuantitySold</th><th>Revenue</th><th>DateOfSale</th></tr>
+<tr><th></th><th>(&#8594; Books.ISBN)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1234567890123</td><td>500</td><td>10000</td><td>2021-08-01</td></tr>
+<tr><td>2</td><td>9876543210987</td><td>600</td><td>12000</td><td>2021-08-02</td></tr>
+<tr><td>3</td><td>1122334455667</td><td>400</td><td>8000</td><td>2021-08-03</td></tr>
+<tr><td>4</td><td>665544332211</td><td>300</td><td>6000</td><td>2021-08-04</td></tr>
+<tr><td>5</td><td>778899110000</td><td>200</td><td>4000</td><td>2021-08-05</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ReviewID</th><th>ISBN</th><th>Rating</th><th>Comment</th><th>DatePosted</th></tr>
+<tr><th></th><th>(&#8594; Books.ISBN)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1234567890123</td><td>5</td><td>Excellent book!</td><td>2021-08-01</td></tr>
+<tr><td>2</td><td>9876543210987</td><td>4</td><td>Good read.</td><td>2021-08-02</td></tr>
+<tr><td>3</td><td>1122334455667</td><td>3</td><td>Average story.</td><td>2021-08-03</td></tr>
+<tr><td>4</td><td>665544332211</td><td>2</td><td>Not my cup of tea.</td><td>2021-08-04</td></tr>
+<tr><td>5</td><td>778899110000</td><td>1</td><td>Did not like it at all.</td><td>2021-08-05</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

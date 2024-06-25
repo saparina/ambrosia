@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genres</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Drama</td></tr>
+<tr><td>3</td><td>Comedy</td></tr>
+<tr><td>4</td><td>Horror</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Jackson</td></tr>
+<tr><td>4</td><td>Emma</td><td>Watson</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseYear</th><th>genreId</th><th>directorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genres.id)</th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Blockbuster Movie</td><td>2018</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Another Blockbuster</td><td>2019</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Humorous Comedy</td><td>2020</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Scary Horror</td><td>2021</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmCrews</h2><table><thead>
+<tr><th>id</th><th>filmId</th><th>role</th><th>crewMemberId</th></tr>
+<tr><th></th><th>(&#8594; Films.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Director</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>Producer</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>Director</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>Producer</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td></tr>
+<tr><td>2</td><td>Keanu</td><td>Reeves</td></tr>
+<tr><td>3</td><td>Leonardo</td><td>DiCaprio</td></tr>
+<tr><td>4</td><td>Robert</td><td>Pattinson</td></tr>
+</tbody></table></div>
+
+<div><h2>Casts</h2><table><thead>
+<tr><th>id</th><th>filmId</th><th>actorId</th><th>character</th></tr>
+<tr><th></th><th>(&#8594; Films.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Lead Actor</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Supporting Role</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>Main Character</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>Villain</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>id</th><th>locationName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New Zealand</td></tr>
+<tr><td>2</td><td>Canada</td></tr>
+<tr><td>3</td><td>France</td></tr>
+<tr><td>4</td><td>Germany</td></tr>
+<tr><td>5</td><td>Italy</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">FilmingLocations</span></h2><table><thead>
+<tr><th>id</th><th>filmId</th><th><span style="color:#006600">locationId</span></th></tr>
+<tr><th></th><th>(&#8594; Films.id)</th><th>(&#8594; Locations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>6</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>7</td></tr>
+<tr><td>5</td><td>3</td><td>2</td></tr>
+<tr><td>6</td><td>3</td><td><span style="color:#006600">8</span></td></tr>
+<tr><td>7</td><td>4</td><td>4</td></tr>
+<tr><td><span style="color:#006600">8</span></td><td>4</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SciFi</span></h2><table><thead>
+<tr><th>id</th><th>filmId</th></tr>
+<tr><th></th><th>(&#8594; Films.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Fantasy</span></h2><table><thead>
+<tr><th>id</th><th>filmId</th></tr>
+<tr><th></th><th>(&#8594; Films.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Locations</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">LocationName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Times Square, New York</td></tr>
+<tr><td>2</td><td>Bryant Park, New York</td></tr>
+<tr><td>3</td><td><span style="color:#1430b2">Central Park, New York</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Shows</h2><table><thead>
+<tr><th>id</th><th>ShowTitle</th><th>StartTime</th><th>EndTime</th><th>LocationID</th><th>MagicianID</th><th>MimeID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Locations.id)</th><th>(&#8594; Magicians.id)</th><th>(&#8594; Mimes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Magic of Harry Houdini</td><td>2022-11-01 19:00:00</td><td>2022-11-01 21:00:00</td><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>A Night of Illusion</td><td>2022-11-02 19:00:00</td><td>2022-11-02 21:00:00</td><td>2</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>The Art of Silence</td><td>2022-11-03 19:00:00</td><td>2022-11-03 21:00:00</td><td>3</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>The World of Marvel</td><td>2022-11-04 19:00:00</td><td>2022-11-04 21:00:00</td><td>4</td><td>None</td><td>5</td></tr>
+<tr><td>5</td><td>Laughter and Wonder</td><td>2022-11-05 19:00:00</td><td>2022-11-05 21:00:00</td><td>5</td><td>4</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Tickets</h2><table><thead>
+<tr><th>id</th><th>PurchaserName</th><th>ShowID</th><th>SeatNumber</th><th>Price</th></tr>
+<tr><th></th><th></th><th>(&#8594; Shows.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1</td><td>1</td><td>25</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1</td><td>2</td><td>25</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>2</td><td>1</td><td>30</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>2</td><td>2</td><td>30</td></tr>
+<tr><td>5</td><td>Emma Wilson</td><td>3</td><td>1</td><td>35</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>id</th><th>ReviewerName</th><th>Rating</th><th>Comment</th><th>ShowID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Shows.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>5</td><td>Great show! Loved it!</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>4</td><td>Enjoyed the magic tricks!</td><td>1</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>3</td><td>Good performance but could have been better.</td><td>2</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>2</td><td>Not my cup of tea.</td><td>2</td></tr>
+<tr><td>5</td><td>Emma Wilson</td><td>4</td><td>Amazing mime performance!</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Magicians</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>Street_Location</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Locations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harry Houdini</td><td>130</td><td>1</td></tr>
+<tr><td>2</td><td>David Copperfield</td><td>65</td><td>2</td></tr>
+<tr><td>3</td><td>Criss Angel</td><td>47</td><td>3</td></tr>
+<tr><td>4</td><td>Dynamo</td><td>39</td><td>1</td></tr>
+<tr><td>5</td><td>Penn & Teller</td><td>75</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Mimes</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>Street_Location</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Locations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Marcel Marceau</td><td>88</td><td>1</td></tr>
+<tr><td>2</td><td>Whitey McConnell</td><td>95</td><td>2</td></tr>
+<tr><td>3</td><td>Charlie Chaplin</td><td>130</td><td>3</td></tr>
+<tr><td>4</td><td>Eric Jan De Groot</td><td>70</td><td>1</td></tr>
+<tr><td>5</td><td>Leonard Pitts Jr.</td><td>68</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

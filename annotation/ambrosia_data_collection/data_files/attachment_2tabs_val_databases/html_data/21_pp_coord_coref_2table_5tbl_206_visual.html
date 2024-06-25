@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>+1112223334</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td><td>+44556677889</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie.black@example.com</td><td>+22334455667</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Mortgages</span></h2><table><thead>
+<tr><th>MortgageID</th><th>CustomerID</th><th>PropertyAddress</th><th>MortgageAmount</th><th>RepaymentPeriod</th><th>InterestRate</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>123 Main St</td><td>200000.0</td><td><span style="color:#006600">30 years</span></td><td>4.5</td><td>2021-01-01</td><td>2051-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>456 Elm Street</td><td>350000.0</td><td>25 years</td><td>4</td><td>2022-01-01</td><td>2047-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">HomeEquityLoans</span></h2><table><thead>
+<tr><th>LoanID</th><th>CustomerID</th><th>PropertyAddress</th><th>LoanAmount</th><th>RepaymentPeriod</th><th>InterestRate</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>123 Main St</td><td>50000.0</td><td>20 years</td><td>5</td><td>2021-01-01</td><td>2041-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>456 Elm Street</td><td>65000.0</td><td><span style="color:#006600">30 years</span></td><td>4.75</td><td>2022-01-01</td><td>2052-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountID</th><th>CustomerID</th><th>AccountType</th><th>Balance</th><th>OpeningDate</th><th>CloseDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Checking</td><td>1000.0</td><td>2020-01-01</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>Savings</td><td>2000.0</td><td>2019-01-01</td><td>None</td></tr>
+<tr><td>3</td><td>1</td><td>CD</td><td>5000.0</td><td>2018-01-01</td><td>2025-01-01</td></tr>
+<tr><td>4</td><td>2</td><td>Money Market</td><td>10000.0</td><td>2017-01-01</td><td>2021-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountID</th><th>Amount</th><th>Date</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>-200.0</td><td>2021-01-15</td><td>Rent Payment</td></tr>
+<tr><td>2</td><td>1</td><td>500.0</td><td>2021-01-16</td><td>Salary Credit</td></tr>
+<tr><td>3</td><td>2</td><td>-1500.0</td><td>2021-01-17</td><td>Utility Bill Payment</td></tr>
+<tr><td>4</td><td>2</td><td>2000.0</td><td>2021-01-18</td><td>Paycheck Direct Deposit</td></tr>
+<tr><td>5</td><td>1</td><td>300.0</td><td>2021-01-19</td><td>Grocery Shopping</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

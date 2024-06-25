@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseYear</th><th>directorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Director.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>Interstellar</td><td>2014</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Nolan</td></tr>
+<tr><td>2</td><td>Matthew</td><td>McConaughey</td></tr>
+</tbody></table></div>
+
+<div><h2>Cast</h2><table><thead>
+<tr><th>movieId</th><th>actorId</th><th>role</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Director</td></tr>
+<tr><td>1</td><td>2</td><td>Cobb</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>genreText</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Adventure</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Genre</h2><table><thead>
+<tr><th>movieId</th><th>genreId</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Genre.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Age_Rating</span></h2><table><thead>
+<tr><th>ratingId</th><th>ageMinimum</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>18</td></tr>
+<tr><td>2</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Critical_Rating</span></h2><table><thead>
+<tr><th>ratingId</th><th>score</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>92</td></tr>
+<tr><td>2</td><td>89</td></tr>
+</tbody></table></div>
+
+<div><h2>Tv_Show</h2><table><thead>
+<tr><th>showId</th><th>title</th><th>network</th><th>premiereDate</th><th>ageRatingId</th><th>criticalScoreId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Age_Rating.ratingId)</th><th>(&#8594; Critical_Rating.ratingId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking Bad</td><td>AMC</td><td>2008-01-20</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Game of Thrones</td><td>HBO</td><td>2011-04-17</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

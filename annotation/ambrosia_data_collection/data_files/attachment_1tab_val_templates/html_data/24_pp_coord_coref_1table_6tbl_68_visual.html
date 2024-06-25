@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>RoomTypes</h2><table><thead>
+<tr><th>Id</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Single</td></tr>
+<tr><td>2</td><td>Double</td></tr>
+<tr><td>3</td><td>Twin</td></tr>
+<tr><td>4</td><td>Triple</td></tr>
+<tr><td>5</td><td>Suite</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>Id</th><th>RoomTypeId</th><th>FloorNumber</th></tr>
+<tr><th></th><th>(&#8594; RoomTypes.Id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>5</td><td>3</td></tr>
+<tr><td>6</td><td>6</td><td>4</td></tr>
+<tr><td>7</td><td>7</td><td>4</td></tr>
+<tr><td>8</td><td>8</td><td>5</td></tr>
+<tr><td>9</td><td>9</td><td>5</td></tr>
+<tr><td>10</td><td>10</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>Id</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+9876543210</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td><td>+1357924680</td></tr>
+<tr><td>4</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td><td>+1357924680</td></tr>
+<tr><td>5</td><td>David</td><td>White</td><td>david.white@example.com</td><td>+1357924680</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>Id</th><th>CheckInDate</th><th>CheckOutDate</th><th>RoomId</th><th>GuestId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Rooms.Id)</th><th>(&#8594; Guests.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 10:00:00</td><td>2022-01-05 10:00:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-10 10:00:00</td><td>2022-01-14 10:00:00</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2022-01-15 10:00:00</td><td>2022-01-19 10:00:00</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2022-01-20 10:00:00</td><td>2022-01-24 10:00:00</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2022-01-25 10:00:00</td><td>2022-01-29 10:00:00</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>2022-02-01 10:00:00</td><td>2022-02-05 10:00:00</td><td>6</td><td>6</td></tr>
+<tr><td>7</td><td>2022-02-10 10:00:00</td><td>2022-02-14 10:00:00</td><td>7</td><td>7</td></tr>
+<tr><td>8</td><td>2022-02-15 10:00:00</td><td>2022-02-19 10:00:00</td><td>8</td><td>8</td></tr>
+<tr><td>9</td><td>2022-02-20 10:00:00</td><td>2022-02-24 10:00:00</td><td>9</td><td>9</td></tr>
+<tr><td>10</td><td>2022-02-25 10:00:00</td><td>2022-02-29 10:00:00</td><td>10</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Staff</span></h2><table><thead>
+<tr><th>Id</th><th>Name</th><th><span style="color:#186e16"><span style="color:#186e16">Role</span></span></th><th><span style="color:#1430b2">Language</span></th><th>AdditionalColumn1</th><th>AdditionalColumn2</th><th>AdditionalColumn3</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pedro</td><td><span style="color:#186e16">Chef</span></td><td>Spanish</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>2</td><td>Emma</td><td><span style="color:#186e16">Chef</span></td><td><span style="color:#1430b2">English</span></td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>3</td><td>Lucas</td><td><span style="color:#186e16">Server</span></td><td>Spanish</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>4</td><td>Ava</td><td><span style="color:#186e16">Server</span></td><td><span style="color:#1430b2">English</span></td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>5</td><td>Carlos</td><td>Manager</td><td>Spanish</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>6</td><td>Emily</td><td>Receptionist</td><td><span style="color:#1430b2">English</span></td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>7</td><td>Manuel</td><td>Maintenance</td><td>Spanish</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>8</td><td>Grace</td><td>Housekeeping</td><td><span style="color:#1430b2">English</span></td><td>None</td><td>None</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

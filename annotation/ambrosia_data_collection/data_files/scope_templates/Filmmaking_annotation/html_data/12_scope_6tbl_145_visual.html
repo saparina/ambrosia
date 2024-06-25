@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Makeup_Artists</span></h2><table><thead>
+<tr><th>artist_id</th><th>full_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>Emily White</td></tr>
+<tr><td>5</td><td>David Green</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Techniques</span></h2><table><thead>
+<tr><th>technique_id</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Age_Progression</td></tr>
+<tr><td>2</td><td>Prosthetics</td></tr>
+<tr><td>3</td><td>Special_Effects_Makeup</td></tr>
+<tr><td>4</td><td>Corrective_Makeup</td></tr>
+<tr><td>5</td><td>Period_Makeup</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>movie_id</th><th>title</th><th>release_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The_Greatest_Showman</td><td>2017-12-08</td></tr>
+<tr><td>2</td><td>Black_Panther</td><td>2018-02-16</td></tr>
+<tr><td>3</td><td>Inception</td><td>2010-07-16</td></tr>
+<tr><td>4</td><td>Avatar</td><td>2009-12-18</td></tr>
+<tr><td>5</td><td>Interstellar</td><td>2014-11-07</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Makeup_Artists</h2><table><thead>
+<tr><th>movie_id</th><th>artist_id</th></tr>
+<tr><th>(&#8594; Movies.movie_id)</th><th>(&#8594; Makeup_Artists.artist_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Technique</h2><table><thead>
+<tr><th>movie_id</th><th>technique_id</th></tr>
+<tr><th>(&#8594; Movies.movie_id)</th><th>(&#8594; Techniques.technique_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Artist_Techniques</h2><table><thead>
+<tr><th>artist_id</th><th>technique_id</th></tr>
+<tr><th>(&#8594; Makeup_Artists.artist_id)</th><th>(&#8594; Techniques.technique_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

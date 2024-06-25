@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Clients</h2><table><thead>
+<tr><th>ClientID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>ClientID</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Clients.ClientID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>108765432</td><td>5</td><td>0.0</td></tr>
+<tr><td>123456789</td><td>1</td><td>0.0</td></tr>
+<tr><td>543210987</td><td>3</td><td>0.0</td></tr>
+<tr><td>654321098</td><td>4</td><td>0.0</td></tr>
+<tr><td>987654321</td><td>2</td><td>0.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Investments</h2><table><thead>
+<tr><th>InvestmentID</th><th>AccountNumber</th><th>InvestmentType</th><th>InvestmentValue</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123456789</td><td>Stocks</td><td>10000.0</td></tr>
+<tr><td>2</td><td>987654321</td><td>Bonds</td><td>20000.0</td></tr>
+<tr><td>3</td><td>543210987</td><td>Mutual Funds</td><td>30000.0</td></tr>
+<tr><td>4</td><td>654321098</td><td>Real Estate</td><td>40000.0</td></tr>
+<tr><td>5</td><td>108765432</td><td>Cryptocurrency</td><td>50000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Fundings</span></h2><table><thead>
+<tr><th>FundingID</th><th>AccountNumber</th><th><span style="color:#006600">FundingAmount</span></th><th>InvestmentType</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123456789</td><td>5000000.0</td><td>Growth Equity Firm</td></tr>
+<tr><td>2</td><td>123456789</td><td><span style="color:#006600">7500000.0</span></td><td>Venture Capital Trust</td></tr>
+<tr><td>3</td><td>987654321</td><td>5000000.0</td><td>Growth Equity Firm</td></tr>
+<tr><td>4</td><td>987654321</td><td><span style="color:#006600">7500000.0</span></td><td>Venture Capital Trust</td></tr>
+<tr><td>5</td><td>543210987</td><td>1000000.0</td><td>Private Equity</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">InvestmentCompanies</span></h2><table><thead>
+<tr><th>CompanyID</th><th><span style="color:#990000"><span style="color:#990000">Name</span></span></th><th>Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Growth Equity Firm</span></td><td>Equity</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Venture Capital Trust</span></td><td>Trust</td></tr>
+<tr><td>3</td><td>Angel Investor</td><td>Individual</td></tr>
+<tr><td>4</td><td>Seed Accelerator</td><td>Accelerator</td></tr>
+<tr><td>5</td><td>Private Equity Firm</td><td>Firm</td></tr>
+</tbody></table></div>
+
+<div><h2>InvestmentTransactions</h2><table><thead>
+<tr><th>TransactionID</th><th>InvestmentID</th><th>CompanyID</th><th>Amount</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Investments.InvestmentID)</th><th>(&#8594; InvestmentCompanies.CompanyID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>10000.0</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>15000.0</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>20000.0</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>25000.0</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>30000.0</td><td>2022-01-01 00:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

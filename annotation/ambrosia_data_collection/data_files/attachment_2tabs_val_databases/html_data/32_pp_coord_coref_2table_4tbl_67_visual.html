@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Actor</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mia Zhang</td></tr>
+<tr><td>2</td><td>John Doe</td></tr>
+<tr><td>3</td><td>Jane Smith</td></tr>
+<tr><td>4</td><td>Emily Johnson</td></tr>
+<tr><td>5</td><td>William Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>Genre</th><th>ReleaseDate</th><th>Rating</th></tr>
+<tr><th></th><th></th><th>(&#8594; Genres.Name)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Good The Bad And The Ugly</td><td>Western</td><td>1967-08-25</td><td>8.8</td></tr>
+<tr><td>2</td><td>Inception</td><td>Science Fiction</td><td>2010-07-16</td><td>8.8</td></tr>
+<tr><td>3</td><td>Django Unchained</td><td>Western</td><td>2012-12-25</td><td>8.4</td></tr>
+<tr><td>4</td><td>Interstellar</td><td>Science Fiction</td><td>2014-11-07</td><td>8.6</td></tr>
+<tr><td>5</td><td>Once Upon a Time In Hollywood</td><td>Western</td><td>2019-07-25</td><td>8.3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Western</span></h2><table><thead>
+<tr><th>WesternID</th><th>MovieID</th><th>StarID</th></tr>
+<tr><th></th><th>(&#8594; Movie.MovieID)</th><th>(&#8594; Actor.ActorID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>5</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ScienceFiction</span></h2><table><thead>
+<tr><th>SciFiID</th><th>MovieID</th><th>StarID</th></tr>
+<tr><th></th><th>(&#8594; Movie.MovieID)</th><th>(&#8594; Actor.ActorID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>2</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#006600">1</span></td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quentin Tarantino</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td></tr>
+<tr><td>3</td><td>Sergio Leone</td></tr>
+<tr><td>4</td><td>Denis Villeneuve</td></tr>
+<tr><td>5</td><td>Martin Scorsese</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieDirection</h2><table><thead>
+<tr><th>MovieDirectionID</th><th>MovieID</th><th>DirectorID</th></tr>
+<tr><th></th><th>(&#8594; Movie.MovieID)</th><th>(&#8594; Director.DirectorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

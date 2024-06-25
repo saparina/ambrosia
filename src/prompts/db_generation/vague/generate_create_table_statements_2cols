@@ -1,0 +1,3 @@
+Create multiple connected tables in the DOMAIN domain via SQLite. One of the tables must have columns named "GENERAL_CATEGORY1", "GENERAL_CATEGORY2" and "SUBJECT" and at least 4 more columns. Other tables and columns are arbitrary. Each table must contain at least 3 columns.
+
+Provide multiple CREATE TABLE statements in SQLite.

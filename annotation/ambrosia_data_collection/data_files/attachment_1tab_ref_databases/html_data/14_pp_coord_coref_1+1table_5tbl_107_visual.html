@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">EventTypes</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Acting School</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Festival</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Countries</span></h2><table><thead>
+<tr><th>code</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>GB</td><td><span style="color:#006600">United Kingdom</span></td></tr>
+<tr><td>US</td><td>United States</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>film_id</th><th>title</th><th>year</th><th>country_code</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Countries.code)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film A</td><td>2019.0</td><td>GB</td></tr>
+<tr><td>2</td><td>Film B</td><td>2020.0</td><td>US</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmEvents</h2><table><thead>
+<tr><th>event_id</th><th>film_id</th><th>event_type_id</th><th>date</th><th>location</th></tr>
+<tr><th></th><th>(&#8594; Films.film_id)</th><th>(&#8594; EventTypes.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2019-06-30</td><td>London</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2019-07-05</td><td>Edinburgh</td></tr>
+<tr><td>3</td><td>2</td><td>2</td><td>2020-08-05</td><td>New York</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>director_id</th><th>firstname</th><th>lastname</th><th>birthdate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td><td>UK</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-02-01</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmDirectorRelationships</h2><table><thead>
+<tr><th>film_director_rel_id</th><th>film_id</th><th>director_id</th><th>release_year</th></tr>
+<tr><th></th><th>(&#8594; Films.film_id)</th><th>(&#8594; Directors.director_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2019.0</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2020.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

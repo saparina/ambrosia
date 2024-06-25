@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td></tr>
+<tr><td>4</td><td>Emma</td><td>Wilson</td></tr>
+<tr><td>5</td><td>Chris</td><td>Jackson</td></tr>
+</tbody></table></div>
+
+<div><h2>Platforms</h2><table><thead>
+<tr><th>PlatformID</th><th><span style="color:#990000">PlatformName</span></th><th><span style="color:#990000">University</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Canvas</td><td>XYZ University</td></tr>
+<tr><td>2</td><td>Blackboard</td><td>ABC College</td></tr>
+<tr><td>3</td><td>Moodle</td><td>DEF Institute</td></tr>
+<tr><td>4</td><td>Google Classroom</td><td>GHI School</td></tr>
+<tr><td>5</td><td>Schoology</td><td>JKL Academy</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>DepartmentName</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>This department offers courses in computer science.</td></tr>
+<tr><td>2</td><td>Mathematics</td><td>The mathematics department provides a variety of math courses.</td></tr>
+<tr><td>3</td><td>Physics</td><td>Our physics department is known for its cutting-edge research facilities.</td></tr>
+<tr><td>4</td><td>Biology</td><td>We offer a comprehensive curriculum in biology at all levels.</td></tr>
+<tr><td>5</td><td>English</td><td>Our English department focuses on literature and writing.</td></tr>
+</tbody></table></div>
+
+<div><h2>EnrolledStudents</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>DepartmentID</th><th>Semester</th><th>Year</th></tr>
+<tr><th></th><th></th><th>(&#8594; Departments.DepartmentID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>1</td><td>Fall</td><td>2020</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>2</td><td>Spring</td><td>2020</td></tr>
+<tr><td>3</td><td>General Physics I</td><td>3</td><td>Fall</td><td>2020</td></tr>
+<tr><td>4</td><td>Introductory Biology</td><td>4</td><td>Spring</td><td>2020</td></tr>
+<tr><td>5</td><td>Composition and Rhetoric</td><td>5</td><td>Fall</td><td>2020</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>InstructorID</th><th>Name</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. John Doe</td><td>johndoe@xyzuniversity.edu</td></tr>
+<tr><td>2</td><td>Professor Jane Smith</td><td>janesmith@abccollege.edu</td></tr>
+<tr><td>3</td><td>Assoc Prof Michael Brown</td><td>michaelbrown@definstitute.edu</td></tr>
+<tr><td>4</td><td>Asst Prof Emma Wilson</td><td>emmawilson@ghischool.edu</td></tr>
+<tr><td>5</td><td>Adjunct Chris Jackson</td><td>chrisjackson@jkllacademy.edu</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

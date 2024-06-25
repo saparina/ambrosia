@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tech Solutions Inc.</td><td>Technology</td></tr>
+<tr><td>2</td><td>Healthy Living LLC</td><td>Healthcare</td></tr>
+<tr><td>3</td><td>Financial Services Co.</td><td>Banking</td></tr>
+<tr><td>4</td><td>Green Energy Corp.</td><td>Energy</td></tr>
+<tr><td>5</td><td>Creative Studios Ltd.</td><td>Entertainment</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>LocationID</th><th>City</th><th>State</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>CA</td><td>USA</td></tr>
+<tr><td>3</td><td>Chicago</td><td>IL</td><td>USA</td></tr>
+<tr><td>4</td><td>Toronto</td><td>ON</td><td>Canada</td></tr>
+<tr><td>5</td><td>London</td><td>England</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ApplicantID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>michael.johnson@example.com</td><td>+1357924680</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>emily.williams@example.com</td><td>+0123456789</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>david.brown@example.com</td><td>+9876543210</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPostings</span></h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>CompanyID</th><th>Business_Profession</th><th>Working_Arrangement</th><th>LocationID</th><th>PostedDate</th><th>CloseDate</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th><th></th><th></th><th>(&#8594; Locations.LocationID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Sales Manager</span></td><td>Manage sales team and drive revenue growth.</td><td>1</td><td><span style="color:#990000">Sales Manager</span></td><td><span style="color:#006600">Hybrid</span></td><td>1</td><td>CURRENT_TIMESTAMP</td><td>2023-01-31</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Sales Manager</span></td><td>Lead and manage a high-performing sales team.</td><td>2</td><td><span style="color:#990000">Sales Manager</span></td><td>In-Office</td><td>2</td><td>CURRENT_TIMESTAMP</td><td>2023-01-31</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Marketing Specialist</span></td><td>Create and execute marketing strategies to increase brand awareness.</td><td>1</td><td><span style="color:#990000">Marketing Specialist</span></td><td><span style="color:#006600">Hybrid</span></td><td>1</td><td>CURRENT_TIMESTAMP</td><td>2023-01-31</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Marketing Specialist</span></td><td>Develop and implement effective marketing campaigns.</td><td>3</td><td><span style="color:#990000">Marketing Specialist</span></td><td>Remote</td><td>3</td><td>CURRENT_TIMESTAMP</td><td>2023-01-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

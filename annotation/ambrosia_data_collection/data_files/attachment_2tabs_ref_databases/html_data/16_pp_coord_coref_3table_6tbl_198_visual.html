@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Topics</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">topic</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Environmental Science</span></td></tr>
+<tr><td>2</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Physics</td></tr>
+<tr><td>4</td><td>Chemistry</td></tr>
+<tr><td>5</td><td>Biology</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Case_studies</span></h2><table><thead>
+<tr><th>id</th><th>case_description</th><th>topic_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Topics.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A study of deforestation and its effects</td><td>1</td></tr>
+<tr><td>2</td><td>An analysis of the impact of plastic pollution</td><td>2</td></tr>
+<tr><td>3</td><td>Exploring alternative energy sources</td><td>3</td></tr>
+<tr><td>4</td><td>The role of chemistry in climate change</td><td>4</td></tr>
+<tr><td>5</td><td>Investigating the importance of biodiversity</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Interviews</span></h2><table><thead>
+<tr><th>id</th><th>interviewee</th><th>interview_date</th><th>topic_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Topics.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Jane Smith</td><td>2022-06-08 10:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Dr. John Doe</td><td>2022-07-12 14:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>Prof. Alice Brown</td><td>2022-08-15 09:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>Dr. Bob Johnson</td><td>2022-09-20 11:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>Ms. Carol White</td><td>2022-10-25 16:00:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>student_name</th><th>major</th><th>case_study_id</th><th>interview_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Case_studies.id)</th><th>(&#8594; Interviews.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Johnson</td><td>Environmental Science</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>Biology</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>James Wilson</td><td>Chemistry</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Laura Martinez</td><td>Mathematics</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>David Rodriguez</td><td>Physics</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>id</th><th>teacher_name</th><th>subject</th><th>case_study_id</th><th>interview_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Case_studies.id)</th><th>(&#8594; Interviews.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr. Mark Taylor</td><td>Environmental Science</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Mrs. Susan Thompson</td><td>Physics</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Mr. Charles Lee</td><td>Mathematics</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Mrs. Linda Clark</td><td>Chemistry</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Mr. Robert Miller</td><td>Biology</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Resources</h2><table><thead>
+<tr><th>id</th><th>resource_type</th><th>resource_url</th><th>related_topic_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Topics.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article</td><td>https://www.example.com/defor...</td><td>1</td></tr>
+<tr><td>2</td><td>Video</td><td>https://www.youtube.com/watch?v=aBcDeFgHiJ&list=PLmQwX...</td><td>2</td></tr>
+<tr><td>3</td><td>Book</td><td>https://www.amazon.com/Green-R...</td><td>3</td></tr>
+<tr><td>4</td><td>Podcast</td><td>https://podcasts.apple.com/us/p...</td><td>4</td></tr>
+<tr><td>5</td><td>Website</td><td>https://www.earthday.org</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">University</span></h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harvard University</td></tr>
+<tr><td>2</td><td>Stanford University</td></tr>
+<tr><td>3</td><td>Massachusetts Institute of Technology</td></tr>
+<tr><td>4</td><td>California Institute of Technology</td></tr>
+<tr><td>5</td><td>Yale University</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">College</span></h2><table><thead>
+<tr><th>id</th><th>collegeName</th><th>universityId</th></tr>
+<tr><th></th><th></th><th>(&#8594; University.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John F. Kennedy School of Government</td><td>1</td></tr>
+<tr><td>2</td><td>School of Engineering and Applied Sciences</td><td>1</td></tr>
+<tr><td>3</td><td>Graduate School of Arts and Sciences</td><td>1</td></tr>
+<tr><td>4</td><td>Divinity School</td><td>1</td></tr>
+<tr><td>5</td><td>School of Architecture</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">AcademicProgram</span></h2><table><thead>
+<tr><th>programId</th><th>programName</th><th><span style="color:#006600">collegeId</span></th></tr>
+<tr><th></th><th></th><th>(&#8594; College.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Business Administration</td><td>1</td></tr>
+<tr><td>2</td><td>Computer Science</td><td>2</td></tr>
+<tr><td>3</td><td>Mathematics</td><td>3</td></tr>
+<tr><td>4</td><td>Physics</td><td>4</td></tr>
+<tr><td><span style="color:#006600">5</span></td><td>Philosophy</td><td><span style="color:#006600">5</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Course</h2><table><thead>
+<tr><th>courseId</th><th>title</th><th>academicProgramId</th></tr>
+<tr><th></th><th></th><th>(&#8594; AcademicProgram.programId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Business Management</td><td>1</td></tr>
+<tr><td>2</td><td>Advanced Calculus</td><td>3</td></tr>
+<tr><td>3</td><td>General Relativity</td><td>4</td></tr>
+<tr><td>4</td><td>Logic and Argumentation</td><td>5</td></tr>
+<tr><td>5</td><td>Ancient Greek Philosophy</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>studentId</th><th>firstName</th><th>lastName</th><th>enrolledCourseId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Course.courseId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Doe</td><td>1</td></tr>
+<tr><td>2</td><td>John</td><td>Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>3</td></tr>
+<tr><td>4</td><td>Michael</td><td>White</td><td>4</td></tr>
+<tr><td>5</td><td>Emma</td><td>Green</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollment</h2><table><thead>
+<tr><th>enrollmentId</th><th>studentId</th><th>courseId</th><th>grade</th></tr>
+<tr><th></th><th>(&#8594; Student.studentId)</th><th>(&#8594; Course.courseId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>B+</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>A</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>A-</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>B</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

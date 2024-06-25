@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Authors</span></h2><table><thead>
+<tr><th>AuthorID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Emily Thompson</td></tr>
+<tr><td>2</td><td><span style="color:#006600">John Doe</span></td></tr>
+<tr><td>3</td><td>Jane Smith</td></tr>
+<tr><td>4</td><td>Alice Johnson</td></tr>
+<tr><td>5</td><td>Bob Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Essays</span></h2><table><thead>
+<tr><th>EssayID</th><th>Title</th><th>Content</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Art of Storytelling</td><td>Storytelling has always been an important aspect...</td><td>1</td></tr>
+<tr><td>2</td><td>Understanding Human Behavior</td><td>Human behavior is a fascinating field that studies...</td><td>2</td></tr>
+<tr><td>3</td><td>Exploring Space</td><td>Space exploration has come a long way since its humble beginnings...</td><td>3</td></tr>
+<tr><td>4</td><td>Climate Change Impacts</td><td>Climate change is one of the most pressing issues facing our planet...</td><td>4</td></tr>
+<tr><td>5</td><td>The Future of Technology</td><td>Technology continues to evolve at breakneck speed, changing...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Letters</span></h2><table><thead>
+<tr><th>LetterID</th><th>Topic</th><th>Content</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Family Reunion Plans</td><td>Dear Dr. Thompson, I hope this letter finds you well....</td><td>1</td></tr>
+<tr><td>2</td><td>Book Review Request</td><td>Dear Mr. Doe, We would like to request your thoughts on our latest book release...</td><td>2</td></tr>
+<tr><td>3</td><td>Job Application Inquiry</td><td>Dear Ms. Smith, Thank you for considering my application for the position of Marketing Manager...</td><td>3</td></tr>
+<tr><td>4</td><td>Conference Invitation</td><td>Dear Mrs. Johnson, On behalf of the conference committee, we would like to invite you to participate in our upcoming event...</td><td>4</td></tr>
+<tr><td>5</td><td>Event Sponsorship Proposal</td><td>Dear Mr. Brown, Our organization is hosting an annual charity gala next month...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>ReleaseYear</th><th>Director</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Christopher Nolan</td></tr>
+<tr><td>2</td><td>Interstellar</td><td>2014</td><td>Christopher Nolan</td></tr>
+<tr><td>3</td><td>Gravity</td><td>2013</td><td>Alfonso Cuarón</td></tr>
+<tr><td>4</td><td>Avatar</td><td>2009</td><td>James Cameron</td></tr>
+<tr><td>5</td><td>Titanic</td><td>1997</td><td>James Cameron</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>FullName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td></tr>
+<tr><td>2</td><td>Tom Hardy</td></tr>
+<tr><td>3</td><td>Anne Hathaway</td></tr>
+<tr><td>4</td><td>Marion Cotillard</td></tr>
+<tr><td>5</td><td>Kate Winslet</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>RoleID</th><th>CharacterName</th><th>MovieID</th><th>ActorID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Movies.MovieID)</th><th>(&#8594; Actors.ActorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dom Cobb</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Aaron</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Robert Fischer</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Amelia</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Jack Dawson</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Schools</h2><table><thead>
+<tr><th>SchoolID</th><th>Name</th><th>Address</th><th>PhoneText</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC High School</td><td>123 Street View</td><td>+987654321</td></tr>
+<tr><td>2</td><td>XYZ Elementary School</td><td>456 Boulevard Place</td><td>+765432198</td></tr>
+<tr><td>3</td><td>LMN Middle School</td><td>789 Avenue Drive</td><td>+543219876</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>ClassID</th><th>SchoolID</th><th>TeacherName</th><th>Subject</th></tr>
+<tr><th></th><th>(&#8594; Schools.SchoolID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Mr. Smith</td><td>Math</td></tr>
+<tr><td>2</td><td>1</td><td>Mrs. Johnson</td><td>English</td></tr>
+<tr><td>3</td><td>2</td><td>Ms. Brown</td><td>History</td></tr>
+<tr><td>4</td><td>2</td><td>Mr. White</td><td>Science</td></tr>
+<tr><td>5</td><td>3</td><td>Mrs. Black</td><td>Art</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>EnrollmentDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>15</td><td>2021-09-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>14</td><td>2021-09-01</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>16</td><td>2021-09-01</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>17</td><td>2021-09-01</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>13</td><td>2021-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Enrollments</span></h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>ClassID</th><th>Educational_Activity</th><th>Number_of_students</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Classes.ClassID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td><span style="color:#990000">Field Trip</span></td><td><span style="color:#006600">50</span></td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td><span style="color:#990000">Field Trip</span></td><td>30</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td><span style="color:#990000">Study Hall</span></td><td><span style="color:#006600">50</span></td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td><span style="color:#990000">Study Hall</span></td><td>40</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>Project Day</td><td>25</td></tr>
+<tr><td>6</td><td>4</td><td>1</td><td>Lecture Series</td><td>20</td></tr>
+<tr><td>7</td><td>5</td><td>2</td><td>Workshop</td><td>22</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

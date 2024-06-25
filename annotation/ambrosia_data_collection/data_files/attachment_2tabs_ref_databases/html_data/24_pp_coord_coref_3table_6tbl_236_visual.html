@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Production_Companies</span></h2><table><thead>
+<tr><th>id</th><th>companyName</th><th>number_of_employees</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Titanic Productions</td><td>500</td></tr>
+<tr><td>2</td><td>Marvelous Pictures</td><td>300</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Distribution_Companies</span></h2><table><thead>
+<tr><th>id</th><th>distributorName</th><th>movieId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Movies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Global Film Distributors</td><td>1</td></tr>
+<tr><td>2</td><td>Silver Screen International</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>productionCompany</th></tr>
+<tr><th></th><th></th><th>(&#8594; Production_Companies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>1</td></tr>
+<tr><td>2</td><td>Inception</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Employees</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">firstName</span></th><th>lastName</th><th>position</th><th>movieId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Movies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">John</span></td><td>Doe</td><td>Director</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Screenwriter</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

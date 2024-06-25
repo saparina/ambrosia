@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Guest</h2><table><thead>
+<tr><th>guestID</th><th>firstName</th><th>lastName</th><th>emailAddress</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Room</h2><table><thead>
+<tr><th>roomID</th><th>apartmentType</th><th>numberOfGuests</th></tr>
+<tr><th></th><th>(&#8594; Apartment.type)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>High-end Residential</td><td>2</td></tr>
+<tr><td>2</td><td>Standard</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>bookingID</th><th>startDate</th><th>endDate</th><th>guestID</th><th>roomID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Guest.guestID)</th><th>(&#8594; Room.roomID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01</td><td>2022-01-07</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-08</td><td>2022-01-14</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Apartment</span></h2><table><thead>
+<tr><th>aptID</th><th>type</th><th>address</th><th><span style="color:#006600">capacity</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>High-end Residential</td><td>123 Main St</td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>2</td><td>Standard</td><td>456 Elm St</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Commercial_Appliance</span></h2><table><thead>
+<tr><th>applianceID</th><th><span style="color:#990000"><span style="color:#990000">name</span></span></th><th>status</th><th>apartmentID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Apartment.aptID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Espresso Machine</span></td><td>Operational</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Espresso Machine</span></td><td>Needs Repair</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Blender</span></td><td>Operational</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Blender</span></td><td>Needs Repair</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Inventory</h2><table><thead>
+<tr><th>inventoryItem</th><th>quantity</th><th>reorderLevel</th></tr>
+</thead><tbody>
+<tr><td>Soap</td><td>500</td><td>200</td></tr>
+<tr><td>Shampoo</td><td>300</td><td>100</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

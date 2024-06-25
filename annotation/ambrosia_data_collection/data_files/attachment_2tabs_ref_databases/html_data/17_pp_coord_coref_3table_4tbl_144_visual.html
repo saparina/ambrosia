@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Locations</span></h2><table><thead>
+<tr><th>LocationID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">University's Main Library</span></td></tr>
+<tr><td>2</td><td>City Library</td></tr>
+</tbody></table></div>
+
+<div><h2>Positions</h2><table><thead>
+<tr><th>PositionID</th><th>PositionName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Head Librarian</td></tr>
+<tr><td>2</td><td>Assistant Librarian</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>098-765-4321</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>ApplicationID</th><th>PositionID</th><th>EmployeeID</th><th>DateApplied</th></tr>
+<tr><th></th><th>(&#8594; Positions.PositionID)</th><th>(&#8594; Employees.EmployeeID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-03-13 19:42:26</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2024-03-13 19:42:26</td></tr>
+</tbody></table></div>
+
+<div><h2>Libraries</h2><table><thead>
+<tr><th>LibraryID</th><th>LocationID</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Locations.LocationID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A large library with a vast collection of books.</td></tr>
+<tr><td>2</td><td>2</td><td>A smaller library with a focused collection of local history.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Archivists</span></h2><table><thead>
+<tr><th>ArchivistID</th><th>EmployeeID</th><th>LibraryID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Employees.EmployeeID)</th><th>(&#8594; Libraries.LibraryID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Librarians</span></h2><table><thead>
+<tr><th>LibrarianID</th><th>EmployeeID</th><th>LibraryID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Employees.EmployeeID)</th><th>(&#8594; Libraries.LibraryID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

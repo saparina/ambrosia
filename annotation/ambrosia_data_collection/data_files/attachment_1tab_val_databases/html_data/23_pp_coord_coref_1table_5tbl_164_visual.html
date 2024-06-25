@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>HighSchools</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Abc High</td></tr>
+<tr><td>2</td><td>Xyz High</td></tr>
+<tr><td>3</td><td>Pqr High</td></tr>
+</tbody></table></div>
+
+<div><h2>Colleges</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mnc College</td></tr>
+<tr><td>2</td><td>Nmv College</td></tr>
+<tr><td>3</td><td>Qrs College</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th><th>highschoolId</th><th>collegeId</th><th>educationId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; HighSchools.id)</th><th>(&#8594; Colleges.id)</th><th>(&#8594; Education.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Bob</td><td>Williams</td><td>3</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Education</span></h2><table><thead>
+<tr><th>id</th><th>educational_institution</th><th>student_enrollment</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">High School</span></td><td><span style="color:#006600">1000</span></td><td>2018</td></tr>
+<tr><td>2</td><td><span style="color:#990000">High School</span></td><td>Some other number</td><td>2019</td></tr>
+<tr><td>3</td><td><span style="color:#990000">College</span></td><td><span style="color:#006600">1000</span></td><td>2020</td></tr>
+<tr><td>4</td><td><span style="color:#990000">College</span></td><td>Another number</td><td>2021</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

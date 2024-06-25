@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">District</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>District A</td><td>New York</td></tr>
+<tr><td>2</td><td>District B</td><td>California</td></tr>
+<tr><td>3</td><td>District C</td><td>Texas</td></tr>
+<tr><td>4</td><td>District D</td><td>Florida</td></tr>
+<tr><td>5</td><td>District E</td><td>Illinois</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">School_Grades</span></h2><table><thead>
+<tr><th>id</th><th>grade</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Kindergarten</td><td>Early childhood education program</td></tr>
+<tr><td>2</td><td>1st Grade</td><td>First year of primary education</td></tr>
+<tr><td>3</td><td>2nd Grade</td><td>Second year of primary education</td></tr>
+<tr><td>4</td><td>3rd Grade</td><td>Third year of primary education</td></tr>
+<tr><td>5</td><td>4th Grade</td><td>Fourth year of primary education</td></tr>
+</tbody></table></div>
+
+<div><h2>District_School_Grades</h2><table><thead>
+<tr><th>district_id</th><th>school_grade_id</th></tr>
+<tr><th>(&#8594; District.id)</th><th>(&#8594; School_Grades.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

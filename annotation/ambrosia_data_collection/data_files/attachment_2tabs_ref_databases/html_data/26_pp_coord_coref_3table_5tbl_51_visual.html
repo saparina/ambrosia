@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-01-15</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2002-06-28</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>2000-11-12</td></tr>
+<tr><td>4</td><td>Michael</td><td>Williams</td><td>1999-07-20</td></tr>
+<tr><td>5</td><td>Emma</td><td>Martinez</td><td>1997-03-25</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>Subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Green</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Ms.</td><td>White</td><td>Physics</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Black</td><td>Chemistry</td></tr>
+<tr><td>4</td><td>Prof.</td><td>Brown</td><td>Biology</td></tr>
+<tr><td>5</td><td>Mrs.</td><td>Harris</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FieldTrips</span></h2><table><thead>
+<tr><th>TripID</th><th>Location</th><th>Date</th><th>Purpose</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Purposes.Purpose)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td><td>2023-05-15</td><td>Real-world Application</td></tr>
+<tr><td>2</td><td>Washington DC</td><td>2023-06-01</td><td>Research Project</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">StudyGroups</span></h2><table><thead>
+<tr><th>GroupID</th><th>Description</th><th>LeaderID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A group focused on real-world applications of physics</td><td>2</td></tr>
+<tr><td>2</td><td>A study group discussing chemistry concepts</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>StudentsInGroups</h2><table><thead>
+<tr><th>StudentID</th><th>GroupID</th></tr>
+<tr><th>(&#8594; Students.StudentID)</th><th>(&#8594; StudyGroups.GroupID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>TripsAndGroups</h2><table><thead>
+<tr><th>TripID</th><th>GroupID</th></tr>
+<tr><th>(&#8594; FieldTrips.TripID)</th><th>(&#8594; StudyGroups.GroupID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Purposes</span></h2><table><thead>
+<tr><th><span style="color:#006600">Purpose</span>ID</th><th><span style="color:#006600">Purpose</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Real-world Application</span></td></tr>
+<tr><td>2</td><td>Research Project</td></tr>
+<tr><td>3</td><td>Creative Writing</td></tr>
+<tr><td>4</td><td>Scientific Inquiry</td></tr>
+<tr><td>5</td><td>Technological Innovation</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

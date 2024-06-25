@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Person</h2><table><thead>
+<tr><th>personID</th><th>name</th><th>dateofbirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-01-02</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1975-03-15</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>1990-06-27</td></tr>
+<tr><td>4</td><td>Bob Johnson</td><td>1985-08-10</td></tr>
+<tr><td>5</td><td>Charlie White</td><td>1978-12-12</td></tr>
+</tbody></table></div>
+
+<div><h2>Disease</h2><table><thead>
+<tr><th>diseaseID</th><th>name</th><th>deathrate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Heart Disease</td><td>0.32</td></tr>
+<tr><td>2</td><td>Cancer</td><td>0.25</td></tr>
+<tr><td>3</td><td>Respiratory diseases</td><td>0.07</td></tr>
+<tr><td>4</td><td>Stroke</td><td>0.1</td></tr>
+<tr><td>5</td><td>Diabetes</td><td>0.05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Number_Of_Deaths</span></h2><table><thead>
+<tr><th>year</th><th>total_deaths</th></tr>
+<tr><th>(&#8594; Province.year)</th><th></th></tr>
+</thead><tbody>
+<tr><td>2000</td><td>50000</td></tr>
+<tr><td>2001</td><td>51000</td></tr>
+<tr><td>2002</td><td>52000</td></tr>
+<tr><td>2003</td><td>53000</td></tr>
+<tr><td>2004</td><td>54000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Crude_Death_Rate</span></h2><table><thead>
+<tr><th>year</th><th>rate</th></tr>
+<tr><th>(&#8594; Province.year)</th><th></th></tr>
+</thead><tbody>
+<tr><td>2000</td><td>9.2</td></tr>
+<tr><td>2001</td><td>9.3</td></tr>
+<tr><td>2002</td><td>9.4</td></tr>
+<tr><td>2003</td><td>9.5</td></tr>
+<tr><td>2004</td><td>9.6</td></tr>
+</tbody></table></div>
+
+<div><h2>Province</h2><table><thead>
+<tr><th>provinceID</th><th>name</th><th>year</th><th>population</th></tr>
+<tr><th></th><th></th><th>(&#8594; Number_Of_Deaths.year)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>2000</td><td>10000000</td></tr>
+<tr><td>2</td><td>California</td><td>2001</td><td>30000000</td></tr>
+<tr><td>3</td><td>Texas</td><td>2002</td><td>20000000</td></tr>
+<tr><td>4</td><td>Florida</td><td>2003</td><td>15000000</td></tr>
+<tr><td>5</td><td>Illinois</td><td>2004</td><td>10000000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

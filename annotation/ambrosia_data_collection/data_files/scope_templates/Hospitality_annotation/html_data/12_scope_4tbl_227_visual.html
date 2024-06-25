@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Hotels</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Ritz</td><td>London</td></tr>
+<tr><td>2</td><td>Le Royal Monceau</td><td>Paris</td></tr>
+<tr><td>3</td><td>Grand Hyatt</td><td>New York</td></tr>
+<tr><td>4</td><td>Hilton Tokyo</td><td>Tokyo</td></tr>
+<tr><td>5</td><td>Four Seasons</td><td>Dubai</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Amenities</span></h2><table><thead>
+<tr><th>amenityId</th><th><span style="color:#990000">amenityName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Spa</td></tr>
+<tr><td>2</td><td>Gym</td></tr>
+<tr><td>3</td><td>Pool</td></tr>
+<tr><td>4</td><td>Restaurant</td></tr>
+<tr><td>5</td><td>Bar</td></tr>
+</tbody></table></div>
+
+<div><h2>Hotel_Amenities</h2><table><thead>
+<tr><th>hotelId</th><th>amenityId</th></tr>
+<tr><th>(&#8594; Hotels.id)</th><th>(&#8594; Amenities.amenityId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

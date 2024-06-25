@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorId</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-01-01</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2000-06-15</td><td>UK</td></tr>
+<tr><td>3</td><td>Emily Johnson</td><td>1975-02-22</td><td>Canada</td></tr>
+<tr><td>4</td><td>Michael Brown</td><td>1990-10-28</td><td>Australia</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>1985-11-14</td><td>New Zealand</td></tr>
+<tr><td>6</td><td>Alexander White</td><td>1992-04-03</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>SubjectId</th><th>Name</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td><td>The study of numbers, quantities, shapes and spaces.</td></tr>
+<tr><td>2</td><td>History</td><td>The study of past events and their causes and effects.</td></tr>
+<tr><td>3</td><td>Biology</td><td>The study of living organisms and life processes.</td></tr>
+<tr><td>4</td><td>Physics</td><td>The study of matter and energy, and how they interact with one another.</td></tr>
+<tr><td>5</td><td>Philosophy</td><td>The study of fundamental questions about existence, knowledge, values, reason, mind and language.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Books</span></h2><table><thead>
+<tr><th>BookId</th><th>Title</th><th>Literature</th><th>Rating</th><th>AuthorId</th><th>SubjectId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorId)</th><th>(&#8594; Subjects.SubjectId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math Mysteries</td><td><span style="color:#990000">Fiction Book</span></td><td>3.5</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>A History of Mankind</td><td><span style="color:#990000">Non-fiction Book</span></td><td>4.0</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Life Forms</td><td><span style="color:#990000">Fiction Book</span></td><td><span style="color:#006600">2.5</span></td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Quantum Mechanics</td><td><span style="color:#990000">Non-fiction Book</span></td><td>3.5</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Ethical Questions</td><td><span style="color:#990000">Fiction Book</span></td><td>4.0</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>Time Travel Theory</td><td><span style="color:#990000">Non-fiction Book</span></td><td><span style="color:#006600">2.5</span></td><td>6</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ReviewId</th><th>Rating</th><th>Comment</th><th>BookId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Books.BookId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3.5</td><td>Great story!</td><td>1</td></tr>
+<tr><td>2</td><td>4.0</td><td>Very informative.</td><td>2</td></tr>
+<tr><td>3</td><td>2.5</td><td>Not what I expected...</td><td>3</td></tr>
+<tr><td>4</td><td>3.5</td><td>Interesting read.</td><td>4</td></tr>
+<tr><td>5</td><td>4.0</td><td>I learned a lot.</td><td>5</td></tr>
+<tr><td>6</td><td>2.5</td><td>Could have been better.</td><td>6</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

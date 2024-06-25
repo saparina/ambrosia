@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Risks</span></h2><table><thead>
+<tr><th>RiskID</th><th><span style="color:#006600">RiskName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Financial Crime</td></tr>
+<tr><td>2</td><td>Political Instability</td></tr>
+<tr><td>3</td><td><span style="color:#006600">Cyber Attacks</span></td></tr>
+<tr><td>4</td><td>Health Crisis</td></tr>
+<tr><td>5</td><td>Climate Change</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">InvestigativeJournalists</span></h2><table><thead>
+<tr><th>JournalistID</th><th>FirstName</th><th>LastName</th><th>RiskID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Risks.RiskID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>3</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>4</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Green</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">WarCorrespondents</span></h2><table><thead>
+<tr><th>JournalistID</th><th>FirstName</th><th>LastName</th><th>RiskID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Risks.RiskID)</th></tr>
+</thead><tbody>
+<tr><td>6</td><td>Mike</td><td>Black</td><td>1</td></tr>
+<tr><td>7</td><td>Lisa</td><td>Grey</td><td>2</td></tr>
+<tr><td>8</td><td>David</td><td>Blue</td><td>3</td></tr>
+<tr><td>9</td><td>Emma</td><td>Red</td><td>4</td></tr>
+<tr><td>10</td><td>William</td><td>Yellow</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>AuthorJournalistID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; InvestigativeJournalists.JournalistID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Exposing Financial Crimes</td><td>A detailed investigation on financial crimes around the world.</td><td>1</td></tr>
+<tr><td>2</td><td>The Impact of Political Instability</td><td>An analysis on how political instability affects global economies.</td><td>2</td></tr>
+<tr><td>3</td><td>Defending Against Cyber Attacks</td><td>Tips and tricks to protect yourself against cyber attacks.</td><td>3</td></tr>
+<tr><td>4</td><td>Preparing for a Health Crisis</td><td>Advice on what to do during health crises.</td><td>4</td></tr>
+<tr><td>5</td><td>Understanding Climate Change</td><td>An overview of climate change and its effects on our planet.</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

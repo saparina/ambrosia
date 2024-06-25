@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Style_Writers</span></h2><table><thead>
+<tr><th>writer_id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>mikejohnson@example.com</td></tr>
+<tr><td>4</td><td>Emily Brown</td><td>emilybrown@example.com</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>davidwilson@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Trends</span></h2><table><thead>
+<tr><th>trend_id</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Street_Style</td></tr>
+<tr><td>2</td><td>Political_Journalism</td></tr>
+<tr><td>3</td><td>Cultural_Analysis</td></tr>
+<tr><td>4</td><td>Technology_Reviews</td></tr>
+<tr><td>5</td><td>Travel_Guides</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>article_id</th><th>title</th><th>content</th><th>publication_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Evolution of Street Fashion</td><td>This article discusses...</td><td>2024-01-30 18:59:31</td></tr>
+<tr><td>2</td><td>The Impact of Political Journalism on Society</td><td>This article explores...</td><td>2024-01-30 18:59:31</td></tr>
+<tr><td>3</td><td>Exploring Cultural Differences Through Analysis</td><td>In this piece, we delve...</td><td>2024-01-30 18:59:31</td></tr>
+<tr><td>4</td><td>A Comprehensive Review of Latest Tech Devices</td><td>Here is a detailed review...</td><td>2024-01-30 18:59:31</td></tr>
+<tr><td>5</td><td>Discovering Hidden Gems Around the World</td><td>Join us as we unravel...</td><td>2024-01-30 18:59:31</td></tr>
+</tbody></table></div>
+
+<div><h2>Writes</h2><table><thead>
+<tr><th>article_id</th><th>writer_id</th></tr>
+<tr><th>(&#8594; Articles.article_id)</th><th>(&#8594; Style_Writers.writer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Writer_Preferences</h2><table><thead>
+<tr><th>writer_id</th><th>preferred_trend_id</th></tr>
+<tr><th>(&#8594; Style_Writers.writer_id)</th><th>(&#8594; Trends.trend_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Trends</h2><table><thead>
+<tr><th>article_id</th><th>trend_id</th></tr>
+<tr><th>(&#8594; Articles.article_id)</th><th>(&#8594; Trends.trend_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

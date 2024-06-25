@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Equipment_Type</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>DSLR Camera</td></tr>
+<tr><td>2</td><td>Mirrorless Camera</td></tr>
+<tr><td>3</td><td><span style="color:#006600">Camcorder</span></td></tr>
+<tr><td>4</td><td>Drone</td></tr>
+<tr><td>5</td><td>Action Camera</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">News_Photography</span></h2><table><thead>
+<tr><th>id</th><th>photographer_name</th><th>equipment_type_id</th><th>photo_title</th><th>date_taken</th></tr>
+<tr><th></th><th></th><th>(&#8594; Equipment_Type.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1</td><td>Sunset at the Beach</td><td>2022-06-01</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2</td><td>City Skyline</td><td>2022-06-02</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>1</td><td>Wildlife in Action</td><td>2022-06-03</td></tr>
+<tr><td>4</td><td>Emma Wilson</td><td>3</td><td>Aerial View of Nature Reserve</td><td>2022-06-04</td></tr>
+<tr><td>5</td><td>David Brown</td><td>5</td><td>Surfing Competition</td><td>2022-06-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Videography</span></h2><table><thead>
+<tr><th>id</th><th>videographer_name</th><th>equipment_type_id</th><th>video_title</th><th>release_date</th><th>duration</th></tr>
+<tr><th></th><th></th><th>(&#8594; Equipment_Type.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Miller</td><td>1</td><td>Beach Party</td><td>2022-07-01</td><td>30:00:00</td></tr>
+<tr><td>2</td><td>Lucy Davis</td><td>2</td><td>Fashion Show</td><td>2022-07-02</td><td>15:00:00</td></tr>
+<tr><td>3</td><td>Chris Evans</td><td>3</td><td>Urban Exploration</td><td>2022-07-03</td><td>45:00:00</td></tr>
+<tr><td>4</td><td>Olivia Williams</td><td>4</td><td>Birds Eye View</td><td>2022-07-04</td><td>20:00:00</td></tr>
+<tr><td>5</td><td>William Jackson</td><td>5</td><td>Mountain Biking Adventure</td><td>2022-07-05</td><td>25:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Article</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>author_id</th><th>publication_date</th><th>news_photography_id</th><th>videography_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Author.id)</th><th></th><th>(&#8594; News_Photography.id)</th><th>(&#8594; Videography.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Travel Photography Tips</td><td>Lorem ipsum dolor sit amet...</td><td>1</td><td>2022-08-01</td><td>None</td><td>None</td></tr>
+<tr><td>2</td><td>Journalism Ethics</td><td>Lorem ipsum dolor sit amet...</td><td>2</td><td>2022-08-02</td><td>None</td><td>None</td></tr>
+<tr><td>3</td><td>Breaking News Coverage</td><td>Lorem ipsum dolor sit amet...</td><td>3</td><td>2022-08-03</td><td>1</td><td>None</td></tr>
+<tr><td>4</td><td>Feature Writing Techniques</td><td>Lorem ipsum dolor sit amet...</td><td>4</td><td>2022-08-04</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>Investigative Reporting Strategies</td><td>Lorem ipsum dolor sit amet...</td><td>5</td><td>2022-08-05</td><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

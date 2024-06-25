@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>Address A</td><td>Phone Number A</td></tr>
+<tr><td>2</td><td>Company B</td><td>Address B</td><td>Phone Number B</td></tr>
+<tr><td>3</td><td>Company C</td><td>Address C</td><td>Phone Number C</td></tr>
+<tr><td>4</td><td>Company D</td><td>Address D</td><td>Phone Number D</td></tr>
+<tr><td>5</td><td>Company E</td><td>Address E</td><td>Phone Number E</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>id</th><th>company_id</th><th>department_name</th></tr>
+<tr><th></th><th>(&#8594; Companies.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>HR Department</td></tr>
+<tr><td>2</td><td>1</td><td>IT Department</td></tr>
+<tr><td>3</td><td>2</td><td>Marketing Department</td></tr>
+<tr><td>4</td><td>2</td><td>Finance Department</td></tr>
+<tr><td>5</td><td>3</td><td>Engineering Department</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th><th>post_date</th><th>department_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Departments.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop software solutions.</td><td>70000</td><td>2022-06-01</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data and provide insights.</td><td>60000</td><td>2022-06-02</td><td>2</td></tr>
+<tr><td>3</td><td>Project Manager</td><td>Lead projects and coordinate teams.</td><td>80000</td><td>2022-06-03</td><td>3</td></tr>
+<tr><td>4</td><td>Web Developer</td><td>Design and develop websites.</td><td>65000</td><td>2022-06-04</td><td>4</td></tr>
+<tr><td>5</td><td>Graphic Designer</td><td>Create visual designs.</td><td>50000</td><td>2022-06-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td><td>098-765-4321</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alicebrown@email.com</td><td>555-123-4567</td></tr>
+<tr><td>4</td><td>Charlie</td><td>White</td><td>charliewhite@email.com</td><td>555-456-7890</td></tr>
+<tr><td>5</td><td>David</td><td>Green</td><td>davidgreen@email.com</td><td>555-789-1234</td></tr>
+</tbody></table></div>
+
+<div><h2>ApplicationStatuses</h2><table><thead>
+<tr><th>id</th><th>job_posting_id</th><th>applicant_id</th><th>status</th><th>application_date</th></tr>
+<tr><th></th><th>(&#8594; JobPostings.id)</th><th>(&#8594; Applicants.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Pending</td><td>2022-06-01</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Rejected</td><td>2022-06-02</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>Accepted</td><td>2022-06-03</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>Rejected</td><td>2022-06-04</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>Interview Scheduled</td><td>2022-06-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">EarthScienceCareerOptions</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">career_option</span></span></th><th>university_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Universities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Chemist</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Chemist</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Geoscientist</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Geoscientist</span></td><td>2</td></tr>
+<tr><td>5</td><td>Environmental Scientist</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Universities</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Massachusetts Institute of Technology (MIT)</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Stanford University</span></td></tr>
+<tr><td>3</td><td>California Institute of Technology (Caltech)</td></tr>
+<tr><td>4</td><td>Harvard University</td></tr>
+<tr><td>5</td><td>Princeton University</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

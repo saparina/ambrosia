@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janesmith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th><th>ViewCount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article One</td><td>This is the content of article one.</td><td>2024-02-19 14:58:28</td><td>100</td></tr>
+<tr><td>2</td><td>Article Two</td><td>Content of article two goes here.</td><td>2024-02-19 14:58:28</td><td>80</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>WebsiteURL</th><th>FoundedYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Publication A</td><td>https://www.publicationa.com</td><td>2000</td></tr>
+<tr><td>2</td><td>Publication B</td><td>https://www.publicationb.com</td><td>2001</td></tr>
+</tbody></table></div>
+
+<div><h2>Operations</h2><table><thead>
+<tr><th>OperationID</th><th><span style="color:#990000">OperationYears</span></th><th><span style="color:#990000">OperationMonths</span></th><th>MediaOutlet</th><th>Revenue</th><th>Expenses</th><th>ProfitMargin</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10</td><td>12</td><td>Newspaper X</td><td>100000.0</td><td>75000.0</td><td>0.0</td></tr>
+<tr><td>2</td><td>5</td><td>6</td><td>Radio Y</td><td>50000.0</td><td>30000.0</td><td>0.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Readers</h2><table><thead>
+<tr><th>ReaderID</th><th>FullName</th><th>EmailAddress</th><th>RegistrationDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>alicejohnson@example.com</td><td>2024-02-19 14:58:28</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>bobsmit@example.net</td><td>2024-02-19 14:58:28</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscriptions</h2><table><thead>
+<tr><th>SubscriptionID</th><th>ReaderID</th><th>PublisherID</th><th>StartDate</th><th>EndDate</th><th>Price</th></tr>
+<tr><th></th><th>(&#8594; Readers.ReaderID)</th><th>(&#8594; Publications.PublisherID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-02-19 14:58:28</td><td>None</td><td>9.99</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2024-02-19 14:58:28</td><td>None</td><td>12.99</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

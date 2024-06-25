@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Exchange_traded_Products</span></h2><table><thead>
+<tr><th>id</th><th>ProductName</th><th>TickerSymbol</th><th>AssetClass</th><th>TotalAssets</th><th><span style="color:#1430b2">ExitFee</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AAPL</td><td>AAPL</td><td>Equity</td><td>239.67</td><td><span style="color:#1430b2">0.01</span></td></tr>
+<tr><td>2</td><td>MSFT</td><td>MSFT</td><td>Equity</td><td>286.21</td><td>0.015</td></tr>
+<tr><td>3</td><td>GOOG</td><td>GOOG</td><td>Equity</td><td>262.33</td><td><span style="color:#1430b2">0.01</span></td></tr>
+<tr><td>4</td><td>AMZN</td><td>AMZN</td><td>Equity</td><td>356.33</td><td><span style="color:#1430b2">0.01</span></td></tr>
+<tr><td>5</td><td>TSLA</td><td>TSLA</td><td>Equity</td><td>109.86</td><td><span style="color:#1430b2">0.01</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Unit_investment_Trusts</span></h2><table><thead>
+<tr><th>id</th><th>TrustName</th><th>TickerSymbol</th><th>NetAssetValue</th><th>NumberOfUnits</th><th>ExitFee</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABCD</td><td>ABCD</td><td>10.0</td><td>100000</td><td><span style="color:#1430b2">0.01</span></td></tr>
+<tr><td>2</td><td>EFGH</td><td>EFGH</td><td>12.5</td><td>80000</td><td>0.015</td></tr>
+<tr><td>3</td><td>IJKL</td><td>IJKL</td><td>8.2</td><td>50000</td><td><span style="color:#1430b2">0.01</span></td></tr>
+<tr><td>4</td><td>MNOP</td><td>MNOP</td><td>7.6</td><td>60000</td><td>0.015</td></tr>
+<tr><td>5</td><td>QRST</td><td>QRST</td><td>9.8</td><td>75000</td><td><span style="color:#1430b2">0.01</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>CustomerName</th><th>EmailAddress</th><th>PhoneNumber</th><th>AccountBalance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>1234567890</td><td>5000.0</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>0987654321</td><td>10000.0</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alicejohnson@example.com</td><td>5555555555</td><td>15000.0</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bobbrown@example.com</td><td>5555555556</td><td>20000.0</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>charliegreen@example.com</td><td>5555555557</td><td>25000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>OrderID</th><th>CustomerId</th><th>ProductType</th><th>Quantity</th><th>Price</th><th>DateOrdered</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Exchange_traded_product</td><td>10</td><td>100</td><td>2022-01-01 12:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>Exchange_traded_product</td><td>5</td><td>120</td><td>2022-01-01 12:01:00</td></tr>
+<tr><td>3</td><td>3</td><td>Exchange_traded_product</td><td>10</td><td>110</td><td>2022-01-01 12:02:00</td></tr>
+<tr><td>4</td><td>4</td><td>Exchange_traded_product</td><td>15</td><td>130</td><td>2022-01-01 12:03:00</td></tr>
+<tr><td>5</td><td>5</td><td>Exchange_traded_product</td><td>20</td><td>140</td><td>2022-01-01 12:04:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionId</th><th>OrderId</th><th>Amount</th><th>Fees</th><th>PaymentMethod</th><th>Status</th><th>ProcessDate</th></tr>
+<tr><th></th><th>(&#8594; Orders.OrderID)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td><td>20.0</td><td>Debit Card</td><td>Completed</td><td>2022-01-01 12:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>600.0</td><td>12.0</td><td>PayPal</td><td>Completed</td><td>2022-01-01 12:01:00</td></tr>
+<tr><td>3</td><td>3</td><td>1100.0</td><td>22.0</td><td>Bank Transfer</td><td>Completed</td><td>2022-01-01 12:02:00</td></tr>
+<tr><td>4</td><td>4</td><td>1300.0</td><td>24.0</td><td>Check</td><td>Completed</td><td>2022-01-01 12:03:00</td></tr>
+<tr><td>5</td><td>5</td><td>1400.0</td><td>26.0</td><td>Wire Transfer</td><td>Completed</td><td>2022-01-01 12:04:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

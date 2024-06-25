@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Branches</h2><table><thead>
+<tr><th>BranchID</th><th>BranchName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main Street</td></tr>
+<tr><td>2</td><td>Market Square</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>CustomerName</th><th>ContactNumber</th><th>EmailAddress</th><th>BranchID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Branches.BranchID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1234567890</td><td>john@example.com</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>9876543210</td><td>jane@example.com</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountID</th><th>AccountType</th><th>Balance</th><th>InterestRate</th><th>EffectiveDate</th><th>MaturityDate</th><th>FinanceInstrumentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; FinanceInstruments.FinanceInstrumentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Checking</td><td>1000.0</td><td>0.01</td><td>2022-01-01</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>Savings</td><td>2000.0</td><td>0.02</td><td>2022-01-01</td><td>None</td><td>2</td></tr>
+<tr><td>3</td><td>CD</td><td>3000.0</td><td>0.03</td><td>2022-01-01</td><td>2024-01-01</td><td>3</td></tr>
+<tr><td>4</td><td>Money Market</td><td>4000.0</td><td>0.04</td><td>2022-01-01</td><td>None</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Deposits</h2><table><thead>
+<tr><th>DepositID</th><th>Amount</th><th>PaymentMethod</th><th>AccountID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Accounts.AccountID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>500</td><td>ACH</td><td>1</td></tr>
+<tr><td>2</td><td>250</td><td>Wire Transfer</td><td>2</td></tr>
+<tr><td>3</td><td>100</td><td>Check</td><td>3</td></tr>
+<tr><td>4</td><td>750</td><td>ACH</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>LoanID</th><th>Principal</th><th>InterestRate</th><th>TermYears</th><th>MonthlyPayment</th><th>AccountID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.AccountID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5000</td><td>0.05</td><td>5</td><td>150</td><td>1</td></tr>
+<tr><td>2</td><td>10000</td><td>0.04</td><td>10</td><td>100</td><td>2</td></tr>
+<tr><td>3</td><td>3000</td><td>0.03</td><td>3</td><td>100</td><td>3</td></tr>
+<tr><td>4</td><td>7500</td><td>0.06</td><td>7</td><td>150</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FinanceInstruments</span></h2><table><thead>
+<tr><th>FinanceInstrumentID</th><th>Type</th><th>Percentage</th><th>InterestRate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Green Bonds</span></td><td><span style="color:#006600">5%</span></td><td>0.05</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Green Bonds</span></td><td>6%</td><td>0.06</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Social Bonds</span></td><td><span style="color:#006600">5%</span></td><td>0.05</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Social Bonds</span></td><td>7%</td><td>0.07</td></tr>
+<tr><td>5</td><td>Corporate Bonds</td><td>4%</td><td>0.04</td></tr>
+<tr><td>6</td><td>Government Bonds</td><td>3%</td><td>0.03</td></tr>
+<tr><td>7</td><td>Treasury Bills</td><td>2%</td><td>0.02</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

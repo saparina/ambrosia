@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Ux_Designers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>3</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>6</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>1</td></tr>
+<tr><td>5</td><td>David Brown</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Components</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">component_name</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Navigation</td><td>A navigation system helps users move between different sections of a website.</td></tr>
+<tr><td>2</td><td>User Interface Design</td><td>UI design involves creating interfaces that are visually appealing and user-friendly.</td></tr>
+<tr><td>3</td><td>Responsive Web Design</td><td>RWD ensures that websites function well on various devices and screen sizes.</td></tr>
+<tr><td>4</td><td>Interaction Design</td><td>ID focuses on designing interactive elements within a UI to create an engaging experience.</td></tr>
+<tr><td>5</td><td>Usability Testing</td><td>Testing how easy it is for users to complete tasks on a website.</td></tr>
+</tbody></table></div>
+
+<div><h2>Ux_Designers_Components</h2><table><thead>
+<tr><th>ux_designer_id</th><th>component_id</th></tr>
+<tr><th>(&#8594; Ux_Designers.id)</th><th>(&#8594; Components.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Addresses</span></h2><table><thead>
+<tr><th>id</th><th>street</th><th>city</th><th><span style="color:#006600">state</span></th><th>zipcode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>Anytown</td><td>NY</td><td>10001</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>Anytown</td><td>NY</td><td>10001</td></tr>
+<tr><td>3</td><td>789 Oak St</td><td>Bytown</td><td><span style="color:#006600">CA</span></td><td>90001</td></tr>
+<tr><td>4</td><td>234 Pine St</td><td>Citown</td><td>FL</td><td>32101</td></tr>
+<tr><td>5</td><td>567 Maple Ave</td><td>Downtown</td><td>TX</td><td>77001</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Kindergartens</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>addressId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Addresses.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Little Learners</td><td>1</td></tr>
+<tr><td>2</td><td>Tiny Tots Academy</td><td>2</td></tr>
+<tr><td>3</td><td>Sunshine Preschool</td><td>3</td></tr>
+<tr><td>4</td><td>ABC Prep School</td><td>4</td></tr>
+<tr><td>5</td><td>Munchkin Montessori</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">High_Schools</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>addressId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Addresses.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Eagle High</td><td>1</td></tr>
+<tr><td>2</td><td>Falcon Academy</td><td>2</td></tr>
+<tr><td>3</td><td>Wolfson College</td><td>3</td></tr>
+<tr><td>4</td><td>Panther Prep</td><td>4</td></tr>
+<tr><td>5</td><td>Raptor Ridge High</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>schoolId</th><th>classroomId</th><th>subjectId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; High_Schools.id)</th><th>(&#8594; Classrooms.id)</th><th>(&#8594; Subjects.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>1</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Tom</td><td>Green</td><td>2</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Lucy</td><td>Black</td><td>3</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>subjectId</th><th>classroomId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Subjects.id)</th><th>(&#8594; Classrooms.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Smith</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Doe</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Mrs.</td><td>Brown</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Mr.</td><td>Green</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Mrs.</td><td>Black</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Classrooms</h2><table><thead>
+<tr><th>id</th><th>roomNumber</th><th>highSchoolId</th></tr>
+<tr><th></th><th></th><th>(&#8594; High_Schools.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Room 101</td><td>1</td></tr>
+<tr><td>2</td><td>Room 202</td><td>2</td></tr>
+<tr><td>3</td><td>Room 303</td><td>3</td></tr>
+<tr><td>4</td><td>Room 404</td><td>4</td></tr>
+<tr><td>5</td><td>Room 505</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>id</th><th>name</th><th>teacherId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Teachers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math</td><td>1</td></tr>
+<tr><td>2</td><td>English</td><td>2</td></tr>
+<tr><td>3</td><td>History</td><td>3</td></tr>
+<tr><td>4</td><td>Science</td><td>4</td></tr>
+<tr><td>5</td><td>Art</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountID</th><th>CustomerID</th><th>AccountType</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Checking</td><td>500.0</td></tr>
+<tr><td>2</td><td>2</td><td>Savings</td><td>1000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>LoanID</th><th>CustomerID</th><th>Amount</th><th>InterestRate</th><th>TermYears</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>15000.0</td><td>6.0</td><td>5</td></tr>
+<tr><td>2</td><td>2</td><td>10000.0</td><td>5.5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Deposits</h2><table><thead>
+<tr><th>DepositID</th><th>AccountID</th><th>Amount</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>500.0</td><td>2024-02-19 14:31:33</td></tr>
+<tr><td>2</td><td>2</td><td>1000.0</td><td>2024-02-19 14:31:33</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountID</th><th>Type</th><th>Amount</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Deposit</td><td>500.0</td><td>2024-02-19 14:31:33</td></tr>
+<tr><td>2</td><td>2</td><td>Withdrawal</td><td>200.0</td><td>2024-02-19 14:31:33</td></tr>
+</tbody></table></div>
+
+<div><h2>Bank</h2><table><thead>
+<tr><th>BankName</th><th>HeadquarterLocation</th><th>FoundedYear</th><th>TotalAssets</th><th>NumberOfBranches</th><th>WebsiteURL</th></tr>
+</thead><tbody>
+<tr><td>Example Bank</td><td>New York</td><td>2000</td><td>1000000.0</td><td>50</td><td>https://www.examplebank.com/</td></tr>
+</tbody></table></div>
+
+<div><h2>Branch</h2><table><thead>
+<tr><th>BranchID</th><th>BankName</th><th>BranchName</th><th>Address</th><th>City</th><th>State</th><th>ZipCode</th></tr>
+<tr><th></th><th>(&#8594; Bank.BankName)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Example Bank</td><td>Main Branch</td><td>123 Main St</td><td>New York</td><td>NY</td><td>10001</td></tr>
+<tr><td>2</td><td>Example Bank</td><td>East Side Branch</td><td>456 East Ave</td><td>New York</td><td>NY</td><td>10010</td></tr>
+</tbody></table></div>
+
+<div><h2>BankingProducts</h2><table><thead>
+<tr><th>ProductID</th><th><span style="color:#990000">BankName</span></th><th>ProductName</th><th>Description</th><th>AnnualInterestRate</th><th>MinimumDepositAmount</th><th>MaximumDepositAmount</th><th><span style="color:#990000">BranchName</span></th></tr>
+<tr><th></th><th>(&#8594; Bank.BankName)</th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Branch.BranchID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Example Bank</td><td>High-Yield Savings</td><td>A high interest rate savings account with no monthly fees.</td><td>1.0</td><td>1000.0</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>Example Bank</td><td>CD Special</td><td>Certificate of deposit offering a fixed annual percentage yield.</td><td>2.5</td><td>1000.0</td><td>1000000.0</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

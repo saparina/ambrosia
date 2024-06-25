@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>authorID</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emily.white@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Green</td><td>david.green@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>articleID</th><th>title</th><th>content</th><th>publishDate</th><th>authorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.authorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Importance of Investigative Journalism</td><td>A deep dive into how investigative journalism can uncover corruption and hold power accountable.</td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>The Future of Digital Media</td><td>How digital media is changing the landscape of modern journalism.</td><td>2023-01-15</td><td>2</td></tr>
+<tr><td>3</td><td>Fact-Checking in a Post-Truth World</td><td>Exploring the role of fact-checkers in an era where misinformation spreads like wildfire.</td><td>2023-01-22</td><td>3</td></tr>
+<tr><td>4</td><td>Journalistic Ethics: A Code of Conduct</td><td>Understanding the ethical standards that journalists must adhere to.</td><td>2023-01-29</td><td>4</td></tr>
+<tr><td>5</td><td>Censorship and Freedom of the Press</td><td>A discussion on the challenges faced by journalists in countries with limited press freedom.</td><td>2023-02-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Magazines</h2><table><thead>
+<tr><th>magazineID</th><th>name</th><th>publisher</th><th>ISSN</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>World News Weekly</td><td>Global Publishing House</td><td>978-3-16-148410-0</td></tr>
+<tr><td>2</td><td>Investigate This!</td><td>Journalism Watchdog Association</td><td>978-3-16-148411-7</td></tr>
+<tr><td>3</td><td>Digital Frontiers</td><td>Tech Innovators Network</td><td>978-3-16-148412-4</td></tr>
+<tr><td>4</td><td>Ethical Matters</td><td>Media Standards Council</td><td>978-3-16-148413-1</td></tr>
+<tr><td>5</td><td>Press Freedoms International</td><td>Freedom Advocacy Group</td><td>978-3-16-148414-8</td></tr>
+</tbody></table></div>
+
+<div><h2>MagazineArticles</h2><table><thead>
+<tr><th>magazineArticleID</th><th>articleID</th><th>magazineID</th><th>publicationMonth</th><th>publicationYear</th></tr>
+<tr><th></th><th>(&#8594; Articles.articleID)</th><th>(&#8594; Magazines.magazineID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2023</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td><td>2023</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>1</td><td>2023</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2</td><td>2023</td></tr>
+<tr><td>5</td><td>5</td><td>3</td><td>1</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscriptions</h2><table><thead>
+<tr><th>subscriptionID</th><th>customerName</th><th>customerEmail</th><th>startDate</th><th>endDate</th><th>magazineID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Magazines.magazineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>alice.johnson@example.com</td><td>2023-01-01</td><td>2023-12-31</td><td>1</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>bob.smith@example.com</td><td>2023-01-15</td><td>2023-12-31</td><td>2</td></tr>
+<tr><td>3</td><td>Carol Brown</td><td>carol.brown@example.com</td><td>2023-01-22</td><td>2023-12-31</td><td>3</td></tr>
+<tr><td>4</td><td>Daniel Green</td><td>daniel.green@example.com</td><td>2023-01-29</td><td>2023-12-31</td><td>4</td></tr>
+<tr><td>5</td><td>Emma White</td><td>emma.white@example.com</td><td>2023-02-05</td><td>2023-12-31</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Demographics</h2><table><thead>
+<tr><th>demographicID</th><th><span style="color:#990000">Audience</span></th><th>magazineID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Magazines.magazineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>General Readership</td><td>1</td></tr>
+<tr><td>2</td><td>Technology Enthusiasts</td><td>2</td></tr>
+<tr><td>3</td><td>Current Affairs</td><td>3</td></tr>
+<tr><td>4</td><td>Ethics Focused</td><td>4</td></tr>
+<tr><td>5</td><td>International Relations</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

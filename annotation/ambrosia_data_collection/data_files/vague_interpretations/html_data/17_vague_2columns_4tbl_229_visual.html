@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2008-09-15</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2007-03-20</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>2006-11-12</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>2005-06-01</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>2004-02-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>classID</th><th>className</th><th>teacherName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math</td><td>Mr. Thompson</td></tr>
+<tr><td>2</td><td>English</td><td>Ms. Johnson</td></tr>
+<tr><td>3</td><td>History</td><td>Mr. White</td></tr>
+<tr><td>4</td><td>Art</td><td>Ms. Green</td></tr>
+<tr><td>5</td><td>Physical Education</td><td>Coach Black</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollmentId</th><th>studentId</th><th>classId</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Classes.classId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>MilestoneRecords</h2><table><thead>
+<tr><th>recordId</th><th>studentId</th><th><span style="color:#990000">physicalMilestones</span></th><th><span style="color:#990000">cognitiveMilestones</span></th><th>childAge</th><th>otherDetails</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Walking and running</td><td>Counting to 10</td><td>8</td><td>No additional details</td></tr>
+<tr><td>2</td><td>2</td><td>Riding a bike</td><td>Reading simple sentences</td><td>9</td><td>No additional details</td></tr>
+<tr><td>3</td><td>3</td><td>Climbing stairs</td><td>Recognizing colors</td><td>7</td><td>No additional details</td></tr>
+<tr><td>4</td><td>4</td><td>Swimming</td><td>Understanding basic concepts</td><td>10</td><td>No additional details</td></tr>
+<tr><td>5</td><td>5</td><td>Playing sports</td><td>Writing short stories</td><td>11</td><td>No additional details</td></tr>
+</tbody></table></div>
+
+<div><h2>Attendance</h2><table><thead>
+<tr><th>attendanceId</th><th>studentId</th><th>classId</th><th>dateAttended</th><th>isPresent</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Classes.classId)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-09-01</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-09-02</td><td>0</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-09-03</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-09-04</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-09-05</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>DisciplineLogs</h2><table><thead>
+<tr><th>logId</th><th>studentId</th><th>incidentDate</th><th>reasonForDiscipline</th><th>disciplinaryAction</th><th>resolutionDate</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-09-06</td><td>Talking during class</td><td>Detention</td><td>2022-09-08</td></tr>
+<tr><td>2</td><td>2</td><td>2022-09-07</td><td>Cheating on a test</td><td>Suspension</td><td>2022-09-10</td></tr>
+<tr><td>3</td><td>3</td><td>2022-09-08</td><td>Bullying another student</td><td>Apology letter</td><td>2022-09-10</td></tr>
+<tr><td>4</td><td>4</td><td>2022-09-09</td><td>Damaging school property</td><td>Community service</td><td>2022-09-15</td></tr>
+<tr><td>5</td><td>5</td><td>2022-09-10</td><td>Late assignment submission</td><td>Extra credit assignment</td><td>2022-09-15</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

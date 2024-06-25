@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Music_Genres</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Pop Song</span></td></tr>
+<tr><td>2</td><td>Hip Hop Song</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>artist_id</th><th>album_id</th><th>concert_id</th><th>music_genre_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Performers.id)</th><th>(&#8594; Albums.id)</th><th>(&#8594; Concerts.id)</th><th>(&#8594; Music_Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tune1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Tune2</td><td>2</td><td>2</td><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>Rap1</td><td>3</td><td>3</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>Rap2</td><td>4</td><td>4</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Artist1</td></tr>
+<tr><td>2</td><td>Artist2</td></tr>
+<tr><td>3</td><td>Artist3</td></tr>
+<tr><td>4</td><td>Artist4</td></tr>
+<tr><td>5</td><td>Artist5</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th>release_date</th><th>artist_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Artists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>2021-02-01</td><td>2</td></tr>
+<tr><td>3</td><td>2021-03-01</td><td>3</td></tr>
+<tr><td>4</td><td>2021-04-01</td><td>4</td></tr>
+<tr><td>5</td><td>2021-05-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Concerts</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">venue</span></th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Madison Square Garden</span></td><td>2021-06-01 18:00:00</td></tr>
+<tr><td>2</td><td>Carnegie Hall</td><td>2021-07-01 19:00:00</td></tr>
+<tr><td>3</td><td>The Hollywood Bowl</td><td>2021-08-01 20:00:00</td></tr>
+<tr><td>4</td><td>Wembley Stadium</td><td>2021-09-01 21:00:00</td></tr>
+<tr><td>5</td><td>Stadium Australia</td><td>2021-10-01 22:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Restaurants</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>type</th><th><span style="color:#006600">year_of_establishment</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Peppercorn</td><td>Steakhouse</td><td><span style="color:#006600">1980</span></td></tr>
+<tr><td>2</td><td>The Prime Rib</td><td>Steakhouse</td><td>2000</td></tr>
+<tr><td>3</td><td>Coastal Breeze</td><td>Seafood</td><td><span style="color:#006600">1980</span></td></tr>
+<tr><td>4</td><td>Fish Market</td><td>Seafood</td><td>2005</td></tr>
+<tr><td>5</td><td>Sunny Side Cafe</td><td>Coffee Shop</td><td>2015</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Steakhouses</span></h2><table><thead>
+<tr><th>restaurant_id</th><th>specialties</th></tr>
+<tr><th>(&#8594; Restaurants.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Angus Beef</td></tr>
+<tr><td>2</td><td>Wagyu Beef</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Seafood_Restaurants</span></h2><table><thead>
+<tr><th>restaurant_id</th><th>specialties</th></tr>
+<tr><th>(&#8594; Restaurants.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>3</td><td>Lobster Thermidor</td></tr>
+<tr><td>4</td><td>Grilled Salmon</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Williams</td><td>alice@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Miller</td><td>bob@example.com</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Jackson</td><td>charlie@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>reservation_id</th><th>customer_id</th><th>restaurant_id</th><th>date</th><th>time</th><th>number_of_people</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Customers.customer_id)</th><th>(&#8594; Restaurants.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-12-20</td><td>17:00</td><td>2</td><td>Confirmed</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-12-21</td><td>19:00</td><td>4</td><td>Pending</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-12-22</td><td>18:30</td><td>6</td><td>Canceled</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-12-23</td><td>17:00</td><td>8</td><td>Confirm</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-12-24</td><td>19:30</td><td>10</td><td>Waitlisted</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>review_id</th><th>customer_id</th><th>rating</th><th>comments</th></tr>
+<tr><th></th><th>(&#8594; Customers.customer_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5</td><td>Excellent food and service!</td></tr>
+<tr><td>2</td><td>2</td><td>4</td><td>Good experience but could have been better.</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Not bad, but not great either.</td></tr>
+<tr><td>4</td><td>4</td><td>5</td><td>Awesome place, will come back again!</td></tr>
+<tr><td>5</td><td>5</td><td>2</td><td>Disappointing, did not meet expectations.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

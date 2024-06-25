@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>Origin</th><th>Destination</th><th>DepartureTime</th><th>ArrivalTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>LAX</td><td>2023-01-01 10:00:00</td><td>2023-01-01 17:00:00</td></tr>
+<tr><td>2</td><td>ORD</td><td>DFW</td><td>2023-01-02 11:00:00</td><td>2023-01-02 18:00:00</td></tr>
+<tr><td>3</td><td>SEA</td><td>SFO</td><td>2023-01-03 12:00:00</td><td>2023-01-03 19:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-01-01</td><td>US</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-06-15</td><td>UK</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>1992-12-20</td><td>CA</td></tr>
+<tr><td>4</td><td>Michael</td><td>Williams</td><td>1988-03-03</td><td>AU</td></tr>
+<tr><td>5</td><td>Emily</td><td>Brown</td><td>1995-07-12</td><td>FR</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Luggage</span></h2><table><thead>
+<tr><th>ItemID</th><th>PassengerID</th><th><span style="color:#186e16"><span style="color:#186e16">Description</span></span></th><th><span style="color:#1430b2">Fees</span></th></tr>
+<tr><th></th><th>(&#8594; Passengers.PassengerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#186e16">Cabin Baggage</span></td><td><span style="color:#1430b2">$25</span></td></tr>
+<tr><td>2</td><td>2</td><td><span style="color:#186e16">Checked Baggage</span></td><td>$30</td></tr>
+<tr><td>3</td><td>3</td><td><span style="color:#186e16">Checked Baggage</span></td><td><span style="color:#1430b2">$25</span></td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#186e16">Cabin Baggage</span></td><td>€35</td></tr>
+<tr><td>5</td><td>5</td><td><span style="color:#186e16">Checked Baggage</span></td><td>$30</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>AircraftID</th><th>Model</th><th>Capacity</th><th>RegistrationNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td><td>200</td><td>N12345</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>180</td><td>N67890</td></tr>
+<tr><td>3</td><td>Embraer E190</td><td>100</td><td>N23456</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>AssignmentID</th><th>FlightID</th><th>AircraftID</th><th>AssignedDate</th><th>ReturnedDate</th></tr>
+<tr><th></th><th>(&#8594; Flights.FlightID)</th><th>(&#8594; Aircrafts.AircraftID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01</td><td>2023-01-02</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-02</td><td>2023-01-03</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-01-03</td><td>2023-01-04</td></tr>
+</tbody></table></div>
+
+<div><h2>CheckIns</h2><table><thead>
+<tr><th>CheckInID</th><th>FlightID</th><th>PassengerID</th><th>CheckInDateTime</th><th>BoardingGate</th><th>Seat</th></tr>
+<tr><th></th><th>(&#8594; Flights.FlightID)</th><th>(&#8594; Passengers.PassengerID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01 09:00:00</td><td>Gates C1-C10</td><td>12A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-02 10:00:00</td><td>Gates D1-D20</td><td>23B</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-01-03 11:00:00</td><td>Gates E1-E10</td><td>34A</td></tr>
+<tr><td>4</td><td>1</td><td>4</td><td>2023-01-01 09:30:00</td><td>Gates C1-C10</td><td>None</td></tr>
+<tr><td>5</td><td>2</td><td>5</td><td>2023-01-02 10:30:00</td><td>Gates D1-D20</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

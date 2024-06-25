@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Users</span></h2><table><thead>
+<tr><th>id</th><th>username</th><th>password</th><th>graphic_design_tool</th><th>web_design_tool</th><th>access</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>User1</td><td>password1</td><td>Adobe Illustrator</td><td>Sublime Text</td><td>Subscription</td></tr>
+<tr><td>2</td><td>User2</td><td>password2</td><td>CorelDRAW</td><td>Visual Studio Code</td><td>Free</td></tr>
+<tr><td>3</td><td>User3</td><td>password3</td><td>Affinity Designer</td><td>Brackets</td><td>Premium</td></tr>
+<tr><td>4</td><td>User4</td><td>password4</td><td>Xara Designer Pro</td><td>Atom</td><td>Standard</td></tr>
+<tr><td>5</td><td>User5</td><td>password5</td><td>Sketch</td><td>WebStorm</td><td>Free</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>genre</th><th>release_year</th><th>rating</th><th>user_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Users.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie1</td><td>Action</td><td>2020</td><td>8.5</td><td>1</td></tr>
+<tr><td>2</td><td>Movie2</td><td>Comedy</td><td>2019</td><td>7.6</td><td>2</td></tr>
+<tr><td>3</td><td>Movie3</td><td>Drama</td><td>2018</td><td>8.2</td><td>3</td></tr>
+<tr><td>4</td><td>Movie4</td><td>Horror</td><td>2021</td><td>7.8</td><td>4</td></tr>
+<tr><td>5</td><td>Movie5</td><td>Thriller</td><td>2017</td><td>8.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>id</th><th>movie_id</th><th>user_id</th><th>score</th></tr>
+<tr><th></th><th>(&#8594; Movies.id)</th><th>(&#8594; Users.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>9.0</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>8.0</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>8.5</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>8.3</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>7.5</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Horror</td></tr>
+<tr><td>5</td><td>Thriller</td></tr>
+</tbody></table></div>
+
+<div><h2>AccessLevels</h2><table><thead>
+<tr><th>level_name</th><th>price</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>Basic</td><td>4.99</td><td>Limited features</td></tr>
+<tr><td>Premium</td><td>9.99</td><td>Full features</td></tr>
+<tr><td>Standard</td><td>6.99</td><td>Moderate features</td></tr>
+<tr><td>Free</td><td>0.0</td><td>No cost</td></tr>
+<tr><td>Platinum</td><td>14.99</td><td>Advanced features</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Subscriptions</span></h2><table><thead>
+<tr><th>user_id</th><th><span style="color:#006600">access_level_id</span></th><th>start_date</th><th>end_date</th></tr>
+<tr><th>(&#8594; Users.id)</th><th>(&#8594; AccessLevels.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td><span style="color:#006600">3</span></td><td><span style="color:#006600">3</span></td><td>2020-01-01</td><td>2020-12-<span style="color:#006600">3</span>1</td></tr>
+<tr><td>4</td><td>4</td><td>2019-01-01</td><td>2019-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>2018-01-01</td><td>2018-12-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

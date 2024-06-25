@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>20</td><td>M</td></tr>
+<tr><td>2</td><td>Jane</td><td>22</td><td>W</td></tr>
+<tr><td>3</td><td>Bob</td><td>18</td><td>M</td></tr>
+<tr><td>4</td><td>Alice</td><td>21</td><td>W</td></tr>
+<tr><td>5</td><td>Tom</td><td>19</td><td>M</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Physics</td></tr>
+<tr><td>3</td><td>Chemistry</td></tr>
+<tr><td>4</td><td>Biology</td></tr>
+<tr><td>5</td><td>English Literature</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Books</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>type_of_book</th><th><span style="color:#990000"><span style="color:#990000">literature</span></span></th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Subjects.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Catcher in the Rye</td><td>Novel</td><td><span style="color:#990000">Fiction Book</span></td></tr>
+<tr><td>2</td><td>To Kill a Mockingbird</td><td>Novel</td><td><span style="color:#990000">Non-fiction Book</span></td></tr>
+<tr><td>3</td><td>A Brief History of Time</td><td>Book</td><td><span style="color:#990000">Non-fiction Book</span></td></tr>
+<tr><td>4</td><td>Pride and Prejudice</td><td>Classic Novel</td><td><span style="color:#990000">Fiction Book</span></td></tr>
+<tr><td>5</td><td>Atomic Habits</td><td>Self-help Book</td><td><span style="color:#990000">Non-fiction Book</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Reviews</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">rating</span></th><th>book_id</th><th>student_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Books.id)</th><th>(&#8594; Students.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>4.5</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#006600">3.6</span></td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>4.7</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>5.0</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2.8</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

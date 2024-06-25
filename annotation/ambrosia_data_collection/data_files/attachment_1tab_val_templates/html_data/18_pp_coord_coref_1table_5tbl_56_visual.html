@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Writer</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th><span style="color:#186e16"><span style="color:#186e16">Type</span></span></th><th><span style="color:#1430b2">Education</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#186e16">Screenwriter</span></td><td><span style="color:#1430b2">New York University</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#186e16">Screenwriter</span></td><td>University of California Los Angeles</td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td><span style="color:#186e16">Playwright</span></td><td><span style="color:#1430b2">New York University</span></td></tr>
+<tr><td>4</td><td>Alice Brown</td><td><span style="color:#186e16">Playwright</span></td><td>Columbia University</td></tr>
+<tr><td>5</td><td>Tom Green</td><td><span style="color:#186e16">Screenwriter</span></td><td>American Film Institute</td></tr>
+<tr><td>6</td><td>Mary White</td><td>Director</td><td>UCLA School of Theater, Film and Television</td></tr>
+</tbody></table></div>
+
+<div><h2>Film</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Science Fiction</td></tr>
+<tr><td>2</td><td>The Matrix</td><td>1999</td><td>Science Fiction</td></tr>
+<tr><td>3</td><td>Fight Club</td><td>1999</td><td>Drama</td></tr>
+<tr><td>4</td><td>Pulp Fiction</td><td>1994</td><td>Crime</td></tr>
+<tr><td>5</td><td>Goodfellas</td><td>1990</td><td>Crime</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>30 July 1970</td></tr>
+<tr><td>2</td><td>Lana Wachowski</td><td>21 June 1968</td></tr>
+<tr><td>3</td><td>David Fincher</td><td>August 22, 1962</td></tr>
+<tr><td>4</td><td>Quentin Tarantino</td><td>March 27, 1963</td></tr>
+<tr><td>5</td><td>Martin Scorsese</td><td>November 17, 1942</td></tr>
+</tbody></table></div>
+
+<div><h2>Director_Film</h2><table><thead>
+<tr><th>directorId</th><th>filmId</th></tr>
+<tr><th>(&#8594; Director.id)</th><th>(&#8594; Film.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Screenplay</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>1</td></tr>
+<tr><td>2</td><td>The Matrix</td><td>2</td></tr>
+<tr><td>3</td><td>Fight Club</td><td>3</td></tr>
+<tr><td>4</td><td>Pulp Fiction</td><td>4</td></tr>
+<tr><td>5</td><td>Goodfellas</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Screenplay</h2><table><thead>
+<tr><th>filmId</th><th>scriptId</th></tr>
+<tr><th>(&#8594; Film.id)</th><th>(&#8594; Script.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

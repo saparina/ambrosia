@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">OnlineResources</span></h2><table><thead>
+<tr><th>resourceId</th><th>url</th><th>title</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>https://www.mathopenref.com/</td><td>Math Open Ref</td></tr>
+<tr><td>2</td><td>https://www.english-test.net/</td><td>English Test Net</td></tr>
+<tr><td>3</td><td>https://www.historyworld.org/</td><td>History World</td></tr>
+<tr><td>4</td><td>https://www.physicsclassroom.com/</td><td>Physics Classroom</td></tr>
+<tr><td>5</td><td>https://www.chemguide.co.uk/</td><td>Chem Guide</td></tr>
+</tbody></table></div>
+
+<div><h2>TestPreparations</h2><table><thead>
+<tr><th>preparationId</th><th>topic</th><th>resourcesId</th><th>servicesId</th></tr>
+<tr><th></th><th></th><th>(&#8594; OnlineResources.resourceId)</th><th>(&#8594; TutoringServices.serviceId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algebra</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Grammar</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Ancient History</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Electricity and Magnetism</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Organic Chemistry</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">TutoringServices</span></h2><table><thead>
+<tr><th>serviceId</th><th>tutorId</th><th>date</th><th>duration</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-12-19 18:00:00</td><td>60</td></tr>
+<tr><td>2</td><td>2</td><td>2022-12-20 17:30:00</td><td>45</td></tr>
+<tr><td>3</td><td>3</td><td>2022-12-21 16:00:00</td><td>60</td></tr>
+<tr><td>4</td><td>4</td><td>2022-12-22 15:30:00</td><td>60</td></tr>
+<tr><td>5</td><td>5</td><td>2022-12-23 17:00:00</td><td>75</td></tr>
+</tbody></table></div>
+
+<div><h2>Tutors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td></tr>
+<tr><td>5</td><td>David</td><td>Green</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

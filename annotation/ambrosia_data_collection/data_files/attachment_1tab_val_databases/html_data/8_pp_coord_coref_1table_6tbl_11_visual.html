@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Commercial_Space</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Revenue</th><th>Location</th><th>FloorNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Food Court</span></td><td><span style="color:#006600">$1 Million</span></td><td>Main Terminal</td><td>2</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Food Court</span></td><td>More than $1 Million</td><td>Concourse A</td><td>3</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Retail Shop</span></td><td><span style="color:#006600">$1 Million</span></td><td>Departures Lounge</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Retail Shop</span></td><td>Less than $1 Million</td><td>Arrivals Hall</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>Destination</th><th>DepartureTime</th><th>ArrivalTime</th><th>AircraftType</th><th>GateNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>London</td><td>2022-06-01 10:00:00</td><td>2022-06-01 12:00:00</td><td>Airbus A380</td><td>101</td></tr>
+<tr><td>2</td><td>New York</td><td>2022-06-01 13:00:00</td><td>2022-06-01 17:00:00</td><td>Boeing 777</td><td>102</td></tr>
+</tbody></table></div>
+
+<div><h2>Passenger</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-01-01</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-05-15</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>id</th><th>FlightId</th><th>PassengerId</th><th>Class</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Economy</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Business</td></tr>
+</tbody></table></div>
+
+<div><h2>Baggage</h2><table><thead>
+<tr><th>id</th><th>FlightId</th><th>WeightInKg</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>20</td><td>Luggage of passenger 1</td></tr>
+<tr><td>2</td><td>2</td><td>30</td><td>Luggage of passenger 2</td></tr>
+</tbody></table></div>
+
+<div><h2>SecurityCheckpoint</h2><table><thead>
+<tr><th>id</th><th>FloorNumber</th><th>Entrance</th><th>Exit</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2</td><td>Security Checkpoint A</td><td>Exit A</td></tr>
+<tr><td>2</td><td>1</td><td>Security Checkpoint B</td><td>Exit B</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Corp</td><td>123 Main St</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>XYZ Inc.</td><td>456 Elm St</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>PQR Ltd.</td><td>789 Oak St</td><td>+1357924680</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>News</td><td>Reporting on current events.</td></tr>
+<tr><td>2</td><td>Features</td><td>Investigative journalism and long form articles.</td></tr>
+<tr><td>3</td><td>Opinions</td><td>Commentary and editorials.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MediaJob</span></h2><table><thead>
+<tr><th>id</th><th>jobTitle</th><th>languageProficiency</th><th>experienceRequired</th><th>responsibilities</th><th>departmentId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Department.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Journalist</span></td><td><span style="color:#006600">English</span></td><td>2</td><td>Write news stories and reports.</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Journalist</span></td><td>Spanish</td><td>3</td><td>Write feature articles and conduct interviews.</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Editor</span></td><td><span style="color:#006600">English</span></td><td>5</td><td>Review and edit content before publication.</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Editor</span></td><td>French</td><td>4</td><td>Proofread and fact check articles.</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th><th>hireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>+1112223334</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>+4455566677</td><td>2021-02-01</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice@example.com</td><td>+7776665554</td><td>2021-03-01</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob@example.com</td><td>+8889997776</td><td>2021-04-01</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie@example.com</td><td>+9998886665</td><td>2021-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Application</h2><table><thead>
+<tr><th>applicationId</th><th>employeeId</th><th>mediaJobId</th><th>applicationDate</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Employee.id)</th><th>(&#8594; MediaJob.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-01-15</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-02-15</td><td>Accepted</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-03-15</td><td>Rejected</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-04-15</td><td>Processing</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-05-15</td><td>Interview Scheduled</td></tr>
+</tbody></table></div>
+
+<div><h2>Experience</h2><table><thead>
+<tr><th>employeeId</th><th>companyId</th><th>position</th><th>startDate</th><th>endDate</th></tr>
+<tr><th>(&#8594; Employee.id)</th><th>(&#8594; Company.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Reporter</td><td>2020-01-01</td><td>Present</td></tr>
+<tr><td>2</td><td>2</td><td>Feature Writer</td><td>2019-01-01</td><td>2020-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>Assistant Editor</td><td>2018-01-01</td><td>2019-12-31</td></tr>
+<tr><td>4</td><td>4</td><td>Subeditor</td><td>2017-01-01</td><td>2018-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>Managing Editor</td><td>2016-01-01</td><td>Present</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

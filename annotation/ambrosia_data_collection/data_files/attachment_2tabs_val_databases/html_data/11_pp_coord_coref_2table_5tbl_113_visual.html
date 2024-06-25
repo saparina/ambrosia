@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Rentals</span></h2><table><thead>
+<tr><th>rentalID</th><th>customerName</th><th>carModel</th><th>pickUpTime</th><th>dropOffTime</th><th>Rental_Car</th><th>Pick_up_Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Tesla Model S</td><td>2023-01-01 08:00:00</td><td>2023-01-02 17:00:00</td><td>Audi A6</td><td><span style="color:#006600">Zone D</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Ford Mustang</td><td>2023-01-02 09:00:00</td><td>2023-01-03 18:00:00</td><td>Chevrolet Camaro</td><td>Terminal C</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>Honda Accord</td><td>2023-01-03 10:00:00</td><td>2023-01-04 19:00:00</td><td>Volkswagen Jetta</td><td>Gate E</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>Nissan Altima</td><td>2023-01-04 11:00:00</td><td>2023-01-05 20:00:00</td><td>Kia Optima</td><td>Concourse F</td></tr>
+<tr><td>5</td><td>Charlie White</td><td>Subaru Forester</td><td>2023-01-05 12:00:00</td><td>2023-01-06 21:00:00</td><td>Mazda CX-5</td><td><span style="color:#006600">Zone D</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Shuttles</span></h2><table><thead>
+<tr><th>shuttleID</th><th>customerName</th><th>destination</th><th>departureTime</th><th>arrivalTime</th><th>Airport_Shuttle</th><th>Pick_up_Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anna Davis</td><td>New York</td><td>2023-01-01 07:00:00</td><td>2023-01-01 09:00:00</td><td>NYC Express</td><td><span style="color:#006600">Zone D</span></td></tr>
+<tr><td>2</td><td>Tom Green</td><td>Los Angeles</td><td>2023-01-02 08:00:00</td><td>2023-01-02 10:00:00</td><td>LA Connect</td><td>Terminal B</td></tr>
+<tr><td>3</td><td>Emma Stone</td><td>Paris</td><td>2023-01-03 09:00:00</td><td>2023-01-03 11:00:00</td><td>Eiffel Air</td><td>Gate G</td></tr>
+<tr><td>4</td><td>Leonardo DiCaprio</td><td>Tokyo</td><td>2023-01-04 10:00:00</td><td>2023-01-04 12:00:00</td><td>Japan Journey</td><td>Concourse H</td></tr>
+<tr><td>5</td><td>Scarlett Johansson</td><td>London</td><td>2023-01-05 11:00:00</td><td>2023-01-05 13:00:00</td><td>British Charter</td><td><span style="color:#006600">Zone D</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passengerID</th><th>name</th><th>age</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Beckham</td><td>39</td><td>English</td></tr>
+<tr><td>2</td><td>Victoria Beckham</td><td>45</td><td>English</td></tr>
+<tr><td>3</td><td>Brooklyn Beckham</td><td>23</td><td>English</td></tr>
+<tr><td>4</td><td>Romeo Beckham</td><td>20</td><td>English</td></tr>
+<tr><td>5</td><td>Cruz Beckham</td><td>17</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flightID</th><th>airline</th><th>origin</th><th>destination</th><th>departureTime</th><th>arrivalTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>San Francisco</td><td>2023-01-01 05:00:00</td><td>2023-01-01 07:00:00</td><td>UA123</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>Atlanta</td><td>2023-01-02 06:00:00</td><td>2023-01-02 08:00:00</td><td>DL543</td></tr>
+<tr><td>3</td><td>Southwest Airlines</td><td>Las Vegas</td><td>2023-01-03 07:00:00</td><td>2023-01-03 09:00:00</td><td>WN789</td></tr>
+<tr><td>4</td><td>American Airlines</td><td>Dallas</td><td>2023-01-04 08:00:00</td><td>2023-01-04 10:00:00</td><td>AA345</td></tr>
+<tr><td>5</td><td>Spirit Airlines</td><td>Orlando</td><td>2023-01-05 09:00:00</td><td>2023-01-05 11:00:00</td><td>NK126</td></tr>
+</tbody></table></div>
+
+<div><h2>Baggage</h2><table><thead>
+<tr><th>baggageID</th><th>passengerID</th><th>weight</th><th>type</th></tr>
+<tr><th></th><th>(&#8594; Passengers.passengerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>30</td><td>Checked Luggage</td></tr>
+<tr><td>2</td><td>1</td><td>15</td><td>Carry-On Bag</td></tr>
+<tr><td>3</td><td>2</td><td>20</td><td>Checked Luggage</td></tr>
+<tr><td>4</td><td>2</td><td>10</td><td>Carry-On Bag</td></tr>
+<tr><td>5</td><td>3</td><td>25</td><td>Checked Luggage</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

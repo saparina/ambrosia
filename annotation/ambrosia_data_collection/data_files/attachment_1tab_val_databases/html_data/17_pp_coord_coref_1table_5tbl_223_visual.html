@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>CustomerName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Mike Johnson</td></tr>
+<tr><td>4</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>David Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerID</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>5000.0</td></tr>
+<tr><td>3</td><td>3</td><td>8000.0</td></tr>
+<tr><td>4</td><td>4</td><td>2000.0</td></tr>
+<tr><td>5</td><td>5</td><td>7000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountNumber</th><th>Amount</th><th>TransactionType</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100</td><td>Deposit</td><td>2021-06-15 10:00:00</td></tr>
+<tr><td>2</td><td>1</td><td>-50</td><td>Withdrawal</td><td>2021-06-15 11:00:00</td></tr>
+<tr><td>3</td><td>2</td><td>200</td><td>Deposit</td><td>2021-06-15 12:00:00</td></tr>
+<tr><td>4</td><td>2</td><td>-100</td><td>Withdrawal</td><td>2021-06-15 13:00:00</td></tr>
+<tr><td>5</td><td>3</td><td>300</td><td>Deposit</td><td>2021-06-15 14:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FinancialReports</span></h2><table><thead>
+<tr><th>ReportID</th><th>Date</th><th>FinancialStatement</th><th>ForeignKey</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Accounts.AccountNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">2010-12-10</span></td><td><span style="color:#990000">Balance Sheet</span></td><td>None</td></tr>
+<tr><td>2</td><td>2011-01-15</td><td><span style="color:#990000">Balance Sheet</span></td><td>None</td></tr>
+<tr><td>3</td><td><span style="color:#006600">2010-12-10</span></td><td><span style="color:#990000">Income Statement</span></td><td>None</td></tr>
+<tr><td>4</td><td>2011-01-15</td><td><span style="color:#990000">Income Statement</span></td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>BalanceSheets</h2><table><thead>
+<tr><th>SheetID</th><th>ReportID</th><th>Assets</th><th>Liabilities</th><th>Equity</th></tr>
+<tr><th></th><th>(&#8594; FinancialReports.ReportID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Assets Value 1</td><td>Liabilities Value 1</td><td>Equity Value 1</td></tr>
+<tr><td>2</td><td>2</td><td>Assets Value 2</td><td>Liabilities Value 2</td><td>Equity Value 2</td></tr>
+<tr><td>3</td><td>3</td><td>Assets Value 3</td><td>Liabilities Value 3</td><td>Equity Value 3</td></tr>
+<tr><td>4</td><td>4</td><td>Assets Value 4</td><td>Liabilities Value 4</td><td>Equity Value 4</td></tr>
+</tbody></table></div>
+
+<div><h2>IncomeStatements</h2><table><thead>
+<tr><th>StatementID</th><th>ReportID</th><th>Revenue</th><th>Expenses</th><th>NetProfit</th></tr>
+<tr><th></th><th>(&#8594; FinancialReports.ReportID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Revenue Value 1</td><td>Expenses Value 1</td><td>NetProfit Value 1</td></tr>
+<tr><td>2</td><td>2</td><td>Revenue Value 2</td><td>Expenses Value 2</td><td>NetProfit Value 2</td></tr>
+<tr><td>3</td><td>3</td><td>Revenue Value 3</td><td>Expenses Value 3</td><td>NetProfit Value 3</td></tr>
+<tr><td>4</td><td>4</td><td>Revenue Value 4</td><td>Expenses Value 4</td><td>NetProfit Value 4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

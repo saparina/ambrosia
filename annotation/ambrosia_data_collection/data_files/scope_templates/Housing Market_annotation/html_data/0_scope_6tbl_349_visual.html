@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Homeowners_associations</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sunnyvale HOA</td><td>California</td></tr>
+<tr><td>2</td><td>Rainbow Hills Association</td><td>Florida</td></tr>
+<tr><td>3</td><td>Cherry Blossom Club</td><td>Texas</td></tr>
+<tr><td>4</td><td>Evergreen Estates</td><td>New York</td></tr>
+<tr><td>5</td><td>Diamond Cove Community</td><td>Washington</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Rules</span></h2><table><thead>
+<tr><th>ruleid</th><th><span style="color:#990000">rulename</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Noise Ordinance</td><td>Respect quiet hours from 10 PM - 7 AM.</td></tr>
+<tr><td>2</td><td>Parking Regulations</td><td>All vehicles must park on driveways only.</td></tr>
+<tr><td>3</td><td>Landscaping Guidelines</td><td>Maintain a well-manicured lawn and trimmed hedges.</td></tr>
+<tr><td>4</td><td>Pet Restrictions</td><td>Only small dogs allowed, no aggressive breeds.</td></tr>
+<tr><td>5</td><td>Architectural Review Process</td><td>Submit plans for any exterior modifications.</td></tr>
+</tbody></table></div>
+
+<div><h2>Homes</h2><table><thead>
+<tr><th>houseid</th><th>address</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>300000.0</td></tr>
+<tr><td>2</td><td>456 Oak Ave</td><td>400000.0</td></tr>
+<tr><td>3</td><td>789 Pine Rd</td><td>500000.0</td></tr>
+<tr><td>4</td><td>101 Elm Ln</td><td>600000.0</td></tr>
+<tr><td>5</td><td>202 Maple Dr</td><td>700000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Homeowners_associations_homes</h2><table><thead>
+<tr><th>associd</th><th>houseid</th></tr>
+<tr><th>(&#8594; Homeowners_associations.id)</th><th>(&#8594; Homes.houseid)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Homeowners_association_rules</h2><table><thead>
+<tr><th>associd</th><th>ruleid</th></tr>
+<tr><th>(&#8594; Homeowners_associations.id)</th><th>(&#8594; Rules.ruleid)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

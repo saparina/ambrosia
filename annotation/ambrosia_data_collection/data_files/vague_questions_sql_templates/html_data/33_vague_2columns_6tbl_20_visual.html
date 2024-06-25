@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1990-08-30</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1992-06-07</td><td>456 Elm St</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>GradeID</th><th>EnrollmentID</th><th>Grade</th><th>Comments</th></tr>
+<tr><th></th><th>(&#8594; Enrollment.EnrollmentID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A+</td><td>Excellent work on projects.</td></tr>
+<tr><td>2</td><td>1</td><td>A-</td><td>Great effort on final exam.</td></tr>
+<tr><td>3</td><td>2</td><td>B+</td><td>Improved a lot over the semester.</td></tr>
+</tbody></table></div>
+
+<div><h2>Attendance</h2><table><thead>
+<tr><th>AttendenceID</th><th>EnrollmentID</th><th>NumberOfDaysPresent</th><th>TotalNumberOfClasses</th><th>ExcusedAbsences</th><th>UnexcusedAbsences</th></tr>
+<tr><th></th><th>(&#8594; Enrollment.EnrollmentID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>20</td><td>25</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>22</td><td>25</td><td>1</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th><span style="color:#990000">Curriculum_Topics</span></th><th>CourseName</th><th>TeachersName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Math</td><td>Math 101</td><td>Mr. Johnson</td></tr>
+<tr><td>2</td><td>English Literature</td><td>Engl 101</td><td>Mrs. Williams</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

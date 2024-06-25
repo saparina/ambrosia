@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Resorts</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paradise Beach</td><td>Maldives</td></tr>
+<tr><td>2</td><td>Mountain View Lodge</td><td>Colorado</td></tr>
+<tr><td>3</td><td>Tropical Oasis</td><td>Hawaii</td></tr>
+<tr><td>4</td><td>Crystal Waters</td><td>Australia</td></tr>
+<tr><td>5</td><td>Desert Shadows</td><td>Nevada</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Activities</span></h2><table><thead>
+<tr><th>activityID</th><th><span style="color:#990000">activityName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Swimming Pool</td></tr>
+<tr><td>2</td><td>Golf Course</td></tr>
+<tr><td>3</td><td>Fitness Center</td></tr>
+<tr><td>4</td><td>Restaurant</td></tr>
+<tr><td>5</td><td>Kids Club</td></tr>
+<tr><td>6</td><td>Beach Volleyball</td></tr>
+<tr><td>7</td><td>Scuba Diving</td></tr>
+<tr><td>8</td><td>Yoga Classes</td></tr>
+<tr><td>9</td><td>Spa Services</td></tr>
+<tr><td>10</td><td>Watersports</td></tr>
+</tbody></table></div>
+
+<div><h2>Resorts_Activities</h2><table><thead>
+<tr><th>resortID</th><th>activityID</th></tr>
+<tr><th>(&#8594; Resorts.id)</th><th>(&#8594; Activities.activityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>1</td><td>6</td></tr>
+<tr><td>2</td><td>7</td></tr>
+<tr><td>3</td><td>8</td></tr>
+<tr><td>4</td><td>9</td></tr>
+<tr><td>5</td><td>10</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

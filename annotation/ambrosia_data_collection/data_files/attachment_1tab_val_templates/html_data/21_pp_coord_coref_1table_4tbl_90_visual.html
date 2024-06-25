@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Publications</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th><span style="color:#186e16"><span style="color:#186e16">Print_Media</span></span></th><th><span style="color:#1430b2">Publication_Frequency</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily News</td><td><span style="color:#186e16">Newspaper</span></td><td>Daily</td></tr>
+<tr><td>2</td><td>Financial Times</td><td><span style="color:#186e16">Newspaper</span></td><td><span style="color:#1430b2">Weekly</span></td></tr>
+<tr><td>3</td><td>Vanity Fair</td><td><span style="color:#186e16">Magazine</span></td><td>Monthly</td></tr>
+<tr><td>4</td><td>Time <span style="color:#186e16">Magazine</span></td><td><span style="color:#186e16">Magazine</span></td><td><span style="color:#1430b2">Weekly</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td></tr>
+<tr><td>4</td><td>Emma</td><td>Wilson</td></tr>
+<tr><td>5</td><td>Tom</td><td>Hanks</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1</td><td>This is an article about something...</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Article 2</td><td>Another article with content...</td><td>2022-01-07</td><td>2</td></tr>
+<tr><td>3</td><td>Article 3</td><td>Yet another piece of writing...</td><td>2022-01-14</td><td>3</td></tr>
+<tr><td>4</td><td>Article 4</td><td>Here comes a new story!</td><td>2022-01-21</td><td>4</td></tr>
+<tr><td>5</td><td>Article 5</td><td>Final article for this week...</td><td>2022-01-28</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>PublicationsAuthors</h2><table><thead>
+<tr><th>PublicationID</th><th>AuthorID</th></tr>
+<tr><th>(&#8594; Publications.ID)</th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>1</td></tr>
+<tr><td>7</td><td>2</td></tr>
+<tr><td>8</td><td>3</td></tr>
+<tr><td>9</td><td>4</td></tr>
+<tr><td>10</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

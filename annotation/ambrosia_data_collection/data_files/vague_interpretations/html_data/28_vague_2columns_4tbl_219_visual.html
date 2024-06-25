@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>ID</th><th>First_name</th><th>Last_name</th><th>Date_of_birth</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1998-06-15</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1997-03-20</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>1996-09-05</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>1999-11-25</td><td>emily.white@example.com</td></tr>
+<tr><td>5</td><td>William</td><td>Black</td><td>2000-02-10</td><td>william.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>Department_ID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>Building A, Room 201</td></tr>
+<tr><td>2</td><td>Mathematics</td><td>Building B, Room 301</td></tr>
+<tr><td>3</td><td>Physics</td><td>Building C, Room 401</td></tr>
+<tr><td>4</td><td>Biology</td><td>Building D, Room 501</td></tr>
+<tr><td>5</td><td>History</td><td>Building E, Room 601</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th><span style="color:#990000">Room_number</span></th><th><span style="color:#990000">Building_name</span></th><th>Capacity</th><th>Lectures</th></tr>
+</thead><tbody>
+<tr><td>101</td><td>Building A</td><td>50</td><td>CS101 - Introduction to Computer Science</td></tr>
+<tr><td>102</td><td>Building A</td><td>40</td><td>CS102 - Data Structures and Algorithms</td></tr>
+<tr><td>103</td><td>Building B</td><td>30</td><td>MA101 - Calculus I</td></tr>
+<tr><td>104</td><td>Building B</td><td>35</td><td>MA102 - Calculus II</td></tr>
+<tr><td>105</td><td>Building C</td><td>25</td><td>PH101 - General Physics</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>Student_id</th><th>Course_id</th><th>Semester_year</th><th>Grade</th></tr>
+<tr><th>(&#8594; Students.ID)</th><th>(&#8594; Courses.Course_id)</th><th>(&#8594; Schedule.Semester_year)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021</td><td>A</td></tr>
+<tr><td>1</td><td>2</td><td>2021</td><td>B</td></tr>
+<tr><td>2</td><td>3</td><td>2021</td><td>A</td></tr>
+<tr><td>2</td><td>4</td><td>2021</td><td>B</td></tr>
+<tr><td>3</td><td>5</td><td>2021</td><td>A</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>Teacher_Id</th><th>First_name</th><th>Last_name</th><th>Hire_date</th><th>Office_room_number</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Rooms.Room_number)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Smith</td><td>2015-05-01</td><td>101</td></tr>
+<tr><td>2</td><td>Prof.</td><td>Jones</td><td>2010-08-01</td><td>102</td></tr>
+<tr><td>3</td><td>Assoc. Prof.</td><td>Martin</td><td>2012-11-01</td><td>103</td></tr>
+<tr><td>4</td><td>Instructor</td><td>Wilson</td><td>2018-02-01</td><td>104</td></tr>
+<tr><td>5</td><td>Lecturer</td><td>Garcia</td><td>2013-06-01</td><td>105</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>Course_id</th><th>Title</th><th>Description</th><th>Credits</th><th>Teacher_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Teachers.Teacher_Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>An overview of computer science fundamentals</td><td>4</td><td>1</td></tr>
+<tr><td>2</td><td>Data Structures and Algorithms</td><td>Advanced study of data structures and algorithms</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>Calculus I</td><td>Fundamental concepts of calculus</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>Calculus II</td><td>More advanced topics in calculus</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>General Physics</td><td>Basic principles of physics</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

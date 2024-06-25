@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Hospital</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Western Medical Center</td></tr>
+<tr><td>2</td><td>Eastern General Hospital</td></tr>
+<tr><td>3</td><td>Northern Healthcare System</td></tr>
+<tr><td>4</td><td><span style="color:#006600">Central Valley Clinic</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Radiologist</h2><table><thead>
+<tr><th>id</th><th>hospital_id</th><th>first_name</th><th>last_name</th></tr>
+<tr><th></th><th>(&#8594; Hospital.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>3</td><td>Alice</td><td>Brown</td></tr>
+<tr><td>4</td><td>4</td><td>Michael</td><td>Johnson</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Ultrasound_Tech</span></h2><table><thead>
+<tr><th>id</th><th>hospital_id</th><th>first_name</th><th>last_name</th></tr>
+<tr><th></th><th>(&#8594; Hospital.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Emma</td><td>Jones</td></tr>
+<tr><td>2</td><td>2</td><td>David</td><td>Williams</td></tr>
+<tr><td>3</td><td>3</td><td>Lisa</td><td>Martin</td></tr>
+<tr><td>4</td><td>4</td><td>Robert</td><td>Thomas</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosting</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th><th>post_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Radiologist</td><td>Perform diagnostic imaging procedures.</td><td>80000.0</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>Ultrasound Technician</td><td>Operate ultrasound equipment for medical imaging.</td><td>60000.0</td><td>2022-01-02</td></tr>
+<tr><td>3</td><td>Radiographer</td><td>Produce X-ray images and other diagnostic images.</td><td>70000.0</td><td>2022-01-03</td></tr>
+<tr><td>4</td><td>Diagnostic Medical Sonographer</td><td>Conduct ultrasound examinations on patients.</td><td>65000.0</td><td>2022-01-04</td></tr>
+<tr><td>5</td><td>Healthcare Administrator</td><td>Manage healthcare facility operations and staff.</td><td>55000.0</td><td>2022-01-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RadiologistJob</span></h2><table><thead>
+<tr><th>radiologist_id</th><th>job_posting_id</th><th>start_date</th><th>end_date</th></tr>
+<tr><th>(&#8594; Radiologist.id)</th><th>(&#8594; JobPosting.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-15</td><td>2023-01-15</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-20</td><td>2023-01-20</td></tr>
+<tr><td>3</td><td>3</td><td>2022-01-25</td><td>2023-01-25</td></tr>
+<tr><td>4</td><td>4</td><td>2022-01-30</td><td>2023-01-30</td></tr>
+</tbody></table></div>
+
+<div><h2>TechJob</h2><table><thead>
+<tr><th>tech_id</th><th>job_posting_id</th><th>start_date</th><th>end_date</th></tr>
+<tr><th>(&#8594; Ultrasound_Tech.id)</th><th>(&#8594; JobPosting.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-16</td><td>2023-01-16</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-21</td><td>2023-01-21</td></tr>
+<tr><td>3</td><td>3</td><td>2022-01-26</td><td>2023-01-26</td></tr>
+<tr><td>4</td><td>4</td><td>2022-01-31</td><td>2023-01-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

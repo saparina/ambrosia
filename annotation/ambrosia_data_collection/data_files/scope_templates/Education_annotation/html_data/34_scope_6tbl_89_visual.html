@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Conferences</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Educational Technology Conference</td><td>New York</td></tr>
+<tr><td>2</td><td>Global Educators Summit</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>International Literacy Conference</td><td>London</td></tr>
+<tr><td>4</td><td>World Science Education Congress</td><td>Singapore</td></tr>
+<tr><td>5</td><td>Teaching and Learning Forum</td><td>Dubai</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Panels</span></h2><table><thead>
+<tr><th>panel_id</th><th><span style="color:#990000">description</span></th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Exploring New Teaching Methods</td><td>Research_Methods</td></tr>
+<tr><td>2</td><td>The Future of Classroom Technologies</td><td>Technology</td></tr>
+<tr><td>3</td><td>Inclusive Design Principles in Education</td><td>Design</td></tr>
+<tr><td>4</td><td>Curriculum Development Strategies</td><td>Academics</td></tr>
+<tr><td>5</td><td>Assessment Tools and Best Practices</td><td>Pedagogy</td></tr>
+</tbody></table></div>
+
+<div><h2>Conferences_Panels</h2><table><thead>
+<tr><th>conference_id</th><th>panel_id</th></tr>
+<tr><th>(&#8594; Conferences.id)</th><th>(&#8594; Panels.panel_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Speakers</h2><table><thead>
+<tr><th>speaker_id</th><th>first_name</th><th>last_name</th><th>affiliation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>University of New York</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>Harvard University</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>Stanford University</td></tr>
+<tr><td>4</td><td>Alice</td><td>Wonderland</td><td>MIT</td></tr>
+<tr><td>5</td><td>Robert</td><td>Capa</td><td>Columbia University</td></tr>
+</tbody></table></div>
+
+<div><h2>Conferences_Speakers</h2><table><thead>
+<tr><th>conference_id</th><th>speaker_id</th><th>speaking_date</th></tr>
+<tr><th>(&#8594; Conferences.id)</th><th>(&#8594; Speakers.speaker_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-06-07</td></tr>
+<tr><td>1</td><td>2</td><td>2021-06-08</td></tr>
+<tr><td>2</td><td>3</td><td>2021-09-05</td></tr>
+<tr><td>3</td><td>4</td><td>2021-10-03</td></tr>
+<tr><td>4</td><td>5</td><td>2021-11-08</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

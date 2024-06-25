@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering</td></tr>
+<tr><td>2</td><td>Marketing</td></tr>
+<tr><td>3</td><td>Human Resources</td></tr>
+<tr><td>4</td><td>Finance</td></tr>
+<tr><td>5</td><td>IT</td></tr>
+</tbody></table></div>
+
+<div><h2>JobTitles</h2><table><thead>
+<tr><th>TitleID</th><th>Title</th><th>MinSalary</th><th>MaxSalary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>70000.0</td><td>120000.0</td></tr>
+<tr><td>2</td><td>Project Manager</td><td>80000.0</td><td>120000.0</td></tr>
+<tr><td>3</td><td>HR Specialist</td><td>60000.0</td><td>90000.0</td></tr>
+<tr><td>4</td><td>Accountant</td><td>55000.0</td><td>85000.0</td></tr>
+<tr><td>5</td><td>System Administrator</td><td>65000.0</td><td>95000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>HireDate</th><th>Email</th><th>PhoneNumber</th><th>DepartmentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Departments.DepartmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2021-01-01</td><td>john.doe@example.com</td><td>555-1234</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2021-02-01</td><td>jane.smith@example.com</td><td>555-5678</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>2021-03-01</td><td>alice.brown@example.com</td><td>555-9012</td><td>3</td></tr>
+<tr><td>4</td><td>Mike</td><td>Johnson</td><td>2021-04-01</td><td>mike.johnson@example.com</td><td>555-1357</td><td>4</td></tr>
+<tr><td>5</td><td>Lisa</td><td>Wilson</td><td>2021-05-01</td><td>lisa.wilson@example.com</td><td>555-4321</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Commissions</span></h2><table><thead>
+<tr><th>CommissionID</th><th><span style="color:#006600">Structure</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Base Salary Plus Commission</td></tr>
+<tr><td>2</td><td><span style="color:#006600">No Base Salary</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SalesReps</span></h2><table><thead>
+<tr><th>SalesRepID</th><th>EmployeeID</th><th>CommissionID</th></tr>
+<tr><th></th><th>(&#8594; Employees.EmployeeID)</th><th>(&#8594; Commissions.CommissionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MarketingManagers</span></h2><table><thead>
+<tr><th>MarketingManagerID</th><th>EmployeeID</th><th>CommissionID</th></tr>
+<tr><th></th><th>(&#8594; Employees.EmployeeID)</th><th>(&#8594; Commissions.CommissionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

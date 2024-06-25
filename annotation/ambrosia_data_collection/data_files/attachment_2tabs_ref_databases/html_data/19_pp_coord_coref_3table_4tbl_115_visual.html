@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>author_id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alicejohnson@example.com</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bobbrown@example.com</td></tr>
+<tr><td>5</td><td>Carol White</td><td>carolwhite@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Volumes</span></h2><table><thead>
+<tr><th>volume_id</th><th><span style="color:#006600">number</span></th><th>publication_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>01</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>02</td><td>2023-02-01</td></tr>
+<tr><td>3</td><td><span style="color:#006600">03</span></td><td>2023-<span style="color:#006600">03</span>-01</td></tr>
+<tr><td>4</td><td>04</td><td>2023-04-01</td></tr>
+<tr><td>5</td><td>05</td><td>2023-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Opinion_Pieces</span></h2><table><thead>
+<tr><th>opinion_piece_id</th><th>title</th><th>content</th><th>volume_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Volumes.volume_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Importance of Free Press</td><td>A discussion about freedom of speech and press...</td><td>1</td></tr>
+<tr><td>2</td><td>Technology and Society</td><td>How technology has shaped our society today.</td><td>2</td></tr>
+<tr><td>3</td><td>Economic Growth and Poverty</td><td>Exploring how economic growth impacts poverty levels...</td><td>3</td></tr>
+<tr><td>4</td><td>Climate Change and Its Effects</td><td>Discussing the effects of climate change on our planet...</td><td>4</td></tr>
+<tr><td>5</td><td>Healthcare Accessibility</td><td>Analyzing healthcare accessibility across various demographics...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Feature_Articles</span></h2><table><thead>
+<tr><th>feature_article_id</th><th>title</th><th>content</th><th>volume_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Volumes.volume_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The History of Newspapers</td><td>An exploration of newspaper history dating back centuries...</td><td>1</td></tr>
+<tr><td>2</td><td>Investigative Journalism Techniques</td><td>Discovering the best practices in investigative journalism...</td><td>2</td></tr>
+<tr><td>3</td><td>Censorship Around The World</td><td>Looking at censorship laws around the globe...</td><td>3</td></tr>
+<tr><td>4</td><td>Journalism Ethics and Standards</td><td>Understanding the ethical standards in modern journalism...</td><td>4</td></tr>
+<tr><td>5</td><td>Future Of News Media</td><td>Predicting trends and changes within the news media industry...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>publication_id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Times</td><td>1 New York Times Square, New York City, NY 10007</td></tr>
+<tr><td>2</td><td>Washington Post</td><td>1301 K Street NW, Washington DC 20071</td></tr>
+<tr><td>3</td><td>Los Angeles Times</td><td>202 W 1st St #600, Los Angeles CA 90012</td></tr>
+<tr><td>4</td><td>Chicago Tribune</td><td>435 N Michigan Ave, Chicago IL 60611</td></tr>
+<tr><td>5</td><td>Miami Herald</td><td>3511 NW 91 Avenue, Doral FL 33172</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

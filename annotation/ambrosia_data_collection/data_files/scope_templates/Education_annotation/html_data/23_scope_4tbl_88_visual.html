@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Teachers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Math</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>English</td></tr>
+<tr><td>3</td><td>Mike Brown</td><td>Science</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>History</td></tr>
+<tr><td>5</td><td>Robert Johnson</td><td>Art</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Supplies</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">supplyName</span></th><th><span style="color:#990000">quantity</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Stickers</td><td>100</td></tr>
+<tr><td>2</td><td>Notebooks</td><td>200</td></tr>
+<tr><td>3</td><td>Pens</td><td>300</td></tr>
+<tr><td>4</td><td>Erasers</td><td>400</td></tr>
+<tr><td>5</td><td>Markers</td><td>500</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers_Supplies</h2><table><thead>
+<tr><th>teacherID</th><th>supplyID</th></tr>
+<tr><th>(&#8594; Teachers.id)</th><th>(&#8594; Supplies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

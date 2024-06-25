@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td></tr>
+<tr><td>5</td><td>Tom</td><td>White</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>DepartmentName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Physics</td></tr>
+<tr><td>4</td><td>Biology</td></tr>
+<tr><td>5</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>CourseTitle</th><th><span style="color:#990000">RoomNumber</span></th><th><span style="color:#990000">Building</span></th><th>StartTime</th><th>EndTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>101</td><td>Engineering</td><td>9AM</td><td>12PM</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>201</td><td>Liberal Arts</td><td>10AM</td><td>1PM</td></tr>
+<tr><td>3</td><td>General Physics I</td><td>301</td><td>Science</td><td>1PM</td><td>4PM</td></tr>
+<tr><td>4</td><td>Human Biology</td><td>401</td><td>Health Sciences</td><td>2PM</td><td>5PM</td></tr>
+<tr><td>5</td><td>World History</td><td>501</td><td>Arts and Humanities</td><td>8AM</td><td>11AM</td></tr>
+</tbody></table></div>
+
+<div><h2>Buildings</h2><table><thead>
+<tr><th>BuildingID</th><th>Name</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering Building</td><td>1 University Drive</td></tr>
+<tr><td>2</td><td>Liberal Arts Building</td><td>2 University Drive</td></tr>
+<tr><td>3</td><td>Science Building</td><td>3 University Drive</td></tr>
+<tr><td>4</td><td>Health Sciences Building</td><td>4 University Drive</td></tr>
+<tr><td>5</td><td>Arts and Humanities Building</td><td>5 University Drive</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>RoomID</th><th>BuildingID</th><th>Capacity</th></tr>
+<tr><th></th><th>(&#8594; Buildings.BuildingID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>101</td><td>1</td><td>100</td></tr>
+<tr><td>201</td><td>2</td><td>200</td></tr>
+<tr><td>301</td><td>3</td><td>250</td></tr>
+<tr><td>401</td><td>4</td><td>150</td></tr>
+<tr><td>501</td><td>5</td><td>100</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

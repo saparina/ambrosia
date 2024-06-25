@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Capabilities</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Contactless Transaction</span></td></tr>
+<tr><td>2</td><td>Withdrawal Only</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ATMs</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>POSID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Point_of_Sale_Terminals.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ATM1</td><td>Main Street</td><td>1</td></tr>
+<tr><td>2</td><td>ATM2</td><td>Highway 10</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Point_of_Sale_Terminals</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>AtmID</th><th>CapabilityID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; ATMs.ID)</th><th>(&#8594; Capabilities.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>POS1</td><td>Shopping Mall</td><td>3</td><td>1</td></tr>
+<tr><td>2</td><td>POS2</td><td>Grocery Store</td><td>None</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>DOB</th><th>AccountNumber</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.Number)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td><td>1001</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1975-06-15</td><td>1002</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>1990-07-22</td><td>1003</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>Number</th><th>Balance</th><th>Type</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Customers.ID)</th></tr>
+</thead><tbody>
+<tr><td>1001</td><td>1000</td><td>Checking</td><td>1</td></tr>
+<tr><td>1002</td><td>500</td><td>Savings</td><td>2</td></tr>
+<tr><td>1003</td><td>2000</td><td>Checking</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>ID</th><th>Amount</th><th>Date</th><th>Description</th><th>FromID</th><th>ToID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.Number)</th><th>(&#8594; Accounts.Number)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>500</td><td>2021-01-01</td><td>Payment</td><td>1001</td><td>1002</td></tr>
+<tr><td>2</td><td>-200</td><td>2021-01-02</td><td>Withdrawal</td><td>1001</td><td>1001</td></tr>
+<tr><td>3</td><td>250</td><td>2021-01-03</td><td>Transfer</td><td>1002</td><td>1003</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

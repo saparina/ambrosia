@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Performances</span></h2><table><thead>
+<tr><th>PerformanceID</th><th>TypeOfPerformance</th><th>Venue</th><th>Date</th><th>TicketPrice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Improvised Theatre</span></td><td><span style="color:#006600">Cambridge Theatre</span></td><td>2021-09-30 00:00:00</td><td>20.0</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Improvised Theatre</span></td><td>New York Theater</td><td>2021-09-30 00:00:00</td><td>25.0</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Musical</span></td><td><span style="color:#006600">Cambridge Theatre</span></td><td>2021-10-07 00:00:00</td><td>30.0</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Musical</span></td><td>London Opera House</td><td>2021-10-08 00:00:00</td><td>40.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td><td>American</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-06-15</td><td>British</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>RoleID</th><th>Name</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>The Prince of Denmark.</td></tr>
+<tr><td>2</td><td>Macbeth</td><td>A Scottish nobleman who becomes the King of Scotland.</td></tr>
+</tbody></table></div>
+
+<div><h2>Casting</h2><table><thead>
+<tr><th>CastingID</th><th>ActorID</th><th>RoleID</th></tr>
+<tr><th></th><th>(&#8594; Actors.ActorID)</th><th>(&#8594; Roles.RoleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Shows</h2><table><thead>
+<tr><th>ShowID</th><th>Title</th><th>Genre</th><th>Director</th><th>ReleaseYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>Tragedy</td><td>William Shakespeare</td><td>1603</td></tr>
+<tr><td>2</td><td>Macbeth</td><td>Tragedy</td><td>William Shakespeare</td><td>1606</td></tr>
+</tbody></table></div>
+
+<div><h2>PerformancesInShows</h2><table><thead>
+<tr><th>PerformanceShowID</th><th>PerformanceID</th><th>ShowID</th></tr>
+<tr><th></th><th>(&#8594; Performances.PerformanceID)</th><th>(&#8594; Shows.ShowID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

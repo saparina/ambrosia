@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Menus</span></h2><table><thead>
+<tr><th>menu_id</th><th>name</th><th>description</th><th>appetizers</th><th>buffet</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>SomeMenu</td><td>Description for Some Menu.</td><td><span style="color:#990000">Salad</span></td><td><span style="color:#006600">Hilton</span></td></tr>
+<tr><td>2</td><td>AnotherMenu</td><td>Description for Another Menu.</td><td><span style="color:#990000">Salad</span></td><td>Not Hilton</td></tr>
+<tr><td>3</td><td>YetAnotherMenu</td><td>Description for Yet Another Menu.</td><td><span style="color:#990000">Soup</span></td><td><span style="color:#006600">Hilton</span></td></tr>
+<tr><td>4</td><td>FourthMenu</td><td>Description for Fourth Menu.</td><td><span style="color:#990000">Soup</span></td><td>Not Hilton</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>name</th><th>phone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>9876543210</td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td>1112223330</td></tr>
+<tr><td>4</td><td>Alice Brown</td><td>2223334440</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>order_id</th><th>customer_id</th><th>menu_id</th><th>total_price</th></tr>
+<tr><th></th><th>(&#8594; Customers.customer_id)</th><th>(&#8594; Menus.menu_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>30.99</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>25.5</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>40.75</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>35.45</td></tr>
+</tbody></table></div>
+
+<div><h2>FoodItems</h2><table><thead>
+<tr><th>item_id</th><th>food_type</th><th>name</th><th>price</th><th>menu_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Menus.menu_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Starter</td><td>Garden Salad</td><td>7.99</td><td>1</td></tr>
+<tr><td>2</td><td>Main Course</td><td>Grilled Chicken</td><td>15.99</td><td>2</td></tr>
+<tr><td>3</td><td>Dessert</td><td>Tiramisu</td><td>6.99</td><td>2</td></tr>
+<tr><td>4</td><td>Starter</td><td>Tomato Soup</td><td>4.99</td><td>3</td></tr>
+<tr><td>5</td><td>Main Course</td><td>Beef Steak</td><td>20.99</td><td>3</td></tr>
+<tr><td>6</td><td>Side Dish</td><td>Mashed Potatoes</td><td>3.99</td><td>4</td></tr>
+<tr><td>7</td><td>Dessert</td><td>Cheesecake</td><td>5.99</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

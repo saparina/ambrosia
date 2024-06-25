@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Greenhouse</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Greenhouse A</td><td>New York</td></tr>
+<tr><td>2</td><td>Greenhouse B</td><td>California</td></tr>
+<tr><td>3</td><td>Greenhouse C</td><td>Texas</td></tr>
+<tr><td>4</td><td>Greenhouse D</td><td>Florida</td></tr>
+<tr><td>5</td><td>Greenhouse E</td><td>Washington</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Plant</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">name</span></th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tomato</td><td>Fruit</td></tr>
+<tr><td>2</td><td>Cucumber</td><td>Vegetable</td></tr>
+<tr><td>3</td><td>Pepper</td><td>Vegetable</td></tr>
+<tr><td>4</td><td>Lettuce</td><td>Leafy Vegetable</td></tr>
+<tr><td>5</td><td>Carrot</td><td>Root Vegetable</td></tr>
+</tbody></table></div>
+
+<div><h2>Greenhouse_Plant</h2><table><thead>
+<tr><th>greenhouse_id</th><th>plant_id</th><th>quantity</th></tr>
+<tr><th>(&#8594; Greenhouse.id)</th><th>(&#8594; Plant.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>1</td><td>None</td></tr>
+<tr><td>3</td><td>1</td><td>None</td></tr>
+<tr><td>4</td><td>1</td><td>None</td></tr>
+<tr><td>5</td><td>1</td><td>None</td></tr>
+<tr><td>5</td><td>3</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

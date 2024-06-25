@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Passengers</span></h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>IdentityType</th><th>IdentityNumber</th><th>IdentityVerification</th><th>Customer</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td><td>Document</td><td>A123456789</td><td><span style="color:#990000">Biometric Authentication</span></td><td>Not James Davies</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-02-02</td><td>Card</td><td>MN098765432</td><td><span style="color:#990000">Manual Verification</span></td><td>Also Not James Davies</td></tr>
+<tr><td>3</td><td>Jimmy</td><td>Johnson</td><td>1970-03-03</td><td>Document</td><td>P098765432</td><td><span style="color:#990000">Manual Verification</span></td><td>Still Not James Davies</td></tr>
+<tr><td>4</td><td>Elizabeth</td><td>Williams</td><td>1960-04-04</td><td>Card</td><td>K987654321</td><td><span style="color:#990000">Biometric Authentication</span></td><td>Not James Davies Either</td></tr>
+<tr><td>5</td><td>David</td><td>White</td><td>1950-05-05</td><td>Card</td><td>L987654320</td><td><span style="color:#990000">Biometric Authentication</span></td><td><span style="color:#006600">James Davies</span></td></tr>
+<tr><td>6</td><td>Emily</td><td>Green</td><td>1940-06-06</td><td>Document</td><td>I987654319</td><td><span style="color:#990000">Manual Verification</span></td><td><span style="color:#006600">James Davies</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureAirport</th><th>ArrivalAirport</th><th>ScheduledDeparture</th><th>ActualDeparture</th><th>ScheduledArrival</th><th>ActualArrival</th><th>TotalDuration</th><th>AircraftModel</th><th>GateNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>LAX</td><td>JFK</td><td>08:00:00</td><td>08:15:00</td><td>10:00:00</td><td>10:15:00</td><td>2:30:00</td><td>Boing 737</td><td>10</td></tr>
+<tr><td>2</td><td>ORD</td><td>ATL</td><td>09:00:00</td><td>09:15:00</td><td>11:00:00</td><td>11:15:00</td><td>2:30:00</td><td>Airbus A320</td><td>11</td></tr>
+<tr><td>3</td><td>DFW</td><td>MIA</td><td>10:00:00</td><td>10:15:00</td><td>12:00:00</td><td>12:15:00</td><td>2:30:00</td><td>Bombardier CRJ200</td><td>12</td></tr>
+<tr><td>4</td><td>IAH</td><td>MSY</td><td>11:00:00</td><td>11:15:00</td><td>13:00:00</td><td>13:15:00</td><td>2:30:00</td><td>Embraer E175</td><td>13</td></tr>
+<tr><td>5</td><td>EWR</td><td>PHL</td><td>12:00:00</td><td>12:15:00</td><td>14:00:00</td><td>14:15:00</td><td>2:30:00</td><td>United Airlines B737</td><td>14</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>PassengerId</th><th>FlightID</th></tr>
+<tr><th></th><th>(&#8594; Passengers.ID)</th><th>(&#8594; Flights.FlightID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>5</td><td>3</td></tr>
+<tr><td>4</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>AirportCode</th><th>City</th><th>Country</th><th>Latitude</th><th>Longitude</th></tr>
+</thead><tbody>
+<tr><td>LAX</td><td>Los Angeles</td><td>USA</td><td>34.052235</td><td>-118.243683</td></tr>
+<tr><td>JFK</td><td>New York</td><td>USA</td><td>40.641385</td><td>-73.774927</td></tr>
+<tr><td>ORD</td><td>Chicago</td><td>USA</td><td>41.954541</td><td>-87.662319</td></tr>
+<tr><td>ATL</td><td>Atlanta</td><td>USA</td><td>33.642674</td><td>-84.393435</td></tr>
+<tr><td>DFW</td><td>Dallas/Fort Worth</td><td>USA</td><td>32.897666</td><td>-97.025972</td></tr>
+<tr><td>MIA</td><td>Miami</td><td>USA</td><td>25.761703</td><td>-80.191793</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>RegistrationCharters</th><th>Model</th><th>Manufacturer</th><th>YearOfManufacture</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>N100AW</td><td>Boeing 737-800</td><td>Boeing Commercial Airplanes</td><td>2010</td><td>210</td></tr>
+<tr><td>N300DL</td><td>Airbus A320</td><td>Airbus</td><td>2015</td><td>180</td></tr>
+<tr><td>N700WN</td><td>Bombardier CRJ200</td><td>Bombardier Aerospace</td><td>2008</td><td>50</td></tr>
+<tr><td>N319UA</td><td>Embraer E175</td><td>Embraer</td><td>2012</td><td>80</td></tr>
+<tr><td>N904UZ</td><td>United Airlines B737</td><td>Boeing Commercial Airplanes</td><td>2011</td><td>210</td></tr>
+</tbody></table></div>
+
+<div><h2>AssignedTo</h2><table><thead>
+<tr><th>FlightID</th><th>RegistrationCharters</th></tr>
+<tr><th>(&#8594; Flights.FlightID)</th><th>(&#8594; Aircrafts.RegistrationCharters)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>N100AW</td></tr>
+<tr><td>2</td><td>N300DL</td></tr>
+<tr><td>3</td><td>N700WN</td></tr>
+<tr><td>4</td><td>N319UA</td></tr>
+<tr><td>5</td><td>N904UZ</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

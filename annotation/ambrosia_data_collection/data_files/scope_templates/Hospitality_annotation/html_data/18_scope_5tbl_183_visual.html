@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Hostels</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hostel A</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Hostel B</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Hostel C</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Hostel D</td><td>012 Pine St</td></tr>
+<tr><td>5</td><td>Hostel E</td><td>345 Maple Ave</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Dormitories</span></h2><table><thead>
+<tr><th>dormitory_id</th><th><span style="color:#990000">type</span></th><th><span style="color:#990000">capacity</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mixed_Dormitory</td><td>20</td></tr>
+<tr><td>2</td><td>Female Only</td><td>15</td></tr>
+<tr><td>3</td><td>Mixed_Dormitory</td><td>30</td></tr>
+<tr><td>4</td><td>Male Only</td><td>25</td></tr>
+<tr><td>5</td><td>Mixed_Dormitory</td><td>20</td></tr>
+<tr><td>6</td><td>Female Only</td><td>10</td></tr>
+<tr><td>7</td><td>Mixed_Dormitory</td><td>35</td></tr>
+<tr><td>8</td><td>Male Only</td><td>30</td></tr>
+<tr><td>9</td><td>Mixed_Dormitory</td><td>20</td></tr>
+<tr><td>10</td><td>Female Only</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Hostels_Dormitories</h2><table><thead>
+<tr><th>hostel_dormitory_id</th><th>hostel_id</th><th>dormitory_id</th></tr>
+<tr><th></th><th>(&#8594; Hostels.id)</th><th>(&#8594; Dormitories.dormitory_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>3</td><td>5</td></tr>
+<tr><td>6</td><td>3</td><td>6</td></tr>
+<tr><td>7</td><td>4</td><td>7</td></tr>
+<tr><td>8</td><td>4</td><td>8</td></tr>
+<tr><td>9</td><td>5</td><td>9</td></tr>
+<tr><td>10</td><td>5</td><td>10</td></tr>
+<tr><td>11</td><td>2</td><td>1</td></tr>
+<tr><td>12</td><td>3</td><td>1</td></tr>
+<tr><td>13</td><td>4</td><td>1</td></tr>
+<tr><td>14</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

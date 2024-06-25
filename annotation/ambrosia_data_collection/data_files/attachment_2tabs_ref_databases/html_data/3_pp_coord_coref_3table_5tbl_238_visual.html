@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employee</h2><table><thead>
+<tr><th>EmpID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td></tr>
+<tr><td>5</td><td>Mike</td><td>Black</td><td>mike.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Position</span></h2><table><thead>
+<tr><th>PosID</th><th>Title</th><th><span style="color:#006600">Salary</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td><span style="color:#006600">80000.0</span></td></tr>
+<tr><td>2</td><td>Web Developer</td><td>70000.0</td></tr>
+<tr><td>3</td><td>Data Analyst</td><td>60000.0</td></tr>
+<tr><td>4</td><td>Project Manager</td><td>90000.0</td></tr>
+<tr><td>5</td><td>Product Designer</td><td>120000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>DeptID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Research and Development</td><td>New York</td></tr>
+<tr><td>2</td><td>Design</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>Marketing</td><td>Los Angeles</td></tr>
+<tr><td>4</td><td>Human Resources</td><td>Chicago</td></tr>
+<tr><td>5</td><td>Finance</td><td>Atlanta</td></tr>
+</tbody></table></div>
+
+<div><h2>Employment</h2><table><thead>
+<tr><th>EmpID</th><th>PosID</th><th>DeptID</th><th>HireDate</th></tr>
+<tr><th>(&#8594; Employee.EmpID)</th><th>(&#8594; Position.PosID)</th><th>(&#8594; Department.DeptID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-03-13 19:18:11</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>2024-03-13 19:18:11</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>2024-03-13 19:18:11</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2024-03-13 19:18:11</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>2024-03-13 19:18:11</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Engineers</span></h2><table><thead>
+<tr><th>EmpID</th><th>YearsExperience</th></tr>
+<tr><th>(&#8594; Employee.EmpID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>7</td></tr>
+<tr><td>4</td><td>10</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Architects</span></h2><table><thead>
+<tr><th>EmpID</th><th>ProjectCount</th></tr>
+<tr><th>(&#8594; Employee.EmpID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>6</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

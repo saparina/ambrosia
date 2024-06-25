@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York JFK</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>London Heathrow</td><td>London</td><td>UK</td></tr>
+<tr><td>3</td><td>Tokyo Haneda</td><td>Tokyo</td><td>Japan</td></tr>
+<tr><td>4</td><td>Dubai International</td><td>Dubai</td><td>UAE</td></tr>
+<tr><td>5</td><td>Frankfurt Airport</td><td>Frankfurt</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flightNumber</th><th>departureAirportId</th><th>arrivalAirportId</th><th>departureTime</th><th>arrivalTime</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>2023-06-01 10:00:00</td><td>2023-06-01 18:00:00</td></tr>
+<tr><td>2</td><td>3</td><td>4</td><td>2023-07-01 12:00:00</td><td>2023-07-01 20:00:00</td></tr>
+<tr><td>3</td><td>5</td><td>2</td><td>2023-08-01 14:00:00</td><td>2023-08-01 22:00:00</td></tr>
+<tr><td>4</td><td>3</td><td>5</td><td>2023-09-01 16:00:00</td><td>2023-09-01 23:00:00</td></tr>
+<tr><td>5</td><td>1</td><td>4</td><td>2023-10-01 08:00:00</td><td>2023-10-01 16:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passengerId</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th><th>isMinor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-02-02</td><td>0</td></tr>
+<tr><td>3</td><td>Emily</td><td>Johnson</td><td>1991-03-03</td><td>1</td></tr>
+<tr><td>4</td><td>Michael</td><td>Williams</td><td>1988-04-04</td><td>0</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>1992-05-05</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SpecialRequirements</span></h2><table><thead>
+<tr><th>requirementId</th><th>description</th><th>assistant</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wheelchair assistance required</td><td>Alice Brown</td></tr>
+<tr><td>2</td><td>Oxygen tank needed on board</td><td>Bob Johnson</td></tr>
+<tr><td>3</td><td>Diabetic meal request</td><td>Charlie White</td></tr>
+<tr><td>4</td><td>Special dietary needs</td><td>Daniel Green</td></tr>
+<tr><td>5</td><td>Hearing aid support</td><td>Eva Black</td></tr>
+<tr><td>6</td><td><span style="color:#990000">Unaccompanied Minor</span></td><td><span style="color:#006600">Clare Allen</span></td></tr>
+<tr><td>7</td><td><span style="color:#990000">Unaccompanied Minor</span></td><td>Mark Taylor</td></tr>
+<tr><td>8</td><td><span style="color:#990000">Special Needs Passenger</span></td><td><span style="color:#006600">Clare Allen</span></td></tr>
+<tr><td>9</td><td><span style="color:#990000">Special Needs Passenger</span></td><td>Nancy Davis</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

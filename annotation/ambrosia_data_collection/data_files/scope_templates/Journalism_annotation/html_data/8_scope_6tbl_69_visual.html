@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Authors</span></h2><table><thead>
+<tr><th>AuthorID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>J.K. Rowling</td></tr>
+<tr><td>2</td><td>George Orwell</td></tr>
+<tr><td>3</td><td>Harper Lee</td></tr>
+<tr><td>4</td><td>Ernest Hemingway</td></tr>
+<tr><td>5</td><td>Gabriel Garcia Marquez</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Book_Reviewers</span></h2><table><thead>
+<tr><th>ReviewerID</th><th>Email</th><th>FullName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>john.doe@example.com</td><td>John Doe</td></tr>
+<tr><td>2</td><td>jane.smith@example.com</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>michael.brown@example.com</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>emma.wilson@example.com</td><td>Emma Wilson</td></tr>
+<tr><td>5</td><td>william.jackson@example.com</td><td>William Jackson</td></tr>
+</tbody></table></div>
+
+<div><h2>Books</h2><table><thead>
+<tr><th>BookID</th><th>Title</th><th>ISBN</th><th>PublishDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harry Potter and the Philosopher's Stone</td><td>9780747532699</td><td>1997-06-26</td></tr>
+<tr><td>2</td><td>1984</td><td>9780451524935</td><td>1949-06-08</td></tr>
+<tr><td>3</td><td>To Kill a Mockingbird</td><td>9780060935467</td><td>1960-07-11</td></tr>
+<tr><td>4</td><td>The Old Man and the Sea</td><td>9780684867644</td><td>1952-01-01</td></tr>
+<tr><td>5</td><td>One Hundred Years of Solitude</td><td>9780679733401</td><td>1967-03-02</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ReviewID</th><th>Rating</th><th>Comment</th><th>ReviewedOn</th><th>BookID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Books.BookID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Great story!</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>Interesting book.</td><td>None</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>Good read but could have been better.</td><td>None</td><td>3</td></tr>
+<tr><td>4</td><td>5</td><td>A classic masterpiece.</td><td>None</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>Fascinating exploration of human nature.</td><td>None</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Book_Reviewers_Authors</h2><table><thead>
+<tr><th>ReviewerID</th><th>AuthorID</th></tr>
+<tr><th>(&#8594; Book_Reviewers.ReviewerID)</th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

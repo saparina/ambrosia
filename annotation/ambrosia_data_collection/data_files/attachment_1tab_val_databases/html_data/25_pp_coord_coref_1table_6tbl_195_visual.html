@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Historical_Studies</span></h2><table><thead>
+<tr><th>ID</th><th>Historical_Study_Profession</th><th>Time_Period</th><th>Salary</th><th>Experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Historian</span></td><td><span style="color:#006600">Ancient Rome</span></td><td>30000.0</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Historian</span></td><td>Middle Ages</td><td>28000.0</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Archeologist</span></td><td><span style="color:#006600">Ancient Rome</span></td><td>40000.0</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Archeologist</span></td><td>Renaissance</td><td>45000.0</td><td>4</td></tr>
+<tr><td>5</td><td>Linguist</td><td>Ancient Egypt</td><td>35000.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Location</th><th>Industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>New York</td><td>Technology</td></tr>
+<tr><td>2</td><td>HealthPlus</td><td>Los Angeles</td><td>Healthcare</td></tr>
+<tr><td>3</td><td>FinanceInnovations</td><td>Chicago</td><td>Financial Services</td></tr>
+<tr><td>4</td><td>GreenEnergy Solutions</td><td>San Francisco</td><td>Renewable Energy</td></tr>
+<tr><td>5</td><td>TravelWorld</td><td>Miami</td><td>Travel & Tourism</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>RequiredSkills</th><th>PostedDate</th><th>CompanyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Developing web applications.</td><td>JavaScript, HTML, CSS, Node.js</td><td>2024-03-07 22:09:07</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyzing data for business insights.</td><td>SQL, Python, Excel</td><td>2024-03-07 22:09:07</td><td>2</td></tr>
+<tr><td>3</td><td>Accountant</td><td>Managing financial records and reports.</td><td>QuickBooks, Excel, GAAP</td><td>2024-03-07 22:09:07</td><td>3</td></tr>
+<tr><td>4</td><td>Marketing Specialist</td><td>Creating marketing campaigns and strategies.</td><td>SEO, Social Media, Content Marketing</td><td>2024-03-07 22:09:07</td><td>4</td></tr>
+<tr><td>5</td><td>Graphic Designer</td><td>Designing visual elements for branding and advertising.</td><td>Adobe Creative Suite, Sketch, Figma</td><td>2024-03-07 22:09:07</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>ApplicationID</th><th>ApplicantName</th><th>ResumePath</th><th>CoverLetterPath</th><th>JobId</th><th>Status</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Jobs.JobId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>/path/to/resume.pdf</td><td>/path/to/coverletter.pdf</td><td>1</td><td>Pending</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>/path/to/janesmith.pdf</td><td>/path/to/clsmith.pdf</td><td>2</td><td>Accepted</td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td>/path/to/bobjohnson.pdf</td><td>/path/to/cljohnson.pdf</td><td>3</td><td>Rejected</td></tr>
+<tr><td>4</td><td>Alice Brown</td><td>/path/to/alicebrown.pdf</td><td>/path/to/clbrown.pdf</td><td>4</td><td>Interview Scheduled</td></tr>
+<tr><td>5</td><td>Tom White</td><td>/path/to/tomwhite.pdf</td><td>/path/to/clwhite.pdf</td><td>5</td><td>Not Reviewed Yet</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

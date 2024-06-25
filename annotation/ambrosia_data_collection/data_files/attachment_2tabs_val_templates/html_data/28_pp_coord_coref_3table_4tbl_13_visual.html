@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Office</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">address</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2/7 London Street</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">3/10 New York Avenue</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Graphic_Designers</span></h2><table><thead>
+<tr><th>id</th><th>officeId</th><th>name</th><th>skills</th></tr>
+<tr><th></th><th>(&#8594; Office.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Alice Smith</td><td>Photoshop, Illustrator, InDesign</td></tr>
+<tr><td>2</td><td>2</td><td>Bob Johnson</td><td>Photoshop, Illustrator, InDesign</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Web_Developers</span></h2><table><thead>
+<tr><th>id</th><th>officeId</th><th>name</th><th>languages</th></tr>
+<tr><th></th><th>(&#8594; Office.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Carol Williams</td><td>JavaScript, HTML, CSS</td></tr>
+<tr><td>2</td><td>2</td><td>David Brown</td><td>Python, Java, C++</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

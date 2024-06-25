@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">DutyFreeShops</span></h2><table><thead>
+<tr><th>ShopID</th><th>Name</th><th><span style="color:#1430b2">Location</span></th><th>Size</th><th>AnnualRevenue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Global Traveller</td><td><span style="color:#1430b2">Terminal 3</span></td><td>12000.0</td><td>678900.0</td></tr>
+<tr><td>2</td><td>Eastern Delicacies</td><td>Terminal 1</td><td>8000.0</td><td>545000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">SouvenirStores</span></h2><table><thead>
+<tr><th>StoreID</th><th>Name</th><th>Location</th><th>InventoryCount</th><th>AveragePurchaseAmount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gift World</td><td><span style="color:#1430b2">Terminal 3</span></td><td>500</td><td>25.0</td></tr>
+<tr><td>2</td><td>Memories of Journey</td><td>Terminal 2</td><td>700</td><td>20.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>AirlineName</th><th>DepartureTime</th><th>ArrivalTime</th><th>OriginAirportCode</th><th>DestinationAirportCode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>2023-02-12 10:00:00</td><td>2023-02-12 13:30:00</td><td>JFK</td><td>LAX</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>2023-02-12 14:00:00</td><td>2023-02-12 17:30:00</td><td>ATL</td><td>SEA</td></tr>
+</tbody></table></div>
+
+<div><h2>PassengerCheckIns</h2><table><thead>
+<tr><th>CheckInID</th><th>FlightID</th><th>PassengerName</th><th>BoardingPassNumber</th><th>CheckInTime</th></tr>
+<tr><th></th><th>(&#8594; Flights.FlightID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John Doe</td><td>1234</td><td>2023-02-12 09:30:00</td></tr>
+<tr><td>2</td><td>2</td><td>Emma Smith</td><td>5678</td><td>2023-02-12 10:30:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

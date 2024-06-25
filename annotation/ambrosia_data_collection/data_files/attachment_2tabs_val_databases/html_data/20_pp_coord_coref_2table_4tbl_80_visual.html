@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Public_Relations</span></h2><table><thead>
+<tr><th>id</th><th>organization</th><th>contacts</th><th>description</th><th>created_at</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>BBC</td><td><span style="color:#006600">+1234567890</span></td><td>A leading global broadcasting corporation</td><td>2024-03-13 18:14:54</td></tr>
+<tr><td>2</td><td>CNN</td><td>+9876543210</td><td>An American basic cable and satellite television news channel</td><td>2024-03-13 18:14:54</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Government_Communications</span></h2><table><thead>
+<tr><th>id</th><th>government_agency</th><th>contacts</th><th>description</th><th>created_at</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>White House</td><td>+0987654321</td><td>The official residence and workplace of the President of the United States</td><td>2024-03-13 18:14:54</td></tr>
+<tr><td>2</td><td>Department of State</td><td><span style="color:#006600">+1234567890</span></td><td>U.S. Department responsible for international relations</td><td>2024-03-13 18:14:54</td></tr>
+</tbody></table></div>
+
+<div><h2>News_Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>author_id</th><th>publication_date</th><th>public_relations_contact_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th></th><th>(&#8594; Public_Relations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Test Title 1</td><td>This is a test content.</td><td>1</td><td>2024-03-13 18:14:54</td><td>1</td></tr>
+<tr><td>2</td><td>Test Title 2</td><td>This is another test content.</td><td>2</td><td>2024-03-13 18:14:54</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>id</th><th>source_name</th><th>contact_details</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Reuters</td><td>reuters@example.com</td></tr>
+<tr><td>2</td><td>Associated Press</td><td>ap@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Sources</h2><table><thead>
+<tr><th>article_id</th><th>source_id</th></tr>
+<tr><th>(&#8594; News_Articles.id)</th><th>(&#8594; Sources.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

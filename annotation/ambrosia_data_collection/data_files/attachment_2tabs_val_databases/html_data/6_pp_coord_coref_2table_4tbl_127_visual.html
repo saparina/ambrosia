@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">FieldTrips</span></h2><table><thead>
+<tr><th>id</th><th>destination</th><th>date</th><th>purpose</th><th>budget</th><th>Number_of_students</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>2023-09-16</td><td>Museum Visit</td><td><span style="color:#006600">50</span>00.0</td><td><span style="color:#006600">50</span></td></tr>
+<tr><td>2</td><td>Washington DC</td><td>2023-08-20</td><td>Monument Tour</td><td>7500.0</td><td>30</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">StudyHalls</span></h2><table><thead>
+<tr><th>id</th><th>building</th><th>capacity</th><th>available_hours</th><th>number_of_students</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Building A</td><td>100</td><td>08:00 - 22:00</td><td><span style="color:#006600">50</span></td></tr>
+<tr><td>2</td><td>Building B</td><td>150</td><td>08:00 - 22:00</td><td>30</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>subject</th><th>years_experience</th><th>office_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr. Smith</td><td>Math</td><td>10</td><td>123</td></tr>
+<tr><td>2</td><td>Ms. Johnson</td><td>History</td><td>7</td><td>456</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>id</th><th>teacher_id</th><th>class_name</th><th>grade_level</th></tr>
+<tr><th></th><th>(&#8594; Teachers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Algebra I</td><td>9</td></tr>
+<tr><td>2</td><td>2</td><td>World History</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>studentId</th><th>birthDate</th><th>fieldtrip_participant</th><th>studyhall_user</th><th>class_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Classes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>JD123</td><td>2005-05-15</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Emma</td><td>Smith</td><td>ES456</td><td>2004-06-18</td><td>1</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

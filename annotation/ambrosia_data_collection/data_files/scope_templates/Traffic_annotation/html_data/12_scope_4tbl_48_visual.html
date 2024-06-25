@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Engineering_Textbooks</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>author</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Queuing Theory</td><td>Johnson D.</td></tr>
+<tr><td>2</td><td>Advanced Traffic Simulation Models</td><td>Mahmassani A.H.</td></tr>
+<tr><td>3</td><td>Principles of Network Design</td><td>Tassiulas D.P.</td></tr>
+<tr><td>4</td><td>Traffic Planning for Urban Mobility</td><td>Handy S.R.</td></tr>
+<tr><td>5</td><td>Transportation Systems Analysis</td><td>Sheffi Y.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Topics</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">topic_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Queuing_Theory</td></tr>
+<tr><td>2</td><td>Traffic_Simulation</td></tr>
+<tr><td>3</td><td>Network_Design</td></tr>
+<tr><td>4</td><td>Transportation_Planning</td></tr>
+<tr><td>5</td><td>Urban_Transportation</td></tr>
+</tbody></table></div>
+
+<div><h2>Engineering_Textbooks_Topics</h2><table><thead>
+<tr><th>engineering_textbook_id</th><th>topic_id</th></tr>
+<tr><th>(&#8594; Engineering_Textbooks.id)</th><th>(&#8594; Topics.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

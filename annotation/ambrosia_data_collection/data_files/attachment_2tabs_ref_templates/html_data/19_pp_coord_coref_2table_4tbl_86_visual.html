@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>YearEstablished</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>New York City</td><td>1948</td></tr>
+<tr><td>2</td><td>Dubai International</td><td>Dubai</td><td>1960</td></tr>
+<tr><td>3</td><td>Heathrow Airport</td><td>London</td><td>1946</td></tr>
+<tr><td>4</td><td>Charles de Gaulle Airport</td><td>Paris</td><td>1974</td></tr>
+<tr><td>5</td><td>Hong Kong International Airport</td><td>Hong Kong</td><td>1998</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Expansions</span></h2><table><thead>
+<tr><th>id</th><th>AirportID</th><th>Airport_Expansion</th><th><span style="color:#1430b2">Increased_Capacity</span></th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Terminal 8 construction</td><td>2000 Passengers per day</td></tr>
+<tr><td>2</td><td>2</td><td>Concourse D expansion</td><td>3000 Passengers per day</td></tr>
+<tr><td>3</td><td>3</td><td>Northwest Terminal extension</td><td><span style="color:#1430b2">1500 Passengers per day</span></td></tr>
+<tr><td>4</td><td>4</td><td>Runway extension project</td><td>2500 Passengers per day</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Renovations</span></h2><table><thead>
+<tr><th>id</th><th>AirportID</th><th>Renovation</th><th>Increased_Capacity</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Energy efficient lighting system</td><td>1000 Passengers per day</td></tr>
+<tr><td>2</td><td>2</td><td>Baggage handling system upgrade</td><td>1000 Passengers per day</td></tr>
+<tr><td>3</td><td>3</td><td>Security checkpoint modernization</td><td>500 Passengers per day</td></tr>
+<tr><td>4</td><td>4</td><td>Passenger lounges renovation</td><td><span style="color:#1430b2">1500 Passengers per day</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>FlightNumber</th><th>DepartureTime</th><th>ArrivalTime</th><th>AirportID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA123</td><td>06:00:00</td><td>08:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>BA456</td><td>08:00:00</td><td>10:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>QF789</td><td>10:00:00</td><td>12:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>CX123</td><td>12:00:00</td><td>14:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>LH456</td><td>14:00:00</td><td>16:00:00</td><td>1</td></tr>
+<tr><td>6</td><td>MU789</td><td>16:00:00</td><td>18:00:00</td><td>2</td></tr>
+<tr><td>7</td><td>AE998</td><td>18:00:00</td><td>20:00:00</td><td>3</td></tr>
+<tr><td>8</td><td>ET123</td><td>20:00:00</td><td>22:00:00</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>AirlineName</th><th>HeadquartersLocation</th><th>FleetSize</th><th>AirportID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>Fort Worth, Texas</td><td>950</td><td>1</td></tr>
+<tr><td>2</td><td>British Airways</td><td>Watford, Hertfordshire</td><td>280</td><td>2</td></tr>
+<tr><td>3</td><td>Qantas Airways</td><td>Mascot, New South Wales</td><td>180</td><td>3</td></tr>
+<tr><td>4</td><td>Cathay Pacific</td><td>Hong Kong</td><td>140</td><td>4</td></tr>
+<tr><td>5</td><td>Lufthansa</td><td>Cologne</td><td>300</td><td>1</td></tr>
+<tr><td>6</td><td>Emirates</td><td>Garhoud, Dubai</td><td>250</td><td>2</td></tr>
+<tr><td>7</td><td>Aeromexico</td><td>Miguel Hidalgo</td><td>130</td><td>3</td></tr>
+<tr><td>8</td><td>Ethiopian Airlines</td><td>Addis Ababa</td><td>110</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

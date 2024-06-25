@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Subscription_Plan</span></h2><table><thead>
+<tr><th>Plan_ID</th><th><span style="color:#990000">Plan_Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Basic</td></tr>
+<tr><td>2</td><td>Premium</td></tr>
+<tr><td>3</td><td>Ultra</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Streaming_Service</span></h2><table><thead>
+<tr><th>Service_ID</th><th>Service_Name</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>9.99</td></tr>
+<tr><td>2</td><td>Amazon Prime Video</td><td>8.99</td></tr>
+<tr><td>3</td><td>Disney+</td><td>6.99</td></tr>
+<tr><td>4</td><td>Hulu</td><td>5.99</td></tr>
+<tr><td>5</td><td>Apple TV+</td><td>4.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Service_Subscription_Plan</h2><table><thead>
+<tr><th>Service_ID</th><th>Plan_ID</th></tr>
+<tr><th>(&#8594; Streaming_Service.Service_ID)</th><th>(&#8594; Subscription_Plan.Plan_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer</h2><table><thead>
+<tr><th>Customer_ID</th><th>Name</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>mike@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Payment_Method</h2><table><thead>
+<tr><th>Method_ID</th><th>Cardholder_Name</th><th>Card_Number</th><th>Expiry_Date</th><th>CVV</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1234-5678-9012-3456</td><td>12/25</td><td>123</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2345-6789-0123-4567</td><td>01/10</td><td>456</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>3456-7890-1234-5678</td><td>06/15</td><td>789</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>4567-8901-2345-6789</td><td>11/20</td><td>123</td></tr>
+<tr><td>5</td><td>David Brown</td><td>5678-9012-3456-7890</td><td>07/22</td><td>456</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer_Payment_Method</h2><table><thead>
+<tr><th>Customer_ID</th><th>Method_ID</th><th>Billing_Address</th></tr>
+<tr><th>(&#8594; Customer.Customer_ID)</th><th>(&#8594; Payment_Method.Method_ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>123 Main St, Anytown, USA</td></tr>
+<tr><td>2</td><td>2</td><td>456 Oak St, Anycity, USA</td></tr>
+<tr><td>3</td><td>3</td><td>789 Pine St, Anothertown, USA</td></tr>
+<tr><td>4</td><td>4</td><td>135 Elm St, Anyville, USA</td></tr>
+<tr><td>5</td><td>5</td><td>246 Maple Ave, Anystate, USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Watch_History</h2><table><thead>
+<tr><th>History_ID</th><th>Customer_ID</th><th>Content_ID</th><th>Watched_On</th></tr>
+<tr><th></th><th>(&#8594; Customer.Customer_ID)</th><th>(&#8594; Content.Content_ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-01-30 18:37:56</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2024-01-30 18:37:56</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2024-01-30 18:37:56</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2024-01-30 18:37:56</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2024-01-30 18:37:56</td></tr>
+</tbody></table></div>
+
+<div><h2>Content</h2><table><thead>
+<tr><th>Content_ID</th><th>Title</th><th>Genre</th><th>Rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Witcher</td><td>Fantasy</td><td>9.1</td></tr>
+<tr><td>2</td><td>Stranger Things</td><td>Science Fiction</td><td>8.7</td></tr>
+<tr><td>3</td><td>Breaking Bad</td><td>Crime Drama</td><td>9.5</td></tr>
+<tr><td>4</td><td>Friends</td><td>Comedy</td><td>8.9</td></tr>
+<tr><td>5</td><td>Game of Thrones</td><td>Fantasy</td><td>9.3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

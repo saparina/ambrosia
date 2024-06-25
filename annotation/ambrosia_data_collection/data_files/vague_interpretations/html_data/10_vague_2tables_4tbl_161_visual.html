@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">City</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>London</td><td>UK</td></tr>
+<tr><td>3</td><td>Tokyo</td><td>Japan</td></tr>
+<tr><td>4</td><td>Paris</td><td>France</td></tr>
+<tr><td>5</td><td>Dubai</td><td>UAE</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Coordinates</span></h2><table><thead>
+<tr><th>id</th><th>latitude</th><th>longitude</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>-73.985428</td><td>-109.136635</td></tr>
+<tr><td>2</td><td>51.507223</td><td>-0.127503</td></tr>
+<tr><td>3</td><td>35.689501</td><td>139.691699</td></tr>
+<tr><td>4</td><td>48.8566</td><td>2.352222</td></tr>
+<tr><td>5</td><td>25.27439</td><td>55.29888</td></tr>
+</tbody></table></div>
+
+<div><h2>Airport</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city_id</th><th>coordinates_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; City.id)</th><th>(&#8594; Coordinates.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John F. Kennedy International Airport</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Heathrow Airport</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Narita International Airport</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Charles de Gaulle Airport</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Dubai International Airport</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Airline</h2><table><thead>
+<tr><th>id</th><th>name</th><th>headquarter_city_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; City.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>1</td></tr>
+<tr><td>2</td><td>British Airways</td><td>2</td></tr>
+<tr><td>3</td><td>All Nippon Airways</td><td>3</td></tr>
+<tr><td>4</td><td>Air France-KLM</td><td>4</td></tr>
+<tr><td>5</td><td>Emirates</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>airport_from_id</th><th>airport_to_id</th><th>airline_id</th><th>departure_time</th><th>arrival_time</th></tr>
+<tr><th></th><th>(&#8594; Airport.id)</th><th>(&#8594; Airport.id)</th><th>(&#8594; Airline.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>1</td><td>2022-01-01 12:00:00</td><td>2022-01-01 18:00:00</td></tr>
+<tr><td>2</td><td>3</td><td>4</td><td>2</td><td>2022-01-01 08:00:00</td><td>2022-01-01 14:00:00</td></tr>
+<tr><td>3</td><td>5</td><td>1</td><td>3</td><td>2022-01-02 12:00:00</td><td>2022-01-02 18:00:00</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>4</td><td>2022-01-02 08:00:00</td><td>2022-01-02 14:00:00</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>5</td><td>2022-01-03 12:00:00</td><td>2022-01-03 18:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Runway</h2><table><thead>
+<tr><th>id</th><th>airport_id</th><th>length</th><th>width</th><th>surface_type</th></tr>
+<tr><th></th><th>(&#8594; Airport.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10000</td><td>200</td><td>Asphalt</td></tr>
+<tr><td>2</td><td>2</td><td>10000</td><td>200</td><td>Concrete</td></tr>
+<tr><td>3</td><td>3</td><td>9000</td><td>200</td><td>Asphalt</td></tr>
+<tr><td>4</td><td>4</td><td>9000</td><td>200</td><td>Concrete</td></tr>
+<tr><td>5</td><td>5</td><td>12000</td><td>200</td><td>Asphalt</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

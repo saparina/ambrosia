@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Patient</h2><table><thead>
+<tr><th>patientID</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-07-16</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-03-20</td></tr>
+<tr><td>3</td><td>Emily</td><td>Johnson</td><td>1998-01-12</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctor</h2><table><thead>
+<tr><th>doctorID</th><th>firstName</th><th>lastName</th><th>specialty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Ahn</td><td>Cardiology</td></tr>
+<tr><td>2</td><td>Dr.</td><td>Martinez</td><td>Neurology</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Lee</td><td>Pediatrics</td></tr>
+</tbody></table></div>
+
+<div><h2>Prescription</h2><table><thead>
+<tr><th>prescriptionID</th><th>patientID</th><th>drugID</th><th>quantity</th></tr>
+<tr><th></th><th>(&#8594; Patient.patientID)</th><th>(&#8594; Drug.drugID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>30</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>15</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>45</td></tr>
+</tbody></table></div>
+
+<div><h2>MedicalRecord</h2><table><thead>
+<tr><th>recordID</th><th>patientID</th><th>diagnosis</th><th>treatmentPlan</th></tr>
+<tr><th></th><th>(&#8594; Patient.patientID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Hypertension</td><td>Monitor blood pressure and take medication as prescribed.</td></tr>
+<tr><td>2</td><td>2</td><td>Migraine</td><td>Take pain relievers and avoid known triggers.</td></tr>
+</tbody></table></div>
+
+<div><h2>Drug</h2><table><thead>
+<tr><th>drugID</th><th>name</th><th>dosage</th><th>sideEffectID</th><th>effectivenessID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Side_Effects.sideEffectID)</th><th>(&#8594; Effectiveness.effectivenessID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lisinopril</td><td>5mg</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Sumatriptan</td><td>50mg</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Aspirin</td><td>325mg</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Side_Effects</span></h2><table><thead>
+<tr><th>sideEffectID</th><th>effectText</th><th>severity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Nausea</td><td>Moderate</td></tr>
+<tr><td>2</td><td>Headache</td><td>Mild</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Effectiveness</span></h2><table><thead>
+<tr><th>effectivenessID</th><th>percentage</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>80</td></tr>
+<tr><td>2</td><td>70</td></tr>
+<tr><td>3</td><td>90</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

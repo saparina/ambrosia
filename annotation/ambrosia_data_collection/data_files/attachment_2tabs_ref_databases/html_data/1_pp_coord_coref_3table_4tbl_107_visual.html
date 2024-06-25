@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Movie</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th><span style="color:#006600">Director</span></th><th>ReleaseYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Christopher Nolan</td><td>2010</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>Christopher Nolan</td><td>2008</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>Christopher Nolan</td><td>2014</td></tr>
+<tr><td>4</td><td>Gravity</td><td><span style="color:#006600">Alfonso Cuaron</span></td><td>2013</td></tr>
+<tr><td>5</td><td>The Revenant</td><td>Alejandro Gonzalez Iñárritu</td><td>2015</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Camera_Angle</span></h2><table><thead>
+<tr><th>id</th><th>AngleText</th><th>MovieId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wide Shot</td><td>1</td></tr>
+<tr><td>2</td><td>Close Up</td><td>2</td></tr>
+<tr><td>3</td><td>High Angle</td><td>3</td></tr>
+<tr><td>4</td><td>Low Angle</td><td>4</td></tr>
+<tr><td>5</td><td>Extreme Long Shot</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Lighting</span></h2><table><thead>
+<tr><th>id</th><th>TypeOfLighting</th><th>MovieId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Natural Lighting</td><td>1</td></tr>
+<tr><td>2</td><td>Artificial Lighting</td><td>2</td></tr>
+<tr><td>3</td><td>Mixed Lighting</td><td>3</td></tr>
+<tr><td>4</td><td>Flashlight</td><td>4</td></tr>
+<tr><td>5</td><td>Spotlights</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Character</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Role</th><th>MovieId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>Cobb</td><td>1</td></tr>
+<tr><td>2</td><td>Elliot Page</td><td>Arthur</td><td>2</td></tr>
+<tr><td>3</td><td>Joseph Gordon-Levitt</td><td>John Talia</td><td>3</td></tr>
+<tr><td>4</td><td>Anne Hathaway</td><td>Dr. Brand</td><td>4</td></tr>
+<tr><td>5</td><td>Marion Cotillard</td><td>Mal</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Scene</h2><table><thead>
+<tr><th>id</th><th>Description</th><th>Location</th><th>MovieId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Opening heist scene</td><td>City Street</td><td>1</td></tr>
+<tr><td>2</td><td>Hospital escape</td><td>Underground Facility</td><td>2</td></tr>
+<tr><td>3</td><td>Fight on a train</td><td>Train Car</td><td>3</td></tr>
+<tr><td>4</td><td>Zero Gravity dream sequence</td><td>Space Station</td><td>4</td></tr>
+<tr><td>5</td><td>Final battle on ice</td><td>Mountainside Fortress</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Soundtrack</h2><table><thead>
+<tr><th>id</th><th>Composer</th><th>TrackName</th><th>MovieId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hans Zimmer</td><td>Time</td><td>1</td></tr>
+<tr><td>2</td><td>Hans Zimmer</td><td>Dream is Collapsing</td><td>2</td></tr>
+<tr><td>3</td><td>Hans Zimmer</td><td>R DiVX</td><td>3</td></tr>
+<tr><td>4</td><td>Hans Zimmer</td><td>Stay</td><td>4</td></tr>
+<tr><td>5</td><td>Hans Zimmer</td><td>End Titles</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

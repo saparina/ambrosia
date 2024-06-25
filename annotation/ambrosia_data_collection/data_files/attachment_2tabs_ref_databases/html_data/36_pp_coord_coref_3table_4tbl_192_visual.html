@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Brown</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>David Johnson</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosts</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>postedOn</th><th>positionType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Civil Engineer</td><td>Looking for a skilled civil engineer...</td><td>2023-01-01</td><td>Full Time</td></tr>
+<tr><td>2</td><td>Architect</td><td>Seeking an experienced architect for our team...</td><td>2023-01-15</td><td>Part Time</td></tr>
+<tr><td>3</td><td>Project Manager</td><td>We need a project manager for our upcoming projects...</td><td>2023-01-30</td><td>Contract</td></tr>
+<tr><td>4</td><td>Software Developer</td><td>A software developer is needed for our growing tech company...</td><td>2023-02-01</td><td>Full Time</td></tr>
+<tr><td>5</td><td>Marketing Specialist</td><td>A marketing specialist is required for our new product launch...</td><td>2023-02-15</td><td>Contract</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>skillName</th><th>level</th></tr>
+</thead><tbody>
+<tr><td>Python</td><td>Intermediate</td></tr>
+<tr><td>JavaScript</td><td>Advanced</td></tr>
+<tr><td>SQL</td><td>Proficient</td></tr>
+<tr><td>HTML/CSS</td><td>Beginner</td></tr>
+<tr><td>C++</td><td>Expert</td></tr>
+</tbody></table></div>
+
+<div><h2>EmployeeSkills</h2><table><thead>
+<tr><th>employeeId</th><th>skillName</th><th>proficiencyLevel</th></tr>
+<tr><th>(&#8594; Employees.id)</th><th>(&#8594; Skills.skillName)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python</td><td>Intermediate</td></tr>
+<tr><td>2</td><td>JavaScript</td><td>Advanced</td></tr>
+<tr><td>3</td><td>SQL</td><td>Proficient</td></tr>
+<tr><td>4</td><td>HTML/CSS</td><td>Beginner</td></tr>
+<tr><td>5</td><td>C++</td><td>Expert</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CivilEngineers</span></h2><table><thead>
+<tr><th>employeeId</th><th>designSoftware</th></tr>
+<tr><th>(&#8594; Employees.id)</th><th>(&#8594; DesignSoftwareExpertises.softwareName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AutoCAD</td></tr>
+<tr><td>2</td><td>Revit</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Architects</span></h2><table><thead>
+<tr><th>employeeId</th><th>designSoftware</th></tr>
+<tr><th>(&#8594; Employees.id)</th><th>(&#8594; DesignSoftwareExpertises.softwareName)</th></tr>
+</thead><tbody>
+<tr><td>3</td><td>AutoCAD</td></tr>
+<tr><td>4</td><td>Rhino</td></tr>
+<tr><td>5</td><td>SketchUp</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">DesignSoftwareExpertises</span></h2><table><thead>
+<tr><th>softwareName</th><th><span style="color:#006600">expertiseDescription</span></th></tr>
+</thead><tbody>
+<tr><td>AutoCAD</td><td><span style="color:#006600">Experienced in AutoCAD for building and infrastructure designs.</span></td></tr>
+<tr><td>Revit</td><td>Proficient in Revit for BIM modeling and construction documentation.</td></tr>
+<tr><td>Rhino</td><td>Skilled in Rhino for complex geometric forms and parametric modeling.</td></tr>
+<tr><td>SketchUp</td><td>Familiarity with SketchUp for rapid prototyping and conceptual design.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

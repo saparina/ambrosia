@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Topic</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td><td>The study of numbers and numerical relationships.</td></tr>
+<tr><td>2</td><td>Physics</td><td>The natural science that involves the study of matter and energy.</td></tr>
+<tr><td>3</td><td>Biology</td><td>The study of living organisms and their interactions with each other and their environments.</td></tr>
+<tr><td>4</td><td>Chemistry</td><td>The study of substances at an atomic and molecular level.</td></tr>
+<tr><td>5</td><td>Computer Science</td><td>The study of computation, algorithms, data structures, and computer systems.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Field_Of_Study</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Applied Mathematics</td><td>A branch of mathematics concerned with practical applications.</td></tr>
+<tr><td>2</td><td>Theoretical Physics</td><td>A branch of physics focused on developing mathematical models to explain physical phenomena.</td></tr>
+<tr><td>3</td><td>Molecular Biology</td><td>The branch of biology dealing with molecules and chemical processes within living cells.</td></tr>
+<tr><td>4</td><td>Organic Chemistry</td><td>The branch of chemistry dealing with carbon-containing compounds.</td></tr>
+<tr><td>5</td><td>Artificial Intelligence</td><td>The simulation of human intelligence in machines programmed by humans.</td></tr>
+</tbody></table></div>
+
+<div><h2>Project</h2><table><thead>
+<tr><th>id</th><th>title</th><th>details</th><th>topicId</th><th>fieldOfStudyId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Topic.id)</th><th>(&#8594; Field_Of_Study.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Optimization Algorithms</td><td>Developing new optimization techniques.</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Quantum Mechanics Experiment</td><td>Testing quantum mechanics predictions.</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Gene Editing</td><td>Exploring CRISPR gene editing technology.</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Reaction Kinetics</td><td>Investigating reaction rates in organic chemistry.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Machine Learning for Finance</td><td>Applying machine learning to financial data analysis.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>majorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Field_Of_Study.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alicebrown@email.com</td><td>3</td></tr>
+<tr><td>4</td><td>Charlie</td><td>White</td><td>charliewhite@email.com</td><td>4</td></tr>
+<tr><td>5</td><td>Emma</td><td>Green</td><td>emmagreen@email.com</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollment</h2><table><thead>
+<tr><th>id</th><th>studentId</th><th>projectId</th><th>grade</th><th>enrolledDate</th><th>completionDate</th></tr>
+<tr><th></th><th>(&#8594; Student.id)</th><th>(&#8594; Project.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>85</td><td>2021-09-01</td><td>2021-12-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>90</td><td>2021-09-01</td><td>2021-12-01</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>92.5</td><td>2021-09-01</td><td>2021-12-01</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>87.5</td><td>2021-09-01</td><td>2021-12-01</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>95</td><td>2021-09-01</td><td>2021-12-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructor</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>fieldOfStudyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Field_Of_Study.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Jones</td><td>drjones@email.com</td><td>1</td></tr>
+<tr><td>2</td><td>Prof.</td><td>Smith</td><td>profsmith@email.com</td><td>2</td></tr>
+<tr><td>3</td><td>Assoc. Prof.</td><td>Davis</td><td>assocprofdavis@email.com</td><td>3</td></tr>
+<tr><td>4</td><td>Asst. Prof.</td><td>Martin</td><td>asstprofmartin@email.com</td><td>4</td></tr>
+<tr><td>5</td><td>Lecturer</td><td>Wilson</td><td>lecturerwilson@email.com</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Marketing_Campaigns</span></h2><table><thead>
+<tr><th>id</th><th>campaign_name</th><th>start_date</th><th>end_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Spring Sale</td><td>2022-05-01</td><td>2022-05-31</td></tr>
+<tr><td>2</td><td>Summer Promotion</td><td>2022-06-01</td><td>2022-06-30</td></tr>
+<tr><td>3</td><td>Autumn Event</td><td>2022-09-01</td><td>2022-09-30</td></tr>
+<tr><td>4</td><td>Winter Offer</td><td>2022-11-01</td><td>2022-11-30</td></tr>
+<tr><td>5</td><td>New Year Special</td><td>2023-01-01</td><td>2023-01-31</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Approaches</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">approach_value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Direct Mail</td></tr>
+<tr><td>2</td><td>Email Campaign</td></tr>
+<tr><td>3</td><td>Telephone Call</td></tr>
+<tr><td>4</td><td>Online Advertising</td></tr>
+<tr><td>5</td><td>Print Media</td></tr>
+</tbody></table></div>
+
+<div><h2>Marketing_Campaigns_Approaches</h2><table><thead>
+<tr><th>marketing_campaign_id</th><th>approach_id</th></tr>
+<tr><th>(&#8594; Marketing_Campaigns.id)</th><th>(&#8594; Approaches.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@gmail.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@yahoo.com</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>mike@hotmail.com</td></tr>
+<tr><td>4</td><td>Emma</td><td>White</td><td>emma@outlook.com</td></tr>
+<tr><td>5</td><td>Robert</td><td>Black</td><td>robert@aol.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>transaction_id</th><th>amount</th><th>date</th><th>customer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Customers.customer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>300.78</td><td>2022-06-01</td><td>1</td></tr>
+<tr><td>2</td><td>500.99</td><td>2022-06-02</td><td>2</td></tr>
+<tr><td>3</td><td>200.66</td><td>2022-06-03</td><td>3</td></tr>
+<tr><td>4</td><td>100.45</td><td>2022-06-04</td><td>4</td></tr>
+<tr><td>5</td><td>700.25</td><td>2022-06-05</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

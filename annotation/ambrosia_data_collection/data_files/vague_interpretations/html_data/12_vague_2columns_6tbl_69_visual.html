@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Doe</td><td>2000-01-01</td><td>johndoe@email.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Smith</td><td>1998-03-27</td><td>janesmith@email.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>Balance</th><th>InterestRate</th><th>OpenDate</th><th>Status</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Customers.CustomerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000.0</td><td>2.5%</td><td>2021-06-01</td><td>Active</td><td>1</td></tr>
+<tr><td>2</td><td>2000.0</td><td>1.5%</td><td>2021-07-01</td><td>Inactive</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>LoanID</th><th>Amount</th><th>Term</th><th>Rate</th><th>ApprovalDate</th><th>Status</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Customers.CustomerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>50000.0</td><td>36</td><td>5.5%</td><td>2021-06-10</td><td>Approved</td><td>1</td></tr>
+<tr><td>2</td><td>40000.0</td><td>24</td><td>4.0%</td><td>2021-07-05</td><td>Pending</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>EligibilityAndDocuments</h2><table><thead>
+<tr><th>ApplicationID</th><th><span style="color:#990000">Eligibility_Criteria</span></th><th><span style="color:#990000">Documentation_Requirements</span></th><th>Business_Loan_Application</th><th>LoanID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Loans.LoanID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Excellent credit history.</td><td>Proof of income, tax returns.</td><td>0</td><td>1</td></tr>
+<tr><td>2</td><td>Good credit history.</td><td>Bank statements, pay stubs.</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>Description</th><th>Type</th><th>Amount</th><th>Timestamp</th><th>AccountNumber</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.AccountNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Salary deposit</td><td>Credit</td><td>3000.0</td><td>2021-06-15</td><td>1</td></tr>
+<tr><td>2</td><td>Utility payment</td><td>Debit</td><td>-200.0</td><td>2021-06-20</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>HireDate</th><th>Role</th><th>Salary</th><th>BranchID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Branches.BranchID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>Johnson</td><td>2021-01-01</td><td>Teller</td><td>40000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Michael Brown</td><td>Brown</td><td>2021-01-15</td><td>Branch manager</td><td>50000.0</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Branches</h2><table><thead>
+<tr><th>BranchID</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>ManagerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Employees.EmployeeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main Street Branch</td><td>1 Main St, Anytown</td><td>555-123-4567</td><td>None</td></tr>
+<tr><td>2</td><td>Southside Branch</td><td>123 South Rd, Anycity</td><td>555-987-6543</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

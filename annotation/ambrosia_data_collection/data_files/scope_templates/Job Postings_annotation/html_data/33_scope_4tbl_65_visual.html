@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Recruiters</span></h2><table><thead>
+<tr><th>recruiter_id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alicejohnson@example.com</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bobbrown@example.com</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>charliegreen@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Sources</span></h2><table><thead>
+<tr><th>source_id</th><th><span style="color:#990000">source_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>LinkedIn</td></tr>
+<tr><td>2</td><td>Indeed</td></tr>
+<tr><td>3</td><td>Glassdoor</td></tr>
+<tr><td>4</td><td>Monster</td></tr>
+<tr><td>5</td><td>CareerBuilder</td></tr>
+</tbody></table></div>
+
+<div><h2>Recruiters_Sources</h2><table><thead>
+<tr><th>recruiter_source_id</th><th>recruiter_id</th><th>source_id</th></tr>
+<tr><th></th><th>(&#8594; Recruiters.recruiter_id)</th><th>(&#8594; Sources.source_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>5</td><td>4</td></tr>
+<tr><td>6</td><td>3</td><td>1</td></tr>
+<tr><td>7</td><td>4</td><td>1</td></tr>
+<tr><td>8</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">SciFiMovies</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>director</th><th>releaseYear</th><th>sciFi</th><th><span style="color:#1430b2">filmingLocation</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Star Wars</td><td>George Lucas</td><td>1977</td><td>1</td><td><span style="color:#1430b2">New Zealand</span></td></tr>
+<tr><td>2</td><td>Blade Runner</td><td>Ridley Scott</td><td>1982</td><td>1</td><td>United States</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">FantasyMovies</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>director</th><th>releaseYear</th><th>fantasy</th><th>filmingLocation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lord of The Rings</td><td>Peter Jackson</td><td>2001</td><td>1</td><td><span style="color:#1430b2">New Zealand</span></td></tr>
+<tr><td>2</td><td>Harry Potter and The Philosopher's Stone</td><td>Chris Columbus</td><td>2001</td><td>1</td><td>United Kingdom</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthDate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Keanu Reeves</td><td>September 2, 1964</td><td>Canada</td></tr>
+<tr><td>2</td><td>Natalie Portman</td><td>June 9, 1981</td><td>Israel</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>movieId</th><th>actorId</th><th>roleName</th></tr>
+<tr><th>(&#8594; Movies.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Neo</td></tr>
+<tr><td>3</td><td>2</td><td>Padmé Amidala</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthDate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>July 30, 1970</td><td>England</td></tr>
+<tr><td>2</td><td>Guillermo del Toro</td><td>October 9, 1964</td><td>Spain</td></tr>
+</tbody></table></div>
+
+<div><h2>Productions</h2><table><thead>
+<tr><th>id</th><th>movieTitle</th><th>productionCompany</th><th>budget</th><th>startDate</th><th>endDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Warner Bros.</td><td>160.0</td><td>June 16, 2009</td><td>August 16, 2010</td></tr>
+<tr><td>2</td><td>Pan's Labyrinth</td><td>Pictaza</td><td>30.0</td><td>April 17, 2005</td><td>December 17, 2005</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

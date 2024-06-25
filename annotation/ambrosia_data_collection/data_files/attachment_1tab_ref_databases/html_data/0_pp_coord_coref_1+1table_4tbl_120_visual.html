@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Bob</td><td>Johnson</td></tr>
+<tr><td>4</td><td>Mary</td><td>Williams</td></tr>
+<tr><td>5</td><td>Tom</td><td>Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>YearOfEstablishment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Times</td><td>1851</td></tr>
+<tr><td>2</td><td>Washington Post</td><td>1877</td></tr>
+<tr><td>3</td><td>Los Angeles Times</td><td>1881</td></tr>
+<tr><td>4</td><td>Chicago Tribune</td><td>1847</td></tr>
+<tr><td>5</td><td>USA Today</td><td>1982</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>DatePublished</th><th>AuthorID</th><th>PublisherID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th><th>(&#8594; Publications.PublisherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Rise of AI</td><td>AI has revolutionized many industries...</td><td>2023-06-15</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Climate Change Crisis</td><td>Human activities have caused climate change...</td><td>2023-06-16</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Technology Trends</td><td>The future of technology looks promising...</td><td>2023-06-17</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Economic Outlook</td><td>Global economy faces challenges ahead...</td><td>2023-06-18</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Political Updates</td><td>Latest political news from around the world...</td><td>2023-06-19</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Awards</span></h2><table><thead>
+<tr><th>AwardID</th><th><span style="color:#990000"><span style="color:#990000">AwardType</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Pulitzer Prize</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">George Polk Award</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Winners</span></h2><table><thead>
+<tr><th>WinningArticleID</th><th><span style="color:#006600">Year</span></th><th>AwardID</th></tr>
+<tr><th>(&#8594; Articles.ArticleID)</th><th></th><th>(&#8594; Awards.AwardID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">2010</span></td><td>1</td></tr>
+<tr><td>2</td><td>2011</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#006600">2010</span></td><td>2</td></tr>
+<tr><td>4</td><td>2012</td><td>2</td></tr>
+<tr><td>5</td><td>2013</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-06-15</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2004-07-22</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>2005-09-10</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>Subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>White</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Mrs.</td><td>Green</td><td>English</td></tr>
+<tr><td>3</td><td>Ms.</td><td>Black</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>ClassID</th><th>TeacherID</th><th>RoomNumber</th><th>DayOfWeek</th><th>TimeStart</th></tr>
+<tr><th></th><th>(&#8594; Teachers.TeacherID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>101</td><td>Monday</td><td>09:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>201</td><td>Wednesday</td><td>11:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>301</td><td>Friday</td><td>14:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>ClassID</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Classes.ClassID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>None</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>None</td></tr>
+<tr><td>4</td><td>1</td><td>3</td><td>None</td></tr>
+<tr><td>5</td><td>2</td><td>3</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Materials</h2><table><thead>
+<tr><th>MaterialID</th><th><span style="color:#990000">Month</span></th><th><span style="color:#990000">Year</span></th><th>ResourceType</th><th>Quantity</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021</td><td>Textbooks</td><td>50</td><td>25.5</td></tr>
+<tr><td>2</td><td>2</td><td>2021</td><td>Stationery</td><td>100</td><td>1.5</td></tr>
+<tr><td>3</td><td>3</td><td>2021</td><td>Computers</td><td>10</td><td>500</td></tr>
+</tbody></table></div>
+
+<div><h2>Expenses</h2><table><thead>
+<tr><th>ExpenseID</th><th>MaterialID</th><th>Supplier</th><th>Amount</th></tr>
+<tr><th></th><th>(&#8594; Materials.MaterialID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Office Supply Store</td><td>150</td></tr>
+<tr><td>2</td><td>2</td><td>Electronics Store</td><td>500</td></tr>
+<tr><td>3</td><td>3</td><td>Bookstore</td><td>2550</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

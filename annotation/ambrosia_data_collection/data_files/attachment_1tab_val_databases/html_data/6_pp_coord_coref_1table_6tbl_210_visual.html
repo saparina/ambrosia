@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Music_Genre</h2><table><thead>
+<tr><th>id</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Blues</td></tr>
+<tr><td>2</td><td>Rock</td></tr>
+<tr><td>3</td><td>Pop</td></tr>
+<tr><td>4</td><td>Jazz</td></tr>
+<tr><td>5</td><td>Country</td></tr>
+</tbody></table></div>
+
+<div><h2>Singers</h2><table><thead>
+<tr><th>id</th><th>SingerName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Hurt</td></tr>
+<tr><td>2</td><td>Eric Clapton</td></tr>
+<tr><td>3</td><td>Bob Dylan</td></tr>
+<tr><td>4</td><td>Adele</td></tr>
+<tr><td>5</td><td>Elvis Presley</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th>AlbumTitle</th><th>ReleaseYear</th><th>Music_Genre_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Music_Genre.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Blues Collection</td><td>2001</td><td>1</td></tr>
+<tr><td>2</td><td>Layla and Other Assorted Love Songs</td><td>1970</td><td>1</td></tr>
+<tr><td>3</td><td>Blood on the Tracks</td><td>1975</td><td>3</td></tr>
+<tr><td>4</td><td>21</td><td>2011</td><td>4</td></tr>
+<tr><td>5</td><td>From Elvis Presley Boulevard, Memphis, Tennessee</td><td>1956</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Songs</span></h2><table><thead>
+<tr><th>id</th><th>SongTitle</th><th>Duration</th><th>Music</th><th>Singer_id</th><th>Album_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Singers.id)</th><th>(&#8594; Albums.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#990000">Blues Song</span></td><td>300</td><td>Blues Music</td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Another Blues Song</td><td>280</td><td>Blues Music</td><td>2</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>3</td><td><span style="color:#990000">Folk Song</span></td><td>290</td><td>Folk Music</td><td><span style="color:#006600">1</span></td><td>2</td></tr>
+<tr><td>4</td><td>Yet Another Folk Song</td><td>270</td><td>Folk Music</td><td>3</td><td>2</td></tr>
+<tr><td>5</td><td>Love Story</td><td>220</td><td>Pop Music</td><td>4</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Performances</h2><table><thead>
+<tr><th>id</th><th>PerformanceDate</th><th>Venue</th><th>Song_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Songs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-08-15 20:00:00</td><td>Madison Square Garden</td><td>1</td></tr>
+<tr><td>2</td><td>2021-08-16 20:00:00</td><td>Wembley Stadium</td><td>2</td></tr>
+<tr><td>3</td><td>2021-08-17 20:00:00</td><td>Staples Center</td><td>3</td></tr>
+<tr><td>4</td><td>2021-08-18 20:00:00</td><td>O2 Arena</td><td>4</td></tr>
+<tr><td>5</td><td>2021-08-19 20:00:00</td><td>Barclays Center</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

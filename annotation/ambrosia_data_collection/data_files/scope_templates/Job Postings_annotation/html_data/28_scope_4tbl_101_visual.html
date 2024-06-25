@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Network_Administrators</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>3</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>6</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>7</td></tr>
+<tr><td>4</td><td>Emma Brown</td><td>8</td></tr>
+<tr><td>5</td><td>Tom White</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Protocols</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">protocolName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tcp/ip</td></tr>
+<tr><td>2</td><td>Udp</td></tr>
+<tr><td>3</td><td>Icmp</td></tr>
+<tr><td>4</td><td>Ethernet</td></tr>
+<tr><td>5</td><td>Rarp</td></tr>
+</tbody></table></div>
+
+<div><h2>Network_Administrators_Protocols</h2><table><thead>
+<tr><th>networkAdminId</th><th>protocolId</th></tr>
+<tr><th>(&#8594; Network_Administrators.id)</th><th>(&#8594; Protocols.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>OtherTable1</h2><table><thead>
+<tr><th>id</th><th>column1</th><th>column2</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Value1a</td><td>1001</td></tr>
+<tr><td>2</td><td>Value1b</td><td>1002</td></tr>
+<tr><td>3</td><td>Value1c</td><td>1003</td></tr>
+<tr><td>4</td><td>Value1d</td><td>1004</td></tr>
+<tr><td>5</td><td>Value1e</td><td>1005</td></tr>
+</tbody></table></div>
+
+<div><h2>OtherTable2</h2><table><thead>
+<tr><th>id</th><th>columnA</th><th>columnB</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Value2a</td><td>2001</td></tr>
+<tr><td>2</td><td>Value2b</td><td>2002</td></tr>
+<tr><td>3</td><td>Value2c</td><td>2003</td></tr>
+<tr><td>4</td><td>Value2d</td><td>2004</td></tr>
+<tr><td>5</td><td>Value2e</td><td>2005</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

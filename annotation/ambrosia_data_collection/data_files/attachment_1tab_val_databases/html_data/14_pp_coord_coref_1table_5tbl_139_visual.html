@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quentin Tarantino</td><td>1963-03-27</td><td>USA</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td><td>1970-07-30</td><td>UK</td></tr>
+<tr><td>3</td><td>Martin Scorsese</td><td>1942-11-22</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>ProducerID</th><th>Name</th><th>CompanyName</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harvey Weinstein</td><td>Miramax</td><td>USA</td></tr>
+<tr><td>2</td><td>David Heyman</td><td>Heyday Films</td><td>UK</td></tr>
+<tr><td>3</td><td>Geronimo Ballesteros</td><td>RatPac-Dune Entertainment</td><td>Spain</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>USA</td></tr>
+<tr><td>2</td><td>Kate Winslet</td><td>1975-10-05</td><td>UK</td></tr>
+<tr><td>3</td><td>Joaquin Phoenix</td><td>1974-10-28</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>ReleaseYear</th><th>Country</th><th>Director_id</th><th>Producer_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th><th>(&#8594; Producers.ProducerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inglourious Basterds</td><td>2009</td><td>USA</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>2008</td><td>UK</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Goodfellas</td><td>1990</td><td>USA</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Titanic</td><td>1997</td><td>UK</td><td>3</td><td>1</td></tr>
+<tr><td>5</td><td>Gladiator</td><td>2000</td><td>USA</td><td>None</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Events</span></h2><table><thead>
+<tr><th>EventID</th><th>Type</th><th>Date</th><th>Location</th><th>Country</th><th>Film_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Films.FilmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Acting School</span></td><td>2022-01-01</td><td>London</td><td>UK</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Acting School</span></td><td>2022-01-01</td><td>Paris</td><td><span style="color:#006600">France</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Festival</span></td><td>2022-01-01</td><td>Cannes</td><td><span style="color:#006600">France</span></td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Festival</span></td><td>2022-01-01</td><td>Venice</td><td>Italy</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Castings</h2><table><thead>
+<tr><th>CastingID</th><th>Film_id</th><th>Actor_id</th><th>Role</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Films.FilmID)</th><th>(&#8594; Actors.ActorID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Hitler</td><td>2009-01-01</td><td>2009-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Rachel Dawes</td><td>2005-06-01</td><td>2005-11-30</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Henry VIII</td><td>1997-09-01</td><td>1997-11-30</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Maximus Decimus Meridius</td><td>1999-06-01</td><td>1999-10-31</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Commodus</td><td>2000-06-01</td><td>2000-11-30</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

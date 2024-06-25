@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Healthcare_Centers</span></h2><table><thead>
+<tr><th>CenterID</th><th>CenterName</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Center1</td><td>Address1</td></tr>
+<tr><td>2</td><td>Center2</td><td>Address2</td></tr>
+<tr><td>3</td><td>Center3</td><td>Address3</td></tr>
+<tr><td>4</td><td>Center4</td><td>Address4</td></tr>
+<tr><td>5</td><td>Center5</td><td>Address5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Programs</span></h2><table><thead>
+<tr><th>ProgramID</th><th><span style="color:#990000">ProgramType</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wellness_Initiatives</td></tr>
+<tr><td>2</td><td>Disease_Prevention</td></tr>
+<tr><td>3</td><td>Hospitality</td></tr>
+<tr><td>4</td><td>Fitness</td></tr>
+<tr><td>5</td><td>Emergency</td></tr>
+</tbody></table></div>
+
+<div><h2>Patients</h2><table><thead>
+<tr><th>PatientID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>CenterID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Healthcare_Centers.CenterID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>30</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>28</td><td>2</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>26</td><td>3</td></tr>
+<tr><td>4</td><td>Emma</td><td>Wilson</td><td>32</td><td>4</td></tr>
+<tr><td>5</td><td>David</td><td>Jackson</td><td>40</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>DoctorID</th><th>Name</th><th>Specialization</th><th>CenterID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Healthcare_Centers.CenterID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Smith</td><td>Cardiology</td><td>1</td></tr>
+<tr><td>2</td><td>Dr. Johnson</td><td>Neurology</td><td>2</td></tr>
+<tr><td>3</td><td>Dr. Williams</td><td>Orthopedics</td><td>3</td></tr>
+<tr><td>4</td><td>Dr. Thompson</td><td>Pediatrics</td><td>4</td></tr>
+<tr><td>5</td><td>Dr. Brown</td><td>Gastroenterology</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>AppointmentID</th><th>PatientID</th><th>DoctorID</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; Doctors.DoctorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-07-15 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-07-18 14:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-07-20 09:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-07-22 15:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-07-24 16:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>MedicalHistory</h2><table><thead>
+<tr><th>HistoryID</th><th>PatientID</th><th>Diagnosis</th><th>Treatment</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Diabetes</td><td>Insulin Injections</td></tr>
+<tr><td>2</td><td>2</td><td>High Blood Pressure</td><td>Medication</td></tr>
+<tr><td>3</td><td>3</td><td>Asthma</td><td>Inhaler</td></tr>
+<tr><td>4</td><td>4</td><td>Broken Arm</td><td>Cast</td></tr>
+<tr><td>5</td><td>5</td><td>Anemia</td><td>Iron Supplements</td></tr>
+</tbody></table></div>
+
+<div><h2>Healthcare_Centers_Programs</h2><table><thead>
+<tr><th>CenterID</th><th>ProgramID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th>(&#8594; Healthcare_Centers.CenterID)</th><th>(&#8594; Programs.ProgramID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-06-01</td><td>2022-08-31</td></tr>
+<tr><td>1</td><td>2</td><td>2022-09-01</td><td>2022-11-30</td></tr>
+<tr><td>2</td><td>1</td><td>2022-06-01</td><td>2022-08-31</td></tr>
+<tr><td>2</td><td>2</td><td>2022-09-01</td><td>2022-11-30</td></tr>
+<tr><td>3</td><td>1</td><td>2022-06-01</td><td>2022-08-31</td></tr>
+<tr><td>3</td><td>2</td><td>2022-09-01</td><td>2022-11-30</td></tr>
+<tr><td>4</td><td>1</td><td>2022-06-01</td><td>2022-08-31</td></tr>
+<tr><td>4</td><td>2</td><td>2022-09-01</td><td>2022-11-30</td></tr>
+<tr><td>5</td><td>1</td><td>2022-06-01</td><td>2022-08-31</td></tr>
+<tr><td>5</td><td>2</td><td>2022-09-01</td><td>2022-11-30</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

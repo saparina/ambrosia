@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerID</th><th>Name</th><th>FlightID</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>3</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>4</td></tr>
+<tr><td>5</td><td>David Brown</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>Destination</th><th>AvailableSeats</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 10:00:00</td><td>New York</td><td>100</td></tr>
+<tr><td>2</td><td>2023-01-02 10:00:00</td><td>Los Angeles</td><td>80</td></tr>
+<tr><td>3</td><td>2023-01-03 10:00:00</td><td>Chicago</td><td>70</td></tr>
+<tr><td>4</td><td>2023-01-04 10:00:00</td><td>Dallas</td><td>60</td></tr>
+<tr><td>5</td><td>2023-01-05 10:00:00</td><td>Houston</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">LuggageRequests</span></h2><table><thead>
+<tr><th>RequestID</th><th>PassengerID</th><th><span style="color:#186e16">AssistanceType</span></th><th>Location</th><th>RequestDate</th></tr>
+<tr><th></th><th>(&#8594; Passengers.PassengerID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#186e16">Luggage Trolley</span></td><td>Entrance B</td><td>2023-01-01 09:00:00</td></tr>
+<tr><td>2</td><td>1</td><td><span style="color:#186e16">Luggage Trolley</span></td><td>Exit A</td><td>2023-01-01 09:00:00</td></tr>
+<tr><td>3</td><td>2</td><td>Porter Service</td><td>Entrance B</td><td>2023-01-02 09:00:00</td></tr>
+<tr><td>4</td><td>2</td><td>Porter Service</td><td>Exit A</td><td>2023-01-02 09:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Locations</span></h2><table><thead>
+<tr><th>LocationID</th><th><span style="color:#1430b2">LocationName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Entrance B</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">Exit A</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>LuggageRequestID</th><th>LocationID</th><th>SlotStart</th><th>SlotEnd</th><th>BookingStatus</th></tr>
+<tr><th></th><th>(&#8594; LuggageRequests.RequestID)</th><th>(&#8594; Locations.LocationID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01 08:30:00</td><td>2023-01-01 09:00:00</td><td>Confirmed</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-01 08:30:00</td><td>2023-01-01 09:00:00</td><td>Confirmed</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>2023-01-02 08:30:00</td><td>2023-01-02 09:00:00</td><td>Pending</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2023-01-02 08:30:00</td><td>2023-01-02 09:00:00</td><td>Pending</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

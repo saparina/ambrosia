@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Agencies</span></h2><table><thead>
+<tr><th>AgencyID</th><th><span style="color:#1430b2">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Expedia</span></td></tr>
+<tr><td>2</td><td>ABC Travel</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">TourGuides</span></h2><table><thead>
+<tr><th>GuideID</th><th>Name</th><th>Age</th><th>Experience</th><th>AgencyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Agencies.AgencyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>8</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>29</td><td>7</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">TravelAgents</span></h2><table><thead>
+<tr><th>AgentID</th><th>Name</th><th>Salary</th><th>CommissionRate</th><th>AgencyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Agencies.AgencyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike Johnson</td><td>60000.0</td><td>0.1</td><td>1</td></tr>
+<tr><td>2</td><td>Emily Brown</td><td>55000.0</td><td>0.12</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th>TourGUIDEID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; TourGuides.GuideID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>alice@example.com</td><td>1234567890</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>bob@example.com</td><td>0987654321</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>BookedTrips</h2><table><thead>
+<tr><th>TripID</th><th>StartDate</th><th>EndDate</th><th>NumOfPeople</th><th>TotalCost</th><th>AgentID</th><th>GuideID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; TravelAgents.AgentID)</th><th>(&#8594; TourGuides.GuideID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-07-01</td><td>2021-07-10</td><td>4</td><td>4000.0</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2021-08-01</td><td>2021-08-10</td><td>6</td><td>6000.0</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

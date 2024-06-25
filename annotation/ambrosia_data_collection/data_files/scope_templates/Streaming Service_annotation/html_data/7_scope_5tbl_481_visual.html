@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Monetization_Model</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">model_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Advertisement</td></tr>
+<tr><td>2</td><td>Pay-per-View</td></tr>
+<tr><td>3</td><td>Free</td></tr>
+<tr><td>4</td><td>Subscription</td></tr>
+<tr><td>5</td><td>Transactional</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Streaming_Service</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th><th>launch_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>Leading subscription service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more.</td><td>8/29/2010</td></tr>
+<tr><td>2</td><td>Hulu</td><td>Offering hit TV series, hilarious original comedy, can’t-miss events, and films – all in one place.</td><td>3/29/2010</td></tr>
+<tr><td>3</td><td>Amazon Prime Video</td><td>Unlimited access to thousands of popular movies and TV episodes including Amazon Originals.</td><td>2006</td></tr>
+<tr><td>4</td><td>Disney+</td><td>Binge on endless stream of Disney, Pixar, Marvel, Star Wars, and National Geographic content.</td><td>11/12/2019</td></tr>
+<tr><td>5</td><td>YouTube Premium</td><td>Get an ad-free experience of YouTube and YouTube Original Series & Movies.</td><td>May 2018</td></tr>
+</tbody></table></div>
+
+<div><h2>Content_Category</h2><table><thead>
+<tr><th>id</th><th>category_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movies</td></tr>
+<tr><td>2</td><td>TV Shows</td></tr>
+<tr><td>3</td><td>Documentary</td></tr>
+<tr><td>4</td><td>Kids</td></tr>
+<tr><td>5</td><td>Anime</td></tr>
+</tbody></table></div>
+
+<div><h2>Channel</h2><table><thead>
+<tr><th>id</th><th>streaming_service_id</th><th>content_category_id</th><th>channel_name</th><th>channel_description</th></tr>
+<tr><th></th><th>(&#8594; Streaming_Service.id)</th><th>(&#8594; Content_Category.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>The Shawshank Redemption</td><td>A bank clerk gets sentenced to life in prison.</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Breaking Bad</td><td>A high school chemistry teacher turns to a life of crime.</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>Blue Planet II</td><td>David Attenborough presents a documentary about our world's oceans.</td></tr>
+<tr><td>4</td><td>3</td><td>4</td><td>Pepper Ann</td><td>About a middle school girl who is trying to find her way.</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>Dragon Ball Z</td><td>A young boy learns martial arts from his mentor after being attacked by evil forces.</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscription_Plan</h2><table><thead>
+<tr><th>id</th><th>streaming_service_id</th><th>price</th><th>duration</th><th>plan_details</th></tr>
+<tr><th></th><th>(&#8594; Streaming_Service.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>7.99</td><td>Monthly</td><td>Basic Plan - Unlimited Access to Our Platform</td></tr>
+<tr><td>2</td><td>2</td><td>5.99</td><td>Monthly</td><td>With Ads Basic Plan - Unlimited Access to Our Platform</td></tr>
+<tr><td>3</td><td>3</td><td>6.99</td><td>Yearly</td><td>Standard Plan - Unlimited Access to Our Platform</td></tr>
+<tr><td>4</td><td>4</td><td>4.99</td><td>Monthly</td><td>Mobile Only Plan - Unlimited Access to Our Platform</td></tr>
+<tr><td>5</td><td>5</td><td>11.99</td><td>Annual</td><td>Premium Plan - No Ads and Download Options Available</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Service_Monetization_Model</h2><table><thead>
+<tr><th>streaming_service_id</th><th>monetization_model_id</th></tr>
+<tr><th>(&#8594; Streaming_Service.id)</th><th>(&#8594; Monetization_Model.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>1</td><td>4</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Viewer_Stats</h2><table><thead>
+<tr><th>id</th><th>streaming_service_id</th><th>channel_id</th><th>views</th><th>unique_viewers</th></tr>
+<tr><th></th><th>(&#8594; Streaming_Service.id)</th><th>(&#8594; Channel.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1000</td><td>300</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2000</td><td>500</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>1500</td><td>450</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>1200</td><td>400</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>800</td><td>250</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

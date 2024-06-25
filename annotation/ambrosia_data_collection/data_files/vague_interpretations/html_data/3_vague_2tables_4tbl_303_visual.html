@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td></tr>
+<tr><td>2</td><td>The Godfather</td><td>1972</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994</td></tr>
+<tr><td>4</td><td>Forrest Gump</td><td>1994</td></tr>
+<tr><td>5</td><td>Inception</td><td>2010</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tim Robbins</td><td>October 16, 1958</td></tr>
+<tr><td>2</td><td>Morgan Freeman</td><td>June 1, 1937</td></tr>
+<tr><td>3</td><td>John Travolta</td><td>February 18, 1954</td></tr>
+<tr><td>4</td><td>Tom Hanks</td><td>July 9, 1956</td></tr>
+<tr><td>5</td><td>Leonardo DiCaprio</td><td>November 11, 1974</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank Darabont</td><td>January 28, 1959</td></tr>
+<tr><td>2</td><td>Francis Ford Coppola</td><td>April 7, 1939</td></tr>
+<tr><td>3</td><td>Quentin Tarantino</td><td>March 27, 1963</td></tr>
+<tr><td>4</td><td>Robert Zemeckis</td><td>May 14, 1951</td></tr>
+<tr><td>5</td><td>Christopher Nolan</td><td> July 10, 1970</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>id</th><th>genre_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Crime</td></tr>
+<tr><td>3</td><td>Thriller</td></tr>
+<tr><td>4</td><td>Romance</td></tr>
+<tr><td>5</td><td>Adventure</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Color_Palette</span></h2><table><thead>
+<tr><th>color_id</th><th>color_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Red</td></tr>
+<tr><td>2</td><td>Blue</td></tr>
+<tr><td>3</td><td>Green</td></tr>
+<tr><td>4</td><td>Yellow</td></tr>
+<tr><td>5</td><td>White</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Fabric_Choice</span></h2><table><thead>
+<tr><th>fabric_id</th><th>fabric_type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Silk</td></tr>
+<tr><td>2</td><td>Cotton</td></tr>
+<tr><td>3</td><td>Wool</td></tr>
+<tr><td>4</td><td>Linen</td></tr>
+<tr><td>5</td><td>Polyester</td></tr>
+</tbody></table></div>
+
+<div><h2>Fashion_Design</h2><table><thead>
+<tr><th>design_id</th><th>design_name</th><th>color_id</th><th>fabric_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Color_Palette.color_id)</th><th>(&#8594; Fabric_Choice.fabric_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Classic Black Suit</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Denim Jacket</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>Knitted Sweater</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>Summer Dress</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>Party Gown</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

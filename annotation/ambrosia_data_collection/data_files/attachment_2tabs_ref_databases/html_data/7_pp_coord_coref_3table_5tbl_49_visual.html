@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Clinics</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Harmony Wellness Center</span></td></tr>
+<tr><td>2</td><td>Sunny Hills Mental Health</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Psychologists</span></h2><table><thead>
+<tr><th>id</th><th>clinic_id</th><th>name</th><th>specialty</th></tr>
+<tr><th></th><th>(&#8594; Clinics.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Dr. Jane Smith</td><td>Cognitive Behavioral Therapy</td></tr>
+<tr><td>2</td><td>2</td><td>Dr. John Brown</td><td>Existential Psychotherapy</td></tr>
+<tr><td>3</td><td>1</td><td>Dr. Alice Green</td><td>Gestalt Therapy</td></tr>
+<tr><td>4</td><td>2</td><td>Dr. Bob White</td><td>Dialectical Behavior Therapy</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Psychiatrists</span></h2><table><thead>
+<tr><th>id</th><th>clinic_id</th><th>name</th><th>specialty</th></tr>
+<tr><th></th><th>(&#8594; Clinics.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Dr. Laura Black</td><td>Adult Psychiatry</td></tr>
+<tr><td>2</td><td>2</td><td>Dr. Carol Blue</td><td>Child and Adolescent Psychiatry</td></tr>
+<tr><td>3</td><td>1</td><td>Dr. Emily Gray</td><td>Addiction Medicine</td></tr>
+<tr><td>4</td><td>2</td><td>Dr. David Gold</td><td>Forensic Psychiatry</td></tr>
+</tbody></table></div>
+
+<div><h2>Patients</h2><table><thead>
+<tr><th>id</th><th>psychologist_id</th><th>psychiatrist_id</th><th>name</th><th>age</th><th>diagnosis</th></tr>
+<tr><th></th><th>(&#8594; Psychologists.id)</th><th>(&#8594; Psychiatrists.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>John Doe</td><td>30</td><td>Anxiety Disorder</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>Jane Roe</td><td>28</td><td>Depression</td></tr>
+<tr><td>3</td><td>1</td><td>4</td><td>Michael Johnson</td><td>40</td><td>Bipolar Disorder</td></tr>
+<tr><td>4</td><td>2</td><td>1</td><td>Emily Davis</td><td>35</td><td>Schizophrenia</td></tr>
+<tr><td>5</td><td>3</td><td>2</td><td>David Wilson</td><td>25</td><td>Autism Spectrum Disorder</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>id</th><th>patient_id</th><th>date</th><th>notes</th></tr>
+<tr><th></th><th>(&#8594; Patients.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-09-15 10:00:00</td><td>First session</td></tr>
+<tr><td>2</td><td>2</td><td>2022-09-16 15:00:00</td><td>Follow-up</td></tr>
+<tr><td>3</td><td>3</td><td>2022-09-17 10:30:00</td><td>Initial assessment</td></tr>
+<tr><td>4</td><td>4</td><td>2022-09-18 14:00:00</td><td>Medication review</td></tr>
+<tr><td>5</td><td>5</td><td>2022-09-19 11:00:00</td><td>Therapy session</td></tr>
+</tbody></table></div>
+
+<div><h2>TreatmentPlans</h2><table><thead>
+<tr><th>id</th><th>appointment_id</th><th>plan</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Appointments.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Cognitive Behavioral Therapy plan</td><td>In progress</td></tr>
+<tr><td>2</td><td>2</td><td>Existential Psychotherapy plan</td><td>Completed</td></tr>
+<tr><td>3</td><td>3</td><td>Gestalt Therapy plan</td><td>Ongoing</td></tr>
+<tr><td>4</td><td>4</td><td>Dialectical Behavior Therapy plan</td><td>Not started yet</td></tr>
+<tr><td>5</td><td>5</td><td>Individual therapy plan</td><td>In progress</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

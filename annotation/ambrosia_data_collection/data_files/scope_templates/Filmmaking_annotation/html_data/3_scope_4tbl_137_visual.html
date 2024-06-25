@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Sound_Designers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice@example.com</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob@example.com</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>charlie@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Techniques</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000">MethodName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Foley Artistry</td></tr>
+<tr><td>2</td><td>ADR Recording</td></tr>
+<tr><td>3</td><td>Sound Editing</td></tr>
+<tr><td>4</td><td>Mixing & Mastering</td></tr>
+<tr><td>5</td><td>Field Recording</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>ReleaseYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td></tr>
+<tr><td>2</td><td>Forrest Gump</td><td>1994</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994</td></tr>
+<tr><td>4</td><td>Schindler's List</td><td>1993</td></tr>
+<tr><td>5</td><td>Good Will Hunting</td><td>1997</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank</td><td>Darabont</td></tr>
+<tr><td>2</td><td>Robert</td><td>Zemeckis</td></tr>
+<tr><td>3</td><td>Quentin</td><td>Tarantino</td></tr>
+<tr><td>4</td><td>Steven</td><td>Spielberg</td></tr>
+<tr><td>5</td><td>Tommy</td><td>Lee Jones</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gordon</td><td>Carroll</td></tr>
+<tr><td>2</td><td>Bill</td><td>Safran</td></tr>
+<tr><td>3</td><td>Cary</td><td>Brokaw</td></tr>
+<tr><td>4</td><td>Harvey</td><td>Weinstein</td></tr>
+<tr><td>5</td><td>David</td><td>Fincher</td></tr>
+</tbody></table></div>
+
+<div><h2>Sound_Designer_Technique</h2><table><thead>
+<tr><th>SoundDesignerID</th><th>TechniqueID</th></tr>
+<tr><th>(&#8594; Sound_Designers.ID)</th><th>(&#8594; Techniques.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

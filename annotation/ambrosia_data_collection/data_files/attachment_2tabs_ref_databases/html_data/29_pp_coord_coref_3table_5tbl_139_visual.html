@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Terminals</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal A</td></tr>
+<tr><td>2</td><td>Terminal B</td></tr>
+<tr><td>3</td><td>Terminal C</td></tr>
+<tr><td>4</td><td>Terminal D</td></tr>
+<tr><td>5</td><td>Terminal E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Locations</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">TerminalID</span></th><th>AreaName</th></tr>
+<tr><th></th><th>(&#8594; Terminals.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Departure Lounge</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>1</td><td>Gate Area</td></tr>
+<tr><td>3</td><td><span style="color:#006600">2</span></td><td>Arrival Hall</td></tr>
+<tr><td>4</td><td>3</td><td>Concourse A</td></tr>
+<tr><td>5</td><td>3</td><td>Concourse B</td></tr>
+</tbody></table></div>
+
+<div><h2>Shops</h2><table><thead>
+<tr><th>ID</th><th>LocationID</th><th>ShopType</th><th>StoreName</th></tr>
+<tr><th></th><th>(&#8594; Locations.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Bookstore</td><td>Barnes & Noble</td></tr>
+<tr><td>2</td><td>1</td><td>Electronics</td><td>Best Buy</td></tr>
+<tr><td>3</td><td>2</td><td>Fashion</td><td>H&M</td></tr>
+<tr><td>4</td><td>3</td><td>Fast Food</td><td>McDonalds</td></tr>
+<tr><td>5</td><td>4</td><td>Pharmacy</td><td>Walgreens</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">DutyFreeShops</span></h2><table><thead>
+<tr><th>ID</th><th>ShopID</th><th>ProductDescription</th><th>Price</th><th>QuantityInStock</th></tr>
+<tr><th></th><th>(&#8594; Shops.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Champagne</td><td>199.99</td><td>100</td></tr>
+<tr><td>2</td><td>1</td><td>Whiskey</td><td>89.99</td><td>75</td></tr>
+<tr><td>3</td><td>2</td><td>Perfume</td><td>69.99</td><td>50</td></tr>
+<tr><td>4</td><td>3</td><td>Cigarettes</td><td>120</td><td>20</td></tr>
+<tr><td>5</td><td>4</td><td>Luxury Chocolates</td><td>35</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Souvenirs</span></h2><table><thead>
+<tr><th>ID</th><th>ShopID</th><th>ItemName</th><th>Description</th><th>Price</th><th>QuantityInStock</th></tr>
+<tr><th></th><th>(&#8594; Shops.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Airport T-shirt</td><td>Official airport souvenir t-shirt</td><td>15.99</td><td>200</td></tr>
+<tr><td>2</td><td>1</td><td>Keychain</td><td>Metal keyring with airport logo</td><td>5.99</td><td>300</td></tr>
+<tr><td>3</td><td>2</td><td>Travel Mug</td><td>Branded travel mug</td><td>12.99</td><td>150</td></tr>
+<tr><td>4</td><td>3</td><td>Postcard</td><td>City postcards</td><td>0.99</td><td>500</td></tr>
+<tr><td>5</td><td>4</td><td>Magnet</td><td>Refrigerator magnet</td><td>2.99</td><td>250</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>ID</th><th>FullName</th><th>Position</th><th>PhoneNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Security Officer</td><td>555-1234</td><td>john@airport.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Flight Attendant</td><td>555-5678</td><td>jane@airport.com</td></tr>
+<tr><td>3</td><td>Emily Johnson</td><td>Customer Service</td><td>555-9012</td><td>emily@airport.com</td></tr>
+<tr><td>4</td><td>David Brown</td><td>Pilot</td><td>555-3456</td><td>david@airport.com</td></tr>
+<tr><td>5</td><td>Michael Wilson</td><td>Maintenance Worker</td><td>555-7890</td><td>michael@airport.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

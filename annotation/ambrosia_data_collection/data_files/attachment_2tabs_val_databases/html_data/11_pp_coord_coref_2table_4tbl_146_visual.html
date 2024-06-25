@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">print_media</span></h2><table><thead>
+<tr><th>id</th><th>media_name</th><th>publication_date</th><th>author_id</th><th>audience_size</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; authors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The New York Times</td><td>2021-08-19</td><td>1</td><td><span style="color:#006600">300000</span></td></tr>
+<tr><td>2</td><td>Los Angeles Daily News</td><td>2021-07-25</td><td>2</td><td>60000</td></tr>
+<tr><td>3</td><td>The Guardian</td><td>2021-08-21</td><td>3</td><td>120000</td></tr>
+<tr><td>4</td><td>Le Monde</td><td>2021-08-23</td><td>4</td><td>90000</td></tr>
+<tr><td>5</td><td>El País</td><td>2021-08-22</td><td>5</td><td>70000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">online_media</span></h2><table><thead>
+<tr><th>id</th><th>website_url</th><th>publication_date</th><th>author_id</th><th>audience_size</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; authors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>www.nytimes.com</td><td>2021-08-19</td><td>1</td><td><span style="color:#006600">300000</span></td></tr>
+<tr><td>2</td><td>www.ladoscene.com</td><td>2021-07-25</td><td>2</td><td>60000</td></tr>
+<tr><td>3</td><td>www.theguardian.com</td><td>2021-08-21</td><td>3</td><td>120000</td></tr>
+<tr><td>4</td><td>www.lemonde.fr</td><td>2021-08-23</td><td>4</td><td>90000</td></tr>
+<tr><td>5</td><td>www.elpais.com</td><td>2021-08-22</td><td>5</td><td>70000</td></tr>
+</tbody></table></div>
+
+<div><h2>authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Author A</td><td>a@example.com</td></tr>
+<tr><td>2</td><td>Author B</td><td>b@example.com</td></tr>
+<tr><td>3</td><td>Author C</td><td>c@example.com</td></tr>
+<tr><td>4</td><td>Author D</td><td>d@example.com</td></tr>
+<tr><td>5</td><td>Author E</td><td>e@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>category_id</th><th>published_in_print</th><th>published_online</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; categories.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1 Title</td><td>Content of Article 1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Article 2 Title</td><td>Content of Article 2</td><td>2</td><td>0</td><td>1</td></tr>
+<tr><td>3</td><td>Article 3 Title</td><td>Content of Article 3</td><td>3</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>Article 4 Title</td><td>Content of Article 4</td><td>4</td><td>0</td><td>1</td></tr>
+<tr><td>5</td><td>Article 5 Title</td><td>Content of Article 5</td><td>5</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>categories</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Category 1</td></tr>
+<tr><td>2</td><td>Category 2</td></tr>
+<tr><td>3</td><td>Category 3</td></tr>
+<tr><td>4</td><td>Category 4</td></tr>
+<tr><td>5</td><td>Category 5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+The task is to identify ambiguous questions in English that are intended to interact with an SQLite database. Questions can take the form of an instruction or command and can be ambiguous, meaning they can be interpreted in different ways (corresponding to different SQL queries that produce different results). Answer Yes or No, and do not include any explanations.
+
+Some example databases, questions and corresponding SQL queries are provided based on similar problems:
+
+EXAMPLES
+
+Given the following SQLite database schema:
+
+SQL_DATABASE_DUMP
+
+Is the following question ambiguous:
+QUESTION
+

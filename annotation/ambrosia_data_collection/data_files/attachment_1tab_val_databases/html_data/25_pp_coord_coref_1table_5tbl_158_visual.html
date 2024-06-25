@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1960-01-01</td><td>American</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1987-03-22</td><td>British</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>GenreID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Biographies & Memoirs</td></tr>
+<tr><td>2</td><td>Fiction & Literature</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>Address</th><th>YearEstablished</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AbeBooks</td><td>Abingdon Road, Abingdon, Oxfordshire OX14 3LY, UK</td><td>1998</td></tr>
+<tr><td>2</td><td>Amazon Publishing</td><td>41800 West 10 Mile Rd., Ada, MI 49355</td><td>2009</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Books</span></h2><table><thead>
+<tr><th>BookID</th><th>Title</th><th>Narrative_Form</th><th>Epoch</th><th>PageCount</th><th>PublicationYear</th><th>AuthorID</th><th>GenreID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th><th>(&#8594; Genres.GenreID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>My Life Story</td><td><span style="color:#990000">Autobiography</span></td><td><span style="color:#006600">20th Century</span></td><td>300</td><td>2000</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>The Other Side of the World</td><td><span style="color:#990000">Autobiography</span></td><td>21st Century</td><td>280</td><td>2018</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>World War II History</td><td><span style="color:#990000">Historical Account</span></td><td><span style="color:#006600">20th Century</span></td><td>350</td><td>2010</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Modern American Society</td><td><span style="color:#990000">Historical Account</span></td><td>21st Century</td><td>400</td><td>2012</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Published_Works</h2><table><thead>
+<tr><th>WorkID</th><th>BookID</th><th>PublisherID</th><th>ReleaseDate</th><th>SalesAmount</th></tr>
+<tr><th></th><th>(&#8594; Books.BookID)</th><th>(&#8594; Publishers.PublisherID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2000-01-01</td><td>1000</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2018-06-01</td><td>1500</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>2010-01-01</td><td>2000</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2012-06-01</td><td>2500</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

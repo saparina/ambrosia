@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genres</h2><table><thead>
+<tr><th>genre_id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jazz</td></tr>
+<tr><td>2</td><td>Rock</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Artists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#990000"><span style="color:#990000">music_performer</span></span></th><th>years_in_industry</th></tr>
+<tr><th></th><th></th><th>(&#8594; Genres.name)</th><th>(&#8594; Artist_genre.years_in_industry)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#990000">Jazz Musician</span></td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#990000">Jazz Musician</span></td><td>20</td></tr>
+<tr><td>3</td><td>Tom Brown</td><td><span style="color:#990000">Rock Guitarist</span></td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>4</td><td>Emily Davis</td><td><span style="color:#990000">Rock Guitarist</span></td><td>30</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th>artist_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Artists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jazz Collection</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Classical Jazz</td><td>2022-07-01</td><td>2</td></tr>
+<tr><td>3</td><td>Guitar Masterpieces</td><td>2022-06-01</td><td>3</td></tr>
+<tr><td>4</td><td>Acoustic Rock</td><td>2022-08-01</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>length</th><th>album_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Albums.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cool Blues</td><td>3.5</td><td>1</td></tr>
+<tr><td>2</td><td>Elegant Waltz</td><td>4.2</td><td>2</td></tr>
+<tr><td>3</td><td>Fast Riff</td><td>3.0</td><td>3</td></tr>
+<tr><td>4</td><td>Slow Ballad</td><td>4.7</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Artist_genre</span></h2><table><thead>
+<tr><th>artist_id</th><th>genre_id</th><th><span style="color:#006600">years_in_industry</span></th></tr>
+<tr><th>(&#8594; Artists.id)</th><th>(&#8594; Genres.genre_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>2</td><td>1</td><td>20</td></tr>
+<tr><td>3</td><td>2</td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>4</td><td>2</td><td>30</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

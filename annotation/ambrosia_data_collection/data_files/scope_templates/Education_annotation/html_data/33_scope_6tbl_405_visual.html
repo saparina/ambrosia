@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Conferences</span></h2><table><thead>
+<tr><th>conference_id</th><th>name</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Education Tech Summit</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>Teaching Innovations Conference</td><td>2023-01-15</td></tr>
+<tr><td>3</td><td>Learning & Development Expo</td><td>2023-02-01</td></tr>
+<tr><td>4</td><td>eLearning World Forum</td><td>2023-02-15</td></tr>
+<tr><td>5</td><td>Academic Research Symposium</td><td>2023-03-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Sessions</span></h2><table><thead>
+<tr><th><span style="color:#990000">session_type</span></th><th>duration</th></tr>
+</thead><tbody>
+<tr><td>Keynote_Speech</td><td>60</td></tr>
+<tr><td>Panel Discussion</td><td>90</td></tr>
+<tr><td>Workshop</td><td>120</td></tr>
+<tr><td>Breakout Session</td><td>60</td></tr>
+<tr><td>Presentation</td><td>30</td></tr>
+</tbody></table></div>
+
+<div><h2>Speakers</h2><table><thead>
+<tr><th>speaker_id</th><th>first_name</th><th>last_name</th><th>title</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>CEO at Tech Inc.</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Professor at University XYZ</td></tr>
+<tr><td>3</td><td>Bob</td><td>Williams</td><td>Innovator at ABC Company</td></tr>
+<tr><td>4</td><td>Alice</td><td>Johnson</td><td>Director at Learning Center PQR</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Brown</td><td>Researcher at Data Analytics Institute</td></tr>
+</tbody></table></div>
+
+<div><h2>Conference_Sessions</h2><table><thead>
+<tr><th>conference_session_id</th><th>conference_id</th><th>session_type_id</th></tr>
+<tr><th></th><th>(&#8594; Conferences.conference_id)</th><th>(&#8594; Sessions.session_type_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Periodicals</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#186e16"><span style="color:#186e16">type</span></span></th><th><span style="color:#1430b2">circulation_numbers</span></th><th>pub_date</th><th>publisher_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Publishers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The New York Times</td><td><span style="color:#186e16">Newspaper</span></td><td><span style="color:#1430b2">20000</span></td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>USA Today</td><td><span style="color:#186e16">Newspaper</span></td><td>18000</td><td>2023-01-02</td><td>1</td></tr>
+<tr><td>3</td><td>Time <span style="color:#186e16">Magazine</span></td><td><span style="color:#186e16">Magazine</span></td><td><span style="color:#1430b2">20000</span></td><td>2023-01-03</td><td>2</td></tr>
+<tr><td>4</td><td>National Geographic</td><td><span style="color:#186e16">Magazine</span></td><td>19000</td><td>2023-01-04</td><td>3</td></tr>
+<tr><td>5</td><td>Wired</td><td><span style="color:#186e16">Magazine</span></td><td>17000</td><td>2023-01-05</td><td>4</td></tr>
+<tr><td>6</td><td>Forbes</td><td><span style="color:#186e16">Newspaper</span></td><td>15000</td><td>2023-01-06</td><td>5</td></tr>
+<tr><td>7</td><td>Vanity Fair</td><td><span style="color:#186e16">Magazine</span></td><td>16000</td><td>2023-01-07</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane Austen</td></tr>
+<tr><td>2</td><td>Charles Dickens</td></tr>
+<tr><td>3</td><td>Mark Twain</td></tr>
+<tr><td>4</td><td>George Orwell</td></tr>
+<tr><td>5</td><td>Fyodor Dostoevsky</td></tr>
+<tr><td>6</td><td>Leo Tolstoy</td></tr>
+<tr><td>7</td><td>Harper Lee</td></tr>
+<tr><td>8</td><td>Herman Melville</td></tr>
+<tr><td>9</td><td>Emily Bronte</td></tr>
+<tr><td>10</td><td>William Shakespeare</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>pub_date</th><th>periodical_id</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Periodicals.id)</th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A Tale of Two Cities</td><td>This novel by Charles Dickens tells...</td><td>2023-01-01</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>Pride and Prejudice</td><td>This classic love story by Jane Austen...</td><td>2023-01-02</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Great Expectations</td><td>Another masterpiece by Charles Dickens...</td><td>2023-01-03</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>War and Peace</td><td>Tolstoy's epic tale of love during war...</td><td>2023-01-04</td><td>4</td><td>6</td></tr>
+<tr><td>5</td><td>To Kill a Mockingbird</td><td>Harper Lee's Pulitzer Prize winning book...</td><td>2023-01-05</td><td>5</td><td>7</td></tr>
+<tr><td>6</td><td>Moby Dick</td><td>Classic adventure novel by Herman Melville.</td><td>2023-01-06</td><td>6</td><td>8</td></tr>
+<tr><td>7</td><td>1984</td><td>Orwell's dystopian vision of a totalitarian society.</td><td>2023-01-07</td><td>7</td><td>9</td></tr>
+<tr><td>8</td><td>Crime and Punishment</td><td>Dostoevsky's psychological thriller about guilt and redemption.</td><td>2023-01-08</td><td>8</td><td>10</td></tr>
+<tr><td>9</td><td>The Great Gatsby</td><td>Scott Fitzgerald's timeless portrayal of the American Dream.</td><td>2023-01-09</td><td>9</td><td>1</td></tr>
+<tr><td>10</td><td>Animal Farm</td><td>George Orwell's allegory on political corruption.</td><td>2023-01-10</td><td>10</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>McClatchy Company</td></tr>
+<tr><td>2</td><td>Gannett Company</td></tr>
+<tr><td>3</td><td>Meredith Corporation</td></tr>
+<tr><td>4</td><td>Conde Nast</td></tr>
+<tr><td>5</td><td>Hearst Communications</td></tr>
+<tr><td>6</td><td>Rupert Murdoch's News Corporation</td></tr>
+<tr><td>7</td><td>Time Inc.</td></tr>
+<tr><td>8</td><td>Newsweek Media Group</td></tr>
+<tr><td>9</td><td>The Washington Post</td></tr>
+<tr><td>10</td><td>Dow Jones & Company</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">NarrativeForms</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">Narrative_Form</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Autobiography</span></td></tr>
+<tr><td>2</td><td>Historical Account</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Epochs</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">Epoch</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>20th Century</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">19th Century</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th><th>Deathdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Author A</td><td>1874-03-16</td><td>None</td></tr>
+<tr><td>2</td><td>Author B</td><td>1925-08-15</td><td>1989-05-25</td></tr>
+<tr><td>3</td><td>Author C</td><td>1930-12-10</td><td>2005-03-07</td></tr>
+</tbody></table></div>
+
+<div><h2>Narratives</h2><table><thead>
+<tr><th>id</th><th>narrative_form_id</th><th>epoch_id</th><th>title</th><th>publication_year</th><th>author_id</th></tr>
+<tr><th></th><th>(&#8594; NarrativeForms.id)</th><th>(&#8594; Epochs.id)</th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>My Life Story</td><td>2000</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>More of My Life</td><td>2005</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>Events That Shaped The World</td><td>1997</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>Another Historical Event</td><td>2003</td><td>3</td></tr>
+<tr><td>5</td><td>3</td><td>3</td><td>Random Thoughts</td><td>2008</td><td>1</td></tr>
+<tr><td>6</td><td>4</td><td>4</td><td>How I Overcame Fear</td><td>2012</td><td>3</td></tr>
+<tr><td>7</td><td>5</td><td>5</td><td>Life Lessons Learned</td><td>2011</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

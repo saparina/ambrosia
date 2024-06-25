@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Cities</h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>London</td><td>UK</td></tr>
+<tr><td>3</td><td>Paris</td><td>France</td></tr>
+<tr><td>4</td><td>Tokyo</td><td>Japan</td></tr>
+<tr><td>5</td><td>Dubai</td><td>UAE</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>Id</th><th><span style="color:#990000">CityId</span></th><th><span style="color:#990000">Code</span></th><th>RunwayCount</th></tr>
+<tr><th></th><th>(&#8594; Cities.Id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>JFK</td><td>3</td></tr>
+<tr><td>2</td><td>2</td><td>LHR</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>CDG</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>HND</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>DXB</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Runways</h2><table><thead>
+<tr><th>Id</th><th>Length</th><th>Width</th><th>SurfaceType</th><th>AirportId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>9000.0</td><td>150.0</td><td>Asphalt</td><td>1</td></tr>
+<tr><td>2</td><td>8000.0</td><td>170.0</td><td>Concrete</td><td>2</td></tr>
+<tr><td>3</td><td>9500.0</td><td>200.0</td><td>Grass</td><td>3</td></tr>
+<tr><td>4</td><td>8800.0</td><td>180.0</td><td>Asphalt</td><td>4</td></tr>
+<tr><td>5</td><td>12000.0</td><td>220.0</td><td>Tarmac</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightId</th><th>DepartureAirportId</th><th>ArrivalAirportId</th><th>ScheduledDeparture</th><th>ActualDeparture</th><th>EstimatedArrival</th><th>Status</th><th>AircraftModel</th></tr>
+<tr><th></th><th>(&#8594; Airports.Id)</th><th>(&#8594; Airports.Id)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>2023-03-25 12:00:00</td><td>2023-03-25 12:15:00</td><td>2023-03-25 13:45:00</td><td>On Time</td><td>Boeing 747</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>2023-03-25 15:00:00</td><td>2023-03-25 15:30:00</td><td>2023-03-25 18:30:00</td><td>Delayed</td><td>Airbus A380</td></tr>
+<tr><td>3</td><td>3</td><td>4</td><td>2023-03-25 18:00:00</td><td>2023-03-25 18:30:00</td><td>2023-03-25 22:15:00</td><td>On Time</td><td>Boeing 787</td></tr>
+<tr><td>4</td><td>4</td><td>5</td><td>2023-03-25 21:00:00</td><td>2023-03-25 21:30:00</td><td>2023-03-25 23:15:00</td><td>Delayed</td><td>Boeing 777</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>2023-03-26 02:00:00</td><td>2023-03-26 02:30:00</td><td>2023-03-26 04:15:00</td><td>On Time</td><td>Emirates A380</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

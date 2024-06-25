@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cardiologist</td><td>Experienced Cardiologist needed for full time position.</td><td>New York</td></tr>
+<tr><td>2</td><td>Dentist</td><td>General Dentist required for part-time role.</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Radiographer</td><td>Seeking experienced Radiographer for a temporary assignment.</td><td>Chicago</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Nurses</span></h2><table><thead>
+<tr><th>id</th><th>shift_hours</th><th>specialty</th><th>experience</th></tr>
+<tr><th></th><th>(&#8594; Shifts.name)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Morning Shift</span></td><td>Emergency Care</td><td>5</td></tr>
+<tr><td>2</td><td>Afternoon Shift</td><td>Pediatrics</td><td>8</td></tr>
+<tr><td>3</td><td>Night Shift</td><td>ICU</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Physical_therapists</span></h2><table><thead>
+<tr><th>id</th><th>shift_hours</th><th>specialty</th><th>certifications</th></tr>
+<tr><th></th><th>(&#8594; Shifts.name)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Morning Shift</span></td><td>Neurological Rehab</td><td>10</td></tr>
+<tr><td>2</td><td>Afternoon Shift</td><td>Musculoskeletal Disorders</td><td>12</td></tr>
+<tr><td>3</td><td>Night Shift</td><td>Cardiac Rehabilitation</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>department</th><th>years_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Smith</td><td>Cardiology</td><td>7</td></tr>
+<tr><td>2</td><td>Dr. Johnson</td><td>Orthopedics</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Patients</h2><table><thead>
+<tr><th>id</th><th>age</th><th>condition</th><th>doctor_id</th><th>nurse_id</th><th>therapist_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Doctors.id)</th><th>(&#8594; Nurses.id)</th><th>(&#8594; Physical_therapists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>34</td><td>Diabetes</td><td>1</td><td>None</td><td>None</td></tr>
+<tr><td>2</td><td>68</td><td>Heart Disease</td><td>1</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>42</td><td>Arthritis</td><td>1</td><td>None</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Shifts</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Day Shift</td></tr>
+<tr><td>2</td><td>Evening Shift</td></tr>
+<tr><td>3</td><td>Night Shift</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

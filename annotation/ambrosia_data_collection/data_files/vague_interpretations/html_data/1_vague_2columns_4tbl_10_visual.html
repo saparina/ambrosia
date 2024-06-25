@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseDate</th><th>genre</th><th>directorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994-09-23</td><td>Drama</td><td>1</td></tr>
+<tr><td>2</td><td>Forrest Gump</td><td>1994-06-23</td><td>Drama/Romance</td><td>2</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994-10-17</td><td>Crime/Thriller</td><td>3</td></tr>
+<tr><td>4</td><td>Inception</td><td>2010-07-16</td><td>Action/Sci-Fi</td><td>4</td></tr>
+<tr><td>5</td><td>Interstellar</td><td>2014-11-07</td><td>Adventure/Sci-Fi</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>birthdate</th><th>realName</th><th>alias</th><th>story</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank</td><td>Darabont</td><td>1959-01-28</td><td>Francis Lawrence Darabont</td><td>None</td><td>Known for his work on The Green Mile and The Mist.</td></tr>
+<tr><td>2</td><td>Robert</td><td>Zemeckis</td><td>1951-05-14</td><td>Robert Lee Zemeckis</td><td>Bob Z.</td><td>Known for directing Back to the Future and Forrest Gump.</td></tr>
+<tr><td>3</td><td>Quentin</td><td>Tarantino</td><td>1963-03-27</td><td>Quentin Jerome Tarantino</td><td>QT</td><td>Known for his unique style of filmmaking and memorable dialogue.</td></tr>
+<tr><td>4</td><td>Christopher</td><td>Nolan</td><td>1970-07-30</td><td>Christopher Edward Nolan</td><td>Chris</td><td>Known for his thought-provoking films such as Inception and Interstellar.</td></tr>
+<tr><td>5</td><td>Jonathan</td><td>Nolan</td><td>1976-09-11</td><td>Jonathan Rowland Nolan</td><td>Jony</td><td>Brother of Christopher Nolan and co-writer of many of his movies.</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th><th>movieId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Movies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>1</td></tr>
+<tr><td>2</td><td>Robin</td><td>Williams</td><td>1958-07-21</td><td>2</td></tr>
+<tr><td>3</td><td>John</td><td>Travolta</td><td>1974-02-18</td><td>3</td></tr>
+<tr><td>4</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>4</td></tr>
+<tr><td>5</td><td>Ellen</td><td>Page</td><td>1987-02-21</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>id</th><th>actorID</th><th>movieID</th><th>roleName</th><th>characterDescription</th></tr>
+<tr><th></th><th>(&#8594; Actors.id)</th><th>(&#8594; Movies.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Andy Dufresne</td><td>A banker who is falsely accused of murder.</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Benjamin Buford "Bubba" Blue</td><td>A man with a passion for shrimp.</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Vincent Vega</td><td>A hitman with an appreciation for good music.</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Cobb</td><td>A thief who steals ideas from people's dreams.</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Cooper</td><td>A pilot and scientist trying to save humanity.</td></tr>
+</tbody></table></div>
+
+<div><h2>MusicAlbums</h2><table><thead>
+<tr><th>id</th><th>albumTitle</th><th>releaseYear</th><th>artistId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Artists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Nevermind</td><td>1991</td><td>1</td></tr>
+<tr><td>2</td><td>Ten</td><td>1991</td><td>2</td></tr>
+<tr><td>3</td><td>Mellon Collie and the Infinite Sadness</td><td>1995</td><td>3</td></tr>
+<tr><td>4</td><td>Siamese Dream</td><td>1993</td><td>4</td></tr>
+<tr><td>5</td><td>The Colour and the Shape</td><td>1996</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>birthdate</th><th><span style="color:#990000">realName</span></th><th><span style="color:#990000">alias</span></th><th>story</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1967-02-20</td><td>Kurt Donald Cobain</td><td>Kurt Cobain</td><td>Lead singer and guitarist of Nirvana.</td></tr>
+<tr><td>2</td><td>1964-12-23</td><td>Edward Louis Severson III</td><td>Eddie Vedder</td><td>Lead singer of Pearl Jam.</td></tr>
+<tr><td>3</td><td>1967-03-17</td><td>William Patrick Corgan Jr.</td><td>Billy Corgan</td><td>Frontman and songwriter of The Smashing Pumpkins.</td></tr>
+<tr><td>4</td><td>1942-06-20</td><td>Brian Douglas Wilson</td><td>None</td><td>Founding member and leader of The Beach Boys.</td></tr>
+<tr><td>5</td><td>1955-04-30</td><td>Stanley Clarke</td><td>None</td><td>One of the most influential bass players in jazz fusion.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

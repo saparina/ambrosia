@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Advertisements</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Summer Sale</td><td>Get up to 70% off on summer clothes.</td></tr>
+<tr><td>2</td><td>New Arrivals</td><td>Check out our latest collection of winter jackets.</td></tr>
+<tr><td>3</td><td>Holiday Specials</td><td>Celebrate this holiday season with these amazing deals!</td></tr>
+<tr><td>4</td><td>Health Fair</td><td>Join us at the annual health fair to learn about staying fit.</td></tr>
+<tr><td>5</td><td>Art Exhibition</td><td>Don't miss the upcoming art exhibition featuring local artists.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Formats</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">format_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Billboard</td></tr>
+<tr><td>2</td><td>Digital Screen</td></tr>
+<tr><td>3</td><td>Poster</td></tr>
+<tr><td>4</td><td>Wall Banner</td></tr>
+<tr><td>5</td><td>Window Sticker</td></tr>
+</tbody></table></div>
+
+<div><h2>Advertisements_Formats</h2><table><thead>
+<tr><th>advertisement_id</th><th>format_id</th></tr>
+<tr><th>(&#8594; Advertisements.id)</th><th>(&#8594; Formats.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

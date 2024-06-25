@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Editor</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>author_id</th><th>reporter_id</th><th>final_draft_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.author_id)</th><th>(&#8594; Reporters.reporter_id)</th><th>(&#8594; Final_Draft.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News Story</td><td>This is a news story about breaking news.</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Feature on Local Business</td><td>A feature article about a local business.</td><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>author_id</th><th>firstname</th><th>lastname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Brown</td></tr>
+<tr><td>2</td><td>Charlie</td><td>Green</td></tr>
+</tbody></table></div>
+
+<div><h2>Reporters</h2><table><thead>
+<tr><th>reporter_id</th><th>firstname</th><th>lastname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David</td><td>Black</td></tr>
+<tr><td>2</td><td>Eva</td><td>White</td></tr>
+</tbody></table></div>
+
+<div><h2>Final_Draft</h2><table><thead>
+<tr><th>id</th><th>managing_editor_id</th></tr>
+<tr><th></th><th>(&#8594; Editor.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

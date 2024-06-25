@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerID</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2000.0</td></tr>
+<tr><td>2</td><td>2</td><td>3000.0</td></tr>
+<tr><td>3</td><td>3</td><td>4000.0</td></tr>
+<tr><td>4</td><td>4</td><td>5000.0</td></tr>
+<tr><td>5</td><td>5</td><td>6000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountNumber</th><th>Amount</th><th>TransactionDate</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>200.0</td><td>2024-02-19 15:02:11</td></tr>
+<tr><td>2</td><td>2</td><td>300.0</td><td>2024-02-19 15:02:11</td></tr>
+<tr><td>3</td><td>3</td><td>400.0</td><td>2024-02-19 15:02:11</td></tr>
+<tr><td>4</td><td>4</td><td>500.0</td><td>2024-02-19 15:02:11</td></tr>
+<tr><td>5</td><td>5</td><td>600.0</td><td>2024-02-19 15:02:11</td></tr>
+</tbody></table></div>
+
+<div><h2>Shares</h2><table><thead>
+<tr><th>ShareID</th><th>Stock</th><th>NumberOfShares</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Corporation</td><td>100</td></tr>
+<tr><td>2</td><td>XYZ Inc.</td><td>200</td></tr>
+<tr><td>3</td><td>PQR Ltd.</td><td>300</td></tr>
+<tr><td>4</td><td>LMT LLC</td><td>400</td></tr>
+<tr><td>5</td><td>KLM & Co.</td><td>500</td></tr>
+</tbody></table></div>
+
+<div><h2>ShareTransactions</h2><table><thead>
+<tr><th>ShareTransactionID</th><th>BuyOrSell</th><th>CustomerID</th><th>ShareID</th><th>Quantity</th><th>Price</th><th>Commission</th></tr>
+<tr><th></th><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Shares.ShareID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>BUY</td><td>1</td><td>1</td><td>10</td><td>100.0</td><td>5.0</td></tr>
+<tr><td>2</td><td>SELL</td><td>1</td><td>1</td><td>5</td><td>95.0</td><td>4.75</td></tr>
+<tr><td>3</td><td>BUY</td><td>2</td><td>2</td><td>20</td><td>80.0</td><td>8.0</td></tr>
+<tr><td>4</td><td>SELL</td><td>2</td><td>2</td><td>8</td><td>75.0</td><td>6.0</td></tr>
+<tr><td>5</td><td>BUY</td><td>3</td><td>3</td><td>15</td><td>70.0</td><td>7.5</td></tr>
+</tbody></table></div>
+
+<div><h2>Dividends</h2><table><thead>
+<tr><th>DividendID</th><th>ShareID</th><th>DividendAmount</th><th>ExpectedPaymentDate</th><th><span style="color:#990000">Dividend_Yield</span></th></tr>
+<tr><th></th><th>(&#8594; Shares.ShareID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10.0</td><td>2023-06-01</td><td>2.0</td></tr>
+<tr><td>2</td><td>2</td><td>5.0</td><td>2023-06-15</td><td>1.0</td></tr>
+<tr><td>3</td><td>3</td><td>8.0</td><td>2023-07-01</td><td>2.0</td></tr>
+<tr><td>4</td><td>4</td><td>3.0</td><td>2023-07-15</td><td>1.0</td></tr>
+<tr><td>5</td><td>5</td><td>12.0</td><td>2023-08-01</td><td>3.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

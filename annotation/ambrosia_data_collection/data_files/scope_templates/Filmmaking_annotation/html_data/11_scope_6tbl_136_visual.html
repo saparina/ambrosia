@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>FilmProjects</h2><table><thead>
+<tr><th>projectID</th><th>title</th><th>releaseDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film1</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>Film2</td><td>2023-07-08</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>directorID</th><th>name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Director1</td><td>1975-11-26</td></tr>
+<tr><td>2</td><td>Director2</td><td>1980-08-03</td></tr>
+</tbody></table></div>
+
+<div><h2>Cinematographers</h2><table><thead>
+<tr><th>cinematographerID</th><th>name</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cinematograher1</td><td>10</td></tr>
+<tr><td>2</td><td>Cinematograher2</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>actorID</th><th>name</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Actor1</td><td>30</td></tr>
+<tr><td>2</td><td>Actor2</td><td>25</td></tr>
+<tr><td>3</td><td>Actor3</td><td>35</td></tr>
+<tr><td>4</td><td>Actor4</td><td>28</td></tr>
+<tr><td>5</td><td>Actor5</td><td>40</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>roleID</th><th>filmProjectID</th><th>actorID</th></tr>
+<tr><th></th><th>(&#8594; FilmProjects.projectID)</th><th>(&#8594; Actors.actorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Lighting_Technicians</span></h2><table><thead>
+<tr><th>technicianID</th><th>name</th><th>yearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tech1</td><td>5</td></tr>
+<tr><td>2</td><td>Tech2</td><td>8</td></tr>
+<tr><td>3</td><td>Tech3</td><td>7</td></tr>
+<tr><td>4</td><td>Tech4</td><td>6</td></tr>
+<tr><td>5</td><td>Tech5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Fixtures</span></h2><table><thead>
+<tr><th>fixtureType</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>Softbox</td><td>None</td></tr>
+<tr><td>LED Panel</td><td>None</td></tr>
+<tr><td>Fresnel</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Lighting_Technicians_Fixtures</h2><table><thead>
+<tr><th>technicianID</th><th>fixtureType</th></tr>
+<tr><th>(&#8594; Lighting_Technicians.technicianID)</th><th>(&#8594; Fixtures.fixtureType)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Softbox</td></tr>
+<tr><td>1</td><td>LED Panel</td></tr>
+<tr><td>2</td><td>Softbox</td></tr>
+<tr><td>2</td><td>Fresnel</td></tr>
+<tr><td>3</td><td>Softbox</td></tr>
+<tr><td>3</td><td>LED Panel</td></tr>
+<tr><td>4</td><td>Softbox</td></tr>
+<tr><td>4</td><td>Fresnel</td></tr>
+<tr><td>5</td><td>Softbox</td></tr>
+<tr><td>5</td><td>LED Panel</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

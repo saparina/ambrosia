@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Doctors</h2><table><thead>
+<tr><th>DoctorID</th><th>Name</th><th>Specialty</th><th><span style="color:#990000">Founding_Year</span></th><th><span style="color:#990000">Past_Owners</span></th><th>Healthcare_Facility</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. John Smith</td><td>Cardiology</td><td>2005</td><td>John Brown, Mary Johnson</td><td>St. Luke's Hospital</td></tr>
+<tr><td>2</td><td>Dr. Jane Doe</td><td>Pediatrics</td><td>2010</td><td>James White, Michael Black</td><td>Children's Hospital</td></tr>
+<tr><td>3</td><td>Dr. Susan Lee</td><td>Dermatology</td><td>2015</td><td>Emma Green, David Wilson</td><td>Sunshine Skin Clinic</td></tr>
+</tbody></table></div>
+
+<div><h2>Patients</h2><table><thead>
+<tr><th>PatientID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>1987-06-15</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>1990-02-20</td></tr>
+<tr><td>3</td><td>Carol</td><td>Williams</td><td>1985-10-05</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>AppointmentID</th><th>PatientID</th><th>DoctorID</th><th>Date</th><th>Time</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; Doctors.DoctorID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-07-10</td><td>10:00 AM</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-07-12</td><td>03:00 PM</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-07-14</td><td>11:00 AM</td></tr>
+</tbody></table></div>
+
+<div><h2>Medications</h2><table><thead>
+<tr><th>MedicationID</th><th>MedicineName</th><th>DrugClass</th><th>Instructions</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ibuprofen</td><td>Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)</td><td>Take 200 mg every 4 to 6 hours as needed.</td></tr>
+<tr><td>2</td><td>Acetaminophen</td><td>Analgesics and Antipyretics</td><td>Take 500 mg every 4 to 6 hours as needed.</td></tr>
+</tbody></table></div>
+
+<div><h2>Prescriptions</h2><table><thead>
+<tr><th>PrescriptionID</th><th>PatientID</th><th>MedicationID</th><th>IssueDate</th><th>ExpiryDate</th><th>Quantity</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; Medications.MedicationID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-06-20</td><td>2022-06-30</td><td>30</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2022-06-25</td><td>2022-07-09</td><td>60</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>2022-07-05</td><td>2022-07-19</td><td>14</td></tr>
+</tbody></table></div>
+
+<div><h2>Insurances</h2><table><thead>
+<tr><th>InsuranceID</th><th>PolicyNumber</th><th>Provider</th><th>CoverageAmount</th><th>StartDate</th><th>EndDate</th><th>PatientID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Patients.PatientID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABCD1234</td><td>HealthPlus</td><td>10000</td><td>2022-01-01</td><td>2023-12-31</td><td>1</td></tr>
+<tr><td>2</td><td>EFGH5678</td><td>Wellness Care</td><td>12000</td><td>2022-01-15</td><td>2023-12-14</td><td>2</td></tr>
+<tr><td>3</td><td>IJKL9012</td><td>Family Plan</td><td>15000</td><td>2022-02-01</td><td>2023-01-31</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

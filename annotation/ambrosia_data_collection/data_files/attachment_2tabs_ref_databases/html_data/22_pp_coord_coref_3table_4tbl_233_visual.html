@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airlines</h2><table><thead>
+<tr><th>AirlineID</th><th>Name</th><th>Headquarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>Chicago</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>Atlanta</td></tr>
+<tr><td>3</td><td>American Airlines</td><td>Fort Worth</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>Dallas</td></tr>
+<tr><td>5</td><td>Alaska Airlines</td><td>Seattle</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>ArrivalTime</th><th>OriginAirportID</th><th>DestinationAirportID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.AirportID)</th><th>(&#8594; Airports.AirportID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 06:00</td><td>2023-01-01 08:00</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2023-01-02 07:00</td><td>2023-01-02 09:00</td><td>3</td><td>4</td></tr>
+<tr><td>3</td><td>2023-01-03 08:00</td><td>2023-01-03 10:00</td><td>2</td><td>5</td></tr>
+<tr><td>4</td><td>2023-01-04 09:00</td><td>2023-01-04 11:00</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>2023-01-05 10:00</td><td>2023-01-05 12:00</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Airports</span></h2><table><thead>
+<tr><th>AirportID</th><th>Name</th><th>City</th><th>Country</th><th><span style="color:#006600">PickUpDropOffLocations</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John F. Kennedy International Airport</td><td>New York</td><td>USA</td><td><span style="color:#006600">Entrance A</span></td></tr>
+<tr><td>2</td><td>Hartsfield-Jackson Atlanta International Airport</td><td>Atlanta</td><td>USA</td><td>Gate B</td></tr>
+<tr><td>3</td><td>Los Angeles International Airport</td><td>Los Angeles</td><td>USA</td><td>Curbside C</td></tr>
+<tr><td>4</td><td>Dallas/Fort Worth International Airport</td><td>Dallas</td><td>USA</td><td>Terminal E</td></tr>
+<tr><td>5</td><td>Sea-Tac International Airport</td><td>Seattle</td><td>USA</td><td>Main Terminal</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">WheelChairAssistanceRequests</span></h2><table><thead>
+<tr><th>RequestID</th><th>PassengerName</th><th>FlightID</th><th>DateRequested</th><th>AssistanceRequired</th></tr>
+<tr><th></th><th></th><th>(&#8594; Flights.FlightID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anna Smith</td><td>1</td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Michael Brown</td><td>2</td><td>2023-01-02</td><td>0</td></tr>
+<tr><td>3</td><td>David Johnson</td><td>3</td><td>2023-01-03</td><td>1</td></tr>
+<tr><td>4</td><td>Amy Williams</td><td>4</td><td>2023-01-04</td><td>0</td></tr>
+<tr><td>5</td><td>Nathan Taylor</td><td>5</td><td>2023-01-05</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MobilityScooterRequests</span></h2><table><thead>
+<tr><th>RequestID</th><th>PassengerName</th><th>FlightID</th><th>DateRequested</th><th>ScooterRequired</th></tr>
+<tr><th></th><th></th><th>(&#8594; Flights.FlightID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lisa Thompson</td><td>1</td><td>2023-01-01</td><td>0</td></tr>
+<tr><td>2</td><td>Richard Lee</td><td>2</td><td>2023-01-02</td><td>1</td></tr>
+<tr><td>3</td><td>Karen Clark</td><td>3</td><td>2023-01-03</td><td>0</td></tr>
+<tr><td>4</td><td>Mark Green</td><td>4</td><td>2023-01-04</td><td>1</td></tr>
+<tr><td>5</td><td>Laura Wilson</td><td>5</td><td>2023-01-05</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>Position</th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Smith</td><td>Customer Service Manager</td><td>Passenger Services</td></tr>
+<tr><td>2</td><td>John</td><td>Brown</td><td>Security Officer</td><td>Security</td></tr>
+<tr><td>3</td><td>Alice</td><td>Davis</td><td>Air Traffic Controller</td><td>Operations</td></tr>
+<tr><td>4</td><td>Tom</td><td>Martin</td><td>Pilot</td><td>Flight Operations</td></tr>
+<tr><td>5</td><td>Rachel</td><td>Garcia</td><td>Cabin Crew</td><td>Passenger Services</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

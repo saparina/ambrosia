@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>customers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>123 Main St</td><td>555-0100</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>456 Elm St</td><td>555-0200</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">pension_plans</span></h2><table><thead>
+<tr><th>plan_id</th><th>customer_id</th><th>plan_name</th><th>rate_of_return</th></tr>
+<tr><th></th><th>(&#8594; customers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Gold Plan</td><td><span style="color:#006600">5.0</span></td></tr>
+<tr><td>2</td><td>2</td><td>Silver Plan</td><td>7.5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">brokerage_accounts</span></h2><table><thead>
+<tr><th>account_id</th><th>customer_id</th><th>balance</th><th>rate_of_return</th></tr>
+<tr><th></th><th>(&#8594; customers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10000.0</td><td><span style="color:#006600">5.0</span></td></tr>
+<tr><td>2</td><td>2</td><td>8000.0</td><td>7.5</td></tr>
+</tbody></table></div>
+
+<div><h2>savings_accounts</h2><table><thead>
+<tr><th>account_id</th><th>customer_id</th><th>balance</th><th>interest_rate</th></tr>
+<tr><th></th><th>(&#8594; customers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>9000.0</td><td>5.0</td></tr>
+<tr><td>2</td><td>2</td><td>6000.0</td><td>7.5</td></tr>
+</tbody></table></div>
+
+<div><h2>loan_applications</h2><table><thead>
+<tr><th>app_id</th><th>customer_id</th><th>employee_id</th><th>amount</th><th>interest_rate</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; customers.id)</th><th>(&#8594; employees.emp_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>15000.0</td><td>6.0</td><td>Approved</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>20000.0</td><td>6.5</td><td>Rejected</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>25000.0</td><td>7.0</td><td>Pending</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>30000.0</td><td>7.5</td><td>Pending</td></tr>
+</tbody></table></div>
+
+<div><h2>employees</h2><table><thead>
+<tr><th>emp_id</th><th>first_name</th><th>last_name</th><th>position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Banks</td><td>Manager</td></tr>
+<tr><td>2</td><td>Bob</td><td>Smith</td><td>Assistant Manager</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

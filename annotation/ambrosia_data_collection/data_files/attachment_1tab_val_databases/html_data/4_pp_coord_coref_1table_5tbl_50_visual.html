@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airlines</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Delta</td><td>USA</td></tr>
+<tr><td>2</td><td>British Airways</td><td>UK</td></tr>
+<tr><td>3</td><td>Emirates</td><td>UAE</td></tr>
+<tr><td>4</td><td>Qantas</td><td>Australia</td></tr>
+<tr><td>5</td><td>KLM Royal Dutch Airlines</td><td>Netherlands</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>City</th><th>Country</th><th>Airport_Code</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hartsfield-Jackson Atlanta International Airport</td><td>Atlanta</td><td>USA</td><td>ATL</td></tr>
+<tr><td>2</td><td>Heathrow Airport</td><td>London</td><td>UK</td><td>LHR</td></tr>
+<tr><td>3</td><td>Dubai International Airport</td><td>Dubai</td><td>UAE</td><td>DXB</td></tr>
+<tr><td>4</td><td>Sydney Kingsford Smith Airport</td><td>Sydney</td><td>Australia</td><td>SYD</td></tr>
+<tr><td>5</td><td>Schiphol Airport</td><td>Amsterdam</td><td>Netherlands</td><td>AMS</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>OriginID</th><th>DestinationID</th><th>DepartureTime</th><th>ArrivalTime</th><th>SeatCapacity</th></tr>
+<tr><th></th><th>(&#8594; Airports.ID)</th><th>(&#8594; Airports.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>2023-06-01 08:00:00</td><td>2023-06-01 11:00:00</td><td>250</td></tr>
+<tr><td>2</td><td>3</td><td>4</td><td>2023-07-01 10:00:00</td><td>2023-07-01 13:00:00</td><td>300</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>2023-08-01 09:00:00</td><td>2023-08-01 12:00:00</td><td>220</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2023-09-01 07:00:00</td><td>2023-09-01 10:00:00</td><td>180</td></tr>
+<tr><td>5</td><td>2</td><td>1</td><td>2023-10-01 14:00:00</td><td>2023-10-01 17:00:00</td><td>190</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Airports_Services</span></h2><table><thead>
+<tr><th>ServiceType</th><th>Description</th><th>Date</th><th>AirportID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.ID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#990000">Lost Property</span></td><td>Assistance with lost items at the airport.</td><td><span style="color:#006600">2023-06-01</span></td><td>1</td></tr>
+<tr><td><span style="color:#990000">Customer Complaints</span></td><td>Addressing customer complaints and concerns.</td><td><span style="color:#006600">2023-06-01</span></td><td>2</td></tr>
+<tr><td>Information Desk</td><td>Providing information about airport facilities and services.</td><td>2023-07-01</td><td>3</td></tr>
+<tr><td>Security Checkpoint</td><td>Ensuring safety and security during travel.</td><td>2023-08-01</td><td>4</td></tr>
+<tr><td><span style="color:#990000">Lost Property</span></td><td>Assistance with lost items at the airport.</td><td>2023-09-01</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

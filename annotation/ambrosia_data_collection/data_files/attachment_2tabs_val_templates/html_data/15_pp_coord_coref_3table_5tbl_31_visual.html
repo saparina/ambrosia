@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Brown</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Johnson</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>William Wilson</td><td>william@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Events</span></h2><table><thead>
+<tr><th>eventId</th><th><span style="color:#1430b2">eventName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Turkey–Syria Earthquakes</span></td></tr>
+<tr><td>2</td><td>Climate Change Summit</td></tr>
+<tr><td>3</td><td>Political Crisis in Europe</td></tr>
+<tr><td>4</td><td>Technology Innovation Conference</td></tr>
+<tr><td>5</td><td>Global Health Forum</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Breaking_News</span></h2><table><thead>
+<tr><th>newsId</th><th>headline</th><th>content</th><th>authorId</th><th>eventId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Events.eventId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Earthquake Strikes Turkey and Syria</td><td>A powerful earthquake struck the border region between Turkey and Syria...</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>New Climate Change Report Released</td><td>The new climate change report highlights the urgent need for action...</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>European Political Crisis Intensifies</td><td>Tensions continue to rise as the political crisis in Europe deepens...</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>Groundbreaking Technology Unveiled</td><td>Researchers have unveiled a groundbreaking technology that could revolutionize...</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>Health Crisis Worsens Worldwide</td><td>The global health crisis continues to worsen, with cases skyrocketing...</td><td>5</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">News_Analysis</span></h2><table><thead>
+<tr><th>analysisId</th><th>title</th><th>content</th><th>authorId</th><th>eventId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Events.eventId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>In-Depth Analysis of Turkey–Syria Earthquakes</td><td>This article provides an in-depth analysis of the recent earthquakes...</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Examining the Impact of Climate Change on Global Economy</td><td>This article examines how climate change is affecting the global economy...</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>Analyzing the European Political Crisis</td><td>This piece delves into the factors contributing to the European political crisis...</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>Assessing Technological Advances in the Past Decade</td><td>This article assesses the technological advances made over the past decade...</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>Understanding the Global Health Inequalities</td><td>This article explores the underlying causes of global health inequalities...</td><td>5</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>sourceId</th><th>url</th><th>description</th><th>eventId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Events.eventId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>https://www.example.com/earthquake-news</td><td>Latest updates on the Turkey–Syria earthquakes.</td><td>1</td></tr>
+<tr><td>2</td><td>https://www.example.com/climate-change-summit</td><td>Live coverage of the Climate Change Summit.</td><td>3</td></tr>
+<tr><td>3</td><td>https://www.example.com/political-crisis-in-europe</td><td>Updates on the ongoing political crisis in Europe.</td><td>4</td></tr>
+<tr><td>4</td><td>https://www.example.com/technology-innovation-conference</td><td>Highlights from the Technology Innovation Conference.</td><td>5</td></tr>
+<tr><td>5</td><td>https://www.example.com/global-health-forum</td><td>Coverage of the Global Health Forum.</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Comments</h2><table><thead>
+<tr><th>commentId</th><th>text</th><th>authorId</th><th>postType</th></tr>
+<tr><th></th><th></th><th>(&#8594; Authors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great job covering the earthquake!</td><td>1</td><td>review</td></tr>
+<tr><td>2</td><td>Interesting take on the political crisis.</td><td>2</td><td>feedback</td></tr>
+<tr><td>3</td><td>Important discussion about climate change impacts.</td><td>3</td><td>feedback</td></tr>
+<tr><td>4</td><td>Well-researched and informative article.</td><td>4</td><td>review</td></tr>
+<tr><td>5</td><td>Valuable insights into global health issues.</td><td>5</td><td>review</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

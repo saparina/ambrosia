@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Country</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">USA</span></td></tr>
+<tr><td>2</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Central_Bank</span></h2><table><thead>
+<tr><th>id</th><th>central_bank_name</th><th>country_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Country.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Federal Reserve</td><td>1</td></tr>
+<tr><td>2</td><td>Bank of England</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Commercial_Bank</span></h2><table><thead>
+<tr><th>id</th><th>commercial_bank_name</th><th>country_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Country.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Citibank</td><td>1</td></tr>
+<tr><td>2</td><td>Barclays</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Account</h2><table><thead>
+<tr><th>id</th><th>account_number</th><th>balance</th><th>commercial_bank_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Commercial_Bank.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123456789</td><td>0</td><td>1</td></tr>
+<tr><td>2</td><td>987654321</td><td>0</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

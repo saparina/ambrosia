@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Banks</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Bank</td><td>New York</td></tr>
+<tr><td>2</td><td>XYZ Bank</td><td>California</td></tr>
+<tr><td>3</td><td>LMN Bank</td><td>Texas</td></tr>
+<tr><td>4</td><td>PQR Bank</td><td>Florida</td></tr>
+<tr><td>5</td><td>STU Bank</td><td>Illinois</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>bank_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Banks.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>3</td></tr>
+<tr><td>4</td><td>Emma</td><td>White</td><td>4</td></tr>
+<tr><td>5</td><td>Tom</td><td>Black</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>TrainingSessions</h2><table><thead>
+<tr><th>session_id</th><th>date</th><th>trainer_id</th><th>topic_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Employees.id)</th><th>(&#8594; Topics.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-10-01 09:00:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2021-10-08 09:00:00</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2021-10-15 09:00:00</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>2021-10-22 09:00:00</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>2021-10-29 09:00:00</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Topics</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Customer Service Skills</td></tr>
+<tr><td>2</td><td>Fraud Prevention</td></tr>
+<tr><td>3</td><td>Interest Rate Management</td></tr>
+<tr><td>4</td><td>Loan Processing</td></tr>
+<tr><td>5</td><td>Investment Strategies</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Bank_Training</span></h2><table><thead>
+<tr><th>training_id</th><th>bank_id</th><th>employee_id</th></tr>
+<tr><th></th><th>(&#8594; Banks.id)</th><th>(&#8594; Employees.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Bank_Training_Topics</h2><table><thead>
+<tr><th>bank_training_id</th><th>topic_id</th></tr>
+<tr><th>(&#8594; Bank_Training.training_id)</th><th>(&#8594; Topics.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Hotel</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Price</th><th>RoomType</th><th>NumberOfRooms</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Plaza</td><td><span style="color:#006600">50.0</span></td><td>Deluxe</td><td>100</td></tr>
+<tr><td>2</td><td>Parkside Inn</td><td>60.0</td><td>Standard</td><td>80</td></tr>
+<tr><td>3</td><td>Cozy Corner Motel</td><td>70.0</td><td>Economy</td><td>20</td></tr>
+<tr><td>4</td><td>Downtown Suites</td><td>90.0</td><td>Luxury</td><td>30</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Youth_hostel</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Price</th><th>BedsAvailable</th><th>Facilities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Backpackers Haven</td><td><span style="color:#006600">50.0</span></td><td>50</td><td>Kitchen, TV Lounge</td></tr>
+<tr><td>2</td><td>World Wanderer Hostel</td><td>60.0</td><td>30</td><td>Common Kitchen, Laundry</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservation</h2><table><thead>
+<tr><th>id</th><th>CheckIn</th><th>CheckOut</th><th>TotalAmount</th><th>PaymentMethod</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-08-10 14:00</td><td>2022-08-15 11:00</td><td>300.0</td><td>Credit Card</td></tr>
+<tr><td>2</td><td>2022-08-20 10:00</td><td>2022-08-25 16:00</td><td>400.0</td><td>PayPal</td></tr>
+<tr><td>3</td><td>2022-09-01 12:00</td><td>2022-09-06 09:00</td><td>250.0</td><td>Bank Transfer</td></tr>
+</tbody></table></div>
+
+<div><h2>Guest</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>PhoneNumber</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>+1234567890</td><td>johnsmith@email.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>+9876543210</td><td>janedoe@email.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

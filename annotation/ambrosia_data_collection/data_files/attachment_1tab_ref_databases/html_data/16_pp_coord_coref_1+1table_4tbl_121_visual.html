@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>ArrivalTime</th><th>Origin</th><th>Destination</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10:00:00</td><td>13:00:00</td><td>JFK</td><td>LAX</td></tr>
+<tr><td>2</td><td>14:00:00</td><td>17:00:00</td><td>ORD</td><td>ATL</td></tr>
+<tr><td>3</td><td>06:00:00</td><td>09:00:00</td><td>YYZ</td><td>YUL</td></tr>
+<tr><td>4</td><td>18:00:00</td><td>21:00:00</td><td>CDG</td><td>DUB</td></tr>
+<tr><td>5</td><td>09:00:00</td><td>12:00:00</td><td>PEK</td><td>HKG</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>AirportID</th><th>Name</th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John F. Kennedy International Airport</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>Chicago O'Hare International Airport</td><td>Chicago</td><td>USA</td></tr>
+<tr><td>3</td><td>Toronto Pearson International Airport</td><td>Toronto</td><td>Canada</td></tr>
+<tr><td>4</td><td>Charles de Gaulle Airport</td><td>Paris</td><td>France</td></tr>
+<tr><td>5</td><td>Hong Kong International Airport</td><td>Hong Kong</td><td>Hong Kong</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>AirlineID</th><th>Name</th><th>HeadquartersCity</th><th>HomeAirportId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.AirportID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>Fort Worth</td><td>1</td></tr>
+<tr><td>2</td><td>United Airlines</td><td>Chicago</td><td>2</td></tr>
+<tr><td>3</td><td>Air Canada</td><td>Montreal</td><td>None</td></tr>
+<tr><td>4</td><td>Air France</td><td>Tremblay-en-France</td><td>4</td></tr>
+<tr><td>5</td><td>Cathay Pacific</td><td>Hong Kong</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>SpecialNeeds</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>1990-01-15</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>1985-02-20</td><td>0</td></tr>
+<tr><td>3</td><td>Carol</td><td>Williams</td><td>1992-03-25</td><td>0</td></tr>
+<tr><td>4</td><td>David</td><td>Brown</td><td>1988-04-05</td><td>1</td></tr>
+<tr><td>5</td><td>Eva</td><td>Miller</td><td>1994-05-10</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Assistants</span></h2><table><thead>
+<tr><th>AssistantID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Claire Allen</span></td></tr>
+<tr><td>2</td><td>Emma Thompson</td></tr>
+<tr><td>3</td><td>Jack Williams</td></tr>
+<tr><td>4</td><td>Lucy Jones</td></tr>
+<tr><td>5</td><td>Michael Johnson</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">PassengerAssistanceRequests</span></h2><table><thead>
+<tr><th>RequestID</th><th>PassengerID</th><th>AssistantID</th><th><span style="color:#990000"><span style="color:#990000">Type</span></span></th></tr>
+<tr><th></th><th>(&#8594; Passengers.PassengerID)</th><th>(&#8594; Assistants.AssistantID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td><span style="color:#990000">Unaccompanied Minor</span></td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td><span style="color:#990000">Unaccompanied Minor</span></td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td><span style="color:#990000">Special Needs</span></td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td><span style="color:#990000">Special Needs</span></td></tr>
+<tr><td>5</td><td>5</td><td>4</td><td>General Assistance</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

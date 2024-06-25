@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Laboratory</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Central Lab</td><td><address_of_central_lab></td></tr>
+<tr><td>2</td><td>South Lab</td><td><address_of_south_lab></td></tr>
+<tr><td>3</td><td>East Lab</td><td><address_of_east_lab></td></tr>
+<tr><td>4</td><td>West Lab</td><td><address_of_west_lab></td></tr>
+<tr><td>5</td><td>North Lab</td><td><address_of_north_lab></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Equipment</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">type</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Microscope</td><td><description_for_microscope></td></tr>
+<tr><td>2</td><td>CT Scanner</td><td><description_for_ct_scanner></td></tr>
+<tr><td>3</td><td>MRI Machine</td><td><description_for_mri_machine></td></tr>
+<tr><td>4</td><td>X-Ray Machine</td><td><description_for_xray_machine></td></tr>
+<tr><td>5</td><td>Ultrasound</td><td><description_for_ultrasound></td></tr>
+</tbody></table></div>
+
+<div><h2>Laboratory_Equipment</h2><table><thead>
+<tr><th>laboratory_id</th><th>equipment_type_id</th></tr>
+<tr><th>(&#8594; Laboratory.id)</th><th>(&#8594; Equipment.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>specialization</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Smith</td><td>Cardiology</td></tr>
+<tr><td>2</td><td>Dr. Johnson</td><td>Neurology</td></tr>
+<tr><td>3</td><td>Dr. Brown</td><td>Pediatrics</td></tr>
+<tr><td>4</td><td>Dr. Davis</td><td>Gastroenterology</td></tr>
+<tr><td>5</td><td>Dr. Garcia</td><td>Orthopedics</td></tr>
+</tbody></table></div>
+
+<div><h2>Patients</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>M</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>F</td></tr>
+<tr><td>3</td><td>Tom Johnson</td><td>45</td><td>M</td></tr>
+<tr><td>4</td><td>Emily Williams</td><td>35</td><td>F</td></tr>
+<tr><td>5</td><td>Robert Davis</td><td>60</td><td>M</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>appointment_id</th><th>doctor_id</th><th>patient_id</th><th>date</th><th>time</th></tr>
+<tr><th></th><th>(&#8594; Doctors.id)</th><th>(&#8594; Patients.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-09-01</td><td>10:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-09-02</td><td>11:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-09-03</td><td>14:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-09-04</td><td>15:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-09-05</td><td>09:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

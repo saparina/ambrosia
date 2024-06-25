@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Housekeeping</span></h2><table><thead>
+<tr><th>id</th><th>housekeeper</th><th>hotel</th><th>shift_start</th><th>shift_end</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#006600">The Grand Hotel</span></td><td>2024-03-13 17:44:11</td><td>None</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Ritz Carlton</td><td>2024-03-13 17:44:11</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">LaundryService</span></h2><table><thead>
+<tr><th>id</th><th>laundry_attendant</th><th>hotel</th><th>shift_start</th><th>shift_end</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mary Johnson</td><td><span style="color:#006600">The Grand Hotel</span></td><td>2024-03-13 17:44:11</td><td>None</td></tr>
+<tr><td>2</td><td>Tom Brown</td><td>Four Seasons</td><td>2024-03-13 17:44:11</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>GuestRooms</h2><table><thead>
+<tr><th>room_id</th><th>hotel_name</th><th>room_number</th><th>capacity</th><th>amenities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Grand Hotel</td><td>101</td><td>2</td><td>TV, Mini Fridge, Air Conditioner</td></tr>
+<tr><td>2</td><td>Ritz Carlton</td><td>301</td><td>3</td><td>TV, Mini Fridge, Air Conditioner, Balcony</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>reservation_id</th><th>guest_name</th><th>email</th><th>phone_number</th><th>checkin_date</th><th>checkout_date</th><th>room_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; GuestRooms.room_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Jones</td><td>alice@example.com</td><td>+1 9876543210</td><td>2023-01-01</td><td>2023-01-05</td><td>1</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>bob@example.com</td><td>+1 5556667777</td><td>2023-02-01</td><td>2023-02-05</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>MaintenanceRequests</h2><table><thead>
+<tr><th>request_id</th><th>description</th><th>requested_at</th><th>resolved_at</th><th>status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leaky faucet in Room 101</td><td>2024-03-13 17:44:11</td><td>None</td><td>Pending</td></tr>
+<tr><td>2</td><td>Broken air conditioner in Room 301</td><td>2024-03-13 17:44:11</td><td>2023-01-02</td><td>Resolved</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

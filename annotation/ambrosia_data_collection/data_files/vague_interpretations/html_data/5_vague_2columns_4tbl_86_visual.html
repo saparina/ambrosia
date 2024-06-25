@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Degrees</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">degree_level</span></th><th><span style="color:#990000">certification</span></th><th>job_post</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bachelor</td><td>CS101 Certification</td><td>Software Developer</td></tr>
+<tr><td>2</td><td>Masters</td><td>Data Science Specialization</td><td>Data Analyst</td></tr>
+<tr><td>3</td><td>PhD</td><td></td><td>Research Scientist</td></tr>
+<tr><td>4</td><td>Associate</td><td>Networking Fundamentals</td><td>Network Engineer</td></tr>
+<tr><td>5</td><td>Doctorate</td><td>Machine Learning Engineering</td><td>AI Researcher</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>company_name</th><th>location</th><th>industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>New York</td><td>Technology</td></tr>
+<tr><td>2</td><td>FinanceInc.</td><td>Los Angeles</td><td>Banking</td></tr>
+<tr><td>3</td><td>HealthCare</td><td>Chicago</td><td>Healthcare</td></tr>
+<tr><td>4</td><td>GreenEnergy</td><td>San Francisco</td><td>Renewable Energy</td></tr>
+<tr><td>5</td><td>LogisticsCo</td><td>Houston</td><td>Transportation</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>applicant_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>+123-456-7890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>+098-765-4321</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>alicebrown@example.com</td><td>+456-789-0123</td></tr>
+<tr><td>4</td><td>Bob Johnson</td><td>bobjohnson@example.com</td><td>+789-456-1230</td></tr>
+<tr><td>5</td><td>Carol White</td><td>carolwhite@example.com</td><td>+123-098-7654</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th><th>posted_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td><td>Design and develop software applications.</td><td>80000.0</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data to provide insights and support decision making.</td><td>60000.0</td><td>2021-01-02</td></tr>
+<tr><td>3</td><td>Research Scientist</td><td>Conduct research on cutting edge technologies.</td><td>100000.0</td><td>2021-01-03</td></tr>
+<tr><td>4</td><td>Network Engineer</td><td>Install, configure, and maintain computer networks.</td><td>70000.0</td><td>2021-01-04</td></tr>
+<tr><td>5</td><td>AI Researcher</td><td>Develop AI algorithms and models.</td><td>90000.0</td><td>2021-01-05</td></tr>
+</tbody></table></div>
+
+<div><h2>CompanyJobs</h2><table><thead>
+<tr><th>company_id</th><th>job_id</th></tr>
+<tr><th>(&#8594; Companies.id)</th><th>(&#8594; Jobs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>application_id</th><th>applicant_id</th><th>job_id</th><th>status</th><th>submission_date</th></tr>
+<tr><th></th><th>(&#8594; Applicants.id)</th><th>(&#8594; Jobs.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Pending</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Rejected</td><td>2021-01-02</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>Interview Scheduled</td><td>2021-01-03</td></tr>
+<tr><td>4</td><td>3</td><td>4</td><td>Offered</td><td>2021-01-04</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>Accepted</td><td>2021-01-05</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

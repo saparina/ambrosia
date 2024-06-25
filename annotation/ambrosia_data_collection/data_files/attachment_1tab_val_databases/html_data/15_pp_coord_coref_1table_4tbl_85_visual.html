@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1970-06-15</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1980-02-20</td></tr>
+</tbody></table></div>
+
+<div><h2>ScriptWriters</h2><table><thead>
+<tr><th>WriterID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Johnson</td><td>1965-08-18</td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>1990-03-24</td></tr>
+</tbody></table></div>
+
+<div><h2>Editors</h2><table><thead>
+<tr><th>EditorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mark Brown</td><td>1985-01-01</td></tr>
+<tr><td>2</td><td>Lisa Green</td><td>1995-05-15</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Movies</span></h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>ReleaseYear</th><th>ProductionRole</th><th>Deadline</th><th>DirectorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Great Escape</td><td>2000</td><td><span style="color:#990000">Scriptwriter</span></td><td><span style="color:#006600">21.04.03</span></td><td>1</td></tr>
+<tr><td>2</td><td>Inception</td><td>2010</td><td><span style="color:#990000">Scriptwriter</span></td><td><span style="color:#006600">21.04.03</span></td><td>2</td></tr>
+<tr><td>3</td><td>Avatar</td><td>2009</td><td><span style="color:#990000">Scriptwriter</span></td><td>22.04.03</td><td>1</td></tr>
+<tr><td>4</td><td>Fight Club</td><td>1999</td><td><span style="color:#990000">Editor</span></td><td><span style="color:#006600">21.04.03</span></td><td>2</td></tr>
+<tr><td>5</td><td>Pulp Fiction</td><td>1994</td><td><span style="color:#990000">Editor</span></td><td>22.04.03</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

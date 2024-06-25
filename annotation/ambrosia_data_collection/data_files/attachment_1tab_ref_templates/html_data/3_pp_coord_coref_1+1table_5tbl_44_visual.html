@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>Director_ID</th><th>Name</th><th>Birthdate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane Smith</td><td>1975-05-15</td><td>American</td></tr>
+<tr><td>2</td><td>Alan Brown</td><td>1982-02-28</td><td>British</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>Movie_ID</th><th>Title</th><th>ReleaseDate</th><th>Genre</th><th>BoxOffice</th><th>Director_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Directors.Director_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action Movie</td><td>2020-10-01</td><td>Action</td><td>100000000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Drama Film</td><td>2019-05-15</td><td>Drama</td><td>80000000.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>Actor_ID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Height</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chris Johnson</td><td>Johnson</td><td>1990-01-10</td><td>185.3</td></tr>
+<tr><td>2</td><td>Emma Williams</td><td>Williams</td><td>1992-08-05</td><td>168.2</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>Role_ID</th><th>CharacterName</th><th>Movie_ID</th><th>Actor_ID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Movies.Movie_ID)</th><th>(&#8594; Actors.Actor_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hero</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Villain</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Episodes</span></h2><table><thead>
+<tr><th>Episode_ID</th><th>SeasonNumber</th><th>EpisodeTitle</th><th><span style="color:#1430b2">EpisodeLength</span></th><th>AirDate</th><th>Crew_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Crews.Crew_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Pilot Episode</td><td><span style="color:#1430b2">01:00:00</span></td><td>2021-09-15</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>Second Episode</td><td>00:45:00</td><td>2021-09-22</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Crew</span></h2><table><thead>
+<tr><th>Crew_ID</th><th><span style="color:#186e16">Position</span></th><th>Name</th><th>Experience</th><th>Episode_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Episodes.Episode_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Director</span></td><td>David Miller</td><td>10 years</td><td>1</td></tr>
+<tr><td>2</td><td>Editor</td><td>Samantha Taylor</td><td>8 years</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#186e16">Director</span></td><td>Lisa Thompson</td><td>7 years</td><td>2</td></tr>
+<tr><td>4</td><td>Editor</td><td>Robert Harris</td><td>6 years</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

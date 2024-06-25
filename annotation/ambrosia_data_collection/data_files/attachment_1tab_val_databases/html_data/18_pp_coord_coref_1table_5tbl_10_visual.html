@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Technology</span></h2><table><thead>
+<tr><th>id</th><th>Banking_Technology</th><th>Capabilities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">ATM</span></td><td>Contactless Transaction</td></tr>
+<tr><td>2</td><td><span style="color:#990000">ATM</span></td><td><span style="color:#006600">Card Swipe Only</span></td></tr>
+<tr><td>3</td><td><span style="color:#990000">Point of Sale Terminal</span></td><td>Contactless Transaction</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Point of Sale Terminal</span></td><td><span style="color:#006600">Card Swipe Only</span></td></tr>
+<tr><td>5</td><td>Mobile App</td><td>Payment Processing</td></tr>
+<tr><td>6</td><td>Online Banking</td><td>Transfer Funds</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>PhoneNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td><td>+1234567890</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-02-02</td><td>+9876543210</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>1995-03-03</td><td>+1111111111</td><td>alice.brown@example.com</td></tr>
+<tr><td>4</td><td>Charlie</td><td>Black</td><td>1985-04-04</td><td>+2222222222</td><td>charlie.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>id</th><th>CustomerID</th><th>Balance</th><th>OpenDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td><td>2020-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>500.0</td><td>2021-02-02</td></tr>
+<tr><td>3</td><td>3</td><td>3000.0</td><td>2019-03-03</td></tr>
+<tr><td>4</td><td>4</td><td>2000.0</td><td>2022-04-04</td></tr>
+</tbody></table></div>
+
+<div><h2>ATMs</h2><table><thead>
+<tr><th>id</th><th>TechnologyId</th><th>Location</th><th>CreatedAt</th></tr>
+<tr><th></th><th>(&#8594; Technology.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Main Street</td><td>2020-01-01T10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>Market Square</td><td>2021-02-02T11:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>Park Avenue</td><td>2019-03-03T12:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>River Side</td><td>2022-04-04T13:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>POS_Terminals</h2><table><thead>
+<tr><th>id</th><th>TechnologyId</th><th>StoreLocation</th><th>CreatedAt</th></tr>
+<tr><th></th><th>(&#8594; Technology.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Grocery Shop</td><td>2020-01-01T14:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>Electronics Store</td><td>2021-02-02T15:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>Clothing Boutique</td><td>2019-03-03T16:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>Bookstore</td><td>2022-04-04T17:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

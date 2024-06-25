@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Construction_Companies</span></h2><table><thead>
+<tr><th>id</th><th>company_name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>New York</td></tr>
+<tr><td>2</td><td>Company B</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Company C</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Company D</td><td>Houston</td></tr>
+<tr><td>5</td><td>Company E</td><td>Miami</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Projects</span></h2><table><thead>
+<tr><th>id</th><th>project_type</th><th><span style="color:#990000">start_date</span></th><th>end_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Foundation</td><td>2023-01-01</td><td>2023-06-01</td></tr>
+<tr><td>2</td><td>Residential</td><td>2023-07-01</td><td>2023-12-01</td></tr>
+<tr><td>3</td><td>Commercial</td><td>2024-01-01</td><td>2024-12-01</td></tr>
+<tr><td>4</td><td>Industrial</td><td>2025-01-01</td><td>2025-12-01</td></tr>
+<tr><td>5</td><td>Infrastructure</td><td>2026-01-01</td><td>2026-12-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Construction_Companies_Projects</h2><table><thead>
+<tr><th>construction_company_id</th><th>project_id</th></tr>
+<tr><th>(&#8594; Construction_Companies.id)</th><th>(&#8594; Projects.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>House_Sizes</h2><table><thead>
+<tr><th>house_size_id</th><th>size_in_sqft</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1500</td><td>200</td></tr>
+<tr><td>2</td><td>2000</td><td>250</td></tr>
+<tr><td>3</td><td>2500</td><td>300</td></tr>
+<tr><td>4</td><td>3000</td><td>350</td></tr>
+<tr><td>5</td><td>3500</td><td>400</td></tr>
+</tbody></table></div>
+
+<div><h2>Material_Types</h2><table><thead>
+<tr><th>material_type_id</th><th>type_of_material</th><th>cost_per_unit</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concrete</td><td>50.0</td></tr>
+<tr><td>2</td><td>Steel</td><td>80.0</td></tr>
+<tr><td>3</td><td>Wood</td><td>40.0</td></tr>
+<tr><td>4</td><td>Aluminum</td><td>90.0</td></tr>
+<tr><td>5</td><td>Glass</td><td>70.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

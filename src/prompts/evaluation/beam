@@ -1,0 +1,9 @@
+The task is to write SQL queries based on the provided questions in English. Questions can take the form of an instruction or command. Do not include any explanations, and do not select extra columns beyond those requested in the question.
+
+Given the following SQLite database schema:
+
+SQL_DATABASE_DUMP
+
+Answer the following:
+QUESTION
+

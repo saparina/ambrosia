@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Deadlines</h2><table><thead>
+<tr><th>month</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>10</td><td>2023</td></tr>
+<tr><td>9</td><td>2024</td></tr>
+<tr><td>8</td><td>2023</td></tr>
+<tr><td>11</td><td>2024</td></tr>
+<tr><td>5</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Programs</h2><table><thead>
+<tr><th>programId</th><th>name</th><th><span style="color:#990000">Application_Deadline</span></th></tr>
+<tr><th></th><th></th><th>(&#8594; Deadlines.month)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>10</td></tr>
+<tr><td>2</td><td>Mechanical Engineering</td><td>9</td></tr>
+<tr><td>3</td><td>Civil Engineering</td><td>8</td></tr>
+<tr><td>4</td><td>Electrical Engineering</td><td>11</td></tr>
+<tr><td>5</td><td>Biomedical Engineering</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

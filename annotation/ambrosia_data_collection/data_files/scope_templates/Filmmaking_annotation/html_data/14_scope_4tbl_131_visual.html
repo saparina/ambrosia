@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Costume_Designers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>1960-07-23</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>1980-09-15</td></tr>
+<tr><td>3</td><td>Michael Brown</td><td>1990-11-30</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>1995-02-22</td></tr>
+<tr><td>5</td><td>David Johnson</td><td>1970-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Eras</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">era_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Victorian Era</td></tr>
+<tr><td>2</td><td>Modern Era</td></tr>
+<tr><td>3</td><td>Renaissance</td></tr>
+<tr><td>4</td><td>Baroque</td></tr>
+<tr><td>5</td><td>Gothic</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Projects</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>director</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film A</td><td>2000</td><td>Alice Cooper</td></tr>
+<tr><td>2</td><td>Film B</td><td>2005</td><td>Bob Evans</td></tr>
+<tr><td>3</td><td>Film C</td><td>2010</td><td>Carol King</td></tr>
+<tr><td>4</td><td>Film D</td><td>2015</td><td>Dave Lee</td></tr>
+<tr><td>5</td><td>Film E</td><td>2020</td><td>Edward Wright</td></tr>
+</tbody></table></div>
+
+<div><h2>Films_and_Directors</h2><table><thead>
+<tr><th>film_id</th><th>director_id</th></tr>
+<tr><th>(&#8594; Film_Projects.id)</th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alex</td><td>Adams</td></tr>
+<tr><td>2</td><td>Ben</td><td>Blake</td></tr>
+<tr><td>3</td><td>Chris</td><td>Cooper</td></tr>
+<tr><td>4</td><td>Daniel</td><td>Dean</td></tr>
+<tr><td>5</td><td>Ethan</td><td>Edwards</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>role_id</th><th>actor_id</th><th>character_name</th></tr>
+<tr><th></th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Role A</td></tr>
+<tr><td>2</td><td>2</td><td>Role B</td></tr>
+<tr><td>3</td><td>3</td><td>Role C</td></tr>
+<tr><td>4</td><td>4</td><td>Role D</td></tr>
+<tr><td>5</td><td>5</td><td>Role E</td></tr>
+</tbody></table></div>
+
+<div><h2>Films_and_Actors</h2><table><thead>
+<tr><th>film_id</th><th>actor_id</th></tr>
+<tr><th>(&#8594; Film_Projects.id)</th><th>(&#8594; Actors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mark</td><td>Wood</td></tr>
+<tr><td>2</td><td>Nick</td><td>Hopkins</td></tr>
+<tr><td>3</td><td>Samantha</td><td>Green</td></tr>
+<tr><td>4</td><td>Tommy</td><td>Carter</td></tr>
+<tr><td>5</td><td>Paul</td><td>Evans</td></tr>
+</tbody></table></div>
+
+<div><h2>Costume_Designers_Eras</h2><table><thead>
+<tr><th>costume_designer_id</th><th>eras_id</th></tr>
+<tr><th>(&#8594; Costume_Designers.id)</th><th>(&#8594; Eras.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

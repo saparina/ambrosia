@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Authorities</span></h2><table><thead>
+<tr><th>authority_id</th><th>name</th><th>contact_info</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Authority A</td><td>contact@authoritya.com</td></tr>
+<tr><td>2</td><td>Authority B</td><td>contact@authorityb.com</td></tr>
+<tr><td>3</td><td>Authority C</td><td>contact@authorityc.com</td></tr>
+<tr><td>4</td><td>Authority D</td><td>contact@authorityd.com</td></tr>
+<tr><td>5</td><td>Authority E</td><td>contact@authoritye.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Programs</span></h2><table><thead>
+<tr><th>program_id</th><th>program_name</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Public_Housing</td><td>A government-subsidized housing program.</td></tr>
+<tr><td>2</td><td>Affordable_Housing</td><td>Low-cost housing options for low-income families.</td></tr>
+<tr><td>3</td><td>Rental_Assistance</td><td>Financial assistance for rent payments.</td></tr>
+<tr><td>4</td><td>Homeownership_Incentives</td><td>Grants and loans for first-time home buyers.</td></tr>
+<tr><td>5</td><td>Emergency_Housing</td><td>Temporary housing solutions for those facing homelessness.</td></tr>
+</tbody></table></div>
+
+<div><h2>Authorities_Programs</h2><table><thead>
+<tr><th>id</th><th>authority_id</th><th>program_id</th></tr>
+<tr><th></th><th>(&#8594; Authorities.authority_id)</th><th>(&#8594; Programs.program_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

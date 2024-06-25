@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-06-30</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1975-10-01</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>Address</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Publishing</td><td>123 Main St.</td><td>555-1234</td></tr>
+<tr><td>2</td><td>XYZ Books</td><td>456 Elm St.</td><td>555-5678</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Literatures</span></h2><table><thead>
+<tr><th>LitID</th><th>Title</th><th>Synopsis</th><th>Language</th><th>PublicationYear</th><th>LiteratureType</th><th>AuthorID</th><th>PublisherID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th><th>(&#8594; Publishers.PublisherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The <span style="color:#006600">Italian</span> <span style="color:#990000">Novel</span></td><td>A story about an <span style="color:#006600">Italian</span> adventure</td><td><span style="color:#006600">Italian</span></td><td>2010</td><td><span style="color:#990000">Novel</span></td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>The Spanish <span style="color:#990000">Novel</span></td><td>A tale of love and mystery</td><td>Spanish</td><td>2012</td><td><span style="color:#990000">Novel</span></td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>La Poesia <span style="color:#006600">Italian</span>a</td><td>An anthology of <span style="color:#006600">Italian</span> poetry</td><td><span style="color:#006600">Italian</span></td><td>2008</td><td><span style="color:#990000">Poem</span></td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>El Pueblo Español</td><td>A collection of poems about Spain</td><td>Spanish</td><td>2011</td><td><span style="color:#990000">Poem</span></td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

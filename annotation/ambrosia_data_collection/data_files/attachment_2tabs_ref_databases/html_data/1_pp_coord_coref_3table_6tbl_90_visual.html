@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Action</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td></tr>
+<tr><td>2</td><td>Bob Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Show</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>genre_id</th><th>director_id</th><th><span style="color:#006600">number_of_episodes</span></th></tr>
+<tr><th></th><th></th><th>(&#8594; Genre.id)</th><th>(&#8594; Director.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Show1</td><td>1</td><td>2</td><td><span style="color:#006600">8</span></td></tr>
+<tr><td>2</td><td>Show2</td><td>3</td><td>1</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Documentary_Series</span></h2><table><thead>
+<tr><th>id</th><th>show_id</th><th>documentary_title</th><th>description</th></tr>
+<tr><th></th><th>(&#8594; Show.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Doc1</td><td>A fascinating look at...</td></tr>
+<tr><td>2</td><td>2</td><td>Doc2</td><td>An insightful exploration of...</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Mini_series</span></h2><table><thead>
+<tr><th>id</th><th>show_id</th><th>series_title</th><th>description</th></tr>
+<tr><th></th><th>(&#8594; Show.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Mini1</td><td>Exciting storyline and great acting!</td></tr>
+<tr><td>2</td><td>2</td><td>Mini2</td><td>Intriguing plot that keeps you hooked.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

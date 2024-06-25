@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td></tr>
+<tr><td>5</td><td>David</td><td>Green</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>departmentID</th><th>name</th><th>head</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td><td>Dr. Johnson</td></tr>
+<tr><td>2</td><td>Physics</td><td>Prof. Williams</td></tr>
+<tr><td>3</td><td>Biology</td><td>Dr. Martinez</td></tr>
+<tr><td>4</td><td>Computer Science</td><td>Dr. Lee</td></tr>
+<tr><td>5</td><td>History</td><td>Prof. Clark</td></tr>
+</tbody></table></div>
+
+<div><h2>Professors</h2><table><thead>
+<tr><th>professorID</th><th>firstName</th><th>lastName</th><th>departmentID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Departments.departmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Johnson</td><td>1</td></tr>
+<tr><td>2</td><td>Prof.</td><td>Williams</td><td>2</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Martinez</td><td>3</td></tr>
+<tr><td>4</td><td>Dr.</td><td>Lee</td><td>4</td></tr>
+<tr><td>5</td><td>Prof.</td><td>Clark</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Courses</span></h2><table><thead>
+<tr><th>courseID</th><th>title</th><th>credits</th><th>professorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Professors.professorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Calculus I</td><td>4</td><td>1</td></tr>
+<tr><td>2</td><td>General Physics</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>Introduction to Biology</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Discrete Mathematics</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>World History</td><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Assignments</span></h2><table><thead>
+<tr><th>assignmentID</th><th>type</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Homework</td><td>Weekly homework assignments</td></tr>
+<tr><td>2</td><td>Quiz</td><td>Weekly quizzes</td></tr>
+<tr><td>3</td><td>Project</td><td>Group project</td></tr>
+<tr><td>4</td><td>Essay</td><td>Research essay</td></tr>
+<tr><td>5</td><td>Exam</td><td>Final exam</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollmentID</th><th>studentID</th><th>courseID</th><th>grade</th></tr>
+<tr><th></th><th>(&#8594; Students.studentID)</th><th>(&#8594; Courses.courseID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>None</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>None</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>None</td></tr>
+<tr><td>5</td><td>5</td><td>3</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses_Assignments</h2><table><thead>
+<tr><th>coursesAssignmentID</th><th>courseID</th><th>assignmentID</th></tr>
+<tr><th></th><th>(&#8594; Courses.courseID)</th><th>(&#8594; Assignments.assignmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>3</td><td>5</td></tr>
+<tr><td>6</td><td>1</td><td>3</td></tr>
+<tr><td>7</td><td>3</td><td>3</td></tr>
+<tr><td>8</td><td>4</td><td>3</td></tr>
+<tr><td>9</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

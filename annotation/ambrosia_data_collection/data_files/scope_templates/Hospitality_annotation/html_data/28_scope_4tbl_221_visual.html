@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Theme_Parks</span></h2><table><thead>
+<tr><th>park_id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>FunLand</td><td>New York</td></tr>
+<tr><td>2</td><td>ThrillZone</td><td>California</td></tr>
+<tr><td>3</td><td>AdventureWorld</td><td>Florida</td></tr>
+<tr><td>4</td><td>Wonderland</td><td>Texas</td></tr>
+<tr><td>5</td><td>AmusementCentral</td><td>Illinois</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Attractions</span></h2><table><thead>
+<tr><th>attraction_id</th><th><span style="color:#990000">type</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Roller Coaster</td><td>A thrilling high-speed ride.</td></tr>
+<tr><td>2</td><td>Ferris Wheel</td><td>An observation wheel that gives riders a panoramic view of the surroundings.</td></tr>
+<tr><td>3</td><td>Bumper Cars</td><td>Cars mounted on rotating platforms so they can bump into one another.</td></tr>
+<tr><td>4</td><td>Carousel</td><td>A merry-go-round featuring various animals for riders to sit on.</td></tr>
+<tr><td>5</td><td>Haunted House</td><td>A themed dark ride intended to scare passengers.</td></tr>
+</tbody></table></div>
+
+<div><h2>Theme_Parks_Attractions</h2><table><thead>
+<tr><th>theme_park_id</th><th>attraction_id</th></tr>
+<tr><th>(&#8594; Theme_Parks.park_id)</th><th>(&#8594; Attractions.attraction_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

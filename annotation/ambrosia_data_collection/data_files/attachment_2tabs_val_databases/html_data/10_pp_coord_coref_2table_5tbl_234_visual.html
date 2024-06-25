@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Magicians</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Street_Location</th><th>MagicType</th><th>YearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harry Houdini</td><td><span style="color:#006600">Times Square, New York</span></td><td>Escape Artist</td><td>10</td></tr>
+<tr><td>2</td><td>David Copperfield</td><td>Las Vegas</td><td>Illusionist</td><td>38</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Mimes</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Street_Location</th><th>StyleOfMiming</th><th>PerformanceDuration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Marcel Marceau</td><td><span style="color:#006600">Times Square, New York</span></td><td>Classic</td><td>20</td></tr>
+<tr><td>2</td><td>Whitey McConnell</td><td>Boston</td><td>Character Miming</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Shows</h2><table><thead>
+<tr><th>id</th><th>ShowName</th><th>StartTime</th><th>EndTime</th><th>LocationID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Venues.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Illusionists</td><td>2022-07-15 19:00:00</td><td>2022-07-15 21:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Cirque du Soleil</td><td>2022-07-16 19:00:00</td><td>2022-07-16 21:00:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Venues</h2><table><thead>
+<tr><th>id</th><th>VenueName</th><th>Address</th><th>City</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Madison Square Garden</td><td>New York, NY</td><td>New York</td><td>20000</td></tr>
+<tr><td>2</td><td>Radio City Music Hall</td><td>New York, NY</td><td>New York</td><td>6000</td></tr>
+</tbody></table></div>
+
+<div><h2>Performers</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Age</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Columbus</td><td>35</td><td>Juggling</td></tr>
+<tr><td>2</td><td>Carlos</td><td>Leon</td><td>28</td><td>Fire Eating</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

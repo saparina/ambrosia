@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Gate_Agents</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Language</th><th>YearsOfExperience</th><th>LicenseNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Juan</td><td><span style="color:#006600">Spanish</span></td><td>8</td><td>A0923</td></tr>
+<tr><td>2</td><td>Emily</td><td>English</td><td>7</td><td>B1263</td></tr>
+<tr><td>3</td><td>Michael</td><td>French</td><td>6</td><td>C3456</td></tr>
+<tr><td>4</td><td>Olivia</td><td>German</td><td>5</td><td>D5678</td></tr>
+<tr><td>5</td><td>Liam</td><td>Italian</td><td>4</td><td>E7890</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Pilots</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Language</th><th>FlightHours</th><th>LicenseNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alberto</td><td><span style="color:#006600">Spanish</span></td><td>2000</td><td>F0011</td></tr>
+<tr><td>2</td><td>David</td><td>English</td><td>1800</td><td>G0022</td></tr>
+<tr><td>3</td><td>Isabelle</td><td>French</td><td>1600</td><td>H0033</td></tr>
+<tr><td>4</td><td>Leo</td><td>German</td><td>1400</td><td>I0044</td></tr>
+<tr><td>5</td><td>Milan</td><td>Italian</td><td>1200</td><td>J0055</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Code</th><th>Headquarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>AA</td><td>Fort Worth, Texas</td></tr>
+<tr><td>2</td><td>United Airlines</td><td>UA</td><td>Chicago, Illinois</td></tr>
+<tr><td>3</td><td>Delta Airlines</td><td>DL</td><td>Atlanta, Georgia</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>WN</td><td>Dallas, Texas</td></tr>
+<tr><td>5</td><td>Spirit Airlines</td><td>NK</td><td>Miramar, Florida</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>ID</th><th>AirlineID</th><th>DepartureTime</th><th>ArrivalTime</th><th>DestinationAirport</th></tr>
+<tr><th></th><th>(&#8594; Airlines.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-04-01 10:00:00</td><td>2023-04-01 12:00:00</td><td>New York JFK</td></tr>
+<tr><td>2</td><td>2</td><td>2023-04-01 11:00:00</td><td>2023-04-01 13:00:00</td><td>Los Angeles LAX</td></tr>
+<tr><td>3</td><td>3</td><td>2023-04-01 12:00:00</td><td>2023-04-01 14:00:00</td><td>Atlanta Hartsfield-Jackson</td></tr>
+<tr><td>4</td><td>4</td><td>2023-04-01 13:00:00</td><td>2023-04-01 15:00:00</td><td>Dallas Love Field</td></tr>
+<tr><td>5</td><td>5</td><td>2023-04-01 14:00:00</td><td>2023-04-01 16:00:00</td><td>Fort Lauderdale Hollywood</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>30</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>25</td><td>UK</td></tr>
+<tr><td>3</td><td>Tom</td><td>Brown</td><td>40</td><td>Canada</td></tr>
+<tr><td>4</td><td>Anna</td><td>White</td><td>35</td><td>Australia</td></tr>
+<tr><td>5</td><td>Paul</td><td>Green</td><td>45</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>Baggage</h2><table><thead>
+<tr><th>ID</th><th>FlightID</th><th>OwnerID</th><th>Weight</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Flights.ID)</th><th>(&#8594; Passengers.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>10</td><td>Laptop bag</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>15</td><td>Skis case</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>20</td><td>Golf clubs</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>25</td><td>Musical instruments</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>30</td><td>Stroller</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

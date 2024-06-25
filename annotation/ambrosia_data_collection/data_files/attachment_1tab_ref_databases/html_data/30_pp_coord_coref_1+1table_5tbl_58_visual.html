@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td></tr>
+<tr><td>2</td><td>Software Inc.</td></tr>
+<tr><td>3</td><td>Data Solutions Ltd.</td></tr>
+<tr><td>4</td><td>AI Developers</td></tr>
+<tr><td>5</td><td>Network Services Co.</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>location</th><th>salary</th><th>company_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Developing software applications.</td><td>New York</td><td>80000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyzing data to support decision making.</td><td>Los Angeles</td><td>70000.0</td><td>2</td></tr>
+<tr><td>3</td><td>UI/UX Designer</td><td>Designing user interfaces and experiences.</td><td>Chicago</td><td>60000.0</td><td>3</td></tr>
+<tr><td>4</td><td>Network Administrator</td><td>Managing computer networks.</td><td>San Francisco</td><td>75000.0</td><td>4</td></tr>
+<tr><td>5</td><td>Project Manager</td><td>Coordinating project activities and resources.</td><td>Boston</td><td>90000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone</th><th>application_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>+1234567890</td><td>2024-03-13 13:29:19</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td><td>+0987654321</td><td>2024-03-13 13:29:19</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>alicewonderland@email.com</td><td>+1122334455</td><td>2024-03-13 13:29:19</td></tr>
+<tr><td>4</td><td>Bob</td><td>Builder</td><td>bobbuilder@email.com</td><td>+2233445566</td><td>2024-03-13 13:29:19</td></tr>
+<tr><td>5</td><td>Carol</td><td>Stone</td><td>caroline@email.com</td><td>+3344556677</td><td>2024-03-13 13:29:19</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>id</th><th>applicant_id</th><th>job_id</th><th>cover_letter</th><th>resume_url</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Applicants.id)</th><th>(&#8594; Jobs.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Cover letter text...</td><td>http://example.com/resume1.pdf</td><td>Pending</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Cover letter text...</td><td>http://example.com/resume2.pdf</td><td>Rejected</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>Cover letter text...</td><td>http://example.com/resume3.pdf</td><td>Accepted</td></tr>
+<tr><td>4</td><td>3</td><td>4</td><td>Cover letter text...</td><td>http://example.com/resume4.pdf</td><td>Interview Scheduled</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>Cover letter text...</td><td>http://example.com/resume5.pdf</td><td>Offered</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Customer_Facing_Roles</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">role</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Customer Service Advisor</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">IT Support Technician</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Language_Proficiencies</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">language</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Bilingual</span></td></tr>
+<tr><td>2</td><td>Multilingual</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone</th><th>customer_role_id</th><th>language_proficiency_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Customer_Facing_Roles.id)</th><th>(&#8594; Language_Proficiencies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike</td><td>Adams</td><td>mikeadams@email.com</td><td>+1112223333</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Nancy</td><td>Walker</td><td>nancywalker@email.com</td><td>+2223334444</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Tom</td><td>Hanks</td><td>thanks@email.com</td><td>+3344556677</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>Laura</td><td>Williams</td><td>laurawilliams@email.com</td><td>+4455667788</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>Steve</td><td>Martin</td><td>stevemartin@email.com</td><td>+5566778899</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

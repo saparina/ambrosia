@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Job_Postings</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop and maintain software applications.</td><td>80000.0</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data sets and provide insights.</td><td>60000.0</td></tr>
+<tr><td>3</td><td>Graphic Designer</td><td>Create visual designs for marketing materials.</td><td>50000.0</td></tr>
+<tr><td>4</td><td>Product Manager</td><td>Lead product development from conception to launch.</td><td>75000.0</td></tr>
+<tr><td>5</td><td>HR Specialist</td><td>Recruit, train, and manage employees.</td><td>55000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Requirements</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">requirement_type</span></th><th><span style="color:#990000">value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Education</td><td>Bachelor's degree</td></tr>
+<tr><td>2</td><td>Experience</td><td>3 years</td></tr>
+<tr><td>3</td><td>Skills</td><td>SQL, Python</td></tr>
+<tr><td>4</td><td>Language</td><td>English</td></tr>
+<tr><td>5</td><td>Certification</td><td>PMP</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Postings_Requirements</h2><table><thead>
+<tr><th>job_posting_id</th><th>requirement_id</th></tr>
+<tr><th>(&#8594; Job_Postings.id)</th><th>(&#8594; Requirements.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>1</td><td>5</td></tr>
+<tr><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

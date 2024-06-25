@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Hospitals</h2><table><thead>
+<tr><th>HospitalID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>St. Mary's Hospital</td><td>New York</td></tr>
+<tr><td>2</td><td>Mount Sinai Hospital</td><td>Chicago</td></tr>
+<tr><td>3</td><td>Rush University Medical Center</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Yale New Haven Health</td><td>Connecticut</td></tr>
+<tr><td>5</td><td>John Hopkins Medicine</td><td>Baltimore</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>DepartmentName</th><th>HospitalID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Hospitals.HospitalID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cardiac Surgery</td><td>1</td></tr>
+<tr><td>2</td><td>Neurosurgery</td><td>2</td></tr>
+<tr><td>3</td><td>Orthopedics</td><td>3</td></tr>
+<tr><td>4</td><td>Pediatrics</td><td>4</td></tr>
+<tr><td>5</td><td>Emergency Medicine</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Employees</span></h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th>MedicalProfession</th><th>Patient</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Doe</td><td>jane.doe@example.com</td><td>555-1234</td><td><span style="color:#990000">Nurse</span></td><td><span style="color:#006600">Anne Buche</span></td></tr>
+<tr><td>2</td><td>Mike</td><td>Smith</td><td>mike.smith@example.com</td><td>555-5678</td><td><span style="color:#990000">Nurse</span></td><td>Alice Johnson</td></tr>
+<tr><td>3</td><td>Linda</td><td>Williams</td><td>linda.williams@example.com</td><td>555-9012</td><td><span style="color:#990000">Physician's Assistant</span></td><td><span style="color:#006600">Anne Buche</span></td></tr>
+<tr><td>4</td><td>Tom</td><td>Brown</td><td>tom.brown@example.com</td><td>555-1234</td><td><span style="color:#990000">Physician's Assistant</span></td><td>David Lee</td></tr>
+<tr><td>5</td><td>Karen</td><td>Green</td><td>karen.green@example.com</td><td>555-9876</td><td>Doctor</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>JobPostID</th><th>PositionTitle</th><th>Description</th><th>Requirements</th><th>StartDate</th><th>EndDate</th><th>Salary</th><th>Vacancy</th><th>DepartmentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Departments.DepartmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cardiovascular Nurse</td><td>Experience in cardiac care.</td><td>BLS certification required.</td><td>2023-01-01</td><td>2023-12-31</td><td>65000</td><td>3</td><td>1</td></tr>
+<tr><td>2</td><td>Neurology Nurse</td><td>Neurosurgical experience necessary.</td><td>ACLS certification required.</td><td>2023-02-01</td><td>2023-12-31</td><td>60000</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Orthopaedic PA</td><td>Assisting with orthopaedic surgeries.</td><td>Certified PAs only.</td><td>2023-03-01</td><td>2023-12-31</td><td>65000</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>Pediatric Nurse</td><td>Pediatric nursing experience required.</td><td>CPR certified.</td><td>2023-04-01</td><td>2023-12-31</td><td>60000</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>EM Resident</td><td>ER experience essential.</td><td>MD degree required.</td><td>2023-05-01</td><td>2023-12-31</td><td>55000</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Users</h2><table><thead>
+<tr><th>user_id</th><th>username</th><th>email</th><th>password</th><th>city</th><th>country</th><th>created_at</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>User1</td><td>email@example.com</td><td>password123</td><td>New York</td><td>USA</td><td>2024-02-19 15:04:39</td></tr>
+<tr><td>2</td><td>User2</td><td>email2@example.com</td><td>password321</td><td>Los Angeles</td><td>USA</td><td>2024-02-19 15:04:39</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscriptions</h2><table><thead>
+<tr><th>subscription_id</th><th>user_id</th><th>plan</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th>(&#8594; Users.user_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Basic</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>Premium</td><td>2022-01-02</td><td>2022-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Shows</h2><table><thead>
+<tr><th>show_id</th><th>title</th><th>genre</th><th>description</th><th>release_year</th><th>language</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Show1</td><td>Drama</td><td>A drama series about a detective</td><td>2020</td><td>English</td></tr>
+<tr><td>2</td><td>Show2</td><td>Comedy</td><td>A comedy series about friends</td><td>2019</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Episodes</h2><table><thead>
+<tr><th>episode_id</th><th>show_id</th><th>season</th><th>episode_number</th><th>title</th><th>duration</th><th>release_date</th></tr>
+<tr><th></th><th>(&#8594; Shows.show_id)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>Episode 1</td><td>60</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>1</td><td>Episode 1</td><td>60</td><td>2022-01-02</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>rating_id</th><th>user_id</th><th>show_id</th><th>episode_id</th><th>stars</th><th>comment</th></tr>
+<tr><th></th><th>(&#8594; Users.user_id)</th><th>(&#8594; Shows.show_id)</th><th>(&#8594; Episodes.episode_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td><td>Great Show!</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>1</td><td>4</td><td>Funny but could be better.</td></tr>
+</tbody></table></div>
+
+<div><h2>RealityShows</h2><table><thead>
+<tr><th>reality_show_id</th><th>name</th><th>network</th><th>host</th><th>premiere_date</th><th>winner</th><th><span style="color:#990000">city</span></th><th><span style="color:#990000">country</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>RealityShow1</td><td>Network A</td><td>Host1</td><td>2022-01-01</td><td>Winner1</td><td>City1</td><td>Country1</td></tr>
+<tr><td>2</td><td>RealityShow2</td><td>Network B</td><td>Host2</td><td>2022-01-02</td><td>Winner2</td><td>City2</td><td>Country2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

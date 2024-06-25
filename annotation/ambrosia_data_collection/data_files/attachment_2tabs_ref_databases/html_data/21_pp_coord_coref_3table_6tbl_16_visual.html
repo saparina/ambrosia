@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">airports</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th><span style="color:#006600">country</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gatwick</td><td>London</td><td>UK</td></tr>
+<tr><td>2</td><td>Heathrow</td><td>London</td><td>UK</td></tr>
+<tr><td>3</td><td>JFK</td><td>New York</td><td>USA</td></tr>
+<tr><td>4</td><td>Dubai International</td><td>Dubai</td><td><span style="color:#006600">UAE</span></td></tr>
+<tr><td>5</td><td>Charles de Gaulle</td><td>Paris</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>flights</h2><table><thead>
+<tr><th>id</th><th>flight_number</th><th>departure_time</th><th>arrival_time</th><th>origin_id</th><th>destination_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; airports.id)</th><th>(&#8594; airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA101</td><td>2023-01-01 08:00:00</td><td>2023-01-01 12:00:00</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>BA202</td><td>2023-01-02 09:00:00</td><td>2023-01-02 16:00:00</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>UA303</td><td>2023-01-03 07:00:00</td><td>2023-01-03 14:00:00</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>EK404</td><td>2023-01-04 08:00:00</td><td>2023-01-04 15:00:00</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>AF101</td><td>2023-01-05 07:00:00</td><td>2023-01-05 13:00:00</td><td>2</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>passengers</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>passport_number</th><th>flight_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; flights.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>ABC123456</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>DEF678901</td><td>1</td></tr>
+<tr><td>3</td><td>Michael</td><td>Jackson</td><td>XYZ987654</td><td>2</td></tr>
+<tr><td>4</td><td>Emma</td><td>Watson</td><td>PQR123456</td><td>2</td></tr>
+<tr><td>5</td><td>Leonardo</td><td>DiCaprio</td><td>RST987654</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">customs_immigration</span></h2><table><thead>
+<tr><th>id</th><th>passenger_id</th><th>status</th><th>clearance_time</th><th>customs</th><th>immigration</th></tr>
+<tr><th></th><th>(&#8594; passengers.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Processed</td><td>2023-01-01 10:00:00</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>2</td><td>2</td><td>Processed</td><td>2023-01-01 10:15:00</td><td>No</td><td>Yes</td></tr>
+<tr><td>3</td><td>3</td><td>Pending</td><td>2023-01-01 11:00:00</td><td>None</td><td>None</td></tr>
+<tr><td>4</td><td>4</td><td>Processed</td><td>2023-01-01 11:30:00</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>5</td><td>5</td><td>Processed</td><td>2023-01-01 11:45:00</td><td>No</td><td>Yes</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

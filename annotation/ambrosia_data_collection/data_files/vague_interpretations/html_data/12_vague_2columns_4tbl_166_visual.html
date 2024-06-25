@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flight</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>Destination</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 09:00:00</td><td>New York</td></tr>
+<tr><td>2</td><td>2022-01-02 10:00:00</td><td>London</td></tr>
+<tr><td>3</td><td>2022-01-03 11:00:00</td><td>Tokyo</td></tr>
+<tr><td>4</td><td>2022-01-04 12:00:00</td><td>Paris</td></tr>
+<tr><td>5</td><td>2022-01-05 13:00:00</td><td>Dubai</td></tr>
+</tbody></table></div>
+
+<div><h2>Airline</h2><table><thead>
+<tr><th>CompanyName</th><th>Headquarters</th><th>NumberofEmployees</th></tr>
+</thead><tbody>
+<tr><td>British Airways</td><td>UK</td><td>10000</td></tr>
+<tr><td>American Airlines</td><td>USA</td><td>120000</td></tr>
+<tr><td>All Nippon Airways</td><td>Japan</td><td>68000</td></tr>
+<tr><td>Air France</td><td>France</td><td>25000</td></tr>
+<tr><td>Emirates</td><td>UAE</td><td>35000</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerID</th><th>Name</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>25</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>30</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>40</td></tr>
+<tr><td>4</td><td>Linda Brown</td><td>35</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2>AirlinesAndFlights</h2><table><thead>
+<tr><th>AirlinesID</th><th>FlightsID</th></tr>
+<tr><th>(&#8594; Airline.CompanyName)</th><th>(&#8594; Flight.FlightID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>AirportID</th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>London</td><td>United Kingdom</td></tr>
+<tr><td>2</td><td>New York</td><td>USA</td></tr>
+<tr><td>3</td><td>Tokyo</td><td>Japan</td></tr>
+<tr><td>4</td><td>Paris</td><td>France</td></tr>
+<tr><td>5</td><td>Dubai</td><td>UAE</td></tr>
+</tbody></table></div>
+
+<div><h2>AirportDetails</h2><table><thead>
+<tr><th>AirportID</th><th><span style="color:#990000">Passenger_Throughput</span></th><th><span style="color:#990000">Number_Of_Aircrafts</span></th><th>Latitude</th><th>Longitude</th></tr>
+<tr><th>(&#8594; Airports.AirportID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10000</td><td>20</td><td>51.5074</td><td>-0.1278</td></tr>
+<tr><td>2</td><td>50000</td><td>50</td><td>40.7128</td><td>-74.006</td></tr>
+<tr><td>3</td><td>20000</td><td>50</td><td>35.6895</td><td>139.6917</td></tr>
+<tr><td>4</td><td>25000</td><td>40</td><td>48.8566</td><td>2.3522</td></tr>
+<tr><td>5</td><td>10000</td><td>20</td><td>25.2048</td><td>55.2708</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

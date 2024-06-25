@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Students</span></h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Major</th><th>Dissertation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Computer Science</td><td>None</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>Mathematics</td><td>None</td></tr>
+<tr><td>3</td><td>Alice</td><td>Smith</td><td>Physics</td><td>Quantum Computing</td></tr>
+<tr><td>4</td><td>Bob</td><td>Johnson</td><td>Chemistry</td><td>Organic Chemistry</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Williams</td><td>Biology</td><td>Molecular Biology</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Academics</span></h2><table><thead>
+<tr><th>StaffID</th><th><span style="color:#006600">FullName</span></th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Dr. Jane Smith</span></td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Dr. John Brown</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Dr. Alice Green</td><td>Physics</td></tr>
+<tr><td>4</td><td>Dr. Bob White</td><td>Chemistry</td></tr>
+<tr><td>5</td><td>Dr. Charlie Black</td><td>Biology</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Supervision</span></h2><table><thead>
+<tr><th>SupervisorID</th><th>StudentID</th><th>Thesis_Proposal</th></tr>
+<tr><th>(&#8594; Academics.StaffID)</th><th>(&#8594; Students.StudentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Machine Learning Techniques</td></tr>
+<tr><td>2</td><td>3</td><td>Numerical Methods in Partial Differential Equations</td></tr>
+<tr><td>1</td><td>4</td><td>None</td></tr>
+<tr><td>2</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Physics</td></tr>
+<tr><td>4</td><td>Chemistry</td></tr>
+<tr><td>5</td><td>Biology</td></tr>
+</tbody></table></div>
+
+<div><h2>CourseEnrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>101</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>201</td><td>B</td></tr>
+<tr><td>3</td><td>3</td><td>301</td><td>A</td></tr>
+<tr><td>4</td><td>4</td><td>401</td><td>B</td></tr>
+<tr><td>5</td><td>5</td><td>501</td><td>A</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>InstructorID</th><th>DepartmentID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Academics.StaffID)</th><th>(&#8594; Departments.DepartmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>General Physics</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Organic Chemistry</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Human Anatomy</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

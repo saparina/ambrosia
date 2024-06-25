@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quentin Tarantino</td><td>1963-03-27</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td><td>1970-07-30</td></tr>
+<tr><td>3</td><td>Martin Scorsese</td><td>1942-11-22</td></tr>
+<tr><td>4</td><td>Ava DuVernay</td><td>1978-08-24</td></tr>
+<tr><td>5</td><td>James Cameron</td><td>1954-08-16</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>birthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td></tr>
+<tr><td>2</td><td>Matthew</td><td>McConaughey</td><td>1969-11-04</td></tr>
+<tr><td>3</td><td>Brad Pitt</td><td></td><td>1963-12-18</td></tr>
+<tr><td>4</td><td>Angelina Jolie</td><td></td><td>1975-06-04</td></tr>
+<tr><td>5</td><td>Cate Blanchett</td><td></td><td>1969-05-14</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseYear</th><th>directorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Director.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>Interstellar</td><td>2014</td><td>2</td></tr>
+<tr><td>3</td><td>The Wolf of Wall Street</td><td>2013</td><td>1</td></tr>
+<tr><td>4</td><td>Avatar</td><td>2009</td><td>3</td></tr>
+<tr><td>5</td><td>Black Swan</td><td>2010</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Thriller</td></tr>
+<tr><td>3</td><td>Adventure</td></tr>
+<tr><td>4</td><td>Horror</td></tr>
+<tr><td>5</td><td>Romance</td></tr>
+</tbody></table></div>
+
+<div><h2>Rating</h2><table><thead>
+<tr><th>id</th><th>roleId</th><th>score</th></tr>
+<tr><th></th><th>(&#8594; Role.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>9</td></tr>
+<tr><td>2</td><td>2</td><td>8</td></tr>
+<tr><td>3</td><td>3</td><td>7</td></tr>
+<tr><td>4</td><td>4</td><td>9</td></tr>
+<tr><td>5</td><td>5</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>id</th><th>movieId</th><th><span style="color:#990000">Actor</span></th><th>actorId</th><th>genreId</th><th>rating</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th></th><th>(&#8594; Actor.id)</th><th>(&#8594; Genre.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>9</td></tr>
+<tr><td>2</td><td>1</td><td>0</td><td>2</td><td>2</td><td>8</td></tr>
+<tr><td>3</td><td>2</td><td>0</td><td>3</td><td>3</td><td>7</td></tr>
+<tr><td>4</td><td>3</td><td>1</td><td>4</td><td>4</td><td>9</td></tr>
+<tr><td>5</td><td>3</td><td>0</td><td>5</td><td>5</td><td>8</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

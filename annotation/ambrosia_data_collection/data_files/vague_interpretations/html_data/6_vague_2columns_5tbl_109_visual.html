@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Studio</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>year_founded</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros</td><td>Los Angeles, CA</td><td>1923</td></tr>
+<tr><td>2</td><td>Disney Studios</td><td>Burbank, CA</td><td>1923</td></tr>
+<tr><td>3</td><td>Paramount Pictures</td><td>Hollywood, CA</td><td>1914</td></tr>
+<tr><td>4</td><td>Universal Studios</td><td>Universal City, CA</td><td>1912</td></tr>
+<tr><td>5</td><td>Columbia Pictures</td><td>Culver City, CA</td><td>1924</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>July 30, 1970</td><td>American</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td><td>March 27, 1963</td><td>American</td></tr>
+<tr><td>3</td><td>Guillermo del Toro</td><td>October 9, 1964</td><td>Mexican</td></tr>
+<tr><td>4</td><td>Steven Spielberg</td><td>December 18, 1946</td><td>American</td></tr>
+<tr><td>5</td><td>Martin Scorsese</td><td>November 17, 1942</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>genre</th><th>release_year</th><th><span style="color:#990000">studio_id</span></th><th><span style="color:#990000">director_id</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Studio.id)</th><th>(&#8594; Director.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Action/Sci-Fi</td><td>2010</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>Crime/Drama</td><td>1994</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>Pan's Labyrinth</td><td>Fantasy/Drama</td><td>2006</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>Schindler's List</td><td>Historical/Drama</td><td>1993</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>The Departed</td><td>Crime/Thriller</td><td>2006</td><td>3</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>date_of_birth</th><th>gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>November 11, 1974</td><td>Male</td></tr>
+<tr><td>2</td><td>Brad Pitt</td><td>December 18, 1963</td><td>Male</td></tr>
+<tr><td>3</td><td>Marion Cotillard</td><td>September 30, 1975</td><td>Female</td></tr>
+<tr><td>4</td><td>Ken Watanabe</td><td>October 21, 1959</td><td>Male</td></tr>
+<tr><td>5</td><td>Ellen Page</td><td>February 21, 1987</td><td>Female</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>movie_id</th><th>actor_id</th><th>character</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Dom Cobb</td></tr>
+<tr><td>1</td><td>2</td><td>Arthur</td></tr>
+<tr><td>2</td><td>3</td><td>Vincent Vega</td></tr>
+<tr><td>2</td><td>4</td><td>Mia Wallace</td></tr>
+<tr><td>4</td><td>5</td><td>Ofelia</td></tr>
+</tbody></table></div>
+
+<div><h2>Award</h2><table><thead>
+<tr><th>award_name</th><th>category</th></tr>
+</thead><tbody>
+<tr><td>Academy Award</td><td>Film</td></tr>
+<tr><td>Golden Globe Award</td><td>Film</td></tr>
+<tr><td>BAFTA Award</td><td>Film</td></tr>
+<tr><td>Palme d'Or</td><td>Film</td></tr>
+<tr><td>Cannes Film Festival Best Director</td><td>Direction</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

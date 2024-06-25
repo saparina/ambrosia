@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Authors</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Evelyn O'Connor</span></td></tr>
+<tr><td>2</td><td>John Doe</td></tr>
+<tr><td>3</td><td>Jane Smith</td></tr>
+<tr><td>4</td><td>Robert Johnson</td></tr>
+<tr><td>5</td><td>Emily Davis</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>PublicationDate</th><th>AuthorId</th><th>WritingStyleId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; WritingStyles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Short Story</td><td>Content of the short story...</td><td>2021-06-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Another Short Story</td><td>Content of another short story...</td><td>2021-06-02</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>A Personal Essay</td><td>Content of a personal essay...</td><td>2021-06-03</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>Yet Another Personal Essay</td><td>Content of yet another personal essay...</td><td>2021-06-04</td><td>3</td><td>2</td></tr>
+<tr><td>5</td><td>The Travelogue</td><td>Content of the travelogue...</td><td>2021-06-05</td><td>4</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>PublishingHouses</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Random House</td></tr>
+<tr><td>2</td><td>Penguin Books</td></tr>
+<tr><td>3</td><td>HarperCollins</td></tr>
+<tr><td>4</td><td>Simon & Schuster</td></tr>
+<tr><td>5</td><td>Macmillan</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticlePublications</h2><table><thead>
+<tr><th>id</th><th>ArticleId</th><th>PublisherId</th><th>PublishDate</th></tr>
+<tr><th></th><th>(&#8594; Articles.id)</th><th>(&#8594; PublishingHouses.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-06-06</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-06-07</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-06-08</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-06-09</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-06-10</td></tr>
+</tbody></table></div>
+
+<div><h2>ReadingStats</h2><table><thead>
+<tr><th>id</th><th>ArticleId</th><th>ReadCount</th></tr>
+<tr><th></th><th>(&#8594; Articles.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100</td></tr>
+<tr><td>2</td><td>2</td><td>150</td></tr>
+<tr><td>3</td><td>3</td><td>200</td></tr>
+<tr><td>4</td><td>4</td><td>250</td></tr>
+<tr><td>5</td><td>5</td><td>300</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">WritingStyles</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">StyleName</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Short Story</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Personal Essay</span></td></tr>
+<tr><td>3</td><td>Travelogue</td></tr>
+<tr><td>4</td><td>Opinion Piece</td></tr>
+<tr><td>5</td><td>Feature Story</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

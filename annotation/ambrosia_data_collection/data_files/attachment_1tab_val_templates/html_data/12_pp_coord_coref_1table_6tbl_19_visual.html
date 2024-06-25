@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artists</h2><table><thead>
+<tr><th>ArtistID</th><th>Name</th><th>Age</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>32</td><td>Pop</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>Rock</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>45</td><td>Hip Hop</td></tr>
+<tr><td>4</td><td>Emma Jones</td><td>30</td><td>Country</td></tr>
+<tr><td>5</td><td>Olivia Brown</td><td>26</td><td>Electronic</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>EventID</th><th>Name</th><th>Date</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Event1</td><td>2022-09-01</td><td>New York</td></tr>
+<tr><td>2</td><td>Event2</td><td>2022-09-05</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Event3</td><td>2022-09-10</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Event4</td><td>2022-09-15</td><td>Boston</td></tr>
+<tr><td>5</td><td>Event5</td><td>2022-09-20</td><td>Washington DC</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Performances</span></h2><table><thead>
+<tr><th>PerformanceID</th><th>EventID</th><th>Type</th><th>AudienceSize</th><th><span style="color:#186e16"><span style="color:#186e16">PerformanceEvent</span></span></th><th><span style="color:#1430b2">AuditionRoom</span></th></tr>
+<tr><th></th><th>(&#8594; Events.EventID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Concert</td><td>500</td><td><span style="color:#186e16">Dance Recital</span></td><td><span style="color:#1430b2">Room 101</span></td></tr>
+<tr><td>2</td><td>2</td><td>Competition</td><td>300</td><td><span style="color:#186e16">Talent Show</span></td><td><span style="color:#1430b2">Room 101</span></td></tr>
+<tr><td>3</td><td>3</td><td>Festival</td><td>400</td><td><span style="color:#186e16">Dance Recital</span></td><td>Room 102</td></tr>
+<tr><td>4</td><td>4</td><td>Gala</td><td>200</td><td><span style="color:#186e16">Talent Show</span></td><td>Room 103</td></tr>
+<tr><td>5</td><td>5</td><td>Showcase</td><td>150</td><td>Open Mic Night</td><td><span style="color:#1430b2">Room 101</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Participants</h2><table><thead>
+<tr><th>ParticipantID</th><th>ArtistID</th><th>PerformanceID</th><th>Role</th></tr>
+<tr><th></th><th>(&#8594; Artists.ArtistID)</th><th>(&#8594; Performances.PerformanceID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Lead Singer</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>Backup Vocals</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>Dancer</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>Band Leader</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Host</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

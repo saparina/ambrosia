@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>+123456789</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>+098765432</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice@example.com</td><td>+987654321</td></tr>
+<tr><td>4</td><td>Charlie</td><td>White</td><td>charlie@example.com</td><td>+135792468</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david@example.com</td><td>+246801753</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>account_id</th><th>customer_id</th><th>balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.customer_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>5000.0</td></tr>
+<tr><td>3</td><td>3</td><td>7500.0</td></tr>
+<tr><td>4</td><td>4</td><td>2500.0</td></tr>
+<tr><td>5</td><td>5</td><td>1500.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Loans</span></h2><table><thead>
+<tr><th>loan_id</th><th>banktype_id</th><th>amount</th><th><span style="color:#006600">credit</span></th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th>(&#8594; BankType.banktype_id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10000.0</td><td>10000.0</td><td>2022-01-01</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>1</td><td><span style="color:#006600">5000.0</span></td><td><span style="color:#006600">5000.0</span></td><td>2022-01-15</td><td>2023-01-15</td></tr>
+<tr><td>3</td><td>2</td><td>10000.0</td><td>10000.0</td><td>2022-02-01</td><td>2023-02-01</td></tr>
+<tr><td>4</td><td>2</td><td><span style="color:#006600">5000.0</span></td><td><span style="color:#006600">5000.0</span></td><td>2022-02-15</td><td>2023-02-15</td></tr>
+<tr><td>5</td><td>3</td><td>7500.0</td><td>7500.0</td><td>2022-03-01</td><td>2023-03-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BankType</span></h2><table><thead>
+<tr><th>banktype_id</th><th><span style="color:#990000"><span style="color:#990000">finance_organization</span></span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Formal Banks</span></td><td>Traditional financial institutions.</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Microfinance Institutions</span></td><td>Small scale lenders focused on underprivileged communities.</td></tr>
+<tr><td>3</td><td>Credit Unions</td><td>Not-for-profit financial cooperatives.</td></tr>
+<tr><td>4</td><td>Investment Banks</td><td>Institutions primarily involved in raising capital.</td></tr>
+<tr><td>5</td><td>Central Banks</td><td>Government-owned banks responsible for monetary policy.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

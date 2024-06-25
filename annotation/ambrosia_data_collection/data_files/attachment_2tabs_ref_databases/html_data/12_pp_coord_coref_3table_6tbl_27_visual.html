@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Organization</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Group</td></tr>
+<tr><td>2</td><td><span style="color:#006600">XYZ Corporation</span></td></tr>
+<tr><td>3</td><td>Lemonade Financial Services</td></tr>
+<tr><td>4</td><td>Pineapple Savings and Loan</td></tr>
+<tr><td>5</td><td>Berry Investment Bank</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>PhoneNumber</th><th>EmailAddress</th><th>CreatedAt</th><th>UpdatedAt</th><th>OrganizationID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Organization.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1985-06-15</td><td>+1 (555) 123-4567</td><td>john.doe@example.com</td><td>2024-03-13 21:03:57</td><td>2024-03-13 21:03:57</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-01-05</td><td>+1 (555) 987-6543</td><td>jane.smith@example.com</td><td>2024-03-13 21:03:57</td><td>2024-03-13 21:03:57</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>1982-03-10</td><td>+1 (555) 432-1234</td><td>alice.wonderland@example.com</td><td>2024-03-13 21:03:57</td><td>2024-03-13 21:03:57</td><td>3</td></tr>
+<tr><td>4</td><td>Robert</td><td>White</td><td>1992-11-07</td><td>+1 (555) 789-0123</td><td>robert.white@example.com</td><td>2024-03-13 21:03:57</td><td>2024-03-13 21:03:57</td><td>4</td></tr>
+<tr><td>5</td><td>Michael</td><td>Black</td><td>1975-02-03</td><td>+1 (555) 555-5555</td><td>michael.black@example.com</td><td>2024-03-13 21:03:57</td><td>2024-03-13 21:03:57</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Account</h2><table><thead>
+<tr><th>ID</th><th>Number</th><th>Type</th><th>Balance</th><th>InterestRate</th><th>DateOpened</th><th>IsActive</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Customer.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1234567890</td><td>Checking</td><td>1000.0</td><td>0.01</td><td>2022-01-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>9876543210</td><td>Savings</td><td>2000.0</td><td>0.02</td><td>2022-01-01</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>1112223334</td><td>CD</td><td>3000.0</td><td>0.03</td><td>2022-01-01</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>4445556667</td><td>Loan</td><td>-2000.0</td><td>0.05</td><td>2022-01-01</td><td>0</td><td>2</td></tr>
+<tr><td>5</td><td>7788901234</td><td>Money Market</td><td>5000.0</td><td>0.04</td><td>2022-01-01</td><td>1</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">TrustAccount</span></h2><table><thead>
+<tr><th>ID</th><th>AccountID</th><th>CustodialService</th><th>TrustAdministration</th><th>StartDate</th><th>EndDate</th><th>PrincipalAmount</th><th>DistributionAmount</th><th>PaymentFrequency</th></tr>
+<tr><th></th><th>(&#8594; Account.ID)</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>ABC Group</td><td>Xyz Trust Administration</td><td>2010-01-01</td><td>2025-12-31</td><td>5000.0</td><td>3000.0</td><td>Annually</td></tr>
+<tr><td>2</td><td>2</td><td>XYZ Corporation</td><td>Pineapple Trust Company</td><td>2015-01-01</td><td>2028-12-31</td><td>6000.0</td><td>3500.0</td><td>Quarterly</td></tr>
+<tr><td>3</td><td>3</td><td>Lemonade Financial Services</td><td>Berry Trust Management</td><td>2012-01-01</td><td>2023-12-31</td><td>7000.0</td><td>4000.0</td><td>Monthly</td></tr>
+<tr><td>4</td><td>4</td><td>Pineapple Savings and Loan</td><td>ABC Trust Service</td><td>2017-01-01</td><td>2026-12-31</td><td>8000.0</td><td>4500.0</td><td>Biweekly</td></tr>
+<tr><td>5</td><td>5</td><td>Berry Investment Bank</td><td>XYZ Trust Solutions</td><td>2013-01-01</td><td>2022-12-31</td><td>9000.0</td><td>5000.0</td><td>Semiannually</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

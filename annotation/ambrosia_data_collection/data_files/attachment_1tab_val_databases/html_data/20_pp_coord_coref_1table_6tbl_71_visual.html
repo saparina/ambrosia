@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th><th>filmography</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>20</td><td>Movie A, Movie B</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>30</td><td>Film X, Film Y</td></tr>
+</tbody></table></div>
+
+<div><h2>Cinematographers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th><th>films_worked_on</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>20</td><td>Project Z, Project W</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>25</td><td>The Sunset, The Dawn</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>director_id</th><th>cinematographer_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Directors.id)</th><th>(&#8594; Cinematographers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Epic Adventure</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Thrilling Mystery</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ProductionHouses</h2><table><thead>
+<tr><th>id</th><th>name</th><th>number_of_films</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Studio Alpha</td><td>8</td></tr>
+<tr><td>2</td><td>Big Screen Productions</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmsAndProductionHouses</h2><table><thead>
+<tr><th>id</th><th>film_id</th><th>production_house_id</th></tr>
+<tr><th></th><th>(&#8594; Films.id)</th><th>(&#8594; ProductionHouses.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FilmCrewMembers</span></h2><table><thead>
+<tr><th>id</th><th>crew_member</th><th>years_of_experience</th><th>experience_details</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Director</span></td><td><span style="color:#006600">20</span></td><td>Over a decade of directing movies.</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Director</span></td><td>15</td><td>Multiple awards won for direction.</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Cinematographer</span></td><td><span style="color:#006600">20</span></td><td>Wide range of lighting techniques used.</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Cinematographer</span></td><td>17</td><td>Worked on various genres.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

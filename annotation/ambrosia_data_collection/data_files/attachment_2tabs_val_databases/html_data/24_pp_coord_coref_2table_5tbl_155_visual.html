@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">FantasyFilm</span></h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Lord of The Rings</td><td>Peter Jackson</td><td>2003</td><td><span style="color:#006600">20000000.0</span></td></tr>
+<tr><td>2</td><td>Harry Potter and the Philosopher's Stone</td><td>Chris Columbus</td><td>2001</td><td>140000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">HorrorFilm</span></h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Exorcist</td><td>William Friedkin</td><td>1973</td><td>40000000.0</td></tr>
+<tr><td>2</td><td>The Shining</td><td>Stanley Kubrick</td><td>1980</td><td><span style="color:#006600">20000000.0</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ewan McGregor</td><td>1971-03-31</td><td>Scottish</td></tr>
+<tr><td>2</td><td>Daniel Radcliffe</td><td>1989-07-23</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>RoleID</th><th>ActorID</th><th>FilmID</th><th>CharacterName</th></tr>
+<tr><th></th><th>(&#8594; Actor.ActorID)</th><th>(&#8594; FantasyFilm.FilmID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Obi-Wan Kenobi</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>Lord Voldemort</td></tr>
+</tbody></table></div>
+
+<div><h2>Review</h2><table><thead>
+<tr><th>ReviewID</th><th>FilmID</th><th>Rating</th><th>Comment</th></tr>
+<tr><th></th><th>(&#8594; FantasyFilm.FilmID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5</td><td>Great movie! Very entertaining.</td></tr>
+<tr><td>2</td><td>2</td><td>4</td><td>Good movie but not as great as the first one.</td></tr>
+</tbody></table></div>
+
+<div><h2>BoxOffice</h2><table><thead>
+<tr><th>FilmID</th><th>Revenue</th></tr>
+<tr><th>(&#8594; FantasyFilm.FilmID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>87166173.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

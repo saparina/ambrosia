@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Country</h2><table><thead>
+<tr><th>CountryID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>USA</td></tr>
+<tr><td>2</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>City</h2><table><thead>
+<tr><th>CityID</th><th>Name</th><th>Population</th><th>ForeignKeyID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Country.CountryID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>8419000</td><td>1</td></tr>
+<tr><td>2</td><td>London</td><td>8982000</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>EthnicGroup</h2><table><thead>
+<tr><th>EthnicGroupID</th><th>GroupName</th><th>Population</th><th>CityID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; City.CityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hispanic</td><td>5900000</td><td>1</td></tr>
+<tr><td>2</td><td>White British</td><td>5400000</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>AgeGroup</h2><table><thead>
+<tr><th>AgeGroupID</th><th>LowerBound</th><th>UpperBound</th><th>TotalPopulation</th><th>CityID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; City.CityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>0</td><td>17</td><td>8200000</td><td>1</td></tr>
+<tr><td>2</td><td>18</td><td>24</td><td>7500000</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>EducationLevel</h2><table><thead>
+<tr><th>EducationLevelID</th><th>LevelName</th><th>CityID</th><th>TotalEnrolled</th><th>TotalGraduated</th></tr>
+<tr><th></th><th></th><th>(&#8594; City.CityID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Primary School</td><td>1</td><td>2000000</td><td>1500000</td></tr>
+<tr><td>2</td><td>Secondary School</td><td>1</td><td>1500000</td><td>1200000</td></tr>
+<tr><td>3</td><td>University</td><td>1</td><td>100000</td><td>80000</td></tr>
+<tr><td>4</td><td>Postgraduate</td><td>1</td><td>30000</td><td>20000</td></tr>
+<tr><td>5</td><td>Vocational Training</td><td>1</td><td>100000</td><td>75000</td></tr>
+</tbody></table></div>
+
+<div><h2>Language</h2><table><thead>
+<tr><th>LanguageID</th><th>Name</th><th><span style="color:#990000">Number_of_speakers</span></th><th><span style="color:#990000">Percentage_of_population</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>English</td><td>379000000</td><td>68.0</td></tr>
+<tr><td>2</td><td>Spanish</td><td>41300000</td><td>7.5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

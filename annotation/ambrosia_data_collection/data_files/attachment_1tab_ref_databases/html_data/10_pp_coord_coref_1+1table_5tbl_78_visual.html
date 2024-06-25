@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Street_Performers</span></h2><table><thead>
+<tr><th>id</th><th>Performer_Name</th><th><span style="color:#990000"><span style="color:#990000">Performance_Type</span></span></th></tr>
+<tr><th></th><th></th><th>(&#8594; Types.Type_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#990000">Magician</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#990000">Mime</span></td></tr>
+<tr><td>3</td><td>Emma Johnson</td><td>Clown</td></tr>
+<tr><td>4</td><td>David Brown</td><td>Acrobat</td></tr>
+<tr><td>5</td><td>Sophia Wilson</td><td>Fire Breather</td></tr>
+</tbody></table></div>
+
+<div><h2>Types</h2><table><thead>
+<tr><th>Type_ID</th><th>Type_Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Close Up Magic</td></tr>
+<tr><td>2</td><td>Stage Magic</td></tr>
+<tr><td>3</td><td>Puppetry</td></tr>
+<tr><td>4</td><td>Dance</td></tr>
+<tr><td>5</td><td>Musical Performance</td></tr>
+<tr><td>6</td><td>Illusionist</td></tr>
+<tr><td>7</td><td>Comedic Mime</td></tr>
+<tr><td>8</td><td>Balloon Artist</td></tr>
+<tr><td>9</td><td>Aerialist</td></tr>
+<tr><td>10</td><td>Contortionist</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Locations</span></h2><table><thead>
+<tr><th>Location_ID</th><th><span style="color:#006600">Street_Address</span></th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">7 Times Sq</span></td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>50 Broadway St</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>3</td><td>3 Champs Elysees</td><td>Paris</td><td>France</td></tr>
+<tr><td>4</td><td>6 Hyde Park</td><td>London</td><td>UK</td></tr>
+<tr><td>5</td><td>8 Red Square</td><td>Moscow</td><td>Russia</td></tr>
+</tbody></table></div>
+
+<div><h2>Event_Schedule</h2><table><thead>
+<tr><th>Schedule_ID</th><th>Date</th><th>Time</th><th>Performer_ID</th><th>Location_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Street_Performers.id)</th><th>(&#8594; Locations.Location_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-09-01</td><td>12:00 PM</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2022-09-01</td><td>03:00 PM</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2022-09-02</td><td>06:00 PM</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>2022-09-03</td><td>09:00 AM</td><td>2</td><td>6</td></tr>
+<tr><td>5</td><td>2022-09-04</td><td>12:00 PM</td><td>1</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

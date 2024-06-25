@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Airport</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Navigation_System</th><th>Communication_System</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Heathrow</td><td>VOR/DME</td><td>AMF</td></tr>
+<tr><td>2</td><td>JFK International</td><td>ILS</td><td>ATIS</td></tr>
+<tr><td>3</td><td>Los Angeles International</td><td>NDB/DME</td><td>AFIS</td></tr>
+<tr><td>4</td><td>Charles de Gaulle</td><td>VOR</td><td>FM</td></tr>
+<tr><td>5</td><td>Hong Kong International</td><td>DME</td><td>ATC</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Runway</span></h2><table><thead>
+<tr><th>id</th><th>Length</th><th>Width</th><th><span style="color:#006600">AirportId</span></th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airport.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3000.0</td><td>60.0</td><td>1</td></tr>
+<tr><td>2</td><td>2800.0</td><td>75.0</td><td>2</td></tr>
+<tr><td>3</td><td>3100.0</td><td>65.0</td><td>3</td></tr>
+<tr><td><span style="color:#006600">4</span></td><td>2900.0</td><td>70.0</td><td><span style="color:#006600">4</span></td></tr>
+<tr><td>5</td><td>3200.0</td><td>60.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>id</th><th>Model</th><th>RegistrationNumber</th><th>Capacity</th><th>HomeAirportId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airport.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 747</td><td>G-BNNG</td><td>400</td><td>1</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>N123BA</td><td>450</td><td>2</td></tr>
+<tr><td>3</td><td>Boeing 777</td><td>PH-BFD</td><td>350</td><td>3</td></tr>
+<tr><td>4</td><td>Airbus A350</td><td>A6-EAE</td><td>300</td><td>4</td></tr>
+<tr><td>5</td><td>Bombardier CRJ</td><td>N423AW</td><td>50</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>DepartureTime</th><th>ArrivalTime</th><th>OriginAirportId</th><th>DestinationAirportId</th><th>AircraftId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airport.id)</th><th>(&#8594; Airport.id)</th><th>(&#8594; Aircraft.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 10:00:00</td><td>2022-01-01 13:00:00</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-01 11:00:00</td><td>2022-01-01 14:00:00</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2022-01-01 12:00:00</td><td>2022-01-01 15:00:00</td><td>3</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>2022-01-01 13:00:00</td><td>2022-01-01 16:00:00</td><td>4</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>2022-01-01 14:00:00</td><td>2022-01-01 17:00:00</td><td>5</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Maintenance</h2><table><thead>
+<tr><th>id</th><th>Description</th><th>StartDate</th><th>EndDate</th><th>AircraftId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Aircraft.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engine check</td><td>2022-01-01 08:00:00</td><td>2022-01-01 12:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Landing gear inspection</td><td>2022-01-01 13:00:00</td><td>2022-01-01 17:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>Brake system check</td><td>2022-01-01 18:00:00</td><td>2022-01-01 22:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>Avionics test</td><td>2022-01-01 23:00:00</td><td>2022-01-02 03:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>Tire rotation and balance</td><td>2022-01-02 04:00:00</td><td>2022-01-02 08:00:00</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

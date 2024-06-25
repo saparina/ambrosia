@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Culture</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mexican</td><td>Mexican culture is a rich tapestry of indigenous and Spanish influences.</td></tr>
+<tr><td>2</td><td>Irish</td><td>Irish culture, with its deep roots in Celtic traditions, is celebrated for its literature, folk music, and dances.</td></tr>
+<tr><td>3</td><td>Spanish</td><td>Spanish culture is distinguished by its passionate music, dance and diverse regional identities.</td></tr>
+<tr><td>4</td><td>Argentine</td><td>Argentine culture reflects a unique fusion of European influences and indigenous traditions.</td></tr>
+<tr><td>5</td><td>Brazilian</td><td>Brazilian culture is vibrant and diverse, reflecting a blend of indigenous, Portuguese, and African influences.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Geographical_Area</span></h2><table><thead>
+<tr><th>id</th><th>region</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Africa</td></tr>
+<tr><td>2</td><td>Asia</td></tr>
+<tr><td>3</td><td>Europe</td></tr>
+<tr><td>4</td><td>Latin America</td></tr>
+<tr><td>5</td><td>North America</td></tr>
+</tbody></table></div>
+
+<div><h2>Dance</h2><table><thead>
+<tr><th>id</th><th>dance_name</th><th>culture_id</th><th>geographical_area_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Culture.id)</th><th>(&#8594; Geographical_Area.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tango</td><td>4</td><td>4</td></tr>
+<tr><td>2</td><td>Flamenco</td><td>3</td><td>3</td></tr>
+<tr><td>3</td><td>Ballet Folklorico</td><td>1</td><td>5</td></tr>
+<tr><td>4</td><td>Irish Step Dance</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>Capoeira</td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Music</h2><table><thead>
+<tr><th>id</th><th>music_title</th><th>genre</th><th>cultural_influence</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Culture.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>River Flows In You</td><td>Classical</td><td>1</td></tr>
+<tr><td>2</td><td>Despacito</td><td>Pop</td><td>8</td></tr>
+<tr><td>3</td><td>Viva La Vida</td><td>Alternative Rock</td><td>9</td></tr>
+<tr><td>4</td><td>La Vie En Rose</td><td>Jazz</td><td>10</td></tr>
+<tr><td>5</td><td>Bohemian Rhapsody</td><td>Progressive Rock</td><td>11</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>movie_title</th><th>release_year</th><th>director_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Director.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>2</td></tr>
+<tr><td>3</td><td>Schindler's List</td><td>1993</td><td>3</td></tr>
+<tr><td>4</td><td>Forrest Gump</td><td>1994</td><td>4</td></tr>
+<tr><td>5</td><td>Good Will Hunting</td><td>1997</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>actor_name</th><th>birthdate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>American</td></tr>
+<tr><td>2</td><td>Morgan Freeman</td><td>1937-06-01</td><td>American</td></tr>
+<tr><td>3</td><td>Kate Winslet</td><td>1975-10-05</td><td>English</td></tr>
+<tr><td>4</td><td>Christoph Waltz</td><td>1956-10-04</td><td>German</td></tr>
+<tr><td>5</td><td>Idris Elba</td><td>1972-09-06</td><td>British</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>director_name</th><th>birthplace</th><th>known_for</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank Darabont</td><td>Montreal, Canada</td><td>Shawshank Redemption</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td><td>Knoxville, USA</td><td>Pulp Fiction</td></tr>
+<tr><td>3</td><td>Steven Spielberg</td><td>Cincinnati, USA</td><td>Schindler's List</td></tr>
+<tr><td>4</td><td>Robert Zemeckis</td><td>Chicago, USA</td><td>Forrest Gump</td></tr>
+<tr><td>5</td><td>Gus Van Sant</td><td>Louisville, USA</td><td>Good Will Hunting</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

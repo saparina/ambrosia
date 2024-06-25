@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>+123456789</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>+987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>id</th><th>roomNumber</th><th>capacity</th><th>pricePerNight</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td><td>2</td><td>100.0</td></tr>
+<tr><td>2</td><td>102</td><td>4</td><td>150.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>id</th><th>guestId</th><th>roomId</th><th>checkInDate</th><th>checkOutDate</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>101</td><td>2023-01-01</td><td>2023-01-05</td></tr>
+<tr><td>2</td><td>2</td><td>102</td><td>2023-01-06</td><td>2023-01-10</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Relaxation_spot</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#186e16"><span style="color:#186e16">type</span></span></th><th><span style="color:#1430b2">price</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Spot A</td><td><span style="color:#186e16">Day Spa</span></td><td><span style="color:#1430b2">150.0</span></td></tr>
+<tr><td>2</td><td>Spot B</td><td><span style="color:#186e16">Day Spa</span></td><td>200.0</td></tr>
+<tr><td>3</td><td>Spot C</td><td><span style="color:#186e16">Wellness Retreat</span></td><td><span style="color:#1430b2">150.0</span></td></tr>
+<tr><td>4</td><td>Spot D</td><td><span style="color:#186e16">Wellness Retreat</span></td><td>250.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

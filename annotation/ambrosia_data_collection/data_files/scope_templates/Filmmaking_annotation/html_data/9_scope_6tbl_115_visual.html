@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Directors</span></h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alfred Hitchcock</td><td>August 13, 1899</td></tr>
+<tr><td>2</td><td>Steven Spielberg</td><td>December 18, 1946</td></tr>
+<tr><td>3</td><td>Christopher Nolan</td><td>July 30, 1970</td></tr>
+<tr><td>4</td><td>Quentin Tarantino</td><td>March 27, 1963</td></tr>
+<tr><td>5</td><td>Martin Scorsese</td><td>November 22, 1942</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>ReleaseYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Psycho</td><td>1960</td></tr>
+<tr><td>2</td><td>E.T.</td><td>1982</td></tr>
+<tr><td>3</td><td>Inception</td><td>2010</td></tr>
+<tr><td>4</td><td>Django Unchained</td><td>2012</td></tr>
+<tr><td>5</td><td>Taxi Driver</td><td>1976</td></tr>
+</tbody></table></div>
+
+<div><h2>DirectorFilms</h2><table><thead>
+<tr><th>DirectorFilmID</th><th>DirectorID</th><th>FilmID</th></tr>
+<tr><th></th><th>(&#8594; Directors.DirectorID)</th><th>(&#8594; Films.FilmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Additional_Roles</span></h2><table><thead>
+<tr><th>Additional<span style="color:#990000">Role</span>ID</th><th><span style="color:#990000">Role</span></th><th><span style="color:#990000">Fee</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Producer</td><td>100000</td></tr>
+<tr><td>2</td><td>Screenwriter</td><td>75000</td></tr>
+<tr><td>3</td><td>Composer</td><td>50000</td></tr>
+<tr><td>4</td><td>Editor</td><td>40000</td></tr>
+<tr><td>5</td><td>Art Director</td><td>35000</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors_Roles</h2><table><thead>
+<tr><th>DirectorRoleID</th><th>DirectorID</th><th>AdditionalRoleID</th></tr>
+<tr><th></th><th>(&#8594; Directors.DirectorID)</th><th>(&#8594; Additional_Roles.AdditionalRoleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

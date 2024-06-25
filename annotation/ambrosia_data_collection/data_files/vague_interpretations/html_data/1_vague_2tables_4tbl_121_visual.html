@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Executive_chef</span></h2><table><thead>
+<tr><th>chef_id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Sous_chef</span></h2><table><thead>
+<tr><th>sous_id</th><th>first_name</th><th>last_name</th><th>executive_chef_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Executive_chef.chef_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Brown</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>White</td><td>2</td></tr>
+<tr><td>3</td><td>Charlie</td><td>Green</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurant</h2><table><thead>
+<tr><th>restaurant_id</th><th>name</th><th>address</th><th>executive_chef_id</th><th>SOUS_CHEF_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Executive_chef.chef_id)</th><th>(&#8594; Sous_chef.sous_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Ritz</td><td>Main Street</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Le Grande</td><td>East Side</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Ocean View</td><td>Beach Road</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Menu_items</h2><table><thead>
+<tr><th>menu_item_id</th><th>item_name</th><th>description</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Steak</td><td>Grilled Steak with Veggies</td><td>30.99</td></tr>
+<tr><td>2</td><td>Salmon</td><td>Grilled Salmon with Rice</td><td>25.8</td></tr>
+<tr><td>3</td><td>Pasta</td><td>Spaghetti Bolognese</td><td>15.6</td></tr>
+<tr><td>4</td><td>Pizza</td><td>Margherita Pizza</td><td>12.5</td></tr>
+<tr><td>5</td><td>Burger</td><td>Cheeseburger and Fries</td><td>10.8</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>order_id</th><th>customer_name</th><th>date</th><th>total_amount</th><th>restaurant_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Restaurant.restaurant_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Customer A</td><td>2021-08-10</td><td>60.2</td><td>1</td></tr>
+<tr><td>2</td><td>Customer B</td><td>2021-08-11</td><td>45.5</td><td>2</td></tr>
+<tr><td>3</td><td>Customer C</td><td>2021-08-12</td><td>75.3</td><td>3</td></tr>
+<tr><td>4</td><td>Customer D</td><td>2021-08-13</td><td>80.5</td><td>1</td></tr>
+<tr><td>5</td><td>Customer E</td><td>2021-08-14</td><td>55.2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Order_details</h2><table><thead>
+<tr><th>detail_id</th><th>quantity</th><th>menu_item_id</th><th>order_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Menu_items.menu_item_id)</th><th>(&#8594; Orders.order_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>1</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>1</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

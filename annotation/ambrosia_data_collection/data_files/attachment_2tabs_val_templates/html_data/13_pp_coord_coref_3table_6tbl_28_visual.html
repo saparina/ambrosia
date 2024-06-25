@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Reporters</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone_number</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>123-456-7890</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>098-765-4321</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alicejohnson@example.com</td><td>555-555-5555</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bobbrown@example.com</td><td>333-333-3333</td><td>101 Pine St</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>charliegreen@example.com</td><td>222-222-2222</td><td>111 Maple Ave</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Photographers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone_number</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David White</td><td>davidwhite@example.com</td><td>444-444-4444</td><td>234 Birch St</td></tr>
+<tr><td>2</td><td>Eva Black</td><td>evablack@example.com</td><td>666-666-6666</td><td>345 Cedar St</td></tr>
+<tr><td>3</td><td>Frank Red</td><td>frankred@example.com</td><td>777-777-7777</td><td>456 Walnut St</td></tr>
+<tr><td>4</td><td>Grace Blue</td><td>graceblue@example.com</td><td>888-888-8888</td><td>567 Willow St</td></tr>
+<tr><td>5</td><td>Hannah Green</td><td>hannahgreen@example.com</td><td>999-999-9999</td><td>678 Sycamore St</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Articles</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th><span style="color:#1430b2">deadline</span></th><th>reporter_id</th><th>photographer_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Reporters.id)</th><th>(&#8594; Photographers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article Title 1</td><td>Content of Article 1</td><td>2020-04-25</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Article Title 2</td><td>Content of Article 2</td><td>2020-04-26</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Article Title 3</td><td>Content of Article 3</td><td>2020-04-27</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Article Title 4</td><td>Content of Article 4</td><td><span style="color:#1430b2">2020-04-28</span></td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Article Title 5</td><td>Content of Article 5</td><td>2020-04-29</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>id</th><th>name</th><th>contact_info</th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Source A</td><td>sourcea@example.com</td><td>Government Agency</td></tr>
+<tr><td>2</td><td>Source B</td><td>sourceb@example.com</td><td>NGO</td></tr>
+<tr><td>3</td><td>Source C</td><td>sourcec@example.com</td><td>Private Company</td></tr>
+<tr><td>4</td><td>Source D</td><td>sourced@example.com</td><td>Academic Institution</td></tr>
+<tr><td>5</td><td>Source E</td><td>sourcee@example.com</td><td>Journalist Association</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleSources</h2><table><thead>
+<tr><th>article_id</th><th>source_id</th><th>relationship</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; Sources.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Primary Source</td></tr>
+<tr><td>1</td><td>2</td><td>Secondary Source</td></tr>
+<tr><td>2</td><td>3</td><td>Expert Interview</td></tr>
+<tr><td>2</td><td>4</td><td>Background Information</td></tr>
+<tr><td>3</td><td>5</td><td>Press Release</td></tr>
+</tbody></table></div>
+
+<div><h2>ReaderComments</h2><table><thead>
+<tr><th>comment_id</th><th>reader_name</th><th>email</th><th>comment</th><th>article_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Articles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Reader 1</td><td>reader1@example.com</td><td>Great article!</td><td>1</td></tr>
+<tr><td>2</td><td>Reader 2</td><td>reader2@example.com</td><td>Interesting perspective.</td><td>2</td></tr>
+<tr><td>3</td><td>Reader 3</td><td>reader3@example.com</td><td>I disagree with the conclusion.</td><td>3</td></tr>
+<tr><td>4</td><td>Reader 4</td><td>reader4@example.com</td><td>This is misleading information.</td><td>4</td></tr>
+<tr><td>5</td><td>Reader 5</td><td>reader5@example.com</td><td>Well-written and informative.</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

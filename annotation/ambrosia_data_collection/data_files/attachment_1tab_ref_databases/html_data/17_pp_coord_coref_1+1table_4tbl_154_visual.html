@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Countries</h2><table><thead>
+<tr><th>CountryID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>USA</td></tr>
+<tr><td>2</td><td>UK</td></tr>
+<tr><td>3</td><td>France</td></tr>
+<tr><td>4</td><td>Germany</td></tr>
+<tr><td>5</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>Cities</h2><table><thead>
+<tr><th>CityID</th><th>Name</th><th>CountryId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Countries.CountryID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>1</td></tr>
+<tr><td>2</td><td>London</td><td>2</td></tr>
+<tr><td>3</td><td>Paris</td><td>3</td></tr>
+<tr><td>4</td><td>Berlin</td><td>4</td></tr>
+<tr><td>5</td><td>Tokyo</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Airports</span></h2><table><thead>
+<tr><th>AirportId</th><th>Name</th><th>CityId</th><th><span style="color:#990000"><span style="color:#990000">Structure</span></span></th><th>RunwayLength</th></tr>
+<tr><th></th><th></th><th>(&#8594; Cities.CityID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>1</td><td><span style="color:#990000">Terminal Building</span></td><td>9000.0</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>Heathrow Airport</td><td><span style="color:#006600">2</span></td><td><span style="color:#990000">Terminal Building</span></td><td>8000.0</td></tr>
+<tr><td>3</td><td>Charles de Gaulle Airport</td><td>3</td><td><span style="color:#990000">Terminal Building</span></td><td>6000.0</td></tr>
+<tr><td>4</td><td>Tegel Airport</td><td>4</td><td><span style="color:#990000">Cargo Terminal</span></td><td>4000.0</td></tr>
+<tr><td>5</td><td>Haneda Airport</td><td>5</td><td><span style="color:#990000">Terminal Building</span></td><td>8500.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Flights</span></h2><table><thead>
+<tr><th>FlightId</th><th>SourceAirportId</th><th>DestinationAirportId</th><th>DepartureTime</th><th>ArrivalTime</th><th><span style="color:#006600">AircraftId</span></th></tr>
+<tr><th></th><th>(&#8594; Airports.AirportId)</th><th>(&#8594; Airports.AirportId)</th><th></th><th></th><th>(&#8594; Planes.PlaneId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span><span style="color:#006600">2</span>-01-01 08:00:00</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span><span style="color:#006600">2</span>-01-01 1<span style="color:#006600">2</span>:00:00</td><td>1</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span></td><td>1</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span><span style="color:#006600">2</span>-01-0<span style="color:#006600">2</span> 08:00:00</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span><span style="color:#006600">2</span>-01-0<span style="color:#006600">2</span> 1<span style="color:#006600">2</span>:00:00</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>4</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span><span style="color:#006600">2</span>-01-03 08:00:00</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span><span style="color:#006600">2</span>-01-03 1<span style="color:#006600">2</span>:00:00</td><td><span style="color:#006600">2</span></td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span><span style="color:#006600">2</span>-01-04 08:00:00</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span><span style="color:#006600">2</span>-01-04 1<span style="color:#006600">2</span>:00:00</td><td><span style="color:#006600">2</span></td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-01-05 08:00:00</td><td>2022-01-05 12:00:00</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>PlaneId</th><th>Model</th><th>Seats</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 747</td><td>400</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>800</td></tr>
+<tr><td>3</td><td>Bombardier CRJ1000</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2>Runways</h2><table><thead>
+<tr><th>RunwayId</th><th>Length</th><th>Width</th><th>AirportId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.AirportId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10000.0</td><td>150.0</td><td>1</td></tr>
+<tr><td>2</td><td>9000.0</td><td>150.0</td><td>2</td></tr>
+<tr><td>3</td><td>7000.0</td><td>150.0</td><td>3</td></tr>
+<tr><td>4</td><td>6000.0</td><td>150.0</td><td>4</td></tr>
+<tr><td>5</td><td>9500.0</td><td>150.0</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

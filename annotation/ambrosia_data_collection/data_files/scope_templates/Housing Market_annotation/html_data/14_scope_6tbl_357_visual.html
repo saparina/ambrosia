@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Home_Inspections</span></h2><table><thead>
+<tr><th>id</th><th>address</th><th>inspection_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>2022-01-02</td></tr>
+<tr><td>3</td><td>789 Oak St</td><td>2022-01-03</td></tr>
+<tr><td>4</td><td>135 Maple Ave</td><td>2022-01-04</td></tr>
+<tr><td>5</td><td>987 Pine Rd</td><td>2022-01-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Issues</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">issue_type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Roof Damage</td></tr>
+<tr><td>2</td><td>Foundation Crack</td></tr>
+<tr><td>3</td><td>Electrical Problem</td></tr>
+<tr><td>4</td><td>Plumbing Issue</td></tr>
+<tr><td>5</td><td>Pest Infestation</td></tr>
+</tbody></table></div>
+
+<div><h2>Home_Inspection_Issues</h2><table><thead>
+<tr><th>home_inspection_id</th><th>issue_id</th></tr>
+<tr><th>(&#8594; Home_Inspections.id)</th><th>(&#8594; Issues.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

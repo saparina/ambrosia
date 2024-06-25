@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Media_Types</h2><table><thead>
+<tr><th>ID</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Print</td></tr>
+<tr><td>2</td><td>Online</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Jobs</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000"><span style="color:#990000">Title</span></span></th><th>Description</th><th>Salary</th><th>PostedDate</th><th>ClosingDate</th><th>Status</th><th>MediaTypeID</th><th>LanguageProficiencyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Media_Types.ID)</th><th>(&#8594; Languages.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Journalist</span></td><td>Write news articles for a newspaper.</td><td>60000.0</td><td>2021-09-01</td><td>2021-09-30</td><td>Open</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Journalist</span></td><td>Create content for an online magazine.</td><td>70000.0</td><td>2021-08-15</td><td>2021-09-15</td><td>Open</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Editor</span></td><td>Edit and proofread articles for a print publication.</td><td>75000.0</td><td>2021-09-10</td><td>2021-09-25</td><td>Open</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Editor</span></td><td>Review and edit content for an ebook publisher.</td><td>80000.0</td><td>2021-08-20</td><td>2021-09-20</td><td>Open</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>Graphic Designer</td><td>Design layouts and visual elements for magazines.</td><td>65000.0</td><td>2021-09-05</td><td>2021-09-25</td><td>Open</td><td>2</td><td>3</td></tr>
+<tr><td>6</td><td>Web Developer</td><td>Develop websites and manage online presence.</td><td>85000.0</td><td>2021-08-25</td><td>2021-09-30</td><td>Open</td><td>3</td><td>1</td></tr>
+<tr><td>7</td><td>Data Analyst</td><td>Analyze and interpret data for various industries.</td><td>90000.0</td><td>2021-09-10</td><td>2021-09-25</td><td>Closed</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Media_Types_Values</h2><table><thead>
+<tr><th>ID</th><th>Value</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Newspaper</td></tr>
+<tr><td>2</td><td>Magazine</td></tr>
+<tr><td>3</td><td>Blog</td></tr>
+<tr><td>4</td><td>Ebook</td></tr>
+<tr><td>5</td><td>Podcast</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs_Values</h2><table><thead>
+<tr><th>ID</th><th>JobID</th><th>ValueID</th></tr>
+<tr><th></th><th>(&#8594; Jobs.ID)</th><th>(&#8594; Media_Types_Values.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>7</td><td>3</td></tr>
+<tr><td>7</td><td>7</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Languages</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">English</span></td></tr>
+<tr><td>2</td><td>Spanish</td></tr>
+<tr><td>3</td><td>French</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

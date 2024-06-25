@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Studio</h2><table><thead>
+<tr><th>studioID</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Studiopolis</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>FilmoVista</td><td>New York</td></tr>
+<tr><td>3</td><td>CinemaRama</td><td>London</td></tr>
+<tr><td>4</td><td>ReelWorld</td><td>Tokyo</td></tr>
+<tr><td>5</td><td>FlickerPix</td><td>Mumbai</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>directorID</th><th>firstName</th><th>lastName</th><th>birthDate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1960-07-28</td><td>American</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1975-03-12</td><td>English</td></tr>
+<tr><td>3</td><td>Emma</td><td>Jones</td><td>1988-09-15</td><td>Australian</td></tr>
+<tr><td>4</td><td>Kevin</td><td>Williams</td><td>1990-01-31</td><td>Canadian</td></tr>
+<tr><td>5</td><td>Ava</td><td>Martinez</td><td>1995-11-07</td><td>Spanish</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>actorID</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th><th>gender</th><th>ethnicity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>M</td><td>White</td></tr>
+<tr><td>2</td><td>Meryl</td><td>Streep</td><td>1949-06-22</td><td>F</td><td>White</td></tr>
+<tr><td>3</td><td>Idris</td><td>Elba</td><td>1967-09-09</td><td>M</td><td>Black</td></tr>
+<tr><td>4</td><td>Gal</td><td>Gadot</td><td>1985-04-30</td><td>F</td><td>Israeli</td></tr>
+<tr><td>5</td><td>Chris</td><td>Evans</td><td>1981-06-13</td><td>M</td><td>White</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>movieID</th><th>title</th><th>releaseYear</th><th>genre</th><th>budget</th><th>boxOffice</th><th>studioID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Studio.studioID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Science Fiction</td><td>160000000.0</td><td>829000000.0</td><td>1</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>2008</td><td>Action</td><td>185000000.0</td><td>1004000000.0</td><td>2</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>2014</td><td>Science Fiction</td><td>165000000.0</td><td>677000000.0</td><td>3</td></tr>
+<tr><td>4</td><td>Avatar</td><td>2009</td><td>Science Fiction</td><td>237000000.0</td><td>2741000000.0</td><td>4</td></tr>
+<tr><td>5</td><td>La La Land</td><td>2016</td><td>Musical</td><td>30000000.0</td><td>446000000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Casting</h2><table><thead>
+<tr><th>castingID</th><th>movieID</th><th>actorID</th><th>role</th></tr>
+<tr><th></th><th>(&#8594; Movie.movieID)</th><th>(&#8594; Actor.actorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Cobb</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Arthur</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>Bruce Wayne</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>Alfred Pennyworth</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>Cooper</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">TreatmentType</span></h2><table><thead>
+<tr><th>treatmentTypeID</th><th><span style="color:#006600">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Massage Therapy</span></td></tr>
+<tr><td>2</td><td>Yoga</td></tr>
+<tr><td>3</td><td>Acupuncture</td></tr>
+<tr><td>4</td><td>Meditation</td></tr>
+<tr><td>5</td><td>Herbal Treatments</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RelaxationFacility</span></h2><table><thead>
+<tr><th>relaxationID</th><th><span style="color:#990000"><span style="color:#990000">facility</span></span></th><th>treatmentTypeID</th></tr>
+<tr><th></th><th></th><th>(&#8594; TreatmentType.treatmentTypeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Spa</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Spa</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Wellness Retreat</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Wellness Retreat</span></td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

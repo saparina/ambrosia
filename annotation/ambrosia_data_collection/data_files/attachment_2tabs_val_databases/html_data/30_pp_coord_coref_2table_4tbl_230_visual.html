@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Luggage_Trolleys</span></h2><table><thead>
+<tr><th>ID</th><th>Available_Location</th><th>Number_Of_Trolleys</th><th>Last_Maintenance</th><th>Current_Condition</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Entrance B</span></td><td>10</td><td>2023-04-01</td><td>Excellent</td></tr>
+<tr><td>2</td><td>Departures C</td><td>5</td><td>2023-03-26</td><td>Good</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Porters</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Available_Location</th><th>Availability</th><th>Contact_Number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td><span style="color:#006600">Entrance B</span></td><td>1</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>Arrivals A</td><td>0</td><td>+9876543210</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>ID</th><th>First_Name</th><th>Last_Name</th><th>Flight_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Flights.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Checked_Baggage</h2><table><thead>
+<tr><th>ID</th><th>Passenger_ID</th><th>Flight_ID</th><th>Weight</th></tr>
+<tr><th></th><th>(&#8594; Passengers.ID)</th><th>(&#8594; Flights.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>20</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>25</td></tr>
+</tbody></table></div>
+
+<div><h2>CarRental</h2><table><thead>
+<tr><th>ID</th><th>Renter_ID</th><th>Vehicle_Type</th><th>Pickup_Date</th><th>Dropoff_Date</th></tr>
+<tr><th></th><th>(&#8594; Passengers.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Compact</td><td>2023-04-05 08:00:00</td><td>2023-04-10 18:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>SUV</td><td>2023-04-06 09:00:00</td><td>2023-04-11 17:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

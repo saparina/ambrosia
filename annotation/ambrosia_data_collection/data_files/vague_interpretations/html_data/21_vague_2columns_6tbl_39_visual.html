@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Festivals</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">Country</span></th><th><span style="color:#990000">City</span></th><th>FestivalName</th><th>Date</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>USA</td><td>Los Angeles</td><td>Coachella Music and Arts Festival</td><td>2023-04-13</td><td>Music</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Nationality</th><th>Occupation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beyonce</td><td>USA</td><td>Musician</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseDate</th><th>ArtistID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Artists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lemonade</td><td>2016-04-23</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Length</th><th>AlbumID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Albums.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Formation</td><td>03:38</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieTitles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>Director</th><th>LeadActor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Christopher Nolan</td><td>Leonardo DiCaprio</td></tr>
+</tbody></table></div>
+
+<div><h2>MoviesAndSongs</h2><table><thead>
+<tr><th>id</th><th>MovieTitleID</th><th>SongID</th></tr>
+<tr><th></th><th>(&#8594; MovieTitles.id)</th><th>(&#8594; Songs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

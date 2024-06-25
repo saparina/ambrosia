@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2000-01-01</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1985-06-15</td><td>Canada</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th><th>ViewCount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Test article title</td><td>This is a test article content.</td><td>2022-01-01</td><td>0</td></tr>
+<tr><td>2</td><td>Another test article</td><td>Here is another piece of test content.</td><td>2022-01-02</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>PublisherID</th><th>CompanyName</th><th>Address</th><th>Website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Example Publishing</td><td>123 Example St, Example City</td><td>http://www.examplepublishing.com</td></tr>
+<tr><td>2</td><td>Sample Publishing</td><td>456 Sample Ave, Sample Town</td><td>http://www.samplepublishing.org</td></tr>
+</tbody></table></div>
+
+<div><h2>Authorship</h2><table><thead>
+<tr><th>AuthorID</th><th>ArticleID</th><th>DatePublished</th></tr>
+<tr><th>(&#8594; Authors.AuthorID)</th><th>(&#8594; Articles.ArticleID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-02</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FinancialSupport</span></h2><table><thead>
+<tr><th>SupportID</th><th>Type</th><th>Amount</th><th>Description</th><th>DateReceived</th><th>ForeignKeyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Publications.PublisherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Donations</span></td><td><span style="color:#006600">30000.0</span></td><td>A large donation received from an anonymous source.</td><td>2021-12-31</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Donations</span></td><td>25000.0</td><td>Smaller donation received from a fan.</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Grant Funding</span></td><td><span style="color:#006600">30000.0</span></td><td>A research grant was awarded by the government.</td><td>2021-12-31</td><td>2</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Grant Funding</span></td><td>27000.0</td><td>A smaller grant received for community outreach programs.</td><td>2022-01-01</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

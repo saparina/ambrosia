@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>MenuItems</h2><table><thead>
+<tr><th>item_id</th><th>restaurant_id</th><th>item_name</th><th>description</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Restaurants.restaurant_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Steak</td><td>Grilled steak with garlic butter</td><td>29.99</td></tr>
+<tr><td>2</td><td>1</td><td>Seafood Platter</td><td>Assorted seafood with lemon herb sauce</td><td>34.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>restaurant_id</th><th>name</th><th>location</th><th><span style="color:#990000">Chef</span></th><th>cuisine</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gourmet Grill</td><td>Downtown</td><td>Chef Johnson</td><td>Steaks & Seafood</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

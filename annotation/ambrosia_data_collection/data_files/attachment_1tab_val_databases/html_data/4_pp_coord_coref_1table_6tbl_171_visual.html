@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publicationDate</th><th>authorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Article</td><td>Content of first article.</td><td>2024-03-07 23:04:26</td><td>1</td></tr>
+<tr><td>2</td><td>Second Article</td><td>Content of second article.</td><td>2024-03-07 23:04:26</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MediaForms</span></h2><table><thead>
+<tr><th>id</th><th>mediaType</th><th>length</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Podcast</span></td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Podcast</span></td><td>30</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Audio Documentary</span></td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Audio Documentary</span></td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2>PodcastEpisodes</h2><table><thead>
+<tr><th>id</th><th>episodeNumber</th><th>title</th><th>releaseDate</th><th>articleId</th><th>mediaFormatId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Articles.id)</th><th>(&#8594; MediaForms.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Episode 1</td><td>2024-03-07 23:04:26</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>Episode 2</td><td>2024-03-07 23:04:26</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Movie_sets</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>director</th><th>release_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>Christopher Nolan</td><td>2008-07-16</td></tr>
+<tr><td>2</td><td>Inception</td><td>Christopher Nolan</td><td>2010-07-16</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>Christopher Nolan</td><td>2014-11-07</td></tr>
+<tr><td>4</td><td>Mad Max: Fury Road</td><td>George Miller</td><td>2015-05-14</td></tr>
+<tr><td>5</td><td>Birdman</td><td>Alejandro González Iñárritu</td><td>2014-10-16</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Equipment</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">name</span></th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Canon C200</td><td>Camera</td></tr>
+<tr><td>2</td><td>Arri Alexa Mini</td><td>Camera</td></tr>
+<tr><td>3</td><td>DJI Ronin-SC</td><td>Gimbal</td></tr>
+<tr><td>4</td><td>Rokinon Xeen 35mm T1.5</td><td>Lens</td></tr>
+<tr><td>5</td><td>Mathews Freefly MOVI M10</td><td>Crane</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_sets_equipment</h2><table><thead>
+<tr><th>movie_set_id</th><th>equipment_id</th><th>quantity</th></tr>
+<tr><th>(&#8594; Movie_sets.id)</th><th>(&#8594; Equipment.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>1</td><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>1</td><td>4</td></tr>
+<tr><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td><td>1</td></tr>
+<tr><td>5</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

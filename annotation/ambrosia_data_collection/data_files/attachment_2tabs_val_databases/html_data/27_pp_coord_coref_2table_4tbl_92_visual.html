@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Emily Thompson</td></tr>
+<tr><td>2</td><td>John Doe</td></tr>
+<tr><td>3</td><td>Jane Smith</td></tr>
+<tr><td>4</td><td>Alice Johnson</td></tr>
+<tr><td>5</td><td>Bob Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Essays</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>AuthorId</th><th>Category</th><th>AssignedByName</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>The Art of Storytelling</td><td>Lorem ipsum dolor sit amet...</td><td><span style="color:#006600">1</span></td><td>Storytelling</td><td>Dr. Emily Thompson</td></tr>
+<tr><td>2</td><td>Understanding Human Behavior</td><td>Dolore magna aliqua...</td><td>2</td><td>Psychology</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Traveling the World</td><td>Excepteur sint occaecat...</td><td>3</td><td>Travel</td><td>Alice Johnson</td></tr>
+<tr><td>4</td><td>Cooking Delicious Meals</td><td>Ut enim ad minim veniam...</td><td>4</td><td>Culinary Arts</td><td>Bob Brown</td></tr>
+<tr><td>5</td><td>The Power of Words</td><td>Non proident, sunt in culpa...</td><td>5</td><td>Language</td><td>Dr. Emily Thompson</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Letters</span></h2><table><thead>
+<tr><th>id</th><th>Subject</th><th>Body</th><th>AuthorId</th><th>Category</th><th>AssignedByName</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Meeting Schedule</td><td>Quis nostrud exercitation ullamco...</td><td><span style="color:#006600">1</span></td><td>Business</td><td>Dr. Emily Thompson</td></tr>
+<tr><td>2</td><td>Project Update</td><td>Velit esse cillum dolore eu...</td><td>2</td><td>Work</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Family Reunion</td><td>In reprehenderit in voluptate...</td><td>3</td><td>Personal</td><td>Alice Johnson</td></tr>
+<tr><td>4</td><td>Job Application</td><td>Irure dolor in reprehenderit...</td><td>4</td><td>Employment</td><td>Bob Brown</td></tr>
+<tr><td>5</td><td>Holiday Greetings</td><td>Excepteur sint occaecat cupidatat...</td><td>5</td><td>Seasonal</td><td>Dr. Emily Thompson</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Genre</th><th>Rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Action/Adventure</td><td>PG-13</td></tr>
+<tr><td>2</td><td>The Shawshank Redemption</td><td>Drama</td><td>R</td></tr>
+<tr><td>3</td><td>Schindler's List</td><td>Historical Drama</td><td>R</td></tr>
+<tr><td>4</td><td>Forrest Gump</td><td>Romantic Comedy</td><td>PG-13</td></tr>
+<tr><td>5</td><td>The Dark Knight</td><td>Superhero Action</td><td>PG-13</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>FavoriteMovieId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Movies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Nolan</td><td>1970-07-30</td><td>1</td></tr>
+<tr><td>2</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>2</td></tr>
+<tr><td>3</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>3</td></tr>
+<tr><td>4</td><td>Steven</td><td>Spielberg</td><td>1946-12-18</td><td>4</td></tr>
+<tr><td>5</td><td>Heath</td><td>Ledger</td><td>1979-04-04</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

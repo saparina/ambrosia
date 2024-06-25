@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Address</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>123 Tech St.</td><td>+123456789</td></tr>
+<tr><td>2</td><td>MedCo</td><td>456 Med Ave.</td><td>+987654321</td></tr>
+<tr><td>3</td><td>FinCorp</td><td>789 Fin Blvd.,</td><td>+321654897</td></tr>
+<tr><td>4</td><td>EduInc</td><td>123 Edu St.</td><td>+543219876</td></tr>
+<tr><td>5</td><td>GovAgency</td><td>456 Gov Plaza</td><td>+789654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>Name</th><th>Description</th><th>LocationID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering</td><td>Research and Development</td><td>1</td></tr>
+<tr><td>2</td><td>Marketing</td><td>Brand Management</td><td>1</td></tr>
+<tr><td>3</td><td>HR</td><td>Recruitment and Onboarding</td><td>2</td></tr>
+<tr><td>4</td><td>IT</td><td>System Administration</td><td>2</td></tr>
+<tr><td>5</td><td>Accounting</td><td>Budget and Audit</td><td>3</td></tr>
+<tr><td>6</td><td>Academics</td><td>Curriculum Design</td><td>4</td></tr>
+<tr><td>7</td><td>Policy</td><td>Legislative Affairs</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Positions</h2><table><thead>
+<tr><th>PositionID</th><th>Title</th><th>Salary</th><th>DepartmentID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Departments.DepartmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>80000</td><td>1</td></tr>
+<tr><td>2</td><td>Product Manager</td><td>90000</td><td>1</td></tr>
+<tr><td>3</td><td>HR Specialist</td><td>60000</td><td>2</td></tr>
+<tr><td>4</td><td>Network Administrator</td><td>70000</td><td>2</td></tr>
+<tr><td>5</td><td>Accountant</td><td>50000</td><td>3</td></tr>
+<tr><td>6</td><td>Professor</td><td>85000</td><td>4</td></tr>
+<tr><td>7</td><td>Policy Analyst</td><td>75000</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Employees</span></h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>HireDate</th><th>PositionID</th><th>Mental_Health_Career</th><th>Clinic</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Positions.PositionID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-01-01</td><td>2015-06-01</td><td>3</td><td><span style="color:#990000">Psychologist</span></td><td><span style="color:#006600">Harmony Wellness Center</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-01-01</td><td>2017-08-01</td><td>4</td><td><span style="color:#990000">Psychologist</span></td><td>Serenity Center</td></tr>
+<tr><td>3</td><td>Alice</td><td>Jackson</td><td>1988-01-01</td><td>2018-12-01</td><td>1</td><td><span style="color:#990000">Psychiatrist</span></td><td><span style="color:#006600">Harmony Wellness Center</span></td></tr>
+<tr><td>4</td><td>Tom</td><td>Lee</td><td>1992-01-01</td><td>2019-05-01</td><td>2</td><td><span style="color:#990000">Psychiatrist</span></td><td>Peaceful Haven</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

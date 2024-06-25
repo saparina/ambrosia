@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>published_date</th><th>author_id</th><th>stringer_id</th><th>editor_id</th><th>payment</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Stringers.id)</th><th>(&#8594; Editors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1 Title</td><td>Content of Article 1</td><td>None</td><td>1</td><td>1</td><td>1</td><td>500.0</td></tr>
+<tr><td>2</td><td>Article 2 Title</td><td>Content of Article 2</td><td>None</td><td>2</td><td>2</td><td>2</td><td>1000.0</td></tr>
+<tr><td>3</td><td>Article 3 Title</td><td>Content of Article 3</td><td>None</td><td>3</td><td>3</td><td>3</td><td>800.0</td></tr>
+<tr><td>4</td><td>Article 4 Title</td><td>Content of Article 4</td><td>None</td><td>4</td><td>4</td><td>4</td><td>1500.0</td></tr>
+<tr><td>5</td><td>Article 5 Title</td><td>Content of Article 5</td><td>None</td><td>5</td><td>5</td><td>5</td><td>1200.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob@example.com</td></tr>
+<tr><td>5</td><td>Mary</td><td>Green</td><td>mary@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Stringers</span></h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>tomhanks@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Emma</td><td>Watson</td><td>emmawatson@example.com</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>Leo</td><td>DiCaprio</td><td>leodicaprio@example.com</td><td>+1123456789</td></tr>
+<tr><td>4</td><td>Kate</td><td>Winslet</td><td>katewinslet@example.com</td><td>+0098765432</td></tr>
+<tr><td>5</td><td>Chris</td><td>Evans</td><td>chrisevans@example.com</td><td>+1123456780</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Editors</span></h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Peter</td><td>Garfield</td><td>petergarfield@example.com</td></tr>
+<tr><td>2</td><td>Barbara</td><td>Walters</td><td>barbarawalters@example.com</td></tr>
+<tr><td>3</td><td>Daniel</td><td>Craig</td><td>danielcraig@example.com</td></tr>
+<tr><td>4</td><td>Keira</td><td>Knightley</td><td>keiraknightley@example.com</td></tr>
+<tr><td>5</td><td>Mark</td><td>Ruffalo</td><td>markruffalo@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Payments</span></h2><table><thead>
+<tr><th>article_id</th><th><span style="color:#006600">amount</span></th><th>paid_on</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000.0</td><td>2022-01-01 12:00:00</td></tr>
+<tr><td>2</td><td><span style="color:#006600">2000.0</span></td><td>2022-01-02 12:00:00</td></tr>
+<tr><td>3</td><td>1500.0</td><td>2022-01-03 12:00:00</td></tr>
+<tr><td>4</td><td>800.0</td><td>2022-01-04 12:00:00</td></tr>
+<tr><td>5</td><td>1200.0</td><td>2022-01-05 12:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

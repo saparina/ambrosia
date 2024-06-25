@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Festivals</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th><span style="color:#186e16">Cultural_Festival</span></th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Summer <span style="color:#186e16">Music Festival</span></td><td><span style="color:#186e16">Music Festival</span></td><td>New York</td></tr>
+<tr><td>2</td><td>Fall Film Festival</td><td>Film Festival</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Winter Jazz Concerts</td><td><span style="color:#186e16">Music Festival</span></td><td>Chicago</td></tr>
+<tr><td>4</td><td>Spring Dance Showcase</td><td>Dance Festival</td><td>Boston</td></tr>
+<tr><td>5</td><td>Autumn Art Exhibition</td><td>Art Festival</td><td>Miami</td></tr>
+</tbody></table></div>
+
+<div><h2>Participants</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Role</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>Performer</td><td>32</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>Volunteer</td><td>28</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>Organizer</td><td>37</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>Technician</td><td>41</td></tr>
+<tr><td>5</td><td>Emma</td><td>Martin</td><td>Artist</td><td>29</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Events</span></h2><table><thead>
+<tr><th>id</th><th>FestivalID</th><th><span style="color:#1430b2">Attendance</span></th><th>ParticipantID</th></tr>
+<tr><th></th><th>(&#8594; Festivals.id)</th><th></th><th>(&#8594; Participants.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>50000</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td><span style="color:#1430b2">60000</span></td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>50000</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td><span style="color:#1430b2">60000</span></td><td>4</td></tr>
+<tr><td>5</td><td>3</td><td>70000</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

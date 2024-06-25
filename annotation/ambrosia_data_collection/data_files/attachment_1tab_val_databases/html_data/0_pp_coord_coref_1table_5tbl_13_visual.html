@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Major</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1987-06-15</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-08-30</td><td>Mathematics</td></tr>
+</tbody></table></div>
+
+<div><h2>Professors</h2><table><thead>
+<tr><th>ProfessorID</th><th>FirstName</th><th>LastName</th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael</td><td>Johnson</td><td>Physics</td></tr>
+<tr><td>2</td><td>Emily</td><td>Williams</td><td>Biology</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Papers</span></h2><table><thead>
+<tr><th>PaperID</th><th>Title</th><th>AbstractText</th><th>Academic_PaperType</th><th>Citation_Style</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Students.StudentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sample <span style="color:#990000">Research Paper</span></td><td>This is a sample abstract.</td><td><span style="color:#990000">Research Paper</span></td><td><span style="color:#006600">APA</span></td><td>1</td></tr>
+<tr><td>2</td><td>Another Sample <span style="color:#990000">Research Paper</span></td><td>Here is another sample abstract.</td><td><span style="color:#990000">Research Paper</span></td><td>Chicago</td><td>1</td></tr>
+<tr><td>3</td><td>Sample <span style="color:#990000">Review Article</span></td><td>Below is an example review article abstract.</td><td><span style="color:#990000">Review Article</span></td><td><span style="color:#006600">APA</span></td><td>2</td></tr>
+<tr><td>4</td><td>Yet Another <span style="color:#990000">Review Article</span></td><td>Check out this other review article abstract.</td><td><span style="color:#990000">Review Article</span></td><td>MLA</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Conferences</h2><table><thead>
+<tr><th>ConferenceID</th><th>Name</th><th>Location</th><th>Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Conference A</td><td>Location A</td><td>2021</td></tr>
+<tr><td>2</td><td>Conference B</td><td>Location B</td><td>2022</td></tr>
+</tbody></table></div>
+
+<div><h2>Presentations</h2><table><thead>
+<tr><th>PresentationID</th><th>PaperID</th><th>ConferenceID</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Papers.PaperID)</th><th>(&#8594; Conferences.ConferenceID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-06-15</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-06-15</td></tr>
+</tbody></table></div>
+
+<div><h2>CourseEnrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th><th>Grade</th><th>Semester</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>A</td><td>2020</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>B+</td><td>2021</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>CourseTitle</th><th>InstructorID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Professors.ProfessorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>1</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

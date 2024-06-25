@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Room</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Indoor_Outdoor_Space</th><th>Size</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Conference Hall</td><td><span style="color:#990000">Lobby</span></td><td><span style="color:#006600">500</span></td><td>678.99</td></tr>
+<tr><td>2</td><td>Banquet Hall</td><td><span style="color:#990000">Lobby</span></td><td>600</td><td>830.99</td></tr>
+<tr><td>3</td><td>Rooftop <span style="color:#990000">Terrace</span></td><td><span style="color:#990000">Terrace</span></td><td><span style="color:#006600">500</span></td><td>1000.99</td></tr>
+<tr><td>4</td><td>Garden Patio</td><td><span style="color:#990000">Terrace</span></td><td>400</td><td>870.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Amenities</h2><table><thead>
+<tr><th>id</th><th>amenityName</th><th>available</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>WiFi</td><td>1</td></tr>
+<tr><td>2</td><td>Parking Space</td><td>1</td></tr>
+<tr><td>3</td><td>Air Conditioner</td><td>1</td></tr>
+<tr><td>4</td><td>Projector</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>bookingID</th><th>roomId</th><th>customerId</th><th>startDate</th><th>endDate</th><th>totalPrice</th></tr>
+<tr><th></th><th>(&#8594; Room.id)</th><th>(&#8594; Customer.customerID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-10</td><td>2022-01-12</td><td>2000</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-01-15</td><td>2022-01-17</td><td>3000</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-01-20</td><td>2022-01-22</td><td>4000</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-01-25</td><td>2022-01-27</td><td>5000</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer</h2><table><thead>
+<tr><th>customerID</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>+123456789</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>+234567890</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>michael@example.com</td><td>+345678901</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>emily@example.com</td><td>+45678902</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

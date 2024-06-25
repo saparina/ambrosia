@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John F. Kennedy International</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>Los Angeles International</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>3</td><td>Dubai International</td><td>Dubai</td><td>UAE</td></tr>
+<tr><td>4</td><td>Heathrow Airport</td><td>London</td><td>UK</td></tr>
+<tr><td>5</td><td>Charles de Gaulle Airport</td><td>Paris</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>airline_name</th><th>headquarters_city</th><th>headquarters_country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>Fort Worth</td><td>USA</td></tr>
+<tr><td>2</td><td>Delta Air Lines</td><td>Atlanta</td><td>USA</td></tr>
+<tr><td>3</td><td>Emirates</td><td>Dubai</td><td>UAE</td></tr>
+<tr><td>4</td><td>British Airways</td><td>London</td><td>UK</td></tr>
+<tr><td>5</td><td>Air France</td><td>Paris</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">manufacturer_name</span></th><th><span style="color:#990000">model_name</span></th><th>purpose</th><th>max_passenger_capacity</th><th>range_km</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing</td><td>787-9 Dreamliner</td><td>Passenger</td><td>280</td><td>13600.0</td></tr>
+<tr><td>2</td><td>Airbus</td><td>A350-1000</td><td>Passenger</td><td>440</td><td>14800.0</td></tr>
+<tr><td>3</td><td>Bombardier Aerospace</td><td>Global 7500</td><td>Business Jet</td><td>19</td><td>7700.0</td></tr>
+<tr><td>4</td><td>Gulfstream Aerospace</td><td>G650ER</td><td>Business Jet</td><td>18</td><td>7500.0</td></tr>
+<tr><td>5</td><td>Embraer Executive Jets</td><td>Legacy 650</td><td>Business Jet</td><td>12</td><td>6000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Routes</h2><table><thead>
+<tr><th>id</th><th>source_airport_id</th><th>destination_airport_id</th><th>airline_id</th><th>departure_time</th><th>arrival_time</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th><th>(&#8594; Airlines.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>1</td><td>2022-01-01 12:00:00</td><td>2022-01-01 16:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>3</td><td>2022-01-01 14:00:00</td><td>2022-01-01 20:00:00</td></tr>
+<tr><td>3</td><td>4</td><td>None</td><td>4</td><td>2022-01-01 10:00:00</td><td>2022-01-01 14:00:00</td></tr>
+<tr><td>4</td><td>5</td><td>1</td><td>5</td><td>2022-01-01 16:00:00</td><td>2022-01-01 10:00:00</td></tr>
+<tr><td>5</td><td>1</td><td>2</td><td>2</td><td>2022-01-01 15:00:00</td><td>2022-01-01 19:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>route_id</th><th>plane_id</th><th>flight_number</th><th>departure_date</th><th>scheduled_departure_time</th><th>actual_departure_time</th></tr>
+<tr><th></th><th>(&#8594; Routes.id)</th><th>(&#8594; Planes.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>AA123</td><td>2022-01-01</td><td>12:00:00</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>EK123</td><td>2022-01-01</td><td>14:00:00</td><td>None</td></tr>
+<tr><td>3</td><td>None</td><td>2</td><td>BA123</td><td>2022-01-01</td><td>10:00:00</td><td>None</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>AF123</td><td>2022-01-01</td><td>16:00:00</td><td>None</td></tr>
+<tr><td>5</td><td>5</td><td>None</td><td>DL123</td><td>2022-01-01</td><td>15:00:00</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilots</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>license_number</th><th>rating_level</th><th>total_flight_hours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>ABCD1234</td><td>ATPL</td><td>5000</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>EFGH5678</td><td>ATPL</td><td>7000</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>IJKL9012</td><td>ATPL</td><td>6000</td></tr>
+<tr><td>4</td><td>Sarah</td><td>Williams</td><td>LMNO3456</td><td>ATPL</td><td>4500</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>PQRS7890</td><td>ATPL</td><td>5500</td></tr>
+</tbody></table></div>
+
+<div><h2>AssignsPilotToFlight</h2><table><thead>
+<tr><th>pilot_id</th><th>flight_id</th><th>assignment_date</th></tr>
+<tr><th>(&#8594; Pilots.id)</th><th>(&#8594; Flights.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-01</td></tr>
+<tr><td>3</td><td>3</td><td>2022-01-01</td></tr>
+<tr><td>4</td><td>4</td><td>2022-01-01</td></tr>
+<tr><td>5</td><td>5</td><td>2022-01-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

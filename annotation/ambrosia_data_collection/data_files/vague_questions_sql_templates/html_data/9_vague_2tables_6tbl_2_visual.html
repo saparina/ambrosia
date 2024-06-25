@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Model</span></h2><table><thead>
+<tr><th>id</th><th>manufacturer_name</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing</td><td>USA</td></tr>
+<tr><td>2</td><td>Airbus</td><td>France</td></tr>
+<tr><td>3</td><td>Embraer</td><td>Brazil</td></tr>
+<tr><td>4</td><td>Bombardier</td><td>Canada</td></tr>
+<tr><td>5</td><td>Comac</td><td>China</td></tr>
+</tbody></table></div>
+
+<div><h2>Airport</h2><table><thead>
+<tr><th>id</th><th>airport_code</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>LAX</td><td>Los Angeles International Airport</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>2</td><td>CDG</td><td>Charles de Gaulle Airport</td><td>Paris</td><td>France</td></tr>
+<tr><td>3</td><td>GRU</td><td>Guarulhos–Governador André Franco Montoro International Airport</td><td>São Paulo</td><td>Brazil</td></tr>
+<tr><td>4</td><td>PEK</td><td>Capital International Airport</td><td>Beijing</td><td>China</td></tr>
+<tr><td>5</td><td>PVG</td><td>Shanghai Pudong International Airport</td><td>Shanghai</td><td>China</td></tr>
+</tbody></table></div>
+
+<div><h2>Runway</h2><table><thead>
+<tr><th>id</th><th>runway_length</th><th>runway_width</th><th>airport_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airport.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10000.0</td><td>150.0</td><td>1</td></tr>
+<tr><td>2</td><td>2800.0</td><td>45.0</td><td>2</td></tr>
+<tr><td>3</td><td>2400.0</td><td>45.0</td><td>3</td></tr>
+<tr><td>4</td><td>3000.0</td><td>45.0</td><td>4</td></tr>
+<tr><td>5</td><td>2800.0</td><td>45.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>flight_date</th><th>departure_airport_id</th><th>arrival_airport_id</th><th>plane_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Airport.id)</th><th>(&#8594; Airport.id)</th><th>(&#8594; Plane.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 08:00:00</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-01 12:00:00</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>2022-01-01 16:00:00</td><td>3</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>2022-01-01 20:00:00</td><td>4</td><td>5</td><td>4</td></tr>
+<tr><td>5</td><td>2022-01-01 22:00:00</td><td>5</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Plane</h2><table><thead>
+<tr><th>id</th><th>manufacturer_id</th><th>registration_number</th><th>aircraft_type</th><th>current_location</th></tr>
+<tr><th></th><th>(&#8594; Model.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>N123AB</td><td>Passenger</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>2</td><td>F-HSBN</td><td>Passenger</td><td>Paris</td></tr>
+<tr><td>3</td><td>3</td><td>PP-XXX</td><td>Regional Passenger</td><td>São Paulo</td></tr>
+<tr><td>4</td><td>4</td><td>B-HLDY</td><td>Regional Passenger</td><td>Beijing</td></tr>
+<tr><td>5</td><td>5</td><td>B-HLEU</td><td>Business Jet</td><td>Shanghai</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

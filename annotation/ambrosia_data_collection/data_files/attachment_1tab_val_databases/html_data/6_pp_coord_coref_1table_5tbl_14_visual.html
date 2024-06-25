@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Restaurants</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>Food_Service</th><th>Cuisine</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ristorante Pizzeria</td><td>Viale XX Settembre 27</td><td><span style="color:#990000">Restaurant</span></td><td><span style="color:#006600">Italian</span></td></tr>
+<tr><td>2</td><td>La Casa Bianca</td><td>Corso Umberto I 80</td><td><span style="color:#990000">Restaurant</span></td><td>Mexican</td></tr>
+<tr><td>3</td><td>Le <span style="color:#990000">Café</span> Français</td><td>Piazza Duomo 6</td><td><span style="color:#990000">Café</span></td><td>French</td></tr>
+<tr><td>4</td><td>Il Giardino Romano</td><td>Lungotevere delle Armi 9</td><td><span style="color:#990000">Café</span></td><td><span style="color:#006600">Italian</span></td></tr>
+<tr><td>5</td><td>The English Tea Room</td><td>King Street 5</td><td><span style="color:#990000">Café</span></td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Tables</h2><table><thead>
+<tr><th>ID</th><th>Number</th><th>Status</th><th>RestaurantID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Restaurants.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>4</td><td>Available</td><td>1</td></tr>
+<tr><td>2</td><td>6</td><td>Occupied</td><td>2</td></tr>
+<tr><td>3</td><td>8</td><td>Available</td><td>3</td></tr>
+<tr><td>4</td><td>10</td><td>Under Maintenance</td><td>4</td></tr>
+<tr><td>5</td><td>12</td><td>Unavailable</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>ID</th><th>Date</th><th>Time</th><th>TableNumber</th><th>Guests</th><th>TotalCost</th><th>CustomerName</th><th>TableID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Tables.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-04-01 18:30:00</td><td>19:00:00</td><td>4</td><td>2</td><td>120.0</td><td>John Smith</td><td>1</td></tr>
+<tr><td>2</td><td>2023-04-02 19:00:00</td><td>20:00:00</td><td>6</td><td>4</td><td>240.0</td><td>Jane Doe</td><td>2</td></tr>
+<tr><td>3</td><td>2023-04-03 20:00:00</td><td>21:00:00</td><td>8</td><td>6</td><td>300.0</td><td>Alice Johnson</td><td>3</td></tr>
+<tr><td>4</td><td>2023-04-04 17:00:00</td><td>18:00:00</td><td>10</td><td>3</td><td>90.0</td><td>Bob Brown</td><td>4</td></tr>
+<tr><td>5</td><td>2023-04-05 19:00:00</td><td>20:00:00</td><td>12</td><td>8</td><td>320.0</td><td>Emma Wilson</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>ID</th><th>OrderDate</th><th>Item</th><th>Quantity</th><th>Price</th><th>ReservationID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Reservations.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-04-01 18:30:00</td><td>Margherita Pizza</td><td>2</td><td>10.0</td><td>1</td></tr>
+<tr><td>2</td><td>2023-04-02 19:00:00</td><td>Spaghetti Carbonara</td><td>4</td><td>15.0</td><td>2</td></tr>
+<tr><td>3</td><td>2023-04-03 20:00:00</td><td>Chicken Caesar Salad</td><td>6</td><td>12.0</td><td>3</td></tr>
+<tr><td>4</td><td>2023-04-04 17:00:00</td><td>Garlic Bread</td><td>3</td><td>5.0</td><td>4</td></tr>
+<tr><td>5</td><td>2023-04-05 19:00:00</td><td>Tiramisu</td><td>8</td><td>8.0</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

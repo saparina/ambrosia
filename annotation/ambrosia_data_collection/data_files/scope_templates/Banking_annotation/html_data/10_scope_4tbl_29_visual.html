@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Loan_Applications</span></h2><table><thead>
+<tr><th>ApplicationID</th><th>CustomerName</th><th>AmountMoney</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jack Black</td><td>10000.0</td></tr>
+<tr><td>2</td><td>Jill Green</td><td>15000.0</td></tr>
+<tr><td>3</td><td>Steve Blue</td><td>20000.0</td></tr>
+<tr><td>4</td><td>Lisa Red</td><td>25000.0</td></tr>
+<tr><td>5</td><td>Chris Yellow</td><td>30000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Requirements</span></h2><table><thead>
+<tr><th>RequirementID</th><th><span style="color:#990000">RequirementDescription</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Employment Verification</td></tr>
+<tr><td>2</td><td>Income Statement</td></tr>
+<tr><td>3</td><td>Credit History Report</td></tr>
+<tr><td>4</td><td>Tax Returns</td></tr>
+<tr><td>5</td><td>Property Valuation</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee_Details</h2><table><thead>
+<tr><th>EmployeeID</th><th>Fullname</th><th>Position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Manager</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Officer</td></tr>
+<tr><td>3</td><td>Tom Brown</td><td>Assistant Manager</td></tr>
+<tr><td>4</td><td>Alice Johnson</td><td>Clerk</td></tr>
+<tr><td>5</td><td>Bob White</td><td>Analyst</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicant_Details</h2><table><thead>
+<tr><th>ApplicantID</th><th>Fullname</th><th>Age</th><th>Occupation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jack Black</td><td>30</td><td>Engineer</td></tr>
+<tr><td>2</td><td>Jill Green</td><td>28</td><td>Doctor</td></tr>
+<tr><td>3</td><td>Steve Blue</td><td>35</td><td>Teacher</td></tr>
+<tr><td>4</td><td>Lisa Red</td><td>40</td><td>Accountant</td></tr>
+<tr><td>5</td><td>Chris Yellow</td><td>29</td><td>Lawyer</td></tr>
+</tbody></table></div>
+
+<div><h2>Loan_Applications_Requirements</h2><table><thead>
+<tr><th>AppID</th><th>ReqID</th></tr>
+<tr><th>(&#8594; Loan_Applications.ApplicationID)</th><th>(&#8594; Requirements.RequirementID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

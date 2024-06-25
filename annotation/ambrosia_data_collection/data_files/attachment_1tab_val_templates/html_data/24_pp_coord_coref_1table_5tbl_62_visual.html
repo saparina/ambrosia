@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Companies</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th><span style="color:#186e16"><span style="color:#186e16">Film_Industry_Type</span></span></th><th><span style="color:#1430b2">Number_Of_Employees</span></th><th>Annual_Revenue</th><th>Founded</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Big Studios</td><td><span style="color:#186e16">Production Company</span></td><td><span style="color:#1430b2">500</span></td><td>123456789.0</td><td>2000-01-01</td></tr>
+<tr><td>2</td><td>Little Movies</td><td><span style="color:#186e16">Production Company</span></td><td>300</td><td>543212345.0</td><td>2010-01-01</td></tr>
+<tr><td>3</td><td>Global Distribs</td><td><span style="color:#186e16">Distribution Company</span></td><td><span style="color:#1430b2">500</span></td><td>654321234.0</td><td>2005-01-01</td></tr>
+<tr><td>4</td><td>Small Screen</td><td><span style="color:#186e16">Distribution Company</span></td><td>400</td><td>765432123.0</td><td>2015-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director_Name</th><th>Production_Companies</th><th>Distribution_Companies</th><th>Release_Date</th><th>Running_Time</th><th>Genre</th><th>Box_Office_Earnings</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Blockbuster Movie</td><td>John Doe</td><td>Big Studios</td><td>Global Distribs</td><td>2021-01-01</td><td>120</td><td>Action</td><td>100000000.0</td></tr>
+<tr><td>2</td><td>Art House Film</td><td>Jane Smith</td><td>Little Movies</td><td>Small Screen</td><td>2021-06-01</td><td>90</td><td>Drama</td><td>5000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birth_Place</th><th>Years_Experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>New York, USA</td><td>20</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>London, UK</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birth_Place</th><th>Total_Movies_Produced</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>Los Angeles, USA</td><td>10</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>Toronto, Canada</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>First_Name</th><th>Last_Name</th><th>Date_of_Birth</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>USA</td></tr>
+<tr><td>2</td><td>Meryl</td><td>Streep</td><td>1949-06-22</td><td>USA</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

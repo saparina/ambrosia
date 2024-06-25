@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">HelpingProfession</span></h2><table><thead>
+<tr><th>ProfessionID</th><th><span style="color:#186e16">ProfessionName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Social Worker</span></td></tr>
+<tr><td>2</td><td>Counselor</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">GeoArea</span></h2><table><thead>
+<tr><th>AreaID</th><th><span style="color:#1430b2">LocationText</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>East End</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">West Side</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Company</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>AddressLine1</th><th>AddressLine2</th><th>City</th><th>State</th><th>ZipCode</th><th>PhoneNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St</td><td>None</td><td>Cityville</td><td>CA</td><td>98765</td><td>123-456-7890</td><td>companyA@example.com</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St</td><td>None</td><td>Downtown</td><td>NY</td><td>12345</td><td>098-765-4321</td><td>companyB@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosting</h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>PostedDate</th><th>DeadlineDate</th><th>SalaryRange</th><th>Status</th><th>ProfessionID</th><th>AreaID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; HelpingProfession.ProfessionID)</th><th>(&#8594; GeoArea.AreaID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Social Worker Position</td><td>Help people improve their wellbeing.</td><td>2024-03-13 12:41:56</td><td>None</td><td>$30k-$45k</td><td>Open</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Mental Health Counselor</td><td>Assist individuals with mental health issues.</td><td>2024-03-13 12:41:56</td><td>None</td><td>$40k-$60k</td><td>Open</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Social Worker Position</td><td>Help people overcome challenges.</td><td>2024-03-13 12:41:56</td><td>None</td><td>$30k-$45k</td><td>Open</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>Mental Health Counselor</td><td>Guide clients towards emotional growth.</td><td>2024-03-13 12:41:56</td><td>None</td><td>$40k-$60k</td><td>Open</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicant</h2><table><thead>
+<tr><th>ApplicantID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Email</th><th>ResumePath</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1985-05-15</td><td>john.doe@email.com</td><td>/path/to/resume.pdf</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1987-07-23</td><td>jane.smith@email.com</td><td>/path/to/resume.pdf</td></tr>
+</tbody></table></div>
+
+<div><h2>Application</h2><table><thead>
+<tr><th>AppID</th><th>JobID</th><th>ApplicantID</th><th>SubmissionDate</th><th>CoverLetterPath</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; JobPosting.JobID)</th><th>(&#8594; Applicant.ApplicantID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-03-13 12:41:56</td><td>/path/to/coverletter.pdf</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2024-03-13 12:41:56</td><td>/path/to/coverletter.pdf</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

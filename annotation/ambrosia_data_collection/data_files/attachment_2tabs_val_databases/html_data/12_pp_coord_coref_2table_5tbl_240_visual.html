@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Swimming_Pools</span></h2><table><thead>
+<tr><th>PoolID</th><th>City</th><th>HotelName</th><th>Size</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Miami</span></td><td>Dolphin Bay Hotel</td><td>3000.0</td><td>29.99</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>Pacific Shore Hotel</td><td>4000.0</td><td>39.99</td></tr>
+<tr><td>3</td><td>New York</td><td>Times Square Inn</td><td>2800.0</td><td>27.99</td></tr>
+<tr><td>4</td><td>Chicago</td><td>Lakeview Lodge</td><td>3500.0</td><td>36.99</td></tr>
+<tr><td>5</td><td><span style="color:#006600">Miami</span></td><td>Sunset Beach Hotel</td><td>3200.0</td><td>31.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">HotTubs</span></h2><table><thead>
+<tr><th>TubID</th><th>City</th><th>HotelName</th><th>Occupancy</th><th>AccessType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Miami</span></td><td>Dolphin Bay Hotel</td><td>6</td><td>Indoors</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>Pacific Shore Hotel</td><td>8</td><td>Outdoors</td></tr>
+<tr><td>3</td><td>New York</td><td>Times Square Inn</td><td>10</td><td>Roof Top</td></tr>
+<tr><td>4</td><td>Chicago</td><td>Lakeview Lodge</td><td>12</td><td>Garden</td></tr>
+<tr><td>5</td><td><span style="color:#006600">Miami</span></td><td>Sunset Beach Hotel</td><td>8</td><td>Beachside</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>ResID</th><th>HotelName</th><th>Cuisine</th><th>AverageCost</th><th>OpeningHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dolphin Bay Hotel</td><td>Italian</td><td>35.0</td><td>07:00 - 22:00</td></tr>
+<tr><td>2</td><td>Pacific Shore Hotel</td><td>Seafood</td><td>45.0</td><td>07:30 - 21:30</td></tr>
+<tr><td>3</td><td>Times Square Inn</td><td>American</td><td>25.0</td><td>08:00 - 20:00</td></tr>
+<tr><td>4</td><td>Lakeview Lodge</td><td>Japanese</td><td>38.0</td><td>12:00 - 21:30</td></tr>
+<tr><td>5</td><td>Sunset Beach Hotel</td><td>Fusion</td><td>40.0</td><td>08:00 - 22:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>RoomID</th><th>HotelName</th><th>Type</th><th>Rate</th><th>View</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dolphin Bay Hotel</td><td>Standard</td><td>120.0</td><td>City</td></tr>
+<tr><td>2</td><td>Pacific Shore Hotel</td><td>Deluxe</td><td>200.0</td><td>Ocean</td></tr>
+<tr><td>3</td><td>Times Square Inn</td><td>Suite</td><td>250.0</td><td>Urban</td></tr>
+<tr><td>4</td><td>Lakeview Lodge</td><td>Family</td><td>220.0</td><td>Lake</td></tr>
+<tr><td>5</td><td>Sunset Beach Hotel</td><td>Executive</td><td>300.0</td><td>Beach</td></tr>
+</tbody></table></div>
+
+<div><h2>Amenities</h2><table><thead>
+<tr><th>AmenID</th><th>HotelName</th><th>Description</th><th>IsIncluded</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dolphin Bay Hotel</td><td>Free WiFi access throughout hotel</td><td>1</td></tr>
+<tr><td>2</td><td>Pacific Shore Hotel</td><td>Private beach area</td><td>0</td></tr>
+<tr><td>3</td><td>Times Square Inn</td><td>Air conditioning in all rooms</td><td>1</td></tr>
+<tr><td>4</td><td>Lakeview Lodge</td><td>Bicycle rental service</td><td>0</td></tr>
+<tr><td>5</td><td>Sunset Beach Hotel</td><td>Onsite spa services</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Activities</h2><table><thead>
+<tr><th>ActID</th><th>HotelName</th><th>ActivityName</th><th>Duration</th><th>Fee</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dolphin Bay Hotel</td><td>Yoga class</td><td>1 hour</td><td>20.0</td></tr>
+<tr><td>2</td><td>Pacific Shore Hotel</td><td>Surf lesson</td><td>2 hours</td><td>50.0</td></tr>
+<tr><td>3</td><td>Times Square Inn</td><td>Art workshop</td><td>3 hours</td><td>40.0</td></tr>
+<tr><td>4</td><td>Lakeview Lodge</td><td>Guided fishing tour</td><td>4 hours</td><td>60.0</td></tr>
+<tr><td>5</td><td>Sunset Beach Hotel</td><td>Cooking class</td><td>3 hours</td><td>35.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Apartments</span></h2><table><thead>
+<tr><th>apartmentID</th><th><span style="color:#006600">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>High-end Residential</td></tr>
+<tr><td>2</td><td>Budget Accommodation</td></tr>
+<tr><td>3</td><td>Corporate Housing</td></tr>
+<tr><td>4</td><td>Vacation Rentals</td></tr>
+<tr><td>5</td><td><span style="color:#006600">Extended Stay</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">EspressoMachines</span></h2><table><thead>
+<tr><th>espressoID</th><th>apartmentID</th><th>lastMaintenanceDate</th></tr>
+<tr><th></th><th>(&#8594; Apartments.apartmentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2023-06-01</td></tr>
+<tr><td>3</td><td>3</td><td>2023-07-01</td></tr>
+<tr><td>4</td><td>4</td><td>2023-08-01</td></tr>
+<tr><td>5</td><td>5</td><td>2023-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Blenders</span></h2><table><thead>
+<tr><th>blenderID</th><th>apartmentID</th><th>lastMaintenanceDate</th></tr>
+<tr><th></th><th>(&#8594; Apartments.apartmentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-15</td></tr>
+<tr><td>2</td><td>2</td><td>2023-06-15</td></tr>
+<tr><td>3</td><td>3</td><td>2023-07-15</td></tr>
+<tr><td>4</td><td>4</td><td>2023-08-15</td></tr>
+<tr><td>5</td><td>5</td><td>2023-09-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>employeeID</th><th>name</th><th>role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Technician</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Supervisor</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>Manager</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>Engineer</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>Cleaner</td></tr>
+</tbody></table></div>
+
+<div><h2>EspressoRepairs</h2><table><thead>
+<tr><th>repairId</th><th>espressoId</th><th>employeeId</th><th>repairDate</th><th>description</th></tr>
+<tr><th></th><th>(&#8594; EspressoMachines.espressoID)</th><th>(&#8594; Employees.employeeID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-02-01</td><td>Leakage issue</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-03-01</td><td>Grinder malfunction</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-04-01</td><td>Water pump failure</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-05-01</td><td>Heating element replacement</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-06-01</td><td>Milk frother problem</td></tr>
+</tbody></table></div>
+
+<div><h2>BlenderRepairs</h2><table><thead>
+<tr><th>repairId</th><th>blenderId</th><th>employeeId</th><th>repairDate</th><th>description</th></tr>
+<tr><th></th><th>(&#8594; Blenders.blenderID)</th><th>(&#8594; Employees.employeeID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-02-15</td><td>Broken blade</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-03-15</td><td>Motor overheating</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-04-15</td><td>Pitch control issue</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-05-15</td><td>Lid seal damage</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-06-15</td><td>Container cracking</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

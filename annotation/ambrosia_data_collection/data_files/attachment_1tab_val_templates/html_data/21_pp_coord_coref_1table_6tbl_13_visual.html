@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Play</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th><span style="color:#186e16"><span style="color:#186e16">Theatrical_Form</span></span></th><th><span style="color:#1430b2">Author</span></th><th>Year_Published</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Romeo And Juliet</td><td><span style="color:#186e16">Tragedy</span></td><td><span style="color:#1430b2">William Shakespeare</span></td><td>1597</td></tr>
+<tr><td>2</td><td>A Midsummer Night's Dream</td><td><span style="color:#186e16">Comedy</span></td><td><span style="color:#1430b2">William Shakespeare</span></td><td>1596</td></tr>
+<tr><td>3</td><td>Hamlet</td><td><span style="color:#186e16">Tragedy</span></td><td><span style="color:#1430b2">William Shakespeare</span></td><td>1603</td></tr>
+<tr><td>4</td><td>Taming Of Shrew</td><td><span style="color:#186e16">Comedy</span></td><td>Christopher Marlowe</td><td>1594</td></tr>
+<tr><td>5</td><td>Macbeth</td><td><span style="color:#186e16">Tragedy</span></td><td><span style="color:#1430b2">William Shakespeare</span></td><td>1606</td></tr>
+</tbody></table></div>
+
+<div><h2>Character</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>PlayID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Play.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Juliet</td><td>1</td></tr>
+<tr><td>2</td><td>Shakespeare</td><td>1</td></tr>
+<tr><td>3</td><td>Puck</td><td>2</td></tr>
+<tr><td>4</td><td>Katherine</td><td>4</td></tr>
+<tr><td>5</td><td>Banquo</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Laurence Olivier</td><td>1907-05-22</td></tr>
+<tr><td>2</td><td>Sir Ian McKellen</td><td>1948-05-25</td></tr>
+<tr><td>3</td><td>Denzel Washington</td><td>1954-12-27</td></tr>
+<tr><td>4</td><td>Samuel L Jackson</td><td>1948-12-21</td></tr>
+<tr><td>5</td><td>Tom Hiddleston</td><td>1981-02-09</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>ID</th><th>CharacterID</th><th>ActorID</th><th>PerformanceDate</th></tr>
+<tr><th></th><th>(&#8594; Character.ID)</th><th>(&#8594; Actor.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1954-01-01</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>1981-02-01</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>2000-06-01</td></tr>
+<tr><td>4</td><td>3</td><td>4</td><td>1990-09-01</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>2003-12-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Theater</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Royal Shakespeare Company</td></tr>
+<tr><td>2</td><td>Broadway Theatre</td></tr>
+<tr><td>3</td><td>Drury Lane Theatre</td></tr>
+<tr><td>4</td><td>Harold Pinter Theatre</td></tr>
+<tr><td>5</td><td>Gielgud Theatre</td></tr>
+</tbody></table></div>
+
+<div><h2>Production</h2><table><thead>
+<tr><th>ID</th><th>PlayID</th><th>TheaterID</th><th>Start_Date</th><th>End_Date</th></tr>
+<tr><th></th><th>(&#8594; Play.ID)</th><th>(&#8594; Theater.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1954-01-01</td><td>1955-06-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>1981-02-01</td><td>1982-06-01</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>1990-09-01</td><td>1991-09-01</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2003-12-01</td><td>2004-01-01</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2000-06-01</td><td>2000-08-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

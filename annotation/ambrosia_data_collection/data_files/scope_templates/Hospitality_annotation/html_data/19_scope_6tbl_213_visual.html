@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Casinos</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Caesar Palace</td><td>Las Vegas</td></tr>
+<tr><td>2</td><td>Bellagio</td><td>Las Vegas</td></tr>
+<tr><td>3</td><td>Wynn Las Vegas</td><td>Las Vegas</td></tr>
+<tr><td>4</td><td>The Venetian Resort Hotel Casino</td><td>Las Vegas</td></tr>
+<tr><td>5</td><td>ARIA Resort & Casino</td><td>Las Vegas</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Games</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">game_name</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Slot Machines</td><td>Electronic gaming machines that create a game of chance for their customers.</td></tr>
+<tr><td>2</td><td>Blackjack</td><td>A comparing card game between one or more players and a dealer, where each player aims to beat the dealer by having cards with an aggregate value which is closer to 21 than those of the dealer without exceeding 21.</td></tr>
+<tr><td>3</td><td>Roulette</td><td>A casino game named after the French word for little wheel. In the game, players may choose to place bets on either a single number, various groupings of numbers, the colors red or black, whether the total of all first and second-digit numbers is odd or even, or if the total of the first two digits is a multiple of a certain number such as 3.</td></tr>
+<tr><td>4</td><td>Poker</td><td>Card game played with a standard deck of 52 playing cards, ranked from high to low, in which participants wager into a pot consisting of money contributed by the players themselves.</td></tr>
+<tr><td>5</td><td>Craps</td><td>Dice game in which players make a series of wagers during the course of a round known as the roll. The main objective of most craps wagers is to correctly predict the outcome of the roll.</td></tr>
+</tbody></table></div>
+
+<div><h2>Casinos_Games</h2><table><thead>
+<tr><th>casino_id</th><th>game_id</th></tr>
+<tr><th>(&#8594; Casinos.id)</th><th>(&#8594; Games.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>1</td><td>4</td></tr>
+<tr><td>1</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

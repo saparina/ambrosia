@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flight</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>Destination</th><th>Duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-04-01 08:00:00</td><td>New York</td><td>6</td></tr>
+<tr><td>2</td><td>2023-04-01 09:00:00</td><td>Chicago</td><td>7</td></tr>
+<tr><td>3</td><td>2023-04-01 10:00:00</td><td>Los Angeles</td><td>8</td></tr>
+<tr><td>4</td><td>2023-04-01 11:00:00</td><td>Miami</td><td>7</td></tr>
+<tr><td>5</td><td>2023-04-01 12:00:00</td><td>Houston</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Weather</span></h2><table><thead>
+<tr><th>WeatherID</th><th>Description</th><th>Temperature</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Clear Skies</td><td>75.0</td></tr>
+<tr><td>2</td><td>Rainy</td><td>65.0</td></tr>
+<tr><td>3</td><td>Foggy</td><td>70.0</td></tr>
+<tr><td>4</td><td>Stormy</td><td>80.0</td></tr>
+<tr><td>5</td><td>Sunny</td><td>85.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Mechanical</span></h2><table><thead>
+<tr><th>IssueID</th><th>TypeOfIssue</th><th>Severity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engine Trouble</td><td>High</td></tr>
+<tr><td>2</td><td>Landing Gear Problem</td><td>Medium</td></tr>
+<tr><td>3</td><td>Electrical System Failure</td><td>Low</td></tr>
+<tr><td>4</td><td>Brakes Issues</td><td>Medium</td></tr>
+<tr><td>5</td><td>Fire Extinguisher Missing</td><td>High</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>AircraftID</th><th>Model</th><th>Capacity</th><th>CurrentAirport</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 747</td><td>300</td><td>JFK</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>400</td><td>LAX</td></tr>
+<tr><td>3</td><td>Bombardier CRJ700</td><td>50</td><td>ORD</td></tr>
+<tr><td>4</td><td>Embraer E190</td><td>70</td><td>MIA</td></tr>
+<tr><td>5</td><td>Beechcraft King Air C90</td><td>8</td><td>HOU</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilot</h2><table><thead>
+<tr><th>PilotID</th><th>Name</th><th>LicenseNumber</th><th>ExperienceYears</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>ABCD1234</td><td>10</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>EFGH5678</td><td>8</td></tr>
+<tr><td>3</td><td>Tom Johnson</td><td>IJKL9012</td><td>5</td></tr>
+<tr><td>4</td><td>Emily Williams</td><td>LMNOP3456</td><td>7</td></tr>
+<tr><td>5</td><td>David Brown</td><td>QRST7890</td><td>12</td></tr>
+</tbody></table></div>
+
+<div><h2>MaintenanceRecord</h2><table><thead>
+<tr><th>RecordID</th><th>AircraftID</th><th>LastMaintenanceDate</th></tr>
+<tr><th></th><th>(&#8594; Aircraft.AircraftID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-04-01 00:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2021-04-01 00:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>2022-03-01 00:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>2021-04-01 00:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>2022-04-01 00:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Flight_status</span></h2><table><thead>
+<tr><th>StatusID</th><th>FlightID</th><th>WeatherID</th><th><span style="color:#006600">IssueID</span></th><th>AircraftID</th><th>PilotID</th><th>RecordID</th><th>StatusDescription</th></tr>
+<tr><th></th><th>(&#8594; Flight.FlightID)</th><th>(&#8594; Weather.WeatherID)</th><th>(&#8594; Mechanical.IssueID)</th><th>(&#8594; Aircraft.AircraftID)</th><th>(&#8594; Pilot.PilotID)</th><th>(&#8594; MaintenanceRecord.RecordID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>Cancelled - Bad Weather & Engine Trouble</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td><td>1</td><td>2</td><td>2</td><td>Delayed - Rainy & Landing Gear Problem</td></tr>
+<tr><td><span style="color:#006600">3</span></td><td>2</td><td><span style="color:#006600">3</span></td><td><span style="color:#006600">3</span></td><td>2</td><td><span style="color:#006600">3</span></td><td><span style="color:#006600">3</span></td><td>On Time - Foggy & Electrical System Failure</td></tr>
+<tr><td>4</td><td><span style="color:#006600">3</span></td><td>4</td><td>4</td><td><span style="color:#006600">3</span></td><td>4</td><td>4</td><td>Cancelled - Stormy & Brakes Issues</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>5</td><td>4</td><td>5</td><td>5</td><td>Postponed - Sunny & Fire Extinguisher Missing</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FullName</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alicejohnson@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Keywords</h2><table><thead>
+<tr><th>KeywordID</th><th>KeywordText</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Earthquake</td></tr>
+<tr><td>2</td><td>Politics</td></tr>
+<tr><td>3</td><td>Technology</td></tr>
+<tr><td>4</td><td>Sports</td></tr>
+<tr><td>5</td><td>Healthcare</td></tr>
+<tr><td>6</td><td>Environment</td></tr>
+<tr><td>7</td><td>Business</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleCategoryLinks</h2><table><thead>
+<tr><th>ArticleID</th><th>CategoryID</th></tr>
+<tr><th>(&#8594; Articles.ArticleID)</th><th>(&#8594; Categories.CategoryID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>6</td><td>1</td></tr>
+<tr><td>7</td><td>3</td></tr>
+<tr><td>8</td><td>2</td></tr>
+<tr><td>9</td><td>1</td></tr>
+<tr><td>10</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Articles</span></h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th><span style="color:#1430b2">Event</span></th><th>PublicationDate</th><th><span style="color:#186e16"><span style="color:#186e16">NewsType</span></span></th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Turkey–Syria Earthquakes <span style="color:#186e16">Breaking News</span></td><td>This is a breaking news article about...</td><td><span style="color:#1430b2">Turkey–Syria earthquakes</span></td><td>2024-03-07 23:34:04</td><td><span style="color:#186e16">Breaking News</span></td><td>1</td></tr>
+<tr><td>2</td><td>New Technologies Disrupt Market</td><td>This is an analysis of new technologies...</td><td>Technology Advancements</td><td>2024-03-07 23:34:04</td><td><span style="color:#186e16">Breaking News</span></td><td>2</td></tr>
+<tr><td>3</td><td>In Depth Look at Economic Impact of Earthquakes</td><td>A detailed examination of...</td><td><span style="color:#1430b2">Turkey–Syria earthquakes</span></td><td>2024-03-07 23:34:04</td><td><span style="color:#186e16">News Analysis</span></td><td>1</td></tr>
+<tr><td>4</td><td>The Future of Sports Post Pandemic</td><td>An analysis of how sports have changed since...</td><td>Post-Pandemic Sports Development</td><td>2024-03-07 23:34:04</td><td><span style="color:#186e16">News Analysis</span></td><td>2</td></tr>
+<tr><td>5</td><td>Global Health Challenges</td><td>Exploring various global health challenges...</td><td>Global Health Initiatives</td><td>2024-03-07 23:34:04</td><td>General</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

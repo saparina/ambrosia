@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Address</th><th>City</th><th>State</th><th>ZipCode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>123 Main St</td><td>New York</td><td>NY</td><td>10001</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>456 Elm St</td><td>Los Angeles</td><td>CA</td><td>90001</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>789 Oak St</td><td>Chicago</td><td>IL</td><td>60601</td></tr>
+<tr><td>4</td><td>Bob</td><td>Robertson</td><td>321 Pine St</td><td>Houston</td><td>TX</td><td>77001</td></tr>
+<tr><td>5</td><td>Carol</td><td>Williams</td><td>987 Maple Ave</td><td>Phoenix</td><td>AZ</td><td>85001</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Loans</span></h2><table><thead>
+<tr><th>LoanID</th><th>CustomerID</th><th>LoanType</th><th>Amount</th><th>InterestRate</th><th>StartDate</th><th>EndDate</th><th><span style="color:#006600">Price</span></th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Auto</td><td>15000</td><td>0.05</td><td>2022-01-01</td><td>2025-01-01</td><td>2500.0</td></tr>
+<tr><td>2</td><td>2</td><td>Personal</td><td>5000</td><td>0.07</td><td>2022-02-01</td><td>2024-02-01</td><td>1000.0</td></tr>
+<tr><td>3</td><td>3</td><td>Home</td><td>300000</td><td>0.03</td><td>2022-03-01</td><td>2032-03-01</td><td>2000.0</td></tr>
+<tr><td>4</td><td>4</td><td>Business</td><td>100000</td><td>0.06</td><td>2022-04-01</td><td>2027-04-01</td><td><span style="color:#006600">3000.0</span></td></tr>
+<tr><td>5</td><td>5</td><td>Student</td><td>25000</td><td>0.08</td><td>2022-05-01</td><td>2026-05-01</td><td>4000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CollateralizedDebtObligations</span></h2><table><thead>
+<tr><th>ObligationID</th><th>LoanID</th><th>Description</th><th>Value</th></tr>
+<tr><th></th><th>(&#8594; Loans.LoanID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>CDO1</td><td>1000</td></tr>
+<tr><td>2</td><td>2</td><td>CDO2</td><td>1500</td></tr>
+<tr><td>3</td><td>3</td><td>CDO3</td><td>2000</td></tr>
+<tr><td>4</td><td>4</td><td>CDO4</td><td>2500</td></tr>
+<tr><td>5</td><td>5</td><td>CDO5</td><td>3000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CollateralizedMortgageObligations</span></h2><table><thead>
+<tr><th>ObligationID</th><th>LoanID</th><th>PropertyAddress</th><th>MarketValue</th></tr>
+<tr><th></th><th>(&#8594; Loans.LoanID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>123 Beach Blvd</td><td>1000</td></tr>
+<tr><td>2</td><td>2</td><td>456 Mountain Rd</td><td>1500</td></tr>
+<tr><td>3</td><td>3</td><td>789 Hill Drive</td><td>2000</td></tr>
+<tr><td>4</td><td>4</td><td>321 Forest Lane</td><td>2500</td></tr>
+<tr><td>5</td><td>5</td><td>987 River Street</td><td>3000</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>HireDate</th><th>Position</th><th>Salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David</td><td>Jackson</td><td>2022-01-01</td><td>Branch Manager</td><td>70000</td></tr>
+<tr><td>2</td><td>Lisa</td><td>Smith</td><td>2022-02-01</td><td>Teller</td><td>45000</td></tr>
+<tr><td>3</td><td>Tom</td><td>Johnson</td><td>2022-03-01</td><td>IT Specialist</td><td>65000</td></tr>
+<tr><td>4</td><td>Karen</td><td>Jones</td><td>2022-04-01</td><td>HR Coordinator</td><td>55000</td></tr>
+<tr><td>5</td><td>Steve</td><td>Martin</td><td>2022-05-01</td><td>Security Guard</td><td>40000</td></tr>
+</tbody></table></div>
+
+<div><h2>Branches</h2><table><thead>
+<tr><th>BranchID</th><th>BranchName</th><th>Location</th><th>NumberOfEmployees</th><th>ManagerId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Employees.EmployeeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main Office</td><td>100 Central Avenue</td><td>25</td><td>1</td></tr>
+<tr><td>2</td><td>Eastside Branch</td><td>200 East Road</td><td>10</td><td>2</td></tr>
+<tr><td>3</td><td>Westside Branch</td><td>300 West Boulevard</td><td>15</td><td>3</td></tr>
+<tr><td>4</td><td>Southside Branch</td><td>400 South Drive</td><td>10</td><td>4</td></tr>
+<tr><td>5</td><td>Northside Branch</td><td>500 North Court</td><td>20</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Airlines</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Air France</td><td>France</td></tr>
+<tr><td>2</td><td>KLM Royal Dutch Airlines</td><td>Netherlands</td></tr>
+<tr><td>3</td><td>Delta Air Lines</td><td>United States</td></tr>
+<tr><td>4</td><td>Emirates</td><td>UAE</td></tr>
+<tr><td>5</td><td>Lufthansa</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Fleets</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">fleetName</span></th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing_737</td><td>200</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>517</td></tr>
+<tr><td>3</td><td>Bombardier CRJ-900</td><td>76</td></tr>
+<tr><td>4</td><td>Embraer E190</td><td>100</td></tr>
+<tr><td>5</td><td>De Havilland Canada Dash 8 Q400</td><td>78</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines_Fleets</h2><table><thead>
+<tr><th>airlineId</th><th>fleetId</th></tr>
+<tr><th>(&#8594; Airlines.id)</th><th>(&#8594; Fleets.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Author A</td></tr>
+<tr><td>2</td><td>Author B</td></tr>
+<tr><td>3</td><td>Author C</td></tr>
+<tr><td>4</td><td>Author D</td></tr>
+<tr><td>5</td><td>Author E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Illustrators</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">illustratorName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Jane Smith</span></td></tr>
+<tr><td>2</td><td>John Doe</td></tr>
+<tr><td>3</td><td>Mary Johnson</td></tr>
+<tr><td>4</td><td>Tom Brown</td></tr>
+<tr><td>5</td><td>Emily Davis</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">ChildrensBooks</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>authorId</th><th>illustratorId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Illustrators.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Lion King</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Alice in Wonderland</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Peter Pan</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Cinderella</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>The Little Prince</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">YoungAdultBooks</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>authorId</th><th>illustratorId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Illustrators.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Twilight</td><td>6</td><td>1</td></tr>
+<tr><td>2</td><td>Harry Potter and the Philosopher's Stone</td><td>7</td><td>2</td></tr>
+<tr><td>3</td><td>Percy Jackson and the Lightning Thief</td><td>8</td><td>3</td></tr>
+<tr><td>4</td><td>The Hunger Games</td><td>9</td><td>4</td></tr>
+<tr><td>5</td><td>Divergent</td><td>10</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

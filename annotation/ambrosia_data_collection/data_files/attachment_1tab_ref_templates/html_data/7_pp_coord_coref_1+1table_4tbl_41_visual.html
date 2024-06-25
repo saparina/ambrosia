@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">AnimationStudios</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">studioName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Pixar</span></td></tr>
+<tr><td>2</td><td>DreamWorks</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieDetails</h2><table><thead>
+<tr><th>id</th><th>movieTitle</th><th>releaseDate</th><th>animationStudioId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; AnimationStudios.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Toy Story</td><td>2019-06-21</td><td>1</td></tr>
+<tr><td>2</td><td>Finding Nemo</td><td>2003-07-18</td><td>1</td></tr>
+<tr><td>3</td><td>Shrek</td><td>2001-04-18</td><td>2</td></tr>
+<tr><td>4</td><td>Madagascar</td><td>2005-05-27</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Awards</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">awardName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Golden Globe</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">Oscar</span></td></tr>
+<tr><td>3</td><td>BAFTA</td></tr>
+<tr><td>4</td><td>Grammy</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieAwards</h2><table><thead>
+<tr><th>id</th><th>movieId</th><th>awardId</th></tr>
+<tr><th></th><th>(&#8594; MovieDetails.id)</th><th>(&#8594; Awards.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>3</td></tr>
+<tr><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>3</td><td>2</td></tr>
+<tr><td>6</td><td>4</td><td>3</td></tr>
+<tr><td>7</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>id</th><th>genreName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adventure</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+<tr><td>3</td><td>Family</td></tr>
+<tr><td>4</td><td>Animated</td></tr>
+</tbody></table></div>
+
+<div><h2>MoviesGenre</h2><table><thead>
+<tr><th>id</th><th>movieId</th><th>genreId</th></tr>
+<tr><th></th><th>(&#8594; MovieDetails.id)</th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>3</td><td>1</td></tr>
+<tr><td>6</td><td>3</td><td>4</td></tr>
+<tr><td>7</td><td>4</td><td>3</td></tr>
+<tr><td>8</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

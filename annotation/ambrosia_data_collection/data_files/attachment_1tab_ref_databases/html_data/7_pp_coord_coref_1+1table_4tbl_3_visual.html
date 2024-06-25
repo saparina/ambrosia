@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Persons</span></h2><table><thead>
+<tr><th>PersonID</th><th><span style="color:#006600">FullName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">John Doe</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Emily Johnson</td></tr>
+<tr><td>4</td><td>Michael Brown</td></tr>
+<tr><td>5</td><td>Cathy Williams</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Persons.PersonID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1</td><td>Content of article 1...</td><td>1</td></tr>
+<tr><td>2</td><td>Article 2</td><td>Content of article 2...</td><td>2</td></tr>
+<tr><td>3</td><td>Article 3</td><td>Content of article 3...</td><td>3</td></tr>
+<tr><td>4</td><td>Article 4</td><td>Content of article 4...</td><td>4</td></tr>
+<tr><td>5</td><td>Article 5</td><td>Content of article 5...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Events</span></h2><table><thead>
+<tr><th>EventID</th><th><span style="color:#990000"><span style="color:#990000">EventType</span></span></th><th>Date</th><th>Location</th><th>PersonID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Persons.PersonID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Press Conference</span></td><td>2022-01-01</td><td>New York</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Press Conference</span></td><td>2022-02-01</td><td>Los Angeles</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Media Scrum</span></td><td>2022-03-01</td><td>Chicago</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Media Scrum</span></td><td>2022-04-01</td><td>Dallas</td><td>3</td></tr>
+<tr><td>5</td><td>Interview</td><td>2022-05-01</td><td>Washington</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>MediaScrums</h2><table><thead>
+<tr><th>MediaScrumID</th><th>Description</th><th>StartTime</th><th>EndTime</th><th>PersonID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Persons.PersonID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Desc 1</td><td>10:00</td><td>11:00</td><td>1</td></tr>
+<tr><td>2</td><td>Desc 2</td><td>12:00</td><td>13:00</td><td>3</td></tr>
+<tr><td>3</td><td>Desc 3</td><td>14:00</td><td>15:00</td><td>5</td></tr>
+<tr><td>4</td><td>Desc 4</td><td>16:00</td><td>17:00</td><td>2</td></tr>
+<tr><td>5</td><td>Desc 5</td><td>18:00</td><td>19:00</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Newspapers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th><span style="color:#1430b2">Circulation_Numbers</span></th><th>Founded_Year</th><th>Headquarters</th><th>Editor_in_Chief</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Guardian</td><td><span style="color:#1430b2">20000</span></td><td>1959</td><td>London, UK</td><td>Katharine Viner</td></tr>
+<tr><td>2</td><td>Le Monde</td><td>30000</td><td>1944</td><td>Paris, France</td><td>Jacques Maurer</td></tr>
+<tr><td>3</td><td>El País</td><td>25000</td><td>1976</td><td>Madrid, Spain</td><td>Carol Glatz</td></tr>
+<tr><td>4</td><td>The Hindu</td><td>18000</td><td>1878</td><td>Chennai, India</td><td>N. Ram</td></tr>
+<tr><td>5</td><td>South China Morning Post</td><td>17000</td><td>1903</td><td>Hong Kong, China</td><td>Paula Ma</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Magazines</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Circulation_Numbers</th><th>Issue_Frequency</th><th>Publisher</th><th>Topic</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>National Geographic</td><td>50000</td><td>Monthly</td><td>National Geographic Society</td><td>Travel & Adventure</td></tr>
+<tr><td>2</td><td>Time</td><td>30000</td><td>Weekly</td><td>Meredith Corporation</td><td>Current Affairs & World News</td></tr>
+<tr><td>3</td><td>Scientific American</td><td><span style="color:#1430b2">20000</span></td><td>Biweekly</td><td>Springer Nature</td><td>Science & Technology</td></tr>
+<tr><td>4</td><td>Wired</td><td>25000</td><td>Monthly</td><td>Condé Nast</td><td>Technology & Culture</td></tr>
+<tr><td>5</td><td>Vanity Fair</td><td><span style="color:#1430b2">20000</span></td><td>Monthly</td><td>Conde Nast</td><td>Entertainment & Lifestyle</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>Article_ID</th><th>Title</th><th>Publication_Date</th><th>Content_Length</th><th>Author_Name</th><th>Newspaper_ID</th><th>Magazine_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Newspapers.ID)</th><th>(&#8594; Magazines.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Climate Change is Real</td><td>2021-01-01</td><td>1500</td><td>John Smith</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>The Rise of AI Technologies</td><td>2021-02-15</td><td>1800</td><td>Emma Johnson</td><td>None</td><td>2</td></tr>
+<tr><td>3</td><td>Exploring Mars with NASA Rovers</td><td>2021-03-20</td><td>1200</td><td>David Brown</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Inside the Minds of Great Leaders</td><td>2021-04-10</td><td>1600</td><td>Linda Lee</td><td>None</td><td>4</td></tr>
+<tr><td>5</td><td>The Impact of Social Media on Mental Health</td><td>2021-05-01</td><td>1400</td><td>Christopher Green</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>Author_ID</th><th>First_Name</th><th>Last_Name</th><th>Biography</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>An award winning journalist with over 20 years of experience.</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Emma</td><td>Smith</td><td>A seasoned writer who has covered a wide range of topics.</td><td>emma.smith@example.com</td></tr>
+<tr><td>3</td><td>David</td><td>Brown</td><td>With expertise in science journalism, David brings a unique perspective to his work.</td><td>david.brown@example.com</td></tr>
+<tr><td>4</td><td>Linda</td><td>Lee</td><td>As an investigative reporter, Linda has uncovered many important stories throughout her career.</td><td>linda.lee@example.com</td></tr>
+<tr><td>5</td><td>Christopher</td><td>Green</td><td>His insightful articles have made him a respected voice in mental health reporting.</td><td>christopher.green@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscriptions</h2><table><thead>
+<tr><th>Subscription_ID</th><th>Customer_Name</th><th>Address</th><th>Phone_Number</th><th>Subscribed_To</th><th>Start_Date</th><th>End_Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>123 Main St, Anytown USA</td><td>555-123-4567</td><td>Newspaper</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>2</td><td>Emma Smith</td><td>456 Elm St, Anothertown USA</td><td>555-987-6543</td><td>Magazine</td><td>2021-02-15</td><td>2021-12-31</td></tr>
+<tr><td>3</td><td>David Brown</td><td>789 Oak St, Yet another town USA</td><td>555-135-7890</td><td>Newspaper</td><td>2021-03-20</td><td>2021-12-31</td></tr>
+<tr><td>4</td><td>Linda Lee</td><td>123 Pine St, Somewhere USA</td><td>555-555-5555</td><td>Magazine</td><td>2021-04-10</td><td>2021-12-31</td></tr>
+<tr><td>5</td><td>Christopher Green</td><td>456 Spruce St, Everytown USA</td><td>555-777-8888</td><td>Newspaper</td><td>2021-05-01</td><td>2021-12-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Documentaries</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>director</th><th>release_date</th><th>budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Great Migration</td><td>Alastair Fothergill</td><td>2019-08-30</td><td>500000.0</td></tr>
+<tr><td>2</td><td>Cities of Light</td><td>Jean-Pierre Lefebvre</td><td>2016-07-15</td><td>400000.0</td></tr>
+<tr><td>3</td><td>Planet Earth II</td><td>Fredi Devas & Mark Linfield</td><td>2016-11-05</td><td>550000.0</td></tr>
+<tr><td>4</td><td>The Blue Planet</td><td>Alastair Fothergill and Mark Linfield</td><td>2001-10-25</td><td>1000000.0</td></tr>
+<tr><td>5</td><td>Oceans</td><td>James Cameron</td><td>2009-10-13</td><td>300000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ShortFilms</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>director</th><th>release_date</th><th>duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A Day at the Beach</td><td>Tom Brown</td><td>2021-06-12</td><td>5</td></tr>
+<tr><td>2</td><td>The Little Prince</td><td>Mark Osborne</td><td>2015-03-27</td><td>10</td></tr>
+<tr><td>3</td><td>Le Petit Nicolas</td><td>Laurent Tirard</td><td>2017-01-20</td><td>15</td></tr>
+<tr><td>4</td><td>My Life as a Courgette</td><td>Claude Barras</td><td>2016-10-03</td><td>7</td></tr>
+<tr><td>5</td><td>The Girl Who Leapt Through Time</td><td>Mamoru Hosoda</td><td>2006-07-01</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alastair Fothergill</td><td>1962</td></tr>
+<tr><td>2</td><td>Jean-Pierre Lefebvre</td><td>1950</td></tr>
+<tr><td>3</td><td>Fredi Devas</td><td>1965</td></tr>
+<tr><td>4</td><td>Mark Linfield</td><td>1959</td></tr>
+<tr><td>5</td><td>James Cameron</td><td>1954</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>company</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Simon Chinn</td><td>Passion Pictures</td></tr>
+<tr><td>2</td><td>Daisy Gili</td><td>Passion Pictures</td></tr>
+<tr><td>3</td><td>John Baxter</td><td>DisneyNature</td></tr>
+<tr><td>4</td><td>Philippe Mechelen</td><td>Wild Bunch</td></tr>
+<tr><td>5</td><td>Christophe Bonniot</td><td>Wild Bunch</td></tr>
+</tbody></table></div>
+
+<div><h2>Casts</h2><table><thead>
+<tr><th>id</th><th>film_id</th><th>actor_name</th><th>role</th></tr>
+<tr><th></th><th>(&#8594; Films.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>David Attenborough</td><td>Narrator</td></tr>
+<tr><td>2</td><td>2</td><td>Chris Packham</td><td>Himself</td></tr>
+<tr><td>3</td><td>3</td><td>Sir David Attenborough</td><td>Presenter</td></tr>
+<tr><td>4</td><td>4</td><td>Stephen Fry</td><td>Voiceover</td></tr>
+<tr><td>5</td><td>5</td><td>Sigourney Weaver</td><td>Narrator</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Films</span></h2><table><thead>
+<tr><th>id</th><th>type</th><th>documentary_id</th><th>short_film_id</th><th>director_id</th><th>producer_id</th><th><span style="color:#006600">budget</span></th></tr>
+<tr><th></th><th></th><th>(&#8594; Documentaries.id)</th><th>(&#8594; ShortFilms.id)</th><th>(&#8594; Directors.id)</th><th>(&#8594; Producers.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Documentary</td><td>1</td><td>None</td><td>1</td><td>1</td><td><span style="color:#006600">500000.0</span></td></tr>
+<tr><td>2</td><td>Documentary</td><td>2</td><td>None</td><td>2</td><td>2</td><td>400000.0</td></tr>
+<tr><td>3</td><td>Short Film</td><td>None</td><td>1</td><td>3</td><td>3</td><td><span style="color:#006600">500000.0</span></td></tr>
+<tr><td>4</td><td>Short Film</td><td>None</td><td>2</td><td>4</td><td>4</td><td>550000.0</td></tr>
+<tr><td>5</td><td>Documentary</td><td>3</td><td>None</td><td>5</td><td>5</td><td>1000000.0</td></tr>
+<tr><td>6</td><td>Documentary</td><td>4</td><td>None</td><td>6</td><td>6</td><td>300000.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

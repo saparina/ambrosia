@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janesmith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Johnson</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Bob</td><td>Williams</td><td>Physics</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>RegistrationID</th><th>StudentID</th><th>CourseCode</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>MATH-101</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>PHYS-101</td><td>B</td></tr>
+</tbody></table></div>
+
+<div><h2>TextbookEditions</h2><table><thead>
+<tr><th><span style="color:#990000">EditionNumber</span></th><th><span style="color:#990000">YearPublished</span></th><th>Publisher</th><th>ISBN</th><th>Textbooks</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2020</td><td>Pearson Education</td><td>9780321606389</td><td>Introduction to Algorithms</td></tr>
+<tr><td>2</td><td>2019</td><td>Wiley Publishing</td><td>9780470689571</td><td>Fundamentals of Physics</td></tr>
+</tbody></table></div>
+
+<div><h2>CourseOfferings</h2><table><thead>
+<tr><th>OfferingID</th><th>CourseCode</th><th>Semester</th><th>Year</th><th>InstructorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Instructors.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>MATH-101</td><td>Fall</td><td>2021</td><td>1</td></tr>
+<tr><td>2</td><td>PHYS-101</td><td>Spring</td><td>2021</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>BookCopies</h2><table><thead>
+<tr><th>CopyID</th><th>CourseOfferingID</th><th>TextbookEditionID</th><th>Quantity</th></tr>
+<tr><th></th><th>(&#8594; CourseOfferings.OfferingID)</th><th>(&#8594; TextbookEditions.EditionNumber)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>30</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>20</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

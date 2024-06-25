@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Art_Directors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Birthdate</th><th>Nationality</th><th>Number_of_Films_worked_on</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>1970-06-15</td><td>American</td><td><span style="color:#006600">25</span></td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>1985-03-20</td><td>British</td><td>30</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>1990-09-10</td><td>Canadian</td><td>20</td></tr>
+<tr><td>4</td><td>Robert Brown</td><td>1982-11-25</td><td>Australian</td><td>15</td></tr>
+<tr><td>5</td><td>Emily Davis</td><td>1995-07-05</td><td>French</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Set_Designers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Birthdate</th><th>Nationality</th><th>Number_of_Films_worked_on</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Wilson</td><td>1975-08-20</td><td>British</td><td><span style="color:#006600">25</span></td></tr>
+<tr><td>2</td><td>Lucy King</td><td>1992-10-30</td><td>American</td><td>35</td></tr>
+<tr><td>3</td><td>David Miller</td><td>1987-01-15</td><td>German</td><td>20</td></tr>
+<tr><td>4</td><td>Nathan White</td><td>1997-05-10</td><td>Italian</td><td>10</td></tr>
+<tr><td>5</td><td>Lilly Green</td><td>2000-12-05</td><td>Spanish</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Release_Date</th><th>Genre</th><th>Production_Company_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Production_Companies.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Great Escape</td><td>2021-06-15</td><td>Action/Adventure</td><td>1</td></tr>
+<tr><td>2</td><td>A Tale of Two Cities</td><td>2021-09-20</td><td>Drama</td><td>2</td></tr>
+<tr><td>3</td><td>Inception</td><td>2021-12-25</td><td>Science Fiction</td><td>3</td></tr>
+<tr><td>4</td><td>La La Land</td><td>2022-03-10</td><td>Musical</td><td>4</td></tr>
+<tr><td>5</td><td>Interstellar</td><td>2022-06-05</td><td>Science Fiction</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Production_Companies</h2><table><thead>
+<tr><th>ID</th><th>Company_Name</th><th>Founded_Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros.</td><td>1923</td></tr>
+<tr><td>2</td><td>Paramount Pictures</td><td>1914</td></tr>
+<tr><td>3</td><td>Universal Studios</td><td>1912</td></tr>
+<tr><td>4</td><td>Disney Studios</td><td>1923</td></tr>
+<tr><td>5</td><td>Columbia Pictures</td><td>1924</td></tr>
+</tbody></table></div>
+
+<div><h2>Crew_Members</h2><table><thead>
+<tr><th>ID</th><th>Fullname</th><th>Role</th><th>Movie_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movies.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>Art Director</td><td>1</td></tr>
+<tr><td>2</td><td>Tom Wilson</td><td>Set Designer</td><td>1</td></tr>
+<tr><td>3</td><td>Jane Doe</td><td>Art Director</td><td>2</td></tr>
+<tr><td>4</td><td>Lucy King</td><td>Set Designer</td><td>2</td></tr>
+<tr><td>5</td><td>Alice Johnson</td><td>Costume Designer</td><td>3</td></tr>
+<tr><td>6</td><td>Robert Brown</td><td>Cinematographer</td><td>3</td></tr>
+<tr><td>7</td><td>Emily Davis</td><td>Makeup Artist</td><td>4</td></tr>
+<tr><td>8</td><td>Nathan White</td><td>Art Director</td><td>4</td></tr>
+<tr><td>9</td><td>Lilly Green</td><td>Set Designer</td><td>5</td></tr>
+<tr><td>10</td><td>David Miller</td><td>Cinematographer</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

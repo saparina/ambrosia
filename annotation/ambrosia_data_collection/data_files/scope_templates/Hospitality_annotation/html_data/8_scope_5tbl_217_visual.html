@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Nature_Reserves</span></h2><table><thead>
+<tr><th>ReserveID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Yellowstone</td><td>Wyoming</td></tr>
+<tr><td>2</td><td>Grand Canyon</td><td>Arizona</td></tr>
+<tr><td>3</td><td>Yosemite</td><td>California</td></tr>
+<tr><td>4</td><td>Zion National Park</td><td>Utah</td></tr>
+<tr><td>5</td><td>Great Smoky Mountains</td><td>Tennessee</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Flora_and_fauna</span></h2><table><thead>
+<tr><th>FaunaID</th><th><span style="color:#990000">SpeciesName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Deer</td></tr>
+<tr><td>2</td><td>Elk</td></tr>
+<tr><td>3</td><td>Bison</td></tr>
+<tr><td>4</td><td>Coyote</td></tr>
+<tr><td>5</td><td>Raccoon</td></tr>
+</tbody></table></div>
+
+<div><h2>Nature_reserves_flora_and_fauna</h2><table><thead>
+<tr><th>ID</th><th>NatureReserveId</th><th>FaunaId</th></tr>
+<tr><th></th><th>(&#8594; Nature_Reserves.ReserveID)</th><th>(&#8594; Flora_and_fauna.FaunaID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

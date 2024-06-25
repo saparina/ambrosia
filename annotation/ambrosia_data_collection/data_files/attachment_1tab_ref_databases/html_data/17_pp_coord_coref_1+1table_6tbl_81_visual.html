@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Newspapers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>frequency</th><th>language</th><th>issue_date</th><th>format_type</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Newspaper_Formats.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily Post</td><td>Daily</td><td>English</td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Financial Times</td><td>Weekly</td><td>English</td><td>2023-01-06</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Newspaper_Formats</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">format_name</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Broadsheet</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Tabloid</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publish_date</th><th>newspaper_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Newspapers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Article</td><td>This is the first article.</td><td>2023-01-01 10:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Second Article</td><td>This is the second article.</td><td>2023-01-07 10:00:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>mikebrown@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emwhite@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Author_Articles</h2><table><thead>
+<tr><th>article_id</th><th>author_id</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Distributors</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">company_name</span></th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sainsbury's</td><td>London</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Tesco</span></td><td>Manchester</td></tr>
+</tbody></table></div>
+
+<div><h2>Distribution</h2><table><thead>
+<tr><th>newspaper_id</th><th>distributor_id</th><th>quantity</th></tr>
+<tr><th>(&#8594; Newspapers.id)</th><th>(&#8594; Distributors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000</td></tr>
+<tr><td>2</td><td>1</td><td>800</td></tr>
+<tr><td>1</td><td>2</td><td>900</td></tr>
+<tr><td>2</td><td>2</td><td>700</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

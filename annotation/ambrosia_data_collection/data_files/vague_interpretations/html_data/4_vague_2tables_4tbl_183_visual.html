@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Materials</h2><table><thead>
+<tr><th>material_id</th><th>name</th><th>cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concrete</td><td>30.0</td></tr>
+<tr><td>2</td><td>Steel Rebar</td><td>60.0</td></tr>
+<tr><td>3</td><td>Lumber</td><td>20.0</td></tr>
+<tr><td>4</td><td>Bricks</td><td>15.0</td></tr>
+<tr><td>5</td><td>Cement</td><td>45.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Projects</h2><table><thead>
+<tr><th>project_id</th><th>name</th><th>start_date</th><th>end_date</th><th>infrastructure_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Infrastructure.infrastructure_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Highway Bridge Repair</td><td>2023-01-01</td><td>2023-07-31</td><td>1</td></tr>
+<tr><td>2</td><td>Road Paving</td><td>2023-05-01</td><td>2023-10-31</td><td>2</td></tr>
+<tr><td>3</td><td>Building Foundation</td><td>2023-03-01</td><td>2023-09-30</td><td>3</td></tr>
+<tr><td>4</td><td>Stadium Construction</td><td>2023-08-01</td><td>2024-02-28</td><td>4</td></tr>
+<tr><td>5</td><td>Park Improvement</td><td>2023-06-01</td><td>2023-12-31</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Infrastructure</h2><table><thead>
+<tr><th>infrastructure_id</th><th>description</th><th>service_life_expectancy_id</th><th>renewal_schedule_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Service_Life_Expectancy.service_life_expectancy_id)</th><th>(&#8594; Renewal_Schedule.renewal_schedule_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bridge Abutment</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Retaining Wall</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Foundation Slab</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Earthwork Embankment</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Drainage System</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Workers</h2><table><thead>
+<tr><th>worker_id</th><th>first_name</th><th>last_name</th><th>skill_level</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>8</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>9</td></tr>
+<tr><td>3</td><td>Mike</td><td>Johnson</td><td>7</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>9</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Tasks</h2><table><thead>
+<tr><th>task_id</th><th>description</th><th>assigned_to_worker_id</th><th>due_date</th><th>completed</th></tr>
+<tr><th></th><th></th><th>(&#8594; Workers.worker_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Repair concrete cracks</td><td>1</td><td>2023-07-15</td><td>0</td></tr>
+<tr><td>2</td><td>Install new drainage system</td><td>2</td><td>2023-10-01</td><td>0</td></tr>
+<tr><td>3</td><td>Replace steel rebar</td><td>3</td><td>2023-09-15</td><td>0</td></tr>
+<tr><td>4</td><td>Paint bridge abutments</td><td>4</td><td>2023-11-15</td><td>0</td></tr>
+<tr><td>5</td><td>Level retaining wall</td><td>5</td><td>2023-12-15</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Service_Life_Expectancy</span></h2><table><thead>
+<tr><th>service_life_expectancy_id</th><th>min_years</th><th>max_years</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>20</td><td>40</td></tr>
+<tr><td>2</td><td>15</td><td>30</td></tr>
+<tr><td>3</td><td>30</td><td>60</td></tr>
+<tr><td>4</td><td>10</td><td>20</td></tr>
+<tr><td>5</td><td>5</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Renewal_Schedule</span></h2><table><thead>
+<tr><th>renewal_schedule_id</th><th>frequency</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Yearly</td></tr>
+<tr><td>2</td><td>Quarterly</td></tr>
+<tr><td>3</td><td>Semiannually</td></tr>
+<tr><td>4</td><td>Monthly</td></tr>
+<tr><td>5</td><td>Annually</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

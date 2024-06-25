@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Industry_Sector</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Technology</td><td>Includes companies involved in software development, hardware manufacturing and IT services.</td></tr>
+<tr><td>2</td><td>Finance</td><td>Companies dealing with financial transactions, investments and banking operations.</td></tr>
+<tr><td>3</td><td>Healthcare</td><td>Organizations providing medical care, research and pharmaceutical products.</td></tr>
+<tr><td>4</td><td>Education</td><td>Institutions focused on teaching, training and learning activities.</td></tr>
+<tr><td>5</td><td>Retail</td><td>Businesses that sell goods and services directly to consumers.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Project_Name</span></h2><table><thead>
+<tr><th>id</th><th>project_name</th><th>start_date</th><th>end_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Project Alpha</td><td>2021-08-01</td><td>2021-09-30</td></tr>
+<tr><td>2</td><td>Project Beta</td><td>2021-10-01</td><td>2021-11-30</td></tr>
+<tr><td>3</td><td>Project Gamma</td><td>2021-12-01</td><td>2022-01-31</td></tr>
+<tr><td>4</td><td>Project Delta</td><td>2022-02-01</td><td>2022-03-31</td></tr>
+<tr><td>5</td><td>Project Epsilon</td><td>2022-04-01</td><td>2022-05-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Internship</h2><table><thead>
+<tr><th>id</th><th>student_id</th><th>industry_sector_id</th><th>project_id</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Industry_Sector.id)</th><th>(&#8594; Project_Name.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

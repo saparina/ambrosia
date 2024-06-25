@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Banks</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#006600">green_bond_percentage</span></th><th>social_bond_percentage</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank A</td><td>0.05</td><td>0.0</td></tr>
+<tr><td>2</td><td>Bank B</td><td>0.1</td><td>0.02</td></tr>
+<tr><td>3</td><td>Bank C</td><td><span style="color:#006600">0.06</span></td><td>0.03</td></tr>
+<tr><td>4</td><td>Bank D</td><td>0.07</td><td>0.04</td></tr>
+<tr><td>5</td><td>Bank E</td><td>0.08</td><td>0.05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">GreenBonds</span></h2><table><thead>
+<tr><th>id</th><th>bank_id</th><th>bond_name</th><th>amount</th><th>interest_rate</th></tr>
+<tr><th></th><th>(&#8594; Banks.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Green Bond A</td><td>1000000.0</td><td>4.0</td></tr>
+<tr><td>2</td><td>1</td><td>Green Bond B</td><td>2000000.0</td><td>4.5</td></tr>
+<tr><td>3</td><td>2</td><td>Green Bond C</td><td>1500000.0</td><td>5.0</td></tr>
+<tr><td>4</td><td>2</td><td>Green Bond D</td><td>2500000.0</td><td>5.5</td></tr>
+<tr><td>5</td><td>3</td><td>Green Bond E</td><td>3000000.0</td><td>6.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SocialBonds</span></h2><table><thead>
+<tr><th>id</th><th>bank_id</th><th>bond_name</th><th>amount</th><th>interest_rate</th></tr>
+<tr><th></th><th>(&#8594; Banks.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Social Bond A</td><td>1000000.0</td><td>3.0</td></tr>
+<tr><td>2</td><td>1</td><td>Social Bond B</td><td>2000000.0</td><td>3.5</td></tr>
+<tr><td>3</td><td>2</td><td>Social Bond C</td><td>1500000.0</td><td>4.0</td></tr>
+<tr><td>4</td><td>2</td><td>Social Bond D</td><td>2500000.0</td><td>4.5</td></tr>
+<tr><td>5</td><td>3</td><td>Social Bond E</td><td>3000000.0</td><td>5.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>123-456-7890</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>098-765-4321</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>alice@example.com</td><td>555-555-5555</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Bob</td><td>Builder</td><td>bob@example.com</td><td>555-123-4567</td><td>135 Pine St</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Shepherd</td><td>charlie@example.com</td><td>555-987-6543</td><td>246 Maple St</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>id</th><th>customer_id</th><th>bank_id</th><th>transaction_date</th><th>amount</th><th>type</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th>(&#8594; Banks.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01</td><td>1000.0</td><td>Deposit</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>2022-01-02</td><td>500.0</td><td>Withdrawal</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>2022-01-03</td><td>1500.0</td><td>Deposit</td></tr>
+<tr><td>4</td><td>2</td><td>1</td><td>2022-01-04</td><td>750.0</td><td>Withdrawal</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>2022-01-05</td><td>2000.0</td><td>Deposit</td></tr>
+<tr><td>6</td><td>3</td><td>1</td><td>2022-01-06</td><td>1000.0</td><td>Withdrawal</td></tr>
+<tr><td>7</td><td>4</td><td>2</td><td>2022-01-07</td><td>1000.0</td><td>Deposit</td></tr>
+<tr><td>8</td><td>4</td><td>2</td><td>2022-01-08</td><td>500.0</td><td>Withdrawal</td></tr>
+<tr><td>9</td><td>5</td><td>2</td><td>2022-01-09</td><td>1500.0</td><td>Deposit</td></tr>
+<tr><td>10</td><td>5</td><td>2</td><td>2022-01-10</td><td>750.0</td><td>Withdrawal</td></tr>
+<tr><td>11</td><td>6</td><td>3</td><td>2022-01-11</td><td>2000.0</td><td>Deposit</td></tr>
+<tr><td>12</td><td>6</td><td>3</td><td>2022-01-12</td><td>1000.0</td><td>Withdrawal</td></tr>
+<tr><td>13</td><td>7</td><td>3</td><td>2022-01-13</td><td>1500.0</td><td>Deposit</td></tr>
+<tr><td>14</td><td>7</td><td>3</td><td>2022-01-14</td><td>750.0</td><td>Withdrawal</td></tr>
+<tr><td>15</td><td>8</td><td>4</td><td>2022-01-15</td><td>1000.0</td><td>Deposit</td></tr>
+<tr><td>16</td><td>8</td><td>4</td><td>2022-01-16</td><td>500.0</td><td>Withdrawal</td></tr>
+<tr><td>17</td><td>9</td><td>4</td><td>2022-01-17</td><td>1500.0</td><td>Deposit</td></tr>
+<tr><td>18</td><td>9</td><td>4</td><td>2022-01-18</td><td>750.0</td><td>Withdrawal</td></tr>
+<tr><td>19</td><td>10</td><td>5</td><td>2022-01-19</td><td>2000.0</td><td>Deposit</td></tr>
+<tr><td>20</td><td>10</td><td>5</td><td>2022-01-20</td><td>1000.0</td><td>Withdrawal</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

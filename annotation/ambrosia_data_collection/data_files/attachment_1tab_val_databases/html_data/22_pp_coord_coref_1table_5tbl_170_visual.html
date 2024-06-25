@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Director</h2><table><thead>
+<tr><th>directorID</th><th>name</th><th>birthDate</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quentin Tarantino</td><td>1963-03-27</td><td>United States</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td><td>1970-07-30</td><td>United Kingdom</td></tr>
+<tr><td>3</td><td>Martin Scorsese</td><td>1942-11-22</td><td>United States</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>actorID</th><th>name</th><th>birthDate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>Italy</td></tr>
+<tr><td>2</td><td>Meryl Streep</td><td>1949-06-22</td><td>United States</td></tr>
+<tr><td>3</td><td>Joaquin Phoenix</td><td>1974-10-28</td><td>United States</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>movieID</th><th>title</th><th>releaseYear</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pulp Fiction</td><td>1994</td><td>Crime</td></tr>
+<tr><td>2</td><td>Inception</td><td>2010</td><td>Thriller</td></tr>
+<tr><td>3</td><td>The Departed</td><td>2006</td><td>Crime</td></tr>
+<tr><td>4</td><td>Taxi Driver</td><td>1976</td><td>Drama</td></tr>
+<tr><td>5</td><td>Goodfellas</td><td>1990</td><td>Crime</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Roles</span></h2><table><thead>
+<tr><th>roleID</th><th>filmProductionRole</th><th>numberOfProjectsCompleted</th><th>directorID</th><th>actorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Director.directorID)</th><th>(&#8594; Actor.actorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Screenwriter</span></td><td><span style="color:#006600">15</span></td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Screenwriter</span></td><td>20</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Editor</span></td><td><span style="color:#006600">15</span></td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Editor</span></td><td>25</td><td>1</td><td>1</td></tr>
+<tr><td>5</td><td>Director</td><td>20</td><td>2</td><td>2</td></tr>
+<tr><td>6</td><td>Actor</td><td><span style="color:#006600">15</span></td><td>3</td><td>3</td></tr>
+<tr><td>7</td><td>Cinematographer</td><td>10</td><td>1</td><td>1</td></tr>
+<tr><td>8</td><td>Composer</td><td>30</td><td>2</td><td>2</td></tr>
+<tr><td>9</td><td>Producer</td><td><span style="color:#006600">15</span></td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

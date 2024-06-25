@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Software_Companies</span></h2><table><thead>
+<tr><th>id</th><th>company_name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CompanyA</td><td>New York</td></tr>
+<tr><td>2</td><td>CompanyB</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>CompanyC</td><td>London</td></tr>
+<tr><td>4</td><td>CompanyD</td><td>Tokyo</td></tr>
+<tr><td>5</td><td>CompanyE</td><td>Paris</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Job_Positions</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">position_title</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Design and develop high-quality software solutions.</td></tr>
+<tr><td>2</td><td>Data Scientist</td><td>Analyze data sets and provide insights.</td></tr>
+<tr><td>3</td><td>Product Manager</td><td>Lead product development from concept to launch.</td></tr>
+<tr><td>4</td><td>UX Designer</td><td>Create user interfaces that enhance usability.</td></tr>
+<tr><td>5</td><td>QA Analyst</td><td>Identify defects and ensure product quality.</td></tr>
+</tbody></table></div>
+
+<div><h2>Software_Companies_Job_Positions</h2><table><thead>
+<tr><th>software_company_id</th><th>job_position_id</th></tr>
+<tr><th>(&#8594; Software_Companies.id)</th><th>(&#8594; Job_Positions.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Programming</td></tr>
+<tr><td>2</td><td>Database Management</td></tr>
+<tr><td>3</td><td>Machine Learning</td></tr>
+<tr><td>4</td><td>Project Management</td></tr>
+<tr><td>5</td><td>User Experience Design</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>PhoneNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>+1234567890</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>+0987654321</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>+1123456789</td><td>alice.brown@example.com</td></tr>
+<tr><td>4</td><td>Charlie</td><td>Black</td><td>+0987654320</td><td>charlie.black@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>White</td><td>+1345678901</td><td>david.white@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Tables</span></h2><table><thead>
+<tr><th>TableID</th><th><span style="color:#186e16">SeatingArea</span></th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Patio</span></td><td>50</td></tr>
+<tr><td>2</td><td><span style="color:#186e16">Patio</span></td><td>40</td></tr>
+<tr><td>3</td><td>Veranda</td><td>50</td></tr>
+<tr><td>4</td><td>Veranda</td><td>40</td></tr>
+<tr><td>5</td><td>Indoor</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">FloorPlan</span></h2><table><thead>
+<tr><th>FloorplanID</th><th><span style="color:#1430b2">NumberOfSeats</span></th><th>TableId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Tables.TableID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>50</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">40</span></td><td>2</td></tr>
+<tr><td>3</td><td>50</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#1430b2">40</span></td><td>4</td></tr>
+<tr><td>5</td><td>60</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>ReservationID</th><th>CustomerID</th><th>ReservedDate</th><th>ReservedTime</th><th>NumGuests</th><th>TableId</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th><th>(&#8594; Tables.TableID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01 18:00</td><td>19:00</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-02 19:00</td><td>20:00</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2023-01-03 20:00</td><td>21:00</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>2023-01-04 21:00</td><td>22:00</td><td>5</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>2023-01-05 22:00</td><td>23:00</td><td>6</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>FoodOrders</h2><table><thead>
+<tr><th>OrderID</th><th>ReservationID</th><th>MenuItem</th><th>Quantity</th><th>SpecialInstructions</th><th>TotalPrice</th><th>PaymentStatus</th></tr>
+<tr><th></th><th>(&#8594; Reservations.ReservationID)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Steak</td><td>2</td><td></td><td>75</td><td>Paid</td></tr>
+<tr><td>2</td><td>2</td><td>Salmon</td><td>3</td><td></td><td>90</td><td>Paid</td></tr>
+<tr><td>3</td><td>3</td><td>Veggie Burger</td><td>2</td><td>No cheese</td><td>15</td><td>Paid</td></tr>
+<tr><td>4</td><td>4</td><td>Chicken Caesar Salad</td><td>1</td><td></td><td>18</td><td>Paid</td></tr>
+<tr><td>5</td><td>5</td><td>Pasta Primavera</td><td>1</td><td>Gluten-free</td><td>20</td><td>Paid</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

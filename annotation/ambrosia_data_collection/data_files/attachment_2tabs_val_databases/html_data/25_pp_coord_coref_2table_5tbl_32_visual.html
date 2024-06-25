@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">HistorianJobs</span></h2><table><thead>
+<tr><th>ID</th><th>Employer</th><th>Time_Period</th><th>Title</th><th>Description</th><th>Location</th><th>SkillsRequired</th><th>CompanyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Heritage Exploration</td><td><span style="color:#006600">Ancient Rome</span></td><td>Historian</td><td>Research ancient Roman history</td><td>Rome, Italy</td><td>Latin, History, Research skills</td><td>1</td></tr>
+<tr><td>2</td><td>Heritage Exploration</td><td>Medieval Europe</td><td>Historian</td><td>Study medieval European culture</td><td>Various locations</td><td>History, Cultural studies, Language skills</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ArcheologistJobs</span></h2><table><thead>
+<tr><th>ID</th><th>Employer</th><th>Time_Period</th><th>Title</th><th>Description</th><th>Location</th><th>SkillsRequired</th><th>CompanyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Heritage Exploration</td><td><span style="color:#006600">Ancient Rome</span></td><td>Archeologist</td><td>Excavate archaeological sites</td><td>Rome, Italy</td><td>Archaeology, History, Fieldwork skills</td><td>1</td></tr>
+<tr><td>2</td><td>ArchaeoDiscoveries</td><td>Modern America</td><td>Archeologist</td><td>Analyze artifacts from recent excavations</td><td>Various locations</td><td>Archaeology, Analysis, Report writing</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>CompanyId</th><th>Name</th><th>Address</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Heritage Exploration</td><td>123 Main St, Ancient City</td><td>heritage@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>ArchaeoDiscoveries</td><td>456 Archway Rd, Modern Town</td><td>archaeodiscoveries@example.com</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ApplicantId</th><th>FullName</th><th>Email</th><th>ResumePath</th><th>ApplicationStatus</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@email.com</td><td>/path/to/resume.pdf</td><td>Pending</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@email.com</td><td>/path/to/resume.pdf</td><td>Interviewing</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

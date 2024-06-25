@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Contemporary_Artwork</span></h2><table><thead>
+<tr><th>artwork_id</th><th>title</th><th>artist</th><th>year_created</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Painting1</td><td>ArtistA</td><td>2000</td><td><span style="color:#006600">5000.0</span></td></tr>
+<tr><td>2</td><td>Scenery2</td><td>ArtistB</td><td>2010</td><td>7000.0</td></tr>
+<tr><td>3</td><td>Portrait3</td><td>ArtistC</td><td>2020</td><td>6000.0</td></tr>
+<tr><td>4</td><td>Nature4</td><td>ArtistD</td><td>2030</td><td>8000.0</td></tr>
+<tr><td>5</td><td>Cityscape5</td><td>ArtistE</td><td>2040</td><td>9000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Abstract_Artwork</span></h2><table><thead>
+<tr><th>artwork_id</th><th>title</th><th>artist</th><th>year_created</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Abstract1</td><td>ArtistF</td><td>2050</td><td><span style="color:#006600">5000.0</span></td></tr>
+<tr><td>2</td><td>Geometric2</td><td>ArtistG</td><td>2060</td><td>6000.0</td></tr>
+<tr><td>3</td><td>Colorful3</td><td>ArtistH</td><td>2070</td><td>7000.0</td></tr>
+<tr><td>4</td><td>Minimalistic4</td><td>ArtistI</td><td>2080</td><td>8000.0</td></tr>
+<tr><td>5</td><td>Expressionistic5</td><td>ArtistJ</td><td>2090</td><td>9000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieDatabase</h2><table><thead>
+<tr><th>movie_id</th><th>title</th><th>director</th><th>release_year</th><th>box_office_revenue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie1</td><td>DirectorA</td><td>2001</td><td>5000000.0</td></tr>
+<tr><td>2</td><td>Documentary2</td><td>DirectorB</td><td>2011</td><td>6000000.0</td></tr>
+<tr><td>3</td><td>Action3</td><td>DirectorC</td><td>2021</td><td>7000000.0</td></tr>
+<tr><td>4</td><td>Drama4</td><td>DirectorD</td><td>2031</td><td>8000000.0</td></tr>
+<tr><td>5</td><td>Comedy5</td><td>DirectorE</td><td>2041</td><td>9000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>MusicAlbums</h2><table><thead>
+<tr><th>album_id</th><th>title</th><th>artist</th><th>release_date</th><th>sales_numbers</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Album1</td><td>ArtistK</td><td>2002-01-01</td><td>500000</td></tr>
+<tr><td>2</td><td>Rock2</td><td>ArtistL</td><td>2012-01-01</td><td>600000</td></tr>
+<tr><td>3</td><td>Pop3</td><td>ArtistM</td><td>2022-01-01</td><td>700000</td></tr>
+<tr><td>4</td><td>Country4</td><td>ArtistN</td><td>2032-01-01</td><td>800000</td></tr>
+<tr><td>5</td><td>Classical5</td><td>ArtistO</td><td>2042-01-01</td><td>900000</td></tr>
+</tbody></table></div>
+
+<div><h2>BookLibrary</h2><table><thead>
+<tr><th>book_id</th><th>title</th><th>author</th><th>publish_date</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Book1</td><td>AuthorA</td><td>2003-01-01</td><td>Romance</td></tr>
+<tr><td>2</td><td>Biography2</td><td>AuthorB</td><td>2013-01-01</td><td>Nonfiction</td></tr>
+<tr><td>3</td><td>Mystery3</td><td>AuthorC</td><td>2023-01-01</td><td>Thriller</td></tr>
+<tr><td>4</td><td>Historical4</td><td>AuthorD</td><td>2033-01-01</td><td>History</td></tr>
+<tr><td>5</td><td>Science fiction5</td><td>AuthorE</td><td>2043-01-01</td><td>Science Fiction</td></tr>
+</tbody></table></div>
+
+<div><h2>VideoGames</h2><table><thead>
+<tr><th>game_id</th><th>title</th><th>developer</th><th>release_date</th><th>revenue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Game1</td><td>DeveloperX</td><td>2004-01-01</td><td>500000.0</td></tr>
+<tr><td>2</td><td>Strategy2</td><td>DeveloperY</td><td>2014-01-01</td><td>600000.0</td></tr>
+<tr><td>3</td><td>Shooter3</td><td>DeveloperZ</td><td>2024-01-01</td><td>700000.0</td></tr>
+<tr><td>4</td><td>Roleplaying4</td><td>DeveloperW</td><td>2034-01-01</td><td>800000.0</td></tr>
+<tr><td>5</td><td>Adventure5</td><td>DeveloperV</td><td>2044-01-01</td><td>900000.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

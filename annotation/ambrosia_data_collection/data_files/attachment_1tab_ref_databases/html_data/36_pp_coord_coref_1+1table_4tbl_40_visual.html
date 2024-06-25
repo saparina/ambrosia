@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employers</h2><table><thead>
+<tr><th>employerID</th><th>companyName</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CompanyA</td><td>New York</td></tr>
+<tr><td>2</td><td>CompanyB</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>CompanyC</td><td>Chicago</td></tr>
+<tr><td>4</td><td>CompanyD</td><td>Miami</td></tr>
+<tr><td>5</td><td>CompanyE</td><td>Houston</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>jobID</th><th>title</th><th>description</th><th>salary</th><th>postedDate</th><th>employerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Employers.employeeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td><td>Develop and maintain web applications.</td><td>80000.0</td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data and provide insights.</td><td>60000.0</td><td>2023-01-02</td><td>2</td></tr>
+<tr><td>3</td><td>Project Manager</td><td>Manage project scope, timeline, and resources.</td><td>70000.0</td><td>2023-01-03</td><td>3</td></tr>
+<tr><td>4</td><td>Graphic Designer</td><td>Create visual content for marketing campaigns.</td><td>50000.0</td><td>2023-01-04</td><td>4</td></tr>
+<tr><td>5</td><td>Product Manager</td><td>Lead product development from conception to launch.</td><td>90000.0</td><td>2023-01-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>applicantID</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th><th>resumePath</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1 (123) 456-7890</td><td>https://www.example.com/resume/johndoe.pdf</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+1 (123) 456-7891</td><td>https://www.example.com/resume/janesmith.pdf</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td><td>+1 (123) 456-7892</td><td>https://www.example.com/resume/alicejohnson.pdf</td></tr>
+<tr><td>4</td><td>Tom</td><td>Williams</td><td>tom.williams@example.com</td><td>+1 (123) 456-7893</td><td>https://www.example.com/resume/tomwilliams.pdf</td></tr>
+<tr><td>5</td><td>Lucy</td><td>Brown</td><td>lucy.brown@example.com</td><td>+1 (123) 456-7894</td><td>https://www.example.com/resume/lucybrown.pdf</td></tr>
+</tbody></table></div>
+
+<div><h2>JobApplications</h2><table><thead>
+<tr><th>applicationID</th><th>jobID</th><th>applicantID</th><th>applicationDate</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; JobPostings.jobID)</th><th>(&#8594; Applicants.applicantID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-06</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-07</td><td>Accepted</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-01-08</td><td>Rejected</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-01-09</td><td>Interview Scheduled</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-01-10</td><td>Offered</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Construction_Jobs</span></h2><table><thead>
+<tr><th>constructionJobID</th><th><span style="color:#990000"><span style="color:#990000">jobTitle</span></span></th><th>jobDescription</th><th>requiredSkills</th><th>constructionJobType</th><th>designSoftware</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Design_Software_Expertise.softwareName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Civil Engineer</span></td><td>Plan, design, and supervise construction projects.</td><td>Strong math and communication skills; Knowledge of building codes and regulations.</td><td><span style="color:#990000">Civil Engineer</span>ing</td><td><span style="color:#006600">AutoCAD</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Civil Engineer</span></td><td>Plan, design, and supervise construction projects.</td><td>Strong math and communication skills; Knowledge of building codes and regulations.</td><td><span style="color:#990000">Civil Engineer</span>ing</td><td>Revit</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Architect</span></td><td>Design buildings and spaces, ensuring functionality and aesthetics.</td><td>Creative thinking, attention to detail, and knowledge of architectural principles.</td><td><span style="color:#990000">Architect</span>ure</td><td><span style="color:#006600">AutoCAD</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Architect</span></td><td>Design buildings and spaces, ensuring functionality and aesthetics.</td><td>Creative thinking, attention to detail, and knowledge of architectural principles.</td><td><span style="color:#990000">Architect</span>ure</td><td>Rhino</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Design_Software_Expertise</span></h2><table><thead>
+<tr><th>softwareID</th><th><span style="color:#006600">softwareName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">AutoCAD</span></td></tr>
+<tr><td>2</td><td>Revit</td></tr>
+<tr><td>3</td><td>Rhino</td></tr>
+<tr><td>4</td><td>SketchUp</td></tr>
+<tr><td>5</td><td>Adobe Illustrator</td></tr>
+</tbody></table></div>
+
+<div><h2>Employed_in_Construction_Jobs</h2><table><thead>
+<tr><th>employedID</th><th>applicantID</th><th>constructionJobID</th><th>startDate</th><th>endDate</th></tr>
+<tr><th></th><th>(&#8594; Applicants.applicantID)</th><th>(&#8594; Construction_Jobs.constructionJobID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-15</td><td>2023-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-02-15</td><td>2023-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-03-15</td><td>2023-12-31</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-04-15</td><td>2023-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-05-15</td><td>2023-12-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

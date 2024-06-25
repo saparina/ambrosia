@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Languages</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">language</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>English</td></tr>
+<tr><td>2</td><td>French</td></tr>
+<tr><td>3</td><td>German</td></tr>
+<tr><td>4</td><td><span style="color:#006600">Japanese</span></td></tr>
+<tr><td>5</td><td>Russian</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Pilots</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>licenseNumber</th><th>speaksId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Languages.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1234567890</td><td>1</td></tr>
+<tr><td>2</td><td>Mary Smith</td><td>987654321</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>5555555555</td><td>3</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>4444444444</td><td>4</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>3333333333</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">GateAgents</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>gateNumber</th><th>speaksId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Languages.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paul White</td><td>A1</td><td>1</td></tr>
+<tr><td>2</td><td>Tom Black</td><td>C5</td><td>2</td></tr>
+<tr><td>3</td><td>Lucy Blue</td><td>D12</td><td>3</td></tr>
+<tr><td>4</td><td>Kelly Red</td><td>E14</td><td>4</td></tr>
+<tr><td>5</td><td>Hannah Pink</td><td>F20</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flightNumber</th><th>departureTime</th><th>arrivalTime</th><th>pilotId</th><th>gateAgentId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Pilots.id)</th><th>(&#8594; GateAgents.id)</th></tr>
+</thead><tbody>
+<tr><td>101</td><td>2022-01-01 08:00</td><td>2022-01-01 10:00</td><td>1</td><td>1</td></tr>
+<tr><td>102</td><td>2022-01-01 09:00</td><td>2022-01-01 11:00</td><td>2</td><td>2</td></tr>
+<tr><td>103</td><td>2022-01-01 10:00</td><td>2022-01-01 12:00</td><td>3</td><td>3</td></tr>
+<tr><td>104</td><td>2022-01-01 11:00</td><td>2022-01-01 13:00</td><td>4</td><td>4</td></tr>
+<tr><td>105</td><td>2022-01-01 12:00</td><td>2022-01-01 14:00</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passengerId</th><th>firstName</th><th>lastName</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alexander</td><td>Smith</td><td>25</td></tr>
+<tr><td>2</td><td>Emma</td><td>Williams</td><td>30</td></tr>
+<tr><td>3</td><td>David</td><td>Jones</td><td>40</td></tr>
+<tr><td>4</td><td>Daniel</td><td>Black</td><td>50</td></tr>
+<tr><td>5</td><td>Laura</td><td>White</td><td>60</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

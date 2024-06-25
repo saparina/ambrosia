@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>LocationID</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Airline X</td><td>1</td></tr>
+<tr><td>2</td><td>Airline Y</td><td>2</td></tr>
+<tr><td>3</td><td>Airline Z</td><td>3</td></tr>
+<tr><td>4</td><td>Tech Co.</td><td>4</td></tr>
+<tr><td>5</td><td>Health Care Inc.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>LocationID</th><th>City</th><th>State</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td></tr>
+<tr><td>2</td><td>Chicago</td><td>IL</td><td>USA</td></tr>
+<tr><td>3</td><td>Los Angeles</td><td>CA</td><td>USA</td></tr>
+<tr><td>4</td><td>London</td><td>England</td><td>UK</td></tr>
+<tr><td>5</td><td>Paris</td><td>France</td><td>FR</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>SkillID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Programming</td></tr>
+<tr><td>2</td><td>Data Analysis</td></tr>
+<tr><td>3</td><td>Network Administration</td></tr>
+<tr><td>4</td><td>Database Management</td></tr>
+<tr><td>5</td><td>Web Development</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPostings</span></h2><table><thead>
+<tr><th>PostingID</th><th>Title</th><th>Description</th><th>MinSalary</th><th>MaxSalary</th><th>CompanyID</th><th>LocationID</th><th>Aviation_Jobs</th><th>Training_Center</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th><th>(&#8594; Locations.LocationID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop software applications</td><td>60000.0</td><td>80000.0</td><td>1</td><td>1</td><td>None</td><td>None</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze large datasets</td><td>50000.0</td><td>70000.0</td><td>1</td><td>2</td><td>None</td><td>None</td></tr>
+<tr><td>3</td><td>Network Administrator</td><td>Maintain network infrastructure</td><td>55000.0</td><td>75000.0</td><td>2</td><td>3</td><td>None</td><td>None</td></tr>
+<tr><td>4</td><td>Database Manager</td><td>Manage databases</td><td>60000.0</td><td>80000.0</td><td>3</td><td>4</td><td>None</td><td>None</td></tr>
+<tr><td>5</td><td>Web Developer</td><td>Design and develop websites</td><td>55000.0</td><td>75000.0</td><td>4</td><td>5</td><td>None</td><td>None</td></tr>
+<tr><td>6</td><td><span style="color:#990000">Flight Attendant</span></td><td>Attend to passengers on flights</td><td>35000.0</td><td>50000.0</td><td>1</td><td>1</td><td><span style="color:#990000">Flight Attendant</span></td><td><span style="color:#006600">Aviation Academ</span></td></tr>
+<tr><td>7</td><td><span style="color:#990000">Flight Attendant</span></td><td>Attend to passengers on flights</td><td>35000.0</td><td>50000.0</td><td>2</td><td>2</td><td><span style="color:#990000">Flight Attendant</span></td><td>ABC Aviation Academy</td></tr>
+<tr><td>8</td><td>Commercial <span style="color:#990000">Pilot</span></td><td>Fly commercial aircraft</td><td>60000.0</td><td>90000.0</td><td>1</td><td>1</td><td><span style="color:#990000">Pilot</span></td><td><span style="color:#006600">Aviation Academ</span></td></tr>
+<tr><td>9</td><td>Commercial <span style="color:#990000">Pilot</span></td><td>Fly commercial aircraft</td><td>60000.0</td><td>90000.0</td><td>2</td><td>3</td><td><span style="color:#990000">Pilot</span></td><td>XYZ Aviation Academy</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

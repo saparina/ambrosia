@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Children</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>2</td></tr>
+<tr><td>2</td><td>Bob</td><td>3</td></tr>
+<tr><td>3</td><td>Charlie</td><td>4</td></tr>
+<tr><td>4</td><td>David</td><td>5</td></tr>
+<tr><td>5</td><td>Eva</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Physical_Milestones</span></h2><table><thead>
+<tr><th>id</th><th>milestone_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Walking</td><td>Can walk independently without support</td></tr>
+<tr><td>2</td><td>Jumping</td><td>Can jump in place</td></tr>
+<tr><td>3</td><td>Running</td><td>Can run for short distances</td></tr>
+<tr><td>4</td><td>Climbing</td><td>Can climb onto and off of furniture without assistance</td></tr>
+<tr><td>5</td><td>Hopping</td><td>Can hop on one foot</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Cognitive_Milestones</span></h2><table><thead>
+<tr><th>id</th><th>milestone_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Recognition</td><td>Can recognize colors</td></tr>
+<tr><td>2</td><td>Memory</td><td>Remembers own name</td></tr>
+<tr><td>3</td><td>Problem Solving</td><td>Can solve simple problems</td></tr>
+<tr><td>4</td><td>Understanding</td><td>Shows understanding of simple instructions</td></tr>
+<tr><td>5</td><td>Imitation</td><td>Imitates actions of others</td></tr>
+</tbody></table></div>
+
+<div><h2>Child_Age</h2><table><thead>
+<tr><th>child_id</th><th>physical_milestone_id</th><th>cognitive_milestone_id</th></tr>
+<tr><th>(&#8594; Children.id)</th><th>(&#8594; Physical_Milestones.id)</th><th>(&#8594; Cognitive_Milestones.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

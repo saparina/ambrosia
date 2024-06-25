@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Formats</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paperback</td></tr>
+<tr><td>2</td><td>Hardcover</td></tr>
+<tr><td>3</td><td>Ebook</td></tr>
+<tr><td>4</td><td>Audiobook</td></tr>
+<tr><td>5</td><td>Digital</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Books</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>author</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pride and Prejudice</td><td>Jane Austen</td></tr>
+<tr><td>2</td><td>Great Expectations</td><td>Charles Dickens</td></tr>
+<tr><td>3</td><td>War and Peace</td><td>Leo Tolstoy</td></tr>
+<tr><td>4</td><td>The Adventures of Huckleberry Finn</td><td>Mark Twain</td></tr>
+<tr><td>5</td><td>1984</td><td>George Orwell</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>firstname</th><th>lastname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Austen</td></tr>
+<tr><td>2</td><td>Charles</td><td>Dickens</td></tr>
+<tr><td>3</td><td>Leo</td><td>Tolstoy</td></tr>
+<tr><td>4</td><td>Mark</td><td>Twain</td></tr>
+<tr><td>5</td><td>George</td><td>Orwell</td></tr>
+</tbody></table></div>
+
+<div><h2>Books_Authors</h2><table><thead>
+<tr><th>book_id</th><th>author_id</th></tr>
+<tr><th>(&#8594; Books.id)</th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Book_Formats</h2><table><thead>
+<tr><th>book_id</th><th>format_id</th></tr>
+<tr><th>(&#8594; Books.id)</th><th>(&#8594; Formats.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>2</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

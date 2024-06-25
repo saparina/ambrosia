@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Applications</span></h2><table><thead>
+<tr><th>application_id</th><th><span style="color:#990000">application_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Urban_Simulation</td></tr>
+<tr><td>2</td><td>Highway_Simulation</td></tr>
+<tr><td>3</td><td>Rural_Simulation</td></tr>
+<tr><td>4</td><td>Parking_Simulation</td></tr>
+<tr><td>5</td><td>Weather_Impact_Simulation</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Traffic_Simulators</span></h2><table><thead>
+<tr><th>simulator_id</th><th>simulator_name</th><th>simulator_version</th></tr>
+<tr><th>(&#8594; Traffic_Simulators_Applications.traffic_simulator_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sim1</td><td>V1.0</td></tr>
+<tr><td>2</td><td>Sim2</td><td>V2.0</td></tr>
+<tr><td>3</td><td>Sim3</td><td>V3.0</td></tr>
+<tr><td>4</td><td>Sim4</td><td>V4.0</td></tr>
+<tr><td>5</td><td>Sim5</td><td>V5.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Traffic_Simulators_Applications</h2><table><thead>
+<tr><th>traffic_simulator_id</th><th>application_id</th></tr>
+<tr><th>(&#8594; Traffic_Simulators.simulator_id)</th><th>(&#8594; Applications.application_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

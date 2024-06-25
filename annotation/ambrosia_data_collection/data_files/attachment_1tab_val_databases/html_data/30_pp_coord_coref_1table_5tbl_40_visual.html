@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>ArrivalTime</th><th>Origin</th><th>Destination</th><th>TerminalNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>18:30</td><td>19:45</td><td>LAX</td><td>JFK</td><td>101</td></tr>
+<tr><td>2</td><td>17:00</td><td>18:15</td><td>ATL</td><td>ORD</td><td>102</td></tr>
+<tr><td>3</td><td>16:30</td><td>17:45</td><td>DEN</td><td>MIA</td><td>103</td></tr>
+<tr><td>4</td><td>15:00</td><td>16:15</td><td>SEA</td><td>MSP</td><td>104</td></tr>
+<tr><td>5</td><td>14:30</td><td>15:45</td><td>PHX</td><td>IAH</td><td>105</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>AvailableLocations</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1990-01-01</td><td>Terminal A</td></tr>
+<tr><td>2</td><td>Anna</td><td>Martin</td><td>1985-05-01</td><td>Terminal C</td></tr>
+<tr><td>3</td><td>Michael</td><td>Williams</td><td>1992-12-24</td><td>Terminal A</td></tr>
+<tr><td>4</td><td>Emma</td><td>Jones</td><td>1988-08-01</td><td>Terminal C</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>1991-03-16</td><td>Terminal A</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">LuggageServices</span></h2><table><thead>
+<tr><th>LuggageServiceID</th><th>Description</th><th>Cost</th><th>LuggageAssistance</th><th>AvailableLocations</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Luggage Trolley</span></td><td>10.0</td><td>No assistance provided.</td><td><span style="color:#006600">Entrance B</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Luggage Trolley</span></td><td>15.0</td><td>No assistance provided.</td><td>Departures D</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Porter Service</span></td><td>20.0</td><td>Meet & Greet at Entrance.</td><td><span style="color:#006600">Entrance B</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Porter Service</span></td><td>25.0</td><td>Meet & Greet at Exit.</td><td>Exit E</td></tr>
+<tr><td>5</td><td>Valet Parking</td><td>30.0</td><td>Car picked up inside terminal.</td><td>Arrivals F</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>ReservationID</th><th>FlightID</th><th>PassengerID</th><th>LuggageServiceID</th></tr>
+<tr><th></th><th>(&#8594; Flights.FlightID)</th><th>(&#8594; Passengers.PassengerID)</th><th>(&#8594; LuggageServices.LuggageServiceID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+098-765-4321</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>+112-345-6789</td></tr>
+<tr><td>4</td><td>Mike</td><td>Johnson</td><td>mike.johnson@example.com</td><td>+234-567-8901</td></tr>
+<tr><td>5</td><td>Emily</td><td>White</td><td>emily.white@example.com</td><td>+356-789-0123</td></tr>
+</tbody></table></div>
+
+<div><h2>Hotels</h2><table><thead>
+<tr><th>HotelID</th><th>Name</th><th>Address</th><th>City</th><th>State</th><th>PostalCode</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Central</td><td>1 Grand Central Plaza</td><td>New York</td><td>NY</td><td>10017</td><td>USA</td></tr>
+<tr><td>2</td><td>The Ritz Carlton</td><td>2 Ritz Carlton Drive</td><td>Los Angeles</td><td>CA</td><td>90005</td><td>USA</td></tr>
+<tr><td>3</td><td>Hilton Garden Inn</td><td>3 Hilton Garden Inn Boulevard</td><td>Chicago</td><td>IL</td><td>60601</td><td>USA</td></tr>
+<tr><td>4</td><td>Fairmont San Francisco</td><td>4 Nob Hill Ave</td><td>San Francisco</td><td>CA</td><td>94108</td><td>USA</td></tr>
+<tr><td>5</td><td>Marriott Marquis Houston</td><td>5 Marriott Marquis Blvd</td><td>Houston</td><td>TX</td><td>77002</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>RoomID</th><th>HotelID</th><th>Number</th><th>Type</th><th>Amenities</th></tr>
+<tr><th></th><th>(&#8594; Hotels.HotelID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>101</td><td>Deluxe King</td><td>Free WiFi, Air conditioning, Flat-screen TV</td></tr>
+<tr><td>2</td><td>1</td><td>102</td><td>Standard Queen</td><td>Free WiFi, Air conditioning, Flat-screen TV</td></tr>
+<tr><td>3</td><td>2</td><td>201</td><td>Executive Suite</td><td>Free WiFi, Air conditioning, Flat-screen TV, Kitchenette</td></tr>
+<tr><td>4</td><td>2</td><td>202</td><td>Premium Twin</td><td>Free WiFi, Air conditioning, Flat-screen TV</td></tr>
+<tr><td>5</td><td>3</td><td>301</td><td>Family Suite</td><td>Free WiFi, Air conditioning, Flat-screen TV, Separate living area</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>ReservationID</th><th>CheckInDate</th><th>CheckOutDate</th><th>GuestID</th><th>TotalCost</th><th>PaymentMethod</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-08-01</td><td>2021-08-05</td><td>1</td><td>500</td><td>Credit Card</td></tr>
+<tr><td>2</td><td>2021-08-06</td><td>2021-08-10</td><td>2</td><td>800</td><td>PayPal</td></tr>
+<tr><td>3</td><td>2021-08-11</td><td>2021-08-15</td><td>3</td><td>600</td><td>Cash</td></tr>
+<tr><td>4</td><td>2021-08-16</td><td>2021-08-20</td><td>4</td><td>700</td><td>Credit Card</td></tr>
+<tr><td>5</td><td>2021-08-21</td><td>2021-08-25</td><td>5</td><td>900</td><td>Debit Card</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ReviewID</th><th>CustomerID</th><th>HotelID</th><th><span style="color:#990000">Customer_Reviews</span></th><th><span style="color:#990000">Number_Of_Stars</span></th><th>Date_Of_Review</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Hotels.HotelID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Great experience! The staff was friendly and helpful.</td><td>5</td><td>2021-08-03</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Excellent location and comfortable rooms.</td><td>4</td><td>2021-08-05</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Nice hotel but could use some updates.</td><td>3</td><td>2021-08-09</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Awesome service and great amenities.</td><td>5</td><td>2021-08-12</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>I enjoyed my stay at this lovely hotel.</td><td>4</td><td>2021-08-15</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

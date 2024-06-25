@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Weddings</span></h2><table><thead>
+<tr><th>id</th><th>Venue</th><th>Location</th><th>Capacity</th><th>PricePerHead</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Ballroom</td><td><span style="color:#006600">Downtown</span></td><td>300</td><td>89.75</td></tr>
+<tr><td>2</td><td>Ceremony Hall</td><td>Beachside</td><td>250</td><td>69.5</td></tr>
+<tr><td>3</td><td>Rooftop Terrace</td><td>Uptown</td><td>150</td><td>79.25</td></tr>
+<tr><td>4</td><td>Garden Oasis</td><td>Forest</td><td>100</td><td>59.75</td></tr>
+<tr><td>5</td><td>Banquet Room</td><td>City Center</td><td>200</td><td>75.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CorporateEvents</span></h2><table><thead>
+<tr><th>id</th><th>Space</th><th>Location</th><th>Availability</th><th>SeatingCapacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Conference Room</td><td><span style="color:#006600">Downtown</span></td><td>1</td><td>50</td></tr>
+<tr><td>2</td><td>Boardroom</td><td>Beachside</td><td>0</td><td>20</td></tr>
+<tr><td>3</td><td>Seminar Hall</td><td>Uptown</td><td>1</td><td>80</td></tr>
+<tr><td>4</td><td>Meeting Room</td><td>Forest</td><td>1</td><td>30</td></tr>
+<tr><td>5</td><td>Training Room</td><td>City Center</td><td>0</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>+123456789</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td><td>+098765432</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>michaeljohnson@email.com</td><td>+111222333</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>emilywilliams@email.com</td><td>+445566778</td></tr>
+<tr><td>5</td><td>David</td><td>Martinez</td><td>davidmartinez@email.com</td><td>+987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>EventBookings</h2><table><thead>
+<tr><th>BookingId</th><th>EventType</th><th>Date</th><th>StartTime</th><th>EndTime</th><th>NumberOfGuests</th><th>ClientName</th><th>ContactEmail</th><th>ContactPhoneNumber</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Guests.FirstName)</th><th>(&#8594; Guests.Email)</th><th>(&#8594; Guests.PhoneNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wedding</td><td>2023-01-14</td><td>18:00:00</td><td>22:00:00</td><td>150</td><td>John Smith</td><td>johnsmith@email.com</td><td>+123456789</td></tr>
+<tr><td>2</td><td>Corporate Event</td><td>2023-02-05</td><td>09:00:00</td><td>17:00:00</td><td>50</td><td>Jane Doe</td><td>janedoe@email.com</td><td>+098765432</td></tr>
+<tr><td>3</td><td>Wedding</td><td>2023-03-21</td><td>16:00:00</td><td>20:00:00</td><td>200</td><td>Michael Johnson</td><td>michaeljohnson@email.com</td><td>+111222333</td></tr>
+<tr><td>4</td><td>Corporate Event</td><td>2023-04-10</td><td>10:00:00</td><td>16:00:00</td><td>60</td><td>Emily Williams</td><td>emilywilliams@email.com</td><td>+445566778</td></tr>
+<tr><td>5</td><td>Wedding</td><td>2023-05-02</td><td>18:00:00</td><td>22:00:00</td><td>120</td><td>David Martinez</td><td>davidmartinez@email.com</td><td>+987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>MenuOptions</h2><table><thead>
+<tr><th>Id</th><th>ItemName</th><th>Description</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Filet Mignon</td><td>Tender beef steak with garlic butter</td><td>29.99</td></tr>
+<tr><td>2</td><td>Seafood Platter</td><td>Assorted seafood including shrimp, scallops, and salmon</td><td>34.99</td></tr>
+<tr><td>3</td><td>Chicken Alfredo</td><td>Pasta with creamy garlic chicken sauce</td><td>16.99</td></tr>
+<tr><td>4</td><td>Quinoa Salad</td><td>Fresh quinoa salad with mixed vegetables</td><td>9.99</td></tr>
+<tr><td>5</td><td>Lemon Tart</td><td>Delicious lemon tart dessert</td><td>6.99</td></tr>
+</tbody></table></div>
+
+<div><h2>FoodOrders</h2><table><thead>
+<tr><th>OrderId</th><th>BookingId</th><th>MenuItemId</th><th>Quantity</th><th>TotalPrice</th></tr>
+<tr><th>(&#8594; EventBookings.BookingId)</th><th></th><th>(&#8594; MenuOptions.Id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>4</td><td>119.96</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>3</td><td>104.97</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>5</td><td>84.95</td></tr>
+<tr><td>4</td><td>3</td><td>1</td><td>6</td><td>179.94</td></tr>
+<tr><td>5</td><td>4</td><td>4</td><td>2</td><td>13.98</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

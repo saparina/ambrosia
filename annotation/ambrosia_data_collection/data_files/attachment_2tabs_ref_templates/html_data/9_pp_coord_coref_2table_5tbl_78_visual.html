@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Navigation_Systems</span></h2><table><thead>
+<tr><th>SystemID</th><th><span style="color:#1430b2">Airport</span></th><th>TypeOfSystem</th><th>YearInstalled</th><th>MaintenanceFrequency</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Heathrow</span></td><td>VOR/DME</td><td>2008</td><td>Annually</td></tr>
+<tr><td>2</td><td>JFK</td><td>ILS</td><td>2013</td><td>Biannual</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Communication_Systems</span></h2><table><thead>
+<tr><th>SystemID</th><th>Airport</th><th>TypeOfSystem</th><th>FrequencyInUse</th><th>LastUpgradeYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Heathrow</span></td><td>VHF Omnidirectional Range</td><td>1</td><td>2016</td></tr>
+<tr><td>2</td><td>JFK</td><td>Distance Measuring Equipment</td><td>0</td><td>2019</td></tr>
+</tbody></table></div>
+
+<div><h2>Runways</h2><table><thead>
+<tr><th>ID</th><th>Airport</th><th>Length</th><th>Width</th><th>SurfaceType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Heathrow</td><td>3200.0</td><td>45.0</td><td>Asphalt</td></tr>
+<tr><td>2</td><td>JFK</td><td>10000.0</td><td>150.0</td><td>Concrete</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>ID</th><th>Airport</th><th>Name</th><th>NumberOfGates</th><th>ServicesOffered</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Heathrow</td><td>Terminal 5</td><td>27</td><td>Shopping, Dining, Baggage Claim</td></tr>
+<tr><td>2</td><td>JFK</td><td>Terminal 1</td><td>30</td><td>Shopping, Dining, Baggage Claim</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

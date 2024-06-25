@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Banks</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>types_of_bank</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Federal Reserve</td><td><span style="color:#990000">Central Bank</span></td><td>USA</td></tr>
+<tr><td>2</td><td>Bank of England</td><td><span style="color:#990000">Central Bank</span></td><td><span style="color:#006600">UK</span></td></tr>
+<tr><td>3</td><td>JPMorgan Chase & Co.</td><td><span style="color:#990000">Commercial Bank</span></td><td>USA</td></tr>
+<tr><td>4</td><td>Barclays</td><td><span style="color:#990000">Commercial Bank</span></td><td><span style="color:#006600">UK</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Branches</h2><table><thead>
+<tr><th>id</th><th>bank_id</th><th>address</th><th>city</th><th>state</th></tr>
+<tr><th></th><th>(&#8594; Banks.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>23 Wall Street</td><td>New York City</td><td>NY</td></tr>
+<tr><td>2</td><td>1</td><td>700 Main St</td><td>Atlanta</td><td>GA</td></tr>
+<tr><td>3</td><td>2</td><td>26 The Strand</td><td>London</td><td>England</td></tr>
+<tr><td>4</td><td>2</td><td>8 New Broad Street</td><td>Manchester</td><td>England</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>birth_date</th><th>phone_number</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-01-01</td><td>+1234567890</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1995-05-15</td><td>+0987654321</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonder</td><td>1980-06-30</td><td>+1112223333</td><td>alice@example.com</td></tr>
+<tr><td>4</td><td>Charlie</td><td>Brown</td><td>1992-07-25</td><td>+4445556666</td><td>charlie@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>id</th><th>branch_id</th><th>customer_id</th><th>transaction_type</th><th>amount</th><th>date</th></tr>
+<tr><th></th><th>(&#8594; Branches.id)</th><th>(&#8594; Customers.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Deposit</td><td>500.0</td><td>2024-03-08 00:22:33</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Withdrawal</td><td>-200.0</td><td>2024-03-08 00:22:33</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>Transfer</td><td>300.0</td><td>2024-03-08 00:22:33</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>Loan</td><td>1000.0</td><td>2024-03-08 00:22:33</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

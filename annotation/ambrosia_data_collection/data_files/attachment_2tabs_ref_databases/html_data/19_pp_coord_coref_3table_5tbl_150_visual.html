@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Creators</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td></tr>
+<tr><td>3</td><td><span style="color:#006600">James Cameron</span></td></tr>
+<tr><td>4</td><td>Steven Spielberg</td></tr>
+<tr><td>5</td><td>Guillermo del Toro</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Screenplays</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>Creator_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Creators.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>...</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>...</td><td>2</td></tr>
+<tr><td>3</td><td>Avatar</td><td>...</td><td>3</td></tr>
+<tr><td>4</td><td>Schindler's List</td><td>...</td><td>4</td></tr>
+<tr><td>5</td><td>Pan's Labyrinth</td><td>...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Storyboards</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>Creator_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Creators.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>...</td><td>1</td></tr>
+<tr><td>2</td><td>Kill Bill Volume 1</td><td>...</td><td>2</td></tr>
+<tr><td>3</td><td>Titanic</td><td>...</td><td>3</td></tr>
+<tr><td>4</td><td>Saving Private Ryan</td><td>...</td><td>4</td></tr>
+<tr><td>5</td><td>Hellboy II: The Golden Army</td><td>...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td></tr>
+<tr><td>3</td><td>James Cameron</td></tr>
+<tr><td>4</td><td>Steven Spielberg</td></tr>
+<tr><td>5</td><td>Guillermo del Toro</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director_id</th><th>ReleaseYear</th></tr>
+<tr><th></th><th></th><th>(&#8594; Directors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>1</td><td>2008</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>2</td><td>1994</td></tr>
+<tr><td>3</td><td>Avatar</td><td>3</td><td>2009</td></tr>
+<tr><td>4</td><td>Saving Private Ryan</td><td>4</td><td>1998</td></tr>
+<tr><td>5</td><td>Pan's Labyrinth</td><td>5</td><td>2006</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmProductions</h2><table><thead>
+<tr><th>id</th><th>ProductionName</th><th>Film_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Films.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>DC Comics</td><td>1</td></tr>
+<tr><td>2</td><td>Miramax</td><td>2</td></tr>
+<tr><td>3</td><td>20th Century Fox</td><td>3</td></tr>
+<tr><td>4</td><td>DreamWorks</td><td>4</td></tr>
+<tr><td>5</td><td>Universal Pictures</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

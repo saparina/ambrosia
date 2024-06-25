@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Species</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Oak</td></tr>
+<tr><td>2</td><td>Apple</td></tr>
+<tr><td>3</td><td>Cherry</td></tr>
+<tr><td>4</td><td>Peach</td></tr>
+<tr><td>5</td><td>Plum</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Agroforestry_Systems</span></h2><table><thead>
+<tr><th>id</th><th>system_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Silvopasture</td><td>A system where trees, livestock, and forages coexist.</td></tr>
+<tr><td>2</td><td>Alley Cropping</td><td>Trees are planted alongside crops to provide shade and reduce erosion.</td></tr>
+<tr><td>3</td><td>Forest Gardening</td><td>A diverse, multi-layered plant community based on woodland ecosystems.</td></tr>
+<tr><td>4</td><td>Riparian Buffer</td><td>Strips of vegetation along waterways to filter runoff.</td></tr>
+<tr><td>5</td><td>Windbreak</td><td>Rows of trees used to block wind.</td></tr>
+</tbody></table></div>
+
+<div><h2>Farms</h2><table><thead>
+<tr><th>id</th><th>farm_name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sunny Acres</td><td>123 Main St, Ruralville</td></tr>
+<tr><td>2</td><td>Green Pastures</td><td>456 Elm St, Hometown</td></tr>
+<tr><td>3</td><td>Orchard Haven</td><td>789 Oak Lane, Fruitful City</td></tr>
+<tr><td>4</td><td>Meadow View</td><td>101 Pine St, Seedling County</td></tr>
+<tr><td>5</td><td>Timber Ridge</td><td>202 Cedar Ave, Lumbertown</td></tr>
+</tbody></table></div>
+
+<div><h2>Farmers</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@email.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@email.com</td></tr>
+<tr><td>3</td><td>Bob</td><td>Johnson</td><td>bob.johnson@email.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>emily.williams@email.com</td></tr>
+<tr><td>5</td><td>Tom</td><td>Brown</td><td>tom.brown@email.com</td></tr>
+</tbody></table></div>
+
+<div><h2>System_Species</h2><table><thead>
+<tr><th>agroforestry_system_id</th><th>species_id</th></tr>
+<tr><th>(&#8594; Agroforestry_Systems.id)</th><th>(&#8594; Species.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

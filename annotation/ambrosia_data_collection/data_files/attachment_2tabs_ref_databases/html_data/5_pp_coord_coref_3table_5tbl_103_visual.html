@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Manufacturers</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bonners Music</td></tr>
+<tr><td>2</td><td>Fender</td></tr>
+<tr><td>3</td><td><span style="color:#006600">Yamaha</span></td></tr>
+<tr><td>4</td><td>C. F. Martin & Co.</td></tr>
+<tr><td>5</td><td>Steinway & Sons</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Guitars</span></h2><table><thead>
+<tr><th>id</th><th>model_name</th><th>price</th><th>manufacturer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Manufacturers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Stratocaster</td><td>699.99</td><td>1</td></tr>
+<tr><td>2</td><td>Telecaster</td><td>799.99</td><td>1</td></tr>
+<tr><td>3</td><td>Les Paul</td><td>1099.99</td><td>2</td></tr>
+<tr><td>4</td><td>Acoustic Guitar</td><td>299.99</td><td>3</td></tr>
+<tr><td>5</td><td>Electric Acoustic</td><td>499.99</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Pianos</span></h2><table><thead>
+<tr><th>id</th><th>model_name</th><th>price</th><th>manufacturer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Manufacturers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Piano</td><td>8999.99</td><td>1</td></tr>
+<tr><td>2</td><td>Upright Piano</td><td>4999.99</td><td>1</td></tr>
+<tr><td>3</td><td>Digital Piano</td><td>999.99</td><td>3</td></tr>
+<tr><td>4</td><td>Stage Piano</td><td>1499.99</td><td>5</td></tr>
+<tr><td>5</td><td>Hybrid Piano</td><td>1999.99</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Musicians</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Alice Johnson</td></tr>
+<tr><td>4</td><td>Bob Williams</td></tr>
+<tr><td>5</td><td>Charlie Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Guitarists</h2><table><thead>
+<tr><th>id</th><th>musician_id</th><th>guitar_model_id</th></tr>
+<tr><th></th><th>(&#8594; Musicians.id)</th><th>(&#8594; Guitars.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Pianists</h2><table><thead>
+<tr><th>id</th><th>musician_id</th><th>piano_model_id</th></tr>
+<tr><th></th><th>(&#8594; Musicians.id)</th><th>(&#8594; Pianos.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

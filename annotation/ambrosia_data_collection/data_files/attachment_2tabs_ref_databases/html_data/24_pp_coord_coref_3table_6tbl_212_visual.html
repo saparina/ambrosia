@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Fantasy</td></tr>
+<tr><td>2</td><td>Adventure</td></tr>
+<tr><td>3</td><td>Action</td></tr>
+<tr><td>4</td><td>Drama</td></tr>
+<tr><td>5</td><td>Comedy</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Film</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th><span style="color:#006600">budget</span></th><th>genre_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Genre.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lord of the Rings</td><td>2001</td><td>93000000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Harry Potter and the Sorcerer's Stone</td><td>2001</td><td>125000000.0</td><td>1</td></tr>
+<tr><td>3</td><td>Jurassic Park</td><td>1993</td><td>63000000.0</td><td>3</td></tr>
+<tr><td>4</td><td>Titanic</td><td>1997</td><td><span style="color:#006600">200000000.0</span></td><td>5</td></tr>
+<tr><td>5</td><td>The Dark Knight</td><td>2008</td><td>185000000.0</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FantasyFilm</span></h2><table><thead>
+<tr><th>id</th><th>film_id</th><th>fantasy_element</th></tr>
+<tr><th></th><th>(&#8594; Film.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Magical creatures</td></tr>
+<tr><td>2</td><td>2</td><td>Mythical beings</td></tr>
+<tr><td>3</td><td>3</td><td>Time travel</td></tr>
+<tr><td>4</td><td>4</td><td>Parallel universes</td></tr>
+<tr><td>5</td><td>5</td><td>Enchanted objects</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">HorrorFilm</span></h2><table><thead>
+<tr><th>id</th><th>film_id</th><th>horror_theme</th></tr>
+<tr><th></th><th>(&#8594; Film.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Supernatural entities</td></tr>
+<tr><td>2</td><td>2</td><td>Psychological terror</td></tr>
+<tr><td>3</td><td>3</td><td>Gore and violence</td></tr>
+<tr><td>4</td><td>4</td><td>Creatures</td></tr>
+<tr><td>5</td><td>5</td><td>Thriller</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

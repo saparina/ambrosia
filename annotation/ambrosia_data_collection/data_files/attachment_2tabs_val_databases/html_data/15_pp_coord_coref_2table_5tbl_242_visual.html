@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Green_Bond_Portfolio</span></h2><table><thead>
+<tr><th>ID</th><th>Bond_Name</th><th>Issue_Date</th><th>Maturity_Date</th><th>Amount</th><th>Green_Bonds</th><th>Percentage</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bond A</td><td>2021-03-01</td><td>2026-03-01</td><td>100000.0</td><td>Renewable Energy Bonds</td><td><span style="color:#006600">5%</span></td></tr>
+<tr><td>2</td><td>Bond B</td><td>2021-07-01</td><td>2028-07-01</td><td>150000.0</td><td>Affordable Housing Bonds</td><td>4%</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Social_Bond_Portfolio</span></h2><table><thead>
+<tr><th>ID</th><th>Bond_Name</th><th>Issue_Date</th><th>Maturity_Date</th><th>Amount</th><th>Social_Bonds</th><th>Percentage</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bond C</td><td>2021-09-01</td><td>2025-09-01</td><td>200000.0</td><td>Education Bonds</td><td><span style="color:#006600">5%</span></td></tr>
+<tr><td>2</td><td>Bond D</td><td>2021-11-01</td><td>2024-11-01</td><td>250000.0</td><td>Healthcare Bonds</td><td>3.5%</td></tr>
+</tbody></table></div>
+
+<div><h2>Savings_Accounts</h2><table><thead>
+<tr><th>Account_Number</th><th>Customer_ID</th><th>Opening_Balance</th><th>Interest_Rate</th><th>Created_At</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td><td>0.5</td><td>2024-03-13 18:34:01</td></tr>
+<tr><td>2</td><td>2</td><td>2000.0</td><td>0.3</td><td>2024-03-13 18:34:01</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>Loan_Number</th><th>Customer_ID</th><th>Principal_Amount</th><th>Annual_Interest_Rate</th><th>Start_Date</th><th>End_Date</th><th>Monthly_Payment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>150000.0</td><td>5</td><td>2021-05-01</td><td>2026-05-01</td><td>1200.0</td></tr>
+<tr><td>2</td><td>2</td><td>200000.0</td><td>4.5</td><td>2021-06-01</td><td>2027-06-01</td><td>1250.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>Employee_ID</th><th>First_Name</th><th>Last_Name</th><th>Department</th><th>Hire_Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Marketing</td><td>2020-07-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>HR</td><td>2019-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>Customer_ID</th><th>First_Name</th><th>Last_Name</th><th>Date_Of_Birth</th><th>Phone_Number</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael</td><td>Johnson</td><td>1990-05-15</td><td>+1234567890</td><td>mjohnson@example.com</td></tr>
+<tr><td>2</td><td>Emily</td><td>Williams</td><td>1995-08-20</td><td>+0987654321</td><td>emwilliams@example.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

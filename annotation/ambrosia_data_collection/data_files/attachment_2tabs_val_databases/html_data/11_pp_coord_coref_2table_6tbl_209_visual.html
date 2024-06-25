@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">DramaFilms</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Music_Composer</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Composers.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>Christopher Nolan</td><td>2008</td><td><span style="color:#006600">Hans Zimmer</span></td></tr>
+<tr><td>2</td><td>12 Angry Men</td><td>Sidney Lumet</td><td>1957</td><td>Adlai Chapin</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RomanceFilms</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Music_Composer</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Composers.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Titanic</td><td>James Cameron</td><td>1997</td><td>James Horner</td></tr>
+<tr><td>2</td><td>Notting Hill</td><td>Roger Michell</td><td>1999</td><td><span style="color:#006600">Hans Zimmer</span></td></tr>
+</tbody></table></div>
+
+<div><h2>ActionFilms</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Cinematographer</th><th>Editor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Christopher Nolan</td><td>2010</td><td>Wally Pfister</td><td>Lee Smith</td></tr>
+<tr><td>2</td><td>Mad Max: Fury Road</td><td>George Miller</td><td>2015</td><td>John Seale</td><td>Margaret Sixel</td></tr>
+</tbody></table></div>
+
+<div><h2>SciFiFilms</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>VisualEffectsSupervisor</th><th>ProductionDesigner</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Interstellar</td><td>Christopher Nolan</td><td>2014</td><td>Paul Franklin</td><td>Nathan Crowley</td></tr>
+<tr><td>2</td><td>Blade Runner 2049</td><td>Denis Villeneuve</td><td>2017</td><td>John Nelson</td><td>Dennis Gassner</td></tr>
+</tbody></table></div>
+
+<div><h2>AnimatedFilms</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Studio</th><th>ReleaseYear</th><th>Screenwriter</th><th>VoiceActor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frozen II</td><td>Walt Disney Animation Studios</td><td>2019</td><td>Jennifer Lee</td><td>Idina Menzel</td></tr>
+<tr><td>2</td><td>Toy Story 4</td><td>Pixar Animation Studios</td><td>2019</td><td>Andrew Stanton</td><td>Tom Hanks</td></tr>
+</tbody></table></div>
+
+<div><h2>Composers</h2><table><thead>
+<tr><th>Name</th><th>Born</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>Hans Zimmer</td><td>1957-12-12</td><td>German</td></tr>
+<tr><td>Howard Shore</td><td>1946-11-03</td><td>Canadian</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

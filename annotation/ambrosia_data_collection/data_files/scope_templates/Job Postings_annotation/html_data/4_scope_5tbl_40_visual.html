@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Architects</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>10</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>7</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>5</td></tr>
+<tr><td>4</td><td>Emily Williams</td><td>8</td></tr>
+<tr><td>5</td><td>David Brown</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Building_Types</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Residential</td></tr>
+<tr><td>2</td><td>Commercial</td></tr>
+<tr><td>3</td><td>Industrial</td></tr>
+<tr><td>4</td><td>Institutional</td></tr>
+<tr><td>5</td><td>Mixed-Use</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Postings</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>required_skills</th><th>salary</th><th>post_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Senior Residential Architect</td><td>Design residential buildings.</td><td>AutoCAD, Revit, SketchUp, knowledge of local building codes</td><td>90000.0</td><td>2024-01-30 19:16:14</td></tr>
+<tr><td>2</td><td>Junior Commercial Architect</td><td>Assist in designing commercial projects.</td><td>AutoCAD, Revit, basic understanding of structural systems</td><td>60000.0</td><td>2024-01-30 19:16:14</td></tr>
+<tr><td>3</td><td>Architectural Designer</td><td>Support architects on various project types.</td><td>SketchUp, InDesign, Adobe Creative Suite</td><td>50000.0</td><td>2024-01-30 19:16:14</td></tr>
+<tr><td>4</td><td>Project Manager</td><td>Oversee construction projects from start to finish.</td><td>PMP certification, strong communication skills, knowledge of contract law</td><td>80000.0</td><td>2024-01-30 19:16:14</td></tr>
+<tr><td>5</td><td>BIM Coordinator</td><td>Create and manage BIM models for projects.</td><td>Revit, Navisworks, Dynamo, Rhino</td><td>65000.0</td><td>2024-01-30 19:16:14</td></tr>
+</tbody></table></div>
+
+<div><h2>Architects_Building_Types</h2><table><thead>
+<tr><th>architect_id</th><th>building_type_id</th></tr>
+<tr><th>(&#8594; Architects.id)</th><th>(&#8594; Building_Types.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

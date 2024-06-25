@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Scripts</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Genre</th><th>Duration</th><th>Scriptwriter</th><th>Deadline</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Thriller</td><td>90.0</td><td>Christopher Nolan</td><td><span style="color:#006600">21.04.03</span></td></tr>
+<tr><td>2</td><td>Interstellar</td><td>Science Fiction</td><td>168.0</td><td>Christopher Nolan</td><td>20.07.01</td></tr>
+<tr><td>3</td><td>The Dark Knight</td><td>Action</td><td>152.0</td><td>Christopher Nolan</td><td>19.07.01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Editors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Specialization</th><th>Experience</th><th>Editor</th><th>Deadline</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Bay</td><td>Action</td><td>30</td><td>Transformers</td><td><span style="color:#006600">21.04.03</span></td></tr>
+<tr><td>2</td><td>Guillermo del Toro</td><td>Fantasy</td><td>25</td><td>Pan's Labyrinth</td><td>17.06.12</td></tr>
+<tr><td>3</td><td>Martin Scorsese</td><td>Drama</td><td>40</td><td>Taxi Driver</td><td>15.05.01</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>45</td><td>Dom Cobb</td></tr>
+<tr><td>2</td><td>Ellen Page</td><td>35</td><td>Cole Tatum</td></tr>
+<tr><td>3</td><td>Tom Hardy</td><td>40</td><td>Bane</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Movies_Directed</th><th>Director</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quentin Tarantino</td><td>30</td><td>Pulp Fiction</td></tr>
+<tr><td>2</td><td>James Cameron</td><td>40</td><td>Avatar</td></tr>
+<tr><td>3</td><td>Steven Spielberg</td><td>50</td><td>Indiana Jones</td></tr>
+</tbody></table></div>
+
+<div><h2>ProductionHouses</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros.</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>Paramount Pictures</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Universal Studios</td><td>New York</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieCrew</h2><table><thead>
+<tr><th>ID</th><th>Position</th><th>PersonID</th><th>HouseID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Actors.ID)</th><th>(&#8594; ProductionHouses.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Producer</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Camera Operator</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Sound Engineer</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Set Designer</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>Costume Designer</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

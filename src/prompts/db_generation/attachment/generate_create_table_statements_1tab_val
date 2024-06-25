@@ -1,0 +1,3 @@
+Create multiple connected tables in the DOMAIN domain via SQLite. One of the tables must have a column "GENERAL_CLASS" (containing several "CLASS1", several "CLASS2" and several other values), a column "COMMON_PROPERTY" (containing values such as "COMMON_VALUE", etc.) and at least 3 more columns. Other columns and tables are arbitrary.
+
+Provide multiple CREATE TABLE statements in SQLite.

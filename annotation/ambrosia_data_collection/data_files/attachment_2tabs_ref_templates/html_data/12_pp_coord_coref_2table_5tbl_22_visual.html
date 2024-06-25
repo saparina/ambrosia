@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Flight_Attendants</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>Experience_Years</th><th><span style="color:#1430b2">Training_Center</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Aviation_Academies.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>8.5</td><td><span style="color:#1430b2">Aviation Academy</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>27</td><td>6.5</td><td>Global Aero Institute</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Pilots</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>Licenses</th><th>Training_Center</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Aviation_Academies.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Johnson</td><td>32</td><td>{ATPL, CPL}</td><td><span style="color:#1430b2">Aviation Academy</span></td></tr>
+<tr><td>2</td><td>Emily Brown</td><td>31</td><td>{ATPL, CPL}</td><td>World Flight School</td></tr>
+</tbody></table></div>
+
+<div><h2>Aviation_Academies</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Years_Operating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Aviation Academy</td><td>New York</td><td>25</td></tr>
+<tr><td>2</td><td>Global Aero Institute</td><td>Los Angeles</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Headquarters</th><th>Fleet_Size</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>Fort Worth, TX</td><td>953</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>Atlanta, GA</td><td>755</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>id</th><th>Model</th><th>Manufacturer</th><th>Year_Manufactured</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td><td>Boeing</td><td>1967</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>Airbus</td><td>1988</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight_Routes</h2><table><thead>
+<tr><th>id</th><th>Route_Number</th><th>Origin_Airport</th><th>Destination_Airport</th><th>Distance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA123</td><td>DFW</td><td>LAX</td><td>2000.0</td></tr>
+<tr><td>2</td><td>DL456</td><td>ATL</td><td>MIA</td><td>1500.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St.</td><td>555-0100</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St.</td><td>555-0101</td></tr>
+<tr><td>3</td><td>Company C</td><td>789 Oak St.</td><td>555-0102</td></tr>
+<tr><td>4</td><td>Company D</td><td>101 Pine St.</td><td>555-0103</td></tr>
+<tr><td>5</td><td>Company E</td><td>321 Fir St.</td><td>555-0104</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosting</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>postedDate</th><th>closingDate</th><th>companyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Company.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Experienced software engineer needed...</td><td>2021-01-01</td><td>2021-01-31</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Strong analytical skills required...</td><td>2021-02-01</td><td>2021-02-28</td><td>2</td></tr>
+<tr><td>3</td><td>Project Manager</td><td>Proven track record managing projects...</td><td>2021-03-01</td><td>2021-03-31</td><td>3</td></tr>
+<tr><td>4</td><td>QA Tester</td><td>Eye for detail needed for QA testing...</td><td>2021-04-01</td><td>2021-04-30</td><td>4</td></tr>
+<tr><td>5</td><td>HR Specialist</td><td>Human resources experience a plus...</td><td>2021-05-01</td><td>2021-05-31</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>hireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>2020-06-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>2019-07-01</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td><td>2018-08-01</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emily.white@example.com</td><td>2020-09-01</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td><td>2017-10-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">IT_Support_Technician</span></h2><table><thead>
+<tr><th>id</th><th>employeeId</th><th>itSupportSkills</th><th>operatingSystemKnowledge</th><th>startDate</th><th>endDate</th></tr>
+<tr><th></th><th>(&#8594; Employee.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Basic IT Support Skills</td><td><span style="color:#006600">Windows</span></td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>Advanced IT Support Skills</td><td>Linux</td><td>2020-01-01</td><td>2021-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>IT Support Technician I</td><td>MacOS</td><td>2019-01-01</td><td>2020-12-31</td></tr>
+<tr><td>4</td><td>4</td><td>IT Support Technician II</td><td>Unix</td><td>2018-01-01</td><td>2019-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>IT Support Technician III</td><td>All OS</td><td>2017-01-01</td><td>2018-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Network_Administrator</span></h2><table><thead>
+<tr><th>id</th><th>employeeId</th><th>networkAdminSkills</th><th>operatingSystemKnowledge</th><th>startDate</th><th>endDate</th></tr>
+<tr><th></th><th>(&#8594; Employee.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Cisco Router Configuration</td><td><span style="color:#006600">Windows</span></td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>Firewall Setup & Management</td><td>Linux</td><td>2020-01-01</td><td>2021-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>VPN Implementation</td><td>MacOS</td><td>2019-01-01</td><td>2020-12-31</td></tr>
+<tr><td>4</td><td>4</td><td>Switch Configuration</td><td>Unix</td><td>2018-01-01</td><td>2019-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>Server Virtualization</td><td>All OS</td><td>2017-01-01</td><td>2018-12-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

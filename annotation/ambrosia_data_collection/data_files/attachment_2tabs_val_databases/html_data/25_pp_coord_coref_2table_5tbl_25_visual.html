@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Branch</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>Services_Offered</th><th>ManagerName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Branch</td><td>123 Main St</td><td>555-1234</td><td><span style="color:#006600">Balance</span></td><td>John Doe</td></tr>
+<tr><td>2</td><td>Second Branch</td><td>456 Elm St</td><td>555-5678</td><td>Checking & Savings</td><td>Jane Smith</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Online_Bank</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Website</th><th>CustomerSupportPhoneNumber</th><th>Services_Offered</th><th>SecurityMeasures</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>MyBank</td><td>https://www.mybank.com</td><td>555-9999</td><td><span style="color:#006600">Balance</span></td><td>Two-factor authentication, Encrypted communication channels</td></tr>
+<tr><td>2</td><td>AnotherBank</td><td>https://www.anotherbank.com</td><td>555-8888</td><td>Checking & Savings</td><td>Biometric access control, Secure API</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Email</th><th>PhoneNumber</th><th>AccountID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Wonderland</td><td>1990-01-01</td><td>alice@example.com</td><td>555-1111</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Builder</td><td>1985-02-02</td><td>bob@example.com</td><td>555-2222</td><td>2</td></tr>
+<tr><td>3</td><td>Charlie</td><td>Chaplin</td><td>1992-03-03</td><td>charlie@example.com</td><td>555-3333</td><td>3</td></tr>
+<tr><td>4</td><td>David</td><td>Davis</td><td>1988-04-04</td><td>david@example.com</td><td>555-4444</td><td>4</td></tr>
+<tr><td>5</td><td>Eve</td><td>Evans</td><td>1991-05-05</td><td>eve@example.com</td><td>555-5555</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>Amount</th><th>Type</th><th>Timestamp</th><th>AccountID</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.ID)</th><th>(&#8594; Customers.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000</td><td>Deposit</td><td>2021-01-01 10:00:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>-500</td><td>Withdrawal</td><td>2021-01-01 11:00:00</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>200</td><td>Transfer</td><td>2021-01-02 12:00:00</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>-150</td><td>Payment</td><td>2021-01-03 13:00:00</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>1200</td><td>Deposit</td><td>2021-01-04 14:00:00</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>ID</th><th>AccountNumber</th><th>Balance</th><th>InterestRate</th><th>OpenDate</th><th>CurrentBranchID</th><th>IsActive</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Branch.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>12345678</td><td>10000</td><td>0.5</td><td>2021-01-01 10:00:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>98765432</td><td>5000</td><td>0.4</td><td>2021-01-02 11:00:00</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>54321098</td><td>8000</td><td>0.6</td><td>2021-01-03 12:00:00</td><td>1</td><td>0</td></tr>
+<tr><td>4</td><td>65432109</td><td>2000</td><td>0.3</td><td>2021-01-04 13:00:00</td><td>2</td><td>1</td></tr>
+<tr><td>5</td><td>12345678</td><td>3000</td><td>0.2</td><td>2021-01-05 14:00:00</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

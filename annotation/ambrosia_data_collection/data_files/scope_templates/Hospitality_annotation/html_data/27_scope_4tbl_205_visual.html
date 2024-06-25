@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Cruise_Ships</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Voyager</td><td>2000</td></tr>
+<tr><td>2</td><td>Ocean Explorer</td><td>3500</td></tr>
+<tr><td>3</td><td>Atlantic Adventurer</td><td>2800</td></tr>
+<tr><td>4</td><td>Caribbean Princess</td><td>3600</td></tr>
+<tr><td>5</td><td>Aurora Borealis</td><td>4000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Facilities</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">facilityName</span></th><th><span style="color:#990000">isAvailable</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dining Hall</td><td>1</td></tr>
+<tr><td>2</td><td>Swimming Pool</td><td>0</td></tr>
+<tr><td>3</td><td>Gymnasium</td><td>1</td></tr>
+<tr><td>4</td><td>Theatre</td><td>0</td></tr>
+<tr><td>5</td><td>Arcade</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Cruise_Ships_Facilities</h2><table><thead>
+<tr><th>cruiseShipId</th><th>facilityId</th></tr>
+<tr><th>(&#8594; Cruise_Ships.id)</th><th>(&#8594; Facilities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

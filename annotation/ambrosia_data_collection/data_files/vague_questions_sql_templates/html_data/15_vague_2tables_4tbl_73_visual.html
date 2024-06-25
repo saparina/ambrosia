@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Age_Range</h2><table><thead>
+<tr><th>id</th><th>min_age</th><th>max_age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>18</td><td>24</td></tr>
+<tr><td>2</td><td>25</td><td>39</td></tr>
+<tr><td>3</td><td>40</td><td>64</td></tr>
+<tr><td>4</td><td>65</td><td>79</td></tr>
+<tr><td>5</td><td>80</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2>Socioeconomic_Status</h2><table><thead>
+<tr><th>id</th><th>status</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Low</td><td>Lower income and less educated</td></tr>
+<tr><td>2</td><td>Middle</td><td>Middle income and middle education</td></tr>
+<tr><td>3</td><td>High</td><td>Higher income and higher education</td></tr>
+<tr><td>4</td><td>Upper Middle</td><td>Affluent with high education</td></tr>
+<tr><td>5</td><td>Elite</td><td>Very affluent and highly educated</td></tr>
+</tbody></table></div>
+
+<div><h2>Readers</h2><table><thead>
+<tr><th>id</th><th>age_range_id</th><th>socioeconomic_status_id</th></tr>
+<tr><th></th><th>(&#8594; Age_Range.id)</th><th>(&#8594; Socioeconomic_Status.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>author_name</th><th>bio</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Author A</td><td>An accomplished journalist known for investigative reporting.</td></tr>
+<tr><td>2</td><td>Author B</td><td>A bestselling author who writes about social issues.</td></tr>
+<tr><td>3</td><td>Author C</td><td>A renowned foreign correspondent with extensive experience.</td></tr>
+<tr><td>4</td><td>Author D</td><td>A Pulitzer Prize-winning reporter covering politics.</td></tr>
+<tr><td>5</td><td>Author E</td><td>A freelance writer focusing on environmental topics.</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publish_date</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Investigating Corruption</td><td>An article exposing corruption in a local government.</td><td>2023-01-01 00:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>The Impact of Climate Change</td><td>A comprehensive report on climate change effects worldwide.</td><td>2023-01-02 00:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>Political Turmoil in Country X</td><td>Exploring political unrest and its consequences in an international context.</td><td>2023-01-03 00:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>Economic Recovery Strategies</td><td>Discussing various approaches to economic recovery after a recession.</td><td>2023-01-04 00:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>Preserving Endangered Species</td><td>A piece highlighting efforts to protect endangered wildlife species.</td><td>2023-01-05 00:00:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Readers</h2><table><thead>
+<tr><th>article_id</th><th>reader_id</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; Readers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

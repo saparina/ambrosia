@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Docking_Location</span></h2><table><thead>
+<tr><th>name</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>PortMiami</td><td>USA</td></tr>
+<tr><td>World Trade Center Barcelona</td><td>Spain</td></tr>
+<tr><td>Terminal Passeggeri di Venezia</td><td>Italy</td></tr>
+<tr><td>Kowloon Dockyard</td><td>China</td></tr>
+<tr><td>HarbourFront Centre</td><td>Singapore</td></tr>
+</tbody></table></div>
+
+<div><h2>CruiseShips</h2><table><thead>
+<tr><th>port</th><th>city</th><th>shipName</th><th>maxCapacity</th></tr>
+<tr><th>(&#8594; Docking_Location.name)</th><th>(&#8594; Cities.name)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>PortMiami</td><td>Miami</td><td>Queen Mary II</td><td>2620</td></tr>
+<tr><td>World Trade Center Barcelona</td><td>Barcelona</td><td>Allure of the Seas</td><td>5400</td></tr>
+<tr><td>Terminal Passeggeri di Venezia</td><td>Venice</td><td>Seabourn Odyssey</td><td>458</td></tr>
+<tr><td>Kowloon Dockyard</td><td>Hong Kong</td><td>Golden Era</td><td>1400</td></tr>
+<tr><td>HarbourFront Centre</td><td>Singapore</td><td>Mariner of the Seas</td><td>3804</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

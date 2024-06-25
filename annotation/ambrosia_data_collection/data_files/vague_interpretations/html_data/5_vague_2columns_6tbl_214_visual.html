@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-06-18</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2004-09-07</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>2002-11-22</td></tr>
+</tbody></table></div>
+
+<div><h2>Academics</h2><table><thead>
+<tr><th>CourseID</th><th><span style="color:#990000">Discipline</span></th><th><span style="color:#990000">GradeLevel</span></th><th>Teacher</th><th>RoomNumber</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td><td>Algebra I</td><td>Ms. Smith</td><td>101</td><td>30</td></tr>
+<tr><td>2</td><td>English</td><td>Composition</td><td>Mr. Brown</td><td>201</td><td>25</td></tr>
+<tr><td>3</td><td>History</td><td>World History</td><td>Mrs. Johnson</td><td>301</td><td>35</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th><th>EnrolDate</th><th>FinalGrade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Academics.CourseID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-09-01</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-09-01</td><td>None</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-09-01</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Addresses</h2><table><thead>
+<tr><th>AddressID</th><th>StreetAddress</th><th>City</th><th>State</th><th>PostalCode</th><th>Country</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St.</td><td>Anytown</td><td>CA</td><td>12345</td><td>USA</td><td>555-1234</td></tr>
+<tr><td>2</td><td>456 Elm St.</td><td>Othertown</td><td>NY</td><td>67890</td><td>USA</td><td>555-5678</td></tr>
+<tr><td>3</td><td>789 Oak St.</td><td>Nowhere</td><td>TX</td><td>98765</td><td>USA</td><td>555-9012</td></tr>
+</tbody></table></div>
+
+<div><h2>Guardians</h2><table><thead>
+<tr><th>GuardianID</th><th>FirstName</th><th>LastName</th><th>Relationship</th><th>HomePhone</th><th>WorkPhone</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Parent</td><td>555-1234</td><td></td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Emily</td><td>Smith</td><td>Aunt</td><td>555-5678</td><td></td><td>emily.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>EmergencyContacts</h2><table><thead>
+<tr><th>ContactID</th><th>GuardianID</th><th>Name</th><th>Relationship</th><th>PhoneNumber</th></tr>
+<tr><th></th><th>(&#8594; Guardians.GuardianID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Uncle Bob</td><td>Uncle</td><td>555-9012</td></tr>
+<tr><td>2</td><td>2</td><td>Dr. Jones</td><td>Family Friend</td><td>555-1234</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

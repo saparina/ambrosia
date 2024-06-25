@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Photographer</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>10 years</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>7 years</td></tr>
+</tbody></table></div>
+
+<div><h2>Videographer</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike Johnson</td><td>32</td><td>8 years</td></tr>
+<tr><td>2</td><td>Emily Brown</td><td>29</td><td>6 years</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Article</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Title</span></th><th>Content</th><th>PublicationDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">The World's Largest Robots</span></td><td>This article discusses...</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>Nature Conservation Efforts</td><td>Another important topic...</td><td>2022-01-15</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">VisualStories</span></h2><table><thead>
+<tr><th>ID</th><th>PhotoPhotographerID</th><th>VideoVideographerID</th><th>ArticleID</th><th><span style="color:#990000"><span style="color:#990000">VisualStoryType</span></span></th></tr>
+<tr><th></th><th>(&#8594; Photographer.ID)</th><th>(&#8594; Videographer.ID)</th><th>(&#8594; Article.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td><td>1</td><td><span style="color:#990000">Photo</span></td></tr>
+<tr><td>2</td><td>None</td><td>2</td><td>2</td><td><span style="color:#990000">Video</span></td></tr>
+<tr><td>3</td><td>1</td><td>2</td><td>1</td><td><span style="color:#990000">Photo</span></td></tr>
+<tr><td>4</td><td>None</td><td>1</td><td>2</td><td><span style="color:#990000">Video</span></td></tr>
+<tr><td>5</td><td>2</td><td>1</td><td>1</td><td><span style="color:#990000">Photo</span></td></tr>
+<tr><td>6</td><td>2</td><td>None</td><td>2</td><td><span style="color:#990000">Video</span></td></tr>
+<tr><td>7</td><td>1</td><td>None</td><td>2</td><td><span style="color:#990000">Photo</span></td></tr>
+<tr><td>8</td><td>None</td><td>2</td><td>1</td><td><span style="color:#990000">Video</span></td></tr>
+<tr><td>9</td><td>3</td><td>2</td><td>1</td><td><span style="color:#990000">Photo</span></td></tr>
+<tr><td>10</td><td>3</td><td>1</td><td>2</td><td><span style="color:#990000">Video</span></td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

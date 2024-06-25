@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Locations</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Orlando, Florida</span></td></tr>
+<tr><td>2</td><td>Los Angeles, California</td></tr>
+<tr><td>3</td><td>New York City, New York</td></tr>
+<tr><td>4</td><td>Paris, France</td></tr>
+<tr><td>5</td><td>Tokyo, Japan</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">ThemeParks</span></h2><table><thead>
+<tr><th>id</th><th>parkName</th><th>locationId</th><th><span style="color:#186e16">familyEntertainment</span></th></tr>
+<tr><th></th><th></th><th>(&#8594; Locations.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Disney World</td><td>1</td><td><span style="color:#186e16">Amusement Park</span></td></tr>
+<tr><td>2</td><td>Universal Studios Hollywood</td><td>2</td><td><span style="color:#186e16">Amusement Park</span></td></tr>
+<tr><td>3</td><td>Europa-Park</td><td>3</td><td><span style="color:#186e16">Amusement Park</span></td></tr>
+<tr><td>4</td><td>Walt Disney Studios Park</td><td>4</td><td><span style="color:#186e16">Amusement Park</span></td></tr>
+<tr><td>5</td><td>Aquatica Orlando</td><td>1</td><td>Water Park</td></tr>
+<tr><td>6</td><td>Typhoon Lagoon</td><td>1</td><td>Water Park</td></tr>
+<tr><td>7</td><td>Legoland Billund Resort</td><td>5</td><td><span style="color:#186e16">Amusement Park</span></td></tr>
+<tr><td>8</td><td>Port Aventura</td><td>6</td><td><span style="color:#186e16">Amusement Park</span></td></tr>
+<tr><td>9</td><td>Atlantis, The Palm</td><td>7</td><td>Water Park</td></tr>
+<tr><td>10</td><td>Discovery Cove</td><td>8</td><td>Water Park</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

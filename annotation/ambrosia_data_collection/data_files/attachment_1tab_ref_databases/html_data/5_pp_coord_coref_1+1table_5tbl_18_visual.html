@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>InvestmentTypes</h2><table><thead>
+<tr><th>ID</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Equity</td></tr>
+<tr><td>2</td><td>Real Estate</td></tr>
+<tr><td>3</td><td>Fixed Income</td></tr>
+<tr><td>4</td><td>Commodities</td></tr>
+<tr><td>5</td><td>Alternative Investments</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Robert</td><td>Williams</td></tr>
+<tr><td>4</td><td>Emily</td><td>Johnson</td></tr>
+<tr><td>5</td><td>David</td><td>Martin</td></tr>
+</tbody></table></div>
+
+<div><h2>Months</h2><table><thead>
+<tr><th>Year</th><th>Month</th></tr>
+<tr><th>(&#8594; Calendar.Year)</th><th>(&#8594; Calendar.Month)</th></tr>
+</thead><tbody>
+<tr><td>2019</td><td>December</td></tr>
+<tr><td>2018</td><td>November</td></tr>
+<tr><td>2020</td><td>April</td></tr>
+<tr><td>2019</td><td>September</td></tr>
+<tr><td>2020</td><td>October</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">OpenEndFunds</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>MoneyMarketFund</th><th>BondFund</th><th><span style="color:#990000"><span style="color:#990000">OtherValue</span></span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; InvestmentTypes.TypeName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC <span style="color:#990000">Money Market Fund</span></td><td>1</td><td>0</td><td><span style="color:#990000">Money Market Fund</span></td></tr>
+<tr><td>2</td><td>XYZ Fixed Income Fund</td><td>0</td><td>1</td><td><span style="color:#990000">Bond Fund</span></td></tr>
+<tr><td><span style="color:#006600">3</span></td><td>PQR Growth Fund</td><td>0</td><td>0</td><td>Growth Fund</td></tr>
+<tr><td>4</td><td>RST Equity Fund</td><td>0</td><td>0</td><td>Equity Fund</td></tr>
+<tr><td>5</td><td>EFG Real Estate Fund</td><td>0</td><td>0</td><td>Real Estate Fund</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Investments</span></h2><table><thead>
+<tr><th>InvestmentId</th><th>CustomerID</th><th>OpenEndFundID</th><th><span style="color:#006600">MonthID</span></th><th>Amount</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; OpenEndFunds.ID)</th><th>(&#8594; Months.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td><span style="color:#006600">3</span></td><td>10000.0</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>1</td><td>7000.0</td></tr>
+<tr><td><span style="color:#006600">3</span></td><td><span style="color:#006600">3</span></td><td>1</td><td>2</td><td>8000.0</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td><span style="color:#006600">3</span></td><td>6000.0</td></tr>
+<tr><td>5</td><td>5</td><td><span style="color:#006600">3</span></td><td>1</td><td>5000.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Passengers</h2><table><thead>
+<tr><th>passengerID</th><th>firstName</th><th>lastName</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>30</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>28</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>65</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>72</td></tr>
+<tr><td>5</td><td>Emma</td><td>Green</td><td>19</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flightNumber</th><th>departureAirport</th><th>arrivalAirport</th><th>scheduledDeparture</th><th>actualDeparture</th><th>scheduledArrival</th><th>actualArrival</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>LAX</td><td>NYC</td><td>10:00 AM</td><td>None</td><td>11:30 AM</td><td>None</td></tr>
+<tr><td>2</td><td>SFO</td><td>MIA</td><td>1:00 PM</td><td>None</td><td>4:30 PM</td><td>None</td></tr>
+<tr><td>3</td><td>ORD</td><td>ATL</td><td>5:00 PM</td><td>None</td><td>7:30 PM</td><td>None</td></tr>
+<tr><td>4</td><td>IAD</td><td>SEA</td><td>8:00 PM</td><td>None</td><td>10:30 PM</td><td>None</td></tr>
+<tr><td>5</td><td>DFW</td><td>PHX</td><td>11:00 PM</td><td>None</td><td>1:30 AM</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">WheelchairAssistanceRequests</span></h2><table><thead>
+<tr><th>requestID</th><th>passengerID</th><th>pickUpDropOffLocation</th><th>requestedTime</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Passengers.passengerID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">Entrance A</span></td><td>2022-10-01 09:00:00</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>Gate B</td><td>2022-10-01 10:00:00</td><td>Completed</td></tr>
+<tr><td>3</td><td>3</td><td>Exit C</td><td>2022-10-01 11:00:00</td><td>In Progress</td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#006600">Entrance A</span></td><td>2022-10-01 12:00:00</td><td>Canceled</td></tr>
+<tr><td>5</td><td>5</td><td>Gate D</td><td>2022-10-01 13:00:00</td><td>Pending</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MobilityScooterRequests</span></h2><table><thead>
+<tr><th>requestID</th><th>passengerID</th><th>pickUpDropOffLocation</th><th>requestedTime</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Passengers.passengerID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">Entrance A</span></td><td>2022-10-01 08:00:00</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>Gate E</td><td>2022-10-01 09:00:00</td><td>Completed</td></tr>
+<tr><td>3</td><td>3</td><td>Exit F</td><td>2022-10-01 10:00:00</td><td>In Progress</td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#006600">Entrance A</span></td><td>2022-10-01 11:00:00</td><td>Canceled</td></tr>
+<tr><td>5</td><td>5</td><td>Gate G</td><td>2022-10-01 12:00:00</td><td>Pending</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Performance</span></h2><table><thead>
+<tr><th>id</th><th>Artist</th><th>Duration_of_performance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Stand-up Comedian</span></td><td><span style="color:#006600">60</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Stand-up Comedian</span></td><td>75</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Magician</span></td><td><span style="color:#006600">60</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Magician</span></td><td>90</td></tr>
+<tr><td>5</td><td>Dancer</td><td>120</td></tr>
+</tbody></table></div>
+
+<div><h2>Event</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Comedy Night</td><td>New York</td><td>2023-08-20 19:30</td></tr>
+<tr><td>2</td><td>Magic Show</td><td>Los Angeles</td><td>2023-09-10 19:30</td></tr>
+<tr><td>3</td><td>Music Concert</td><td>Chicago</td><td>2023-07-25 19:30</td></tr>
+<tr><td>4</td><td>Theatre Play</td><td>Miami</td><td>2023-08-15 19:30</td></tr>
+<tr><td>5</td><td>Art Exhibition</td><td>San Francisco</td><td>2023-09-01 10:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Venue</h2><table><thead>
+<tr><th>id</th><th>Address</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Times Square, New York</td><td>3000</td></tr>
+<tr><td>2</td><td>Hollywood Boulevard, Los Angeles</td><td>5000</td></tr>
+<tr><td>3</td><td>Riverwalk, Chicago</td><td>4000</td></tr>
+<tr><td>4</td><td>Bayfront Park, Miami</td><td>2000</td></tr>
+<tr><td>5</td><td>Fisherman's Wharf, San Francisco</td><td>3500</td></tr>
+</tbody></table></div>
+
+<div><h2>Performer</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>40</td><td>Stand-up Comedian</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>35</td><td>Magician</td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td>28</td><td>Musician</td></tr>
+<tr><td>4</td><td>Alice Brown</td><td>32</td><td>Actor</td></tr>
+<tr><td>5</td><td>Tom Davis</td><td>30</td><td>Painter</td></tr>
+</tbody></table></div>
+
+<div><h2>Show</h2><table><thead>
+<tr><th>id</th><th>EventId</th><th>PerformersIds</th><th>StartTime</th></tr>
+<tr><th></th><th>(&#8594; Event.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1,2</td><td>2023-08-20 19:30</td></tr>
+<tr><td>2</td><td>2</td><td>3,4</td><td>2023-09-10 19:30</td></tr>
+<tr><td>3</td><td>3</td><td>1,2,3</td><td>2023-07-25 19:30</td></tr>
+<tr><td>4</td><td>4</td><td>4,5</td><td>2023-08-15 19:30</td></tr>
+<tr><td>5</td><td>5</td><td>1,2,3</td><td>2023-09-01 10:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

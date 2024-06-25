@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Categories</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">categoryName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Fantasy</span></td></tr>
+<tr><td>2</td><td>Horror</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Films</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th><span style="color:#1430b2">budget</span></th><th>categoryId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Categories.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lord of the Rings</td><td><span style="color:#1430b2">20000000.0</span></td><td>1</td></tr>
+<tr><td>2</td><td>Harry Potter</td><td>30000000.0</td><td>1</td></tr>
+<tr><td>3</td><td>The Shining</td><td><span style="color:#1430b2">20000000.0</span></td><td>2</td></tr>
+<tr><td>4</td><td>It</td><td>18000000.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td></tr>
+<tr><td>2</td><td>Meryl</td><td>Streep</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>directorName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Peter Jackson</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>filmId</th><th>actorId</th><th>roleType</th><th>directorId</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Actors.id)</th><th></th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Leading Role</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>Supporting Role</td><td>2</td></tr>
+<tr><td>1</td><td>2</td><td>Villain</td><td>1</td></tr>
+<tr><td>3</td><td>1</td><td>Leading Role</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>Supporting Role</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

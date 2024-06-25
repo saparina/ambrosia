@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Restaurants</span></h2><table><thead>
+<tr><th>restaurant_id</th><th>name</th><th>address</th><th>phone_number</th><th>cocktail_lounge_id</th><th>sports_bar_id</th><th><span style="color:#006600">hours</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Cocktail_Lounges.lounge_id)</th><th>(&#8594; Sports_Bars.bar_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Fancy Bistro</td><td>123 Main St</td><td>555-1234</td><td>1</td><td>None</td><td>Monday - Friday: 8AM - 10PM</td></tr>
+<tr><td>2</td><td>Cozy Cafe</td><td>456 Elm St</td><td>555-5678</td><td>2</td><td>1</td><td>Open 24 Hours</td></tr>
+<tr><td>3</td><td>Beer Haven</td><td>789 Maple Ave</td><td>555-9012</td><td>3</td><td>2</td><td><span style="color:#006600">Monday - Thursday: 4PM - 2AM, Friday - Saturday: Noon - 2AM, Sunday: Closed</span></td></tr>
+<tr><td>4</td><td>Italian Delight</td><td>321 Oak St</td><td>555-1357</td><td>None</td><td>4</td><td>Tuesday - Thursday: 11AM - 10PM, Friday & Saturday: 11AM - Midnight, Sunday & Monday: Closed</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Cocktail_Lounges</span></h2><table><thead>
+<tr><th>lounge_id</th><th>name</th><th>address</th><th>phone_number</th><th>hours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Martini Nights</td><td>135 Pine St</td><td>555-5670</td><td>open from 5 PM to 2 AM</td></tr>
+<tr><td>2</td><td>Rooftop Rendezvous</td><td>456 Willow St</td><td>555-1235</td><td>open from 4 PM to midnight</td></tr>
+<tr><td>3</td><td>Gatsby Lounge</td><td>789 Birch St</td><td>555-1356</td><td>open from noon to 2 AM</td></tr>
+<tr><td>4</td><td>Exotic Oasis</td><td>321 Palm St</td><td>555-1457</td><td>open from 10 AM to 1 AM</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Sports_Bars</span></h2><table><thead>
+<tr><th>bar_id</th><th>name</th><th>address</th><th>phone_number</th><th>hours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gridiron Grill</td><td>555 Oak Plaza</td><td>555-9876</td><td>open from 5 PM to 2 AM</td></tr>
+<tr><td>2</td><td>Slam Dunk Saloon</td><td>678 Pine Blvd</td><td>555-1236</td><td>open from 4 PM to midnight</td></tr>
+<tr><td>3</td><td>Kickback Tavern</td><td>987 Spruce Way</td><td>555-1358</td><td>open from noon to 2 AM</td></tr>
+<tr><td>4</td><td>Home Run Bar</td><td>345 Elm Terrace</td><td>555-1458</td><td>open from 10 AM to 1 AM</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>employee_id</th><th>first_name</th><th>last_name</th><th>position</th><th>restaurant_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Restaurants.restaurant_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Manager</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Waitress</td><td>1</td></tr>
+<tr><td>3</td><td>Tom</td><td>Brown</td><td>Chef</td><td>1</td></tr>
+<tr><td>4</td><td>Alice</td><td>Johnson</td><td>Hostess</td><td>2</td></tr>
+<tr><td>5</td><td>Bob</td><td>Williams</td><td>Server</td><td>2</td></tr>
+<tr><td>6</td><td>Charlie</td><td>Miller</td><td>Busser</td><td>3</td></tr>
+<tr><td>7</td><td>David</td><td>Wilson</td><td>Head Chef</td><td>3</td></tr>
+<tr><td>8</td><td>Eva</td><td>Jackson</td><td>Server</td><td>4</td></tr>
+<tr><td>9</td><td>Frank</td><td>Thompson</td><td>Bartender</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artist</h2><table><thead>
+<tr><th>ArtistID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Vincent van Gogh</td></tr>
+<tr><td>2</td><td>Leonardo da Vinci</td></tr>
+<tr><td>3</td><td>Jackson Pollock</td></tr>
+<tr><td>4</td><td>Ansel Adams</td></tr>
+<tr><td>5</td><td>Georgia O'Keeffe</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Painting</span></h2><table><thead>
+<tr><th>PaintingID</th><th>Title</th><th>Year</th><th>Description</th><th>GalleryId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Gallery.GalleryId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Starry Night</td><td>1889</td><td>A depiction of the view from the east-facing window of Van Gogh’s asylum room at Saint-Rémy.</td><td>1</td></tr>
+<tr><td>2</td><td>Mona Lisa</td><td>1503</td><td>A portrait of a woman by Leonardo da Vinci.</td><td>2</td></tr>
+<tr><td>3</td><td>Guernica</td><td>1937</td><td>A powerful anti-war painting created by Pablo Picasso after the bombing of Guernica during the Spanish Civil War.</td><td>3</td></tr>
+<tr><td>4</td><td>The Starry Night Express</td><td>1960</td><td>This painting is inspired by Vincent van Gogh’s famous work “Starry Night”.</td><td>4</td></tr>
+<tr><td>5</td><td>American Buffalo</td><td>1948</td><td>A photograph showcasing the power and beauty of nature.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Photography</span></h2><table><thead>
+<tr><th>PhotoId</th><th>Title</th><th>Year</th><th>Description</th><th>GalleryId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Gallery.GalleryId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Empire State Building at Night</td><td>1931</td><td>A black and white photograph capturing the iconic Empire State Building lit up at night.</td><td>1</td></tr>
+<tr><td>2</td><td>Yosemite National Park</td><td>1940</td><td>A breathtaking landscape photograph taken by Ansel Adams.</td><td>2</td></tr>
+<tr><td>3</td><td>Central Park in Winter</td><td>1940</td><td>A serene photo of Central Park covered in snow.</td><td>3</td></tr>
+<tr><td>4</td><td>San Francisco Golden Gate Bridge</td><td>1950</td><td>A stunning shot of the Golden Gate Bridge at sunset.</td><td>4</td></tr>
+<tr><td>5</td><td>New York City Skyline</td><td>1960</td><td>A panoramic view of the New York City skyline.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Exhibition</h2><table><thead>
+<tr><th>ExhibitionId</th><th>Name</th><th>StartDate</th><th>EndDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Impressionism Art Showcase</td><td>2021-01-01</td><td>2021-02-28</td></tr>
+<tr><td>2</td><td>Abstract Expressionism Art Exhibit</td><td>2021-03-01</td><td>2021-04-30</td></tr>
+<tr><td>3</td><td>Modern Photography Collection</td><td>2021-05-01</td><td>2021-06-30</td></tr>
+<tr><td>4</td><td>Surrealistic Visions</td><td>2021-07-01</td><td>2021-08-31</td></tr>
+<tr><td>5</td><td>Contemporary Landscapes</td><td>2021-09-01</td><td>2021-10-31</td></tr>
+</tbody></table></div>
+
+<div><h2>PainterOfPaintings</h2><table><thead>
+<tr><th>ArtistId</th><th>PaintingId</th></tr>
+<tr><th>(&#8594; Artist.ArtistId)</th><th>(&#8594; Painting.PaintingId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>PhotographerOfPhotos</h2><table><thead>
+<tr><th>ArtistId</th><th>PhotoId</th></tr>
+<tr><th>(&#8594; Artist.ArtistId)</th><th>(&#8594; Photography.PhotoId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Gallery</span></h2><table><thead>
+<tr><th>GalleryId</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">MoMA - Museum of Modern Art</span></td></tr>
+<tr><td>2</td><td>National Portrait Gallery</td></tr>
+<tr><td>3</td><td>Metropolitan Museum of Art</td></tr>
+<tr><td>4</td><td>Tate Modern</td></tr>
+<tr><td>5</td><td>Guggenheim Museum</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

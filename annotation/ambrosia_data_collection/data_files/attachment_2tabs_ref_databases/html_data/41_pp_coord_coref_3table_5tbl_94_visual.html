@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Podcasters</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>RadioStations</h2><table><thead>
+<tr><th>id</th><th>stationName</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>KQED FM</td><td>San Francisco</td></tr>
+<tr><td>2</td><td>WBEZ Chicago</td><td>Chicago</td></tr>
+<tr><td>3</td><td>WLRN Miami</td><td>Miami</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Shows</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>podcastOrRadio</th><th>averageEpisodeLength</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Podcasters.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily</td><td>News podcast by The New York Times.</td><td>1</td><td>45</td></tr>
+<tr><td>2</td><td>Hardcore History</td><td>History podcast featuring stories of war and violence.</td><td>1</td><td>60</td></tr>
+<tr><td>3</td><td>This American Life</td><td>Weekly radio show featuring true stories.</td><td>0</td><td>45</td></tr>
+<tr><td>4</td><td>Planet Money</td><td>Financial news podcast.</td><td>0</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Episodes</span></h2><table><thead>
+<tr><th>id</th><th>showId</th><th><span style="color:#006600">episodeNumber</span></th><th>releaseDate</th><th>duration</th></tr>
+<tr><th></th><th>(&#8594; Shows.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>2023-0<span style="color:#006600">1</span>-0<span style="color:#006600">1</span></td><td>00:58:39</td></tr>
+<tr><td>2</td><td><span style="color:#006600">1</span></td><td>2</td><td>2023-0<span style="color:#006600">1</span>-07</td><td>0<span style="color:#006600">1</span>:32:35</td></tr>
+<tr><td>3</td><td>0</td><td><span style="color:#006600">1</span></td><td>2023-0<span style="color:#006600">1</span>-<span style="color:#006600">1</span>4</td><td>00:55:23</td></tr>
+<tr><td>4</td><td>0</td><td><span style="color:#006600">1</span></td><td>2023-0<span style="color:#006600">1</span>-2<span style="color:#006600">1</span></td><td>0<span style="color:#006600">1</span>:02:35</td></tr>
+</tbody></table></div>
+
+<div><h2>Hosts</h2><table><thead>
+<tr><th>id</th><th>name</th><th>occupation</th><th>podcasterID</th><th>radioStationID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Podcasters.id)</th><th>(&#8594; RadioStations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jacey Stern</td><td>Journalist</td><td>None</td><td>None</td></tr>
+<tr><td>2</td><td>Dan Carlin</td><td>Historian</td><td>None</td><td>None</td></tr>
+<tr><td>3</td><td>Ira Glass</td><td>Producer</td><td>None</td><td>3</td></tr>
+<tr><td>4</td><td>Adam Davidson</td><td>Reporter</td><td>None</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Listeners</h2><table><thead>
+<tr><th>id</th><th>name</th><th>favoriteHostID</th><th>preferredFormat</th></tr>
+<tr><th></th><th></th><th>(&#8594; Hosts.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Smith</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Bob Johnson</td><td>2</td><td>0</td></tr>
+<tr><td>3</td><td>Carol Williams</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>Tom Brown</td><td>4</td><td>0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

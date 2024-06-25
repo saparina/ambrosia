@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td></tr>
+<tr><td>4</td><td>Charlie</td><td>White</td><td>charlie.white@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightNumber</th><th>DepartureAirport</th><th>ArrivalAirport</th><th>DepartureTime</th><th>EstimatedArrivalTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>LAX</td><td>ORD</td><td>2023-01-01 10:00:00</td><td>2023-01-01 18:00:00</td></tr>
+<tr><td>2</td><td>DFW</td><td>ATL</td><td>2023-01-01 16:00:00</td><td>2023-01-02 09:00:00</td></tr>
+<tr><td>3</td><td>EWR</td><td>MIA</td><td>2023-01-01 17:00:00</td><td>2023-01-03 08:00:00</td></tr>
+<tr><td>4</td><td>IAH</td><td>YYZ</td><td>2023-01-01 20:00:00</td><td>2023-01-04 15:00:00</td></tr>
+<tr><td>5</td><td>MSP</td><td>SEA</td><td>2023-01-01 22:00:00</td><td>2023-01-05 14:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">LostProperties</span></h2><table><thead>
+<tr><th>PropertyID</th><th>ItemDescription</th><th>DateOfLoss</th><th>Found</th></tr>
+<tr><th></th><th></th><th>(&#8594; Calendar.Date)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Phone</td><td>2023-01-07</td><td>1</td></tr>
+<tr><td>2</td><td>Keys</td><td>2023-01-08</td><td>0</td></tr>
+<tr><td>3</td><td>Passport</td><td>2023-01-09</td><td>1</td></tr>
+<tr><td>4</td><td>Wallet</td><td>2023-01-06</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Complaints</span></h2><table><thead>
+<tr><th>ComplaintID</th><th>Description</th><th>Severity</th><th>Resolved</th><th>SubmissionDate</th><th>CustomerId</th><th>FlightNumber</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Calendar.Date)</th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Flights.FlightNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Delayed baggage</td><td>2</td><td>0</td><td>2023-01-05</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Rude staff</td><td>3</td><td>1</td><td>2023-01-06</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Calendar</span></h2><table><thead>
+<tr><th>CalendarID</th><th>Year</th><th>Month</th><th>Day</th><th><span style="color:#1430b2">Date</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023</td><td>1</td><td>5</td><td>2023-01-05</td></tr>
+<tr><td>2</td><td>2023</td><td>1</td><td>6</td><td><span style="color:#1430b2">2023-01-06</span></td></tr>
+<tr><td>3</td><td>2023</td><td>1</td><td>7</td><td>2023-01-07</td></tr>
+<tr><td>4</td><td>2023</td><td>1</td><td>8</td><td>2023-01-08</td></tr>
+<tr><td>5</td><td>2023</td><td>1</td><td>9</td><td>2023-01-09</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

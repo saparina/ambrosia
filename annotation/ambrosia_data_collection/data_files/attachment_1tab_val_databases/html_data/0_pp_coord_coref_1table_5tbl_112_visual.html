@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td></tr>
+<tr><td>2</td><td>Financial Services Inc.</td></tr>
+<tr><td>3</td><td>HealthNet</td></tr>
+<tr><td>4</td><td>Software Solutions Ltd.</td></tr>
+<tr><td>5</td><td>Education Hub</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>ID</th><th>LocationName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td></tr>
+<tr><td>2</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Houston</td></tr>
+<tr><td>5</td><td>Phoenix</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>CompanyID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Companies.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Design and develop software applications.</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data sets and provide insights.</td><td>2</td></tr>
+<tr><td>3</td><td>Doctor</td><td>Diagnose and treat patients.</td><td>3</td></tr>
+<tr><td>4</td><td>Nurse</td><td>Administer medical care to patients.</td><td>4</td></tr>
+<tr><td>5</td><td>Teacher</td><td>Instruct students on various subjects.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ApplicantID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td></tr>
+<tr><td>4</td><td>Michael</td><td>Williams</td><td>michael.williams@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>david.brown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentId</th><th>DepartmentName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering</td></tr>
+<tr><td>2</td><td>Analytics</td></tr>
+<tr><td>3</td><td>Medical</td></tr>
+<tr><td>4</td><td>Educational</td></tr>
+<tr><td>5</td><td>Administrative</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Roles</span></h2><table><thead>
+<tr><th>RoleId</th><th>RoleTitle</th><th>SupportRoles</th><th>Skills</th><th>MinExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Customer Service Representative</span></td><td>None</td><td><span style="color:#006600">Proactivity</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Customer Service Representative</span></td><td>None</td><td>Teamwork</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Call Center Agent</span></td><td>None</td><td><span style="color:#006600">Proactivity</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Call Center Agent</span></td><td>None</td><td>Communication</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeId</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>DepartmentId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Departments.DepartmentId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-06-15</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-07-20</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>1985-08-25</td><td>3</td></tr>
+<tr><td>4</td><td>Michael</td><td>Williams</td><td>1992-09-30</td><td>4</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>1988-10-15</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>HiringManagers</h2><table><thead>
+<tr><th>ManagerId</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Samantha</td><td>Miller</td><td>samantha.miller@example.com</td></tr>
+<tr><td>2</td><td>Tom</td><td>Jackson</td><td>tom.jackson@example.com</td></tr>
+<tr><td>3</td><td>Linda</td><td>Green</td><td>linda.green@example.com</td></tr>
+<tr><td>4</td><td>Kevin</td><td>Black</td><td>kevin.black@example.com</td></tr>
+<tr><td>5</td><td>Laura</td><td>White</td><td>laura.white@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>OpenPositions</h2><table><thead>
+<tr><th>PositionId</th><th>PositionTitle</th><th>SalaryRange</th><th>DepartmentId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Departments.DepartmentId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Managerial Position</td><td>$80k-$100k</td><td>1</td></tr>
+<tr><td>2</td><td>Technical Lead</td><td>$90k-$110k</td><td>2</td></tr>
+<tr><td>3</td><td>Head Nurse</td><td>$70k-$90k</td><td>3</td></tr>
+<tr><td>4</td><td>Principal</td><td>$85k-$105k</td><td>4</td></tr>
+<tr><td>5</td><td>Director of Education</td><td>$90k-$110k</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>ApplicationStatuses</h2><table><thead>
+<tr><th>AppStatusId</th><th>Status</th><th>ManagerId</th></tr>
+<tr><th></th><th></th><th>(&#8594; HiringManagers.ManagerId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pending Review</td><td>1</td></tr>
+<tr><td>2</td><td>Interview Scheduled</td><td>2</td></tr>
+<tr><td>3</td><td>On Hold</td><td>3</td></tr>
+<tr><td>4</td><td>Rejected</td><td>4</td></tr>
+<tr><td>5</td><td>Offered</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>ApplicationId</th><th>AppStatusId</th><th>PositionId</th><th>ApplicantId</th></tr>
+<tr><th></th><th>(&#8594; ApplicationStatuses.AppStatusId)</th><th>(&#8594; OpenPositions.PositionId)</th><th>(&#8594; Applicants.ApplicantId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

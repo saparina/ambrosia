@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th><span style="color:#990000">college</span></th><th><span style="color:#990000">university</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>555-123-4567</td><td>Computer Science</td><td>University of California</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>555-987-6543</td><td>Mathematics</td><td>Stanford University</td></tr>
+</tbody></table></div>
+
+<div><h2>Colleges</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>San Francisco</td></tr>
+<tr><td>2</td><td>Mathematics</td><td>Palo Alto</td></tr>
+</tbody></table></div>
+
+<div><h2>Universities</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>state</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>University of California</td><td>Los Angeles</td><td>CA</td><td>USA</td></tr>
+<tr><td>2</td><td>Stanford University</td><td>Stanford</td><td>CA</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>CourseEnrollments</h2><table><thead>
+<tr><th>student_id</th><th>course_id</th><th>semester</th><th>year</th><th>grade</th></tr>
+<tr><th>(&#8594; Students.id)</th><th>(&#8594; Courses.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Spring</td><td>2021</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>Fall</td><td>2021</td><td>B+</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>credits</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>An overview of computer science concepts and programming languages.</td><td>4</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>Basic principles of calculus including limits, derivatives, and integrals.</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Professors</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>department</th><th>office_location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Johnson</td><td>Computer Science</td><td>Room 123</td></tr>
+<tr><td>2</td><td>Professor</td><td>Williams</td><td>Mathematics</td><td>Room 456</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

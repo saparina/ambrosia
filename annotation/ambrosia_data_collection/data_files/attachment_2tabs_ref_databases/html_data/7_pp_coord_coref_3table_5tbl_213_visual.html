@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John F. Kennedy International Airport</td></tr>
+<tr><td>2</td><td>Los Angeles International Airport</td></tr>
+<tr><td>3</td><td>Dubai International Airport</td></tr>
+<tr><td>4</td><td>Heathrow Airport</td></tr>
+<tr><td>5</td><td>Charles de Gaulle Airport</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>airlineName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td></tr>
+<tr><td>2</td><td>United Airlines</td></tr>
+<tr><td>3</td><td>Emirates</td></tr>
+<tr><td>4</td><td>British Airways</td></tr>
+<tr><td>5</td><td>Air France</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>departureTime</th><th>arrivalTime</th><th>distance</th><th>airportId</th><th>airlineId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airlines.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 08:00:00</td><td>2023-01-01 11:00:00</td><td>3500.0</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2023-01-02 09:00:00</td><td>2023-01-02 12:00:00</td><td>4000.0</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2023-01-03 10:00:00</td><td>2023-01-03 13:00:00</td><td>2700.0</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2023-01-04 11:00:00</td><td>2023-01-04 14:00:00</td><td>4200.0</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2023-01-05 12:00:00</td><td>2023-01-05 15:00:00</td><td>3800.0</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Employees</span></h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th><span style="color:#006600">salary</span></th><th>role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>$60,000 per year</td><td>Air Traffic Controller</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td><span style="color:#006600">$70,000 per year</span></td><td>Pilot</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>$55,000 per year</td><td>Flight Attendant</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>$60,000 per year</td><td>Maintenance Engineer</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Brown</td><td>$65,000 per year</td><td>Cargo Handler</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Air_Traffic_Controllers</span></h2><table><thead>
+<tr><th>id</th><th>employeeId</th></tr>
+<tr><th></th><th>(&#8594; Employees.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Ground_Staff</span></h2><table><thead>
+<tr><th>id</th><th>employeeId</th></tr>
+<tr><th></th><th>(&#8594; Employees.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>authors</h2><table><thead>
+<tr><th>authorID</th><th>authorName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Author1</td></tr>
+<tr><td>2</td><td>Author2</td></tr>
+<tr><td>3</td><td>Author3</td></tr>
+<tr><td>4</td><td>Author4</td></tr>
+<tr><td>5</td><td>Author5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">literaturetypes</span></h2><table><thead>
+<tr><th>literaturetypeID</th><th><span style="color:#990000"><span style="color:#990000">typeValue</span></span></th><th>languageID</th></tr>
+<tr><th></th><th></th><th>(&#8594; languages.languageID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Novel</span></td><td>1</td></tr>
+<tr><td>2</td><td>Essay</td><td>2</td></tr>
+<tr><td>3</td><td>Play</td><td>3</td></tr>
+<tr><td>4</td><td>Short Story</td><td>4</td></tr>
+<tr><td>5</td><td>Non-Fiction</td><td>5</td></tr>
+<tr><td>6</td><td><span style="color:#990000">Novel</span></td><td>1</td></tr>
+<tr><td>7</td><td><span style="color:#990000">Novel</span></td><td>2</td></tr>
+<tr><td>8</td><td><span style="color:#990000">Poem</span></td><td>1</td></tr>
+<tr><td>9</td><td><span style="color:#990000">Poem</span></td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>books</h2><table><thead>
+<tr><th>bookID</th><th>title</th><th>publicationDate</th><th>authorID</th><th>literaturetypeID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; authors.authorID)</th><th>(&#8594; literaturetypes.literaturetypeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Book1</td><td>2001-06-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Book2</td><td>2005-07-01</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Book3</td><td>2008-09-01</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Book4</td><td>2010-10-01</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Book5</td><td>2012-11-01</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">languages</span></h2><table><thead>
+<tr><th>languageID</th><th><span style="color:#006600">languageValue</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Italian</span></td></tr>
+<tr><td>2</td><td>English</td></tr>
+<tr><td>3</td><td>Spanish</td></tr>
+<tr><td>4</td><td>German</td></tr>
+<tr><td>5</td><td>French</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

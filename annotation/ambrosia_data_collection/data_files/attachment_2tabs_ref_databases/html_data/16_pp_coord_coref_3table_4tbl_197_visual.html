@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Hours</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">startTime</span></th><th>endTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">7:30 AM</span></td><td>4 PM</td></tr>
+<tr><td>2</td><td>8:00 AM</td><td>12 PM</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Buffets</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>hoursId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Hours.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Morning Delight</td><td>Hotel A Lobby</td><td>1</td></tr>
+<tr><td>2</td><td>Gourmet Corner</td><td>Conference Center</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CoffeeShops</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>hoursId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Hours.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Aroma Cafe</td><td>Lobby of Hotel A</td><td>1</td></tr>
+<tr><td>2</td><td>Espresso Station</td><td>Convention Center</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>type</th><th>hoursId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Hours.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>La Cucina Italiana</td><td>Hotel A Ground Floor</td><td>Italian</td><td>1</td></tr>
+<tr><td>2</td><td>Oriental Palace</td><td>Conference Center</td><td>Chinese</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Bars</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>hoursId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Hours.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Wine Cellar</td><td>Hotel A Basement</td><td>1</td></tr>
+<tr><td>2</td><td>Rooftop Bar</td><td>Convention Center Top Floor</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>id</th><th>hotelId</th><th>roomNumber</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Hotels.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Room 101</td><td>199.99</td></tr>
+<tr><td>2</td><td>2</td><td>Suite 202</td><td>299.99</td></tr>
+<tr><td>3</td><td>1</td><td>Family Suite</td><td>249.99</td></tr>
+<tr><td>4</td><td>2</td><td>Corner Room</td><td>269.99</td></tr>
+<tr><td>5</td><td>1</td><td>Deluxe King</td><td>199.99</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

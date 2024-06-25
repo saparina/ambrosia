@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Available_locations</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">location</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Entrance A</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Departure Hall</span></td></tr>
+<tr><td>3</td><td>Gate C</td></tr>
+<tr><td>4</td><td>Baggage Claim</td></tr>
+<tr><td>5</td><td>Exit D</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>airlineName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td></tr>
+<tr><td>2</td><td>Delta Air Lines</td></tr>
+<tr><td>3</td><td>Southwest Airlines</td></tr>
+<tr><td>4</td><td>American Airlines</td></tr>
+<tr><td>5</td><td>JetBlue Airways</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flightID</th><th>originLocation</th><th>destinationLocation</th><th>airlineId</th></tr>
+<tr><th></th><th>(&#8594; Available_locations.id)</th><th>(&#8594; Available_locations.id)</th><th>(&#8594; Airlines.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>1</td><td>5</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Luggage_trolleys</span></h2><table><thead>
+<tr><th>trolleyID</th><th>availableLocation</th></tr>
+<tr><th></th><th>(&#8594; Available_locations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Porters</span></h2><table><thead>
+<tr><th>porterID</th><th>serviceType</th><th>availableLocation</th></tr>
+<tr><th></th><th></th><th>(&#8594; Available_locations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Assistance</td><td>1</td></tr>
+<tr><td>2</td><td>Golf Cart Service</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>bookingID</th><th>customerName</th><th>flightId</th><th>luggageTrolleyId</th><th>porterId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Flights.flightID)</th><th>(&#8594; Luggage_trolleys.trolleyID)</th><th>(&#8594; Porters.porterID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2</td><td>None</td><td>None</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>3</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>4</td><td>None</td><td>None</td></tr>
+<tr><td>5</td><td>David Brown</td><td>5</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

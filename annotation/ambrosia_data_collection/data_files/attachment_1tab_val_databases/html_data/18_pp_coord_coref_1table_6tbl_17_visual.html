@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>CompanyName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Corporation</td></tr>
+<tr><td>2</td><td>XYZ Limited</td></tr>
+<tr><td>3</td><td>PQR Enterprise</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>LocationID</th><th>LocationName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td></tr>
+<tr><td>2</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Chicago</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>JobTitle</th><th>Description</th><th>CompanyID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Designs and develops software applications.</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyzes and interprets complex datasets.</td><td>2</td></tr>
+<tr><td>3</td><td>Project Manager</td><td>Manages project scope, time, cost, quality, resources, risks, communications, procurements, integration, stakeholder engagement, and closure.</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>SalaryRanges</h2><table><thead>
+<tr><th>SalaryRangeID</th><th>MinimumSalary</th><th>MaximumSalary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>60000.0</td><td>80000.0</td></tr>
+<tr><td>2</td><td>70000.0</td><td>90000.0</td></tr>
+<tr><td>3</td><td>50000.0</td><td>70000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>JobSkills</h2><table><thead>
+<tr><th>JobSkillID</th><th>SkillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python</td></tr>
+<tr><td>2</td><td>Java</td></tr>
+<tr><td>3</td><td>SQL</td></tr>
+</tbody></table></div>
+
+<div><h2>JobDetails</h2><table><thead>
+<tr><th>DetailID</th><th>JobID</th><th>SalaryRangeID</th><th>JobSkillID</th></tr>
+<tr><th></th><th>(&#8594; Jobs.JobID)</th><th>(&#8594; SalaryRanges.SalaryRangeID)</th><th>(&#8594; JobSkills.JobSkillID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RealEstateJobs</span></h2><table><thead>
+<tr><th>RealEstateJobID</th><th>CommissionRate</th><th>JobType</th><th>AdditionalInfo</th><th>JobID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Jobs.JobID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">5%</span></td><td><span style="color:#990000">Real Estate Agent</span></td><td></td><td>1</td></tr>
+<tr><td>2</td><td>7%</td><td><span style="color:#990000">Real Estate Agent</span></td><td></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#006600">5%</span></td><td><span style="color:#990000">Property Manager</span></td><td></td><td>3</td></tr>
+<tr><td>4</td><td>6%</td><td><span style="color:#990000">Property Manager</span></td><td></td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

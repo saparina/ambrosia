@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Composer</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th><th>death_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Composer A</td><td>1900-01-01</td><td>1980-12-31</td></tr>
+<tr><td>2</td><td>Composer B</td><td>1920-01-01</td><td>2000-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Conductor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th><th>death_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Conductor C</td><td>1930-01-01</td><td>2000-12-31</td></tr>
+<tr><td>2</td><td>Conductor D</td><td>1940-01-01</td><td>2020-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Orchestra</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>London Symphony Orchestra</td></tr>
+<tr><td>2</td><td><span style="color:#006600">New York Philharmonic</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Opera</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>composer_id</th><th>conductor_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Composer.id)</th><th>(&#8594; Conductor.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Opéra A</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Opéra B</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Symphony</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>composer_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Composer.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Symphony A</td><td>1</td></tr>
+<tr><td>2</td><td>Symphony B</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Performance</h2><table><thead>
+<tr><th>id</th><th>date</th><th>symphony_id</th><th>orchestra_id</th><th>conductor_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Symphony.id)</th><th>(&#8594; Orchestra.id)</th><th>(&#8594; Conductor.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-06-01</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2022-07-01</td><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

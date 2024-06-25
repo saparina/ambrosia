@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Spa</span></h2><table><thead>
+<tr><th>spa_id</th><th>name</th><th>address</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Spalicious</td><td>123 Main St</td><td>555-123-4567</td></tr>
+<tr><td>2</td><td>The Serene Oasis</td><td>456 Elm St</td><td>555-987-6543</td></tr>
+<tr><td>3</td><td>Aromatherapy Haven</td><td>789 Maple Ave</td><td>555-321-0987</td></tr>
+<tr><td>4</td><td>Tranquil Retreat</td><td>987 Oak St</td><td>555-456-7890</td></tr>
+<tr><td>5</td><td>Rejuvenation Sanctuary</td><td>135 Pine St</td><td>555-234-5678</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Treatments</span></h2><table><thead>
+<tr><th>treatment_id</th><th><span style="color:#990000">name</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Massage</td><td>Relaxing Swedish massage with essential oils.</td></tr>
+<tr><td>2</td><td>Facial</td><td>Revitalizing facial treatment using natural products.</td></tr>
+<tr><td>3</td><td>Manicure</td><td>Nourishing manicure with nail polish application.</td></tr>
+<tr><td>4</td><td>Pedicure</td><td>Moisturizing pedicure with callus removal.</td></tr>
+<tr><td>5</td><td>Body Scrub</td><td>Exfoliating body scrub with sea salt and oil.</td></tr>
+</tbody></table></div>
+
+<div><h2>Spa_Treatments</h2><table><thead>
+<tr><th>spa_treatment_id</th><th>spa_id</th><th>treatment_id</th></tr>
+<tr><th></th><th>(&#8594; Spa.spa_id)</th><th>(&#8594; Treatments.treatment_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Doe</td><td>jane.doe@example.com</td></tr>
+<tr><td>2</td><td>John</td><td>Smith</td><td>john.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>bob.williams@example.com</td></tr>
+<tr><td>5</td><td>Emily</td><td>Davis</td><td>emily.davis@example.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

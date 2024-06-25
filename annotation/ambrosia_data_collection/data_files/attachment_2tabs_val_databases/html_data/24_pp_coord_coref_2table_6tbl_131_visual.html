@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">ProductionCompanies</span></h2><table><thead>
+<tr><th>id</th><th>CompanyName</th><th>Address</th><th>YearFounded</th><th>Number_of_Employees</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Walt Disney Productions</td><td>Burbank, CA</td><td>1923</td><td><span style="color:#006600">500</span></td></tr>
+<tr><td>2</td><td>Pixar Animation Studios</td><td>Emeryville, CA</td><td>1986</td><td>1200</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">DistributionCompanies</span></h2><table><thead>
+<tr><th>id</th><th>CompanyName</th><th>Address</th><th>Founder</th><th>Number_of_Employees</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paramount Pictures</td><td>Los Angeles, CA</td><td>Adolph Zukor</td><td><span style="color:#006600">500</span></td></tr>
+<tr><td>2</td><td>Universal Pictures</td><td>Universal City, CA</td><td>Carl Laemmle</td><td>700</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Genre</th><th>ReleaseYear</th><th>Runtime</th><th>BoxOfficeProfit</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Avatar</td><td>Science fiction/Fantasy</td><td>2009</td><td>162</td><td>2743.0</td></tr>
+<tr><td>2</td><td>Titanic</td><td>Romance/Drama</td><td>1997</td><td>194</td><td>2202.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th><th>Nationality</th><th>Height</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>11/11/1974</td><td>USA</td><td>179.0</td></tr>
+<tr><td>2</td><td>Kate Winslet</td><td>10/5/1975</td><td>UK</td><td>170.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th><th>Nationality</th><th>Filmography</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>James Cameron</td><td>8/16/1954</td><td>Canada</td><td>The Terminator, Aliens, True Lies</td></tr>
+<tr><td>2</td><td>Robert Zemeckis</td><td>May 14, 1951</td><td>USA</td><td>Back To The Future, Forrest Gump, Cast Away</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>MovieID</th><th>ActorID</th><th>Character</th></tr>
+<tr><th>(&#8594; Movies.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>None</td><td>Jake Sully</td></tr>
+<tr><td>2</td><td>1</td><td>Jack Dawson</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

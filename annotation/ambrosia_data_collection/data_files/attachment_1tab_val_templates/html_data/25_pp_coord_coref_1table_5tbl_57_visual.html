@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-07-30</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1965-01-15</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>1992-11-23</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>1978-05-28</td></tr>
+<tr><td>5</td><td>William Brown</td><td>1950-12-04</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>ProducerID</th><th>Name</th><th>ProductionCompany</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Green</td><td>Green Studios</td></tr>
+<tr><td>2</td><td>Robert White</td><td>White Pictures</td></tr>
+<tr><td>3</td><td>David Black</td><td>Black Entertainment</td></tr>
+<tr><td>4</td><td>Carol Blue</td><td>Blue Vision</td></tr>
+<tr><td>5</td><td>Peter Gray</td><td>Gray Media</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Films</span></h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th><span style="color:#186e16"><span style="color:#186e16">Genre</span></span></th><th><span style="color:#1430b2">Release_Year</span></th><th>DirectorID</th><th>ProducerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th><th>(&#8594; Producers.ProducerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Animated Fun</td><td><span style="color:#186e16">Animation</span></td><td><span style="color:#1430b2">2021</span></td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>A Comic Adventure</td><td><span style="color:#186e16">Comedy</span></td><td><span style="color:#1430b2">2021</span></td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>The Silent Clown</td><td><span style="color:#186e16">Comedy</span></td><td>1999</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Fantastic Journey</td><td><span style="color:#186e16">Animation</span></td><td>2019</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Dream Chasers</td><td>Drama</td><td>2005</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chris Evans</td><td>1981-05-13</td></tr>
+<tr><td>2</td><td>Scarlett Johansson</td><td>1984-11-22</td></tr>
+<tr><td>3</td><td>Ryan Reynolds</td><td>1976-10-23</td></tr>
+<tr><td>4</td><td>Anne Hathaway</td><td>1982-11-12</td></tr>
+<tr><td>5</td><td>Christopher Nolan</td><td>1970-07-30</td></tr>
+</tbody></table></div>
+
+<div><h2>Casts</h2><table><thead>
+<tr><th>FilmID</th><th>ActorID</th><th>Role</th></tr>
+<tr><th>(&#8594; Films.FilmID)</th><th>(&#8594; Actors.ActorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Leading Man</td></tr>
+<tr><td>1</td><td>2</td><td>Supporting Actor</td></tr>
+<tr><td>2</td><td>3</td><td>Funny Sidekick</td></tr>
+<tr><td>2</td><td>4</td><td>Serious Best Friend</td></tr>
+<tr><td>3</td><td>5</td><td>Wise Mentor</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

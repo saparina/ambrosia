@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Dissertations</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Abstract</th><th>Date</th><th>Academic_Supervisor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Understanding Quantum Mechanics</td><td>Exploring the principles of quantum mechanics...</td><td>2021-01-01</td><td><span style="color:#006600">Dr. Jane Smith</span></td></tr>
+<tr><td>2</td><td>Advances in Artificial Intelligence</td><td>Investigating the latest developments in AI technology...</td><td>2021-01-02</td><td>Dr. John Doe</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Thesis_Proposals</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Abstract</th><th>Date</th><th>Academic_Supervisor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Educational Technology Trends</td><td>An analysis of current trends in educational technology...</td><td>2021-02-01</td><td><span style="color:#006600">Dr. Jane Smith</span></td></tr>
+<tr><td>2</td><td>Learning Styles and Effective Teaching Methods</td><td>Examining various learning styles and their impact on teaching methods...</td><td>2021-02-02</td><td>Dr. Alice Johnson</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>PhoneNumber</th><th>EnrolmentDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>1234567890</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>9876543210</td><td>2021-02-01</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice@example.com</td><td>0987654321</td><td>2021-03-01</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob@example.com</td><td>1234567890</td><td>2021-04-01</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>charlie@example.com</td><td>0987654321</td><td>2021-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Supervisors</h2><table><thead>
+<tr><th>ID</th><th>FullName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Jane Smith</td></tr>
+<tr><td>2</td><td>Dr. John Doe</td></tr>
+<tr><td>3</td><td>Dr. Alice Johnson</td></tr>
+<tr><td>4</td><td>Dr. Bob Brown</td></tr>
+<tr><td>5</td><td>Dr. Charlie Davis</td></tr>
+</tbody></table></div>
+
+<div><h2>Degree</h2><table><thead>
+<tr><th>ID</th><th>StudentID</th><th>DegreeType</th><th>GraduationDate</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>PhD</td><td>2021-12-01</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>MSc</td><td>2022-12-01</td><td>A+</td></tr>
+<tr><td>3</td><td>3</td><td>MA</td><td>2023-12-01</td><td>A</td></tr>
+<tr><td>4</td><td>4</td><td>BA</td><td>2024-12-01</td><td>A+</td></tr>
+<tr><td>5</td><td>5</td><td>BSc</td><td>2025-12-01</td><td>A</td></tr>
+</tbody></table></div>
+
+<div><h2>Course</h2><table><thead>
+<tr><th>ID</th><th>Code</th><th>Description</th><th>Credit</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CS101</td><td>Introduction to Computer Science</td><td>4</td></tr>
+<tr><td>2</td><td>ENG101</td><td>English Language Skills</td><td>3</td></tr>
+<tr><td>3</td><td>MAT201</td><td>Calculus I</td><td>4</td></tr>
+<tr><td>4</td><td>SOC301</td><td>Sociology of Education</td><td>3</td></tr>
+<tr><td>5</td><td>PHY101</td><td>General Physics</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Student_Course</h2><table><thead>
+<tr><th>StudentID</th><th>CourseID</th><th>Marks</th></tr>
+<tr><th>(&#8594; Students.ID)</th><th>(&#8594; Course.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>85</td></tr>
+<tr><td>1</td><td>2</td><td>90</td></tr>
+<tr><td>1</td><td>3</td><td>88</td></tr>
+<tr><td>2</td><td>4</td><td>92</td></tr>
+<tr><td>2</td><td>5</td><td>80</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

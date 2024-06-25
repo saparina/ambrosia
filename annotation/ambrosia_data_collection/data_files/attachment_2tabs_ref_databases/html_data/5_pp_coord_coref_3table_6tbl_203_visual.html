@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">University</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">MIT</span></td></tr>
+<tr><td>2</td><td>Stanford</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Chemist</span></h2><table><thead>
+<tr><th>id</th><th>university_id</th><th>firstName</th><th>lastName</th><th>fieldOfStudy</th></tr>
+<tr><th></th><th>(&#8594; University.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John</td><td>Doe</td><td>Organic Chemistry</td></tr>
+<tr><td>2</td><td>1</td><td>Jane</td><td>Smith</td><td>Inorganic Chemistry</td></tr>
+<tr><td>3</td><td>2</td><td>Alice</td><td>Brown</td><td>Physical Chemistry</td></tr>
+<tr><td>4</td><td>2</td><td>Bob</td><td>White</td><td>Analytical Chemistry</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Geoscientist</span></h2><table><thead>
+<tr><th>id</th><th>university_id</th><th>firstName</th><th>lastName</th><th>fieldOfStudy</th></tr>
+<tr><th></th><th>(&#8594; University.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Tom</td><td>Jackson</td><td>Geology</td></tr>
+<tr><td>2</td><td>1</td><td>Emma</td><td>Nelson</td><td>Seismology</td></tr>
+<tr><td>3</td><td>2</td><td>Mike</td><td>Garcia</td><td>Paleontology</td></tr>
+<tr><td>4</td><td>2</td><td>Lisa</td><td>Hill</td><td>Oceanography</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>employeeNumber</th><th>firstName</th><th>lastName</th><th>hireDate</th><th>jobTitle</th><th>salary</th><th>departmentID</th><th>managerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Department.id)</th><th>(&#8594; Employee.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Michael</td><td>Johnson</td><td>2021-06-01</td><td>Software Engineer</td><td>80000</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>Emily</td><td>Williams</td><td>2021-07-01</td><td>Product Manager</td><td>90000</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>David</td><td>Martinez</td><td>2021-08-01</td><td>Data Analyst</td><td>75000</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>Rachel</td><td>Taylor</td><td>2021-09-01</td><td>UX Designer</td><td>85000</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>5</td><td>Alex</td><td>Thompson</td><td>2021-10-01</td><td>QA Engineer</td><td>70000</td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>id</th><th>departmentName</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering</td><td>San Francisco</td></tr>
+<tr><td>2</td><td>Marketing</td><td>New York</td></tr>
+<tr><td>3</td><td>Finance</td><td>Chicago</td></tr>
+<tr><td>4</td><td>HR</td><td>Los Angeles</td></tr>
+<tr><td>5</td><td>Legal</td><td>Washington DC</td></tr>
+</tbody></table></div>
+
+<div><h2>SalaryHistory</h2><table><thead>
+<tr><th>id</th><th>employeeId</th><th>startDate</th><th>endDate</th><th>salaryAmount</th></tr>
+<tr><th></th><th>(&#8594; Employee.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-06-01</td><td>2022-06-01</td><td>80000</td></tr>
+<tr><td>2</td><td>2</td><td>2021-07-01</td><td>2022-07-01</td><td>90000</td></tr>
+<tr><td>3</td><td>3</td><td>2021-08-01</td><td>2022-08-01</td><td>75000</td></tr>
+<tr><td>4</td><td>4</td><td>2021-09-01</td><td>2022-09-01</td><td>85000</td></tr>
+<tr><td>5</td><td>5</td><td>2021-10-01</td><td>2022-10-01</td><td>70000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

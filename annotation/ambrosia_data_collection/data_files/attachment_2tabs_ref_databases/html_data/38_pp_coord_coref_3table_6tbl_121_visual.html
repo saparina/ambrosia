@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artists</h2><table><thead>
+<tr><th>ArtistID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Johnson</td></tr>
+<tr><td>4</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>William Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">StandUpComedians</span></h2><table><thead>
+<tr><th>ComedianID</th><th>ArtistID</th><th>StageName</th></tr>
+<tr><th></th><th>(&#8594; Artists.ArtistID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Chris Rock</td></tr>
+<tr><td>2</td><td>2</td><td>Ellen DeGeneres</td></tr>
+<tr><td>3</td><td>3</td><td>Kevin Hart</td></tr>
+<tr><td>4</td><td>4</td><td>Amy Schumer</td></tr>
+<tr><td>5</td><td>5</td><td>Dave Chappelle</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Magicians</span></h2><table><thead>
+<tr><th>MagicianID</th><th>ArtistID</th><th>MagicName</th></tr>
+<tr><th></th><th>(&#8594; Artists.ArtistID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>David Copperfield</td></tr>
+<tr><td>2</td><td>2</td><td>Penn & Teller</td></tr>
+<tr><td>3</td><td>3</td><td>Criss Angel</td></tr>
+<tr><td>4</td><td>4</td><td>Dynamo</td></tr>
+<tr><td>5</td><td>5</td><td>Derren Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>EventID</th><th>Title</th><th>Description</th><th>StartDate</th><th>EndDate</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Big Comedy Night</td><td>The biggest comedy event of the year!</td><td>2022-08-01</td><td>2022-08-02</td><td>New York City</td></tr>
+<tr><td>2</td><td>Great Magic Extravaganza</td><td>Experience the magic like never before!</td><td>2022-09-01</td><td>2022-09-02</td><td>Las Vegas</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Performances</span></h2><table><thead>
+<tr><th>PerformanceID</th><th>EventID</th><th><span style="color:#006600">DurationOfPerformance</span></th></tr>
+<tr><th></th><th>(&#8594; Events.EventID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>60</td></tr>
+<tr><td>2</td><td>2</td><td>75</td></tr>
+<tr><td>3</td><td>1</td><td>45</td></tr>
+<tr><td>4</td><td>2</td><td>60</td></tr>
+<tr><td>5</td><td>1</td><td><span style="color:#006600">90</span></td></tr>
+<tr><td>6</td><td>2</td><td>75</td></tr>
+</tbody></table></div>
+
+<div><h2>ComedyShows</h2><table><thead>
+<tr><th>ShowID</th><th>PerformanceID</th><th>ComedianID</th></tr>
+<tr><th></th><th>(&#8594; Performances.PerformanceID)</th><th>(&#8594; StandUpComedians.ComedianID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>5</td></tr>
+<tr><td>6</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>MagicShows</h2><table><thead>
+<tr><th>ShowID</th><th>PerformanceID</th><th>MagicianID</th></tr>
+<tr><th></th><th>(&#8594; Performances.PerformanceID)</th><th>(&#8594; Magicians.MagicianID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Gate</span></h2><table><thead>
+<tr><th>gate_id</th><th>airport_code</th><th>terminal_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>3</td></tr>
+<tr><td>2</td><td>LAX</td><td>2</td></tr>
+<tr><td>3</td><td>ORD</td><td>1</td></tr>
+<tr><td>4</td><td>ATL</td><td>6</td></tr>
+<tr><td>5</td><td>YUL</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Facility</span></h2><table><thead>
+<tr><th>facility_id</th><th>name</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Baggage Claim</td><td>A place where passengers collect their luggage</td></tr>
+<tr><td>2</td><td>Restaurant</td><td>A place where passengers can eat</td></tr>
+<tr><td>3</td><td>Shopping Center</td><td>A place where passengers can shop</td></tr>
+<tr><td>4</td><td>Information Desk</td><td>A place where passengers can get information about flights</td></tr>
+<tr><td>5</td><td>Currency Exchange</td><td>A place where passengers can exchange currency</td></tr>
+</tbody></table></div>
+
+<div><h2>Gate_Facility</h2><table><thead>
+<tr><th>gate_facility_id</th><th>gate_id</th><th>facility_id</th></tr>
+<tr><th></th><th>(&#8594; Gate.gate_id)</th><th>(&#8594; Facility.facility_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>5</td></tr>
+<tr><td>6</td><td>2</td><td>1</td></tr>
+<tr><td>7</td><td>3</td><td>1</td></tr>
+<tr><td>8</td><td>4</td><td>1</td></tr>
+<tr><td>9</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>flight_id</th><th>airline_name</th><th>departure_time</th><th>arrival_time</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>08-05-2022 9:00 AM</td><td>08-05-2022 11:00 PM</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>08-05-2022 10:00 AM</td><td>08-05-2022 12:00 PM</td></tr>
+<tr><td>3</td><td>American Airlines</td><td>08-05-2022 11:00 AM</td><td>08-05-2022 1:00 PM</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>08-05-2022 12:00 PM</td><td>08-05-2022 2:00 PM</td></tr>
+<tr><td>5</td><td>Spirit Airlines</td><td>08-05-2022 1:00 PM</td><td>08-05-2022 3:00 PM</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>aircraft_id</th><th>model</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Airbus A380</td><td>450</td></tr>
+<tr><td>2</td><td>Boeing 747</td><td>400</td></tr>
+<tr><td>3</td><td>Airbus A321</td><td>200</td></tr>
+<tr><td>4</td><td>Boeing 737</td><td>180</td></tr>
+<tr><td>5</td><td>Embraer E190</td><td>110</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

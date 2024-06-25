@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Savings_Accounts</span></h2><table><thead>
+<tr><th>AccountID</th><th>CustomerName</th><th>OpenDate</th><th>Balance</th><th><span style="color:#1430b2">Interest_Rate</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2023-01-01</td><td>1000.0</td><td><span style="color:#1430b2">1%</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2023-01-01</td><td>2000.0</td><td>2%</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Checking_Accounts</span></h2><table><thead>
+<tr><th>AccountID</th><th>CustomerName</th><th>OpenDate</th><th>Balance</th><th>OverdraftLimit</th><th>Interest_Rate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2023-01-01</td><td>500.0</td><td>250.0</td><td><span style="color:#1430b2">1%</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2023-01-01</td><td>750.0</td><td>350.0</td><td>2%</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-01-01</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1992-01-01</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>LoanID</th><th>CustomerID</th><th>Amount</th><th>StartDate</th><th>EndDate</th><th>Rate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5000</td><td>2023-01-01</td><td>2026-01-01</td><td>4.5</td></tr>
+<tr><td>2</td><td>2</td><td>10000</td><td>2023-01-01</td><td>2028-01-01</td><td>4.75</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountID</th><th>Type</th><th>Amount</th><th>DateAndTime</th></tr>
+<tr><th></th><th>(&#8594; Savings_Accounts.AccountID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Deposit</td><td>500.0</td><td>2023-01-01 12:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>Withdrawal</td><td>250.0</td><td>2023-01-01 13:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

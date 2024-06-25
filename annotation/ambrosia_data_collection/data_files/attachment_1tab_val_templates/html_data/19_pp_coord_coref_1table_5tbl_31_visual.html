@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Customers</span></h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th><span style="color:#186e16"><span style="color:#186e16">Digital_Solutions</span></span></th><th><span style="color:#1430b2">Sign_in_Options</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2019-06-23</td><td>None</td><td>None</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2018-07-12</td><td>None</td><td>None</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>2001-01-01</td><td>None</td><td>None</td></tr>
+<tr><td>4</td><td>Bob</td><td>Builder</td><td>1980-12-31</td><td>None</td><td>None</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Banks</td><td>2002-04-02</td><td>None</td><td>None</td></tr>
+<tr><td>6</td><td>David</td><td>Stone</td><td>1993-07-15</td><td><span style="color:#186e16">Mobile Banking App</span></td><td><span style="color:#1430b2">Biometric Authentication</span></td></tr>
+<tr><td>7</td><td>Eva</td><td>Green</td><td>1994-08-16</td><td><span style="color:#186e16">Mobile Banking App</span></td><td>Password</td></tr>
+<tr><td>8</td><td>Frank</td><td>Williams</td><td>1985-09-17</td><td><span style="color:#186e16">Internet Banking Platform</span></td><td><span style="color:#1430b2">Biometric Authentication</span></td></tr>
+<tr><td>9</td><td>Grace</td><td>Hopper</td><td>1906-12-09</td><td><span style="color:#186e16">Internet Banking Platform</span></td><td>PIN</td></tr>
+</tbody></table></div>
+
+<div><h2>AccountTypes</h2><table><thead>
+<tr><th>AccountTypeID</th><th>AccountTypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Checking Account</td></tr>
+<tr><td>2</td><td>Savings Account</td></tr>
+<tr><td>3</td><td>Credit Card</td></tr>
+<tr><td>4</td><td>Mortgage Loan</td></tr>
+<tr><td>5</td><td>Business Loan</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountID</th><th>CustomerID</th><th>AccountTypeID</th><th>OpenDate</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; AccountTypes.AccountTypeID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2020-01-01</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-01-01</td><td>5000.0</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-01-01</td><td>-1000.0</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-01-01</td><td>2000.0</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2024-01-01</td><td>3000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountID</th><th>Amount</th><th>Type</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>500.0</td><td>Deposit</td><td>2020-02-01</td></tr>
+<tr><td>2</td><td>2</td><td>1000.0</td><td>Withdrawal</td><td>2021-03-01</td></tr>
+<tr><td>3</td><td>3</td><td>-200.0</td><td>Transfer In</td><td>2022-04-01</td></tr>
+<tr><td>4</td><td>4</td><td>800.0</td><td>Interest</td><td>2023-05-01</td></tr>
+<tr><td>5</td><td>5</td><td>1500.0</td><td>Loan Payment</td><td>2024-06-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Film_Archivists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Preservation_Methods</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">method</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film Negatives</td><td>Storing physical copies of films on celluloid.</td></tr>
+<tr><td>2</td><td>Digital Files</td><td>Storing digital copies of films on hard drives or cloud storage.</td></tr>
+<tr><td>3</td><td>Blu-ray Discs</td><td>Storing high definition video on Blu-ray discs.</td></tr>
+<tr><td>4</td><td>DVDs</td><td>Storing standard definition video on DVDs.</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994.0</td></tr>
+<tr><td>2</td><td>The Godfather</td><td>1972.0</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994.0</td></tr>
+<tr><td>4</td><td>Schindler's List</td><td>1993.0</td></tr>
+<tr><td>5</td><td>Forrest Gump</td><td>1994.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Archived_Films</h2><table><thead>
+<tr><th>film_id</th><th>archiver_id</th><th>preservation_method_id</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Film_Archivists.id)</th><th>(&#8594; Preservation_Methods.id)</th></tr>
+</thead><tbody>
+<tr><td>None</td><td>1</td><td>1</td></tr>
+<tr><td>None</td><td>2</td><td>1</td></tr>
+<tr><td>None</td><td>3</td><td>1</td></tr>
+<tr><td>None</td><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>director_id</th><th>firstname</th><th>lastname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank</td><td>Darabont</td></tr>
+<tr><td>2</td><td>Mario</td><td>Puzo</td></tr>
+<tr><td>3</td><td>Quentin</td><td>Tarantino</td></tr>
+<tr><td>4</td><td>Steven</td><td>Spielberg</td></tr>
+<tr><td>5</td><td>Robert</td><td>Zemeckis</td></tr>
+</tbody></table></div>
+
+<div><h2>Producer</h2><table><thead>
+<tr><th>producer_id</th><th>firstname</th><th>lastname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Albert</td><td>Ruddy</td></tr>
+<tr><td>2</td><td>Gordon</td><td>Carroll</td></tr>
+<tr><td>3</td><td>Barry</td><td>Winkler</td></tr>
+<tr><td>4</td><td>Joel</td><td>Silver</td></tr>
+<tr><td>5</td><td>Mark</td><td>Harrison</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>actor_id</th><th>firstname</th><th>lastname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tim</td><td>Robin</td></tr>
+<tr><td>2</td><td>Marlon</td><td>Brando</td></tr>
+<tr><td>3</td><td>Brad</td><td>Pitt</td></tr>
+<tr><td>4</td><td>Tom</td><td>Hanks</td></tr>
+<tr><td>5</td><td>Jack</td><td>Nicholson</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>role_id</th><th>film_id</th><th>director_id</th><th>producer_id</th><th>actor_id</th></tr>
+<tr><th></th><th>(&#8594; Films.id)</th><th>(&#8594; Director.director_id)</th><th>(&#8594; Producer.producer_id)</th><th>(&#8594; Actor.actor_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>4</td><td>5</td></tr>
+<tr><td>3</td><td>3</td><td>6</td><td>5</td><td>7</td></tr>
+<tr><td>4</td><td>4</td><td>8</td><td>7</td><td>8</td></tr>
+<tr><td>5</td><td>5</td><td>9</td><td>8</td><td>9</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

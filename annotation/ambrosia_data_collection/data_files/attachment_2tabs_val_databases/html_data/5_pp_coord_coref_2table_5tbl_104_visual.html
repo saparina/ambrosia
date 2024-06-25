@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Chemists</span></h2><table><thead>
+<tr><th>id</th><th>chemist_name</th><th>university</th><th>start_date</th><th>end_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#006600">MIT</span></td><td>2019-06-01</td><td>2021-08-31</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Stanford University</td><td>2017-09-01</td><td>2019-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Geoscientists</span></h2><table><thead>
+<tr><th>id</th><th>geoscientist_name</th><th>university</th><th>start_date</th><th>end_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Johnson</td><td><span style="color:#006600">MIT</span></td><td>2018-05-01</td><td>2020-08-31</td></tr>
+<tr><td>2</td><td>Emily Brown</td><td>Caltech</td><td>2019-09-01</td><td>2021-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>company_name</th><th>location</th><th>industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>New York</td><td>Technology</td></tr>
+<tr><td>2</td><td>EcoCorp</td><td>San Francisco</td><td>Environmental Services</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>job_title</th><th>description</th><th>required_skills</th><th>posted_on</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Development of new software products.</td><td>Java, Python, JavaScript</td><td>2021-06-15 10:00:00</td></tr>
+<tr><td>2</td><td>Data Scientist</td><td>Analysis and interpretation of large datasets.</td><td>R, SQL, Machine Learning</td><td>2021-06-15 10:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>application_id</th><th>applicant_name</th><th>email</th><th>phone_number</th><th>resume</th><th>cover_letter</th><th>applied_at</th><th>status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Cooper</td><td>alice@example.com</td><td>123-456-7890</td><td>CooperResume.pdf</td><td>CoverLetter.txt</td><td>2021-06-15 10:00:00</td><td>Pending</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>bob@example.com</td><td>098-765-4321</td><td>SmithResume.pdf</td><td>CoverLetter.txt</td><td>2021-06-15 10:00:00</td><td>Accepted</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

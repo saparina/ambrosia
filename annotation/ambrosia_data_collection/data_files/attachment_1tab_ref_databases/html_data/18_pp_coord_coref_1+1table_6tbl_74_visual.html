@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">hotels</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th><span style="color:#990000"><span style="color:#990000">accommodation_type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand <span style="color:#990000">Hotel</span></td><td>Downtown</td><td><span style="color:#990000">Hotel</span></td></tr>
+<tr><td>2</td><td>Park Plaza</td><td>Uptown</td><td><span style="color:#990000">Hotel</span></td></tr>
+<tr><td>3</td><td>Young Travelers Hostel</td><td>City Center</td><td><span style="color:#990000">Youth Hostel</span></td></tr>
+<tr><td>4</td><td>Backpacker Inn</td><td>Suburbia</td><td><span style="color:#990000">Youth Hostel</span></td></tr>
+<tr><td>5</td><td>Luxury Suites</td><td>Beachside</td><td><span style="color:#990000">Hotel</span></td></tr>
+<tr><td>6</td><td>Mountain Retreat</td><td>Outskirts</td><td><span style="color:#990000">Hotel</span></td></tr>
+</tbody></table></div>
+
+<div><h2>yhostels</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>accommodation_type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Global Nomads</td><td>Airport Area</td><td>Youth Hostel</td></tr>
+<tr><td>2</td><td>Student Haven</td><td>University District</td><td>Youth Hostel</td></tr>
+<tr><td>3</td><td>Adventure Lodge</td><td>Nature Reserve</td><td>Youth Hostel</td></tr>
+<tr><td>4</td><td>Surf & Turf Hostel</td><td>Seaside</td><td>Youth Hostel</td></tr>
+<tr><td>5</td><td>Art Lovers Hangout</td><td>Arts Quarter</td><td>Youth Hostel</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">rooms</span></h2><table><thead>
+<tr><th>hotel_id</th><th>room_number</th><th><span style="color:#006600">price</span></th></tr>
+<tr><th>(&#8594; hotels.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td><td><span style="color:#006600">50.0</span></td></tr>
+<tr><td>3</td><td>301</td><td><span style="color:#006600">50.0</span></td></tr>
+<tr><td>4</td><td>401</td><td>80.0</td></tr>
+<tr><td>6</td><td>601</td><td><span style="color:#006600">50.0</span></td></tr>
+</tbody></table></div>
+
+<div><h2>reviews</h2><table><thead>
+<tr><th>user_name</th><th>review_text</th><th>rating</th><th>room_number</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; rooms.room_number)</th></tr>
+</thead><tbody>
+<tr><td>John Doe</td><td>Great experience!</td><td>5</td><td>101</td></tr>
+<tr><td>Jane Smith</td><td>Not what I expected.</td><td>3</td><td>201</td></tr>
+<tr><td>Emma Brown</td><td>Fantastic stay!</td><td>5</td><td>301</td></tr>
+<tr><td>Mike Johnson</td><td>Too expensive.</td><td>2</td><td>401</td></tr>
+<tr><td>Laura Wilson</td><td>Awesome hostel!</td><td>4</td><td>501</td></tr>
+<tr><td>William Clark</td><td>I will come back again!</td><td>5</td><td>601</td></tr>
+<tr><td>Kate King</td><td>Not my cup of tea.</td><td>3</td><td>701</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

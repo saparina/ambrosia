@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Countries</h2><table><thead>
+<tr><th>CountryID</th><th>Name</th><th>Population</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>USA</td><td>328000000</td></tr>
+<tr><td>2</td><td>Canada</td><td>37600000</td></tr>
+</tbody></table></div>
+
+<div><h2>States</h2><table><thead>
+<tr><th>StateID</th><th>CountryID</th><th>Name</th></tr>
+<tr><th></th><th>(&#8594; Countries.CountryID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>California</td></tr>
+<tr><td>2</td><td>1</td><td>New York</td></tr>
+<tr><td>3</td><td>2</td><td>Quebec</td></tr>
+<tr><td>4</td><td>2</td><td>Ontario</td></tr>
+</tbody></table></div>
+
+<div><h2>Cities</h2><table><thead>
+<tr><th>CityID</th><th>StateID</th><th>Name</th></tr>
+<tr><th></th><th>(&#8594; States.StateID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>1</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>1</td><td>Chicago</td></tr>
+<tr><td>4</td><td>2</td><td>Montreal</td></tr>
+<tr><td>5</td><td>2</td><td>Toronto</td></tr>
+</tbody></table></div>
+
+<div><h2>People</h2><table><thead>
+<tr><th>PersonID</th><th>Age</th><th>Sex</th><th>Occupation</th><th>ResidenceCityId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Cities.CityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>30</td><td>M</td><td>Engineer</td><td>1</td></tr>
+<tr><td>2</td><td>45</td><td>F</td><td>Doctor</td><td>2</td></tr>
+<tr><td>3</td><td>50</td><td>M</td><td>Teacher</td><td>3</td></tr>
+<tr><td>4</td><td>25</td><td>F</td><td>Lawyer</td><td>4</td></tr>
+<tr><td>5</td><td>35</td><td>M</td><td>Accountant</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>DiabetesData</h2><table><thead>
+<tr><th>DataID</th><th><span style="color:#990000">Percentage_Of_Diabetics</span></th><th><span style="color:#990000">Diabetic_Count</span></th><th>Population</th><th>CityId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Cities.CityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>500</td><td>10000</td><td>1</td></tr>
+<tr><td>2</td><td>3</td><td>300</td><td>10000</td><td>2</td></tr>
+<tr><td>3</td><td>4</td><td>400</td><td>10000</td><td>3</td></tr>
+<tr><td>4</td><td>6</td><td>600</td><td>10000</td><td>4</td></tr>
+<tr><td>5</td><td>2</td><td>200</td><td>10000</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>HealthCareFacilities</h2><table><thead>
+<tr><th>FacilityID</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>CityId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Cities.CityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>St. John Hospital</td><td>123 Main St.</td><td>555-1234</td><td>1</td></tr>
+<tr><td>2</td><td>Mount Sinai Medical Center</td><td>456 Elm St.</td><td>555-5678</td><td>2</td></tr>
+<tr><td>3</td><td>Sunnyview Hospital</td><td>789 Oak St.</td><td>555-9012</td><td>3</td></tr>
+<tr><td>4</td><td>Riverside Clinic</td><td>101 Pine St.</td><td>555-1357</td><td>4</td></tr>
+<tr><td>5</td><td>Community Care Center</td><td>202 Fir St.</td><td>555-1415</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

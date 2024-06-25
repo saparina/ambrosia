@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2001-07-09</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1998-10-14</td><td>456 Elm St</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>HireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Wonderland</td><td>2015-05-20</td></tr>
+<tr><td>2</td><td>Bob</td><td>Disney</td><td>2018-06-25</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>Description</th><th>TeacherID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Mathematics</td><td>This course covers basic mathematical concepts.</td><td>1</td></tr>
+<tr><td>2</td><td>Advanced Chemistry</td><td>A comprehensive look at chemical reactions and processes.</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ParticipatesInCourse</h2><table><thead>
+<tr><th>StudentID</th><th>CourseID</th><th>Semester</th><th>Grade</th></tr>
+<tr><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Fall 2022</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>Spring 2023</td><td>B+</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Extracurriculars</span></h2><table><thead>
+<tr><th>ActivityID</th><th>ClubOrProgram</th><th>NumberOfParticipants</th><th>StartDate</th><th>EndDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math Club</td><td><span style="color:#006600">30</span></td><td>2022-09-01</td><td>2023-05-31</td></tr>
+<tr><td>2</td><td>Math Club</td><td>45</td><td>2022-09-01</td><td>2023-05-31</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Leadership Program</span></td><td><span style="color:#006600">30</span></td><td>2022-09-01</td><td>2023-05-31</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Leadership Program</span></td><td>20</td><td>2022-09-01</td><td>2023-05-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

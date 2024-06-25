@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Episode</h2><table><thead>
+<tr><th>id</th><th>Podcast_id</th><th>Episode_Number</th><th>Release_Date</th><th>Length</th></tr>
+<tr><th></th><th>(&#8594; Podcast.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-07-01</td><td>60</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2021-07-08</td><td>60</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>2021-07-15</td><td>30</td></tr>
+<tr><td>4</td><td>3</td><td>1</td><td>2021-07-01</td><td>45</td></tr>
+<tr><td>5</td><td>4</td><td>1</td><td>2020-07-01</td><td>35</td></tr>
+</tbody></table></div>
+
+<div><h2>Category</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Entertainment</td></tr>
+<tr><td>2</td><td>Technology</td></tr>
+<tr><td>3</td><td>Food & Cooking</td></tr>
+<tr><td>4</td><td>Health & Fitness</td></tr>
+<tr><td>5</td><td>News</td></tr>
+</tbody></table></div>
+
+<div><h2>Podcast_Category</h2><table><thead>
+<tr><th>Podcast_id</th><th>Category_id</th></tr>
+<tr><th>(&#8594; Podcast.id)</th><th>(&#8594; Category.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscriber</h2><table><thead>
+<tr><th>id</th><th>Email</th><th>Password</th><th>Joined_Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>john@example.com</td><td>password123</td><td>2021-06-01</td></tr>
+<tr><td>2</td><td>alice@example.com</td><td>secret456</td><td>2021-06-15</td></tr>
+<tr><td>3</td><td>bob@example.com</td><td>abc789</td><td>2021-07-01</td></tr>
+<tr><td>4</td><td>charlie@example.com</td><td>xyz123</td><td>2021-07-15</td></tr>
+<tr><td>5</td><td>diana@example.com</td><td>mno456</td><td>2021-08-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscription</h2><table><thead>
+<tr><th>Subscriber_id</th><th>Podcast_id</th><th>Start_Date</th><th>End_Date</th></tr>
+<tr><th>(&#8594; Subscriber.id)</th><th>(&#8594; Podcast.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-07-01</td><td>2021-08-01</td></tr>
+<tr><td>1</td><td>2</td><td>2021-07-01</td><td>2021-08-01</td></tr>
+<tr><td>2</td><td>3</td><td>2021-07-15</td><td>2021-08-15</td></tr>
+<tr><td>3</td><td>4</td><td>2021-07-01</td><td>2021-08-01</td></tr>
+<tr><td>4</td><td>5</td><td>2021-07-15</td><td>2021-08-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Podcast</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">Debut_Date</span></th><th>Title</th><th>Hosts</th><th>Duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Monday</td><td>The Morning Show</td><td>Jane Doe and John Smith</td><td>60</td></tr>
+<tr><td>2</td><td>Tuesday</td><td>Technology Today</td><td>Alice Johnson</td><td>30</td></tr>
+<tr><td>3</td><td>Wednesday</td><td>Cooking with Chef Mike</td><td>Mike Brown</td><td>45</td></tr>
+<tr><td>4</td><td>Thursday</td><td>Health Matters</td><td>Dr. Lisa Wilson</td><td>35</td></tr>
+<tr><td>5</td><td>Friday</td><td>News Roundup</td><td>Tom Harris</td><td>60</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

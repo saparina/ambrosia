@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Location</h2><table><thead>
+<tr><th>id</th><th>city</th><th>state</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>CA</td><td>USA</td></tr>
+<tr><td>3</td><td>Chicago</td><td>IL</td><td>USA</td></tr>
+<tr><td>4</td><td>Miami</td><td>FL</td><td>USA</td></tr>
+<tr><td>5</td><td>Boston</td><td>MA</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Neighborhood</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Location.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Downtown</td><td>1</td></tr>
+<tr><td>2</td><td>Southside</td><td>1</td></tr>
+<tr><td>3</td><td>Westside</td><td>2</td></tr>
+<tr><td>4</td><td>Northside</td><td>3</td></tr>
+<tr><td>5</td><td>Eastside</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>PropertyType</h2><table><thead>
+<tr><th>id</th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Single Family Home</td></tr>
+<tr><td>2</td><td>Condo</td></tr>
+<tr><td>3</td><td>Townhome</td></tr>
+<tr><td>4</td><td>Apartment</td></tr>
+<tr><td>5</td><td>Mobile Home</td></tr>
+</tbody></table></div>
+
+<div><h2>House</h2><table><thead>
+<tr><th>id</th><th>property_type_id</th><th>neighborhood_id</th><th>address</th><th>square_footage</th><th>bedrooms</th><th>bathrooms</th><th><span style="color:#990000">Fees</span></th><th><span style="color:#990000">Taxes</span></th><th>House_Price</th></tr>
+<tr><th></th><th>(&#8594; PropertyType.id)</th><th>(&#8594; Neighborhood.id)</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>123 Main St</td><td>2000</td><td>4</td><td>3</td><td>150</td><td>800</td><td>700000</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>456 Elm St</td><td>1500</td><td>3</td><td>2</td><td>100</td><td>700</td><td>600000</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>789 Oak St</td><td>1000</td><td>2</td><td>1</td><td>80</td><td>600</td><td>350000</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>101 Pine St</td><td>2500</td><td>4</td><td>3</td><td>200</td><td>850</td><td>950000</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>202 Maple Ave</td><td>1200</td><td>3</td><td>2</td><td>120</td><td>700</td><td>400000</td></tr>
+</tbody></table></div>
+
+<div><h2>SaleRecord</h2><table><thead>
+<tr><th>id</th><th>house_id</th><th>sale_date</th><th>purchase_price</th></tr>
+<tr><th></th><th>(&#8594; House.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01 10:00:00</td><td>700000</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-02 10:00:00</td><td>600000</td></tr>
+<tr><td>3</td><td>3</td><td>2023-01-03 10:00:00</td><td>350000</td></tr>
+<tr><td>4</td><td>4</td><td>2023-01-04 10:00:00</td><td>950000</td></tr>
+<tr><td>5</td><td>5</td><td>2023-01-05 10:00:00</td><td>400000</td></tr>
+</tbody></table></div>
+
+<div><h2>Mortgage</h2><table><thead>
+<tr><th>id</th><th>sale_record_id</th><th>loan_amount</th><th>interest_rate</th><th>mortgage_term</th><th>monthly_payment</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th>(&#8594; SaleRecord.id)</th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>800000</td><td>3.5</td><td>30</td><td>2500</td><td>2023-01-01</td><td>2033-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>500000</td><td>3.0</td><td>30</td><td>2100</td><td>2023-01-02</td><td>2053-01-02</td></tr>
+<tr><td>3</td><td>3</td><td>250000</td><td>4.0</td><td>30</td><td>1000</td><td>2023-01-03</td><td>2053-01-03</td></tr>
+<tr><td>4</td><td>4</td><td>900000</td><td>3.25</td><td>30</td><td>2900</td><td>2023-01-04</td><td>2053-01-04</td></tr>
+<tr><td>5</td><td>5</td><td>400000</td><td>4.5</td><td>30</td><td>1500</td><td>2023-01-05</td><td>2053-01-05</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

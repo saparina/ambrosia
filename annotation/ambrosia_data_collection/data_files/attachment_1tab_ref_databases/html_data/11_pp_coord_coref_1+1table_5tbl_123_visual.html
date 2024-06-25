@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Employees</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">First_Name</span></th><th>Last_Name</th><th>Position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Alex</span></td><td>Smith</td><td>Beverage Professional</td></tr>
+<tr><td>2</td><td>John</td><td>Doe</td><td>Manager</td></tr>
+<tr><td>3</td><td>Jane</td><td>White</td><td>Waitress</td></tr>
+<tr><td>4</td><td>Mike</td><td>Black</td><td>Chef</td></tr>
+<tr><td>5</td><td>Emma</td><td>Green</td><td>Housekeeping</td></tr>
+</tbody></table></div>
+
+<div><h2>Beverages</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wine A</td><td>Red Wine</td></tr>
+<tr><td>2</td><td>Beer B</td><td>Beer</td></tr>
+<tr><td>3</td><td>Cocktail C</td><td>Spirits</td></tr>
+<tr><td>4</td><td>Mocktail D</td><td>Non Alcoholic</td></tr>
+<tr><td>5</td><td>Tea E</td><td>Hot Drink</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>OrderID</th><th>Date</th><th>TotalAmount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 18:00:00</td><td>75.67</td></tr>
+<tr><td>2</td><td>2023-01-02 19:00:00</td><td>85.49</td></tr>
+<tr><td>3</td><td>2023-01-03 20:00:00</td><td>100.0</td></tr>
+<tr><td>4</td><td>2023-01-04 21:00:00</td><td>120.0</td></tr>
+<tr><td>5</td><td>2023-01-05 22:00:00</td><td>140.0</td></tr>
+</tbody></table></div>
+
+<div><h2>OrderItems</h2><table><thead>
+<tr><th>ItemID</th><th>OrderID</th><th>Quantity</th></tr>
+<tr><th></th><th>(&#8594; Orders.OrderID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>OrderItemDetails</h2><table><thead>
+<tr><th>DetailID</th><th>ItemID</th><th>BeverageID</th><th>Price</th></tr>
+<tr><th></th><th>(&#8594; OrderItems.ItemID)</th><th>(&#8594; Beverages.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>45.0</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>15.0</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>30.0</td></tr>
+<tr><td>4</td><td>3</td><td>4</td><td>20.0</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>10.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">EmployeeOrders</span></h2><table><thead>
+<tr><th>EmpID</th><th>OrderID</th><th><span style="color:#990000"><span style="color:#990000">Role</span></span></th></tr>
+<tr><th>(&#8594; Employees.ID)</th><th>(&#8594; Orders.OrderID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#990000">Sommelier</span></td></tr>
+<tr><td>2</td><td>2</td><td><span style="color:#990000">Sommelier</span></td></tr>
+<tr><td>1</td><td>3</td><td><span style="color:#990000">Bartender</span></td></tr>
+<tr><td>2</td><td>4</td><td><span style="color:#990000">Bartender</span></td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

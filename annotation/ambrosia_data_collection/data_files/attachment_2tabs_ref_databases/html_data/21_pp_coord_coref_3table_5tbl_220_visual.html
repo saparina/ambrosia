@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">SocialWorkers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Salary</th><th>YearsOfExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>65000.0</td><td>10</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>67000.0</td><td>8</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>32</td><td>70000.0</td><td>9</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>25</td><td>60000.0</td><td>5</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>35</td><td>75000.0</td><td>12</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Counselors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Salary</th><th>YearsOfExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike White</td><td>40</td><td>80000.0</td><td>15</td></tr>
+<tr><td>2</td><td>Emma Black</td><td>38</td><td>78000.0</td><td>13</td></tr>
+<tr><td>3</td><td>Paul Red</td><td>36</td><td>72000.0</td><td>10</td></tr>
+<tr><td>4</td><td>Rachel Blue</td><td>31</td><td>77000.0</td><td>8</td></tr>
+<tr><td>5</td><td>Tom Gray</td><td>34</td><td>79000.0</td><td>11</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Areas</span></h2><table><thead>
+<tr><th>AreaID</th><th><span style="color:#006600">AreaName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">East End</span></td></tr>
+<tr><td>2</td><td>West Side</td></tr>
+<tr><td>3</td><td>North Town</td></tr>
+<tr><td>4</td><td>South City</td></tr>
+<tr><td>5</td><td>Central District</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>JobId</th><th>Title</th><th>Description</th><th>PostedDate</th><th>DeadlineDate</th><th>Location</th><th>Status</th><th>SocialWorkerId</th><th>CounselorId</th><th>AreaId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; SocialWorkers.ID)</th><th>(&#8594; Counselors.ID)</th><th>(&#8594; Areas.AreaID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Social Worker Position</td><td>Help children and families in need.</td><td>2022-01-01</td><td>2022-01-31</td><td>East End</td><td>Open</td><td>1</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>Counselor Position</td><td>Assist clients in overcoming personal challenges.</td><td>2022-01-02</td><td>2022-01-30</td><td>East End</td><td>Closed</td><td>None</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Social Worker Opportunity</td><td>Support vulnerable populations.</td><td>2022-01-03</td><td>2022-01-28</td><td>West Side</td><td>Filled</td><td>3</td><td>None</td><td>2</td></tr>
+<tr><td>4</td><td>Counseling Role</td><td>Guide individuals through life transitions.</td><td>2022-01-04</td><td>2022-01-27</td><td>North Town</td><td>Hiring</td><td>None</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>Social Work Career</td><td>Make a difference in the lives of others.</td><td>2022-01-05</td><td>2022-01-26</td><td>South City</td><td>In Progress</td><td>5</td><td>None</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+The task is to write SQL queries based on the provided questions in English. Questions can take the form of an instruction or command and can be ambiguous, meaning they can be interpreted in different ways. In such cases, write all possible SQL queries corresponding to different interpretations and separate each SQL query with an empty line. Do not include any explanations, and do not select extra columns beyond those requested in the question.
+
+Some example databases, questions and corresponding SQL queries are provided based on similar problems:
+
+EXAMPLES
+
+Given the following SQLite database schema:
+
+SQL_DATABASE_DUMP
+
+Answer the following:
+QUESTION
+

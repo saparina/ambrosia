@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Childrens_Book</span></h2><table><thead>
+<tr><th>ISBN</th><th>Title</th><th>Author</th><th>Genre</th><th>Illustrator</th></tr>
+</thead><tbody>
+<tr><td>9780123456789</td><td>The Adventures of Paddington Bear</td><td>Michael Bond</td><td>Fiction</td><td><span style="color:#006600">Jane Smith</span></td></tr>
+<tr><td>9780987654321</td><td>Charlotte's Web</td><td>E.B. White</td><td>Fiction</td><td>Garth Williams</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Young_Adult_Book</span></h2><table><thead>
+<tr><th>ISBN</th><th>Title</th><th>Author</th><th>Genre</th><th>Illustrator</th></tr>
+</thead><tbody>
+<tr><td>9780234567890</td><td>Harry Potter and the Philosopher's Stone</td><td>J.K. Rowling</td><td>Fantasy</td><td><span style="color:#006600">Jane Smith</span></td></tr>
+<tr><td>9780345678901</td><td>Twilight</td><td>Stephenie Meyer</td><td>Paranormal Romance</td><td>Howard Taylor</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Runtime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pulp Fiction</td><td>Quentin Tarantino</td><td>1994</td><td>154</td></tr>
+<tr><td>2</td><td>Inception</td><td>Christopher Nolan</td><td>2010</td><td>128</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>American</td></tr>
+<tr><td>2</td><td>Tom</td><td>Hardy</td><td>1977-09-15</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Cast</h2><table><thead>
+<tr><th>FilmID</th><th>ActorID</th><th>Role</th></tr>
+<tr><th>(&#8594; Movie.FilmID)</th><th>(&#8594; Actor.ActorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Frank Booth</td></tr>
+<tr><td>1</td><td>2</td><td>Butch Coolidge</td></tr>
+</tbody></table></div>
+
+<div><h2>MusicAlbum</h2><table><thead>
+<tr><th>AlbumID</th><th>Artist</th><th>AlbumTitle</th><th>ReleaseYear</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Led Zeppelin</td><td>Led Zeppelin I</td><td>1969</td><td>Rock</td></tr>
+<tr><td>2</td><td>The Beatles</td><td>Abbey Road</td><td>1969</td><td>Rock</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

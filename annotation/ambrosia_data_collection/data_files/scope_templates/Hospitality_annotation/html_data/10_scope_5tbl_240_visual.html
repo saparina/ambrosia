@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Travel_Agencies</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>WorldWide Travels</td><td>New York</td></tr>
+<tr><td>2</td><td>EuroTrip Expeditions</td><td>London</td></tr>
+<tr><td>3</td><td>Asian Adventures</td><td>Tokyo</td></tr>
+<tr><td>4</td><td>African Explorers</td><td>Cape Town</td></tr>
+<tr><td>5</td><td>Americas Discoveries</td><td>Miami</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Destinations</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">destination_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Europe</td></tr>
+<tr><td>2</td><td>Asia</td></tr>
+<tr><td>3</td><td>Africa</td></tr>
+<tr><td>4</td><td>North America</td></tr>
+<tr><td>5</td><td>South America</td></tr>
+<tr><td>6</td><td>Australia</td></tr>
+</tbody></table></div>
+
+<div><h2>Accommodations</h2><table><thead>
+<tr><th>id</th><th>accommodation_type</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hotel</td><td>300</td></tr>
+<tr><td>2</td><td>Resort</td><td>600</td></tr>
+<tr><td>3</td><td>Hostel</td><td>80</td></tr>
+<tr><td>4</td><td>Bed & Breakfast</td><td>20</td></tr>
+<tr><td>5</td><td>Villa</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Tours</h2><table><thead>
+<tr><th>id</th><th>tour_name</th><th>duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>City Tour</td><td>1</td></tr>
+<tr><td>2</td><td>Beach Vacation</td><td>7</td></tr>
+<tr><td>3</td><td>Mountain Trekking</td><td>10</td></tr>
+<tr><td>4</td><td>Cultural Experience</td><td>14</td></tr>
+<tr><td>5</td><td>Adventure Package</td><td>12</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>id</th><th>travel_agency_id</th><th>destination_id</th><th>accommodation_id</th><th>tour_id</th><th>date</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Travel_Agencies.id)</th><th>(&#8594; Destinations.id)</th><th>(&#8594; Accommodations.id)</th><th>(&#8594; Tours.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2023-06-15</td><td>3000</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2023-06-20</td><td>2500</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>3</td><td>3</td><td>2023-07-01</td><td>4000</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>4</td><td>4</td><td>2023-07-06</td><td>3500</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>5</td><td>5</td><td>2023-07-11</td><td>4500</td></tr>
+</tbody></table></div>
+
+<div><h2>Travel_Agencies_Destinations</h2><table><thead>
+<tr><th>travel_agency_id</th><th>destination_id</th></tr>
+<tr><th>(&#8594; Travel_Agencies.id)</th><th>(&#8594; Destinations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

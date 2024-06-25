@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Participants</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Position</th><th>ContactInfo</th><th>Information_Gathering_Method</th><th>Participant_Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Journalist</td><td>johndoe@example.com</td><td><span style="color:#990000">Press Conference</span></td><td>Reporter</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Activist</td><td>janesmith@example.com</td><td><span style="color:#990000">Press Conference</span></td><td><span style="color:#006600">Non-politician</span></td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>Politician</td><td>alicebrown@example.com</td><td><span style="color:#990000">Interview</span></td><td>Politician</td></tr>
+<tr><td>4</td><td>Bob Johnson</td><td>Expert</td><td>bobjohnson@example.com</td><td><span style="color:#990000">Interview</span></td><td><span style="color:#006600">Non-politician</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>PublishDate</th><th>AuthorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Election Results</td><td>The election results have been announced...</td><td>2024-03-07 23:53:27</td><td>1</td></tr>
+<tr><td>2</td><td>Environmental Policy Changes</td><td>Recent changes in environmental policy...</td><td>2024-03-07 23:53:27</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>FullName</th><th>ContactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael White</td><td>mwhite@example.com</td></tr>
+<tr><td>2</td><td>Emily Green</td><td>egreen@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>id</th><th>SourceName</th><th>TypeOfSource</th><th>URL</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Times</td><td>Newspaper</td><td>https://www.nytimes.com/</td></tr>
+<tr><td>2</td><td>CNN</td><td>News Network</td><td>https://edition.cnn.com/</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleSources</h2><table><thead>
+<tr><th>id</th><th>ArticleId</th><th>SourceId</th></tr>
+<tr><th></th><th>(&#8594; Articles.id)</th><th>(&#8594; Sources.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

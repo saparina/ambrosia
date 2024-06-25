@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Agricultural_Extension_Services</span></h2><table><thead>
+<tr><th>service_id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Soil Management Service</td><td>Helps farmers manage soil health</td></tr>
+<tr><td>2</td><td>Crop Protection Service</td><td>Assists farmers in protecting their crops from pests and diseases</td></tr>
+<tr><td>3</td><td>Livestock Management Service</td><td>Advises on best practices for livestock management</td></tr>
+<tr><td>4</td><td>Irrigation Service</td><td>Offers guidance on efficient irrigation methods</td></tr>
+<tr><td>5</td><td>Market Analysis Service</td><td>Analyzes market trends to help farmers make informed decisions</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Educational_Programs</span></h2><table><thead>
+<tr><th>program_id</th><th><span style="color:#990000">program_name</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beginning Farmer Program</td><td>Trains new farmers in basic agriculture skills</td></tr>
+<tr><td>2</td><td>Advanced Farming Techniques Program</td><td>Teaches advanced farming techniques for experienced farmers</td></tr>
+<tr><td>3</td><td>Organic Farming Program</td><td>Promotes organic farming practices</td></tr>
+<tr><td>4</td><td>Agribusiness Management Program</td><td>Equips farmers with business management skills</td></tr>
+<tr><td>5</td><td>Climate-Smart Agriculture Program</td><td>Incorporates climate change adaptation strategies in agriculture</td></tr>
+</tbody></table></div>
+
+<div><h2>Agricultural_Extension_Services_Educational_Programs</h2><table><thead>
+<tr><th>id</th><th>agricultural_extension_service_id</th><th>educational_program_id</th></tr>
+<tr><th></th><th>(&#8594; Agricultural_Extension_Services.service_id)</th><th>(&#8594; Educational_Programs.program_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td></tr>
+<tr><td>3</td><td>Forrest Gump</td><td>1994</td></tr>
+<tr><td>4</td><td>The Godfather</td><td>1972</td></tr>
+<tr><td>5</td><td>Schindler's List</td><td>1993</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank Darabont</td><td>1959-01-28</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td><td>1963-03-27</td></tr>
+<tr><td>3</td><td>Robert Zemeckis</td><td>1951-05-14</td></tr>
+<tr><td>4</td><td>Steven Spielberg</td><td>1946-12-18</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>id</th><th>genre_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Action</td></tr>
+<tr><td>3</td><td>Romance</td></tr>
+<tr><td>4</td><td>Thriller</td></tr>
+<tr><td>5</td><td>Comedy</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Morgan Freeman</td><td>1937-06-01</td></tr>
+<tr><td>2</td><td>John Travolta</td><td>1954-02-18</td></tr>
+<tr><td>3</td><td>Tom Hanks</td><td>1956-07-09</td></tr>
+<tr><td>4</td><td>Jack Nicholson</td><td>1937-04-22</td></tr>
+<tr><td>5</td><td>Kevin Spacey</td><td>1959-07-26</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>movie_id</th><th>rating</th></tr>
+<tr><th>(&#8594; Movies.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>8.7</td></tr>
+<tr><td>2</td><td>8.9</td></tr>
+<tr><td>3</td><td>8.8</td></tr>
+<tr><td>4</td><td>8.5</td></tr>
+<tr><td>5</td><td>8.7</td></tr>
+</tbody></table></div>
+
+<div><h2>Theater_Plays</h2><table><thead>
+<tr><th>theater_play_id</th><th>play_title</th><th>total_length_id</th><th>number_of_acts_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Total_Length.theater_play_id)</th><th>(&#8594; Number_Of_Acts.theater_play_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>Macbeth</td><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>Othello</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>King Lear</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>Antony and Cleopatra</td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Number_Of_Acts</span></h2><table><thead>
+<tr><th>theater_play_id</th><th>number_of_acts</th></tr>
+<tr><th>(&#8594; Theater_Plays.theater_play_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>4</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Total_Length</span></h2><table><thead>
+<tr><th>theater_play_id</th><th>total_length</th></tr>
+<tr><th>(&#8594; Theater_Plays.theater_play_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>142</td></tr>
+<tr><td>2</td><td>154</td></tr>
+<tr><td>3</td><td>140</td></tr>
+<tr><td>4</td><td>195</td></tr>
+<tr><td>5</td><td>140</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

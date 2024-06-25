@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Photos</span></h2><table><thead>
+<tr><th>id</th><th>Photo</th><th>Article</th><th>Caption</th><th>Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>image1</td><td><span style="color:#006600">The world's largest robots</span></td><td>Robotics competition</td><td>2023-04-01 18:30</td></tr>
+<tr><td>2</td><td>image2</td><td>Natural disasters</td><td>Flood aftermath</td><td>2023-04-02 17:45</td></tr>
+<tr><td>3</td><td>image3</td><td>Technology advancements</td><td>New smartphone launch</td><td>2023-04-03 16:00</td></tr>
+<tr><td>4</td><td>image4</td><td>Political events</td><td>Presidential inauguration</td><td>2023-04-04 15:15</td></tr>
+<tr><td>5</td><td>image5</td><td>Entertainment news</td><td>Award ceremony winners</td><td>2023-04-05 19:30</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Videos</span></h2><table><thead>
+<tr><th>id</th><th>Video</th><th>Article</th><th>Title</th><th>Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>video1</td><td><span style="color:#006600">The world's largest robots</span></td><td>Industrial robot showcase</td><td>2023-04-01 18:30</td></tr>
+<tr><td>2</td><td>video2</td><td>Natural disasters</td><td>Tsunami warning system</td><td>2023-04-02 17:45</td></tr>
+<tr><td>3</td><td>video3</td><td>Technology advancements</td><td>Revolutionary AI breakthrough</td><td>2023-04-03 16:00</td></tr>
+<tr><td>4</td><td>video4</td><td>Political events</td><td>Historic peace agreement</td><td>2023-04-04 15:15</td></tr>
+<tr><td>5</td><td>video5</td><td>Entertainment news</td><td>Red carpet highlights</td><td>2023-04-05 19:30</td></tr>
+</tbody></table></div>
+
+<div><h2>Journalists</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Email</th><th>PhoneNumber</th><th>Experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td><td>+1234567890</td><td>5</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td><td>+0987654321</td><td>10</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael.johnson@example.com</td><td>+1357924680</td><td>7</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily.davis@example.com</td><td>+2468135790</td><td>3</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david.brown@example.com</td><td>+3625813479</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Description</th><th>EditorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Journalists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Global News Daily</td><td>Breaking news from around the world</td><td>1</td></tr>
+<tr><td>2</td><td>Tech Insider</td><td>Latest technology trends and innovations</td><td>2</td></tr>
+<tr><td>3</td><td>Politics Today</td><td>In-depth analysis of political issues</td><td>3</td></tr>
+<tr><td>4</td><td>Celebrity Weekly</td><td>All the latest celebrity gossip</td><td>4</td></tr>
+<tr><td>5</td><td>Environment Watch</td><td>News on environmental issues and conservation efforts</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Content</th><th>PublisherId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Publications.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Climate change is a major concern...</td><td>1</td></tr>
+<tr><td>2</td><td>SpaceX successfully launches new rocket...</td><td>2</td></tr>
+<tr><td>3</td><td>Election results could impact global politics...</td><td>3</td></tr>
+<tr><td>4</td><td>Hollywood star gets married in lavish ceremony...</td><td>4</td></tr>
+<tr><td>5</td><td>Coral reef restoration project makes progress...</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

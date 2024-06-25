@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Education</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#1430b2">Degree</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Doctor of Dental Surgery</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">Master of Science in Dentistry</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Description</th><th>Location</th><th>CompanyName</th><th>PostedDate</th><th>FullTimePartTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Orthodontist</td><td>An experienced Orthodontist required.</td><td>New York</td><td>ABCD Inc</td><td>2024-03-13 12:00:50</td><td>Full Time</td></tr>
+<tr><td>2</td><td>General Dentist</td><td>A General Dentist needed for our clinic.</td><td>California</td><td>XYZ Clinic</td><td>2024-03-13 12:00:50</td><td>Full Time</td></tr>
+<tr><td>3</td><td>Periodontist</td><td>A qualified Periodontist wanted for our hospital.</td><td>Texas</td><td>LMN Hospital</td><td>2024-03-13 12:00:50</td><td>Full Time</td></tr>
+<tr><td>4</td><td>Dental Assistant</td><td>Experienced Dental Assistants needed.</td><td>Florida</td><td>OPQ Clinic</td><td>2024-03-13 12:00:50</td><td>Part Time</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>PhoneNumber</th><th>HireDate</th><th>JobID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Jobs.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@gmail.com</td><td>1234567890</td><td>2024-03-13 12:00:50</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@yahoo.com</td><td>9876543210</td><td>2024-03-13 12:00:50</td><td>2</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>mike@outlook.com</td><td>5555555555</td><td>2024-03-13 12:00:50</td><td>3</td></tr>
+<tr><td>4</td><td>Emma Williams</td><td>emma@hotmail.com</td><td>7777777777</td><td>2024-03-13 12:00:50</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Dentists</span></h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th><span style="color:#186e16">DentalSpecialty</span></th><th>JoiningDate</th><th>EducationID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Education.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td><span style="color:#186e16">Orthodontist</span></td><td>2024-03-13 12:00:50</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td><span style="color:#186e16">Orthodontist</span></td><td>2024-03-13 12:00:50</td><td>2</td></tr>
+<tr><td>3</td><td>Charlie</td><td>Williams</td><td>Periodontist</td><td>2024-03-13 12:00:50</td><td>1</td></tr>
+<tr><td>4</td><td>David</td><td>Brown</td><td>Periodontist</td><td>2024-03-13 12:00:50</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

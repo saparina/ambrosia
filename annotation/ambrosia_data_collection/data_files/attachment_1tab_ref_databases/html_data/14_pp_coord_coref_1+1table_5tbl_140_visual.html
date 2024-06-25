@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1998-06-15</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2000-10-20</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>1997-02-25</td></tr>
+<tr><td>4</td><td>Emma</td><td>Williams</td><td>2002-04-10</td></tr>
+<tr><td>5</td><td>David</td><td>Martinez</td><td>1999-08-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>SubjectTaught</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>White</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Black</td><td>Physics</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Green</td><td>Chemistry</td></tr>
+<tr><td>4</td><td>Prof.</td><td>Red</td><td>Biology</td></tr>
+<tr><td>5</td><td>Miss</td><td>Blue</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>ClassID</th><th>ClassName</th><th>RoomNumber</th><th>StartTime</th><th>EndTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algebra I</td><td>101</td><td>08:00:00</td><td>09:00:00</td></tr>
+<tr><td>2</td><td>Calculus II</td><td>201</td><td>10:00:00</td><td>11:00:00</td></tr>
+<tr><td>3</td><td>General Chemistry</td><td>301</td><td>12:00:00</td><td>01:00:00</td></tr>
+<tr><td>4</td><td>Organic Chemistry</td><td>302</td><td>02:00:00</td><td>03:00:00</td></tr>
+<tr><td>5</td><td>Advanced Physics</td><td>401</td><td>04:00:00</td><td>05:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Laboratories</h2><table><thead>
+<tr><th>LabID</th><th>LabName</th><th>Location</th><th>HasEquipment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main Science Lab</td><td>Room 100</td><td>1</td></tr>
+<tr><td>2</td><td>Computer Lab</td><td>Room 200</td><td>0</td></tr>
+<tr><td>3</td><td>Art Lab</td><td>Room 300</td><td>1</td></tr>
+<tr><td>4</td><td>Music Lab</td><td>Room 400</td><td>0</td></tr>
+<tr><td>5</td><td>Language Lab</td><td>Room 500</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Purchases</span></h2><table><thead>
+<tr><th>PurchaseID</th><th>LabID</th><th><span style="color:#006600">ItemName</span></th><th>Quantity</th><th>Cost</th></tr>
+<tr><th></th><th>(&#8594; Laboratories.LabID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">Microscope</span></td><td>1</td><td>500.0</td></tr>
+<tr><td>2</td><td>1</td><td>Beakers</td><td>50</td><td>2.5</td></tr>
+<tr><td>3</td><td>2</td><td>Headphones</td><td>10</td><td>10.0</td></tr>
+<tr><td>4</td><td>3</td><td>Paintbrushes</td><td>20</td><td>3.0</td></tr>
+<tr><td>5</td><td>4</td><td>Guitars</td><td>5</td><td>300.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">LaboratoryEssentials</span></h2><table><thead>
+<tr><th>EssentialID</th><th>LabID</th><th><span style="color:#990000"><span style="color:#990000">Category</span></span></th><th>Description</th><th>Laboratory_Essentials</th><th>Date_of_purchase</th></tr>
+<tr><th></th><th>(&#8594; Laboratories.LabID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#990000">Lab Equipment</span></td><td>Glassware and chemicals</td><td>Flasks, Beakers, Test Tubes, etc.</td><td>January 2023</td></tr>
+<tr><td>2</td><td>1</td><td><span style="color:#990000">Lab Equipment</span></td><td>Scientific instruments</td><td>Microscopes, Balances, Spectrophotometers, etc.</td><td>February 2023</td></tr>
+<tr><td>3</td><td>1</td><td><span style="color:#990000">Safety Gear</span></td><td>Personal protective equipment</td><td>Gloves, Safety goggles, Lab coats, etc.</td><td>January 2023</td></tr>
+<tr><td>4</td><td>2</td><td><span style="color:#990000">Lab Equipment</span></td><td>Computers and peripherals</td><td>Desktops, Monitors, Keyboards, etc.</td><td>March 2023</td></tr>
+<tr><td>5</td><td>3</td><td><span style="color:#990000">Safety Gear</span></td><td>Fire prevention and control equipment</td><td>Fire extinguishers, Fire blankets, Smoke detectors, etc.</td><td>April 2023</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

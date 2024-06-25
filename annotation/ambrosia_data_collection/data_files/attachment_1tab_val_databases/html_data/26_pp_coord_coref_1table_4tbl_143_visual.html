@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>phoneNumber</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>+123456789</td><td>john.doe@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>id</th><th>guestId</th><th>roomId</th><th>checkInDate</th><th>checkOutDate</th><th>totalCost</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th>(&#8594; Rooms.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td><td>2022-01-01</td><td>2022-01-07</td><td>500.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>id</th><th>roomType</th><th>pricePerNight</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Standard</td><td>100.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FunctionRooms</span></h2><table><thead>
+<tr><th>id</th><th>functionRoomName</th><th>seatingCapacity</th><th>cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Ballroom</span></td><td><span style="color:#006600">200</span></td><td>1000.0</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Ballroom</span></td><td>300</td><td>1500.0</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Green Room</span></td><td><span style="color:#006600">200</span></td><td>800.0</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Green Room</span></td><td>300</td><td>1200.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

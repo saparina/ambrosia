@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>Name</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountID</th><th>CustomerID</th><th>AccountType</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Checking</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>Savings</td><td>500.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Assets</h2><table><thead>
+<tr><th>AssetID</th><th>AccountID</th><th>AssetName</th><th>AssetValue</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Stock A</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>Bond B</td><td>500.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Funds</span></h2><table><thead>
+<tr><th>FundID</th><th><span style="color:#990000"><span style="color:#990000">FundStructure</span></span></th><th>MarketShare</th><th>TotalAssets</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Hedge Fund</span></td><td>2%</td><td>10000.0</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Hedge Fund</span></td><td>5%</td><td>20000.0</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Mutual Fund</span></td><td>2%</td><td>15000.0</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Mutual Fund</span></td><td>3%</td><td>25000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>FromAccountID</th><th>ToAccountID</th><th>Amount</th><th>TransactionDate</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>-250.0</td><td>2021-10-01</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>200.0</td><td>2021-10-02</td></tr>
+<tr><td>3</td><td>1</td><td>2</td><td>-200.0</td><td>2021-10-03</td></tr>
+<tr><td>4</td><td>2</td><td>1</td><td>-250.0</td><td>2021-10-04</td></tr>
+<tr><td>5</td><td>1</td><td>2</td><td>100.0</td><td>2021-10-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Investments</span></h2><table><thead>
+<tr><th>InvestmentID</th><th>AccountID</th><th>FundID</th><th><span style="color:#006600">Shares</span></th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th>(&#8594; Funds.FundID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>20</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>5</td><td>1</td><td>1</td><td>15</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

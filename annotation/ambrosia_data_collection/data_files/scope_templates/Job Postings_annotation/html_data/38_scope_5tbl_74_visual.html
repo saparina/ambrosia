@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Schools</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>University A</td><td>City X</td></tr>
+<tr><td>2</td><td>High School B</td><td>City Y</td></tr>
+<tr><td>3</td><td>College C</td><td>City Z</td></tr>
+<tr><td>4</td><td>Primary School D</td><td>City W</td></tr>
+<tr><td>5</td><td>Technical School E</td><td>City V</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Educational_Jobs</span></h2><table><thead>
+<tr><th>job_id</th><th><span style="color:#990000">title</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Teacher</td><td>A teacher who teaches various subjects.</td></tr>
+<tr><td>2</td><td>Principal</td><td>The principal manages a school.</td></tr>
+<tr><td>3</td><td>Counselor</td><td>A counselor provides guidance to students.</td></tr>
+<tr><td>4</td><td>Librarian</td><td>A librarian manages library resources.</td></tr>
+<tr><td>5</td><td>IT Specialist</td><td>An IT specialist maintains computer systems.</td></tr>
+</tbody></table></div>
+
+<div><h2>School_Employees</h2><table><thead>
+<tr><th>employee_id</th><th>first_name</th><th>last_name</th><th>job_title</th><th>school_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Schools.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Teacher</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Principal</td><td>2</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>Counselor</td><td>3</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>Librarian</td><td>4</td></tr>
+<tr><td>5</td><td>Tom</td><td>Black</td><td>IT Specialist</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs_at_School</h2><table><thead>
+<tr><th>school_job_id</th><th>school_id</th><th>job_id</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th>(&#8594; Schools.id)</th><th>(&#8594; Educational_Jobs.job_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-08-01</td><td>None</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2021-08-01</td><td>None</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>2021-08-01</td><td>None</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>2021-08-01</td><td>None</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>2021-08-01</td><td>None</td></tr>
+<tr><td>8</td><td>4</td><td>5</td><td>None</td><td>None</td></tr>
+<tr><td>9</td><td>5</td><td>5</td><td>None</td><td>None</td></tr>
+<tr><td>10</td><td>2</td><td>5</td><td>None</td><td>None</td></tr>
+<tr><td>11</td><td>3</td><td>5</td><td>None</td><td>None</td></tr>
+<tr><td>12</td><td>1</td><td>5</td><td>None</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee_Education</h2><table><thead>
+<tr><th>employee_education_id</th><th>employee_id</th><th>education_level</th><th>major</th><th>degree_year</th></tr>
+<tr><th></th><th>(&#8594; School_Employees.employee_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>PhD</td><td>Mathematics</td><td>2019</td></tr>
+<tr><td>2</td><td>1</td><td>Master</td><td>Physics</td><td>2017</td></tr>
+<tr><td>3</td><td>2</td><td>Doctorate</td><td>English Literature</td><td>2020</td></tr>
+<tr><td>4</td><td>2</td><td>Bachelor</td><td>History</td><td>2016</td></tr>
+<tr><td>5</td><td>3</td><td>Master</td><td>Psychology</td><td>2018</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

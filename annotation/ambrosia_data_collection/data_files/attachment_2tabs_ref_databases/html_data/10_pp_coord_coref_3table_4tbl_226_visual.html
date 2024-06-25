@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Author1</td><td>a1@example.com</td></tr>
+<tr><td>2</td><td>Author2</td><td>a2@example.com</td></tr>
+<tr><td>3</td><td>Author3</td><td>a3@example.com</td></tr>
+<tr><td>4</td><td>Author4</td><td>a4@example.com</td></tr>
+<tr><td>5</td><td>Author5</td><td>a5@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>published_date</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article1</td><td>Content of Article1</td><td>2021-08-01</td><td>1</td></tr>
+<tr><td>2</td><td>Article2</td><td>Content of Article2</td><td>2021-09-01</td><td>2</td></tr>
+<tr><td>3</td><td>Article3</td><td>Content of Article3</td><td>2021-10-01</td><td>3</td></tr>
+<tr><td>4</td><td>Article4</td><td>Content of Article4</td><td>2021-11-01</td><td>4</td></tr>
+<tr><td>5</td><td>Article5</td><td>Content of Article5</td><td>2021-12-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Donors</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Donor1</td><td>LastName1</td><td>d1@example.com</td></tr>
+<tr><td>2</td><td>Donor2</td><td>LastName2</td><td>d2@example.com</td></tr>
+<tr><td>3</td><td>Donor3</td><td>LastName3</td><td>d3@example.com</td></tr>
+<tr><td>4</td><td>Donor4</td><td>LastName4</td><td>d4@example.com</td></tr>
+<tr><td>5</td><td>Donor5</td><td>LastName5</td><td>d5@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">DonationRecords</span></h2><table><thead>
+<tr><th>id</th><th>donor_id</th><th>article_id</th><th>amount</th></tr>
+<tr><th></th><th>(&#8594; Donors.id)</th><th>(&#8594; Articles.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>30000</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>10000</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>5000</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>7000</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>6000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Grants</span></h2><table><thead>
+<tr><th>id</th><th>grant_name</th><th><span style="color:#006600">funding_amount</span></th><th>awarded_to_articles</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grants1</td><td><span style="color:#006600">30000</span></td><td>1</td></tr>
+<tr><td>2</td><td>Grants2</td><td>50000</td><td>2</td></tr>
+<tr><td>3</td><td>Grants3</td><td>40000</td><td>3</td></tr>
+<tr><td>4</td><td>Grants4</td><td>20000</td><td>4</td></tr>
+<tr><td>5</td><td>Grants5</td><td>35000</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">GrantFundings</span></h2><table><thead>
+<tr><th>id</th><th>grant_id</th><th>article_id</th><th>amount</th></tr>
+<tr><th></th><th>(&#8594; Grants.id)</th><th>(&#8594; Articles.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>30000</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>10000</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>5000</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>7000</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>6000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

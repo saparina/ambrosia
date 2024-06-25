@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Blockbusters</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseYear</th><th>director</th><th>budget</th><th>boxOffice</th><th>film_festival_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Festivals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Avatar</td><td>2009</td><td>James Cameron</td><td>237.0</td><td>2747.0</td><td>1</td></tr>
+<tr><td>2</td><td>Titanic</td><td>1997</td><td>James Cameron</td><td>200.0</td><td>2202.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Indies</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseYear</th><th>director</th><th>budget</th><th>gross</th><th>film_festival_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Festivals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Little Miss Sunshine</td><td>2006</td><td>Jonathan Dayton</td><td>8.0</td><td>60.0</td><td>1</td></tr>
+<tr><td>2</td><td>Juno</td><td>2007</td><td>Jason Reitman</td><td>6.0</td><td>231.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Festivals</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Sundance Film Festival</span></td></tr>
+<tr><td>2</td><td>Cannes Film Festival</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthDate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quentin Tarantino</td><td>1963-03-27</td><td>American</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td><td>1970-07-30</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>dateOfBirth</th><th>gender</th><th>ethnicity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>Male</td><td>Italian/German/Irish</td></tr>
+<tr><td>2</td><td>Jennifer Lawrence</td><td>1990-08-15</td><td>Female</td><td>England</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>actor_id</th><th>film_id</th><th>characterName</th></tr>
+<tr><th>(&#8594; Actors.id)</th><th>(&#8594; Action_Films.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Dom Cobb</td></tr>
+<tr><td>2</td><td>1</td><td>Rachel McDougall</td></tr>
+<tr><td>1</td><td>2</td><td>Howard St John</td></tr>
+<tr><td>2</td><td>2</td><td>Harvey Dent</td></tr>
+</tbody></table></div>
+
+<div><h2>Action_Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseYear</th><th>genre</th><th>runtime</th><th>language</th><th>film_festival_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Festivals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Action/Science Fiction</td><td>148</td><td>English</td><td>1</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>2008</td><td>Action/Crime</td><td>152</td><td>English</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

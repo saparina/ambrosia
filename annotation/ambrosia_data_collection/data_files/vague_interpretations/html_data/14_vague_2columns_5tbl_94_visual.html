@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Film</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>director</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>Frank Darabont</td><td>Drama</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>Quentin Tarantino</td><td>Crime</td></tr>
+<tr><td>3</td><td>Schindler's List</td><td>1993</td><td>Steven Spielberg</td><td>Biographical Drama</td></tr>
+<tr><td>4</td><td>Forrest Gump</td><td>1994</td><td>Robert Zemeckis</td><td>Romantic Comedy-drama</td></tr>
+<tr><td>5</td><td>Inception</td><td>2010</td><td>Christopher Nolan</td><td>Action Sci-Fi</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td><td>1956-07-09</td><td>American</td></tr>
+<tr><td>2</td><td>Brad Pitt</td><td>1963-12-18</td><td>American</td></tr>
+<tr><td>3</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>American</td></tr>
+<tr><td>4</td><td>Morgan Freeman</td><td>1937-06-01</td><td>American</td></tr>
+<tr><td>5</td><td>Kevin Spacey</td><td>1959-07-26</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>id</th><th>actor_id</th><th>role_name</th><th>film_id</th></tr>
+<tr><th></th><th>(&#8594; Actor.id)</th><th></th><th>(&#8594; Film.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Andrew Beckett</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>Jared Vennett</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>Chris Cotton</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>Daniel Hillard</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>Philippe Petit</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Cinematographer</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Roger Deakins</td><td>1949-05-24</td><td>English</td></tr>
+<tr><td>2</td><td>Emmanuel Lubezki</td><td>1964-12-30</td><td>Mexican</td></tr>
+<tr><td>3</td><td>Wally Pfister</td><td>1961-02-21</td><td>American</td></tr>
+<tr><td>4</td><td>Janusz Kaminski</td><td>1959-08-05</td><td>Polish</td></tr>
+<tr><td>5</td><td>Hoyte Van Hoytema</td><td>1961-11-24</td><td>Swedish</td></tr>
+</tbody></table></div>
+
+<div><h2>Camera</h2><table><thead>
+<tr><th>id</th><th>camera_type</th><th>resolution</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ARRI Alexa</td><td>4K</td></tr>
+<tr><td>2</td><td>Red Epic Dragon</td><td>5K</td></tr>
+<tr><td>3</td><td>Canon C300 Mark II</td><td>4K</td></tr>
+<tr><td>4</td><td>Sony F55</td><td>4K</td></tr>
+<tr><td>5</td><td>Blackmagic Ursa Mini 4.6K</td><td>4.6K</td></tr>
+</tbody></table></div>
+
+<div><h2>ShotList</h2><table><thead>
+<tr><th>id</th><th>cinematographer_id</th><th>shot_description</th><th>camera_id</th></tr>
+<tr><th></th><th>(&#8594; Cinematographer.id)</th><th></th><th>(&#8594; Camera.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Establishing shot of New York City skyline</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>Medium close-up of main character walking down street</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>Long shot of characters on rooftop at night</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>Close-up of characters discussing plans</td><td>4</td></tr>
+<tr><td>5</td><td>3</td><td>Wide shot of car chase through city streets</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmReviews</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">critic_rating</span></th><th><span style="color:#990000">audience_rating</span></th><th>film_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Film.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>9.0</td><td>8.5</td><td>1</td></tr>
+<tr><td>2</td><td>8.5</td><td>8.0</td><td>2</td></tr>
+<tr><td>3</td><td>8.0</td><td>7.5</td><td>3</td></tr>
+<tr><td>4</td><td>7.5</td><td>7.0</td><td>4</td></tr>
+<tr><td>5</td><td>8.5</td><td>8.0</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Creator</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Tom Johnson</td><td>tomjohnson@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Category</h2><table><thead>
+<tr><th>id</th><th>category_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Current Affairs</td></tr>
+<tr><td>2</td><td>Politics</td></tr>
+<tr><td>3</td><td>History</td></tr>
+<tr><td>4</td><td>Culture</td></tr>
+<tr><td>5</td><td>Technology</td></tr>
+</tbody></table></div>
+
+<div><h2>Journalist</h2><table><thead>
+<tr><th>id</th><th>journalist_name</th><th>email</th><th>documentary_id</th><th>role</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Documentary.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Lee</td><td>mlee@example.com</td><td>1</td><td>Reporter</td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>edavis@example.com</td><td>2</td><td>Production Assistant</td></tr>
+<tr><td>3</td><td>David Williams</td><td>dwilliams@example.com</td><td>3</td><td>Interviewer</td></tr>
+<tr><td>4</td><td>Rachel Thompson</td><td>rthompson@example.com</td><td>4</td><td>Researcher</td></tr>
+<tr><td>5</td><td>Kevin Wright</td><td>kwright@example.com</td><td>5</td><td>Presenter</td></tr>
+</tbody></table></div>
+
+<div><h2>Documentary</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>producer_id</th><th>category_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Creator.id)</th><th>(&#8594; Category.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Rise of Fascism</td><td>2019</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Inside North Korea</td><td>2018</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>Revolutionizing Technology</td><td>2020</td><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>The Art of War</td><td>2017</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>Climate Change Crisis</td><td>2021</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-06-13</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1987-07-21</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>Balance</th><th>InterestRate</th><th>OpenDate</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Customers.CustomerID)</th></tr>
+</thead><tbody>
+<tr><td>1001</td><td>1000.0</td><td>5.0</td><td>2021-06-20</td><td>1</td></tr>
+<tr><td>1002</td><td>500.0</td><td>3.0</td><td>2021-06-20</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>Amount</th><th>Type</th><th>AccountNumber</th><th>Date</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Accounts.AccountNumber)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>500.0</td><td>Credit</td><td>1001</td><td>2021-06-20 10:00:00</td></tr>
+<tr><td>2</td><td>-200.0</td><td>Debit</td><td>1001</td><td>2021-06-20 11:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Financial_Swaps</span></h2><table><thead>
+<tr><th>SwapID</th><th><span style="color:#990000"><span style="color:#990000">CurrencySwap</span></span></th><th>InterestRateSwap</th><th>OtherValue</th><th>StartDate</th><th>EndDate</th><th>Bank</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Banks.BankName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Currency Swap</span></td><td>Fixed vs Floating</td><td>Payment</td><td>2021-06-20</td><td>2022-06-20</td><td>Royal Bank</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Currency Swap</span></td><td>Floating vs Fixed</td><td>Payment</td><td>2021-06-20</td><td>2022-06-20</td><td>Another Bank</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Interest Rate Swap</span></td><td>Fixed vs Floating</td><td>Payment</td><td>2021-06-20</td><td>2022-06-20</td><td>Royal Bank</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Interest Rate Swap</span></td><td>Floating vs Fixed</td><td>Payment</td><td>2021-06-20</td><td>2022-06-20</td><td>Another Bank</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Banks</span></h2><table><thead>
+<tr><th>BankName</th><th><span style="color:#006600">Address</span></th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>Royal Bank</td><td><span style="color:#006600">New York, USA</span></td><td>+1-212-123-4567</td></tr>
+<tr><td>Another Bank</td><td>London, UK</td><td>+44-20-123-4567</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

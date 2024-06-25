@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-06-30</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>1992-07-15</td></tr>
+<tr><td>4</td><td>Emma</td><td>Williams</td><td>1997-08-20</td></tr>
+<tr><td>5</td><td>David</td><td>Martin</td><td>1990-09-25</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Accounts</span></h2><table><thead>
+<tr><th>AccountID</th><th>CustomerID</th><th><span style="color:#006600">Product</span></th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">Checking</span></td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>Savings</td><td>500.0</td></tr>
+<tr><td>3</td><td>3</td><td>Money Market</td><td>2500.0</td></tr>
+<tr><td>4</td><td>4</td><td>Premium Checking</td><td>5000.0</td></tr>
+<tr><td>5</td><td>5</td><td>Certificates of Deposit</td><td>10000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountID</th><th>Amount</th><th>Type</th><th>TransactionDate</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>500.0</td><td>Deposit</td><td>2024-03-13 20:52:19</td></tr>
+<tr><td>2</td><td>2</td><td>-100.0</td><td>Withdrawal</td><td>2024-03-13 20:52:19</td></tr>
+<tr><td>3</td><td>3</td><td>200.0</td><td>Deposit</td><td>2024-03-13 20:52:19</td></tr>
+<tr><td>4</td><td>4</td><td>-300.0</td><td>Withdrawal</td><td>2024-03-13 20:52:19</td></tr>
+<tr><td>5</td><td>5</td><td>2500.0</td><td>Deposit</td><td>2024-03-13 20:52:19</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Fees</span></h2><table><thead>
+<tr><th>FeeID</th><th>AccountID</th><th>CardFee</th><th>MonthlyFee</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5.0</td><td>10.0</td></tr>
+<tr><td>2</td><td>2</td><td>3.0</td><td>5.0</td></tr>
+<tr><td>3</td><td>3</td><td>10.0</td><td>20.0</td></tr>
+<tr><td>4</td><td>4</td><td>20.0</td><td>30.0</td></tr>
+<tr><td>5</td><td>5</td><td>15.0</td><td>40.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">InterestRates</span></h2><table><thead>
+<tr><th>RateID</th><th>AccountID</th><th>MonthlyInterestRate</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>0.01</td></tr>
+<tr><td>2</td><td>2</td><td>0.02</td></tr>
+<tr><td>3</td><td>3</td><td>0.03</td></tr>
+<tr><td>4</td><td>4</td><td>0.04</td></tr>
+<tr><td>5</td><td>5</td><td>0.05</td></tr>
+</tbody></table></div>
+
+<div><h2>Products</h2><table><thead>
+<tr><th>ProductID</th><th>Name</th><th>Description</th><th>MonthlyInterestRate</th><th>CardFee</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Premium Credit Card</td><td>A high interest credit card.</td><td>0.02</td><td>5.0</td></tr>
+<tr><td>2</td><td>Regular Credit Card</td><td>A standard credit card.</td><td>0.01</td><td>3.0</td></tr>
+<tr><td>3</td><td>Business Loan</td><td>For business use only.</td><td>0.03</td><td>10.0</td></tr>
+<tr><td>4</td><td>Personal Loan</td><td>Low interest personal loan.</td><td>0.04</td><td>20.0</td></tr>
+<tr><td>5</td><td>Student Loan</td><td>For students only.</td><td>0.05</td><td>15.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

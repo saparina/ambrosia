@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Author</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Shakespeare</span></td></tr>
+<tr><td>2</td><td>Arthur Miller</td></tr>
+<tr><td>3</td><td>Neil Simon</td></tr>
+<tr><td>4</td><td>Aphra Behn</td></tr>
+<tr><td>5</td><td>Oscar Wilde</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Theatrical_Form</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">form</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Comedy</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Tragedy</span></td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Melodrama</td></tr>
+<tr><td>5</td><td>Farce</td></tr>
+</tbody></table></div>
+
+<div><h2>Play</h2><table><thead>
+<tr><th>id</th><th>title</th><th>authorId</th><th>theatricalFormId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Author.id)</th><th>(&#8594; Theatrical_Form.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Romeo and Juliet</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Death of a Salesman</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>The Odd Couple</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>Othello</td><td>1</td><td>2</td></tr>
+<tr><td>5</td><td>Aphra Behn's Comedy</td><td>4</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>birthYear</th><th>playId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Play.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1960</td><td>2</td></tr>
+<tr><td>2</td><td>John</td><td>Burton</td><td>1987</td><td>3</td></tr>
+<tr><td>3</td><td>Julia</td><td>Roberts</td><td>1990</td><td>4</td></tr>
+<tr><td>4</td><td>Samuel</td><td>L. Jackson</td><td>1989</td><td>1</td></tr>
+<tr><td>5</td><td>Denzel</td><td>Washington</td><td>1987</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Character</h2><table><thead>
+<tr><th>id</th><th>characterName</th><th>playId</th><th>actorId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Play.id)</th><th>(&#8594; Actor.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cassius</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>Titus Andronicus</td><td>1</td><td>4</td></tr>
+<tr><td>3</td><td>Blanche DuBois</td><td>4</td><td>2</td></tr>
+<tr><td>4</td><td>Felix Unger</td><td>3</td><td>3</td></tr>
+<tr><td>5</td><td>Macbeth</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>id</th><th>roleDescription</th><th>characterId</th><th>actorId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Character.id)</th><th>(&#8594; Actor.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Friendly neighbourhood superhero</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Rich business man</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Kind old lady</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Lead detective</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Brave warrior</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

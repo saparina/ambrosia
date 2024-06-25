@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Aviation_Maintenance_Technicians</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>License_Number</th><th>Years_of_experience</th><th>Specialization</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>ABC123</td><td><span style="color:#006600">10</span></td><td>Mechanic</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>XYZ789</td><td>6</td><td>Electrician</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Flight_Attendants</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>License_number</th><th>Years_of_experience</th><th>Languages_spoken</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mary Johnson</td><td>DEF456</td><td><span style="color:#006600">10</span></td><td>English, Spanish</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>GHI780</td><td>8</td><td>English, French</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>id</th><th>Model</th><th>Manufacturer</th><th>Year_built</th><th>Current_status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 777</td><td>Boeing</td><td>2000</td><td>In Service</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>Airbus</td><td>2007</td><td>Retired</td></tr>
+</tbody></table></div>
+
+<div><h2>Runways</h2><table><thead>
+<tr><th>id</th><th>Location</th><th>Length</th><th>Width</th><th>Surface_type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York JFK</td><td>10000.0</td><td>200.0</td><td>Concrete</td></tr>
+<tr><td>2</td><td>Los Angeles LAX</td><td>12000.0</td><td>250.0</td><td>Asphalt</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>Origin_Airport</th><th>Destination_airport</th><th>Departure_time</th><th>Arrival_time</th><th>Aircraft_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Aircrafts.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York JFK</td><td>Los Angeles LAX</td><td>2022-01-01 10:00:00</td><td>2022-01-01 15:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Los Angeles LAX</td><td>New York JFK</td><td>2022-01-02 00:00:00</td><td>2022-01-02 05:00:00</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Maintenance_Records</h2><table><thead>
+<tr><th>id</th><th>Technician_name</th><th>Technician_years_experience</th><th>Aircraft_model</th><th>Date_of_maintenance</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>10</td><td>Boeing 777</td><td>2022-01-01</td><td>Routine inspection</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>6</td><td>Airbus A380</td><td>2022-01-02</td><td>Engine overhaul</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

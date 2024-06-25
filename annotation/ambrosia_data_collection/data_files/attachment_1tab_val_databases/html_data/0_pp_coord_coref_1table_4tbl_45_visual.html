@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Employees</span></h2><table><thead>
+<tr><th>emp_id</th><th>first_name</th><th>last_name</th><th>position</th><th>Board_Member</th><th>Organization</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>CEO</td><td><span style="color:#990000">Executive Manager</span></td><td><span style="color:#006600">Global Corp</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>CFO</td><td><span style="color:#990000">Executive Manager</span></td><td><span style="color:#006600">Global Corp</span></td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>COO</td><td><span style="color:#990000">Independent Director</span></td><td><span style="color:#006600">Global Corp</span></td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>CTO</td><td><span style="color:#990000">Independent Director</span></td><td>Not Global Corp</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>account_id</th><th>cust_id</th><th>balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.cust_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>5000.0</td></tr>
+<tr><td>3</td><td>3</td><td>2000.0</td></tr>
+<tr><td>4</td><td>4</td><td>3000.0</td></tr>
+<tr><td>5</td><td>5</td><td>7000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>transaction_id</th><th>account_id</th><th>amount</th><th>date</th></tr>
+<tr><th></th><th>(&#8594; Accounts.account_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100.0</td><td>2021-01-01 12:00:00</td></tr>
+<tr><td>2</td><td>1</td><td>-50.0</td><td>2021-01-02 12:00:00</td></tr>
+<tr><td>3</td><td>2</td><td>200.0</td><td>2021-01-01 13:00:00</td></tr>
+<tr><td>4</td><td>2</td><td>-100.0</td><td>2021-01-02 13:00:00</td></tr>
+<tr><td>5</td><td>3</td><td>200.0</td><td>2021-01-01 14:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

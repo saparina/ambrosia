@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Apartments</h2><table><thead>
+<tr><th>id</th><th>name</th><th>type</th><th>city</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>High-end Residential</td><td>Residential</td><td>New York</td></tr>
+<tr><td>2</td><td>Luxury Hotel</td><td>Hotel</td><td>Los Angeles</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>id</th><th>apartment_id</th><th>number</th><th>floor_number</th></tr>
+<tr><th></th><th>(&#8594; Apartments.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>101</td><td>2</td></tr>
+<tr><td>2</td><td>2</td><td>301</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>order_id</th><th>guest_id</th><th>room_id</th><th>order_date</th><th>total_amount</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th>(&#8594; Rooms.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-03-13 17:20:34</td><td>150.0</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2024-03-13 17:20:34</td><td>200.0</td><td>Completed</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Espresso_Machine</span></h2><table><thead>
+<tr><th>id</th><th>apartment_id</th><th>model</th><th>brand</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Apartments.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>Model A</td><td>Brand XYZ</td><td>300.0</td></tr>
+<tr><td>2</td><td>2</td><td>Model B</td><td>Brand ABC</td><td>250.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Blender</span></h2><table><thead>
+<tr><th>id</th><th>apartment_id</th><th>model</th><th>brand</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Apartments.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>Model P</td><td>Prestige Brands Inc.</td><td><span style="color:#006600">1</span>50.0</td></tr>
+<tr><td>2</td><td>2</td><td>Model Q</td><td>Quality Appliances LLC</td><td>120.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

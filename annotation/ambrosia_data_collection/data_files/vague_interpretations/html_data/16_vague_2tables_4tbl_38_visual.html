@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Epoch</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ancient Greece</td><td>A civilization known for its contributions to philosophy and arts.</td></tr>
+<tr><td>2</td><td>Renaissance Europe</td><td>A period of great artistic and intellectual achievement.</td></tr>
+<tr><td>3</td><td>Victorian Era</td><td>Characterized by rapid industrialization and social change.</td></tr>
+<tr><td>4</td><td>20th Century America</td><td>A time of significant cultural shifts and technological advancements.</td></tr>
+<tr><td>5</td><td>Modern Times</td><td>The current era marked by global interconnectedness and digital revolution.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Society</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>culture</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Athenian</td><td>Known for democracy, philosophy, and literature.</td></tr>
+<tr><td>2</td><td>Florentine</td><td>Home to the Renaissance and a center for art and learning.</td></tr>
+<tr><td>3</td><td>Elizabethan-Jacobean England</td><td>Known for the flourishing of significant developments in literature and the arts.</td></tr>
+<tr><td>4</td><td>American</td><td>Diverse and multicultural with strong individualism.</td></tr>
+<tr><td>5</td><td>Global Digital</td><td>Connected through technology and social media.</td></tr>
+</tbody></table></div>
+
+<div><h2>Author</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>William</td><td>Shakespeare</td></tr>
+<tr><td>2</td><td>George</td><td>Orwell</td></tr>
+<tr><td>3</td><td>Jane</td><td>Austen</td></tr>
+<tr><td>4</td><td>Fyodor</td><td>Dostoevsky</td></tr>
+<tr><td>5</td><td>Ernest</td><td>Hemingway</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>genre_type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tragedy</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+<tr><td>3</td><td>Mystery</td></tr>
+<tr><td>4</td><td>Romance</td></tr>
+<tr><td>5</td><td>Science Fiction</td></tr>
+</tbody></table></div>
+
+<div><h2>Play</h2><table><thead>
+<tr><th>id</th><th>title</th><th>summary</th><th>year_of_creation</th><th>epoch_id</th><th>society_id</th><th>author_id</th><th>genre_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Epoch.id)</th><th>(&#8594; Society.id)</th><th>(&#8594; Author.id)</th><th>(&#8594; Genre.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>Prince of Denmark seeks revenge on his uncle.</td><td>1603</td><td>2</td><td>3</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1984</td><td>Set in a dystopian future where totalitarianism is rampant.</td><td>1949</td><td>4</td><td>4</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>Pride and Prejudice</td><td>Follows Elizabeth Bennet as she navigates love and marriage.</td><td>1813</td><td>3</td><td>3</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>Crime and Punishment</td><td>A psychological thriller about a student who commits murder.</td><td>1866</td><td>4</td><td>4</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>Brave New World</td><td>Explores a utopian society built on genetic engineering and conditioning.</td><td>1932</td><td>4</td><td>4</td><td>5</td><td>6</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

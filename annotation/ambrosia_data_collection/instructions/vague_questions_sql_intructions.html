@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        .table-container div {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+        table {
+            width: auto;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        ol li {
+            margin-bottom: 5px; /* Adjust the space as needed */
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        img {
+        width: 900px;
+        height: auto
+        }
+    </style>
+</head>
+<body style="width: 1000px; margin: 0 auto;">
+
+<h3><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Objective</strong></span></span></span></h3>
+
+<span style="text-align:justify"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">You will be given a set of tables covering a specific topic (e.g., Education or Banking) with one of the tables or columns highlighted (e.g., Location). Your task is to write two different non-trivial SQL queries and related questions. The central focus of queries and questions should be highlighted table or column.
+
+
+
+<h4 style="text-align:justify"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000" <strong> You can download the instructions in PDF format <a href="https://drive.google.com/file/d/1PtcdswPEqBXoE5XTeqhcNusWG9P0vglF/view?usp=sharing" target="_blank">here</a>.
+</strong></span></span></span></h4>
+
+
+<h4><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><span style="font-size:14pt"></span>Example</strong></span></span></span></h4>
+<p style="margin-left:40px">
+<div class="table-container" style="float:left; margin-bottom:0px; margin-top:0px; width:100%;" >
+<div><h2>Documentary</h2><table><thead>
+    <tr><th>DocumentaryID</th><th>Title</th><th><span style="color:#990000">Context</span></th><th>DirectorID</th></tr>
+    <tr><th></th><th></th><th></th><th>(&#8594; Director.DirectorID)</th></tr>
+    </thead><tbody>
+    <tr><td>1</td><td>Apollo 11</td><td>Space Race Era</td><td>5</td></tr>
+    <tr><td>2</td><td>Blue Planet II</td><td>Anthropocene</td><td>4</td></tr>
+    <tr><td>3</td><td>Planet Earth</td><td>Holocene</td><td>3</td></tr>
+    <tr><td>4</td><td>Wild Africa</td><td>Holocene</td><td>2</td></tr>
+    <tr><td>5</td><td>The Hunt for Bin Laden</td><td>War on Terror Era</td><td>1</td></tr>
+    </tbody></table>
+</div>
+    <div class="table-container" style="float:left; margin-bottom:20px; margin-top:0px; width:100%" >
+    <div><h2>Director</h2><table><thead>
+    <tr><th>DirectorID</th><th>FirstName</th><th>LastName</th><th>BirthYear</th><th>DeathYear</th></tr>
+    </thead><tbody>
+    <tr><td>1</td><td>Christopher</td><td>Nolan</td><td>1970</td><td>None</td></tr>
+    <tr><td>2</td><td>Frank</td><td>Darabont</td><td>1959</td><td>None</td></tr>
+    <tr><td>3</td><td>Quentin</td><td>Tarantino</td><td>1963</td><td>None</td></tr>
+    <tr><td>4</td><td>Christopher</td><td>McQuarrie</td><td>1967</td><td>None</td></tr>
+    <tr><td>5</td><td>Robert</td><td>Zemeckis</td><td>1945</td><td>None</td></tr>
+    </tbody></table></div>
+</div>
+</p>
+<br>
+<br>
+
+<p><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Example of a completed annotation for highlighted column Context:</p> 
+
+<img src="images/example_vague_sql.png" alt="Interface">
+
+<h4><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><span style="font-size:14pt"></span>Requirements</strong></span></span></span></h4>
+
+<ol>
+	<li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"> SQL queries must have a highlighted column or a main column in a highlighted table as one of the <strong>output columns</strong>. &nbsp;</span></span></span></li>
+    <li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"> SQL queries <strong>should not</strong> contain WHERE clauses with a highlighted column or table. &nbsp;</span></span></span></li>
+	<li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"> If your database consists of multiple related tables, you should use the <strong>JOIN</strong> operator in your SQL query whenever possible. &nbsp;</span></span></span></li>
+    <li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"> The question should reflect your SQL query, but be simple and clear. &nbsp;</span></span></span></li> 
+    <li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"> You can also write a question in the form of an instruction or command (as you would ask an assistant, e.g. "Show me/Provide/...") &nbsp;</span></span></span></li> 
+</ol>
+</body>
+</html>

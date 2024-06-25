@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">International_Flights</span></h2><table><thead>
+<tr><th>FlightID</th><th>Destination</th><th>Departure_Time</th><th>Boarding_Time</th><th>Passenger_Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>London</td><td>9:00 AM</td><td>10:00 AM</td><td>300</td></tr>
+<tr><td>2</td><td>Paris</td><td>8:00 AM</td><td>9:00 AM</td><td>250</td></tr>
+<tr><td>3</td><td>Tokyo</td><td>6:00 PM</td><td><span style="color:#006600">7:00 PM</span></td><td>350</td></tr>
+<tr><td>4</td><td>Dubai</td><td>10:00 AM</td><td>11:00 AM</td><td>320</td></tr>
+<tr><td>5</td><td>Singapore</td><td>12:00 PM</td><td>1:00 PM</td><td>330</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Domestic_Flights</span></h2><table><thead>
+<tr><th>FlightID</th><th>Destination</th><th>Departure_Time</th><th>Boarding_Time</th><th>Passenger_Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>11:00 AM</td><td>12:00 PM</td><td>150</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>2:00 PM</td><td>3:00 PM</td><td>200</td></tr>
+<tr><td>3</td><td>Chicago</td><td>4:00 PM</td><td>5:00 PM</td><td>180</td></tr>
+<tr><td>4</td><td>Miami</td><td>6:00 PM</td><td><span style="color:#006600">7:00 PM</span></td><td>220</td></tr>
+<tr><td>5</td><td>San Francisco</td><td>8:00 PM</td><td>9:00 PM</td><td>190</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>AirlineID</th><th>Name</th><th>Headquarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>Chicago</td></tr>
+<tr><td>2</td><td>American Airlines</td><td>Fort Worth</td></tr>
+<tr><td>3</td><td>Delta Airlines</td><td>Atlanta</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>Dallas</td></tr>
+<tr><td>5</td><td>Alaska Airlines</td><td>Seattle</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilots</h2><table><thead>
+<tr><th>PilotID</th><th>FirstName</th><th>LastName</th><th>LicenseNumber</th><th>ExperienceInHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>ABC123</td><td>10000</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>XYZ789</td><td>12000</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>RST456</td><td>11000</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>TUV321</td><td>13000</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>WQA910</td><td>14000</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>AirlineID</th><th>FlightType</th><th>Departure_Airport</th><th>Arrival_Airport</th></tr>
+<tr><th></th><th>(&#8594; Airlines.AirlineID)</th><th>(&#8594; International_Flights.FlightType)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>International</td><td>JFK</td><td>Heathrow</td></tr>
+<tr><td>2</td><td>2</td><td>Domestic</td><td>LAX</td><td>ORD</td></tr>
+<tr><td>3</td><td>3</td><td>International</td><td>ATL</td><td>YVR</td></tr>
+<tr><td>4</td><td>4</td><td>Domestic</td><td>MIA</td><td>SEA</td></tr>
+<tr><td>5</td><td>5</td><td>International</td><td>SFO</td><td>PEK</td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>Model</th><th>Capacity</th><th>RegistrationNumber</th></tr>
+</thead><tbody>
+<tr><td>Boeing 747</td><td>350</td><td>N12345</td></tr>
+<tr><td>Boeing 737</td><td>200</td><td>N54321</td></tr>
+<tr><td>Airbus A380</td><td>400</td><td>N65432</td></tr>
+<tr><td>Airbus A320</td><td>180</td><td>N76543</td></tr>
+<tr><td>Bombardier CRJ</td><td>100</td><td>N87654</td></tr>
+</tbody></table></div>
+
+<div><h2>AssignedPlanes</h2><table><thead>
+<tr><th>FlightID</th><th>PlaneModel</th><th>AssignmentDate</th></tr>
+<tr><th>(&#8594; Flights.FlightID)</th><th>(&#8594; Planes.Model)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 747</td><td>2021-10-01 10:00:00</td></tr>
+<tr><td>2</td><td>Boeing 737</td><td>2021-10-02 10:00:00</td></tr>
+<tr><td>3</td><td>Airbus A380</td><td>2021-10-03 10:00:00</td></tr>
+<tr><td>4</td><td>Airbus A320</td><td>2021-10-04 10:00:00</td></tr>
+<tr><td>5</td><td>Bombardier CRJ</td><td>2021-10-05 10:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

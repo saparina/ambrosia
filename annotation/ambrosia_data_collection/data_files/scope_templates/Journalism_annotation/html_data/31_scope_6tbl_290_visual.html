@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Freelance_Journalists</span></h2><table><thead>
+<tr><th>journalist_id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Williams</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Assignments</span></h2><table><thead>
+<tr><th>assignment_id</th><th><span style="color:#990000">title</span></th><th>deadline</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Feature Stories</td><td>2023-01-15</td></tr>
+<tr><td>2</td><td>News Articles</td><td>2023-01-20</td></tr>
+<tr><td>3</td><td>Investigative Reports</td><td>2023-01-25</td></tr>
+<tr><td>4</td><td>Profile Pieces</td><td>2023-01-30</td></tr>
+<tr><td>5</td><td>Opinion Pieces</td><td>2023-02-05</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>publication_id</th><th>publication_name</th><th>publisher_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily News</td><td>Daily Newspaper Ltd.</td></tr>
+<tr><td>2</td><td>The Weekly Times</td><td>Weekly Publishing Co.</td></tr>
+<tr><td>3</td><td>The Monthly Magazine</td><td>Monthly Magazines Inc.</td></tr>
+<tr><td>4</td><td>The Annual Review</td><td>Annual Reviews Corp.</td></tr>
+<tr><td>5</td><td>The Quarterly Report</td><td>Quarterly Publishers LLC.</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Publication</h2><table><thead>
+<tr><th>article_publication_id</th><th>freelance_journalist_id</th><th>assignment_id</th><th>publication_id</th><th>publish_date</th></tr>
+<tr><th></th><th>(&#8594; Freelance_Journalists.journalist_id)</th><th>(&#8594; Assignments.assignment_id)</th><th>(&#8594; Publications.publication_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2023-01-17</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td><td>2023-01-22</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>3</td><td>2023-01-26</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>4</td><td>2023-02-01</td></tr>
+<tr><td>5</td><td>3</td><td>2</td><td>5</td><td>2023-02-08</td></tr>
+<tr><td>6</td><td>3</td><td>1</td><td>5</td><td>2023-02-08</td></tr>
+<tr><td>7</td><td>4</td><td>1</td><td>None</td><td>None</td></tr>
+<tr><td>8</td><td>5</td><td>1</td><td>None</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

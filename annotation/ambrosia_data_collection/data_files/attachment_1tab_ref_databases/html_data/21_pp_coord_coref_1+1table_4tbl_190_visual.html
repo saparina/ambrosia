@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>RoomType</h2><table><thead>
+<tr><th>ID</th><th>TypeName</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Standard</td><td>99.99</td></tr>
+<tr><td>2</td><td>Deluxe</td><td>129.99</td></tr>
+<tr><td>3</td><td>Luxury Suite</td><td>309.99</td></tr>
+<tr><td>4</td><td>Presidential Suite</td><td>609.99</td></tr>
+<tr><td>5</td><td>Family Suite</td><td>279.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Amenities</h2><table><thead>
+<tr><th>ID</th><th>AmenityName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Free WiFi</td></tr>
+<tr><td>2</td><td>Gym Access</td></tr>
+<tr><td>3</td><td>Concierge Service</td></tr>
+<tr><td>4</td><td>Room Service</td></tr>
+<tr><td>5</td><td>Parking Facilities</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>ID</th><th>CheckInDate</th><th>CheckOutDate</th><th>TotalNights</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Customers.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-08-01</td><td>2022-08-07</td><td>6</td><td>1</td></tr>
+<tr><td>2</td><td>2022-08-15</td><td>2022-08-21</td><td>6</td><td>2</td></tr>
+<tr><td>3</td><td>2022-08-30</td><td>2022-09-05</td><td>6</td><td>3</td></tr>
+<tr><td>4</td><td>2022-09-10</td><td>2022-09-17</td><td>7</td><td>4</td></tr>
+<tr><td>5</td><td>2022-09-25</td><td>2022-09-30</td><td>6</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td><td>+1122334455</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td><td>+2233445566</td></tr>
+<tr><td>5</td><td>William Brown</td><td>william@example.com</td><td>+3344556677</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RelaxationOptions</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000"><span style="color:#990000">OptionType</span></span></th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Day Spa</span></td><td>150.0</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Day Spa</span></td><td>200.0</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Wellness Retreat</span></td><td>150.0</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Wellness Retreat</span></td><td>200.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Packages</span></h2><table><thead>
+<tr><th>ID</th><th>PackageName</th><th>Description</th><th><span style="color:#006600">BasePrice</span></th><th>ExtraCost</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; RelaxationOptions.Price)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Honeymoon Special</td><td>Romantic package includes champagne and rose petals on arrival.</td><td>250.0</td><td>75.0</td></tr>
+<tr><td>2</td><td>Business Traveller</td><td>Special package for business travellers including breakfast and free internet.</td><td>300.0</td><td>50.0</td></tr>
+<tr><td>3</td><td>Fitness Enthusiast</td><td>Perfect for fitness lovers including gym access and personal trainer sessions.</td><td>350.0</td><td>100.0</td></tr>
+<tr><td>4</td><td>Culinary Delight</td><td>Tailored packages for foodies including cooking classes and wine tasting.</td><td><span style="color:#006600">400.0</span></td><td>150.0</td></tr>
+<tr><td>5</td><td>Entertainment Seeker</td><td>Packed with entertainment options like tickets to local attractions and live shows.</td><td>450.0</td><td>200.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

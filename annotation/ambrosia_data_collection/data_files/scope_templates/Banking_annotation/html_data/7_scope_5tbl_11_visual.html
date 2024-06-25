@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Investment_Portfolios</span></h2><table><thead>
+<tr><th>portfolioID</th><th>name</th><th>value</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Portfolio A</td><td>100000.0</td></tr>
+<tr><td>2</td><td>Portfolio B</td><td>200000.0</td></tr>
+<tr><td>3</td><td>Portfolio C</td><td>300000.0</td></tr>
+<tr><td>4</td><td>Portfolio D</td><td>400000.0</td></tr>
+<tr><td>5</td><td>Portfolio E</td><td>500000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Assets</span></h2><table><thead>
+<tr><th>assetTypeID</th><th><span style="color:#990000">typeName</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Stocks</td><td>A group of shares in a company</td></tr>
+<tr><td>2</td><td>Bonds</td><td>A debt security</td></tr>
+<tr><td>3</td><td>Mutual Funds</td><td>An open-ended fund that pools money from investors</td></tr>
+<tr><td>4</td><td>Real Estate</td><td>Property owned by an individual or entity</td></tr>
+<tr><td>5</td><td>Cryptocurrency</td><td>Digital currency designed to work as a medium of exchange</td></tr>
+</tbody></table></div>
+
+<div><h2>Investment_Portfolios_Assets</h2><table><thead>
+<tr><th>investmentID</th><th>assetTypeID</th><th>quantity</th></tr>
+<tr><th>(&#8594; Investment_Portfolios.portfolioID)</th><th>(&#8594; Assets.assetTypeID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>1</td><td>None</td></tr>
+<tr><td>3</td><td>1</td><td>None</td></tr>
+<tr><td>4</td><td>1</td><td>None</td></tr>
+<tr><td>5</td><td>1</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

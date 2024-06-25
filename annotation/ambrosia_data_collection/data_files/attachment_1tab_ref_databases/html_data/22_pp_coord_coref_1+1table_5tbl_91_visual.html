@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">ArtType</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">TypeName</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Photography</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Painting</span></td></tr>
+</tbody></table></div>
+
+<div><h2>VisualArt</h2><table><thead>
+<tr><th>id</th><th>ArtTypeId</th><th>Title</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; ArtType.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>The Moon</td><td>A beautiful photograph of the moon.</td></tr>
+<tr><td>2</td><td>2</td><td>Starry Night</td><td>A famous painting by Van Gogh.</td></tr>
+<tr><td>3</td><td>1</td><td>Nature Walk</td><td>Another photography masterpiece.</td></tr>
+<tr><td>4</td><td>2</td><td>Sunset at Sea</td><td>A breathtaking sunset captured on canvas.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Gallery</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">MoMA</span></td></tr>
+<tr><td>2</td><td>National Gallery of Art</td></tr>
+</tbody></table></div>
+
+<div><h2>Exhibit</h2><table><thead>
+<tr><th>id</th><th>GalleryId</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Gallery.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>2023-01-31</td></tr>
+<tr><td>2</td><td>2</td><td>2023-02-01</td><td>2023-02-28</td></tr>
+</tbody></table></div>
+
+<div><h2>ArtworkInExhibition</h2><table><thead>
+<tr><th>id</th><th>ExhibitId</th><th>VisualArtId</th></tr>
+<tr><th></th><th>(&#8594; Exhibit.id)</th><th>(&#8594; VisualArt.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Artist</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthYear</th><th>DeathYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Vincent van Gogh</td><td>1853</td><td>1890</td></tr>
+<tr><td>2</td><td>Claude Monet</td><td>1840</td><td>1926</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>country</th><th>city</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Heathrow</td><td>UK</td><td>London</td></tr>
+<tr><td>2</td><td>Schiphol</td><td>Netherlands</td><td>Amsterdam</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>name</th><th>headquartered_at</th></tr>
+<tr><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>BA</td><td>1</td></tr>
+<tr><td>2</td><td>KLM</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>id</th><th>model</th><th>max_passengers</th><th>max_range</th><th>airline_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airlines.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 787 Dreamliner</td><td>300</td><td>7639</td><td>1</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>525</td><td>8000</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">OnboardServices</span></h2><table><thead>
+<tr><th>id</th><th>service_name</th><th>description</th><th>aircraft_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Aircrafts.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Meal Service</td><td>A variety of meals served on board.</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Snack Service</td><td>Light snacks available for purchase.</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">InflightEntertainments</span></h2><table><thead>
+<tr><th>id</th><th>entertainment_name</th><th>description</th><th>aircraft_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Aircrafts.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Movie Selection</td><td>Wide range of movies available for viewing.</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Games Library</td><td>Variety of games available for play.</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

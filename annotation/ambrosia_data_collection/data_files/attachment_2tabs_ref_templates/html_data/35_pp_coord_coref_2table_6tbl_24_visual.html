@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Journalists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th><span style="color:#1430b2">language_proficiency</span></th><th>years_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td><span style="color:#1430b2">English</span></td><td>3</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>French</td><td>6</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice@example.com</td><td>Spanish</td><td>8</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob@example.com</td><td>German</td><td>7</td></tr>
+<tr><td>5</td><td>Carol White</td><td>carol@example.com</td><td>Italian</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Editors</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>language_proficiency</th><th>experience_years</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Jackson</td><td>michael@example.com</td><td><span style="color:#1430b2">English</span></td><td>10</td></tr>
+<tr><td>2</td><td>Karen Clark</td><td>karen@example.com</td><td>Chinese</td><td>9</td></tr>
+<tr><td>3</td><td>David Lee</td><td>david@example.com</td><td>Arabic</td><td>5</td></tr>
+<tr><td>4</td><td>Elizabeth Green</td><td>elizabeth@example.com</td><td>Russian</td><td>8</td></tr>
+<tr><td>5</td><td>Frank Miller</td><td>frank@example.com</td><td>Portuguese</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>companyName</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The New York Times</td><td>New York</td></tr>
+<tr><td>2</td><td>The Guardian</td><td>London</td></tr>
+<tr><td>3</td><td>Le Monde</td><td>Paris</td></tr>
+<tr><td>4</td><td>Der Spiegel</td><td>Hamburg</td></tr>
+<tr><td>5</td><td>La Repubblica</td><td>Milan</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>id</th><th>jobTitle</th><th>description</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Reporter</td><td>Report on breaking news stories.</td><td>50000</td></tr>
+<tr><td>2</td><td>Copy Editor</td><td>Check articles for grammar and factual errors.</td><td>55000</td></tr>
+<tr><td>3</td><td>Web Producer</td><td>Manage website content and social media.</td><td>60000</td></tr>
+<tr><td>4</td><td>Investigative Reporter</td><td>Conduct in-depth investigations into important issues.</td><td>65000</td></tr>
+<tr><td>5</td><td>Photographer</td><td>Capture images for publication in print and online.</td><td>52000</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>applicationId</th><th>applicantEmail</th><th>appliedJob</th><th>applyDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>john@example.com</td><td>Reporter</td><td>2023-04-17 12:30:00</td></tr>
+<tr><td>2</td><td>jane@example.com</td><td>Copy Editor</td><td>2023-04-17 12:35:00</td></tr>
+<tr><td>3</td><td>alice@example.com</td><td>Web Producer</td><td>2023-04-17 12:40:00</td></tr>
+<tr><td>4</td><td>bob@example.com</td><td>Investigative Reporter</td><td>2023-04-17 12:45:00</td></tr>
+<tr><td>5</td><td>carol@example.com</td><td>Photographer</td><td>2023-04-17 12:50:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

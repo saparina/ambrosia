@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Urban_Planners</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>3</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>5</td></tr>
+<tr><td>4</td><td>Emily Williams</td><td>10</td></tr>
+<tr><td>5</td><td>David Brown</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Elements</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">element_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Green_Space</td></tr>
+<tr><td>2</td><td>Transportation_Infrastructure</td></tr>
+<tr><td>3</td><td>Landscape_Architecture</td></tr>
+<tr><td>4</td><td>Water_Management</td></tr>
+<tr><td>5</td><td>Public_Spaces</td></tr>
+</tbody></table></div>
+
+<div><h2>Urban_Planners_Elements</h2><table><thead>
+<tr><th>urban_planner_id</th><th>element_id</th></tr>
+<tr><th>(&#8594; Urban_Planners.id)</th><th>(&#8594; Elements.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

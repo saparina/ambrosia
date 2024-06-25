@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Medical_Journals</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>publisher</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lancet</td><td>Elsevier</td></tr>
+<tr><td>2</td><td>New England Journal of Medicine</td><td>Massachusetts Medical Society</td></tr>
+<tr><td>3</td><td>The BMJ</td><td>BMJ Group</td></tr>
+<tr><td>4</td><td>JAMA - The Journal of the American Medical Association</td><td>American Medical Association</td></tr>
+<tr><td>5</td><td>Nature Medicine</td><td>Springer Nature</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Articles</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">title</span></th><th>abstract</th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Effective Treatment of Diabetes</td><td>This study explored new treatment options for diabetes...</td><td>Research_Article</td></tr>
+<tr><td>2</td><td>Advances in Cancer Therapy</td><td>Recent developments in cancer therapy have shown promising results...</td><td>Review_Article</td></tr>
+<tr><td>3</td><td>Innovations in Cardiac Surgery</td><td>The field of cardiac surgery has seen significant innovations over recent years...</td><td>Research_Article</td></tr>
+<tr><td>4</td><td>Understanding Alzheimer's Disease</td><td>Alzheimer's disease is a complex neurological disorder that affects millions...</td><td>Review_Article</td></tr>
+<tr><td>5</td><td>Psychological Factors in Chronic Pain Management</td><td>Chronic pain management often requires an interdisciplinary approach including psychological factors...</td><td>Research_Article</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>affiliation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>University of California San Francisco</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Stanford University</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>Harvard Medical School</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>Columbia University</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>Yale School of Medicine</td></tr>
+</tbody></table></div>
+
+<div><h2>Journal_Authors</h2><table><thead>
+<tr><th>journalId</th><th>authorId</th></tr>
+<tr><th>(&#8594; Medical_Journals.id)</th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Authors</h2><table><thead>
+<tr><th>articleId</th><th>authorId</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Medical_Journals_Articles</h2><table><thead>
+<tr><th>medicalJournalId</th><th>articleId</th></tr>
+<tr><th>(&#8594; Medical_Journals.id)</th><th>(&#8594; Articles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

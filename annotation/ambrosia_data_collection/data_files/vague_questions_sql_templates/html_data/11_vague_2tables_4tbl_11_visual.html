@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Consulted_Sources</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>specialty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>Politics</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>Economy</td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td>Environmental Science</td></tr>
+<tr><td>4</td><td>Alice Brown</td><td>Technology</td></tr>
+<tr><td>5</td><td>Michael White</td><td>Healthcare</td></tr>
+</tbody></table></div>
+
+<div><h2>Documentary</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th>EXPERT_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Consulted_Sources.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Rise of Political Polarization</td><td>2020-09-01</td><td>1</td></tr>
+<tr><td>2</td><td>The Future of Work</td><td>2021-07-15</td><td>2</td></tr>
+<tr><td>3</td><td>Green New Deal Explained</td><td>2020-10-20</td><td>3</td></tr>
+<tr><td>4</td><td>AI Ethics & Society</td><td>2021-02-01</td><td>4</td></tr>
+<tr><td>5</td><td>Global Pandemic Response</td><td>2020-12-10</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>News_Articles</h2><table><thead>
+<tr><th>id</th><th>headline</th><th>content</th><th>publication_date</th><th>DOCUMENTARY_ID</th><th>EXPERT_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Documentary.id)</th><th>(&#8594; Consulted_Sources.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>US Midterm Elections Approach</td><td>Discusses key issues and candidates...</td><td>2024-02-19 14:43:33</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Automation Impact on Jobs</td><td>Explores potential solutions...</td><td>2024-02-19 14:43:33</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Deforestation Crisis Worsens</td><td>Highlights recent developments...</td><td>2024-02-19 14:43:33</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>China's AI Advancements</td><td>Analyzes China's progress in AI...</td><td>2024-02-19 14:43:33</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>COVID Vaccine Distribution</td><td>Updates on global vaccine distribution...</td><td>2024-02-19 14:43:33</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Interviews</h2><table><thead>
+<tr><th>id</th><th>date</th><th>details</th><th>EXPERT_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Consulted_Sources.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-07-25 10:00:00</td><td>Interview about economic recovery post-pandemic.</td><td>2</td></tr>
+<tr><td>2</td><td>2021-08-10 14:30:00</td><td>Discussion on environmental policies and their impact.</td><td>3</td></tr>
+<tr><td>3</td><td>2021-09-05 11:00:00</td><td>Insights on future technology trends and challenges.</td><td>4</td></tr>
+<tr><td>4</td><td>2021-10-15 16:00:00</td><td>Analysis of healthcare system improvements needed.</td><td>5</td></tr>
+<tr><td>5</td><td>2021-11-01 10:30:00</td><td>Opinions on political polarization and its effects.</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

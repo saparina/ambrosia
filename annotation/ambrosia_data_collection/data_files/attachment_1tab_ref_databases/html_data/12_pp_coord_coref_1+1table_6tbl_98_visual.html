@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Airline XYZ</td></tr>
+<tr><td>2</td><td>Flying Company ABC</td></tr>
+<tr><td>3</td><td>Global Airways</td></tr>
+<tr><td>4</td><td>Eagle Airlines</td></tr>
+<tr><td>5</td><td>High Sky Carriers</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">TrainingCenters</span></h2><table><thead>
+<tr><th>id</th><th>centerName</th><th><span style="color:#006600">location</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Aviation Academ</td><td><span style="color:#006600">New York</span></td></tr>
+<tr><td>2</td><td>Bird Flight School</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Skies Institute</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Wind Tunnel Academy</td><td>Miami</td></tr>
+<tr><td>5</td><td>Cloud College</td><td>Dallas</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPosts</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">title</span></span></th><th>description</th><th>companyId</th><th>trainingCenterId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Companies.id)</th><th>(&#8594; TrainingCenters.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Flight Attendant</span></td><td>Be a friendly face in the sky!</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Flight Attendant</span></td><td>Join our team of skilled professionals.</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Pilot</span></td><td>Take control of the skies!</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Pilot</span></td><td>Experience required to soar high.</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>Mechanic</td><td>Keep our fleet flying smoothly.</td><td>3</td><td>2</td></tr>
+<tr><td>6</td><td>Reservation Agent</td><td>Assist customers with their travel plans.</td><td>4</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Positions</h2><table><thead>
+<tr><th>id</th><th>positionTitle</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cabin Crew Member</td></tr>
+<tr><td>2</td><td>First Officer</td></tr>
+<tr><td>3</td><td>Second Officer</td></tr>
+<tr><td>4</td><td>Engineer</td></tr>
+<tr><td>5</td><td>Maintenance Technician</td></tr>
+</tbody></table></div>
+
+<div><h2>AviationPositions</h2><table><thead>
+<tr><th>id</th><th>jobPostId</th><th>positionId</th></tr>
+<tr><th></th><th>(&#8594; JobPosts.id)</th><th>(&#8594; Positions.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>AviationJobRequirements</h2><table><thead>
+<tr><th>id</th><th>aviationPositionId</th><th>requirement</th></tr>
+<tr><th></th><th>(&#8594; AviationPositions.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Must have valid passport.</td></tr>
+<tr><td>2</td><td>1</td><td>Ability to speak multiple languages.</td></tr>
+<tr><td>3</td><td>2</td><td>Minimum 1000 hours flight time.</td></tr>
+<tr><td>4</td><td>2</td><td>Instrument rating required.</td></tr>
+<tr><td>5</td><td>3</td><td>ATPL license needed.</td></tr>
+<tr><td>6</td><td>3</td><td>Type rating for specific aircraft.</td></tr>
+<tr><td>7</td><td>4</td><td>Experience in maintenance operations.</td></tr>
+<tr><td>8</td><td>4</td><td>Knowledge of FAA regulations.</td></tr>
+<tr><td>9</td><td>5</td><td>Strong technical skills.</td></tr>
+<tr><td>10</td><td>5</td><td>Proficient in using diagnostic tools.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

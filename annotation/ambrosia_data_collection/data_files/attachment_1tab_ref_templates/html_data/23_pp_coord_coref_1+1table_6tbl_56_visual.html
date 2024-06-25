@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Information_Gathering_Method</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">method</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Press Conference</span></td></tr>
+<tr><td>2</td><td>Interview</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Participant_Type</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Politician</span></td></tr>
+<tr><td>2</td><td>Business Leader</td></tr>
+<tr><td>3</td><td>Activist</td></tr>
+</tbody></table></div>
+
+<div><h2>News_Article</h2><table><thead>
+<tr><th>article_id</th><th>title</th><th>content</th><th>date</th><th>author_id</th><th>information_gathering_method_id</th><th>participant_type_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Author.author_id)</th><th>(&#8594; Information_Gathering_Method.id)</th><th>(&#8594; Participant_Type.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Press Conference</td><td>Details about the press conference...</td><td>2023-01-01</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Second Press Conference</td><td>Details about the press conference...</td><td>2023-01-02</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Interview with Politician</td><td>Details about the interview...</td><td>2023-01-03</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>Interview with Activist</td><td>Details about the activist interview...</td><td>2023-01-04</td><td>4</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Source</h2><table><thead>
+<tr><th>source_id</th><th>name</th><th>url</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Official Government Website</td><td>https://www.govsite.com/</td></tr>
+<tr><td>2</td><td>Company Blog</td><td>https://blog.company.com/</td></tr>
+<tr><td>3</td><td>News Channel</td><td>https://newschannel.tv/</td></tr>
+<tr><td>4</td><td>Alternative Media Outlet</td><td>https://alternativemedia.org/</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Source</h2><table><thead>
+<tr><th>article_source_id</th><th>news_article_id</th><th>source_id</th></tr>
+<tr><th></th><th>(&#8594; News_Article.article_id)</th><th>(&#8594; Source.source_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Quote</h2><table><thead>
+<tr><th>quote_id</th><th>text</th><th>start_time</th><th>end_time</th><th>news_article_id</th><th>speaker_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; News_Article.article_id)</th><th>(&#8594; Speaker.speaker_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quote from politician at first press conference.</td><td>00:00:05</td><td>00:00:15</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Quote from business leader at second press conference.</td><td>00:00:06</td><td>00:00:17</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Quote from politician during the interview.</td><td>00:00:08</td><td>00:00:19</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Quote from activist during the interview.</td><td>00:00:09</td><td>00:00:21</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Speaker</h2><table><thead>
+<tr><th>speaker_id</th><th>name</th><th>role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Politician</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Business Leader</td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td>Politician</td></tr>
+<tr><td>4</td><td>Emma Brown</td><td>Activist</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

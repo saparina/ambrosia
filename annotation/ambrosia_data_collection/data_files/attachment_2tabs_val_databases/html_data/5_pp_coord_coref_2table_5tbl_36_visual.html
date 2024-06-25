@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Magazines</h2><table><thead>
+<tr><th>id</th><th>name</th><th>url</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The New Yorker</td><td>https://www.newyorker.com/</td></tr>
+<tr><td>2</td><td>Time Magazine</td><td>http://time.com/</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Social_Media</span></h2><table><thead>
+<tr><th>id</th><th>magazine_id</th><th>platform</th><th>followers</th></tr>
+<tr><th></th><th>(&#8594; Magazines.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>Twitter</td><td>2000000</td></tr>
+<tr><td>2</td><td>2</td><td>Instagram</td><td>3000000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Email_Newsletters</span></h2><table><thead>
+<tr><th>id</th><th>magazine_id</th><th>subscribers</th><th>frequency</th></tr>
+<tr><th></th><th>(&#8594; Magazines.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span>00000</td><td>Weekly</td></tr>
+<tr><td>2</td><td>2</td><td>80000</td><td>Biweekly</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>author_id</th><th>magazine_id</th><th>publication_date</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Magazines.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article Title 1</td><td>Content of Article 1...</td><td>1</td><td>1</td><td>2021-07-01</td></tr>
+<tr><td>2</td><td>Article Title 2</td><td>Content of Article 2...</td><td>2</td><td>1</td><td>2021-07-02</td></tr>
+<tr><td>3</td><td>Article Title 3</td><td>Content of Article 3...</td><td>1</td><td>2</td><td>2021-07-03</td></tr>
+<tr><td>4</td><td>Article Title 4</td><td>Content of Article 4...</td><td>2</td><td>2</td><td>2021-07-04</td></tr>
+<tr><td>5</td><td>Article Title 5</td><td>Content of Article 5...</td><td>1</td><td>1</td><td>2021-07-05</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

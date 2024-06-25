@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Accommodations</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">Name</span></span></th><th>Address</th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Family Suite</span></td><td>123 Main St</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>Another Family Suite</td><td>456 Second Ave</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Single Room</span></td><td>789 Third St</td><td>Miami</td><td>USA</td></tr>
+<tr><td>4</td><td>Different Single Room</td><td>777 Fourth St</td><td>Chicago</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>id</th><th>AccommodationID</th><th>Type</th></tr>
+<tr><th></th><th>(&#8594; Accommodations.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Standard Double</td></tr>
+<tr><td>2</td><td>2</td><td>Luxury Twin</td></tr>
+<tr><td>3</td><td>3</td><td>Deluxe Triple</td></tr>
+<tr><td>4</td><td>4</td><td>Premium Quad</td></tr>
+<tr><td>5</td><td>5</td><td>Superior Double</td></tr>
+<tr><td>6</td><td>6</td><td>Executive Twin</td></tr>
+<tr><td>7</td><td>7</td><td>Ultra Deluxe Triple</td></tr>
+<tr><td>8</td><td>8</td><td>Presidential Quad</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Prices</span></h2><table><thead>
+<tr><th>id</th><th>RoomID</th><th><span style="color:#006600">Price_Per_Night</span></th><th>AvailableFrom</th><th>AvailableTo</th></tr>
+<tr><th></th><th>(&#8594; Rooms.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>150</td><td>2023-01-01</td><td>2023-12-31</td></tr>
+<tr><td>2</td><td>2</td><td><span style="color:#006600">160</span></td><td>2023-01-01</td><td>2023-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>150</td><td>2023-01-01</td><td>2023-12-31</td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#006600">160</span></td><td>2023-01-01</td><td>2023-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>id</th><th>CustomerName</th><th>ArrivalDate</th><th>DepartureDate</th><th>RoomID</th><th>TotalCost</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Rooms.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2023-05-01</td><td>2023-05-05</td><td>1</td><td>650</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2023-05-01</td><td>2023-05-05</td><td>2</td><td>700</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>2023-05-01</td><td>2023-05-05</td><td>3</td><td>650</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>2023-05-01</td><td>2023-05-05</td><td>4</td><td>700</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jonathan</td><td>Smith</td><td>jsmith@email.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Emily</td><td>Johnson</td><td>ejohnson@email.com</td><td>098-765-4321</td></tr>
+<tr><td>3</td><td>David</td><td>Williams</td><td>dwilliams@email.com</td><td>555-555-5555</td></tr>
+<tr><td>4</td><td>Samantha</td><td>Martin</td><td>smartin@email.com</td><td>555-555-5556</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Brown</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>William Johnson</td><td>william@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">News_Articles</span></h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>Word_Count_ID</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Word_Count.Word_Count_ID)</th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News</td><td>This is a breaking news article.</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Politics Update</td><td>Here is an update on the latest political developments.</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Financial Market Report</td><td>A report on the financial markets and their performance.</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Environmental Concerns</td><td>Discussing the pressing environmental issues of our time.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Technology Innovations</td><td>Exploring new technology innovations and trends.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Feature_Articles</span></h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>Word_Count_ID</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Word_Count.Word_Count_ID)</th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Innovative Entrepreneurs</td><td>Profiles of successful entrepreneurs who have made a difference.</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Culinary Masterpieces</td><td>Showcasing remarkable culinary creations around the world.</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Wildlife Photography</td><td>Beautiful images capturing wildlife in their natural habitats.</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Historical Landmarks</td><td>Visiting some of the most significant historical landmarks.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Architectural Marvels</td><td>Exploring stunning architectural wonders across the globe.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Word_Count</span></h2><table><thead>
+<tr><th>Word_<span style="color:#006600">Count</span>_ID</th><th><span style="color:#006600">Count</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000</td></tr>
+<tr><td>2</td><td>2000</td></tr>
+<tr><td>3</td><td><span style="color:#006600">3000</span></td></tr>
+<tr><td>4</td><td>4000</td></tr>
+<tr><td>5</td><td>5000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

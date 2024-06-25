@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Style</span></h2><table><thead>
+<tr><th>style_id</th><th><span style="color:#1430b2">style_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Modern</span></td></tr>
+<tr><td>2</td><td>Contemporary</td></tr>
+<tr><td>3</td><td>Traditional</td></tr>
+<tr><td>4</td><td>Rustic</td></tr>
+<tr><td>5</td><td>Minimalist</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Interior_Designer</span></h2><table><thead>
+<tr><th>designer_id</th><th>name</th><th>design_style</th></tr>
+<tr><th></th><th></th><th>(&#8594; Style.style_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>3</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>4</td></tr>
+<tr><td>5</td><td>David Brown</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Landscape_Architect</span></h2><table><thead>
+<tr><th>architect_id</th><th>name</th><th>landscape_style</th></tr>
+<tr><th></th><th></th><th>(&#8594; Style.style_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mark Williams</td><td>1</td></tr>
+<tr><td>2</td><td>Laura Wilson</td><td>2</td></tr>
+<tr><td>3</td><td>Thomas Jackson</td><td>3</td></tr>
+<tr><td>4</td><td>Nicholas Taylor</td><td>4</td></tr>
+<tr><td>5</td><td>William Martin</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Project</h2><table><thead>
+<tr><th>project_id</th><th>title</th><th>start_date</th><th>end_date</th><th>interior_designer_id</th><th>landscape_architect_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Interior_Designer.designer_id)</th><th>(&#8594; Landscape_Architect.architect_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Living Room Redesign</td><td>2021-07-01</td><td>2021-09-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Kitchen Remodel</td><td>2021-08-01</td><td>2021-10-01</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Bathroom Renovation</td><td>2021-06-01</td><td>2021-08-01</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Garden Design</td><td>2021-05-01</td><td>2021-07-01</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Office Space Makeover</td><td>2021-04-01</td><td>2021-06-01</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Material</h2><table><thead>
+<tr><th>material_id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wood</td><td>High quality hardwood</td></tr>
+<tr><td>2</td><td>Stone</td><td>Variety of natural stones</td></tr>
+<tr><td>3</td><td>Glass</td><td>Tempered and laminated glass</td></tr>
+<tr><td>4</td><td>Metal</td><td>Stainless steel and brass</td></tr>
+<tr><td>5</td><td>Textile</td><td>Cotton, silk, and wool fabrics</td></tr>
+</tbody></table></div>
+
+<div><h2>ProjectMaterial</h2><table><thead>
+<tr><th>projectmaterial_id</th><th>project_id</th><th>material_id</th><th>quantity</th></tr>
+<tr><th></th><th>(&#8594; Project.project_id)</th><th>(&#8594; Material.material_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>50</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>25</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>10</td></tr>
+<tr><td>4</td><td>1</td><td>4</td><td>20</td></tr>
+<tr><td>5</td><td>1</td><td>5</td><td>30</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+SQLite database in the DOMAIN domain:
+CREATE_TABLE_STATEMENTS
+
+Insert 5 or more rows into each table. "COMPONENTS" table must contain "SPECIFIC_COMPONENT" and other values. All rows of table "ENTITIES" must be linked to two rows of "COMPONENTS", with "SPECIFIC_COMPONENT" and with another value, through "ENTITIES_COMPONENTS".
+
+Provide 5 or more INSERT INTO statements for each table in SQLite.

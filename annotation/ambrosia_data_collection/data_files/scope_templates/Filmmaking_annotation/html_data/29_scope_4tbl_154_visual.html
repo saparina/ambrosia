@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Productions</span></h2><table><thead>
+<tr><th>ProductionID</th><th>Title</th><th>ReleaseDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie One</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>Film Two</td><td>2021-05-01</td></tr>
+<tr><td>3</td><td>Series Three</td><td>2021-07-01</td></tr>
+<tr><td>4</td><td>Documentary Four</td><td>2021-09-01</td></tr>
+<tr><td>5</td><td>Show Five</td><td>2021-11-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Locations</span></h2><table><thead>
+<tr><th>LocationID</th><th><span style="color:#990000">Name</span></th><th><span style="color:#990000">Type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Studio Sets 1</td><td>Studio_Set</td></tr>
+<tr><td>2</td><td>Exterior Shoots 1</td><td>Exterior</td></tr>
+<tr><td>3</td><td>Interior Scenes 1</td><td>Interior</td></tr>
+<tr><td>4</td><td>Sound Stage 1</td><td>Stage</td></tr>
+<tr><td>5</td><td>Backlot 1</td><td>Backlot</td></tr>
+</tbody></table></div>
+
+<div><h2>Productions_Locations</h2><table><thead>
+<tr><th>ProductionID</th><th>LocationID</th></tr>
+<tr><th>(&#8594; Productions.ProductionID)</th><th>(&#8594; Locations.LocationID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>Birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-06-23</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1978-05-12</td></tr>
+<tr><td>3</td><td>Emma</td><td>Wilson</td><td>1992-04-01</td></tr>
+<tr><td>4</td><td>Tom</td><td>Brown</td><td>1995-03-16</td></tr>
+<tr><td>5</td><td>Alice</td><td>Green</td><td>1990-07-29</td></tr>
+</tbody></table></div>
+
+<div><h2>Cast</h2><table><thead>
+<tr><th>ProductionID</th><th>ActorID</th><th>Role</th></tr>
+<tr><th>(&#8594; Productions.ProductionID)</th><th>(&#8594; Actors.ActorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lead Actor</td></tr>
+<tr><td>1</td><td>2</td><td>Supporting Actor</td></tr>
+<tr><td>2</td><td>3</td><td>Lead Actor</td></tr>
+<tr><td>2</td><td>4</td><td>Supporting Actor</td></tr>
+<tr><td>3</td><td>5</td><td>Narrator</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

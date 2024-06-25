@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Chefs</h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>10</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>7</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>5</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>3</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Restaurant A</td><td>Street A</td><td>4.2</td></tr>
+<tr><td>2</td><td>Restaurant B</td><td>Street B</td><td>4.6</td></tr>
+<tr><td>3</td><td>Restaurant C</td><td>Street C</td><td>4.9</td></tr>
+<tr><td>4</td><td>Restaurant D</td><td>Street D</td><td>4.5</td></tr>
+<tr><td>5</td><td>Restaurant E</td><td>Street E</td><td>4.8</td></tr>
+</tbody></table></div>
+
+<div><h2>Cuisines</h2><table><thead>
+<tr><th>id</th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Italian</td></tr>
+<tr><td>2</td><td>French</td></tr>
+<tr><td>3</td><td>Mexican</td></tr>
+<tr><td>4</td><td>Indian</td></tr>
+<tr><td>5</td><td>Thai</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Recipes</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">title</span></th><th><span style="color:#990000">description</span></th><th>preparationTime</th><th>cuisineId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Cuisines.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pasta</td><td>A delicious pasta dish.</td><td>30</td><td>1</td></tr>
+<tr><td>2</td><td>Steak</td><td>Tender steak cooked medium-rare.</td><td>45</td><td>3</td></tr>
+<tr><td>3</td><td>Enchiladas</td><td>Spicy Mexican enchiladas.</td><td>60</td><td>4</td></tr>
+<tr><td>4</td><td>Curry</td><td>An aromatic Indian curry.</td><td>90</td><td>5</td></tr>
+<tr><td>5</td><td>Pad Thai</td><td>Authentic Thai noodles.</td><td>40</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Ingredients</h2><table><thead>
+<tr><th>id</th><th>name</th><th>quantity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tomatoes</td><td>2 cups</td></tr>
+<tr><td>2</td><td>Garlic</td><td>2 cloves</td></tr>
+<tr><td>3</td><td>Olive oil</td><td>1/4 cup</td></tr>
+<tr><td>4</td><td>Basil</td><td>1/4 cup</td></tr>
+<tr><td>5</td><td>Onion</td><td>1 large</td></tr>
+</tbody></table></div>
+
+<div><h2>RecipeIngredients</h2><table><thead>
+<tr><th>recipeId</th><th>ingredientId</th><th>amount</th></tr>
+<tr><th>(&#8594; Recipes.id)</th><th>(&#8594; Ingredients.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>3</td></tr>
+<tr><td>1</td><td>2</td><td>4</td></tr>
+<tr><td>1</td><td>3</td><td>2</td></tr>
+<tr><td>1</td><td>4</td><td>1</td></tr>
+<tr><td>1</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Cooking_Classes</span></h2><table><thead>
+<tr><th>id</th><th>classTitle</th><th>duration</th><th>chefId</th><th>restaurantId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Chefs.id)</th><th>(&#8594; Restaurants.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pasta Making Class</td><td>2 hours</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Steak Night</td><td>3 hours</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Mexican Fiesta</td><td>4 hours</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Indian Spices</td><td>5 hours</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Thai Delights</td><td>3 hours</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Cooking_Classes_Recipes</h2><table><thead>
+<tr><th>cookingClassId</th><th>recipeId</th></tr>
+<tr><th>(&#8594; Cooking_Classes.id)</th><th>(&#8594; Recipes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

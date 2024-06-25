@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Research_Papers</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>abstract</th><th>publication_date</th><th>citation_style</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Database Systems</td><td>This is an introduction to database systems...</td><td>2019-06-30</td><td><span style="color:#006600">APA</span></td></tr>
+<tr><td>2</td><td>Advanced Database Concepts</td><td>This article discusses advanced concepts in databases...</td><td>2020-08-27</td><td>MLA</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Review_Articles</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>reviewer</th><th>publication_date</th><th>citation_style</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Database Normalization Techniques</td><td>John Doe</td><td>2019-07-15</td><td><span style="color:#006600">APA</span></td></tr>
+<tr><td>2</td><td>Distributed Databases Management</td><td>Jane Smith</td><td>2020-09-23</td><td>MLA</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>alice@example.com</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>bob@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Papers_Authors</h2><table><thead>
+<tr><th>paper_id</th><th>author_id</th></tr>
+<tr><th>(&#8594; Research_Papers.id)</th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Journals</h2><table><thead>
+<tr><th>id</th><th>journal_name</th><th>ISSN</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Journal of Information Technology</td><td>12345678901234567890</td></tr>
+<tr><td>2</td><td>International Journal of Computer Science</td><td>09876543210987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>id</th><th>paper_id</th><th>journal_id</th><th>volume</th><th>issue</th><th>page_start</th><th>page_end</th></tr>
+<tr><th></th><th>(&#8594; Research_Papers.id)</th><th>(&#8594; Journals.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>10</td><td>1</td><td>1</td><td>10</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>5</td><td>2</td><td>250</td><td>259</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

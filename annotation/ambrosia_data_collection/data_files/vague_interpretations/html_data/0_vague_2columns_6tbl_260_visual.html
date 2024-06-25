@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Population</h2><table><thead>
+<tr><th>id</th><th>totalPopulation</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>30000000</td><td>2019</td></tr>
+<tr><td>2</td><td>31000000</td><td>2020</td></tr>
+<tr><td>3</td><td>32000000</td><td>2021</td></tr>
+<tr><td>4</td><td>33000000</td><td>2022</td></tr>
+<tr><td>5</td><td>34000000</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>AgeGroup</h2><table><thead>
+<tr><th>id</th><th>ageFrom</th><th>ageTo</th><th>population</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Population.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>0</td><td>17</td><td>1000000</td></tr>
+<tr><td>2</td><td>18</td><td>64</td><td>2000000</td></tr>
+<tr><td>3</td><td>65</td><td>74</td><td>500000</td></tr>
+<tr><td>4</td><td>75</td><td>84</td><td>250000</td></tr>
+<tr><td>5</td><td>85</td><td>99</td><td>100000</td></tr>
+</tbody></table></div>
+
+<div><h2>Country</h2><table><thead>
+<tr><th>id</th><th>countryName</th><th>continent</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>USA</td><td>North America</td></tr>
+<tr><td>2</td><td>Canada</td><td>North America</td></tr>
+<tr><td>3</td><td>Mexico</td><td>North America</td></tr>
+<tr><td>4</td><td>France</td><td>Europe</td></tr>
+<tr><td>5</td><td>Germany</td><td>Europe</td></tr>
+</tbody></table></div>
+
+<div><h2>ImmigrationStats</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">numberOfImmigrants</span></th><th><span style="color:#990000">immigrantPercentage</span></th><th>countryId</th><th>year</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Country.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>100000</td><td>3.5</td><td>1</td><td>2019</td></tr>
+<tr><td>2</td><td>120000</td><td>4.0</td><td>1</td><td>2020</td></tr>
+<tr><td>3</td><td>140000</td><td>5.5</td><td>4</td><td>2021</td></tr>
+<tr><td>4</td><td>160000</td><td>5.0</td><td>1</td><td>2022</td></tr>
+<tr><td>5</td><td>180000</td><td>4.5</td><td>2</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Ethnicity</h2><table><thead>
+<tr><th>id</th><th>ethnicGroupName</th><th>population</th></tr>
+<tr><th></th><th></th><th>(&#8594; Population.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>White</td><td>2000000</td></tr>
+<tr><td>2</td><td>Black</td><td>500000</td></tr>
+<tr><td>3</td><td>Asian</td><td>300000</td></tr>
+<tr><td>4</td><td>Hispanic</td><td>400000</td></tr>
+<tr><td>5</td><td>Other</td><td>100000</td></tr>
+</tbody></table></div>
+
+<div><h2>EducationLevel</h2><table><thead>
+<tr><th>id</th><th>levelName</th><th>percentage</th></tr>
+<tr><th></th><th>(&#8594; Ethnicity.ethnicGroupName)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>High School Diploma</td><td>10.0</td></tr>
+<tr><td>2</td><td>Bachelor Degree</td><td>25.0</td></tr>
+<tr><td>3</td><td>Master Degree</td><td>15.0</td></tr>
+<tr><td>4</td><td>Doctorate</td><td>5.0</td></tr>
+<tr><td>5</td><td>No College</td><td>25.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

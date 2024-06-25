@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Branches</h2><table><thead>
+<tr><th>BranchID</th><th>BranchName</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main Street</td><td>Downtown</td></tr>
+<tr><td>2</td><td>Northside</td><td>Northern Suburb</td></tr>
+<tr><td>3</td><td>Eastside</td><td>Eastern Suburb</td></tr>
+<tr><td>4</td><td>Westside</td><td>Western Suburb</td></tr>
+<tr><td>5</td><td>Southside</td><td>Southern Suburb</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Email</th><th>PhoneNumber</th><th>HireDate</th><th>Salary</th><th>ManagerId</th><th>BranchId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Employees.EmployeeID)</th><th>(&#8594; Branches.BranchID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1970-01-01</td><td>johnsmith@gmail.com</td><td>1234567890</td><td>2020-01-10</td><td>50000</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1980-01-01</td><td>janedoe@gmail.com</td><td>0987654321</td><td>2020-02-15</td><td>45000</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>1990-01-01</td><td>alicebrown@gmail.com</td><td>1112223334</td><td>2020-03-20</td><td>35000</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>Tom</td><td>Black</td><td>1985-01-01</td><td>tomblack@gmail.com</td><td>4445556667</td><td>2020-04-05</td><td>40000</td><td>3</td><td>3</td></tr>
+<tr><td>5</td><td>Mike</td><td>White</td><td>1995-01-01</td><td>mikewhite@gmail.com</td><td>7778889990</td><td>2020-05-10</td><td>30000</td><td>4</td><td>4</td></tr>
+<tr><td>6</td><td>Lucy</td><td>Green</td><td>1975-01-01</td><td>lucygreen@gmail.com</td><td>2223334445</td><td>2020-06-15</td><td>45000</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Jobs</span></h2><table><thead>
+<tr><th>JobID</th><th>JobTitle</th><th>MinSalary</th><th>MaxSalary</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank Teller</td><td>30000</td><td>35000</td><td>Assists customers at the teller window.</td></tr>
+<tr><td>2</td><td>Customer Service Representative</td><td>35000</td><td>40000</td><td>Handles customer inquiries over the phone.</td></tr>
+<tr><td>3</td><td>Loan Officer</td><td>45000</td><td>55000</td><td>Evaluates loan applications and makes recommendations.</td></tr>
+<tr><td>4</td><td>Financial Analyst</td><td>55000</td><td>65000</td><td>Analyzes financial data and provides reports to management.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Positions</span></h2><table><thead>
+<tr><th>PositionID</th><th><span style="color:#990000">PositionTitle</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Teller</td></tr>
+<tr><td>2</td><td>Customer Service Representative</td></tr>
+<tr><td>3</td><td>Loan Officer</td></tr>
+<tr><td>4</td><td>Financial Analyst</td></tr>
+<tr><td>5</td><td>IT Support</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs_Positions</h2><table><thead>
+<tr><th>JobId</th><th>PositionId</th></tr>
+<tr><th>(&#8594; Jobs.JobID)</th><th>(&#8594; Positions.PositionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

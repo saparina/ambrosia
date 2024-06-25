@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Audio_Formats</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">format_name</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>MP3</td><td>A common digital audio format.</td></tr>
+<tr><td>2</td><td>WAV</td><td>An uncompressed PCM audio file format.</td></tr>
+<tr><td>3</td><td>FLAC</td><td>Lossless compression audio file format.</td></tr>
+<tr><td>4</td><td>DTS</td><td>Digital Theater System sound codec.</td></tr>
+<tr><td>5</td><td>Dolby_Atmos</td><td>Object-based surround sound system.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Streaming_Services</span></h2><table><thead>
+<tr><th>id</th><th>service_name</th><th>subscription_price</th><th>number_of_users</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Service1</td><td>9.99</td><td>10000</td></tr>
+<tr><td>2</td><td>Service2</td><td>14.99</td><td>8000</td></tr>
+<tr><td>3</td><td>Service3</td><td>6.99</td><td>7000</td></tr>
+<tr><td>4</td><td>Service4</td><td>12.99</td><td>9000</td></tr>
+<tr><td>5</td><td>Service5</td><td>19.99</td><td>5000</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Services_Audio_Formats</h2><table><thead>
+<tr><th>streaming_service_id</th><th>audio_format_id</th></tr>
+<tr><th>(&#8594; Streaming_Services.id)</th><th>(&#8594; Audio_Formats.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td></tr>
+<tr><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

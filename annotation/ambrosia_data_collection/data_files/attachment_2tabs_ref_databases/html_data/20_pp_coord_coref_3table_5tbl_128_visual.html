@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Public_Relations</span></h2><table><thead>
+<tr><th>id</th><th>contact</th><th>department</th><th>role</th><th>email</th><th>phone</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>BBC</td><td>News Agency</td><td>PR Manager</td><td>bbc@email.com</td><td>123-456-7890</td><td>Manages PR for BBC News</td></tr>
+<tr><td>2</td><td>CNN</td><td>News Agency</td><td>Director of Communications</td><td>cnn@email.com</td><td>987-654-3210</td><td>Oversees communications strategy for CNN</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Government_Communications</span></h2><table><thead>
+<tr><th>id</th><th>contact</th><th>department</th><th>role</th><th>email</th><th>phone</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>WhiteHouse</td><td>Executive Branch</td><td>Press Secretary</td><td>whitehouse@email.gov</td><td>555-123-4567</td><td>Spokesperson for the White House</td></tr>
+<tr><td>2</td><td>StateDept</td><td>Executive Branch</td><td>Deputy Spokesman</td><td>statedept@email.gov</td><td>555-987-6543</td><td>Assists the Press Secretary at State Department</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Contacts</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#006600">organization</span></th><th>public_relations_id</th><th>government_communications_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Public_Relations.id)</th><th>(&#8594; Government_Communications.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>ABC News</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#006600">Fox News</span></td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>NBC News</td><td>None</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>published_date</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1</td><td>Content for Article 1...</td><td>2022-01-01 10:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Article 2</td><td>Content for Article 2...</td><td>2022-01-02 10:00:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>organization</th><th>public_relations_contact_id</th><th>government_communications_contact_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Contacts.public_relations_id)</th><th>(&#8594; Contacts.government_communications_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Johnson</td><td>The Guardian</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Emma Davis</td><td>The New York Times</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>id</th><th>name</th><th>type</th><th>source_url</th><th>article_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Articles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Source 1</td><td>Website</td><td>https://www.source1.com/article</td><td>1</td></tr>
+<tr><td>2</td><td>Source 2</td><td>Newspaper</td><td>http://newspaper.com/article</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Chefs</span></h2><table><thead>
+<tr><th>chef_id</th><th>name</th><th><span style="color:#1430b2">language</span></th><th>experience_years</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Juan</td><td><span style="color:#1430b2">Spanish</span></td><td>10</td></tr>
+<tr><td>2</td><td>Michael</td><td>English</td><td>8</td></tr>
+<tr><td>3</td><td>Peter</td><td>French</td><td>6</td></tr>
+<tr><td>4</td><td>Emma</td><td>German</td><td>7</td></tr>
+<tr><td>5</td><td>David</td><td>Italian</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Servers</span></h2><table><thead>
+<tr><th>server_id</th><th>name</th><th>language</th><th>years_of_service</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Luis</td><td><span style="color:#1430b2">Spanish</span></td><td>3</td></tr>
+<tr><td>2</td><td>Tom</td><td>English</td><td>2</td></tr>
+<tr><td>3</td><td>Rachel</td><td>French</td><td>1</td></tr>
+<tr><td>4</td><td>Lucas</td><td>German</td><td>4</td></tr>
+<tr><td>5</td><td>Isabella</td><td>Italian</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>name</th><th>phone_number</th><th>preferred_server_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Servers.server_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>123-456-7890</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>987-654-3210</td><td>2</td></tr>
+<tr><td>3</td><td>Charlie</td><td>555-555-5555</td><td>3</td></tr>
+<tr><td>4</td><td>Diana</td><td>111-222-3333</td><td>4</td></tr>
+<tr><td>5</td><td>Eva</td><td>444-444-4444</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>restaurant_id</th><th>name</th><th>address</th><th>cuisine</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>La Tapatia</td><td>123 Main St</td><td>Mexican</td></tr>
+<tr><td>2</td><td>Le Petit Bistro</td><td>456 Elm St</td><td>French</td></tr>
+<tr><td>3</td><td>Il Ristorante</td><td>789 Oak St</td><td>Italian</td></tr>
+<tr><td>4</td><td>The Curry House</td><td>135 Pine St</td><td>Indian</td></tr>
+<tr><td>5</td><td>El Sultan</td><td>246 Maple Ave</td><td>Middle Eastern</td></tr>
+</tbody></table></div>
+
+<div><h2>Menus</h2><table><thead>
+<tr><th>menu_id</th><th>restaurant_id</th><th>dish</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Restaurants.restaurant_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Tacos</td><td>10.99</td></tr>
+<tr><td>2</td><td>1</td><td>Enchiladas</td><td>12.99</td></tr>
+<tr><td>3</td><td>2</td><td>Coq au Vin</td><td>24.99</td></tr>
+<tr><td>4</td><td>2</td><td>Croissant</td><td>3.99</td></tr>
+<tr><td>5</td><td>3</td><td>Spaghetti Carbonara</td><td>15.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>order_id</th><th>customer_id</th><th>restaurant_id</th><th>total_price</th></tr>
+<tr><th></th><th>(&#8594; Customers.customer_id)</th><th>(&#8594; Restaurants.restaurant_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>25.97</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>32.98</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>40.96</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>48.95</td></tr>
+<tr><td>5</td><td>5</td><td>3</td><td>55.94</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

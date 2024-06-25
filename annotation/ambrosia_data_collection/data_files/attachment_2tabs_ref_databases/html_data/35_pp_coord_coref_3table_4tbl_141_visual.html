@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Countries</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Canada</td></tr>
+<tr><td>2</td><td><span style="color:#006600">United States</span></td></tr>
+<tr><td>3</td><td>Australia</td></tr>
+<tr><td>4</td><td>Spain</td></tr>
+<tr><td>5</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>SportsTeams</h2><table><thead>
+<tr><th>id</th><th>teamName</th><th>countryId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Countries.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Toronto Blue Jays</td><td>1</td></tr>
+<tr><td>2</td><td>Los Angeles Dodgers</td><td>2</td></tr>
+<tr><td>3</td><td>Melbourne Stars</td><td>3</td></tr>
+<tr><td>4</td><td>Real Madrid</td><td>4</td></tr>
+<tr><td>5</td><td>Yomiuri Giants</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BaseballTeams</span></h2><table><thead>
+<tr><th>id</th><th>teamName</th><th>countryId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Countries.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Yankees</td><td>1</td></tr>
+<tr><td>2</td><td>San Francisco Giants</td><td>2</td></tr>
+<tr><td>3</td><td>Adelaide Strikers</td><td>3</td></tr>
+<tr><td>4</td><td>Barcelona</td><td>4</td></tr>
+<tr><td>5</td><td>Hiroshima Toyo Carp</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BasketballTeams</span></h2><table><thead>
+<tr><th>id</th><th>teamName</th><th>countryId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Countries.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Golden State Warriors</td><td>1</td></tr>
+<tr><td>2</td><td>Chicago Bulls</td><td>2</td></tr>
+<tr><td>3</td><td>Perth Wildcats</td><td>3</td></tr>
+<tr><td>4</td><td>FC Barcelona</td><td>4</td></tr>
+<tr><td>5</td><td>Yokohama B-Corsairs</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Players</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>birthDate</th><th>sportType</th><th>teamId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; SportsTeams.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-07-15</td><td>Baseball</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-06-20</td><td>Baseball</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>1995-05-15</td><td>Basketball</td><td>3</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>1985-08-25</td><td>Basketball</td><td>4</td></tr>
+<tr><td>5</td><td>Tom</td><td>Green</td><td>1992-09-05</td><td>Baseball</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

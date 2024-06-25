@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">TeamSport</span></h2><table><thead>
+<tr><th>id</th><th>sport</th><th>playerType</th><th>fitnessLevel</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Football</span></td><td>Goalkeeper</td><td><span style="color:#006600">Elite</span></td><td>80000.0</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Football</span></td><td>Midfielder</td><td>Average</td><td>70000.0</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Rugby</span></td><td>Prop</td><td><span style="color:#006600">Elite</span></td><td>60000.0</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Rugby</span></td><td>Winger</td><td>Above Average</td><td>50000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>FootballPlayer</h2><table><thead>
+<tr><th>id</th><th>teamName</th><th>jerseyNumber</th><th>position</th><th>goalsScored</th></tr>
+<tr><th></th><th>(&#8594; TeamSport.sport)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Liverpool FC</td><td>9</td><td>Striker</td><td>30</td></tr>
+<tr><td>2</td><td>Manchester United</td><td>7</td><td>Defender</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>RugbyPlayer</h2><table><thead>
+<tr><th>id</th><th>teamName</th><th>jerseyNumber</th><th>position</th><th>triesScored</th></tr>
+<tr><th></th><th>(&#8594; TeamSport.sport)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leinster</td><td>10</td><td>Scrum Half</td><td>20</td></tr>
+<tr><td>2</td><td>Ulster</td><td>5</td><td>Fullback</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>genre</th><th>releaseYear</th><th>rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Godfather</td><td>Crime</td><td>1972</td><td>9.2</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>Action</td><td>1994</td><td>8.9</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>birthDate</th><th>moviesIn</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Movie.title)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Al Pacino</td><td>Pacino</td><td>1940-04-25</td><td>The Godfather</td></tr>
+<tr><td>2</td><td>John Travolta</td><td>Travolta</td><td>1954-02-18</td><td>Pulp Fiction</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

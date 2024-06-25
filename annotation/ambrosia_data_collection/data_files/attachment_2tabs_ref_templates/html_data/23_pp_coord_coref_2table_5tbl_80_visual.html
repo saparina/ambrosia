@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Lounge</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Capacity</th><th><span style="color:#1430b2">Accessibility</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Premium Lounge</td><td>Terminal A</td><td>200</td><td><span style="color:#1430b2">All</span></td></tr>
+<tr><td>2</td><td>Business Class Lounge</td><td>Terminal B</td><td>300</td><td>Wheelchair Users</td></tr>
+<tr><td>3</td><td>Family Lounge</td><td>Terminal C</td><td>400</td><td><span style="color:#1430b2">All</span></td></tr>
+<tr><td>4</td><td>VIP Lounge</td><td>Terminal D</td><td>500</td><td>Wheelchair Users</td></tr>
+<tr><td>5</td><td>General Lounge</td><td>Terminal E</td><td>600</td><td><span style="color:#1430b2">All</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">ObservationDeck</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>ViewType</th><th>Accessibility</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rooftop Deck</td><td>Near Terminal A</td><td>Panoramic view</td><td><span style="color:#1430b2">All</span></td></tr>
+<tr><td>2</td><td>Windowside Deck</td><td>By Gate 10 at Terminal B</td><td>Tarmac views</td><td>Wheelchair Users</td></tr>
+<tr><td>3</td><td>Elevated Deck</td><td>Between Terminals C and D</td><td>Full airport view</td><td><span style="color:#1430b2">All</span></td></tr>
+<tr><td>4</td><td>Landing Deck</td><td>At end of Pier at Terminal E</td><td>Approaching aircrafts</td><td>Wheelchair Users</td></tr>
+<tr><td>5</td><td>Waterfront Deck</td><td>Close to parking lot</td><td>City skyline and water views</td><td><span style="color:#1430b2">All</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>FlightNumber</th><th>DepartureTime</th><th>Destination</th><th>AircraftModel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA123</td><td>2023-04-01 07:00:00</td><td>New York JFK</td><td>Boeing 787 Dreamliner</td></tr>
+<tr><td>2</td><td>UA999</td><td>2023-04-01 10:00:00</td><td>Los Angeles LAX</td><td>Airbus A320</td></tr>
+<tr><td>3</td><td>DL456</td><td>2023-04-01 13:00:00</td><td>Chicago ORD</td><td>Embraer E190</td></tr>
+<tr><td>4</td><td>WN888</td><td>2023-04-01 16:00:00</td><td>Miami MIA</td><td>Bombardier CRJ-700</td></tr>
+<tr><td>5</td><td>BA100</td><td>2023-04-01 19:00:00</td><td>London Heathrow LHR</td><td>Boing 747-400</td></tr>
+</tbody></table></div>
+
+<div><h2>Gate</h2><table><thead>
+<tr><th>id</th><th>GateNumber</th><th>TerminalName</th><th>AirlinesCode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10</td><td>Terminal A</td><td>AA</td></tr>
+<tr><td>2</td><td>20</td><td>Terminal B</td><td>UA</td></tr>
+<tr><td>3</td><td>30</td><td>Terminal C</td><td>DL</td></tr>
+<tr><td>4</td><td>40</td><td>Terminal D</td><td>WN</td></tr>
+<tr><td>5</td><td>50</td><td>Terminal E</td><td>BA</td></tr>
+</tbody></table></div>
+
+<div><h2>SecurityCheckpoint</h2><table><thead>
+<tr><th>id</th><th>CheckpointLocation</th><th>Accessibility</th><th>OperatingHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main checkpoint near entrance</td><td>All</td><td>05:00 - 22:00</td></tr>
+<tr><td>2</td><td>International Arrivals checkpoint</td><td>Wheelchair Users</td><td>06:00 - 21:00</td></tr>
+<tr><td>3</td><td>Domestic Departures checkpoint</td><td>All</td><td>04:30 - 23:00</td></tr>
+<tr><td>4</td><td>Express checkpoint for elite members</td><td>All</td><td>05:00 - 21:00</td></tr>
+<tr><td>5</td><td>Private checkpoint for VIP passengers</td><td>All</td><td>06:00 - 22:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

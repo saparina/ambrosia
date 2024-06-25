@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Visual_Art_Profession</span></h2><table><thead>
+<tr><th>Profession_ID</th><th>Profession</th><th>Price</th><th>Experience_Level</th><th>Specialization</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Photographer</span></td><td><span style="color:#006600">500.0</span></td><td>Experienced</td><td>Wedding Photography</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Photographer</span></td><td>600.0</td><td>Expert</td><td>Portrait Photography</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Videographer</span></td><td><span style="color:#006600">500.0</span></td><td>Beginner</td><td>Corporate Videos</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Videographer</span></td><td>700.0</td><td>Intermediate</td><td>Documentary Filmmaking</td></tr>
+<tr><td>5</td><td>Graphic Designer</td><td>800.0</td><td>Advanced</td><td>Digital Art</td></tr>
+</tbody></table></div>
+
+<div><h2>Employer</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Studio</td></tr>
+<tr><td>2</td><td>XYZ Agency</td></tr>
+<tr><td>3</td><td>PQR Production House</td></tr>
+<tr><td>4</td><td>LMN Advertising</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosting</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Description</th><th>Date</th><th>Status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Full Time Photographer</td><td>Looking for a full time photographer with experience in wedding photography.</td><td>2023-05-01 00:00:00</td><td>Open</td></tr>
+<tr><td>2</td><td>Part Time Videographer</td><td>We need a part time videographer who can create corporate videos.</td><td>2023-05-01 00:00:00</td><td>Filled</td></tr>
+<tr><td>3</td><td>Graphic Design Internship</td><td>Seeking an intern to assist our design team.</td><td>2023-05-01 00:00:00</td><td>Closed</td></tr>
+<tr><td>4</td><td>Senior Video Editor</td><td>Need a senior video editor for documentary filmmaking projects.</td><td>2023-05-01 00:00:00</td><td>Open</td></tr>
+<tr><td>5</td><td>Event Photographer</td><td>Hiring event photographers for various occasions.</td><td>2023-05-01 00:00:00</td><td>Open</td></tr>
+</tbody></table></div>
+
+<div><h2>AppliesToJobPosting</h2><table><thead>
+<tr><th>Apply_ID</th><th>Job_ID</th><th>Applicant_Name</th><th>Resume_Path</th><th>Application_Date</th></tr>
+<tr><th></th><th>(&#8594; JobPosting.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John Doe</td><td>/path/to/resume.pdf</td><td>2023-05-02 09:30:00</td></tr>
+<tr><td>2</td><td>2</td><td>Jane Smith</td><td>/path/to/another_resume.docx</td><td>2023-05-02 09:35:00</td></tr>
+<tr><td>3</td><td>3</td><td>Michael Johnson</td><td>/path/to/portfolio.html</td><td>2023-05-02 09:40:00</td></tr>
+<tr><td>4</td><td>4</td><td>Emily Brown</td><td>/path/to/portfolio_video.mp4</td><td>2023-05-02 09:45:00</td></tr>
+<tr><td>5</td><td>5</td><td>David Wilson</td><td>/path/to/event_photos.zip</td><td>2023-05-02 09:50:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

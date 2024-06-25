@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Countries</h2><table><thead>
+<tr><th>CountryName</th></tr>
+</thead><tbody>
+<tr><td>United States</td></tr>
+<tr><td>Canada</td></tr>
+<tr><td>Mexico</td></tr>
+<tr><td>France</td></tr>
+<tr><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2>Regions</h2><table><thead>
+<tr><th>RegionName</th><th>CountryId</th></tr>
+<tr><th></th><th>(&#8594; Countries.id)</th></tr>
+</thead><tbody>
+<tr><td>Northeast</td><td>1</td></tr>
+<tr><td>Southwest</td><td>1</td></tr>
+<tr><td>Central</td><td>1</td></tr>
+<tr><td>Atlantic</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Cities</h2><table><thead>
+<tr><th>CityName</th><th>RegionId</th></tr>
+<tr><th></th><th>(&#8594; Regions.id)</th></tr>
+</thead><tbody>
+<tr><td>New York</td><td>1</td></tr>
+<tr><td>Los Angeles</td><td>2</td></tr>
+<tr><td>Chicago</td><td>3</td></tr>
+<tr><td>Houston</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Populations</h2><table><thead>
+<tr><th>CityId</th><th>Year</th><th>TotalPopulation</th></tr>
+<tr><th>(&#8594; Cities.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2000</td><td>8000000</td></tr>
+<tr><td>1</td><td>2010</td><td>8396000</td></tr>
+<tr><td>1</td><td>2020</td><td>8960000</td></tr>
+</tbody></table></div>
+
+<div><h2>AgeDemographics</h2><table><thead>
+<tr><th>CityId</th><th>Year</th><th><span style="color:#990000">MedianAge</span></th><th><span style="color:#990000">AgeRange</span></th><th>PopulationGroup</th></tr>
+<tr><th>(&#8594; Cities.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2000</td><td>35</td><td>18-34</td><td>Young Adults</td></tr>
+<tr><td>1</td><td>2010</td><td>37</td><td>35-44</td><td>Adults</td></tr>
+<tr><td>1</td><td>2020</td><td>39</td><td>45-54</td><td>Older Adults</td></tr>
+</tbody></table></div>
+
+<div><h2>Ethnicity</h2><table><thead>
+<tr><th>CityId</th><th>Year</th><th>WhitePercentage</th><th>BlackOrAfricanAmericanPercentage</th><th>AsianPercentage</th><th>HispanicOrLatinoPercentage</th></tr>
+<tr><th>(&#8594; Cities.id)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2000</td><td>60</td><td>15</td><td>10</td><td>20</td></tr>
+<tr><td>1</td><td>2010</td><td>61</td><td>16</td><td>11</td><td>22</td></tr>
+<tr><td>1</td><td>2020</td><td>62</td><td>17</td><td>12</td><td>23</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

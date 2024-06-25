@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>+123456789</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>+987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>id</th><th>customerId</th><th>accountType</th><th>balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Checking</td><td>500.0</td></tr>
+<tr><td>2</td><td>2</td><td>Savings</td><td>1000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Transactions</span></h2><table><thead>
+<tr><th>id</th><th>accountId</th><th>productType</th><th>amount</th><th><span style="color:#006600">exitFee</span></th><th>transactionDate</th></tr>
+<tr><th></th><th>(&#8594; Accounts.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Stock Purchase</td><td>1000.0</td><td>0.01</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>Bond Sale</td><td>500.0</td><td><span style="color:#006600">0.02</span></td><td>2022-01-02 00:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ExchangeTradedProducts</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>tickerSymbol</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Example ETP</td><td>EXAMPLE</td><td>This is an example of an exchange traded product.</td></tr>
+<tr><td>2</td><td>Another ETP</td><td>ANOTHER</td><td>This is another example of an exchange traded product.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">UnitInvestmentTrusts</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>fundCode</th><th>netAssetValue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Example UIT</td><td>XFUND</td><td>1000.0</td></tr>
+<tr><td>2</td><td>Another UIT</td><td>YFUND</td><td>2000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>ETPUITransactionLinks</h2><table><thead>
+<tr><th>transactionId</th><th>etpId</th><th>uitId</th></tr>
+<tr><th>(&#8594; Transactions.id)</th><th>(&#8594; ExchangeTradedProducts.id)</th><th>(&#8594; UnitInvestmentTrusts.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Banks</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Royal Bank</span></td></tr>
+<tr><td>2</td><td>Central Bank</td></tr>
+<tr><td>3</td><td>Global Bank</td></tr>
+<tr><td>4</td><td>National Bank</td></tr>
+<tr><td>5</td><td>Commercial Bank</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>account_id</th><th>bank_name</th><th>balance</th></tr>
+<tr><th></th><th>(&#8594; Banks.name)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Royal Bank</td><td>20000.75</td></tr>
+<tr><td>2</td><td>Central Bank</td><td>30000.98</td></tr>
+<tr><td>3</td><td>Global Bank</td><td>40000.66</td></tr>
+<tr><td>4</td><td>National Bank</td><td>50000.87</td></tr>
+<tr><td>5</td><td>Commercial Bank</td><td>60000.75</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Currency_Swaps</span></h2><table><thead>
+<tr><th>swap_id</th><th>bank_name</th><th>amount</th><th>maturity_date</th><th>foreign_currency</th></tr>
+<tr><th></th><th>(&#8594; Banks.name)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Royal Bank</td><td>7000.0</td><td>2023-01-01</td><td>Euro</td></tr>
+<tr><td>2</td><td>Central Bank</td><td>8000.0</td><td>2023-01-02</td><td>Yen</td></tr>
+<tr><td>3</td><td>Global Bank</td><td>9000.0</td><td>2023-01-03</td><td>Pound Sterling</td></tr>
+<tr><td>4</td><td>National Bank</td><td>10000.0</td><td>2023-01-04</td><td>Dollar</td></tr>
+<tr><td>5</td><td>Commercial Bank</td><td>11000.0</td><td>2023-01-05</td><td>Franc</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Interest_Rate_Swaps</span></h2><table><thead>
+<tr><th>swap_id</th><th>bank_name</th><th>start_date</th><th>end_date</th><th>fixed_rate</th><th>floating_rate</th></tr>
+<tr><th></th><th>(&#8594; Banks.name)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Royal Bank</td><td>2023-01-01</td><td>2024-01-01</td><td>2.5</td><td>2.6</td></tr>
+<tr><td>2</td><td>Central Bank</td><td>2023-01-02</td><td>2024-01-02</td><td>2.7</td><td>2.8</td></tr>
+<tr><td>3</td><td>Global Bank</td><td>2023-01-03</td><td>2024-01-03</td><td>2.9</td><td>3.0</td></tr>
+<tr><td>4</td><td>National Bank</td><td>2023-01-04</td><td>2024-01-04</td><td>3.1</td><td>3.2</td></tr>
+<tr><td>5</td><td>Commercial Bank</td><td>2023-01-05</td><td>2024-01-05</td><td>3.3</td><td>3.4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

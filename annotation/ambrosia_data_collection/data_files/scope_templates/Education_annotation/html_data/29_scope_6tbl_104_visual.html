@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Graduate_Programs</span></h2><table><thead>
+<tr><th>ProgramID</th><th>Name</th><th>Duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Masters in Business Administration</td><td>2</td></tr>
+<tr><td>2</td><td>PhD in Computer Science</td><td>3</td></tr>
+<tr><td>3</td><td>Masters in English Literature</td><td>2</td></tr>
+<tr><td>4</td><td>Doctorate in Physics</td><td>4</td></tr>
+<tr><td>5</td><td>Masters in Psychology</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Tracks</span></h2><table><thead>
+<tr><th>TrackID</th><th><span style="color:#990000">Value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Business_Administration</td></tr>
+<tr><td>2</td><td>Data_Science</td></tr>
+<tr><td>3</td><td>Literary_Analysis</td></tr>
+<tr><td>4</td><td>Theoretical_Physics</td></tr>
+<tr><td>5</td><td>Cognitive_Psychology</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>EnrollmentDate</th></tr>
+</thead><tbody>
+<tr><td>1001</td><td>John</td><td>Smith</td><td>2020-08-26</td></tr>
+<tr><td>1002</td><td>Jane</td><td>Doe</td><td>2020-09-02</td></tr>
+<tr><td>1003</td><td>Emma</td><td>Wilson</td><td>2020-07-15</td></tr>
+<tr><td>1004</td><td>Michael</td><td>Brown</td><td>2020-06-21</td></tr>
+<tr><td>1005</td><td>Alice</td><td>Jackson</td><td>2020-09-12</td></tr>
+</tbody></table></div>
+
+<div><h2>Course_Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1001</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>1002</td><td>2</td><td>B</td></tr>
+<tr><td>3</td><td>1003</td><td>1</td><td>A</td></tr>
+<tr><td>4</td><td>1004</td><td>2</td><td>B</td></tr>
+<tr><td>5</td><td>1005</td><td>1</td><td>A</td></tr>
+</tbody></table></div>
+
+<div><h2>Graduate_Programs_Tracks</h2><table><thead>
+<tr><th>ProgramTrackID</th><th>GraduateProgramID</th><th>TrackID</th></tr>
+<tr><th></th><th>(&#8594; Graduate_Programs.ProgramID)</th><th>(&#8594; Tracks.TrackID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

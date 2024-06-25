@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Technology</span></h2><table><thead>
+<tr><th>id</th><th>system_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>WordPress</td><td>The most popular CMS for creating websites.</td></tr>
+<tr><td>2</td><td>Drupal</td><td>A powerful open-source CMS known for its flexibility and security features.</td></tr>
+<tr><td>3</td><td>Joomla!</td><td>A user-friendly CMS with numerous extensions and templates.</td></tr>
+<tr><td>4</td><td>Typo3</td><td>A widely used enterprise CMS for large projects.</td></tr>
+<tr><td>5</td><td>Joomla!</td><td>A versatile CMS that can be customized to fit various needs.</td></tr>
+</tbody></table></div>
+
+<div><h2>Online_News_Platform</h2><table><thead>
+<tr><th>id</th><th>platform_name</th><th>url</th><th>cms_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Technology.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily News</td><td>https://www.thedailynews.com</td><td>1</td></tr>
+<tr><td>2</td><td>Tech Today</td><td>https://techtoday.net</td><td>2</td></tr>
+<tr><td>3</td><td>Health Insider</td><td>https://healthinsider.org</td><td>3</td></tr>
+<tr><td>4</td><td>Edu World</td><td>https://eduworld.info</td><td>4</td></tr>
+<tr><td>5</td><td>Fun Times</td><td>https://funtimesmagazine.com</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

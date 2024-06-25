@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genres</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pop</td></tr>
+<tr><td>2</td><td>Rock</td></tr>
+<tr><td>3</td><td>Jazz</td></tr>
+<tr><td>4</td><td>Country</td></tr>
+<tr><td>5</td><td>Hip Hop</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>artist_id</th><th>artist_name</th><th>genre_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Artist A</td><td>1</td></tr>
+<tr><td>2</td><td>Artist B</td><td>2</td></tr>
+<tr><td>3</td><td>Artist C</td><td>3</td></tr>
+<tr><td>4</td><td>Artist D</td><td>4</td></tr>
+<tr><td>5</td><td>Artist E</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Pop_Songs</span></h2><table><thead>
+<tr><th>song_id</th><th>title</th><th>artist_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Artists.artist_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pop Song 1</td><td>1</td></tr>
+<tr><td>2</td><td>Pop Song 2</td><td>2</td></tr>
+<tr><td>3</td><td>Pop Song 3</td><td>3</td></tr>
+<tr><td>4</td><td>Pop Song 4</td><td>4</td></tr>
+<tr><td>5</td><td>Pop Song 5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Hip_Hop_Songs</span></h2><table><thead>
+<tr><th>song_id</th><th>title</th><th>artist_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Artists.artist_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hip Hop Song 1</td><td>1</td></tr>
+<tr><td>2</td><td>Hip Hop Song 2</td><td>2</td></tr>
+<tr><td>3</td><td>Hip Hop Song 3</td><td>3</td></tr>
+<tr><td>4</td><td>Hip Hop Song 4</td><td>4</td></tr>
+<tr><td>5</td><td>Hip Hop Song 5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Concerts</span></h2><table><thead>
+<tr><th>concert_id</th><th><span style="color:#006600">venue_name</span></th><th>artist_id</th><th>pop_song_id</th><th>hip_hop_song_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Artists.artist_id)</th><th>(&#8594; Pop_Songs.song_id)</th><th>(&#8594; Hip_Hop_Songs.song_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Madison Square Garden</td><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>The O2 Arena</td><td>2</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td><span style="color:#006600">Staples Center</span></td><td>3</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Barclays Center</td><td>4</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>Prudential Center</td><td>5</td><td>5</td><td>None</td></tr>
+<tr><td>6</td><td>Madison Square Garden</td><td>1</td><td>None</td><td>1</td></tr>
+<tr><td>7</td><td>The O2 Arena</td><td>2</td><td>None</td><td>2</td></tr>
+<tr><td>8</td><td><span style="color:#006600">Staples Center</span></td><td>3</td><td>None</td><td>3</td></tr>
+<tr><td>9</td><td>Barclays Center</td><td>4</td><td>None</td><td>4</td></tr>
+<tr><td>10</td><td>Prudential Center</td><td>5</td><td>None</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Venues</h2><table><thead>
+<tr><th>venue_id</th><th>venue_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Madison Square Garden</td></tr>
+<tr><td>2</td><td>The O2 Arena</td></tr>
+<tr><td>3</td><td>Staples Center</td></tr>
+<tr><td>4</td><td>Barclays Center</td></tr>
+<tr><td>5</td><td>Prudential Center</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

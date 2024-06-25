@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Training_Center</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Aviation Academ</td></tr>
+<tr><td>2</td><td><span style="color:#006600">New Horizons Aviation</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Flight_Attendants</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Experience</th><th>HireDate</th><th>Training_Center_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Training_Center.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>28</td><td>3</td><td>2019-06-01</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>27</td><td>2</td><td>2018-08-15</td><td>2</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>30</td><td>5</td><td>2015-01-01</td><td>1</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>29</td><td>4</td><td>2017-10-10</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Pilots</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Experience</th><th>LicenseNumber</th><th>Training_Center_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Training_Center.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Brown</td><td>35</td><td>7</td><td>LBAA1234C</td><td>1</td></tr>
+<tr><td>2</td><td>Karen Miller</td><td>31</td><td>6</td><td>LAAB3456D</td><td>2</td></tr>
+<tr><td>3</td><td>Daniel Wilson</td><td>38</td><td>8</td><td>LLBA5678E</td><td>1</td></tr>
+<tr><td>4</td><td>Laura Taylor</td><td>32</td><td>5</td><td>LMNA9012F</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>ID</th><th>Type</th><th>Model</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Passenger</td><td>Boing 777</td><td>300</td></tr>
+<tr><td>2</td><td>Cargo</td><td>MD-11</td><td>100</td></tr>
+<tr><td>3</td><td>Private Jet</td><td>Gulfstream V</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>ID</th><th>DepartureTime</th><th>ArrivalTime</th><th>OriginCity</th><th>DestinationCity</th><th>Aircraft_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Aircrafts.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 08:00:00</td><td>2023-01-01 12:00:00</td><td>Los Angeles</td><td>Chicago</td><td>1</td></tr>
+<tr><td>2</td><td>2023-02-01 10:00:00</td><td>2023-02-01 14:00:00</td><td>San Francisco</td><td>Seattle</td><td>2</td></tr>
+<tr><td>3</td><td>2023-03-01 12:00:00</td><td>2023-03-01 16:00:00</td><td>Miami</td><td>Atlanta</td><td>1</td></tr>
+<tr><td>4</td><td>2023-04-01 09:00:00</td><td>2023-04-01 13:00:00</td><td>Houston</td><td>Denver</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>ID</th><th>Flight_ID</th><th>Pilot_ID</th><th>CoPilot_ID</th></tr>
+<tr><th></th><th>(&#8594; Flights.ID)</th><th>(&#8594; Pilots.ID)</th><th>(&#8594; Pilots.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

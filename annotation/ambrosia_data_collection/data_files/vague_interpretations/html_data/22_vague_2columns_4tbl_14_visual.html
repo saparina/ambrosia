@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th><span style="color:#990000">Total_length</span></th><th><span style="color:#990000">Number_of_acts</span></th><th>Theater_play</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994-09-23</td><td>142</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>Forrest Gump</td><td>1994-06-23</td><td>142</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994-10-14</td><td>154</td><td>7</td><td>0</td></tr>
+<tr><td>4</td><td>Schindler's List</td><td>1993-12-15</td><td>195</td><td>3</td><td>1</td></tr>
+<tr><td>5</td><td>Inception</td><td>2010-07-16</td><td>148</td><td>3</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tim Robbins</td><td>1958-10-16</td><td>American</td></tr>
+<tr><td>2</td><td>Morgan Freeman</td><td>1937-06-01</td><td>American</td></tr>
+<tr><td>3</td><td>John Travolta</td><td>1954-02-18</td><td>American</td></tr>
+<tr><td>4</td><td>Liam Neeson</td><td>1952-06-07</td><td>Irish</td></tr>
+<tr><td>5</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>genre_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Thriller</td></tr>
+<tr><td>3</td><td>Comedy</td></tr>
+<tr><td>4</td><td>Action</td></tr>
+<tr><td>5</td><td>Horror</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>movie_id</th><th>actor_id</th><th>role_name</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Andy DuFresne</td></tr>
+<tr><td>1</td><td>2</td><td>Red</td></tr>
+<tr><td>2</td><td>3</td><td>Benjamin Buford Blue</td></tr>
+<tr><td>3</td><td>4</td><td>Jules Winnfield</td></tr>
+<tr><td>4</td><td>5</td><td>Christian Bodhi</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>director_id</th><th>name</th><th>birth_date</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank Darabont</td><td>1959-01-28</td><td>American</td></tr>
+<tr><td>2</td><td>Robert Zemeckis</td><td>1951-05-14</td><td>American</td></tr>
+<tr><td>3</td><td>Quentin Tarantino</td><td>1963-03-27</td><td>American</td></tr>
+<tr><td>4</td><td>Steven Spielberg</td><td>1946-12-18</td><td>American</td></tr>
+<tr><td>5</td><td>Chris Nolan</td><td>1970-07-30</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Film</h2><table><thead>
+<tr><th>film_id</th><th>director_id</th><th>movie_id</th></tr>
+<tr><th></th><th>(&#8594; Director.director_id)</th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

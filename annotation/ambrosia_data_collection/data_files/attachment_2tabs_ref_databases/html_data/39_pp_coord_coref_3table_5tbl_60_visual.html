@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Music_Festival</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Coachella</td><td>Indio, California</td><td>2019</td></tr>
+<tr><td>2</td><td>Glastonbury</td><td>Pilton, United Kingdom</td><td>2018</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Film_Festival</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cannes Film Festival</td><td>Cannes, France</td><td>2017</td></tr>
+<tr><td>2</td><td>Berlin International Film Festival</td><td>Berlin, Germany</td><td>2016</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Annual_Attendance</span></h2><table><thead>
+<tr><th>festival_id</th><th><span style="color:#006600">attendance_count</span></th></tr>
+<tr><th>(&#8594; Music_Festival.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">50000</span></td></tr>
+<tr><td>2</td><td>35000</td></tr>
+</tbody></table></div>
+
+<div><h2>Artist</h2><table><thead>
+<tr><th>artist_id</th><th>name</th><th>genre</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Beatles</td><td>Rock</td><td>United Kingdom</td></tr>
+<tr><td>2</td><td>Adele</td><td>Pop</td><td>United Kingdom</td></tr>
+</tbody></table></div>
+
+<div><h2>Band</h2><table><thead>
+<tr><th>band_id</th><th>name</th><th>music_genre</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>U2</td><td>Rock</td><td>Ireland</td></tr>
+<tr><td>2</td><td>Radiohead</td><td>Alternative Rock</td><td>United Kingdom</td></tr>
+</tbody></table></div>
+
+<div><h2>Festival_Lineup</h2><table><thead>
+<tr><th>lineup_id</th><th>festival_id</th><th>band_id</th><th>artist_id</th></tr>
+<tr><th></th><th>(&#8594; Annual_Attendance.festival_id)</th><th>(&#8594; Band.band_id)</th><th>(&#8594; Artist.artist_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>None</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

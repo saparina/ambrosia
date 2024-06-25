@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Travel_Writers</span></h2><table><thead>
+<tr><th>writer_id</th><th>full_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>Emily White</td></tr>
+<tr><td>5</td><td>David Black</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Destinations</span></h2><table><thead>
+<tr><th>destination_id</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paris</td></tr>
+<tr><td>2</td><td>Rome</td></tr>
+<tr><td>3</td><td>London</td></tr>
+<tr><td>4</td><td>Tokyo</td></tr>
+<tr><td>5</td><td>New York</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>article_id</th><th>title</th><th>content</th><th>publication_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Exploring Paris</td><td>A journey through the City of Lights...</td><td>2021-08-01</td></tr>
+<tr><td>2</td><td>Discover Rome</td><td>Unraveling the mysteries of ancient Rome...</td><td>2021-07-30</td></tr>
+<tr><td>3</td><td>The Wonders of London</td><td>From Big Ben to Buckingham Palace...</td><td>2021-06-20</td></tr>
+<tr><td>4</td><td>Tokyo - A Modern Metropolis</td><td>High-tech skyscrapers and bustling streets...</td><td>2021-09-15</td></tr>
+<tr><td>5</td><td>The Bright Lights of New York</td><td>Times Square, Broadway, and Central Park...</td><td>2021-08-20</td></tr>
+</tbody></table></div>
+
+<div><h2>Writer_Articles</h2><table><thead>
+<tr><th>writer_article_id</th><th>travel_writer_id</th><th>article_id</th></tr>
+<tr><th></th><th>(&#8594; Travel_Writers.writer_id)</th><th>(&#8594; Articles.article_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Writers_Destination_Pairings</h2><table><thead>
+<tr><th>writer_destination_pairing_id</th><th>travel_writer_id</th><th>destination_id</th></tr>
+<tr><th></th><th>(&#8594; Travel_Writers.writer_id)</th><th>(&#8594; Destinations.destination_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

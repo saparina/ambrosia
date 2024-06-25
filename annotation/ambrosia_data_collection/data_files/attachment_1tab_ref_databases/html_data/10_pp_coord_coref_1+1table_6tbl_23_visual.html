@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alfred Hitchcock</td><td>13 August 1899</td></tr>
+<tr><td>2</td><td>Stanley Kubrick</td><td>26 July 1928</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Fincher</td><td>August 22, 1962</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td><td>July 30, 1970</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CastMembers</span></h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th><span style="color:#990000"><span style="color:#990000">role</span></span></th><th>salary</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Roles.name)</th><th>(&#8594; Salaries.amount)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>Lead Actor</td><td>500000.0</td></tr>
+<tr><td>2</td><td>Meryl</td><td>Streep</td><td>Supporting Actress</td><td>300000.0</td></tr>
+<tr><td>3</td><td>Emma</td><td>Watson</td><td>Co-starring Role</td><td>200000.0</td></tr>
+<tr><td>4</td><td>John</td><td>Doe</td><td><span style="color:#990000">Casting Director</span></td><td><span style="color:#006600">80000.0</span></td></tr>
+<tr><td>5</td><td>Jane</td><td>Smith</td><td><span style="color:#990000">Casting Director</span></td><td>90000.0</td></tr>
+<tr><td>6</td><td>Michael</td><td>Johnson</td><td><span style="color:#990000">Location Scout</span></td><td><span style="color:#006600">80000.0</span></td></tr>
+<tr><td>7</td><td>Lisa</td><td>Brown</td><td><span style="color:#990000">Location Scout</span></td><td>70000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Actor</td></tr>
+<tr><td>2</td><td>Director</td></tr>
+<tr><td>3</td><td>Screenwriter</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Salaries</span></h2><table><thead>
+<tr><th><span style="color:#006600">amount</span></th></tr>
+</thead><tbody>
+<tr><td>500000.0</td></tr>
+<tr><td>300000.0</td></tr>
+<tr><td>200000.0</td></tr>
+<tr><td><span style="color:#006600">80000.0</span></td></tr>
+<tr><td>90000.0</td></tr>
+<tr><td>70000.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

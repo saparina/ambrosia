@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Addresses</h2><table><thead>
+<tr><th>AddressID</th><th>CustomerID</th><th><span style="color:#990000">City</span></th><th><span style="color:#990000">Country</span></th><th>Banks</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>New York</td><td>USA</td><td>Chase</td></tr>
+<tr><td>2</td><td>2</td><td>Los Angeles</td><td>USA</td><td>Bank of America</td></tr>
+<tr><td>3</td><td>3</td><td>Chicago</td><td>USA</td><td>Wells Fargo</td></tr>
+<tr><td>4</td><td>4</td><td>Houston</td><td>USA</td><td>Capital One</td></tr>
+<tr><td>5</td><td>5</td><td>Phoenix</td><td>USA</td><td>US Bank</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerID</th><th>Balance</th><th>InterestRate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1001</td><td>1</td><td>1000</td><td>2</td></tr>
+<tr><td>1002</td><td>2</td><td>8000</td><td>3</td></tr>
+<tr><td>1003</td><td>3</td><td>5000</td><td>2.5</td></tr>
+<tr><td>1004</td><td>4</td><td>7000</td><td>3.5</td></tr>
+<tr><td>1005</td><td>5</td><td>9000</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountNumber</th><th>Amount</th><th>TransactionDate</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1001</td><td>500</td><td>2021-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>1002</td><td>1000</td><td>2021-01-02 10:00:00</td></tr>
+<tr><td>3</td><td>1003</td><td>600</td><td>2021-01-03 10:00:00</td></tr>
+<tr><td>4</td><td>1004</td><td>800</td><td>2021-01-04 10:00:00</td></tr>
+<tr><td>5</td><td>1005</td><td>1100</td><td>2021-01-05 10:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

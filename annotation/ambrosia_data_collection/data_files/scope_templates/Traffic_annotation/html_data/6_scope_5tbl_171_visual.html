@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Train_Stations</span></h2><table><thead>
+<tr><th>StationID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Central</td><td>Downtown</td></tr>
+<tr><td>2</td><td>Parkville</td><td>East Side</td></tr>
+<tr><td>3</td><td>Washington</td><td>West Side</td></tr>
+<tr><td>4</td><td>Lakeview</td><td>North Side</td></tr>
+<tr><td>5</td><td>Riverfront</td><td>South Side</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Platforms</span></h2><table><thead>
+<tr><th>PlatformID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Platform_1</td></tr>
+<tr><td>2</td><td>Platform_2</td></tr>
+<tr><td>3</td><td>Platform_3</td></tr>
+<tr><td>4</td><td>Platform_4</td></tr>
+<tr><td>5</td><td>Platform_5</td></tr>
+</tbody></table></div>
+
+<div><h2>Train_Stations_Platforms</h2><table><thead>
+<tr><th>StationID</th><th>PlatformID</th></tr>
+<tr><th>(&#8594; Train_Stations.StationID)</th><th>(&#8594; Platforms.PlatformID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>4</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

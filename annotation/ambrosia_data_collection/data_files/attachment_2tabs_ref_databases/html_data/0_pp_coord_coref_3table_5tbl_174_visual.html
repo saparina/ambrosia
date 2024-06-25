@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Organization</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Global Corp</td></tr>
+<tr><td>2</td><td>Tech Innovations Inc.</td></tr>
+<tr><td>3</td><td><span style="color:#006600">Financial Services Group</span></td></tr>
+<tr><td>4</td><td>Economic Solutions Ltd.</td></tr>
+<tr><td>5</td><td>Investment Bankers Co.</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Position</th><th>HireDate</th><th>Salary</th><th>OrgID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Organization.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>CEO</td><td>2018-07-30</td><td>95000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>CFO</td><td>2016-05-15</td><td>85000.0</td><td>1</td></tr>
+<tr><td>3</td><td>Michael</td><td>Williams</td><td>CTO</td><td>2017-11-20</td><td>90000.0</td><td>2</td></tr>
+<tr><td>4</td><td>Linda</td><td>Brown</td><td>COO</td><td>2016-09-01</td><td>80000.0</td><td>3</td></tr>
+<tr><td>5</td><td>Tom</td><td>Black</td><td>HR Head</td><td>2018-03-15</td><td>75000.0</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Independent_Director</span></h2><table><thead>
+<tr><th>DirectorID</th><th>EmployeeID</th></tr>
+<tr><th></th><th>(&#8594; Employee.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Executive_Manager</span></h2><table><thead>
+<tr><th>ManagerID</th><th>EmployeeID</th></tr>
+<tr><th></th><th>(&#8594; Employee.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerID</th><th>Balance</th><th>OpenDate</th></tr>
+<tr><th></th><th>(&#8594; Customer.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td><td>2019-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>500.0</td><td>2019-02-01</td></tr>
+<tr><td>3</td><td>3</td><td>2000.0</td><td>2019-03-01</td></tr>
+<tr><td>4</td><td>4</td><td>700.0</td><td>2019-04-01</td></tr>
+<tr><td>5</td><td>5</td><td>1500.0</td><td>2019-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountNumber</th><th>Amount</th><th>Type</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>200.0</td><td>Deposit</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>1</td><td>-50.0</td><td>Withdrawal</td><td>2021-01-15</td></tr>
+<tr><td>3</td><td>2</td><td>300.0</td><td>Deposit</td><td>2021-01-20</td></tr>
+<tr><td>4</td><td>2</td><td>-100.0</td><td>Withdrawal</td><td>2021-01-25</td></tr>
+<tr><td>5</td><td>3</td><td>400.0</td><td>Deposit</td><td>2021-01-30</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>OrgID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Organization.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>White</td><td>1985-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Green</td><td>1988-02-01</td><td>2</td></tr>
+<tr><td>3</td><td>Carol</td><td>Blue</td><td>1990-03-01</td><td>3</td></tr>
+<tr><td>4</td><td>David</td><td>Red</td><td>1991-04-01</td><td>4</td></tr>
+<tr><td>5</td><td>Eva</td><td>Yellow</td><td>1992-05-01</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

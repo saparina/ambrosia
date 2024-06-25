@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Newspapers</h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Location</th><th>YearEstablished</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Guardian</td><td>London, UK</td><td>1959</td></tr>
+<tr><td>2</td><td>The Washington Post</td><td>Washington, DC, US</td><td>1877</td></tr>
+<tr><td>3</td><td>Le Monde</td><td>Paris, France</td><td>1944</td></tr>
+<tr><td>4</td><td>El País</td><td>Madrid, Spain</td><td>1976</td></tr>
+<tr><td>5</td><td>Asahi Shimbun</td><td>Tokyo, Japan</td><td>1879</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>Id</th><th>NewspaperId</th><th>Headline</th><th>Content</th></tr>
+<tr><th></th><th>(&#8594; Newspapers.Id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Climate Change Crisis</td><td>A detailed analysis of climate change and its effects on our planet...</td></tr>
+<tr><td>2</td><td>2</td><td>US Election Updates</td><td>An overview of the latest developments in the US Presidential election...</td></tr>
+<tr><td>3</td><td>3</td><td>Brexit Impact</td><td>How Brexit has affected the economy and daily life in Britain...</td></tr>
+<tr><td>4</td><td>4</td><td>Covid-19 Vaccine Rollout</td><td>Discussing the progress of Covid-19 vaccines worldwide...</td></tr>
+<tr><td>5</td><td>5</td><td>Tech Innovation Trends</td><td>Exploring the current trends in technology innovation...</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>Id</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th>ArticleId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Articles.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+0987654321</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td><td>+0123456789</td><td>3</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>bob.williams@example.com</td><td>+0987654321</td><td>4</td></tr>
+<tr><td>5</td><td>Emma</td><td>Brown</td><td>emma.brown@example.com</td><td>+1234567890</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Jobs</span></h2><table><thead>
+<tr><th>Id</th><th>JobTitle</th><th>Company</th><th>PostedDate</th><th>ContactInfo</th><th>ApplicationDeadline</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Public Relations</span></td><td>BBC</td><td>2022-01-01 10:00:00</td><td><span style="color:#006600">contact@bbc.co.uk</span></td><td>2022-01-15 10:00:00</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Public Relations</span></td><td>ABC News</td><td>2022-01-01 10:00:00</td><td>contact@abcnews.com</td><td>2022-01-15 10:00:00</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Government Communications</span></td><td>BBC</td><td>2022-01-01 10:00:00</td><td><span style="color:#006600">contact@bbc.co.uk</span></td><td>2022-01-15 10:00:00</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Government Communications</span></td><td>White House Press Office</td><td>2022-01-01 10:00:00</td><td>pressoffice@whitehouse.gov</td><td>2022-01-15 10:00:00</td></tr>
+<tr><td>5</td><td>Graphic Designer</td><td>XYZ Advertising Agency</td><td>2022-01-01 10:00:00</td><td>design@xyzadvertising.com</td><td>2022-01-15 10:00:00</td></tr>
+<tr><td>6</td><td>Marketing Manager</td><td>LMN Tech Solutions</td><td>2022-01-01 10:00:00</td><td>manager@lmntechsolutions.com</td><td>2022-01-15 10:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

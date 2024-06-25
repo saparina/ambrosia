@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Publications</span></h2><table><thead>
+<tr><th>PubID</th><th>Name</th><th>Digital_communication</th><th>Magazine</th><th>Printed_version</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">The New Yorker</span></td><td><span style="color:#990000">Social Media</span></td><td><span style="color:#006600">The New Yorker</span></td><td>1</td></tr>
+<tr><td>2</td><td>Another Magazine</td><td><span style="color:#990000">Social Media</span></td><td>Some Other Magazine</td><td>0</td></tr>
+<tr><td>3</td><td>Email Updates</td><td><span style="color:#990000">Email Newsletters</span></td><td><span style="color:#006600">The New Yorker</span></td><td>1</td></tr>
+<tr><td>4</td><td>More Info</td><td><span style="color:#990000">Email Newsletters</span></td><td>Another Company</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th><th>AuthorID</th><th>PubID</th><th>CategoryID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th><th>(&#8594; Publications.PubID)</th><th>(&#8594; Categories.CategoryID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1</td><td>Content of article 1</td><td>2023-01-01 10:00:00</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Article 2</td><td>Content of article 2</td><td>2023-01-02 10:00:00</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Third Article</td><td>Content of third article</td><td>2023-01-03 10:00:00</td><td>1</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Fourth Article</td><td>Content of fourth article</td><td>2023-01-04 10:00:00</td><td>2</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Fifth Article</td><td>Content of fifth article</td><td>2023-01-05 10:00:00</td><td>1</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Categories</h2><table><thead>
+<tr><th>CategoryID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td></tr>
+<tr><td>2</td><td>Technology</td></tr>
+<tr><td>3</td><td>Culture</td></tr>
+<tr><td>4</td><td>Business</td></tr>
+<tr><td>5</td><td>Health</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

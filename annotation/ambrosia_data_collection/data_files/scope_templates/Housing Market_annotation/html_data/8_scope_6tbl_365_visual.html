@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Property_Management_Companies</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company1</td><td>Address1</td></tr>
+<tr><td>2</td><td>Company2</td><td>Address2</td></tr>
+<tr><td>3</td><td>Company3</td><td>Address3</td></tr>
+<tr><td>4</td><td>Company4</td><td>Address4</td></tr>
+<tr><td>5</td><td>Company5</td><td>Address5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Services</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">service_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lease Agreement</td></tr>
+<tr><td>2</td><td>Rent Collection</td></tr>
+<tr><td>3</td><td>Maintenance</td></tr>
+<tr><td>4</td><td>Eviction Service</td></tr>
+<tr><td>5</td><td>Tenant Screening</td></tr>
+</tbody></table></div>
+
+<div><h2>Properties</h2><table><thead>
+<tr><th>id</th><th>property_address</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Property1 Address</td><td>1000000.0</td></tr>
+<tr><td>2</td><td>Property2 Address</td><td>800000.0</td></tr>
+<tr><td>3</td><td>Property3 Address</td><td>900000.0</td></tr>
+<tr><td>4</td><td>Property4 Address</td><td>700000.0</td></tr>
+<tr><td>5</td><td>Property5 Address</td><td>600000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Clients</h2><table><thead>
+<tr><th>id</th><th>client_name</th><th>contact</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Client1 Name</td><td>Contact1</td></tr>
+<tr><td>2</td><td>Client2 Name</td><td>Contact2</td></tr>
+<tr><td>3</td><td>Client3 Name</td><td>Contact3</td></tr>
+<tr><td>4</td><td>Client4 Name</td><td>Contact4</td></tr>
+<tr><td>5</td><td>Client5 Name</td><td>Contact5</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>transaction_id</th><th>property_id</th><th>client_id</th><th>management_company_id</th><th>service_id</th></tr>
+<tr><th></th><th>(&#8594; Properties.id)</th><th>(&#8594; Clients.id)</th><th>(&#8594; Property_Management_Companies.id)</th><th>(&#8594; Services.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Property_Management_Companies_Services</h2><table><thead>
+<tr><th>company_id</th><th>service_id</th></tr>
+<tr><th>(&#8594; Property_Management_Companies.id)</th><th>(&#8594; Services.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

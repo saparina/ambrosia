@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Publishers</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>BOOM Studios</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Marvel</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-07-23</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-10-15</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Comics</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Genre</th><th>YearReleased</th><th>PublisherID</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Publishers.ID)</th><th>(&#8594; Authors.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Fantastic Four</td><td>Superhero</td><td>2020</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Spider-Man</td><td>Superhero</td><td>2021</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">GraphicNovels</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>PageCount</th><th>SeriesName</th><th>PublisherID</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Publishers.ID)</th><th>(&#8594; Authors.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>V For Vendetta</td><td>600</td><td>V For Vendetta</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Watchmen</td><td>400</td><td>Watchmen</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

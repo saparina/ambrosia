@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Scuba_Diving_Centers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Blue Wave</td><td>Cancun</td></tr>
+<tr><td>2</td><td>Sea Explorer</td><td>Mauritius</td></tr>
+<tr><td>3</td><td>Underwater World</td><td>Bali</td></tr>
+<tr><td>4</td><td>Aquatic Adventures</td><td>Hawaii</td></tr>
+<tr><td>5</td><td>Poseidon Divers</td><td>Greece</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Dive_Sites</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">site_name</span></th><th><span style="color:#990000">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great Barrier Reef</td><td>Coral_Reefs</td></tr>
+<tr><td>2</td><td>Shipwreck Cove</td><td>Wrecks</td></tr>
+<tr><td>3</td><td>Shark Alley</td><td>Marine Life</td></tr>
+<tr><td>4</td><td>Turtle Bay</td><td>Marine Life</td></tr>
+<tr><td>5</td><td>The Blue Hole</td><td>Caverns</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>King</td><td>aliceking@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Johnson</td><td>bobjohnson@example.com</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Williams</td><td>charliewilliams@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>booking_id</th><th>customer_id</th><th>scuba_center_id</th><th>dive_site_id</th><th>date</th><th>time</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th>(&#8594; Scuba_Diving_Centers.id)</th><th>(&#8594; Dive_Sites.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2023-07-16</td><td>10:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>2023-08-09</td><td>11:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td><td>2023-09-17</td><td>12:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td><td>2023-10-23</td><td>13:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td><td>2023-11-30</td><td>14:00</td></tr>
+<tr><td>6</td><td>2</td><td>2</td><td>1</td><td>2023-08-09</td><td>11:00</td></tr>
+<tr><td>7</td><td>3</td><td>3</td><td>1</td><td>2023-09-17</td><td>12:00</td></tr>
+<tr><td>8</td><td>4</td><td>4</td><td>1</td><td>2023-10-23</td><td>13:00</td></tr>
+<tr><td>9</td><td>5</td><td>5</td><td>1</td><td>2023-11-30</td><td>14:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-06-15</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2002-08-27</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Diplomas</span></h2><table><thead>
+<tr><th>DiplomaID</th><th>Title</th><th>CompletionRequirements</th><th>UnitsRequired</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bachelor of Science</td><td><span style="color:#006600">Passing Exam</span></td><td>120</td></tr>
+<tr><td>2</td><td>Master of Arts</td><td>Submitting Thesis</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Certificates</span></h2><table><thead>
+<tr><th>CertificateID</th><th>Title</th><th>CompletionRequirements</th><th>Duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Advanced Programming</td><td><span style="color:#006600">Passing Exam</span></td><td>12</td></tr>
+<tr><td>2</td><td>Data Analysis</td><td>Project Submission</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>SubjectID</th><th>Name</th><th>Teacher</th><th>MaxScore</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algebra</td><td>Mr. Johnson</td><td>100</td></tr>
+<tr><td>2</td><td>Calculus</td><td>Mrs. Smith</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrolment</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>SubjectID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Subjects.SubjectID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-09-01</td><td>2022-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-09-01</td><td>2022-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>GradeID</th><th>EnrollmenID</th><th>Score</th><th>DateAwarded</th></tr>
+<tr><th></th><th>(&#8594; Enrolment.EnrollmentID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>95</td><td>2022-12-15</td></tr>
+<tr><td>2</td><td>2</td><td>85</td><td>2022-12-15</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

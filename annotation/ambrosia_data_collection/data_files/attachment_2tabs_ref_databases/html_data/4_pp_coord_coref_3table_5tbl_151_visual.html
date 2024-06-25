@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Actor</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Birth_Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1975</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1980</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Director</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Birth_Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>1965</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>1990</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Release_Date</th><th>Rating</th><th>ActorID</th><th>DirectorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Actor.ID)</th><th>(&#8594; Director.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film A</td><td>2000-01-01</td><td>3.5</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Film B</td><td>2001-01-01</td><td>4.0</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>ID</th><th>Description</th><th>MovieID</th><th>ActorID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Movie.ID)</th><th>(&#8594; Actor.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lead role</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Supporting role</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Scene</h2><table><thead>
+<tr><th>ID</th><th>Description</th><th>Sequence_Number</th><th>MovieID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movie.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Scene 1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Scene 2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Award</span></h2><table><thead>
+<tr><th>ID</th><th>Type</th><th><span style="color:#006600">Year</span></th><th>WinnerID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movie.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Film</td><td>2000</td><td>1</td></tr>
+<tr><td>2</td><td>Best Supporting Actor</td><td><span style="color:#006600">2001</span></td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

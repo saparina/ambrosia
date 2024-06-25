@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Magazines</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Good Housekeeping</td></tr>
+<tr><td>2</td><td>National Geographic</td></tr>
+<tr><td>3</td><td>Time</td></tr>
+<tr><td>4</td><td>Forbes</td></tr>
+<tr><td>5</td><td><span style="color:#006600">The Economist</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AdvertisingRevenues</span></h2><table><thead>
+<tr><th>id</th><th>mag_id</th><th>revenue</th></tr>
+<tr><th></th><th>(&#8594; Magazines.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>20000.0</td></tr>
+<tr><td>2</td><td>2</td><td>30000.0</td></tr>
+<tr><td>3</td><td>3</td><td>25000.0</td></tr>
+<tr><td>4</td><td>4</td><td>35000.0</td></tr>
+<tr><td>5</td><td>5</td><td>40000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SubscriptionFees</span></h2><table><thead>
+<tr><th>id</th><th>mag_id</th><th>fee</th></tr>
+<tr><th></th><th>(&#8594; Magazines.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100.0</td></tr>
+<tr><td>2</td><td>2</td><td>120.0</td></tr>
+<tr><td>3</td><td>3</td><td>90.0</td></tr>
+<tr><td>4</td><td>4</td><td>130.0</td></tr>
+<tr><td>5</td><td>5</td><td>160.0</td></tr>
+</tbody></table></div>
+
+<div><h2>MagazineDetails</h2><table><thead>
+<tr><th>id</th><th>mag_name</th><th>ad_revenue</th><th>sub_fees</th></tr>
+<tr><th></th><th>(&#8594; Magazines.name)</th><th>(&#8594; AdvertisingRevenues.revenue)</th><th>(&#8594; SubscriptionFees.fee)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Good Housekeeping</td><td>20000.0</td><td>100.0</td></tr>
+<tr><td>2</td><td>National Geographic</td><td>30000.0</td><td>120.0</td></tr>
+<tr><td>3</td><td>Time</td><td>25000.0</td><td>90.0</td></tr>
+<tr><td>4</td><td>Forbes</td><td>35000.0</td><td>130.0</td></tr>
+<tr><td>5</td><td>The Economist</td><td>40000.0</td><td>160.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Sponsors</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Nike</span></td></tr>
+<tr><td>2</td><td>Adidas</td></tr>
+</tbody></table></div>
+
+<div><h2>Tennis_Players</h2><table><thead>
+<tr><th>id</th><th>playerName</th><th>tennisTournaments</th></tr>
+<tr><th></th><th></th><th>(&#8594; Tennis_Tournaments.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Roger Federer</td><td>10</td></tr>
+<tr><td>2</td><td>Novak Djokovic</td><td>20</td></tr>
+<tr><td>3</td><td>Stan Wawrinka</td><td>15</td></tr>
+<tr><td>4</td><td>Andy Murray</td><td>30</td></tr>
+<tr><td>5</td><td>Dominic Thiem</td><td>18</td></tr>
+</tbody></table></div>
+
+<div><h2>Golf_Players</h2><table><thead>
+<tr><th>id</th><th>playerName</th><th>golfTournaments</th></tr>
+<tr><th></th><th></th><th>(&#8594; Golf_Tournaments.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tiger Woods</td><td>79</td></tr>
+<tr><td>2</td><td>Phil Mickelson</td><td>46</td></tr>
+<tr><td>3</td><td>Rory McIlroy</td><td>19</td></tr>
+<tr><td>4</td><td>Jordan Spieth</td><td>14</td></tr>
+<tr><td>5</td><td>Justin Rose</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Tennis_Tournaments</span></h2><table><thead>
+<tr><th>id</th><th>tournamentName</th><th>sponsorID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Sponsors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>US Open</td><td>1</td></tr>
+<tr><td>2</td><td>Wimbledon</td><td>2</td></tr>
+<tr><td>3</td><td>Australian Open</td><td>1</td></tr>
+<tr><td>4</td><td>French Open</td><td>2</td></tr>
+<tr><td>5</td><td>ATP Finals</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Golf_Tournaments</span></h2><table><thead>
+<tr><th>id</th><th>tournamentName</th><th>sponsorID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Sponsors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Masters Tournament</td><td>1</td></tr>
+<tr><td>2</td><td>US Open</td><td>2</td></tr>
+<tr><td>3</td><td>The Open Championship</td><td>1</td></tr>
+<tr><td>4</td><td>PGA Championship</td><td>2</td></tr>
+<tr><td>5</td><td>BMW PGA Championship</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Matches</h2><table><thead>
+<tr><th>matchId</th><th>tennisPlayerID</th><th>golferID</th><th>score</th><th>date</th></tr>
+<tr><th></th><th>(&#8594; Tennis_Players.id)</th><th>(&#8594; Golf_Players.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>6-3, 7-5</td><td>2021-09-11</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>6-4, 6-7, 6-4</td><td>2021-09-12</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>6-3, 6-2</td><td>2021-09-13</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>6-4, 7-6</td><td>2021-09-14</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>6-3, 6-3</td><td>2021-09-15</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

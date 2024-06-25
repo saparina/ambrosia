@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>journalists</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>news_agencies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>contact_email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Agencia Noticias</td><td>Madrid, Spain</td><td>contact@noticias.es</td></tr>
+<tr><td>2</td><td>News Hub</td><td>New York City, USA</td><td>contact@newshub.us</td></tr>
+</tbody></table></div>
+
+<div><h2>stories</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publish_date</th><th><span style="color:#990000">journalist_id</span></th><th><span style="color:#990000">news_agency_id</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; journalists.id)</th><th>(&#8594; news_agencies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>US Election Results</td><td>This is an article about recent election results.</td><td>2024-02-19 15:13:19</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>European Economy Overview</td><td>An overview of European economies.</td><td>2024-02-19 15:13:19</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>story_categories</h2><table><thead>
+<tr><th>id</th><th>category_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td><td>Stories about government and political activities.</td></tr>
+<tr><td>2</td><td>Economy</td><td>Articles covering financial matters and economic trends.</td></tr>
+</tbody></table></div>
+
+<div><h2>assigned_stories</h2><table><thead>
+<tr><th>id</th><th>story_id</th><th>journalist_id</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th>(&#8594; stories.id)</th><th>(&#8594; journalists.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-09-01</td><td>2022-09-15</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-09-02</td><td>2022-09-16</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

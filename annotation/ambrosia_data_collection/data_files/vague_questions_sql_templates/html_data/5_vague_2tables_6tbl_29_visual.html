@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Teaching_Subjects</span></h2><table><thead>
+<tr><th>DisciplineID</th><th>Name</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td><td>The study of numbers and their properties.</td></tr>
+<tr><td>2</td><td>Physics</td><td>The study of matter and energy and how they interact.</td></tr>
+<tr><td>3</td><td>Biology</td><td>The study of living organisms and their interactions with their environment.</td></tr>
+<tr><td>4</td><td>Chemistry</td><td>The study of substances and their interactions.</td></tr>
+<tr><td>5</td><td>History</td><td>The study of past events and their causes and effects.</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>DisciplineID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Teaching_Subjects.DisciplineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2005-09-01</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2006-04-15</td><td>2</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>2007-02-20</td><td>3</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>2008-01-05</td><td>4</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>2009-03-10</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Teacher</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>HireDate</th><th>DisciplineID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Teaching_Subjects.DisciplineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Smith</td><td>2010-08-20</td><td>1</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Johnson</td><td>2011-09-15</td><td>2</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Williams</td><td>2012-11-01</td><td>3</td></tr>
+<tr><td>4</td><td>Ms.</td><td>Baker</td><td>2013-02-10</td><td>4</td></tr>
+<tr><td>5</td><td>Mr.</td><td>Thompson</td><td>2014-03-20</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

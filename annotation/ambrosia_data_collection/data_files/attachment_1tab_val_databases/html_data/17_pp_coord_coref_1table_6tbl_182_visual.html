@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St</td><td>555-1234</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St</td><td>555-5678</td></tr>
+<tr><td>3</td><td>Company C</td><td>789 Oak St</td><td>555-9012</td></tr>
+<tr><td>4</td><td>Company D</td><td>321 Pine St</td><td>555-1357</td></tr>
+<tr><td>5</td><td>Company E</td><td>999 Maple Ave</td><td>555-2468</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>id</th><th>locationName</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>University's Main Library</td><td>The main library of a large university.</td></tr>
+<tr><td>2</td><td>City Hall</td><td>A government building that serves as the administrative center of a city.</td></tr>
+<tr><td>3</td><td>Private School</td><td>An independent school not funded by public taxes.</td></tr>
+<tr><td>4</td><td>Hospital</td><td>A medical institution providing healthcare services.</td></tr>
+<tr><td>5</td><td>Research Center</td><td>A facility dedicated to scientific research.</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>startDate</th><th>endDate</th><th>companyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td><td>Developing software applications.</td><td>2022-01-01</td><td>2023-12-31</td><td>1</td></tr>
+<tr><td>2</td><td>Graphic Designer</td><td>Creating visual content.</td><td>2022-02-01</td><td>2023-12-31</td><td>1</td></tr>
+<tr><td>3</td><td>Data Analyst</td><td>Analyzing data sets.</td><td>2022-03-01</td><td>2023-12-31</td><td>2</td></tr>
+<tr><td>4</td><td>HR Specialist</td><td>Managing employee relations.</td><td>2022-04-01</td><td>2023-12-31</td><td>2</td></tr>
+<tr><td>5</td><td>Marketing Manager</td><td>Overseeing marketing campaigns.</td><td>2022-05-01</td><td>2023-12-31</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Information_Management_Jobs</span></h2><table><thead>
+<tr><th>id</th><th>informationType</th><th>jobTitle</th><th>salary</th><th>jobDescription</th><th>locationId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Locations.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#990000">Librarian</span></td><td><span style="color:#990000">Librarian</span></td><td>50000</td><td>Organizing and managing library resources.</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Librarian</span></td><td>Library Assistant</td><td>35000</td><td>Assisting with various tasks in the library.</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Archivist</span></td><td><span style="color:#990000">Archivist</span></td><td>45000</td><td>Preserving historical documents and records.</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Archivist</span></td><td>Records Management Specialist</td><td>40000</td><td>Implementing records management systems.</td><td>3</td></tr>
+<tr><td>5</td><td>Curator</td><td>Curator</td><td>55000</td><td>Managing collections and exhibitions.</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

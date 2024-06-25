@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flight</h2><table><thead>
+<tr><th>flightID</th><th>departureTime</th><th>arrivalTime</th><th>aircraftID</th><th>terminalID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Aircraft.aircraftID)</th><th>(&#8594; Terminal.terminalID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 07:00:00</td><td>2023-01-01 10:00:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2023-01-01 09:00:00</td><td>2023-01-01 11:00:00</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2023-01-01 11:00:00</td><td>2023-01-01 13:00:00</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2023-01-01 14:00:00</td><td>2023-01-01 16:00:00</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>2023-01-01 16:00:00</td><td>2023-01-01 18:00:00</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Passenger</h2><table><thead>
+<tr><th>passengerID</th><th>firstName</th><th>lastName</th><th>flightID</th><th>loungeID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Flight.flightID)</th><th>(&#8594; Lounge.loungeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>Michael</td><td>Johnson</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>Emily</td><td>White</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>aircraftID</th><th>model</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Airbus A320</td><td>200</td></tr>
+<tr><td>2</td><td>Boeing 737</td><td>180</td></tr>
+<tr><td>3</td><td>Embraer E190</td><td>100</td></tr>
+<tr><td>4</td><td>Airbus A380</td><td>500</td></tr>
+<tr><td>5</td><td>Boeing 777</td><td>350</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminal</h2><table><thead>
+<tr><th>terminalID</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal 1</td></tr>
+<tr><td>2</td><td>Terminal 2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Lounge</span></h2><table><thead>
+<tr><th>loungeID</th><th>name</th><th>exclusiveArea</th><th>amenities</th><th>capacity</th><th>terminalID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Terminal.terminalID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Business Class Lounge</td><td><span style="color:#990000">Frequent Flyer Lounge</span></td><td><span style="color:#006600">Complimentary Wi-Fi</span></td><td>100</td><td>1</td></tr>
+<tr><td>2</td><td>Premium Economy Lounge</td><td><span style="color:#990000">Frequent Flyer Lounge</span></td><td>Not Complimentary Wi-Fi</td><td>80</td><td>1</td></tr>
+<tr><td>3</td><td>First Class Lounge</td><td><span style="color:#990000">VIP Lounge</span></td><td><span style="color:#006600">Complimentary Wi-Fi</span></td><td>50</td><td>2</td></tr>
+<tr><td>4</td><td>Golden Wings Lounge</td><td><span style="color:#990000">VIP Lounge</span></td><td>Not Complimentary Wi-Fi</td><td>60</td><td>2</td></tr>
+<tr><td>5</td><td>Silver Stars Lounge</td><td></td><td></td><td>40</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Amenity</h2><table><thead>
+<tr><th>amenityID</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Free high-speed internet access</td></tr>
+<tr><td>2</td><td>Power outlets at every seat</td></tr>
+<tr><td>3</td><td>Quiet zones for relaxation</td></tr>
+<tr><td>4</td><td>Children's play area</td></tr>
+<tr><td>5</td><td>Showers facilities</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

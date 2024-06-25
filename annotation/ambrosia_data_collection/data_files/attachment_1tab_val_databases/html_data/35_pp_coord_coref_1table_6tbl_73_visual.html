@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">sports_team</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>sport</th><th>country</th><th>founded_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Toronto Blue Jays</td><td><span style="color:#990000">Baseball Team</span></td><td>Canada</td><td>1976</td></tr>
+<tr><td>2</td><td>Los Angeles Dodgers</td><td><span style="color:#990000">Baseball Team</span></td><td><span style="color:#006600">USA</span></td><td>1883</td></tr>
+<tr><td>3</td><td>Houston Rockets</td><td><span style="color:#990000">Basketball Team</span></td><td><span style="color:#006600">USA</span></td><td>1967</td></tr>
+<tr><td>4</td><td>Golden State Warriors</td><td><span style="color:#990000">Basketball Team</span></td><td><span style="color:#006600">USA</span></td><td>1946</td></tr>
+<tr><td>5</td><td>Manchester United FC</td><td>Football Club</td><td>UK</td><td>1878</td></tr>
+<tr><td>6</td><td>FC Barcelona</td><td>Football Club</td><td>Spain</td><td>1899</td></tr>
+</tbody></table></div>
+
+<div><h2>movie_actor</h2><table><thead>
+<tr><th>actor_id</th><th>first_name</th><th>last_name</th><th>birthdate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>USA</td></tr>
+<tr><td>2</td><td>Meryl</td><td>Streep</td><td>1949-06-22</td><td>USA</td></tr>
+<tr><td>3</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>USA</td></tr>
+<tr><td>4</td><td>Penélope</td><td>Cruz</td><td>1974-04-28</td><td>Spain</td></tr>
+<tr><td>5</td><td>Roberto</td><td>Benigni</td><td>1952-10-25</td><td>Italy</td></tr>
+</tbody></table></div>
+
+<div><h2>film</h2><table><thead>
+<tr><th>film_id</th><th>title</th><th>release_year</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>Drama</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>Crime</td></tr>
+<tr><td>3</td><td>Forrest Gump</td><td>1994</td><td>Drama</td></tr>
+<tr><td>4</td><td>Inception</td><td>2010</td><td>Action</td></tr>
+<tr><td>5</td><td>Interstellar</td><td>2014</td><td>Adventure</td></tr>
+<tr><td>6</td><td>La La Land</td><td>2016</td><td>Romance</td></tr>
+<tr><td>7</td><td>Titanic</td><td>1997</td><td>Disaster</td></tr>
+</tbody></table></div>
+
+<div><h2>cast</h2><table><thead>
+<tr><th>cast_id</th><th>film_id</th><th>actor_id</th><th>role</th></tr>
+<tr><th></th><th>(&#8594; film.film_id)</th><th>(&#8594; movie_actor.actor_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td><td>Andy Dufresne</td></tr>
+<tr><td>2</td><td>2</td><td>None</td><td>Vincent Vega</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>Forrest Gump</td></tr>
+<tr><td>4</td><td>4</td><td>None</td><td>Dom Cobb</td></tr>
+<tr><td>5</td><td>5</td><td>None</td><td>Cooper</td></tr>
+</tbody></table></div>
+
+<div><h2>concert</h2><table><thead>
+<tr><th>concert_id</th><th>artist_name</th><th>venue</th><th>date</th><th>ticket_price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ed Sheeran</td><td>Wembley Stadium</td><td>2022-06-25</td><td>89.99</td></tr>
+<tr><td>2</td><td>Adele</td><td>Hyde Park</td><td>2022-07-01</td><td>79.99</td></tr>
+<tr><td>3</td><td>Coldplay</td><td>Madison Square Garden</td><td>2022-09-15</td><td>69.99</td></tr>
+<tr><td>4</td><td>Dua Lipa</td><td>Barclaycard Arena</td><td>2022-10-20</td><td>59.99</td></tr>
+<tr><td>5</td><td>Billie Eilish</td><td>O2 Arena</td><td>2022-11-05</td><td>64.99</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

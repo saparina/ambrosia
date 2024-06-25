@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Menus</span></h2><table><thead>
+<tr><th>MenuID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Vegan</td></tr>
+<tr><td>2</td><td>Non-vegan</td></tr>
+<tr><td>3</td><td>Kid Friendly</td></tr>
+<tr><td>4</td><td>Gluten Free</td></tr>
+<tr><td>5</td><td>Desserts</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Craft_Services</span></h2><table><thead>
+<tr><th>ServiceID</th><th>Description</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Fresh Fruit Platter</td><td>20.99</td></tr>
+<tr><td>2</td><td>Assorted Cookies</td><td>18.75</td></tr>
+<tr><td>3</td><td>Mixed Nuts Bowl</td><td>30.66</td></tr>
+<tr><td>4</td><td>Tea & Coffee Station</td><td>15.0</td></tr>
+<tr><td>5</td><td>Water Bottles</td><td>5.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Craft_Services_Menus</h2><table><thead>
+<tr><th>ID</th><th>ServiceID</th><th>MenuID</th></tr>
+<tr><th></th><th>(&#8594; Craft_Services.ServiceID)</th><th>(&#8594; Menus.MenuID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>1</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

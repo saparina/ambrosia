@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>Name</th><th>PhoneNumber</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>+1234567890</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>+0987654321</td><td>janesmith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>OrderID</th><th>CustomerID</th><th>DateOfOrder</th><th>TotalAmount</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01 10:00:00</td><td>50.0</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-02 15:30:00</td><td>75.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Staff</span></h2><table><thead>
+<tr><th>StaffID</th><th>Position</th><th>Kitchen_Personnel</th><th>Experience</th><th>Wage</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Manager</td><td></td><td></td><td>30000</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Sous Chef</span></td><td>Yes</td><td><span style="color:#006600">5 years</span></td><td>25000</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Sous Chef</span></td><td>No</td><td>1 year</td><td>24000</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Cook</span></td><td>Yes</td><td><span style="color:#006600">5 years</span></td><td>20000</td></tr>
+<tr><td>5</td><td><span style="color:#990000">Cook</span></td><td>No</td><td>2 years</td><td>19000</td></tr>
+</tbody></table></div>
+
+<div><h2>Food</h2><table><thead>
+<tr><th>FoodItemID</th><th>ItemName</th><th>Description</th><th>Price</th><th>StockQuantity</th><th>StaffID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Staff.StaffID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pizza Margherita</td><td>Classic Italian pizza with tomato sauce, mozzarella cheese, basil leaves.</td><td>15</td><td>100</td><td>1</td></tr>
+<tr><td>2</td><td>Grilled Salmon</td><td>Fresh salmon fillet grilled to perfection.</td><td>25</td><td>50</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

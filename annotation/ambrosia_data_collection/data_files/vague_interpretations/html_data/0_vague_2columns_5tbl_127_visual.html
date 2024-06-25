@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Reporters</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>PhoneNumber</th><th><span style="color:#990000">Start_Year</span></th><th><span style="color:#990000">Start_Month</span></th><th>ReporterName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>+1234567890</td><td>2005</td><td>1</td><td>JD</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>+0987654321</td><td>2006</td><td>1</td><td>JS</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td><td>+1357924680</td><td>2007</td><td>5</td><td>MJ</td></tr>
+<tr><td>4</td><td>Emma Wilson</td><td>emma@example.com</td><td>+2468135790</td><td>2008</td><td>6</td><td>EW</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david@example.com</td><td>+3690123456</td><td>2009</td><td>7</td><td>DB</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublicationDate</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Reporters.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Importance of Investigative Journalism</td><td>This article discusses...</td><td>2021-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Impact of Social Media on News Consumption</td><td>This article examines...</td><td>2021-01-15</td><td>2</td></tr>
+<tr><td>3</td><td>Climate Change: A Global Crisis</td><td>This article delves into...</td><td>2021-02-01</td><td>3</td></tr>
+<tr><td>4</td><td>Covering Conflicts: The Role of Journalists</td><td>This article explores...</td><td>2021-02-15</td><td>4</td></tr>
+<tr><td>5</td><td>Journalism Ethics: Balancing Truth and Responsibility</td><td>This article analyzes...</td><td>2021-03-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>SourceId</th><th>Name</th><th>ContactInfo</th><th>LastContacted</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Cooper</td><td>alice@example.org</td><td>2021-01-10</td></tr>
+<tr><td>2</td><td>Bob Davis</td><td>bob@example.net</td><td>2021-02-05</td></tr>
+<tr><td>3</td><td>Carol Thompson</td><td>carol@example.co.uk</td><td>2021-02-15</td></tr>
+<tr><td>4</td><td>Daniel Lee</td><td>daniel@example.ca</td><td>2021-03-05</td></tr>
+<tr><td>5</td><td>Elizabeth White</td><td>elizabeth@example.au</td><td>2021-03-10</td></tr>
+</tbody></table></div>
+
+<div><h2>Interviews</h2><table><thead>
+<tr><th>InterviewID</th><th>Date</th><th>SourceId</th><th>Notes</th></tr>
+<tr><th></th><th></th><th>(&#8594; Sources.SourceId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-01-20</td><td>1</td><td>Notes about interview with Alice Cooper</td></tr>
+<tr><td>2</td><td>2021-02-10</td><td>2</td><td>Notes about interview with Bob Davis</td></tr>
+<tr><td>3</td><td>2021-02-20</td><td>3</td><td>Notes about interview with Carol Thompson</td></tr>
+<tr><td>4</td><td>2021-03-05</td><td>4</td><td>Notes about interview with Daniel Lee</td></tr>
+<tr><td>5</td><td>2021-03-15</td><td>5</td><td>Notes about interview with Elizabeth White</td></tr>
+</tbody></table></div>
+
+<div><h2>Magazines</h2><table><thead>
+<tr><th>MagazineId</th><th>Name</th><th>EditorInChiefID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Reporters.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>World Press</td><td>1</td></tr>
+<tr><td>2</td><td>American Chronicle</td><td>2</td></tr>
+<tr><td>3</td><td>European Observer</td><td>3</td></tr>
+<tr><td>4</td><td>Asian Insights</td><td>4</td></tr>
+<tr><td>5</td><td>African Herald</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Stories</h2><table><thead>
+<tr><th>StoryId</th><th>Headline</th><th>Content</th><th>PublishDate</th><th>AssignedToReporterID</th><th>MagazineId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Reporters.ID)</th><th>(&#8594; Magazines.MagazineId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breakthrough in Climate Research</td><td>This story covers a recent breakthrough...</td><td>2021-01-10</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Political Turmoil in South America</td><td>This story dives into the political situation...</td><td>2021-01-15</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Healthcare System Overhaul Proposed</td><td>This story reports on a proposed overhaul...</td><td>2021-02-01</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Revolutionary Technology in Space Exploration</td><td>This story highlights revolutionary technology...</td><td>2021-02-15</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Economic Recovery Strategies Debated</td><td>This story examines various economic recovery strategies...</td><td>2021-03-01</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

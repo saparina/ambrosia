@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Company C</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Company D</td><td>000 Pine St</td></tr>
+<tr><td>5</td><td>Company E</td><td>999 Maple Ave</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosting</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>companyId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Company.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Design and develop software applications.</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze and interpret data sets.</td><td>1</td></tr>
+<tr><td>3</td><td>Graphic Designer</td><td>Create visual designs for marketing materials.</td><td>2</td></tr>
+<tr><td>4</td><td>Product Manager</td><td>Oversee product development and launch.</td><td>2</td></tr>
+<tr><td>5</td><td>Marketing Specialist</td><td>Develop and execute marketing strategies.</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>jobTitle</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>Software Engineer</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>Data Analyst</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>Graphic Designer</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>Product Manager</td></tr>
+<tr><td>5</td><td>Robert</td><td>Black</td><td>Marketing Specialist</td></tr>
+</tbody></table></div>
+
+<div><h2>AppliedJob</h2><table><thead>
+<tr><th>id</th><th>employeeId</th><th>postingId</th><th>applicationDate</th></tr>
+<tr><th></th><th>(&#8594; Employee.id)</th><th>(&#8594; JobPosting.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-08-15 10:30:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-08-15 10:35:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-08-15 10:40:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-08-15 10:45:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-08-15 10:50:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SpacePlanningJob</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Interior Designer</span></td></tr>
+<tr><td>2</td><td>Exterior Designer</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Landscape Architect</span></td></tr>
+<tr><td>4</td><td>Urban Planner</td></tr>
+<tr><td>5</td><td>Architect</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Style</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">styleName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Minimalism</span></td></tr>
+<tr><td>2</td><td>Modern</td></tr>
+<tr><td>3</td><td>Contemporary</td></tr>
+<tr><td>4</td><td>Traditional</td></tr>
+<tr><td>5</td><td>Victorian</td></tr>
+</tbody></table></div>
+
+<div><h2>AssignedJob</h2><table><thead>
+<tr><th>spacePlanningJobId</th><th>styleId</th><th>jobPostingId</th><th>assignedEmployeeId</th><th>startDate</th><th>endDate</th></tr>
+<tr><th>(&#8594; SpacePlanningJob.id)</th><th>(&#8594; Style.id)</th><th>(&#8594; JobPosting.id)</th><th>(&#8594; Employee.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2021-09-01</td><td>2021-09-15</td></tr>
+<tr><td>1</td><td>2</td><td>2</td><td>2</td><td>2021-09-01</td><td>2021-09-15</td></tr>
+<tr><td>2</td><td>1</td><td>3</td><td>3</td><td>2021-09-16</td><td>2021-09-30</td></tr>
+<tr><td>2</td><td>2</td><td>4</td><td>4</td><td>2021-09-16</td><td>2021-09-30</td></tr>
+<tr><td>3</td><td>1</td><td>5</td><td>5</td><td>2021-10-01</td><td>2021-10-15</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

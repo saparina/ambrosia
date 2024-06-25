@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Apartment_Buildings</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>city</th><th>state</th><th>zipcode</th><th>num_units</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Building A</td><td>10 Main St</td><td>New York</td><td>NY</td><td>10001</td><td>30</td></tr>
+<tr><td>2</td><td>Building B</td><td>20 Elm St</td><td>Los Angeles</td><td>CA</td><td>90001</td><td>40</td></tr>
+<tr><td>3</td><td>Building C</td><td>30 Oak St</td><td>Chicago</td><td>IL</td><td>60601</td><td>50</td></tr>
+<tr><td>4</td><td>Building D</td><td>40 Pine St</td><td>Miami</td><td>FL</td><td>33101</td><td>60</td></tr>
+<tr><td>5</td><td>Building E</td><td>50 Maple Ave</td><td>Dallas</td><td>TX</td><td>75201</td><td>70</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Units</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">unit_type</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Studio_Apartment</td><td>Spacious studio apartment with modern amenities</td></tr>
+<tr><td>2</td><td>One-Bedroom</td><td>Comfortable one-bedroom apartment with a fully equipped kitchen</td></tr>
+<tr><td>3</td><td>Two-Bedroom</td><td>Beautiful two-bedroom apartment perfect for families</td></tr>
+<tr><td>4</td><td>Three-Bedroom</td><td>Luxurious three-bedroom apartment with stunning views</td></tr>
+<tr><td>5</td><td>Four-Bedroom</td><td>Elegant four-bedroom apartment with private balcony</td></tr>
+</tbody></table></div>
+
+<div><h2>Apartment_Buildings_Units</h2><table><thead>
+<tr><th>building_id</th><th>unit_id</th></tr>
+<tr><th>(&#8594; Apartment_Buildings.id)</th><th>(&#8594; Units.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Tenants</h2><table><thead>
+<tr><th>tenant_id</th><th>firstname</th><th>lastname</th><th>email</th><th>phone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>555-123-4567</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoemail@email.com</td><td>555-987-6543</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wilson</td><td>alicewilson@email.com</td><td>555-321-9876</td></tr>
+<tr><td>4</td><td>Bob</td><td>Jackson</td><td>bobjackson@email.com</td><td>555-654-3210</td></tr>
+<tr><td>5</td><td>Emily</td><td>Martin</td><td>emilymartin@email.com</td><td>555-135-7890</td></tr>
+</tbody></table></div>
+
+<div><h2>RentPayments</h2><table><thead>
+<tr><th>payment_id</th><th>amount</th><th>paid_date</th><th>due_date</th><th>tenant_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Tenants.tenant_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1200</td><td>2021-10-01</td><td>2021-10-01</td><td>1</td></tr>
+<tr><td>2</td><td>1200</td><td>2021-10-01</td><td>2021-10-01</td><td>2</td></tr>
+<tr><td>3</td><td>1200</td><td>2021-10-01</td><td>2021-10-01</td><td>3</td></tr>
+<tr><td>4</td><td>1200</td><td>2021-10-01</td><td>2021-10-01</td><td>4</td></tr>
+<tr><td>5</td><td>1200</td><td>2021-10-01</td><td>2021-10-01</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>1970-07-30</td><td>British</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td><td>1963-03-27</td><td>American</td></tr>
+<tr><td>3</td><td>Martin Scorsese</td><td>1942-11-22</td><td>American</td></tr>
+<tr><td>4</td><td>Steven Spielberg</td><td>1946-12-18</td><td>American</td></tr>
+<tr><td>5</td><td>Guillermo del Toro</td><td>1964-10-09</td><td>Mexican</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>company</th><th>networth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Heyman</td><td>Heyday Films</td><td>None</td></tr>
+<tr><td>2</td><td>Jeremy Kleiner</td><td>Anonymous Content</td><td>None</td></tr>
+<tr><td>3</td><td>Dede Gardner</td><td>Plan B Entertainment</td><td>None</td></tr>
+<tr><td>4</td><td>Barbara Broccoli</td><td>EON Productions</td><td>None</td></tr>
+<tr><td>5</td><td>Frank Marshall</td><td>Amblin Partners</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseyear</th><th><span style="color:#990000">Production_Cost</span></th><th><span style="color:#990000">Marketing_Expense</span></th><th>genre</th><th>directorId</th><th>producerId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Directors.id)</th><th>(&#8594; Producers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>160000000.0</td><td>150000000.0</td><td>Action/Science Fiction</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>8000000.0</td><td>1000000.0</td><td>Crime/Drama</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>Taxi Driver</td><td>1976</td><td>2000000.0</td><td>5000000.0</td><td>Thriller/Drama</td><td>4</td><td>5</td></tr>
+<tr><td>4</td><td>Schindler's List</td><td>1993</td><td>22000000.0</td><td>10000000.0</td><td>Historical/War</td><td>3</td><td>2</td></tr>
+<tr><td>5</td><td>The Social Network</td><td>2010</td><td>40000000.0</td><td>25000000.0</td><td>Biographical/Drama</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>firstname</th><th>lastname</th><th>birthdate</th><th>roleInFilms</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>Lead Actor</td></tr>
+<tr><td>2</td><td>Tom</td><td>Hardy</td><td>1977-09-15</td><td>Supporting Actor</td></tr>
+<tr><td>3</td><td>Joseph</td><td>Gordon-Levitt</td><td>1981-02-17</td><td>Supporting Actor</td></tr>
+<tr><td>4</td><td>Cate</td><td>Blanchett</td><td>1969-05-14</td><td>Lead Actress</td></tr>
+<tr><td>5</td><td>Marion</td><td>Cotillard</td><td>1975-09-30</td><td>Supporting Actress</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>id</th><th>actorId</th><th>characterName</th><th>salary</th><th>filmId</th></tr>
+<tr><th></th><th>(&#8594; Actors.id)</th><th></th><th></th><th>(&#8594; Films.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Dom Cobb</td><td>10000000.0</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>Eames</td><td>5000000.0</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>Edward Alderson</td><td>4000000.0</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>Elise</td><td>3000000.0</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>Arthur</td><td>2000000.0</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Awards</h2><table><thead>
+<tr><th>id</th><th>awardTitle</th><th>filmId</th><th>yearOfAward</th></tr>
+<tr><th></th><th></th><th>(&#8594; Films.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Director</td><td>1</td><td>2011</td></tr>
+<tr><td>2</td><td>Best Supporting Actor</td><td>1</td><td>2011</td></tr>
+<tr><td>3</td><td>Best Original Screenplay</td><td>1</td><td>2011</td></tr>
+<tr><td>4</td><td>Best Picture</td><td>1</td><td>2011</td></tr>
+<tr><td>5</td><td>Best Cinematography</td><td>1</td><td>2011</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

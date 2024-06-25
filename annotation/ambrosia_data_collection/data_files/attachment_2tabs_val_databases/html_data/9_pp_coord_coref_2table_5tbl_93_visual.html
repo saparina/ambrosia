@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Blockbusters</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director</th><th>ReleaseDate</th><th>BoxOfficeAmount</th><th>FilmFestival</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Avatar</td><td>James Cameron</td><td>2009-12-18</td><td>2765000000.0</td><td><span style="color:#006600">Sundance Film Festival</span></td></tr>
+<tr><td>2</td><td>Titanic</td><td>James Cameron</td><td>1997-12-19</td><td>2000000000.0</td><td>Berlin International Film Festival</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">IndieFilms</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director</th><th>ReleaseDate</th><th>Budget</th><th>FilmFestival</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Little Miss Sunshine</td><td>Jonathan Dayton & Valerie Faris</td><td>2006-07-28</td><td>8000000.0</td><td><span style="color:#006600">Sundance Film Festival</span></td></tr>
+<tr><td>2</td><td>Napoleon Dynamite</td><td>Jared Hess</td><td>2004-03-25</td><td>400000.0</td><td>Slamdance Film Festival</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>46</td><td>American</td></tr>
+<tr><td>2</td><td>Kate Winslet</td><td>44</td><td>British</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>id</th><th>ActorId</th><th>CharacterName</th><th>MovieTitle</th></tr>
+<tr><th></th><th>(&#8594; Actors.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Jack Dawson</td><td>Titanic</td></tr>
+<tr><td>2</td><td>1</td><td>Rick Dalton</td><td>Once Upon a Time... in Hollywood</td></tr>
+</tbody></table></div>
+
+<div><h2>Cinematographers</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>ExperienceInYears</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Roger Deakins</td><td>45</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Genre</th><th>YearOfRelease</th><th>CinematographerId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Cinematographers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Blade Runner</td><td>Science Fiction</td><td>1982</td><td>1</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>Action/Adventure</td><td>2008</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

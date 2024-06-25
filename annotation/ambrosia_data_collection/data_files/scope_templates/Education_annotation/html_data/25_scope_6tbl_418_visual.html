@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Districts</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Population</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>District1</td><td>20000</td></tr>
+<tr><td>2</td><td>District2</td><td>30000</td></tr>
+<tr><td>3</td><td>District3</td><td>40000</td></tr>
+<tr><td>4</td><td>District4</td><td>50000</td></tr>
+<tr><td>5</td><td>District5</td><td>60000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Programs</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000">Name</span></th><th><span style="color:#990000">Description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Special_Education</td><td>A program designed for students with special needs</td></tr>
+<tr><td>2</td><td>General_Education</td><td>Standard curriculum offered in most schools</td></tr>
+<tr><td>3</td><td>Vocational_Training</td><td>Career-focused education and training</td></tr>
+<tr><td>4</td><td>Art_and_Music</td><td>Program focused on creative arts</td></tr>
+<tr><td>5</td><td>Sports</td><td>Physical fitness and sports instruction</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>18</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>17</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>19</td></tr>
+<tr><td>4</td><td>Emma</td><td>Williams</td><td>16</td></tr>
+<tr><td>5</td><td>Jack</td><td>Johnson</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Smith</td><td>Math</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Jones</td><td>English</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Black</td><td>History</td></tr>
+<tr><td>4</td><td>Mr.</td><td>White</td><td>Biology</td></tr>
+<tr><td>5</td><td>Mrs.</td><td>Green</td><td>Chemistry</td></tr>
+</tbody></table></div>
+
+<div><h2>Schools</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>DistrictID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Districts.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>School1</td><td>Address1</td><td>1</td></tr>
+<tr><td>2</td><td>School2</td><td>Address2</td><td>2</td></tr>
+<tr><td>3</td><td>School3</td><td>Address3</td><td>3</td></tr>
+<tr><td>4</td><td>School4</td><td>Address4</td><td>4</td></tr>
+<tr><td>5</td><td>School5</td><td>Address5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>School_Students</h2><table><thead>
+<tr><th>StudentID</th><th>SchoolID</th><th>EnrollmentDate</th></tr>
+<tr><th>(&#8594; Students.ID)</th><th>(&#8594; Schools.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-09-01</td></tr>
+<tr><td>2</td><td>1</td><td>2022-09-01</td></tr>
+<tr><td>3</td><td>2</td><td>2022-09-01</td></tr>
+<tr><td>4</td><td>2</td><td>2022-09-01</td></tr>
+<tr><td>5</td><td>3</td><td>2022-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2>School_Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>SchoolID</th><th>HireDate</th></tr>
+<tr><th>(&#8594; Teachers.ID)</th><th>(&#8594; Schools.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-09-01</td></tr>
+<tr><td>2</td><td>1</td><td>2021-09-01</td></tr>
+<tr><td>3</td><td>2</td><td>2021-09-01</td></tr>
+<tr><td>4</td><td>2</td><td>2021-09-01</td></tr>
+<tr><td>5</td><td>3</td><td>2021-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Districts_Programs</h2><table><thead>
+<tr><th>DistrictID</th><th>ProgramID</th><th>Implemented</th></tr>
+<tr><th>(&#8594; Districts.ID)</th><th>(&#8594; Programs.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>1</td><td>0</td></tr>
+<tr><td>5</td><td>1</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Students_Programs</h2><table><thead>
+<tr><th>StudentID</th><th>ProgramID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th>(&#8594; Students.ID)</th><th>(&#8594; Programs.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-08-01</td><td>2023-05-31</td></tr>
+<tr><td>2</td><td>1</td><td>2022-08-01</td><td>2023-05-31</td></tr>
+<tr><td>3</td><td>2</td><td>2022-08-01</td><td>2023-05-31</td></tr>
+<tr><td>4</td><td>2</td><td>2022-08-01</td><td>2023-05-31</td></tr>
+<tr><td>5</td><td>1</td><td>2022-08-01</td><td>2023-05-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>investors</h2><table><thead>
+<tr><th>investorID</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Spencer</td><td>alice@example.com</td></tr>
+<tr><td>2</td><td>Bob Johnson</td><td>bob@example.com</td></tr>
+<tr><td>3</td><td>Carol Williams</td><td>carol@example.com</td></tr>
+<tr><td>4</td><td>David Brown</td><td>david@example.com</td></tr>
+<tr><td>5</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>stocks</h2><table><thead>
+<tr><th>stockID</th><th>tickerSymbol</th><th>companyName</th><th>industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AAPL</td><td>Apple Inc.</td><td>Technology</td></tr>
+<tr><td>2</td><td>GOOG</td><td>Google LLC</td><td>Technology</td></tr>
+<tr><td>3</td><td>AMZN</td><td>Amazon.com, Inc.</td><td>Retail</td></tr>
+<tr><td>4</td><td>MSFT</td><td>Microsoft Corporation</td><td>Technology</td></tr>
+<tr><td>5</td><td>FB</td><td>Facebook, Inc.</td><td>Technology</td></tr>
+</tbody></table></div>
+
+<div><h2>portfolio</h2><table><thead>
+<tr><th>id</th><th>investorID</th><th>stockID</th><th>sharesOwned</th></tr>
+<tr><th></th><th>(&#8594; investors.investorID)</th><th>(&#8594; stocks.stockID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>100</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>50</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>75</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>100</td></tr>
+<tr><td>5</td><td>5</td><td>3</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">earnings</span></h2><table><thead>
+<tr><th>earningsID</th><th>date</th><th>EPS</th><th>investorID</th><th>stockID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; investors.investorID)</th><th>(&#8594; stocks.stockID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>202<span style="color:#006600">1</span>-06-30</td><td>3.0</td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>2021-09-30</td><td>4.0</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>202<span style="color:#006600">1</span>-<span style="color:#006600">1</span>2-3<span style="color:#006600">1</span></td><td>3.5</td><td>3</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td>2021-09-30</td><td>2.8</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>2021-12-31</td><td>4.2</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">prices</span></h2><table><thead>
+<tr><th>priceID</th><th>date</th><th>sharePrice</th><th>investorID</th><th>stockID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; investors.investorID)</th><th>(&#8594; stocks.stockID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>202<span style="color:#006600">1</span>-06-30</td><td><span style="color:#006600">1</span>50.0</td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>2021-09-30</td><td>160.0</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>202<span style="color:#006600">1</span>-<span style="color:#006600">1</span>2-3<span style="color:#006600">1</span></td><td><span style="color:#006600">1</span>55.0</td><td>3</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td>2021-09-30</td><td>170.0</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>2021-12-31</td><td>165.0</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Office_Address</span></h2><table><thead>
+<tr><th>id</th><th>address</th><th>postal_code</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>60601</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>60602</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">City</span></h2><table><thead>
+<tr><th>id</th><th>city_name</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chicago</td><td>USA</td></tr>
+<tr><td>2</td><td>New York</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>company_name</th><th>industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>Technology</td></tr>
+<tr><td>2</td><td>HealthCo</td><td>Healthcare</td></tr>
+</tbody></table></div>
+
+<div><h2>Internship</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>start_date</th><th>end_date</th><th>office_address_id</th><th>city_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Office_Address.id)</th><th>(&#8594; City.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop and maintain software applications.</td><td>2022-07-01</td><td>2023-08-31</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data to support business decisions.</td><td>2022-09-01</td><td>2023-12-31</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>id</th><th>department_name</th><th>company_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Company.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering</td><td>1</td></tr>
+<tr><td>2</td><td>Marketing</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th>hire_date</th><th>department_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Department.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>555-1234</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>555-5678</td><td>2022-02-01</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Application</h2><table><thead>
+<tr><th>id</th><th>applicant_first_name</th><th>applicant_last_name</th><th>application_date</th><th>internship_id</th><th>employee_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Internship.id)</th><th>(&#8594; Employee.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Brown</td><td>2024-02-19 12:32:36</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Charlie</td><td>Green</td><td>2024-02-19 12:32:36</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Documentaries</span></h2><table><thead>
+<tr><th>ID</th><th>SeriesName</th><th>Genre</th><th>ReleaseYear</th><th>Number_of_Episodes</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Blue Planet</td><td>Nature</td><td>2001</td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>2</td><td>Cosmos: A Spacetime Odyssey</td><td>Science</td><td>2014</td><td>13</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MiniSeries</span></h2><table><thead>
+<tr><th>ID</th><th>SeriesName</th><th>Genre</th><th>ReleaseYear</th><th>Number_of_Episodes</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking Bad</td><td>Crime Drama</td><td>2008</td><td>62</td></tr>
+<tr><td>2</td><td>Band of Brothers</td><td>War</td><td>2001</td><td><span style="color:#006600">10</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ID</th><th>ActorName</th><th>Birthdate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>USA</td></tr>
+<tr><td>2</td><td>Kate Winslet</td><td>1975-10-05</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>RoleID</th><th>ActorId</th><th>SeriesId</th><th>CharacterName</th></tr>
+<tr><th></th><th>(&#8594; Actors.ID)</th><th>(&#8594; Documentaries.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Dr. Alan Grant</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>Claire Dearing</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>RatingID</th><th>SeriesId</th><th>Score</th><th>ReviewText</th></tr>
+<tr><th></th><th>(&#8594; Documentaries.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>9.5</td><td>Great series! Very informative.</td></tr>
+<tr><td>2</td><td>2</td><td>8.5</td><td>Amazing visuals but could use a better storyline.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

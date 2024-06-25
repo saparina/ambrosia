@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">PERFORMERS</span></h2><table><thead>
+<tr><th>ID</th><th>NAME</th><th>AGE</th><th><span style="color:#186e16"><span style="color:#186e16">GENRE</span></span></th><th>STREET_PERFORMER</th><th><span style="color:#1430b2">STREET_LOCATION</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Blaine</td><td>49</td><td><span style="color:#186e16">Magic</span></td><td>1</td><td><span style="color:#1430b2">Times Square, New York</span></td></tr>
+<tr><td>2</td><td>Dynamo</td><td>38</td><td><span style="color:#186e16">Magic</span></td><td>0</td><td>Piccadilly Circus, London</td></tr>
+<tr><td>3</td><td>Marco Tempest</td><td>52</td><td><span style="color:#186e16">Magic</span></td><td>1</td><td>Las Vegas Strip, Las Vegas</td></tr>
+<tr><td>4</td><td>Julius Dein</td><td>27</td><td><span style="color:#186e16">Magic</span></td><td>1</td><td>Leicester Square, London</td></tr>
+<tr><td>5</td><td>Antonin Decouflé</td><td>60</td><td><span style="color:#186e16">Mime</span></td><td>1</td><td><span style="color:#1430b2">Times Square, New York</span></td></tr>
+<tr><td>6</td><td>Jean-Baptiste Thoret</td><td>35</td><td><span style="color:#186e16">Mime</span></td><td>0</td><td>La Defense, Paris</td></tr>
+</tbody></table></div>
+
+<div><h2>SHOWS</h2><table><thead>
+<tr><th>ID</th><th>TITLE</th><th>DURATION</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Magic Show</td><td>90.0</td></tr>
+<tr><td>2</td><td>Mystery Spectacular</td><td>120.0</td></tr>
+<tr><td>3</td><td>Dynamo Live</td><td>105.0</td></tr>
+<tr><td>4</td><td>Illusionists</td><td>110.0</td></tr>
+<tr><td>5</td><td>Deception</td><td>95.0</td></tr>
+</tbody></table></div>
+
+<div><h2>VENUES</h2><table><thead>
+<tr><th>ID</th><th>NAME</th><th>LOCATION</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Broadway Theatre</td><td>New York City</td></tr>
+<tr><td>2</td><td>Royal Variety Performance</td><td>London</td></tr>
+<tr><td>3</td><td>Palazzo del Cinema</td><td>Venice</td></tr>
+<tr><td>4</td><td>Madison Square Garden</td><td>New York City</td></tr>
+<tr><td>5</td><td>Wynn Las Vegas</td><td>Las Vegas</td></tr>
+</tbody></table></div>
+
+<div><h2>SHOW_VENUE_MAPPINGS</h2><table><thead>
+<tr><th>SHOW_ID</th><th>VENUE_ID</th></tr>
+<tr><th>(&#8594; SHOWS.ID)</th><th>(&#8594; VENUES.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>PERFORMER_SHOW</h2><table><thead>
+<tr><th>PERFORMER_ID</th><th>SHOW_ID</th></tr>
+<tr><th>(&#8594; PERFORMERS.ID)</th><th>(&#8594; SHOWS.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

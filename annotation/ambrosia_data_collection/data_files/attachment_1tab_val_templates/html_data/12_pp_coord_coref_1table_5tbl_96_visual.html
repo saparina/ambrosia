@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A1</td><td>City A</td><td>Country A</td></tr>
+<tr><td>2</td><td>A2</td><td>City B</td><td>Country B</td></tr>
+<tr><td>3</td><td>A3</td><td>City C</td><td>Country C</td></tr>
+<tr><td>4</td><td>A4</td><td>City D</td><td>Country D</td></tr>
+<tr><td>5</td><td>A5</td><td>City E</td><td>Country E</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>airlineName</th><th>headquarteredIn</th><th>homeAirportId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alaska Airlines</td><td>USA</td><td>None</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>USA</td><td>None</td></tr>
+<tr><td>3</td><td>United Airlines</td><td>USA</td><td>None</td></tr>
+<tr><td>4</td><td>American Airlines</td><td>USA</td><td>None</td></tr>
+<tr><td>5</td><td>JetBlue Airways</td><td>USA</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>flightNo</th><th>departureTime</th><th>arrivalTime</th><th>originAirportId</th><th>destinationAirportId</th><th>aircraftId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th><th>(&#8594; Manufactures.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA1</td><td>2022-01-01 10:00:00</td><td>2022-01-01 15:00:00</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>DL1</td><td>2022-01-01 11:00:00</td><td>2022-01-01 16:00:00</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>UA1</td><td>2022-01-01 12:00:00</td><td>2022-01-01 17:00:00</td><td>3</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>AS1</td><td>2022-01-01 13:00:00</td><td>2022-01-01 18:00:00</td><td>4</td><td>5</td><td>4</td></tr>
+<tr><td>5</td><td>B61</td><td>2022-01-01 14:00:00</td><td>2022-01-01 19:00:00</td><td>5</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Manufactures</span></h2><table><thead>
+<tr><th>id</th><th>aircraftModel</th><th><span style="color:#186e16"><span style="color:#186e16">manufacturers</span></span></th><th><span style="color:#1430b2">numberOfSeats</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>737 MAX</td><td><span style="color:#186e16">Boeing</span></td><td><span style="color:#1430b2">180</span></td></tr>
+<tr><td>2</td><td>A320neo</td><td><span style="color:#186e16">Airbus</span></td><td><span style="color:#1430b2">180</span></td></tr>
+<tr><td>3</td><td>Bombardier CRJ900</td><td>Canada</td><td>65</td></tr>
+<tr><td>4</td><td>Embraer ERJ-170</td><td>Brazil</td><td>68</td></tr>
+<tr><td>5</td><td><span style="color:#186e16">Airbus</span> A220</td><td><span style="color:#186e16">Airbus</span></td><td>130</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

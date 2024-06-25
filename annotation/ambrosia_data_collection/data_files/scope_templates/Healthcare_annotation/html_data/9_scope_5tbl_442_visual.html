@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Users</h2><table><thead>
+<tr><th>userID</th><th>username</th><th>email</th><th>password</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>User1</td><td>user1@example.com</td><td>password1</td></tr>
+<tr><td>2</td><td>User2</td><td>user2@example.com</td><td>password2</td></tr>
+<tr><td>3</td><td>User3</td><td>user3@example.com</td><td>password3</td></tr>
+<tr><td>4</td><td>User4</td><td>user4@example.com</td><td>password4</td></tr>
+<tr><td>5</td><td>User5</td><td>user5@example.com</td><td>password5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Health_Apps</span></h2><table><thead>
+<tr><th>appID</th><th>name</th><th>description</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>App1</td><td>This is App1</td><td>0.99</td></tr>
+<tr><td>2</td><td>App2</td><td>This is App2</td><td>1.99</td></tr>
+<tr><td>3</td><td>App3</td><td>This is App3</td><td>2.99</td></tr>
+<tr><td>4</td><td>App4</td><td>This is App4</td><td>3.99</td></tr>
+<tr><td>5</td><td>App5</td><td>This is App5</td><td>4.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Functions</span></h2><table><thead>
+<tr><th>functionID</th><th><span style="color:#990000">value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Activity_Tracking</td></tr>
+<tr><td>2</td><td>Calorie_Counting</td></tr>
+<tr><td>3</td><td>Meditation</td></tr>
+<tr><td>4</td><td>Disease_Symptoms</td></tr>
+<tr><td>5</td><td>Blood_Pressure_Monitoring</td></tr>
+</tbody></table></div>
+
+<div><h2>Health_Apps_Functions</h2><table><thead>
+<tr><th>healthAppID</th><th>functionID</th></tr>
+<tr><th>(&#8594; Health_Apps.appID)</th><th>(&#8594; Functions.functionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>reviewID</th><th>rating</th><th>comment</th><th>appID</th><th>userID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Health_Apps.appID)</th><th>(&#8594; Users.userID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Great app!</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>Good but could use some improvements.</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>Worked well overall.</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>Not what I expected.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>1</td><td>Didn't work as promised.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Content_Curating_Techniques</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">technique</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algorithmic_Recommendations</td></tr>
+<tr><td>2</td><td>Editorial_Picks</td></tr>
+<tr><td>3</td><td>Collaborative_Filtering</td></tr>
+<tr><td>4</td><td>Trending_Topics</td></tr>
+<tr><td>5</td><td>User_Feedback</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Streaming_Services</span></h2><table><thead>
+<tr><th>service_id</th><th>name</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>Movies/TV Shows</td></tr>
+<tr><td>2</td><td>Amazon Prime Video</td><td>Movies/TV Shows</td></tr>
+<tr><td>3</td><td>Hulu</td><td>TV Shows/Movies</td></tr>
+<tr><td>4</td><td>Disney+</td><td>Family/Kids</td></tr>
+<tr><td>5</td><td>HBO Max</td><td>Movies/TV Shows</td></tr>
+</tbody></table></div>
+
+<div><h2>Users</h2><table><thead>
+<tr><th>user_id</th><th>username</th><th>password</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JohnDoe123</td><td>password123</td></tr>
+<tr><td>2</td><td>JaneSmith456</td><td>securepass456</td></tr>
+<tr><td>3</td><td>AliceBrown789</td><td>myPassword789</td></tr>
+<tr><td>4</td><td>CharlieBlack012</td><td>strongPass012</td></tr>
+<tr><td>5</td><td>EveWhite345</td><td>easyPeasy345</td></tr>
+</tbody></table></div>
+
+<div><h2>Views</h2><table><thead>
+<tr><th>view_id</th><th>user_id</th><th>streamed_service_id</th><th>viewed_date</th></tr>
+<tr><th></th><th>(&#8594; Users.user_id)</th><th>(&#8594; Streaming_Services.service_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-01-02 15:30:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-01-03 20:45:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-01-04 23:50:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-01-05 00:10:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Services_Content_Curating_Techniques</h2><table><thead>
+<tr><th>streaming_services_content_curating_technique_id</th><th>streaming_service_id</th><th>content_curating_technique_id</th></tr>
+<tr><th></th><th>(&#8594; Streaming_Services.service_id)</th><th>(&#8594; Content_Curating_Techniques.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>5</td></tr>
+<tr><td>6</td><td>2</td><td>1</td></tr>
+<tr><td>7</td><td>3</td><td>1</td></tr>
+<tr><td>8</td><td>4</td><td>1</td></tr>
+<tr><td>9</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

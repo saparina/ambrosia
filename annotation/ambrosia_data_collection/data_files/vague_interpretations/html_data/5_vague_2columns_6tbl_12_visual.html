@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">Year</span></th><th><span style="color:#990000">Month</span></th><th>AlbumName</th><th>Genre</th><th>ArtistId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Artists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2019</td><td>January</td><td>Echoes of the Past</td><td>Classical</td><td>1</td></tr>
+<tr><td>2</td><td>2018</td><td>February</td><td>Symphony No. 3</td><td>Orchestral</td><td>2</td></tr>
+<tr><td>3</td><td>2020</td><td>April</td><td>The Journey Home</td><td>Jazz</td><td>3</td></tr>
+<tr><td>4</td><td>2017</td><td>May</td><td>Piano Sonata No. 14</td><td>Pianosonata</td><td>4</td></tr>
+<tr><td>5</td><td>2016</td><td>October</td><td>Requiem Mass</td><td>Choral</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th><th>Country</th><th>MusicGenre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>1980-06-01</td><td>USA</td><td>Classical</td></tr>
+<tr><td>2</td><td>Emily Johnson</td><td>1985-02-25</td><td>UK</td><td>Pop</td></tr>
+<tr><td>3</td><td>David Brown</td><td>1990-03-07</td><td>Canada</td><td>Rock</td></tr>
+<tr><td>4</td><td>Anna White</td><td>1988-08-10</td><td>Germany</td><td>Blues</td></tr>
+<tr><td>5</td><td>Mark Green</td><td>1992-11-12</td><td>Australia</td><td>Country</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Length</th><th>ReleaseDate</th><th>AlbumId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Albums.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Starlight</td><td>3:20</td><td>2019-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Nostalgic Night</td><td>4:15</td><td>2018-02-15</td><td>2</td></tr>
+<tr><td>3</td><td>Homeward Bound</td><td>4:45</td><td>2020-04-20</td><td>3</td></tr>
+<tr><td>4</td><td>Serenade</td><td>2:55</td><td>2017-05-25</td><td>4</td></tr>
+<tr><td>5</td><td>Dawn Chorus</td><td>3:30</td><td>2016-10-10</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieActors</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td><td>Hollywood Legend</td><td>1956-07-09</td><td>American</td></tr>
+<tr><td>2</td><td>Kate Winslet</td><td>Acclaimed Actress</td><td>1975-10-05</td><td>English</td></tr>
+<tr><td>3</td><td>Leonardo DiCaprio</td><td>Versatile Star</td><td>1974-11-11</td><td>American</td></tr>
+<tr><td>4</td><td>Cate Blanchett</td><td>Talented Performer</td><td>1969-05-14</td><td>Australian</td></tr>
+<tr><td>5</td><td>Christopher Walken</td><td>Distinctive Actor</td><td>1943-03-31</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>Director</th><th>ReleaseDate</th><th>Genre</th><th>Runtime</th></tr>
+<tr><th></th><th></th><th>(&#8594; Directors.DirectorName)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Forest Gump</td><td>Robert Zemeckis</td><td>1994-07-06</td><td>Drama/Romance</td><td>150</td></tr>
+<tr><td>2</td><td>Titanic</td><td>James Cameron</td><td>1997-12-19</td><td>Disaster/Drama</td><td>195</td></tr>
+<tr><td>3</td><td>Inception</td><td>Christopher Nolan</td><td>2010-07-16</td><td>Action/Science Fiction</td><td>128</td></tr>
+<tr><td>4</td><td>The Pursuit of Happyness</td><td>Gabriele Muccino</td><td>2006-12-15</td><td>Biography/Drama</td><td>111</td></tr>
+<tr><td>5</td><td>The Shawshank Redemption</td><td>Frank Darabont</td><td>1994-09-22</td><td>Drama</td><td>142</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>DirectorName</th><th>Birthdate</th><th>Country</th><th>KnownFor</th></tr>
+</thead><tbody>
+<tr><td>Robert Zemeckis</td><td>1946-05-14</td><td>America</td><td>Back to the Future</td></tr>
+<tr><td>James Cameron</td><td>1954-08-16</td><td>Canada</td><td>Avatar</td></tr>
+<tr><td>Christopher Nolan</td><td>1970-07-30</td><td>England</td><td>Dark Knight Trilogy</td></tr>
+<tr><td>Gabriele Muccino</td><td>1967-04-07</td><td>Italy</td><td>Pursuit of Happiness</td></tr>
+<tr><td>Frank Darabont</td><td>1955-01-28</td><td>America</td><td>Shawshank Redemption</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmRatings</h2><table><thead>
+<tr><th>RatingID</th><th>MovieID</th><th>Rating</th><th>Review</th></tr>
+<tr><th></th><th>(&#8594; Movies.MovieID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A+</td><td>Great movie! Loved it.</td></tr>
+<tr><td>2</td><td>2</td><td>A</td><td>Beautiful film with amazing acting.</td></tr>
+<tr><td>3</td><td>3</td><td>A-</td><td>Excellent storyline and special effects.</td></tr>
+<tr><td>4</td><td>4</td><td>B+</td><td>Good plot but could have been better.</td></tr>
+<tr><td>5</td><td>5</td><td>B</td><td>Interesting concept but fell short on execution.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

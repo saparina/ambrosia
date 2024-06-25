@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Production_houses</h2><table><thead>
+<tr><th>houseID</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros</td></tr>
+<tr><td>2</td><td>Disney</td></tr>
+<tr><td>3</td><td>Universal Pictures</td></tr>
+<tr><td>4</td><td>Paramount Pictures</td></tr>
+<tr><td>5</td><td>Fox</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>directorID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Nolan</td></tr>
+<tr><td>2</td><td>Quentin</td><td>Tarantino</td></tr>
+<tr><td>3</td><td>Steven</td><td>Spielberg</td></tr>
+<tr><td>4</td><td>Guillermo</td><td>del Toro</td></tr>
+<tr><td>5</td><td>James</td><td>Cameron</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Movies</span></h2><table><thead>
+<tr><th>movieID</th><th>title</th><th>genre</th><th>duration</th><th>productionHouseID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Production_houses.houseID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td><span style="color:#990000">Action Movie</span></td><td><span style="color:#006600">120</span></td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td><span style="color:#990000">Action Movie</span></td><td>180</td><td>2</td></tr>
+<tr><td>3</td><td>Notting Hill</td><td><span style="color:#990000">Romantic Comedy</span></td><td><span style="color:#006600">120</span></td><td>3</td></tr>
+<tr><td>4</td><td>Avatar</td><td><span style="color:#990000">Romantic Comedy</span></td><td>190</td><td>4</td></tr>
+<tr><td>5</td><td>The Dark Knight</td><td><span style="color:#990000">Action Movie</span></td><td>160</td><td>1</td></tr>
+<tr><td>6</td><td>Indiana Jones and the Last Crusade</td><td><span style="color:#990000">Action Movie</span></td><td>130</td><td>2</td></tr>
+<tr><td>7</td><td>Pretty Woman</td><td><span style="color:#990000">Romantic Comedy</span></td><td><span style="color:#006600">120</span></td><td>3</td></tr>
+<tr><td>8</td><td>Forrest Gump</td><td><span style="color:#990000">Romantic Comedy</span></td><td>170</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>actorID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td></tr>
+<tr><td>2</td><td>Tom</td><td>Hanks</td></tr>
+<tr><td>3</td><td>Meryl</td><td>Streep</td></tr>
+<tr><td>4</td><td>Brad</td><td>Pitt</td></tr>
+<tr><td>5</td><td>Kevin</td><td>Spacey</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>roleID</th><th>actorID</th><th>movieID</th><th>characterType</th></tr>
+<tr><th></th><th>(&#8594; Actors.actorID)</th><th>(&#8594; Movies.movieID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Protagonist</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Antagonist</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Leading Lady</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Supporting Actor</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Villain</td></tr>
+</tbody></table></div>
+
+<div><h2>Director_Roles</h2><table><thead>
+<tr><th>directorID</th><th>movieID</th></tr>
+<tr><th>(&#8594; Directors.directorID)</th><th>(&#8594; Movies.movieID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

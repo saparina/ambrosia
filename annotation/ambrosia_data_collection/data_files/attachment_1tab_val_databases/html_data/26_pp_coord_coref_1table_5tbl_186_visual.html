@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">airports</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th><th>airport_facilities</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>New York</td><td>USA</td><td><span style="color:#990000">Baggage Claim</span></td><td><span style="color:#006600">Terminal 2</span></td></tr>
+<tr><td>2</td><td>Heathrow Airport</td><td>London</td><td>UK</td><td><span style="color:#990000">Security Check</span></td><td>Terminal 3</td></tr>
+<tr><td>3</td><td>Charles de Gaulle</td><td>Paris</td><td>France</td><td><span style="color:#990000">Baggage Claim</span></td><td>Terminal 1</td></tr>
+<tr><td>4</td><td>Hong Kong International</td><td>Hong Kong</td><td>China</td><td><span style="color:#990000">Security Check</span></td><td><span style="color:#006600">Terminal 2</span></td></tr>
+<tr><td>5</td><td>Dubai International</td><td>Dubai</td><td>UAE</td><td><span style="color:#990000">Baggage Claim</span></td><td>Terminal 1</td></tr>
+<tr><td>6</td><td>Tokyo Haneda</td><td>Tokyo</td><td>Japan</td><td><span style="color:#990000">Security Check</span></td><td>Terminal 3</td></tr>
+</tbody></table></div>
+
+<div><h2>terminals</h2><table><thead>
+<tr><th>id</th><th>airport_id</th><th>terminal_number</th></tr>
+<tr><th></th><th>(&#8594; airports.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>flights</h2><table><thead>
+<tr><th>id</th><th>terminal_id</th><th>departure_time</th><th>arrival_time</th><th>destination_city</th></tr>
+<tr><th></th><th>(&#8594; terminals.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>08:00:00</td><td>10:00:00</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>2</td><td>09:00:00</td><td>11:00:00</td><td>Miami</td></tr>
+<tr><td>3</td><td>3</td><td>10:00:00</td><td>12:00:00</td><td>Toronto</td></tr>
+<tr><td>4</td><td>1</td><td>11:00:00</td><td>13:00:00</td><td>San Francisco</td></tr>
+<tr><td>5</td><td>2</td><td>12:00:00</td><td>14:00:00</td><td>Seattle</td></tr>
+</tbody></table></div>
+
+<div><h2>passengers</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>age</th><th>flight_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; flights.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>30</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>27</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>42</td><td>3</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>65</td><td>4</td></tr>
+<tr><td>5</td><td>Emma</td><td>Taylor</td><td>23</td><td>5</td></tr>
+<tr><td>6</td><td>Michael</td><td>Anderson</td><td>35</td><td>6</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

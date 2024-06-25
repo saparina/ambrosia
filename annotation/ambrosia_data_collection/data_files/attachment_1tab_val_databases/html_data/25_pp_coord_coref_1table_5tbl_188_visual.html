@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Flights</span></h2><table><thead>
+<tr><th>flightID</th><th>originAirportID</th><th>destinationAirportID</th><th>departureDate</th><th>arrivalDate</th><th>flightCategory</th><th>boardingTime</th></tr>
+<tr><th></th><th>(&#8594; Airports.airportID)</th><th>(&#8594; Airports.airportID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>2023-07-18 09:00</td><td>2023-07-18 16:00</td><td><span style="color:#990000">International Flight</span></td><td><span style="color:#006600">10:00</span></td></tr>
+<tr><td>2</td><td>1</td><td>3</td><td>2023-07-19 08:00</td><td>2023-07-19 15:00</td><td><span style="color:#990000">International Flight</span></td><td>09:30</td></tr>
+<tr><td>3</td><td>1</td><td>2</td><td>2023-07-20 09:00</td><td>2023-07-20 16:00</td><td><span style="color:#990000">Domestic Flight</span></td><td><span style="color:#006600">10:00</span></td></tr>
+<tr><td>4</td><td>4</td><td>5</td><td>2023-07-21 08:00</td><td>2023-07-21 15:00</td><td><span style="color:#990000">Domestic Flight</span></td><td>10:30</td></tr>
+<tr><td>5</td><td>1</td><td>6</td><td>2023-07-22 10:00</td><td>2023-07-22 17:00</td><td>Regional Flight</td><td>09:30</td></tr>
+<tr><td>6</td><td>2</td><td>3</td><td>2023-07-23 09:00</td><td>2023-07-23 16:00</td><td>Charter Flight</td><td>11:00</td></tr>
+<tr><td>7</td><td>3</td><td>1</td><td>2023-07-24 08:00</td><td>2023-07-24 15:00</td><td>Private Jet</td><td>12:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passengerID</th><th>fullName</th><th>dateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1990-01-01</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1985-06-15</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>2000-09-03</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>1992-10-20</td></tr>
+<tr><td>5</td><td>David Brown</td><td>1988-12-05</td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>planeID</th><th>model</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 747</td><td>400</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>800</td></tr>
+<tr><td>3</td><td>Embraer E195</td><td>110</td></tr>
+<tr><td>4</td><td>Bombardier CRJ700</td><td>65</td></tr>
+<tr><td>5</td><td>Gulfstream G650</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>StaffMembers</h2><table><thead>
+<tr><th>staffMemberID</th><th>firstName</th><th>lastName</th><th>position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Adams</td><td>Pilot</td></tr>
+<tr><td>2</td><td>Bob</td><td>Smith</td><td>Co-pilot</td></tr>
+<tr><td>3</td><td>Carol</td><td>Johnson</td><td>Customer Service Agent</td></tr>
+<tr><td>4</td><td>Dave</td><td>Williams</td><td>Manager</td></tr>
+<tr><td>5</td><td>Eva</td><td>Jones</td><td>Maintenance Technician</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>bookingID</th><th>flightID</th><th>passengerID</th><th>bookedByStaffMemberID</th><th>bookedAt</th></tr>
+<tr><th></th><th>(&#8594; Flights.flightID)</th><th>(&#8594; Passengers.passengerID)</th><th>(&#8594; StaffMembers.staffMemberID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2024-03-07 22:47:19</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>1</td><td>2024-03-07 22:47:19</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2</td><td>2024-03-07 22:47:19</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>3</td><td>2024-03-07 22:47:19</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>4</td><td>2024-03-07 22:47:19</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>assignmentID</th><th>planeID</th><th>assignedToStaffMemberID</th><th>startDateTime</th><th>endDateTime</th></tr>
+<tr><th></th><th>(&#8594; Planes.planeID)</th><th>(&#8594; StaffMembers.staffMemberID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-07-22 07:00</td><td>2023-07-22 16:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-07-23 06:00</td><td>2023-07-23 15:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-07-24 05:00</td><td>2023-07-24 14:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-07-25 06:00</td><td>2023-07-25 15:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-07-26 05:00</td><td>2023-07-26 14:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Google</td><td>Mountain View</td></tr>
+<tr><td>2</td><td>Facebook</td><td>Menlo Park</td></tr>
+<tr><td>3</td><td>Amazon</td><td>Seattle</td></tr>
+<tr><td>4</td><td>Apple</td><td>Cupertino</td></tr>
+<tr><td>5</td><td>Microsoft</td><td>Redmond</td></tr>
+</tbody></table></div>
+
+<div><h2>Position</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td><td>Develop software applications.</td><td>80000.0</td></tr>
+<tr><td>2</td><td>Web Designer</td><td>Design websites and user interfaces.</td><td>60000.0</td></tr>
+<tr><td>3</td><td>System Administrator</td><td>Maintain computer systems and networks.</td><td>70000.0</td></tr>
+<tr><td>4</td><td>Database Analyst</td><td>Analyze data and provide insights.</td><td>90000.0</td></tr>
+<tr><td>5</td><td>Project Manager</td><td>Manage projects and resources.</td><td>100000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Skill</h2><table><thead>
+<tr><th>id</th><th>skillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python</td></tr>
+<tr><td>2</td><td>JavaScript</td></tr>
+<tr><td>3</td><td>SQL</td></tr>
+<tr><td>4</td><td>PHP</td></tr>
+<tr><td>5</td><td>Ruby</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">TechnicalProfessional</span></h2><table><thead>
+<tr><th>id</th><th>role</th><th>programmingSkills</th><th>companyId</th><th>positionId</th><th>skillId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Company.id)</th><th>(&#8594; Position.id)</th><th>(&#8594; Skill.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Software Engineer</span></td><td><span style="color:#006600">Python</span></td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Software Engineer</span></td><td>JavaScript</td><td>2</td><td>1</td><td>3</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Data Scientist</span></td><td><span style="color:#006600">Python</span></td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Data Scientist</span></td><td>R</td><td>4</td><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

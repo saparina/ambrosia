@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Roles</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">Role</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Actor</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Director</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">People</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th><span style="color:#006600">Birth_year</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1975</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#006600">1980</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Release_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie1</td><td>2000-01-01</td></tr>
+<tr><td>2</td><td>Movie2</td><td>2005-06-01</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieRoles</h2><table><thead>
+<tr><th>MovieId</th><th>PersonId</th><th>RoleId</th></tr>
+<tr><th>(&#8594; Movies.id)</th><th>(&#8594; People.id)</th><th>(&#8594; Roles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>DirectorMovies</h2><table><thead>
+<tr><th>DirectorId</th><th>MovieId</th></tr>
+<tr><th>(&#8594; People.id)</th><th>(&#8594; Movies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ActorMovies</h2><table><thead>
+<tr><th>ActorId</th><th>MovieId</th></tr>
+<tr><th>(&#8594; People.id)</th><th>(&#8594; Movies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

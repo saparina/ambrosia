@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">City</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">New York</span></td></tr>
+<tr><td>2</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Houston</td></tr>
+<tr><td>5</td><td>Phoenix</td></tr>
+</tbody></table></div>
+
+<div><h2>Hotel</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>city_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; City.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Plaza</td><td>Central Park South, New York, NY 10019</td><td>1</td></tr>
+<tr><td>2</td><td>Beverly Wilshire</td><td>9500 Wilshire Blvd., Beverly Hills, CA 90212</td><td>2</td></tr>
+<tr><td>3</td><td>Palmer House Hilton</td><td>17 E Monroe St., Chicago, IL 60603</td><td>3</td></tr>
+<tr><td>4</td><td>Marriott Marquis Houston</td><td>1777 Walker St., Houston, TX 77010</td><td>4</td></tr>
+<tr><td>5</td><td>Fairmont Scottsdale Princess</td><td>7575 East Princess Dr., Phoenix, AZ 85054</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>RoomType</h2><table><thead>
+<tr><th>id</th><th>hotel_id</th><th>type</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Hotel.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Standard</td><td>250</td></tr>
+<tr><td>2</td><td>1</td><td>Deluxe</td><td>300</td></tr>
+<tr><td>3</td><td>2</td><td>Luxury Suite</td><td>700</td></tr>
+<tr><td>4</td><td>3</td><td>Executive Suite</td><td>400</td></tr>
+<tr><td>5</td><td>4</td><td>Family Suite</td><td>250</td></tr>
+<tr><td>6</td><td>5</td><td>Garden View</td><td>200</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">LeisureFeature</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">feature</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Swimming Pool</span></td></tr>
+<tr><td>2</td><td>Hot Tub</td></tr>
+</tbody></table></div>
+
+<div><h2>FeatureInRoom</h2><table><thead>
+<tr><th>id</th><th>roomtype_id</th><th>leisurefeature_id</th></tr>
+<tr><th></th><th>(&#8594; RoomType.id)</th><th>(&#8594; LeisureFeature.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservation</h2><table><thead>
+<tr><th>id</th><th>checkin_date</th><th>checkout_date</th><th>roomtype_id</th><th>customer_name</th><th>guest_count</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; RoomType.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01</td><td>2023-01-05</td><td>1</td><td>John Doe</td><td>2</td></tr>
+<tr><td>2</td><td>2023-01-10</td><td>2023-01-15</td><td>2</td><td>Jane Smith</td><td>3</td></tr>
+<tr><td>3</td><td>2023-02-01</td><td>2023-02-05</td><td>3</td><td>Alice Johnson</td><td>1</td></tr>
+<tr><td>4</td><td>2023-02-10</td><td>2023-02-15</td><td>4</td><td>Bob Brown</td><td>2</td></tr>
+<tr><td>5</td><td>2023-03-01</td><td>2023-03-05</td><td>5</td><td>Carol White</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

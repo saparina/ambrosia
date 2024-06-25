@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Publishers</span></h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>Address</th><th>Email</th><th><span style="color:#1430b2">PhoneNumber</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pearson</td><td>New York</td><td>pearson@example.com</td><td><span style="color:#1430b2">1234567890</span></td></tr>
+<tr><td>2</td><td>Random House</td><td>Los Angeles</td><td>randomhouse@example.com</td><td>0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">EducationalMaterials</span></h2><table><thead>
+<tr><th>MaterialID</th><th>Title</th><th><span style="color:#186e16">Type</span></th><th>ISBN</th><th>PublisherID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Publishers.PublisherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math Book</td><td><span style="color:#186e16">Textbook</span></td><td>12345</td><td>1</td></tr>
+<tr><td>2</td><td>Physics Book</td><td><span style="color:#186e16">Textbook</span></td><td>67890</td><td>2</td></tr>
+<tr><td>3</td><td>Computer Science E-Book</td><td>E-Book</td><td>13579</td><td>1</td></tr>
+<tr><td>4</td><td>Biology E-Book</td><td>E-Book</td><td>24680</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1999-02-02</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael</td><td>Johnson</td><td>michael@example.com</td></tr>
+<tr><td>2</td><td>Emily</td><td>Williams</td><td>emily@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>CourseID</th><th>StudentID</th><th>Semester</th><th>Year</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Courses.CourseID)</th><th>(&#8594; Students.StudentID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Spring</td><td>2021</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Fall</td><td>2021</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>CourseTitle</th><th>Department</th><th>TeacherID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Calculus</td><td>Mathematics</td><td>1</td></tr>
+<tr><td>2</td><td>English Literature</td><td>Language Arts</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

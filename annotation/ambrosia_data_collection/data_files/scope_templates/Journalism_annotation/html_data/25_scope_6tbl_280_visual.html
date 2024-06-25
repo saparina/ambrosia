@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Real_Estate_Reporters</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Markets</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">market_name</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Luxury Homes</td><td>High-end residential properties.</td></tr>
+<tr><td>2</td><td>Affordable Housing</td><td>Moderately priced homes for first-time buyers.</td></tr>
+<tr><td>3</td><td>Commercial Properties</td><td>Offices, retail spaces, industrial buildings.</td></tr>
+<tr><td>4</td><td>Rural Land</td><td>Agriculture land and rural estates.</td></tr>
+<tr><td>5</td><td>Investment Properties</td><td>Properties purchased for investment purposes.</td></tr>
+</tbody></table></div>
+
+<div><h2>Real_Estate_Reporters_Markets</h2><table><thead>
+<tr><th>reporter_id</th><th>market_id</th></tr>
+<tr><th>(&#8594; Real_Estate_Reporters.id)</th><th>(&#8594; Markets.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>article_id</th><th>title</th><th>content</th><th>published_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New Luxury Home Development</td><td>Details about a new luxury home development...</td><td>2021-09-01</td></tr>
+<tr><td>2</td><td>First Time Buyers Guide</td><td>Tips for first time home buyers...</td><td>2021-08-15</td></tr>
+<tr><td>3</td><td>Office Space Trends</td><td>The latest trends in office space...</td><td>2021-07-30</td></tr>
+<tr><td>4</td><td>Farmland vs Investment Property</td><td>Comparing farmland and investment property...</td><td>2021-06-20</td></tr>
+<tr><td>5</td><td>Retail Space Revival</td><td>How retail spaces are making a comeback...</td><td>2021-05-15</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

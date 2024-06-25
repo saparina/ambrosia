@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airlines</h2><table><thead>
+<tr><th>AirlineID</th><th>Name</th><th>Headquarters</th><th>Founded</th><th>Website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>Fort Worth, Texas</td><td>1930-04-15</td><td>https://www.aa.com</td></tr>
+<tr><td>2</td><td>United Airlines</td><td>Chicago, Illinois</td><td>1926-07-01</td><td>https://www.united.com</td></tr>
+<tr><td>3</td><td>Delta Air Lines</td><td>Atlanta, Georgia</td><td>1928-04-17</td><td>https://www.delta.com</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>Dallas, Texas</td><td>1967-03-15</td><td>https://www.southwest.com</td></tr>
+<tr><td>5</td><td>JetBlue Airways</td><td>New York City, New York</td><td>2000-02-11</td><td>https://www.jetblue.com</td></tr>
+</tbody></table></div>
+
+<div><h2>FlightRoutes</h2><table><thead>
+<tr><th>RouteID</th><th>OriginAirport</th><th>DestinationAirport</th><th>DepartureTime</th><th>ArrivalTime</th><th>AircraftType</th><th>SeatsAvailable</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>DFW</td><td>LAX</td><td>2023-03-01 07:00:00</td><td>2023-03-01 11:00:00</td><td>Boeing 737</td><td>150</td></tr>
+<tr><td>2</td><td>ATL</td><td>ORD</td><td>2023-03-01 08:00:00</td><td>2023-03-01 12:00:00</td><td>Airbus A320</td><td>200</td></tr>
+<tr><td>3</td><td>SEA</td><td>SFO</td><td>2023-03-01 09:00:00</td><td>2023-03-01 13:00:00</td><td>Boeing 787</td><td>250</td></tr>
+<tr><td>4</td><td>EWR</td><td>MIA</td><td>2023-03-01 10:00:00</td><td>2023-03-01 14:00:00</td><td>Airbus A321</td><td>225</td></tr>
+<tr><td>5</td><td>IAH</td><td>LAX</td><td>2023-03-01 11:00:00</td><td>2023-03-01 15:00:00</td><td>Boeing 777</td><td>300</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-01-01</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1992-02-15</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>1988-03-20</td><td>alice.johnson@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>1991-04-05</td><td>bob.williams@example.com</td></tr>
+<tr><td>5</td><td>Emma</td><td>Martinez</td><td>1993-05-10</td><td>emma.martinez@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>BaggageLimits</h2><table><thead>
+<tr><th>LimitID</th><th><span style="color:#990000">BagWeightLimit</span></th><th><span style="color:#990000">BagPieceLimit</span></th><th>Airlines</th><th>CheckInDeadline</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>30</td><td>2</td><td>All</td><td>2023-03-01 02:00:00</td></tr>
+<tr><td>2</td><td>40</td><td>3</td><td>Delta</td><td>2023-03-01 03:00:00</td></tr>
+<tr><td>3</td><td>35</td><td>2</td><td>Southwest</td><td>2023-03-01 04:00:00</td></tr>
+<tr><td>4</td><td>25</td><td>1</td><td>JetBlue</td><td>2023-03-01 05:00:00</td></tr>
+<tr><td>5</td><td>20</td><td>1</td><td>Other</td><td>2023-03-01 06:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>AirportFacilities</h2><table><thead>
+<tr><th>FacilityID</th><th>AirportName</th><th>TerminalCount</th><th>RestaurantCount</th><th>ShoppingMallCount</th><th>ParkingCapacity</th><th>WiFiAvailability</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>DFW International Airport</td><td>5</td><td>100</td><td>20</td><td>10000</td><td>1</td></tr>
+<tr><td>2</td><td>Los Angeles International Airport</td><td>9</td><td>150</td><td>30</td><td>12000</td><td>1</td></tr>
+<tr><td>3</td><td>Hartsfield–Jackson Atlanta International Airport</td><td>6</td><td>120</td><td>40</td><td>15000</td><td>1</td></tr>
+<tr><td>4</td><td>Seattle–Tacoma International Airport</td><td>4</td><td>80</td><td>25</td><td>10000</td><td>1</td></tr>
+<tr><td>5</td><td>Newark Liberty International Airport</td><td>3</td><td>60</td><td>15</td><td>12000</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>SecurityCheckpoints</h2><table><thead>
+<tr><th>CheckpointID</th><th>AirportName</th><th>Location</th><th>OpeningHours</th><th>StaffCount</th><th>WaitTimes</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>DFW International Airport</td><td>Terminal A</td><td>04:00 - 22:00</td><td>100</td><td>30</td></tr>
+<tr><td>2</td><td>Los Angeles International Airport</td><td>Tom Bradley International Terminal</td><td>04:00 - 22:00</td><td>120</td><td>45</td></tr>
+<tr><td>3</td><td>Hartsfield–Jackson Atlanta International Airport</td><td>Domestic Terminal North</td><td>04:00 - 22:00</td><td>150</td><td>40</td></tr>
+<tr><td>4</td><td>Seattle–Tacoma International Airport</td><td>North Satellite</td><td>04:00 - 22:00</td><td>80</td><td>35</td></tr>
+<tr><td>5</td><td>Newark Liberty International Airport</td><td>Terminal A</td><td>04:00 - 22:00</td><td>110</td><td>50</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

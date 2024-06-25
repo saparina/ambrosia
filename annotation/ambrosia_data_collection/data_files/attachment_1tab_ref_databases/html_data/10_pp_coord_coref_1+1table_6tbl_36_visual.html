@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>Heathrow</td><td>London</td><td>UK</td></tr>
+<tr><td>3</td><td>Charles de Gaulle</td><td>Paris</td><td>France</td></tr>
+<tr><td>4</td><td>Hong Kong International</td><td>Hong Kong</td><td>China</td></tr>
+<tr><td>5</td><td>Tokyo Haneda</td><td>Tokyo</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>id</th><th>airportId</th><th>terminalNumber</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>name</th><th>headQuarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>British Airways</td><td>UK</td></tr>
+<tr><td>2</td><td>American Airlines</td><td>US</td></tr>
+<tr><td>3</td><td>Air France</td><td>France</td></tr>
+<tr><td>4</td><td>Cathay Pacific</td><td>Hong Kong</td></tr>
+<tr><td>5</td><td>All Nippon Airways</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flightNumber</th><th>airlineId</th><th>departureTerminalId</th><th>arrivalTerminalId</th></tr>
+<tr><th></th><th>(&#8594; Airlines.id)</th><th>(&#8594; Terminals.id)</th><th>(&#8594; Terminals.id)</th></tr>
+</thead><tbody>
+<tr><td>101</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>202</td><td>2</td><td>3</td><td>5</td></tr>
+<tr><td>303</td><td>3</td><td>2</td><td>4</td></tr>
+<tr><td>404</td><td>4</td><td>1</td><td>1</td></tr>
+<tr><td>505</td><td>5</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Medical_Facilities</h2><table><thead>
+<tr><th>facilityName</th><th>type</th><th>supplies</th></tr>
+</thead><tbody>
+<tr><td>Medical Clinic</td><td>Healthcare</td><td>None</td></tr>
+<tr><td>First Aid Station</td><td>Emergency Care</td><td>None</td></tr>
+<tr><td>Pharmacy</td><td>Drugstore</td><td>None</td></tr>
+<tr><td>Physiotherapy Center</td><td>Rehabilitation</td><td>None</td></tr>
+<tr><td>Mental Health Clinic</td><td>Psychiatry</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Medical_Supplies</span></h2><table><thead>
+<tr><th>supplyName</th><th><span style="color:#006600">description</span></th></tr>
+</thead><tbody>
+<tr><td>Bandages and Antiseptics</td><td><span style="color:#006600">Used to clean and cover wounds.</span></td></tr>
+<tr><td>Intravenous Drip</td><td>Delivers fluids, electrolytes, medications, etc., directly into a vein.</td></tr>
+<tr><td>Oxygen Mask</td><td>Device that provides oxygen during emergencies.</td></tr>
+<tr><td>Defibrillator Pads</td><td>Used to deliver an electric shock to restore normal heart rhythm.</td></tr>
+<tr><td>Stethoscope</td><td>A tool used to listen to internal sounds made by the body.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FacilitySupplies</span></h2><table><thead>
+<tr><th><span style="color:#990000"><span style="color:#990000">facilityName</span></span></th><th>supplyName</th></tr>
+<tr><th>(&#8594; Medical_Facilities.facilityName)</th><th>(&#8594; Medical_Supplies.supplyName)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#990000">Medical Clinic</span></td><td>Bandages and Antiseptics</td></tr>
+<tr><td><span style="color:#990000">Medical Clinic</span></td><td>Intravenous Drip</td></tr>
+<tr><td><span style="color:#990000">First Aid Station</span></td><td>Bandages and Antiseptics</td></tr>
+<tr><td><span style="color:#990000">First Aid Station</span></td><td>Oxygen Mask</td></tr>
+<tr><td>Pharmacy</td><td>Defibrillator Pads</td></tr>
+<tr><td>Pharmacy</td><td>Stethoscope</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

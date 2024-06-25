@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Educator</h2><table><thead>
+<tr><th>id</th><th>name</th><th>specialization</th><th>yearsOfExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Mathematics</td><td>8</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Physics</td><td>7</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>Biology</td><td>6</td></tr>
+<tr><td>4</td><td>Bob Johnson</td><td>Computer Science</td><td>9</td></tr>
+<tr><td>5</td><td>Charlie White</td><td>English Literature</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Course</h2><table><thead>
+<tr><th>courseId</th><th>title</th><th>description</th><th>duration</th><th>educatorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Educator.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Calculus</td><td>A basic introduction to calculus.</td><td>120</td><td>1</td></tr>
+<tr><td>2</td><td>General Physics I</td><td>An overview of fundamental physics concepts.</td><td>150</td><td>2</td></tr>
+<tr><td>3</td><td>Advanced Biology</td><td>Exploring complex biological systems.</td><td>180</td><td>3</td></tr>
+<tr><td>4</td><td>Data Structures and Algorithms</td><td>Learn about various data structures and algorithms.</td><td>150</td><td>4</td></tr>
+<tr><td>5</td><td>Great American Novels</td><td>Discussion on major works by classic American authors.</td><td>120</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>studentId</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th><th>enrolledCourses</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1990-05-22</td><td>None</td></tr>
+<tr><td>2</td><td>Emma</td><td>Watson</td><td>1990-11-15</td><td>None</td></tr>
+<tr><td>3</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>None</td></tr>
+<tr><td>4</td><td>Kate</td><td>Winslet</td><td>1975-10-05</td><td>None</td></tr>
+<tr><td>5</td><td>Robert</td><td>Downey Jr</td><td>1965-04-04</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Venue</span></h2><table><thead>
+<tr><th>venueId</th><th>name</th><th>location</th><th><span style="color:#186e16"><span style="color:#186e16">educationalVenue</span></span></th><th><span style="color:#1430b2">ticketPrice</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The <span style="color:#186e16">Museum</span></td><td>Central City</td><td><span style="color:#186e16">Museum</span></td><td><span style="color:#1430b2">$15</span></td></tr>
+<tr><td>2</td><td>Stellar <span style="color:#186e16">Planetarium</span></td><td>South Side</td><td><span style="color:#186e16">Planetarium</span></td><td>$16</td></tr>
+<tr><td>3</td><td>Natural History <span style="color:#186e16">Museum</span></td><td>West End</td><td><span style="color:#186e16">Museum</span></td><td>$17</td></tr>
+<tr><td>4</td><td>Galaxy <span style="color:#186e16">Planetarium</span></td><td>East Town</td><td><span style="color:#186e16">Planetarium</span></td><td><span style="color:#1430b2">$15</span></td></tr>
+<tr><td>5</td><td>Art Gallery</td><td>North Point</td><td>Art Exhibition Hall</td><td>Free Entry</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>authorID</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michaeljohnson@example.com</td></tr>
+<tr><td>4</td><td>Emily Brown</td><td>emilybrown@example.com</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>davidwilson@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>articleID</th><th>title</th><th>content</th><th>publicationDate</th><th>authorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.authorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Article Title</td><td>This is the first article content.</td><td>2024-02-19 14:35:51</td><td>1</td></tr>
+<tr><td>2</td><td>Second Article Title</td><td>This is the second article content.</td><td>2024-02-19 14:35:51</td><td>2</td></tr>
+<tr><td>3</td><td>Third Article Title</td><td>This is the third article content.</td><td>2024-02-19 14:35:51</td><td>3</td></tr>
+<tr><td>4</td><td>Fourth Article Title</td><td>This is the fourth article content.</td><td>2024-02-19 14:35:51</td><td>4</td></tr>
+<tr><td>5</td><td>Fifth Article Title</td><td>This is the fifth article content.</td><td>2024-02-19 14:35:51</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>sourceID</th><th>name</th><th>url</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The New York Times</td><td>https://www.nytimes.com/</td></tr>
+<tr><td>2</td><td>CNN</td><td>https://www.cnn.com/</td></tr>
+<tr><td>3</td><td>BBC News</td><td>https://www.bbc.co.uk/news/</td></tr>
+<tr><td>4</td><td>Al Jazeera</td><td>https://www.aljazeera.com/</td></tr>
+<tr><td>5</td><td>Deutsche Welle</td><td>https://www.dw.com/</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleSources</h2><table><thead>
+<tr><th>articleSourceID</th><th>articleID</th><th>sourceID</th><th>referenceDate</th></tr>
+<tr><th></th><th>(&#8594; Articles.articleID)</th><th>(&#8594; Sources.sourceID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-07-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-07-01 10:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-07-01 10:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-07-01 10:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-07-01 10:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>ContentManagementSystems</h2><table><thead>
+<tr><th>cmsId</th><th><span style="color:#990000">Technology</span></th><th>Online_News_Platform</th></tr>
+<tr><th>(&#8594; Articles.authorID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>WordPress</td><td>Newspack</td></tr>
+<tr><td>2</td><td>Drupal</td><td>Tribune Content Agency</td></tr>
+<tr><td>3</td><td>Joomla</td><td>LimeSurvey</td></tr>
+<tr><td>4</td><td>Plone</td><td>Pelagios</td></tr>
+<tr><td>5</td><td>Concrete5</td><td>Zen Cart</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

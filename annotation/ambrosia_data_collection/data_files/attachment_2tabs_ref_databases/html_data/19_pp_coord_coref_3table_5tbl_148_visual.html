@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Audio_Equipments</span></h2><table><thead>
+<tr><th>EquipmentID</th><th><span style="color:#006600">EquipmentName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Beyerdynamic T1</span></td></tr>
+<tr><td>2</td><td>Shure SE846</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Music_Therapists</span></h2><table><thead>
+<tr><th>TherapistID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th>SoundCloudURL</th><th>SpotifyURL</th><th>AudioEquipmentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Audio_Equipments.EquipmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td><td>https://soundcloud.com/johndoe</td><td>https://open.spotify.com/artist/123456789</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+0987654321</td><td>https://soundcloud.com/janesmith</td><td>https://open.spotify.com/artist/abcdefghij</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Sound_Engineers</span></h2><table><thead>
+<tr><th>EngineerID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th>LinkedInURL</th><th>GitHubURL</th><th>AudioEquipmentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Audio_Equipments.EquipmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike</td><td>Johnson</td><td>mike.johnson@example.com</td><td>+1234567890</td><td>https://www.linkedin.com/in/mikejohnson</td><td>https://github.com/mikejohnson</td><td>1</td></tr>
+<tr><td>2</td><td>Emily</td><td>Williams</td><td>emily.williams@example.com</td><td>+0987654321</td><td>https://www.linkedin.com/in/emilywilliams</td><td>https://github.com/emilywilliams</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>PostingID</th><th>Title</th><th>Description</th><th>Location</th><th>PostedDate</th><th>ClosingDate</th><th>MusicTherapistID</th><th>SoundEngineerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Music_Therapists.TherapistID)</th><th>(&#8594; Sound_Engineers.EngineerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Music Therapist</td><td>Seeking a certified music therapist...</td><td>New York, NY</td><td>2024-03-13 19:46:07</td><td>2023-01-31</td><td>None</td><td>None</td></tr>
+<tr><td>2</td><td>Sound Engineer</td><td>Experienced sound engineer needed...</td><td>Los Angeles, CA</td><td>2024-03-13 19:46:07</td><td>2023-01-31</td><td>None</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ApplicationID</th><th>FullName</th><th>Email</th><th>ResumeText</th><th>CoverLetter</th><th>InterviewStatus</th><th>JobPostingID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; JobPostings.PostingID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td><td>Resume Text</td><td>Cover Letter</td><td>Interviewed</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td><td>Resume Text</td><td>Cover Letter</td><td>Not Interviewed</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

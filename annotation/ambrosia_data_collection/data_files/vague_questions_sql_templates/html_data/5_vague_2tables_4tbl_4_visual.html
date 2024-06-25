@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Qualifications</span></h2><table><thead>
+<tr><th>id</th><th>level_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bachelor</td><td>A bachelors degree is typically a four-year undergraduate program.</td></tr>
+<tr><td>2</td><td>Master</td><td>A masters degree is usually pursued after obtaining a bachelors degree and can take one to three years.</td></tr>
+<tr><td>3</td><td>PhD</td><td>A doctoral degree requires extensive research and study beyond a master's degree.</td></tr>
+<tr><td>4</td><td>Associate</td><td>An associate degree is typically a two-year program that provides vocational training.</td></tr>
+<tr><td>5</td><td>High School Diploma</td><td>A high school diploma represents completion of secondary education.</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Type</h2><table><thead>
+<tr><th>id</th><th>type_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Full Time</td><td>Permanent position offering regular hours and benefits.</td></tr>
+<tr><td>2</td><td>Part Time</td><td>Non-permanent position with limited hours and benefits.</td></tr>
+<tr><td>3</td><td>Contract</td><td>Temporary position for a fixed period of time.</td></tr>
+<tr><td>4</td><td>Internship</td><td>Short-term work experience opportunity often related to educational field.</td></tr>
+<tr><td>5</td><td>Freelance</td><td>Independent contractor providing services on a per-project basis.</td></tr>
+</tbody></table></div>
+
+<div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>company_name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Tech Corporation</td><td>New York</td></tr>
+<tr><td>2</td><td>XYZ Software Solutions</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>MNO Consulting Group</td><td>Chicago</td></tr>
+<tr><td>4</td><td>KLM International Inc.</td><td>Los Angeles</td></tr>
+<tr><td>5</td><td>RST Media Networks</td><td>Washington</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicant</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th>application_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>555-123-4567</td><td>2024-02-19 12:44:27</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td><td>555-987-6543</td><td>2024-02-19 12:44:27</td></tr>
+<tr><td>3</td><td>Alice</td><td>Williams</td><td>alicewilliams@email.com</td><td>555-098-7654</td><td>2024-02-19 12:44:27</td></tr>
+<tr><td>4</td><td>Tom</td><td>Brown</td><td>tommybrown@email.com</td><td>555-135-7890</td><td>2024-02-19 12:44:27</td></tr>
+<tr><td>5</td><td>Emily</td><td>Green</td><td>emilygreen@email.com</td><td>555-246-8790</td><td>2024-02-19 12:44:27</td></tr>
+</tbody></table></div>
+
+<div><h2>Application</h2><table><thead>
+<tr><th>id</th><th>applicant_id</th><th>job_post_id</th><th>resume_url</th><th>cover_letter</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Applicant.id)</th><th>(&#8594; Job_Post.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>https://example.com/resume/johnsmith.pdf</td><td>https://example.com/coverletters/johnsmith.txt</td><td>Received</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>https://example.com/resume/johnsmith.pdf</td><td>https://example.com/coverletters/johnsmith.txt</td><td>Rejected</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>https://example.com/resume/janedoe.pdf</td><td>https://example.com/coverletters/janedoe.txt</td><td>Interview Scheduled</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>https://example.com/resume/janedoe.pdf</td><td>https://example.com/coverletters/janedoe.txt</td><td>Hired</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>https://example.com/resume/alicewilliams.pdf</td><td>https://example.com/coverletters/alicewilliams.txt</td><td>Waitlisted</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Post</h2><table><thead>
+<tr><th>id</th><th>title</th><th>job_type_id</th><th>degree_level_id</th><th>company_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Job_Type.id)</th><th>(&#8594; Qualifications.id)</th><th>(&#8594; Company.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>1</td><td>3</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>UX Designer</td><td>1</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>Marketing Manager</td><td>1</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>HR Specialist</td><td>2</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

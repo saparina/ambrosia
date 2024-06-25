@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Chalets</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Accommodation</th><th>Price_Per_Night</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ashford</td><td><span style="color:#990000">Chalet</span></td><td><span style="color:#006600">200.0</span></td><td>6</td></tr>
+<tr><td>2</td><td>Beechwood</td><td><span style="color:#990000">Chalet</span></td><td>180.0</td><td>4</td></tr>
+<tr><td>3</td><td>Canterbury</td><td><span style="color:#990000">Chalet</span></td><td>300.0</td><td>8</td></tr>
+<tr><td>4</td><td>Durham</td><td><span style="color:#990000">Cabin</span></td><td><span style="color:#006600">200.0</span></td><td>2</td></tr>
+<tr><td>5</td><td>Exeter</td><td><span style="color:#990000">Cabin</span></td><td>190.0</td><td>4</td></tr>
+<tr><td>6</td><td>Gloucester</td><td><span style="color:#990000">Cabin</span></td><td>220.0</td><td>6</td></tr>
+<tr><td>7</td><td>Hampshire</td><td><span style="color:#990000">Chalet</span></td><td>250.0</td><td>10</td></tr>
+<tr><td>8</td><td>IsleOfWight</td><td><span style="color:#990000">Cabin</span></td><td>270.0</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Cabins</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Accommodation</th><th>Price_Per_Night</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jersey</td><td>Cabin</td><td>200.0</td><td>2</td></tr>
+<tr><td>2</td><td>Lancaster</td><td>Cabin</td><td>180.0</td><td>4</td></tr>
+<tr><td>3</td><td>Leicester</td><td>Cabin</td><td>300.0</td><td>8</td></tr>
+<tr><td>4</td><td>Newcastle</td><td>Chalet</td><td>200.0</td><td>6</td></tr>
+<tr><td>5</td><td>Nottingham</td><td>Chalet</td><td>190.0</td><td>4</td></tr>
+<tr><td>6</td><td>Shrewsbury</td><td>Chalet</td><td>220.0</td><td>6</td></tr>
+<tr><td>7</td><td>Somerset</td><td>Chalet</td><td>250.0</td><td>10</td></tr>
+<tr><td>8</td><td>Staffordshire</td><td>Cabin</td><td>270.0</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>ContactNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>+123456789</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>+987654321</td><td>janedoe@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>id</th><th>GuestId</th><th>StartDate</th><th>EndDate</th><th>AccommodationType</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td><td>2022-01-07</td><td>Chalet</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-01</td><td>2022-01-07</td><td>Cabin</td></tr>
+<tr><td>3</td><td>3</td><td>2022-01-15</td><td>2022-01-22</td><td>Chalet</td></tr>
+<tr><td>4</td><td>4</td><td>2022-01-15</td><td>2022-01-22</td><td>Cabin</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

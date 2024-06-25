@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1985-07-06</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1990-03-12</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>1975-10-24</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Movies</span></h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th><span style="color:#186e16"><span style="color:#186e16">Genre</span></span></th><th><span style="color:#1430b2">Budget</span></th><th>ReleaseYear</th><th>DirectorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Scary Night</td><td><span style="color:#186e16">Horror</span></td><td><span style="color:#1430b2">20 million USD</span></td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>Silent Shadows</td><td><span style="color:#186e16">Horror</span></td><td>15 million USD</td><td>2005</td><td>2</td></tr>
+<tr><td>3</td><td>Chilling Escape</td><td><span style="color:#186e16">Thriller</span></td><td><span style="color:#1430b2">20 million USD</span></td><td>2009</td><td>3</td></tr>
+<tr><td>4</td><td>Twisted Minds</td><td><span style="color:#186e16">Thriller</span></td><td>10 million USD</td><td>2015</td><td>3</td></tr>
+<tr><td>5</td><td>Action Adventure</td><td>Adventure</td><td>12 million USD</td><td>2012</td><td>1</td></tr>
+<tr><td>6</td><td>Fantasy Quest</td><td>Fantasy</td><td>15 million USD</td><td>2011</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td></tr>
+<tr><td>2</td><td>Emma</td><td>Stone</td><td>1988-11-06</td></tr>
+<tr><td>3</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>RoleID</th><th>MovieID</th><th>ActorID</th><th>CharacterName</th></tr>
+<tr><th></th><th>(&#8594; Movies.MovieID)</th><th>(&#8594; Actors.ActorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Jack</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>Samantha</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>David</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>Lucy</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>Kevin</td></tr>
+<tr><td>6</td><td>6</td><td>3</td><td>Rachel</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Guests</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>098-765-4321</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>555-123-4567</td></tr>
+<tr><td>4</td><td>Charlie</td><td>Green</td><td>charlie.green@example.com</td><td>555-555-5555</td></tr>
+<tr><td>5</td><td>David</td><td>White</td><td>david.white@example.com</td><td>555-555-5556</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Rooms</span></h2><table><thead>
+<tr><th>RoomID</th><th><span style="color:#186e16">TypeOfRoom</span></th><th>OvernightStay</th><th>ServiceID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Services.ServiceID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Guestroom</span></td><td>2021-10-01 10:00:00</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#186e16">Guestroom</span></td><td>2021-10-02 10:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>Suite</td><td>2021-10-03 10:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>Suite</td><td>2021-10-04 10:00:00</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>CheckInDate</th><th>CheckOutDate</th><th>NumberOfAdults</th><th>NumberOfChildren</th><th>GuestID</th><th>ROOMID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Guests.ID)</th><th>(&#8594; Rooms.RoomID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-10-01 14:00:00</td><td>2021-10-02 11:00:00</td><td>2</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2021-10-02 14:00:00</td><td>2021-10-03 11:00:00</td><td>3</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2021-10-03 14:00:00</td><td>2021-10-04 11:00:00</td><td>2</td><td>1</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2021-10-04 14:00:00</td><td>2021-10-05 11:00:00</td><td>1</td><td>0</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2021-10-01 14:00:00</td><td>2021-10-02 11:00:00</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Services</span></h2><table><thead>
+<tr><th>ServiceID</th><th><span style="color:#1430b2">Amenity</span></th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Air Conditioning</span></td><td>Central air conditioning system.</td></tr>
+<tr><td>2</td><td>No Air Conditioning</td><td>No air conditioning available.</td></tr>
+<tr><td>3</td><td><span style="color:#1430b2">Air Conditioning</span></td><td>Central air conditioning system.</td></tr>
+<tr><td>4</td><td>No Air Conditioning</td><td>No air conditioning available.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

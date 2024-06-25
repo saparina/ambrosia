@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Roles</span></h2><table><thead>
+<tr><th>id</th><th>RoleName</th><th>RiskLevel</th><th>Experience</th><th>Skills</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Investigative Journalist</span></td><td><span style="color:#006600">High</span></td><td>3</td><td>Research, Interviewing</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Investigative Journalist</span></td><td>Medium</td><td>2</td><td>Data Analysis, Writing</td></tr>
+<tr><td>3</td><td><span style="color:#990000">War Correspondent</span></td><td><span style="color:#006600">High</span></td><td>5</td><td>Reporting under Fire, First Aid</td></tr>
+<tr><td>4</td><td><span style="color:#990000">War Correspondent</span></td><td>Low</td><td>7</td><td>Fluent Multiple Languages, Research</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>PublishedDate</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1</td><td>Content of article 1...</td><td>2021-08-01</td><td>1</td></tr>
+<tr><td>2</td><td>Article 2</td><td>Content of article 2...</td><td>2021-08-02</td><td>2</td></tr>
+<tr><td>3</td><td>Article 3</td><td>Content of article 3...</td><td>2021-08-03</td><td>1</td></tr>
+<tr><td>4</td><td>Article 4</td><td>Content of article 4...</td><td>2021-08-04</td><td>2</td></tr>
+<tr><td>5</td><td>Article 5</td><td>Content of article 5...</td><td>2021-08-05</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Surname</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Doe</td><td>john@example.com</td><td>+11234567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Smith</td><td>janesmith@example.com</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Times</td><td>Newspaper</td></tr>
+<tr><td>2</td><td>Financial Times</td><td>Business Newspaper</td></tr>
+<tr><td>3</td><td>Guardian</td><td>News Website</td></tr>
+<tr><td>4</td><td>Economist</td><td>Magazine</td></tr>
+<tr><td>5</td><td>National Geographic</td><td>Travel Magazine</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticlePublicationAssociations</h2><table><thead>
+<tr><th>articleId</th><th>publicationId</th><th>publishDate</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; Publications.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-08-01</td></tr>
+<tr><td>2</td><td>2</td><td>2021-08-02</td></tr>
+<tr><td>3</td><td>3</td><td>2021-08-03</td></tr>
+<tr><td>4</td><td>4</td><td>2021-08-04</td></tr>
+<tr><td>5</td><td>1</td><td>2021-08-05</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>EquipmentTypes</h2><table><thead>
+<tr><th>id</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>DSLR Camera</td></tr>
+<tr><td>2</td><td>Mirrorless Camera</td></tr>
+<tr><td>3</td><td>Drone</td></tr>
+</tbody></table></div>
+
+<div><h2>NewsPhotographers</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Nationality</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Countries.CountryName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1980-06-23</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1978-05-12</td><td>Canada</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>1992-03-15</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Videographers</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Nationality</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Countries.CountryName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike</td><td>Johnson</td><td>1990-04-01</td><td>Australia</td></tr>
+<tr><td>2</td><td>David</td><td>Wilson</td><td>1985-02-05</td><td>Germany</td></tr>
+<tr><td>3</td><td>Emma</td><td>Jackson</td><td>1994-08-29</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">VisualJournalism</span></h2><table><thead>
+<tr><th>id</th><th>ContentID</th><th>Description</th><th>VisualType</th><th>EquipmentTypeId</th></tr>
+<tr><th></th><th>(&#8594; Contents.id)</th><th></th><th></th><th>(&#8594; EquipmentTypes.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>This is a news photography content.</td><td>Photo</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>2</td><td>Another news photography content.</td><td>Photo</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>A videography content about politics.</td><td>Video</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td>4</td><td>Some other videography content.</td><td>Video</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>EquipmentUsed</h2><table><thead>
+<tr><th>id</th><th>VisualJournalismId</th><th>EquipmentTypeId</th><th>SerialNumber</th><th>PurchaseYear</th></tr>
+<tr><th></th><th>(&#8594; VisualJournalism.id)</th><th>(&#8594; EquipmentTypes.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>ABC123</td><td>2018</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>DEF456</td><td>2019</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>GHI789</td><td>2020</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>JKL012</td><td>2021</td></tr>
+</tbody></table></div>
+
+<div><h2>Contents</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>PublishDate</th><th>AuthorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News: Election Results</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>World Cup Final Match Highlights</td><td>2022-07-15</td><td>2</td></tr>
+<tr><td>3</td><td>Climate Change Conference Summary</td><td>2022-11-01</td><td>3</td></tr>
+<tr><td>4</td><td>Tech Innovations of The Year</td><td>2022-12-01</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>CountryName</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Countries.CountryName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1962-07-09</td><td>USA</td></tr>
+<tr><td>2</td><td>Julie</td><td>Andrews</td><td>1935-10-01</td><td>UK</td></tr>
+<tr><td>3</td><td>George</td><td>Clooney</td><td>1961-05-06</td><td>USA</td></tr>
+<tr><td>4</td><td>Angelina</td><td>Jolie</td><td>1975-05-04</td><td>USA</td></tr>
+<tr><td>5</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Countries</h2><table><thead>
+<tr><th>CountryName</th></tr>
+</thead><tbody>
+<tr><td>USA</td></tr>
+<tr><td>UK</td></tr>
+<tr><td>Australia</td></tr>
+<tr><td>Germany</td></tr>
+<tr><td>France</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

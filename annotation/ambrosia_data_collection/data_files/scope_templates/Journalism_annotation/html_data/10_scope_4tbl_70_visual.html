@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Environmental_Reporters</span></h2><table><thead>
+<tr><th>ReporterID</th><th>FullName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>Emily White</td></tr>
+<tr><td>5</td><td>David Green</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Issues</span></h2><table><thead>
+<tr><th>IssueID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Climate_Change</td></tr>
+<tr><td>2</td><td>Water_Pollution</td></tr>
+<tr><td>3</td><td>Deforestation</td></tr>
+<tr><td>4</td><td>Air_Quality</td></tr>
+<tr><td>5</td><td>Wildlife_Conservation</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishedDate</th><th>Environmental_ReporterID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Environmental_Reporters.ReporterID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Impact of Climate Change on Agriculture</td><td>This article discusses...</td><td>2024-01-30 18:57:48</td><td>1</td></tr>
+<tr><td>2</td><td>The Rising Trends of Water Pollution</td><td>In this article we talk about...</td><td>2024-01-30 18:57:48</td><td>2</td></tr>
+<tr><td>3</td><td>Effects of Deforestation on Biodiversity</td><td>Here we explore...</td><td>2024-01-30 18:57:48</td><td>3</td></tr>
+<tr><td>4</td><td>Improving Air Quality in Urban Areas</td><td>This piece delves into...</td><td>2024-01-30 18:57:48</td><td>4</td></tr>
+<tr><td>5</td><td>Protecting Endangered Species from Extinction</td><td>We investigate...</td><td>2024-01-30 18:57:48</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Environmental_Reporters_Issues</h2><table><thead>
+<tr><th>Environmental_Reporters_ID</th><th>Issues_ID</th></tr>
+<tr><th>(&#8594; Environmental_Reporters.ReporterID)</th><th>(&#8594; Issues.IssueID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

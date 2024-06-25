@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Accounts</h2><table><thead>
+<tr><th>accountID</th><th>accountNumber</th><th>customerName</th><th>balance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123456</td><td>John Doe</td><td>1000.0</td></tr>
+<tr><td>2</td><td>789012</td><td>Jane Smith</td><td>2000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Transactions</span></h2><table><thead>
+<tr><th>transactionID</th><th>accountID</th><th><span style="color:#006600">date</span></th><th>description</th><th>amount</th></tr>
+<tr><th></th><th>(&#8594; Accounts.accountID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">2021-01-01</span></td><td>Initial Deposit</td><td>1000.0</td></tr>
+<tr><td>2</td><td>1</td><td>2021-01-15</td><td>Withdrawal</td><td>-200.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BalanceSheets</span></h2><table><thead>
+<tr><th>id</th><th>accountID</th><th>Date</th><th>totalAssets</th><th>totalLiabilities</th><th>equity</th><th>netProfitOrLoss</th></tr>
+<tr><th></th><th>(&#8594; Accounts.accountID)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-01-01</td><td>1200.0</td><td>800.0</td><td>400.0</td><td>100.0</td></tr>
+<tr><td>2</td><td>1</td><td>2021-01-15</td><td>1000.0</td><td>600.0</td><td>400.0</td><td>50.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">IncomeStatements</span></h2><table><thead>
+<tr><th>id</th><th>accountID</th><th>Date</th><th>revenue</th><th>costOfGoodsSold</th><th>grossProfit</th><th>operatingExpenses</th><th>netOperatingIncome</th><th>taxes</th><th>netIncome</th></tr>
+<tr><th></th><th>(&#8594; Accounts.accountID)</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-01-01</td><td>1500.0</td><td>500.0</td><td>1000.0</td><td>200.0</td><td>800.0</td><td>100.0</td><td>700.0</td></tr>
+<tr><td>2</td><td>1</td><td>2021-01-15</td><td>1800.0</td><td>600.0</td><td>1200.0</td><td>250.0</td><td>950.0</td><td>100.0</td><td>850.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

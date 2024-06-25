@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>major</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>20</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Bob</td><td>21</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Charlie</td><td>22</td><td>Physics</td></tr>
+<tr><td>4</td><td>David</td><td>23</td><td>Biology</td></tr>
+<tr><td>5</td><td>Eva</td><td>24</td><td>Chemistry</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Smith</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Prof. Johnson</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Dr. Brown</td><td>Physics</td></tr>
+<tr><td>4</td><td>Dr. Wilson</td><td>Biology</td></tr>
+<tr><td>5</td><td>Dr. Taylor</td><td>Chemistry</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>id</th><th>courseName</th><th>instructorId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Instructors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>1</td></tr>
+<tr><td>2</td><td>Advanced Calculus</td><td>2</td></tr>
+<tr><td>3</td><td>General Physics</td><td>3</td></tr>
+<tr><td>4</td><td>Ecology</td><td>4</td></tr>
+<tr><td>5</td><td>Organic Chemistry</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Projects</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th><span style="color:#186e16"><span style="color:#186e16">researchMethod</span></span></th><th><span style="color:#1430b2">topic</span></th><th>studentId</th><th>courseId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Courses.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Understanding AI Ethics</td><td><span style="color:#186e16">Case Study</span></td><td>Artificial Intelligence</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Exploring Patterns in Mathematical Problems</td><td><span style="color:#186e16">Case Study</span></td><td>Mathematics</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>The Impact of Light Pollution on Wildlife</td><td><span style="color:#186e16">Case Study</span></td><td><span style="color:#1430b2">Environmental Science</span></td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>An <span style="color:#186e16">Interview</span> with Dr. Smith</td><td><span style="color:#186e16">Interview</span></td><td>Computer Science</td><td>4</td><td>6</td></tr>
+<tr><td>5</td><td>Examining Sustainable Practices in Ecotourism</td><td><span style="color:#186e16">Interview</span></td><td><span style="color:#1430b2">Environmental Science</span></td><td>5</td><td>7</td></tr>
+<tr><td>6</td><td>Impacts of Climate Change on Biodiversity</td><td><span style="color:#186e16">Case Study</span></td><td><span style="color:#1430b2">Environmental Science</span></td><td>6</td><td>8</td></tr>
+<tr><td>7</td><td>Investigating Learning Styles in STEM Fields</td><td><span style="color:#186e16">Case Study</span></td><td>Education</td><td>7</td><td>9</td></tr>
+<tr><td>8</td><td>Perspectives on Renewable Energy</td><td><span style="color:#186e16">Interview</span></td><td><span style="color:#1430b2">Environmental Science</span></td><td>8</td><td>10</td></tr>
+<tr><td>9</td><td>A Survey of Public Opinion on Genetic Engineering</td><td><span style="color:#186e16">Interview</span></td><td>Biotechnology</td><td>9</td><td>11</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

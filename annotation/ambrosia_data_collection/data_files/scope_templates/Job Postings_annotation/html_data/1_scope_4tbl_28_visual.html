@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Marketers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>William Brown</td><td>william@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Channels</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">channelName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Social Media</td></tr>
+<tr><td>2</td><td>Email Marketing</td></tr>
+<tr><td>3</td><td>Content Marketing</td></tr>
+<tr><td>4</td><td>SEO</td></tr>
+<tr><td>5</td><td>Affiliate Marketing</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Digital Marketing Manager</td><td>Manage digital marketing campaigns across multiple channels.</td><td>70000.0</td></tr>
+<tr><td>2</td><td>SEO Specialist</td><td>Optimize website content and structure for search engines.</td><td>60000.0</td></tr>
+<tr><td>3</td><td>Social Media Coordinator</td><td>Create and manage social media content.</td><td>50000.0</td></tr>
+<tr><td>4</td><td>Email Marketing Strategist</td><td>Develop and execute email marketing campaigns.</td><td>65000.0</td></tr>
+<tr><td>5</td><td>Affiliate Marketing Manager</td><td>Build and maintain relationships with affiliates.</td><td>75000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Marketer_Jobs</h2><table><thead>
+<tr><th>id</th><th>marketerID</th><th>jobPostingID</th></tr>
+<tr><th></th><th>(&#8594; Marketers.id)</th><th>(&#8594; JobPostings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Marketers_Channels</h2><table><thead>
+<tr><th>id</th><th>marketerID</th><th>channelID</th></tr>
+<tr><th></th><th>(&#8594; Marketers.id)</th><th>(&#8594; Channels.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

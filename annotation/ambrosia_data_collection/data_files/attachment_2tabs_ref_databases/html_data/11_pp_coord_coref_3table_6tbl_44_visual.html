@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Banks</span></h2><table><thead>
+<tr><th>bank_id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank A</td><td>New York</td></tr>
+<tr><td>2</td><td>Bank B</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Bank C</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Bank D</td><td>Houston</td></tr>
+<tr><td>5</td><td>Bank E</td><td>Phoenix</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Microfinance_Institutions</span></h2><table><thead>
+<tr><th>institution_id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>MF Inst A</td><td>San Francisco</td></tr>
+<tr><td>2</td><td>MF Inst B</td><td>Dallas</td></tr>
+<tr><td>3</td><td>MF Inst C</td><td>Seattle</td></tr>
+<tr><td>4</td><td>MF Inst D</td><td>Denver</td></tr>
+<tr><td>5</td><td>MF Inst E</td><td>Washington</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td><td>0987654321</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alicejohnson@example.com</td><td>1122334455</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>bobwilliams@example.com</td><td>5544332211</td></tr>
+<tr><td>5</td><td>Emma</td><td>Nelson</td><td>emmanelson@example.com</td><td>1112223333</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>account_id</th><th>customer_id</th><th>balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.customer_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5000</td></tr>
+<tr><td>2</td><td>2</td><td>10000</td></tr>
+<tr><td>3</td><td>3</td><td>3000</td></tr>
+<tr><td>4</td><td>4</td><td>8000</td></tr>
+<tr><td>5</td><td>5</td><td>2000</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>transaction_id</th><th>account_id</th><th>amount</th><th>type</th><th>date</th></tr>
+<tr><th></th><th>(&#8594; Accounts.account_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100</td><td>deposit</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>-50</td><td>withdrawal</td><td>2022-01-02 00:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>200</td><td>deposit</td><td>2022-01-03 00:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>-75</td><td>withdrawal</td><td>2022-01-04 00:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>150</td><td>deposit</td><td>2022-01-05 00:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Credit</span></h2><table><thead>
+<tr><th>credit_id</th><th>amount</th><th>interest_rate</th><th>start_date</th><th><span style="color:#006600">end_date</span></th><th>term_length</th><th>status</th><th>bank_id</th><th>institution_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Banks.bank_id)</th><th>(&#8594; Microfinance_Institutions.institution_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10000</td><td>5</td><td>2022-01-01</td><td>2023-01-01</td><td>12</td><td>approved</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>5000</td><td>6</td><td>2022-01-02</td><td>2023-01-02</td><td>12</td><td>approved</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>15000</td><td>4</td><td>2022-01-03</td><td>2023-01-03</td><td>12</td><td>approved</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>20000</td><td>7</td><td>2022-01-04</td><td>2023-01-04</td><td>12</td><td>approved</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>25000</td><td>3</td><td>2022-01-05</td><td><span style="color:#006600">2023-01-05</span></td><td>12</td><td>approved</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

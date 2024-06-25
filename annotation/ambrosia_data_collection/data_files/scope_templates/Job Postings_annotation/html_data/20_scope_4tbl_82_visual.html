@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Sales_Representatives</span></h2><table><thead>
+<tr><th>ID</th><th>FullName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>Emily White</td></tr>
+<tr><td>5</td><td>David Black</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Territories</span></h2><table><thead>
+<tr><th>RegionID</th><th><span style="color:#990000">Name</span></th><th><span style="color:#990000">OtherColumn1</span></th><th>OtherColumn2</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>East Coast</td><td>New York</td><td>789</td></tr>
+<tr><td>2</td><td>West Coast</td><td>Los Angeles</td><td>362</td></tr>
+<tr><td>3</td><td>Central Region</td><td>Chicago</td><td>785</td></tr>
+<tr><td>4</td><td>Northeast</td><td>Boston</td><td>976</td></tr>
+<tr><td>5</td><td>Southwest</td><td>Phoenix</td><td>218</td></tr>
+</tbody></table></div>
+
+<div><h2>Sales_Representatives_Territories</h2><table><thead>
+<tr><th>SalesRepID</th><th>TerritoryID</th></tr>
+<tr><th>(&#8594; Sales_Representatives.ID)</th><th>(&#8594; Territories.RegionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Company</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABCD Co.</td><td>Technology</td></tr>
+<tr><td>2</td><td>EFGH Inc.</td><td>Healthcare</td></tr>
+<tr><td>3</td><td>IJKL Ltd.</td><td>Finance</td></tr>
+<tr><td>4</td><td>MNOP PLC.</td><td>Retail</td></tr>
+<tr><td>5</td><td>STUV AG.</td><td>Automotive</td></tr>
+</tbody></table></div>
+
+<div><h2>Products</h2><table><thead>
+<tr><th>ProductID</th><th>Name</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Product A</td><td>9.99</td></tr>
+<tr><td>2</td><td>Product B</td><td>19.99</td></tr>
+<tr><td>3</td><td>Product C</td><td>29.99</td></tr>
+<tr><td>4</td><td>Product D</td><td>39.99</td></tr>
+<tr><td>5</td><td>Product E</td><td>49.99</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

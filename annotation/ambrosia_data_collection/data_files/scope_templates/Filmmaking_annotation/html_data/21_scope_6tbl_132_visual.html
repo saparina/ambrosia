@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Awards</span></h2><table><thead>
+<tr><th>id</th><th>awardName</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Academy Award</td><td>2019</td></tr>
+<tr><td>2</td><td>Golden Globe</td><td>2018</td></tr>
+<tr><td>3</td><td>BAFTA</td><td>2017</td></tr>
+<tr><td>4</td><td>Palme d'Or</td><td>2016</td></tr>
+<tr><td>5</td><td>Emmy</td><td>2015</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Categories</span></h2><table><thead>
+<tr><th>categoryId</th><th><span style="color:#990000">categoryName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Actor</td></tr>
+<tr><td>2</td><td>Best Director</td></tr>
+<tr><td>3</td><td>Best Film</td></tr>
+<tr><td>4</td><td>Best Screenplay</td></tr>
+<tr><td>5</td><td>Best Cinematography</td></tr>
+</tbody></table></div>
+
+<div><h2>Awards_Categories</h2><table><thead>
+<tr><th>awardsID</th><th>categoriesID</th></tr>
+<tr><th>(&#8594; Awards.id)</th><th>(&#8594; Categories.categoryId)</th></tr>
+</thead><tbody>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>2</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>1</td><td>4</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>1</td><td>5</td></tr>
+<tr><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

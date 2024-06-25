@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Patients</h2><table><thead>
+<tr><th>patient_id</th><th>name</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>30</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>28</td></tr>
+<tr><td>3</td><td>Tom Brown</td><td>40</td></tr>
+<tr><td>4</td><td>Emily White</td><td>26</td></tr>
+<tr><td>5</td><td>Michael Johnson</td><td>32</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>doctor_id</th><th>name</th><th>specialty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. John Doe</td><td>Cardiology</td></tr>
+<tr><td>2</td><td>Dr. Jane Smith</td><td>Neurology</td></tr>
+<tr><td>3</td><td>Dr. Tom Williams</td><td>Psychiatry</td></tr>
+<tr><td>4</td><td>Dr. Emily Jones</td><td>Endocrinology</td></tr>
+<tr><td>5</td><td>Dr. Michael Taylor</td><td>Gastroenterology</td></tr>
+</tbody></table></div>
+
+<div><h2>Medications</h2><table><thead>
+<tr><th>medication_id</th><th>antibiotic</th><th><span style="color:#990000">common_side_effects</span></th><th><span style="color:#990000">serious_side_effects</span></th><th>dosage</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Amoxicillin</td><td>Diarrhea, nausea</td><td>Rash, liver damage</td><td>500mg every 12 hours</td></tr>
+<tr><td>2</td><td>Ciprofloxacin</td><td>Nausea, diarrhea</td><td>Tendonitis, allergies</td><td>500mg twice daily</td></tr>
+<tr><td>3</td><td>Azithromycin</td><td>Headache, dizziness</td><td>Hearing loss, liver damage</td><td>500mg once daily</td></tr>
+<tr><td>4</td><td>Levofloxacin</td><td>Dizziness, headache</td><td>Allergies, tendonitis</td><td>750mg once daily</td></tr>
+<tr><td>5</td><td>Metronidazole</td><td>Nausea, vomiting</td><td>Peripheral neuropathy, seizures</td><td>500mg three times a day</td></tr>
+</tbody></table></div>
+
+<div><h2>Prescriptions</h2><table><thead>
+<tr><th>prescription_id</th><th>patient_id</th><th>doctor_id</th><th>medication_id</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th>(&#8594; Patients.patient_id)</th><th>(&#8594; Doctors.doctor_id)</th><th>(&#8594; Medications.medication_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2023-01-01</td><td>2023-01-10</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>2023-01-15</td><td>2023-01-25</td></tr>
+</tbody></table></div>
+
+<div><h2>DoctorPatient</h2><table><thead>
+<tr><th>doctor_patient_id</th><th>doctor_id</th><th>patient_id</th><th>relationship</th></tr>
+<tr><th></th><th>(&#8594; Doctors.doctor_id)</th><th>(&#8594; Patients.patient_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Primary Care Physician</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Specialist Referral</td></tr>
+</tbody></table></div>
+
+<div><h2>Diagnosis</h2><table><thead>
+<tr><th>diagnosis_id</th><th>patient_id</th><th>diagnosis_text</th><th>diagnosis_code</th></tr>
+<tr><th></th><th>(&#8594; Patients.patient_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Hypertension</td><td>I10.9</td></tr>
+<tr><td>2</td><td>2</td><td>Type 2 diabetes mellitus</td><td>E11.9</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

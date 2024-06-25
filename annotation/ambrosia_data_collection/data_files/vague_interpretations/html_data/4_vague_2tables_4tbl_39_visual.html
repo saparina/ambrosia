@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Country</span></h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>USA</td></tr>
+<tr><td>2</td><td>UK</td></tr>
+<tr><td>3</td><td>Canada</td></tr>
+<tr><td>4</td><td>Australia</td></tr>
+<tr><td>5</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">City</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>country_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Country.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>1</td></tr>
+<tr><td>2</td><td>London</td><td>2</td></tr>
+<tr><td>3</td><td>Toronto</td><td>3</td></tr>
+<tr><td>4</td><td>Melbourne</td><td>4</td></tr>
+<tr><td>5</td><td>Berlin</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Artist</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city_id</th><th>country_id</th><th>genre</th></tr>
+<tr><th></th><th></th><th>(&#8594; City.id)</th><th>(&#8594; Country.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beyonce</td><td>1</td><td>1</td><td>Pop</td></tr>
+<tr><td>2</td><td>Adele</td><td>2</td><td>2</td><td>Jazz</td></tr>
+<tr><td>3</td><td>The Weeknd</td><td>3</td><td>3</td><td>R&B</td></tr>
+<tr><td>4</td><td>Dua Lipa</td><td>4</td><td>4</td><td>Electronic Dance Music</td></tr>
+<tr><td>5</td><td>David Bowie</td><td>5</td><td>5</td><td>Rock</td></tr>
+</tbody></table></div>
+
+<div><h2>Concert</h2><table><thead>
+<tr><th>id</th><th>artist_name</th><th>artist_genre</th><th>concert_date</th><th>city_id</th><th>country_id</th></tr>
+<tr><th></th><th>(&#8594; Artist.name)</th><th></th><th></th><th>(&#8594; City.id)</th><th>(&#8594; Country.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beyonce</td><td>Pop</td><td>2022-07-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Adele</td><td>Jazz</td><td>2022-08-15</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>The Weeknd</td><td>R&B</td><td>2022-09-01</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Dua Lipa</td><td>Electronic Dance Music</td><td>2022-10-15</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>David Bowie</td><td>Rock</td><td>2022-11-01</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

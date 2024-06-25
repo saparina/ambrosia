@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Projects</span></h2><table><thead>
+<tr><th>id</th><th>project_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Educational Game Development</td><td>Creating engaging educational games</td></tr>
+<tr><td>2</td><td>Online Learning Platform</td><td>Developing a platform for online learning</td></tr>
+<tr><td>3</td><td>Smart Classroom System</td><td>Implementing IoT devices in classrooms</td></tr>
+<tr><td>4</td><td>AI-Based Tutoring System</td><td>Designing an AI system for personalized tutoring</td></tr>
+<tr><td>5</td><td>Augmented Reality Textbooks</td><td>Creating AR textbooks for enhanced learning experience</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Research_Techniques</span></h2><table><thead>
+<tr><th>id</th><th>technique_name</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Surveys</td><td>Conducting surveys among educators and students</td></tr>
+<tr><td>2</td><td>Case Studies</td><td>Analyzing specific examples in depth</td></tr>
+<tr><td>3</td><td>Literature Review</td><td>Reviewing existing research on the topic</td></tr>
+<tr><td>4</td><td>Focus Group Discussions</td><td>Organizing discussions among targeted groups</td></tr>
+<tr><td>5</td><td>Expert Interviews</td><td>Interviewing experts in the field</td></tr>
+</tbody></table></div>
+
+<div><h2>Projects_Research_Techniques</h2><table><thead>
+<tr><th>project_id</th><th>technique_id</th></tr>
+<tr><th>(&#8594; Projects.id)</th><th>(&#8594; Research_Techniques.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

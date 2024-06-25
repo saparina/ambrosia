@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York JFK</td><td>USA</td></tr>
+<tr><td>2</td><td>London Heathrow</td><td>UK</td></tr>
+<tr><td>3</td><td>Tokyo Haneda</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Medical_Clinics</span></h2><table><thead>
+<tr><th>ClinicId</th><th>AirportId</th><th>Name</th></tr>
+<tr><th></th><th>(&#8594; Airports.Id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>JFK Health Center</td></tr>
+<tr><td>2</td><td>2</td><td>Heathrow Medical Services</td></tr>
+<tr><td>3</td><td>3</td><td>Haneda Medical Point</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">First_Aid_Stations</span></h2><table><thead>
+<tr><th>StationId</th><th>AirportId</th><th>Name</th></tr>
+<tr><th></th><th>(&#8594; Airports.Id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Terminal 1 First Aid</td></tr>
+<tr><td>2</td><td>2</td><td>Terminal 3 First Aid</td></tr>
+<tr><td>3</td><td>3</td><td>International Terminal First Aid</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Medical_Supplies</span></h2><table><thead>
+<tr><th>SuppliesId</th><th><span style="color:#006600">Description</span></th><th>Quantity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bandages and Antiseptics</td><td>100</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Intravenous Fluids</span></td><td>75</td></tr>
+<tr><td>3</td><td>Oxygen Masks</td><td>50</td></tr>
+<tr><td>4</td><td>Defibrillators</td><td>25</td></tr>
+<tr><td>5</td><td>Emergency Blankets</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2>Medical_Clinic_Supplies</h2><table><thead>
+<tr><th>ClinicSuppliesId</th><th>ClinicId</th><th>SuppliesId</th><th>Amount</th></tr>
+<tr><th></th><th>(&#8594; Medical_Clinics.ClinicId)</th><th>(&#8594; Medical_Supplies.SuppliesId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>50</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>25</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>60</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>30</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>80</td></tr>
+<tr><td>6</td><td>3</td><td>2</td><td>40</td></tr>
+</tbody></table></div>
+
+<div><h2>First_Aid_Station_Supplies</h2><table><thead>
+<tr><th>AidStationSuppliesId</th><th>StationId</th><th>SuppliesId</th><th>Amount</th></tr>
+<tr><th></th><th>(&#8594; First_Aid_Stations.StationId)</th><th>(&#8594; Medical_Supplies.SuppliesId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>30</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>15</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>40</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>20</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>50</td></tr>
+<tr><td>6</td><td>3</td><td>2</td><td>25</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

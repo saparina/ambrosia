@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Improvised_Theatres</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Description</th><th>venueID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Venues.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Comedy Club</td><td>A popular venue for stand-up comedy shows.</td><td>1</td></tr>
+<tr><td>2</td><td>Open Stage</td><td>An intimate theatre where actors can perform their own material.</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Venues</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Cambridge Theatre</span></td></tr>
+<tr><td>2</td><td>Her Majesty's Theatre</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Musicals</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>Composer</th><th>Lyricist</th><th>venueID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Venues.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>West Side Story</td><td>Stephen Sondheim</td><td>George Furth</td><td>1</td></tr>
+<tr><td>2</td><td>The Phantom of the Opera</td><td>Andrew Lloyd Webber</td><td>Tim Rice</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>employees</h2><table><thead>
+<tr><th>employee_id</th><th>first_name</th><th>last_name</th><th>position</th><th>hire_date</th><th>branch_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; branches.branch_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Branch Manager</td><td>2021-01-01 00:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>Teller</td><td>2021-02-01 00:00:00</td><td>1</td></tr>
+<tr><td>3</td><td>Alice</td><td>Doe</td><td>Head Teller</td><td>2021-03-01 00:00:00</td><td>2</td></tr>
+<tr><td>4</td><td>Charlie</td><td>Doe</td><td>Customer Service Representative</td><td>2021-04-01 00:00:00</td><td>3</td></tr>
+<tr><td>5</td><td>David</td><td>Doe</td><td>Teller</td><td>2021-05-01 00:00:00</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>branches</h2><table><thead>
+<tr><th>branch_id</th><th>branch_manager</th><th><span style="color:#990000">Location</span></th><th>number_of_branches</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>1st Ave</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>Broadway</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>Madison Ave</td><td>3</td></tr>
+<tr><td>4</td><td>Charlie White</td><td>Central Park West</td><td>4</td></tr>
+<tr><td>5</td><td>David Black</td><td>Washington Blvd</td><td>5</td></tr>
+<tr><td>6</td><td>None</td><td>None</td><td>6</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

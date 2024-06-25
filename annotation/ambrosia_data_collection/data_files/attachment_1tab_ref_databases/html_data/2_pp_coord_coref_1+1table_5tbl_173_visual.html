@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phone</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St</td><td>+1 555-555-5555</td><td>companyA@example.com</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St</td><td>+1 555-555-5556</td><td>companyB@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Business_Professions</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">profession</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Sales Representative</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Marketing Manager</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Commissions</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">commission</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Base Salary Plus Commission</span></td></tr>
+<tr><td>2</td><td>Salaried Position</td></tr>
+</tbody></table></div>
+
+<div><h2>Positions</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>company_id</th><th>business_profession_id</th><th>commission_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Companies.id)</th><th>(&#8594; Business_Professions.id)</th><th>(&#8594; Commissions.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td><td>Developing web applications</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Graphic Designer</td><td>Creating visual content</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Account Executive - Sales Representative</td><td>Closing sales deals</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>Digital Marketing Specialist</td><td>Managing online marketing campaigns</td><td>2</td><td>3</td><td>3</td></tr>
+<tr><td>5</td><td>Product Manager - Marketing Manager</td><td>Overseeing product launches</td><td>2</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>firstname</th><th>lastname</th><th>email</th><th>phone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1 555-555-5557</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+1 555-555-5558</td></tr>
+</tbody></table></div>
+
+<div><h2>Application</h2><table><thead>
+<tr><th>id</th><th>position_id</th><th>applicant_id</th><th>application_date</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Positions.id)</th><th>(&#8594; Applicants.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-03-13 11:25:04</td><td>Applied</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2024-03-13 11:25:04</td><td>Interview Scheduled</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>2024-03-13 11:25:04</td><td>Rejected</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2024-03-13 11:25:04</td><td>Hired</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>2024-03-13 11:25:04</td><td>On Hold</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

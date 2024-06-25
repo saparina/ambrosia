@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>098-765-4321</td></tr>
+</tbody></table></div>
+
+<div><h2>rooms</h2><table><thead>
+<tr><th>room_id</th><th>room_type</th><th>price</th><th>available</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Standard</td><td>100.0</td><td>1</td></tr>
+<tr><td>2</td><td>Deluxe</td><td>150.0</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>bookings</h2><table><thead>
+<tr><th>booking_id</th><th>customer_id</th><th>checkin</th><th>checkout</th><th>total_amount</th></tr>
+<tr><th></th><th>(&#8594; customers.customer_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>2023-01-03</td><td>200.0</td></tr>
+<tr><td>2</td><td>2</td><td>2023-02-01</td><td>2023-02-03</td><td>250.0</td></tr>
+</tbody></table></div>
+
+<div><h2>reviews</h2><table><thead>
+<tr><th>review_id</th><th><span style="color:#990000">customer_review</span></th><th><span style="color:#990000">difficulty_level</span></th><th>hikes</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great experience!</td><td>3</td><td>Waterfall loop</td></tr>
+<tr><td>2</td><td>Beautiful scenery but challenging.</td><td>4</td><td>View point hike</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

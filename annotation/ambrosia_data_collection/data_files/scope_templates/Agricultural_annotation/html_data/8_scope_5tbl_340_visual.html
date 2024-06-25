@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Farms</span></h2><table><thead>
+<tr><th>FarmID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Farm A</td><td>California</td></tr>
+<tr><td>2</td><td>Farm B</td><td>Texas</td></tr>
+<tr><td>3</td><td>Farm C</td><td>Washington</td></tr>
+<tr><td>4</td><td>Farm D</td><td>Florida</td></tr>
+<tr><td>5</td><td>Farm E</td><td>North Dakota</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Animals</span></h2><table><thead>
+<tr><th>AnimalID</th><th><span style="color:#990000">Type</span></th><th><span style="color:#990000">Quantity</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cow</td><td>20</td></tr>
+<tr><td>2</td><td>Pig</td><td>30</td></tr>
+<tr><td>3</td><td>Chicken</td><td>100</td></tr>
+<tr><td>4</td><td>Sheep</td><td>25</td></tr>
+<tr><td>5</td><td>Goat</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Crops</h2><table><thead>
+<tr><th>CropID</th><th>Name</th><th>HarvestDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wheat</td><td>2023-08-01</td></tr>
+<tr><td>2</td><td>Corn</td><td>2023-09-01</td></tr>
+<tr><td>3</td><td>Barley</td><td>2023-07-01</td></tr>
+<tr><td>4</td><td>Rice</td><td>2023-10-01</td></tr>
+<tr><td>5</td><td>Oats</td><td>2023-06-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Equipment</h2><table><thead>
+<tr><th>EquipID</th><th>Model</th><th>PurchaseDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tractor A</td><td>2020-01-01</td></tr>
+<tr><td>2</td><td>Combine</td><td>2021-03-01</td></tr>
+<tr><td>3</td><td>Plow</td><td>2019-05-01</td></tr>
+<tr><td>4</td><td>Truck</td><td>2022-02-01</td></tr>
+<tr><td>5</td><td>Irrigation System</td><td>2020-04-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Farms_Animals</h2><table><thead>
+<tr><th>FarmID</th><th>AnimalID</th></tr>
+<tr><th>(&#8594; Farms.FarmID)</th><th>(&#8594; Animals.AnimalID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

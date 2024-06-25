@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>airport</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>San Francisco International</td><td>San Francisco</td><td>USA</td></tr>
+<tr><td>2</td><td>Los Angeles International</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>3</td><td>Dubai International</td><td>Dubai</td><td>UAE</td></tr>
+<tr><td>4</td><td>Heathrow Airport</td><td>London</td><td>UK</td></tr>
+<tr><td>5</td><td>Tokyo Haneda</td><td>Tokyo</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>terminal</h2><table><thead>
+<tr><th>id</th><th>name</th><th>code</th><th>capacity</th><th>airport_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; airport.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal 1</td><td>T1</td><td>30</td><td>1</td></tr>
+<tr><td>2</td><td>Terminal 2</td><td>T2</td><td>60</td><td>1</td></tr>
+<tr><td>3</td><td>Terminal 3</td><td>T3</td><td>70</td><td>2</td></tr>
+<tr><td>4</td><td>Terminal 4</td><td>T4</td><td>90</td><td>2</td></tr>
+<tr><td>5</td><td>Terminal 5</td><td>T5</td><td>110</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>flight</h2><table><thead>
+<tr><th>id</th><th>number</th><th>date</th><th>departure_time</th><th>arrival_time</th><th>origin_airport_id</th><th>destination_airport_id</th><th>aircraft_type</th><th>status</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; airport.id)</th><th>(&#8594; airport.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA123</td><td>2023-01-01 08:00</td><td>09:00</td><td>10:00</td><td>1</td><td>2</td><td>Boeing 787</td><td>Operational</td></tr>
+<tr><td>2</td><td>UA456</td><td>2023-01-01 11:00</td><td>12:00</td><td>13:00</td><td>1</td><td>3</td><td>Airbus A320</td><td>Delayed</td></tr>
+<tr><td>3</td><td>KL789</td><td>2023-01-01 15:00</td><td>16:00</td><td>17:00</td><td>2</td><td>4</td><td>Boeing 777</td><td>On Time</td></tr>
+<tr><td>4</td><td>QR101</td><td>2023-01-01 18:00</td><td>19:00</td><td>20:00</td><td>3</td><td>5</td><td>Airbus A380</td><td>Canceled</td></tr>
+<tr><td>5</td><td>EK246</td><td>2023-01-01 21:00</td><td>22:00</td><td>23:00</td><td>4</td><td>6</td><td>Boeing 777</td><td>Operational</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">medical_facility</span></h2><table><thead>
+<tr><th>id</th><th>type</th><th>supplies</th><th>location</th><th>capacity</th><th>airport_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; airport.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Medical Clinic</span></td><td><span style="color:#006600">Bandages and Antiseptics</span></td><td>Terminal 1, Gate B12</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Medical Clinic</span></td><td>Intravenous Fluids and Oxygen</td><td>Terminal 2, Gate C14</td><td>None</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">First Aid Station</span></td><td><span style="color:#006600">Bandages and Antiseptics</span></td><td>Terminal 3, Gate D16</td><td>None</td><td>2</td></tr>
+<tr><td>4</td><td><span style="color:#990000">First Aid Station</span></td><td>Pain Relief Medications and Splints</td><td>Terminal 4, Gate E18</td><td>None</td><td>2</td></tr>
+<tr><td>5</td><td>Pharmacy</td><td>Prescription Medications and Over-the-Counter Drugs</td><td>Terminal 5, Gate F20</td><td>None</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>employee</h2><table><thead>
+<tr><th>id</th><th>firstname</th><th>lastname</th><th>role</th><th>hire_date</th><th>salary</th><th>department_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; department.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>Manager</td><td>2022-01-01</td><td>75000</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>Assistant Manager</td><td>2022-01-15</td><td>60000</td><td>1</td></tr>
+<tr><td>3</td><td>Michael</td><td>Williams</td><td>Security Officer</td><td>2022-02-01</td><td>45000</td><td>2</td></tr>
+<tr><td>4</td><td>Laura</td><td>Jackson</td><td>Housekeeping Supervisor</td><td>2022-02-15</td><td>35000</td><td>3</td></tr>
+<tr><td>5</td><td>David</td><td>Martinez</td><td>Janitorial Staff</td><td>2022-03-01</td><td>25000</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>department</h2><table><thead>
+<tr><th>id</th><th>name</th><th>manager_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; employee.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Operations</td><td>1</td></tr>
+<tr><td>2</td><td>Maintenance</td><td>2</td></tr>
+<tr><td>3</td><td>Customer Service</td><td>3</td></tr>
+<tr><td>4</td><td>Administration</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

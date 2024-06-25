@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flight</h2><table><thead>
+<tr><th>FlightID</th><th>Origin</th><th>Destination</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>LAX</td></tr>
+<tr><td>2</td><td>ORD</td><td>MIA</td></tr>
+<tr><td>3</td><td>ATL</td><td>DEN</td></tr>
+<tr><td>4</td><td>SEA</td><td>MSP</td></tr>
+<tr><td>5</td><td>DFW</td><td>PHX</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminal</h2><table><thead>
+<tr><th>TerminalID</th><th>Name</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>T1</td><td>60</td></tr>
+<tr><td>2</td><td>T2</td><td>75</td></tr>
+<tr><td>3</td><td>T3</td><td>80</td></tr>
+<tr><td>4</td><td>T4</td><td>90</td></tr>
+<tr><td>5</td><td>T5</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2>Gate</h2><table><thead>
+<tr><th>GateID</th><th>TerminalID</th><th>AirlineID</th></tr>
+<tr><th></th><th>(&#8594; Terminal.TerminalID)</th><th>(&#8594; Airline.AirlineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>AircraftID</th><th>Model</th><th>Seats</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td><td>160</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>180</td></tr>
+<tr><td>3</td><td>Bombardier Q400</td><td>70</td></tr>
+<tr><td>4</td><td>Embraer E190</td><td>100</td></tr>
+<tr><td>5</td><td>Cessna Citation X</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Airline</h2><table><thead>
+<tr><th>AirlineID</th><th>Name</th><th>FleetCount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>500</td></tr>
+<tr><td>2</td><td>United Airlines</td><td>300</td></tr>
+<tr><td>3</td><td>Delta Airlines</td><td>400</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>200</td></tr>
+<tr><td>5</td><td>Alaska Airlines</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MedicalClinic</span></h2><table><thead>
+<tr><th>ClinicID</th><th>Location</th><th>HoursOfOperation</th><th>MedicalSupplies</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concourse B</td><td>Mon - Fri 8am - 6pm</td><td><span style="color:#006600">Bandages and Antiseptics</span></td></tr>
+<tr><td>2</td><td>Concourse C</td><td>Mon - Sat 9am - 5pm</td><td>Blood Pressure Monitors</td></tr>
+<tr><td>3</td><td>Concourse D</td><td>Mon - Sun 7am - 8pm</td><td>Eye Wash Stations</td></tr>
+<tr><td>4</td><td>Concourse E</td><td>Mon - Sun 9am - 7pm</td><td>Defibrillators</td></tr>
+<tr><td>5</td><td>Concourse F</td><td>Mon - Fri 8am - 6pm</td><td>Oxygen Masks</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FirstAidStation</span></h2><table><thead>
+<tr><th>StationID</th><th>Location</th><th>Accessibility</th><th>MedicalSupplies</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pre-Security Area</td><td>Open 24 hours</td><td><span style="color:#006600">Bandages and Antiseptics</span></td></tr>
+<tr><td>2</td><td>Post-Security Area</td><td>Open 24 hours</td><td>Antibacterial Wipes</td></tr>
+<tr><td>3</td><td>Concourse A</td><td>Accessible via elevator</td><td>Pain Relievers</td></tr>
+<tr><td>4</td><td>Concourse B</td><td>Accessible via escalator</td><td>Adhesive Bandages</td></tr>
+<tr><td>5</td><td>Concourse C</td><td>Located near gate 10</td><td>Insect Bites Treatment</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

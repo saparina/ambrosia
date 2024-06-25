@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Students</span></h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th><th>birthDate</th><th>email</th><th>Personal_Computing_Devices</th><th><span style="color:#006600">Operating_System</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td><td>johndoe@example.com</td><td>Tablet</td><td><span style="color:#006600">Windows 10</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1998-06-15</td><td>janesmith@example.com</td><td>Tablet</td><td>Not Windows 10</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>1997-03-20</td><td>mikebrown@example.com</td><td>Laptop</td><td><span style="color:#006600">Windows 10</span></td></tr>
+<tr><td>4</td><td>Alice</td><td>White</td><td>2001-07-08</td><td>alicewhite@example.com</td><td>Laptop</td><td>Not Windows 10</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>subjectID</th><th>subjectName</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math</td><td>Mathematics fundamentals.</td></tr>
+<tr><td>2</td><td>English</td><td>Language skills development.</td></tr>
+<tr><td>3</td><td>Physics</td><td>Introduction to physics concepts.</td></tr>
+<tr><td>4</td><td>History</td><td>Overview of historical events.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Teachers</span></h2><table><thead>
+<tr><th>teacherID</th><th>firstName</th><th>lastName</th><th>birthDate</th><th>email</th><th><span style="color:#990000"><span style="color:#990000">Personal_Computing_Devices</span></span></th><th>Operating_System</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Doe</td><td>1980-02-20</td><td>mrdoe@example.com</td><td><span style="color:#990000">Tablet</span></td><td><span style="color:#006600">Windows 10</span></td></tr>
+<tr><td>2</td><td>Ms.</td><td>Smith</td><td>1978-08-17</td><td>mssmith@example.com</td><td><span style="color:#990000">Tablet</span></td><td>Not Windows 10</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Brown</td><td>1975-10-12</td><td>drbrown@example.com</td><td><span style="color:#990000">Laptop</span></td><td><span style="color:#006600">Windows 10</span></td></tr>
+<tr><td>4</td><td>Professor</td><td>White</td><td>1973-03-30</td><td>profwhite@example.com</td><td><span style="color:#990000">Laptop</span></td><td>Not Windows 10</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>classID</th><th>classSubjectID</th><th>assignedTeacherID</th><th>enrolledStudentID</th></tr>
+<tr><th></th><th>(&#8594; Subjects.subjectID)</th><th>(&#8594; Teachers.teacherID)</th><th>(&#8594; Students.studentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

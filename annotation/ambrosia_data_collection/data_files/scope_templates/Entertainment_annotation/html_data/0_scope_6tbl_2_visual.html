@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Radio_Stations</span></h2><table><thead>
+<tr><th>station_id</th><th>station_name</th><th>frequency</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Classic Rock</td><td>96.3</td></tr>
+<tr><td>2</td><td>Top Hits</td><td>88.7</td></tr>
+<tr><td>3</td><td>Country Gold</td><td>92.5</td></tr>
+<tr><td>4</td><td>Jazz & Blues</td><td>100.1</td></tr>
+<tr><td>5</td><td>Electronic Beats</td><td>99.9</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Programs</span></h2><table><thead>
+<tr><th>program_type_id</th><th><span style="color:#990000">program_type_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Morning Show</td></tr>
+<tr><td>2</td><td>Afternoon Drive</td></tr>
+<tr><td>3</td><td>Evening News</td></tr>
+<tr><td>4</td><td>Night Music</td></tr>
+<tr><td>5</td><td>Weekend Special</td></tr>
+</tbody></table></div>
+
+<div><h2>Hosts</h2><table><thead>
+<tr><th>host_id</th><th>host_name</th><th>host_gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>M</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>F</td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td>M</td></tr>
+<tr><td>4</td><td>Alice Brown</td><td>F</td></tr>
+<tr><td>5</td><td>Tom Clark</td><td>M</td></tr>
+</tbody></table></div>
+
+<div><h2>Radio_Stations_Hosts</h2><table><thead>
+<tr><th>radio_station_id</th><th>host_id</th></tr>
+<tr><th>(&#8594; Radio_Stations.station_id)</th><th>(&#8594; Hosts.host_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Radio_Stations_Programs</h2><table><thead>
+<tr><th>radio_station_id</th><th>program_type_id</th><th>day_of_week</th><th>start_time</th><th>end_time</th></tr>
+<tr><th>(&#8594; Radio_Stations.station_id)</th><th>(&#8594; Programs.program_type_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>06:00:00</td><td>10:00:00</td></tr>
+<tr><td>1</td><td>2</td><td>2</td><td>12:00:00</td><td>16:00:00</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>07:00:00</td><td>11:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>06:00:00</td><td>10:00:00</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>12:00:00</td><td>16:00:00</td></tr>
+<tr><td>3</td><td>1</td><td>1</td><td>06:00:00</td><td>10:00:00</td></tr>
+<tr><td>4</td><td>1</td><td>2</td><td>12:00:00</td><td>16:00:00</td></tr>
+<tr><td>5</td><td>1</td><td>None</td><td>None</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

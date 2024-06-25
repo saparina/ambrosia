@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Actors</span></h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th><span style="color:#006600">Age</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Actor1</td><td>30</td></tr>
+<tr><td>2</td><td>Actor2</td><td>45</td></tr>
+<tr><td>3</td><td>Actor3</td><td>60</td></tr>
+<tr><td>4</td><td>Actor4</td><td>75</td></tr>
+<tr><td>5</td><td>Actor5</td><td>80</td></tr>
+<tr><td>6</td><td>Actor6</td><td>25</td></tr>
+<tr><td>7</td><td>Actor7</td><td>50</td></tr>
+<tr><td>8</td><td>Actor8</td><td><span style="color:#006600">55</span></td></tr>
+<tr><td>9</td><td>Actor9</td><td>65</td></tr>
+<tr><td>10</td><td>Actor10</td><td>70</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Director1</td><td>1990-01-01</td></tr>
+<tr><td>2</td><td>Director2</td><td>1980-01-01</td></tr>
+<tr><td>3</td><td>Director3</td><td>1970-01-01</td></tr>
+<tr><td>4</td><td>Director4</td><td>1960-01-01</td></tr>
+<tr><td>5</td><td>Director5</td><td>1950-01-01</td></tr>
+<tr><td>6</td><td>Director6</td><td>2000-01-01</td></tr>
+<tr><td>7</td><td>Director7</td><td>1990-01-01</td></tr>
+<tr><td>8</td><td>Director8</td><td>1980-01-01</td></tr>
+<tr><td>9</td><td>Director9</td><td>1970-01-01</td></tr>
+<tr><td>10</td><td>Director10</td><td>1960-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ScriptSupervisors</span></h2><table><thead>
+<tr><th>SupervisorID</th><th>Name</th><th>Age</th></tr>
+<tr><th></th><th></th><th>(&#8594; Actors.Age)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Supervisor1</td><td>44</td></tr>
+<tr><td>2</td><td>Supervisor2</td><td>36</td></tr>
+<tr><td>3</td><td>Supervisor3</td><td>50</td></tr>
+<tr><td>4</td><td>Supervisor4</td><td>55</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CostumeDesigners</span></h2><table><thead>
+<tr><th>DesignerID</th><th>Name</th><th>Age</th></tr>
+<tr><th></th><th></th><th>(&#8594; Actors.Age)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Designer1</td><td>45</td></tr>
+<tr><td>2</td><td>Designer2</td><td>35</td></tr>
+<tr><td>3</td><td>Designer3</td><td>50</td></tr>
+<tr><td>4</td><td>Designer4</td><td>55</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

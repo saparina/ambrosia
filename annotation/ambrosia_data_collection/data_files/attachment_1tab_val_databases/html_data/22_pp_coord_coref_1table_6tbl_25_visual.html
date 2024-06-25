@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-06-15</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1978-11-30</td><td>Canada</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>1975-02-25</td><td>UK</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>1982-09-07</td><td>Australia</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Movies</span></h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>ReleaseYear</th><th>Visual_art</th><th>Gallery</th><th>DirectorID</th><th>ActorID1</th><th>ActorID2</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th><th>(&#8594; Actors.ActorID)</th><th>(&#8594; Actors.ActorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie1</td><td>2000</td><td><span style="color:#990000">Photography</span></td><td><span style="color:#006600">MoMA</span></td><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Movie2</td><td>2005</td><td><span style="color:#990000">Photography</span></td><td>Some other gallery</td><td>2</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Movie3</td><td>2010</td><td><span style="color:#990000">Painting</span></td><td><span style="color:#006600">MoMA</span></td><td>1</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Movie4</td><td>2015</td><td><span style="color:#990000">Painting</span></td><td>Another gallery</td><td>2</td><td>4</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>GenreID</th><th>Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

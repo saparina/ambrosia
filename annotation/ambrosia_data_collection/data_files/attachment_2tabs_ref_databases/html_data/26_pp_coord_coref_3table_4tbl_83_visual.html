@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Museum</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Met</td><td>New York</td></tr>
+<tr><td>2</td><td>British Museum</td><td>London</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Gallery</span></h2><table><thead>
+<tr><th>id</th><th>museum_id</th><th>name</th></tr>
+<tr><th></th><th>(&#8594; Museum.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Modern Art Wing</td></tr>
+<tr><td>2</td><td>2</td><td>Ancient Civilizations Hall</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Event</span></h2><table><thead>
+<tr><th>id</th><th>gallery_id</th><th>event_type</th><th>date</th><th>description</th><th><span style="color:#006600">capacity</span></th></tr>
+<tr><th></th><th>(&#8594; Gallery.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lecture</td><td>2023-01-01 19:00:00</td><td>A lecture on modern art movements.</td><td><span style="color:#006600">100</span></td></tr>
+<tr><td>2</td><td>1</td><td>Art Workshop</td><td>2023-01-02 14:00:00</td><td>A hands-on workshop for aspiring artists.</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>Exhibit</h2><table><thead>
+<tr><th>id</th><th>gallery_id</th><th>title</th><th>artist</th><th>year</th><th>description</th></tr>
+<tr><th></th><th>(&#8594; Gallery.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Starry Night</td><td>Vincent van Gogh</td><td>1889</td><td>A masterpiece depicting a view over the town of Saint-Rémy-de-Provence.</td></tr>
+<tr><td>2</td><td>1</td><td>Guernica</td><td>Pablo Picasso</td><td>1937</td><td>A powerful anti-war painting created after the bombing of Guernica during the Spanish Civil War.</td></tr>
+</tbody></table></div>
+
+<div><h2>Visitor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone_number</th><th>membership</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>+1234567890</td><td>0</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>+0987654321</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Attendance</h2><table><thead>
+<tr><th>id</th><th>visitor_id</th><th>event_id</th><th>entry_time</th><th>exit_time</th></tr>
+<tr><th></th><th>(&#8594; Visitor.id)</th><th>(&#8594; Event.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01 18:55:00</td><td>2023-01-01 21:15:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-02 13:55:00</td><td>2023-01-02 16:15:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

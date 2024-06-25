@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Spa</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>Treatment_Types</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Serenity Spa</td><td>123 Main St</td><td>555-1234</td><td><span style="color:#006600">Massage Therapy</span></td></tr>
+<tr><td>2</td><td>Aromatherapy Haven</td><td>456 Elm St</td><td>555-5678</td><td>Yoga Classes</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Wellness_Retreat</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Accommodation</th><th>Treatment_Types</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paradise Retreat</td><td>789 Oak Ave</td><td>Private Cabins</td><td><span style="color:#006600">Massage Therapy</span></td></tr>
+<tr><td>2</td><td>Healing Escape</td><td>101 Pine St</td><td>Shared Rooms</td><td>Meditation Workshops</td></tr>
+</tbody></table></div>
+
+<div><h2>Clients</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Email</th><th>Phone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>555-1234</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>555-5678</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>id</th><th>ClientId</th><th>ServiceType</th><th>Date</th><th>Time</th></tr>
+<tr><th></th><th>(&#8594; Clients.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Massage Therapy</td><td>2022-01-01 10:00</td><td>1 hour</td></tr>
+<tr><td>2</td><td>2</td><td>Yoga Classes</td><td>2022-01-02 11:00</td><td>1.5 hours</td></tr>
+</tbody></table></div>
+
+<div><h2>Services</h2><table><thead>
+<tr><th>id</th><th>SpaOrRetreat</th><th>Description</th><th>Price</th><th>Duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Spa</td><td>Relaxing full body massage</td><td>100</td><td>60</td></tr>
+<tr><td>2</td><td>Spa</td><td>Facial rejuvenation treatment</td><td>120</td><td>45</td></tr>
+<tr><td>3</td><td>Wellness_Retreat</td><td>Guided meditation session</td><td>80</td><td>60</td></tr>
+<tr><td>4</td><td>Wellness_Retreat</td><td>Nutrition consultation</td><td>150</td><td>45</td></tr>
+</tbody></table></div>
+
+<div><h2>Staff</h2><table><thead>
+<tr><th>id</th><th>FullName</th><th>Role</th><th>Experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>Masseuse</td><td>5</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>Yoga Instructor</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

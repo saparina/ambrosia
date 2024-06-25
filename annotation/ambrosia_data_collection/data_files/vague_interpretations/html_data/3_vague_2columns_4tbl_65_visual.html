@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>AccountType</th><th>Balance</th><th>OpenDate</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Customers.CustomerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Checking</td><td>1000.0</td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Savings</td><td>5000.0</td><td>2023-02-01</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Limits</h2><table><thead>
+<tr><th>TransactionID</th><th><span style="color:#990000">Daily_Limit</span></th><th><span style="color:#990000">Transaction_Limit</span></th><th>Atms</th><th>AccountNumber</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.AccountNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3000.0</td><td>600.0</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>4000.0</td><td>800.0</td><td>3</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>Amount</th><th>DateAndTime</th><th>Description</th><th>AccountNumber</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.AccountNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>200.0</td><td>2023-03-01 10:30:00</td><td>Groceries</td><td>1</td></tr>
+<tr><td>2</td><td>-150.0</td><td>2023-03-02 14:15:00</td><td>ATM Withdrawal</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Overdrafts</h2><table><thead>
+<tr><th>OverdraftID</th><th>ApprovalStatus</th><th>LimitAmount</th><th>StartDate</th><th>EndDate</th><th>AccountNumber</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.AccountNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>500.0</td><td>2023-04-01</td><td>2023-05-01</td><td>1</td></tr>
+<tr><td>2</td><td>0</td><td>750.0</td><td>2023-05-01</td><td>2023-06-01</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Rewards</h2><table><thead>
+<tr><th>RewardID</th><th>Points</th><th>ExpiryDate</th><th>AccountNumber</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Accounts.AccountNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>100</td><td>2024-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>200</td><td>2024-02-01</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

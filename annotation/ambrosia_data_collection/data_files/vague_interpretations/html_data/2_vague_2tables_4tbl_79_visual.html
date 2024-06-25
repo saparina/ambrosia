@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Company</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tech Solutions</td><td>San Francisco</td></tr>
+<tr><td>2</td><td>Software Inc.</td><td>New York</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Recruitment_Agency</span></h2><table><thead>
+<tr><th>id</th><th>agencyName</th><th>contactEmail</th><th>contactPhone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Top Talent Agency</td><td>toptalent@example.com</td><td>+1-800-123-4567</td></tr>
+<tr><td>2</td><td>Job Connect</td><td>jobconnect@example.com</td><td>+1-900-987-6543</td></tr>
+</tbody></table></div>
+
+<div><h2>Position</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th><th>companyId</th><th>recruitmentAgencyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Company.id)</th><th>(&#8594; Recruitment_Agency.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop and maintain software applications.</td><td>90000</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data to provide insights and recommendations.</td><td>80000</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicant</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th><th>positionId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Position.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td><td>+1-123-456-7890</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td><td>+1-987-654-3210</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Interview</h2><table><thead>
+<tr><th>id</th><th>date</th><th>time</th><th>applicantId</th><th>interviewerId</th><th>positionId</th><th>status</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Applicant.id)</th><th>(&#8594; Employee.id)</th><th>(&#8594; Position.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-15</td><td>10:00 AM</td><td>1</td><td>1</td><td>1</td><td>Pending</td></tr>
+<tr><td>2</td><td>2023-01-16</td><td>11:00 AM</td><td>2</td><td>2</td><td>1</td><td>Completed</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th><th>role</th><th>hireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Wonderland</td><td>aliceland@example.com</td><td>+1-123-456-7890</td><td>HR Manager</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>Bob</td><td>Builder</td><td>bobbuilder@example.com</td><td>+1-987-654-3210</td><td>Engineering Director</td><td>2021-07-15</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

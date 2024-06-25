@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Currency_Exchange_Service</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location_Within_Terminal</th><th>Hours_of_Operation</th><th>Phone_Number</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Global Exchange</td><td><span style="color:#006600">Near Gate 10</span></td><td>8am - 6pm</td><td>+123456789</td><td>globalexchange@example.com</td></tr>
+<tr><td>2</td><td>Airport Foreign Exchange</td><td>Main Hall</td><td>9am - 8pm</td><td>+123456789</td><td>airporexchange@example.com</td></tr>
+<tr><td>3</td><td>Travelex</td><td>International Departures</td><td>10am - 6pm</td><td>+123456789</td><td>travelex@example.com</td></tr>
+<tr><td>4</td><td>Thomas Cook</td><td>Domestic Arrivals</td><td>7am - 9pm</td><td>+123456789</td><td>thomascook@example.com</td></tr>
+<tr><td>5</td><td>Cambio</td><td>Gate C</td><td>24 hours</td><td>+123456789</td><td>cambio@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ATM_Machine</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location_Within_Terminal</th><th>Operating_Company</th><th>Fees</th><th>Language_Options</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ATM <span style="color:#006600">Near Gate 10</span></td><td><span style="color:#006600">Near Gate 10</span></td><td>ABCD Bank</td><td>3.0</td><td>English, Spanish, French</td></tr>
+<tr><td>2</td><td>Airport ATM</td><td>Departure Level</td><td>EFG Bank</td><td>2.5</td><td>English, German, Chinese</td></tr>
+<tr><td>3</td><td>Express Cash</td><td>Before Security</td><td>HIJ Bank</td><td>3.25</td><td>English, Russian, Japanese</td></tr>
+<tr><td>4</td><td>Quick Cash</td><td>Arrival Area</td><td>KLM Bank</td><td>3.0</td><td>English, Dutch, Arabic</td></tr>
+<tr><td>5</td><td>Easy Pay</td><td>Between Concourse A & B</td><td>OPQ Bank</td><td>3.5</td><td>English, Italian, Portuguese</td></tr>
+</tbody></table></div>
+
+<div><h2>Food_and_Beverage</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Type</th><th>Location_Within_Terminal</th><th>Menu</th><th>Contact_Information</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Starbucks</td><td>Coffee Shop</td><td>Gate D</td><td>Espresso, Frappuccino, Sandwiches, Pastries</td><td>starbucks@example.com</td></tr>
+<tr><td>2</td><td>McDonalds</td><td>Fast Food</td><td>Concourse E</td><td>Burgers, Fries, Chicken Nuggets, Salads</td><td>mcdonalds@example.com</td></tr>
+<tr><td>3</td><td>Subway</td><td>Sandwich Bar</td><td>Pre-Security</td><td>Subs, Wraps, Salads, Cookies</td><td>subway@example.com</td></tr>
+<tr><td>4</td><td>Pizza Place</td><td>Italian Restaurant</td><td>After Security</td><td>Pizzas, Pasta, Antipasti, Tiramisu</td><td>pizzaplace@example.com</td></tr>
+<tr><td>5</td><td>Grill House</td><td>BBQ Restaurant</td><td>Gate F</td><td>Ribs, Steaks, Burgers, BBQ Sauce</td><td>grillhouse@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Shops</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Category</th><th>Location_Within_Terminal</th><th>Product_Offerings</th><th>Business_Hours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Duty Free Store</td><td>Luxury Goods</td><td>Departure Lounge</td><td>Perfumes, Watches, Alcohol, Tobacco</td><td>8am - 8pm</td></tr>
+<tr><td>2</td><td>Bookshop</td><td>Retail</td><td>Before Security</td><td>Magazines, Novels, Travel Guides</td><td>6am - 10pm</td></tr>
+<tr><td>3</td><td>Pharmacy</td><td>Health Care</td><td>Main Concourse</td><td>Medications, Toiletries, Cosmetics</td><td>7am - 9pm</td></tr>
+<tr><td>4</td><td>Clothing Store</td><td>Fashion</td><td>Between Gates A & B</td><td>Tshirts, Jeans, Accessories</td><td>8am - 8pm</td></tr>
+<tr><td>5</td><td>Electronics Shop</td><td>Technology</td><td>Gate C</td><td>Smartphones, Tablets, Headphones</td><td>8am - 8pm</td></tr>
+</tbody></table></div>
+
+<div><h2>Baggage_Claim</h2><table><thead>
+<tr><th>id</th><th>Terminal</th><th>Carousel_Numbers</th><th>Flight_Info</th><th>Lost_And_Found</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal 1</td><td>Carousels 1-5</td><td>Flight 123</td><td>Lost And Found Counter near Carousel 1</td></tr>
+<tr><td>2</td><td>Terminal 2</td><td>Carousels 6-10</td><td>Flight 456</td><td>Lost And Found Counter near Carousel 6</td></tr>
+<tr><td>3</td><td>Terminal 3</td><td>Carousels 11-15</td><td>Flight 789</td><td>Lost And Found Counter near Carousel 11</td></tr>
+<tr><td>4</td><td>Terminal 4</td><td>Carousels 16-20</td><td>Flight 001</td><td>Lost And Found Counter near Carousel 16</td></tr>
+<tr><td>5</td><td>Terminal 5</td><td>Carousels 21-25</td><td>Flight 999</td><td>Lost And Found Counter near Carousel 21</td></tr>
+</tbody></table></div>
+
+<div><h2>Parking</h2><table><thead>
+<tr><th>id</th><th>Lot_Name</th><th>Location</th><th>Daily_Rate</th><th>Weekly_Rate</th><th>Monthly_Rate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Short Stay</td><td>Next to terminal building</td><td>10.0</td><td>50.0</td><td>250.0</td></tr>
+<tr><td>2</td><td>Long Stay</td><td>Across the street</td><td>8.0</td><td>40.0</td><td>200.0</td></tr>
+<tr><td>3</td><td>Express Park</td><td>Outside airport perimeter</td><td>5.0</td><td>25.0</td><td>125.0</td></tr>
+<tr><td>4</td><td>Valet Parking</td><td>In front of main entrance</td><td>20.0</td><td>100.0</td><td>400.0</td></tr>
+<tr><td>5</td><td>Overnight Parking</td><td>Designated area</td><td>15.0</td><td>75.0</td><td>350.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

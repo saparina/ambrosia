@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Casting_Directors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Contact</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>+123-4567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>+098-7654321</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>+777-6665554</td></tr>
+<tr><td>4</td><td>Bob Johnson</td><td>+555-4443332</td></tr>
+<tr><td>5</td><td>Charlie White</td><td>+111-2221110</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Actors</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000">ActorType</span></th><th><span style="color:#990000">Name</span></th><th>Age</th><th>Contact</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lead</td><td>Tom Hanks</td><td>55</td><td>+123-4567890</td></tr>
+<tr><td>2</td><td>Supporting</td><td>Meryl Streep</td><td>68</td><td>+098-7654321</td></tr>
+<tr><td>3</td><td>Child</td><td>Emma Watson</td><td>18</td><td>+777-6665554</td></tr>
+<tr><td>4</td><td>Extras</td><td>Robert Downey Jr.</td><td>54</td><td>+555-4443332</td></tr>
+<tr><td>5</td><td>Background</td><td>Scarlett Johansson</td><td>36</td><td>+111-2221110</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>ReleaseYear</th><th>DirectorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Casting_Directors.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Forrest Gump</td><td>1994</td><td>1</td></tr>
+<tr><td>2</td><td>The Devil Wears Prada</td><td>2006</td><td>2</td></tr>
+<tr><td>3</td><td>Harry Potter and the Sorcerer's Stone</td><td>2001</td><td>3</td></tr>
+<tr><td>4</td><td>Iron Man</td><td>2008</td><td>4</td></tr>
+<tr><td>5</td><td>Avengers: Endgame</td><td>2019</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>ID</th><th>FilmID</th><th>RoleName</th></tr>
+<tr><th></th><th>(&#8594; Films.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Gump</td></tr>
+<tr><td>2</td><td>1</td><td>Lyndon B. Johnson</td></tr>
+<tr><td>3</td><td>2</td><td>Miranda Priestly</td></tr>
+<tr><td>4</td><td>2</td><td>Andy Sachs</td></tr>
+<tr><td>5</td><td>3</td><td>Harry Potter</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>ID</th><th>ActorID</th><th>RoleID</th></tr>
+<tr><th></th><th>(&#8594; Actors.ID)</th><th>(&#8594; Roles.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Child_Performers</h2><table><thead>
+<tr><th>ID</th><th>ActorID</th><th>GuardianContact</th></tr>
+<tr><th></th><th>(&#8594; Actors.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3</td><td>+123-4567890</td></tr>
+</tbody></table></div>
+
+<div><h2>Casting_Directors_Actors</h2><table><thead>
+<tr><th>CDID</th><th>ActorID</th></tr>
+<tr><th>(&#8594; Casting_Directors.ID)</th><th>(&#8594; Actors.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

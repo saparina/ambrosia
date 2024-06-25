@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Films</span></h2><table><thead>
+<tr><th>film_id</th><th>title</th><th>release_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td></tr>
+<tr><td>2</td><td>Forrest Gump</td><td>1994</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994</td></tr>
+<tr><td>4</td><td>Fight Club</td><td>1999</td></tr>
+<tr><td>5</td><td>Inception</td><td>2010</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Crew_Members</span></h2><table><thead>
+<tr><th><span style="color:#990000">member_id</span></th><th><span style="color:#990000">role</span></th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Director</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Producer</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Screenwriter</td><td>Mike Johnson</td></tr>
+<tr><td>4</td><td>Cinematographer</td><td>Emily Brown</td></tr>
+<tr><td>5</td><td>Editor</td><td>David Wilson</td></tr>
+</tbody></table></div>
+
+<div><h2>Films_Crew_Members</h2><table><thead>
+<tr><th>film_id</th><th>member_id</th></tr>
+<tr><th>(&#8594; Films.film_id)</th><th>(&#8594; Crew_Members.member_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Genres</h2><table><thead>
+<tr><th>film_genre_id</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Romance</td></tr>
+<tr><td>3</td><td>Crime</td></tr>
+<tr><td>4</td><td>Thriller</td></tr>
+<tr><td>5</td><td>Science Fiction</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>actor_id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tim</td><td>Robinson</td></tr>
+<tr><td>2</td><td>Tom</td><td>Hanks</td></tr>
+<tr><td>3</td><td>Brad</td><td>Pitt</td></tr>
+<tr><td>4</td><td>Paul</td><td>Newman</td></tr>
+<tr><td>5</td><td>Leonardo</td><td>DiCaprio</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

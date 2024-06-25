@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Amenities</span></h2><table><thead>
+<tr><th>amenity_id</th><th><span style="color:#006600">amenity_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Air Conditioning</span></td></tr>
+<tr><td>2</td><td>WiFi</td></tr>
+<tr><td>3</td><td>Parking</td></tr>
+<tr><td>4</td><td>Pool</td></tr>
+<tr><td>5</td><td>Gym</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Rooms</span></h2><table><thead>
+<tr><th>room_id</th><th>room_type</th><th>guestroom_amenities</th><th>suite_amenities</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Amenities.amenity_name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Deluxe</td><td>Air Conditioning, WiFi</td><td>Air Conditioning</td></tr>
+<tr><td>2</td><td>Standard</td><td>Parking</td><td>Parking, Pool</td></tr>
+<tr><td>3</td><td>Luxury Suite</td><td>Gym</td><td>Gym, Air Conditioning</td></tr>
+<tr><td>4</td><td>Executive Suite</td><td>Air Conditioning, WiFi</td><td>Pool</td></tr>
+<tr><td>5</td><td>Family Room</td><td>WiFi, Parking</td><td>WiFi, Gym</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>guest_id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>reservation_id</th><th>checkin_date</th><th>checkout_date</th><th>room_id</th><th>guest_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Rooms.room_id)</th><th>(&#8594; Guests.guest_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01</td><td>2023-01-07</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2023-01-15</td><td>2023-01-21</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2023-02-01</td><td>2023-02-07</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2023-02-15</td><td>2023-02-21</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2023-03-01</td><td>2023-03-07</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>airlines</h2><table><thead>
+<tr><th>airline_id</th><th>name</th><th>code</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United</td><td>UA</td></tr>
+<tr><td>2</td><td>Delta</td><td>DL</td></tr>
+<tr><td>3</td><td>Southwest</td><td>WN</td></tr>
+<tr><td>4</td><td>American</td><td>AA</td></tr>
+<tr><td>5</td><td>Alaska</td><td>AS</td></tr>
+</tbody></table></div>
+
+<div><h2>flights</h2><table><thead>
+<tr><th>flight_id</th><th>departure_time</th><th>arrival_time</th><th>distance</th><th>origin_airport_code</th><th>destination_airport_code</th><th>airline_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; airlines.airline_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-10-01 08:00:00</td><td>2022-10-01 10:00:00</td><td>2500.0</td><td>ORD</td><td>LAX</td><td>1</td></tr>
+<tr><td>2</td><td>2022-10-01 12:00:00</td><td>2022-10-01 14:00:00</td><td>3000.0</td><td>JFK</td><td>SEA</td><td>2</td></tr>
+<tr><td>3</td><td>2022-10-01 16:00:00</td><td>2022-10-01 18:00:00</td><td>2700.0</td><td>DFW</td><td>PHX</td><td>3</td></tr>
+<tr><td>4</td><td>2022-10-01 19:00:00</td><td>2022-10-01 21:00:00</td><td>2200.0</td><td>MIA</td><td>ATL</td><td>4</td></tr>
+<tr><td>5</td><td>2022-10-01 22:00:00</td><td>2022-10-02 02:00:00</td><td>4500.0</td><td>LAX</td><td>HNL</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>terminals</h2><table><thead>
+<tr><th>terminal_number</th><th>capacity</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>50</td><td>Terminal A</td></tr>
+<tr><td>2</td><td>60</td><td>Terminal B</td></tr>
+<tr><td>3</td><td>70</td><td>Terminal C</td></tr>
+<tr><td>4</td><td>45</td><td>Terminal D</td></tr>
+<tr><td>5</td><td>30</td><td>Terminal E</td></tr>
+</tbody></table></div>
+
+<div><h2>boarding_areas</h2><table><thead>
+<tr><th>boarding_area_id</th><th><span style="color:#990000">terminal_number</span></th><th><span style="color:#990000">gate</span></th></tr>
+<tr><th></th><th>(&#8594; terminals.terminal_number)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10</td></tr>
+<tr><td>2</td><td>1</td><td>12</td></tr>
+<tr><td>3</td><td>2</td><td>14</td></tr>
+<tr><td>4</td><td>2</td><td>16</td></tr>
+<tr><td>5</td><td>3</td><td>18</td></tr>
+</tbody></table></div>
+
+<div><h2>flights_boarding_areas</h2><table><thead>
+<tr><th>flight_id</th><th>boarding_area_id</th></tr>
+<tr><th>(&#8594; flights.flight_id)</th><th>(&#8594; boarding_areas.boarding_area_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

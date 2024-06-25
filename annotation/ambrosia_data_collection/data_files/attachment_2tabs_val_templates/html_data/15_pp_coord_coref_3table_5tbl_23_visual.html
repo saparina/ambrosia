@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Scriptwriters</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-06-07</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1992-09-11</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>1975-03-14</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Editors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>HireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Brown</td><td>2015-02-10</td></tr>
+<tr><td>2</td><td>Bob White</td><td>2018-08-20</td></tr>
+<tr><td>3</td><td>Carol Green</td><td>2009-11-15</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Projects</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th><span style="color:#1430b2">Deadline</span></th><th>Budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film A</td><td>2021-04-21</td><td>500000.0</td></tr>
+<tr><td>2</td><td>Film B</td><td>2021-05-15</td><td>750000.0</td></tr>
+<tr><td>3</td><td>Film C</td><td>2021-04-22</td><td>1000000.0</td></tr>
+<tr><td>4</td><td>Film D</td><td>2021-06-01</td><td>1500000.0</td></tr>
+<tr><td>5</td><td>Film E</td><td><span style="color:#1430b2">2021-05-10</span></td><td>2000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>ScriptwriterID</th><th>EditorID</th><th>ProjectID</th></tr>
+<tr><th>(&#8594; Scriptwriters.ID)</th><th>(&#8594; Editors.ID)</th><th>(&#8594; Projects.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>2</td><td>1</td><td>3</td></tr>
+<tr><td>3</td><td>2</td><td>4</td></tr>
+<tr><td>1</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

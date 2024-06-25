@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Subjects</h2><table><thead>
+<tr><th>id</th><th>subjectName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Physics</td></tr>
+<tr><td>3</td><td>Chemistry</td></tr>
+<tr><td>4</td><td>Biology</td></tr>
+<tr><td>5</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>teacherId</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>michael.johnson@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>emily.williams@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>david.brown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>classId</th><th>className</th><th>startDate</th><th>endDate</th><th>teacherId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Teachers.teacherId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math101</td><td>2023-09-01</td><td>2023-12-21</td><td>1</td></tr>
+<tr><td>2</td><td>Physics101</td><td>2023-08-30</td><td>2023-12-20</td><td>2</td></tr>
+<tr><td>3</td><td>Chemistry101</td><td>2023-09-01</td><td>2023-12-21</td><td>3</td></tr>
+<tr><td>4</td><td>Biology101</td><td>2023-08-30</td><td>2023-12-20</td><td>4</td></tr>
+<tr><td>5</td><td>History101</td><td>2023-09-01</td><td>2023-12-21</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>studentId</th><th>firstName</th><th>lastName</th><th>enrollmentYear</th><th>classId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Classes.classId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Ward</td><td>2023</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Green</td><td>2023</td><td>2</td></tr>
+<tr><td>3</td><td>Charlie</td><td>Black</td><td>2023</td><td>3</td></tr>
+<tr><td>4</td><td>David</td><td>White</td><td>2023</td><td>4</td></tr>
+<tr><td>5</td><td>Eva</td><td>Gray</td><td>2023</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Learning_Materials</span></h2><table><thead>
+<tr><th>materialId</th><th><span style="color:#186e16">typeOfMaterial</span></th><th>title</th><th>description</th><th>difficultyLevel</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Difficulty_levels.difficultyLevel)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Textbook</span></td><td>Introduction to Mathematics</td><td>A comprehensive textbook covering basic mathematics concepts.</td><td>Intermediate</td></tr>
+<tr><td>2</td><td><span style="color:#186e16">Textbook</span></td><td>General Chemistry</td><td>An introductory chemistry textbook suitable for college students.</td><td>Beginner</td></tr>
+<tr><td>3</td><td>Online Course</td><td>Advanced Physics</td><td>A detailed online course covering advanced physics topics.</td><td>Advanced</td></tr>
+<tr><td>4</td><td>Online Course</td><td>World History I</td><td>An interactive online course exploring world history up to 1500 AD.</td><td>Intermediate</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Difficulty_levels</span></h2><table><thead>
+<tr><th>difficultyLevel</th><th><span style="color:#1430b2">levelDescription</span></th></tr>
+</thead><tbody>
+<tr><td>Beginner</td><td>For beginners with little or no prior knowledge.</td></tr>
+<tr><td>Intermediate</td><td><span style="color:#1430b2">For those who have a good understanding of the basics.</span></td></tr>
+<tr><td>Advanced</td><td>For experienced learners looking for challenging content.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

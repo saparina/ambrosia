@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Tech_Startups</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Startup1</td><td>San Francisco</td></tr>
+<tr><td>2</td><td>Startup2</td><td>New York</td></tr>
+<tr><td>3</td><td>Startup3</td><td>Los Angeles</td></tr>
+<tr><td>4</td><td>Startup4</td><td>Boston</td></tr>
+<tr><td>5</td><td>Startup5</td><td>Austin</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Tech_Jobs</span></h2><table><thead>
+<tr><th>id</th><th>job_title</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Product Manager</td><td>Managing product development from conception to launch.</td></tr>
+<tr><td>2</td><td>Software Engineer</td><td>Developing software applications using various programming languages.</td></tr>
+<tr><td>3</td><td>Data Scientist</td><td>Analyzing data to provide insights and make data-driven decisions.</td></tr>
+<tr><td>4</td><td>Marketing Specialist</td><td>Creating marketing strategies to promote products and services.</td></tr>
+<tr><td>5</td><td>Designer</td><td>Designing user interfaces and experiences for digital products.</td></tr>
+</tbody></table></div>
+
+<div><h2>Tech_Startups_Tech_Jobs</h2><table><thead>
+<tr><th>tech_startup_id</th><th>tech_job_id</th></tr>
+<tr><th>(&#8594; Tech_Startups.id)</th><th>(&#8594; Tech_Jobs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

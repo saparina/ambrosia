@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Agency</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Expedia</span></td></tr>
+<tr><td>2</td><td>Booking.com</td></tr>
+<tr><td>3</td><td>Travelsupermarket.com</td></tr>
+<tr><td>4</td><td>Thomson Holidays</td></tr>
+<tr><td>5</td><td>Lastminute.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">HospitalityJobType</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">job_type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Tour Guide</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Travel Agent</span></td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosting</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>posted_date</th><th>agency_id</th><th>hospitality_job_type_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Agency.id)</th><th>(&#8594; HospitalityJobType.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Seeking Tour Guides</td><td>We need experienced tour guides to join our team.</td><td>2024-03-13 13:06:58</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Experienced Travel Agents Wanted</td><td>If you have experience in travel agency, apply now!</td><td>2024-03-13 13:06:58</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Join Our Team of Tour Guides</td><td></td><td>2024-03-13 13:06:58</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>Travel Agents Needed</td><td></td><td>2024-03-13 13:06:58</td><td>3</td><td>2</td></tr>
+<tr><td>5</td><td>Looking For Enthusiastic Tour Guides</td><td></td><td>2024-03-13 13:06:58</td><td>4</td><td>1</td></tr>
+<tr><td>6</td><td>Senior Travel Agents Required</td><td></td><td>2024-03-13 13:06:58</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicant</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Application</h2><table><thead>
+<tr><th>application_id</th><th>job_posting_id</th><th>applicant_id</th><th>application_date</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; JobPosting.id)</th><th>(&#8594; Applicant.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-03-13 13:06:58</td><td>Applied</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2024-03-13 13:06:58</td><td>Rejected</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

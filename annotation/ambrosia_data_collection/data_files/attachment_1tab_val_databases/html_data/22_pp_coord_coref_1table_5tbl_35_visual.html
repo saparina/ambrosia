@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th><th>DateOfBirth</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Emily Dickinson</td><td>1830-12-10</td><td>USA</td></tr>
+<tr><td>2</td><td>John Doe</td><td>1975-06-22</td><td>Canada</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">WrittenWorks</span></h2><table><thead>
+<tr><th>WorkID</th><th>Title</th><th>Type</th><th>PublicationDate</th><th>WordCount</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>My Life</td><td><span style="color:#990000">Essay</span></td><td>2000-0<span style="color:#006600">1</span>-0<span style="color:#006600">1</span></td><td><span style="color:#006600">1</span>000</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Nature</td><td><span style="color:#990000">Poetry</span></td><td><span style="color:#006600">1</span>890-0<span style="color:#006600">1</span>-0<span style="color:#006600">1</span></td><td>200</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>3</td><td>A Different Life</td><td><span style="color:#990000">Essay</span></td><td>2010-01-01</td><td>1200</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Schools</h2><table><thead>
+<tr><th>SchoolID</th><th>Name</th><th>Address</th><th>City</th><th>State</th><th>ZipCode</th><th>FoundedYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harvard University</td><td>Massachusetts Hall</td><td>Cambridge</td><td>MA</td><td>02138</td><td>1636</td></tr>
+<tr><td>2</td><td>Yale University</td><td>Old Campus</td><td>New Haven</td><td>CT</td><td>06510</td><td>1701</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Birthdate</th><th>EnrollmentDate</th><th>SchoolID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Schools.SchoolID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>1990-02-15</td><td>2006-08-25</td><td>1</td></tr>
+<tr><td>2</td><td>Charlie</td><td>Doe</td><td>1992-03-20</td><td>2008-08-25</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>SubjectID</th><th>SubjectName</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td><td>The study of numbers, quantity, structure, space, and change.</td></tr>
+<tr><td>2</td><td>Literature</td><td>The study of written works.</td></tr>
+</tbody></table></div>
+
+<div><h2>CourseTeachings</h2><table><thead>
+<tr><th>CourseTeachingID</th><th>CourseSubjectID</th><th>TeacherID</th><th>Semester</th><th>Year</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Subjects.SubjectID)</th><th>(&#8594; Students.StudentID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Fall</td><td>2021</td><td>2021-08-25</td><td>2021-12-21</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Spring</td><td>2022</td><td>2022-01-13</td><td>2022-05-13</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

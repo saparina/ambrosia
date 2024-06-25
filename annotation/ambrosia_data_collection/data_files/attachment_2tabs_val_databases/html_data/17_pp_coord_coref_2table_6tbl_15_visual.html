@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Beaches</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>White Sands Beach</td><td>123 Main St</td><td>555-555-5555</td><td>whitesand@email.com</td></tr>
+<tr><td>2</td><td>Sunset Shores</td><td>456 Ocean Blvd</td><td>555-555-6789</td><td>sunsets@email.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Beach_Clubs</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>OpeningHours</th><th>PriceRange</th><th>Beach_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Beaches.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Paradise Club</td><td>White Sands Beach</td><td>9am - 6pm</td><td>$$</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Ocean View Club</td><td>Sunset Shores</td><td>10am - 7pm</td><td>$$$</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Watersports_Rentals</span></h2><table><thead>
+<tr><th>id</th><th>Item</th><th>RentalRate</th><th>AvailableDays</th><th>Beach_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Beaches.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Kayak</td><td>20.0</td><td>Mon - Fri</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Paddleboard</td><td>25.0</td><td>All Days</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Cuisine</th><th>Rating</th><th>Beach_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Beaches.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Seaside Grill</td><td>Italian</td><td>4.5</td><td>1</td></tr>
+<tr><td>2</td><td>Surfside Cafe</td><td>Mexican</td><td>4.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Hotels</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Star_rating</th><th>PriceRange</th><th>Beach_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Beaches.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Oceanfront Inn</td><td>3</td><td>Moderate</td><td>1</td></tr>
+<tr><td>2</td><td>Shoreline Suites</td><td>4</td><td>High</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Accommodations</h2><table><thead>
+<tr><th>id</th><th>Type</th><th>Capacity</th><th>Amenities</th><th>Beach_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Beaches.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hotel</td><td>50</td><td>Pool, WiFi, Parking</td><td>1</td></tr>
+<tr><td>2</td><td>Vacation Home</td><td>8</td><td>No Pets Allowed, Jacuzzi, BBQ</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

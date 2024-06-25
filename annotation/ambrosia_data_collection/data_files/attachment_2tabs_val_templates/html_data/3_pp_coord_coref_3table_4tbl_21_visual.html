@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Directors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-01-01</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1975-02-02</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Editors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>1992-03-03</td><td>Canada</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>1988-04-04</td><td>Australia</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Episodes</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th><span style="color:#1430b2">DirectorID</span></th><th>EditorID</th><th>ReleaseDate</th></tr>
+<tr><th></th><th></th><th>(&#8594; Directors.ID)</th><th>(&#8594; Editors.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pilot Episode</td><td>1</td><td>1</td><td>2022-05-05</td></tr>
+<tr><td><span style="color:#1430b2">2</span></td><td>Episode <span style="color:#1430b2">2</span></td><td><span style="color:#1430b2">2</span></td><td><span style="color:#1430b2">2</span></td><td><span style="color:#1430b2">2</span>0<span style="color:#1430b2">2</span><span style="color:#1430b2">2</span>-06-06</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Year</th><th>Genre</th><th>DirectorID</th><th>EditorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Directors.ID)</th><th>(&#8594; Editors.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie A</td><td>2020</td><td>Drama</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Movie B</td><td>2021</td><td>Comedy</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

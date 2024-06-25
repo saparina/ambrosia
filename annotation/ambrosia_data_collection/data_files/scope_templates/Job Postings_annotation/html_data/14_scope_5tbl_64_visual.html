@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Internships</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Web Development Intern</td><td>Develop web applications using Java and JavaScript</td></tr>
+<tr><td>2</td><td>Mobile Apps Intern</td><td>Design and develop mobile apps for Android and iOS platforms</td></tr>
+<tr><td>3</td><td>Data Science Intern</td><td>Analyze data sets and create predictive models</td></tr>
+<tr><td>4</td><td>Marketing Intern</td><td>Assist in marketing campaigns and social media management</td></tr>
+<tr><td>5</td><td>UI/UX Designer Intern</td><td>Create user interfaces and improve user experience</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Responsibilities</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">responsibility</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Research</td></tr>
+<tr><td>2</td><td>Project Management</td></tr>
+<tr><td>3</td><td>Quality Assurance</td></tr>
+<tr><td>4</td><td>Customer Support</td></tr>
+<tr><td>5</td><td>Content Writing</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tech Giants</td></tr>
+<tr><td>2</td><td>Startups Inc.</td></tr>
+<tr><td>3</td><td>Software Solutions Ltd.</td></tr>
+<tr><td>4</td><td>Technology Firm</td></tr>
+<tr><td>5</td><td>Data Analytics Co.</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>id</th><th>city</th><th>state</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td></tr>
+<tr><td>2</td><td>San Francisco</td><td>CA</td><td>USA</td></tr>
+<tr><td>3</td><td>London</td><td>England</td><td>UK</td></tr>
+<tr><td>4</td><td>Berlin</td><td>Germany</td><td>Germany</td></tr>
+<tr><td>5</td><td>Tokyo</td><td>Japan</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>CompanyLocations</h2><table><thead>
+<tr><th>companyId</th><th>locationId</th></tr>
+<tr><th>(&#8594; Companies.id)</th><th>(&#8594; Locations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>InternshipApplications</h2><table><thead>
+<tr><th>internshipId</th><th>applicationId</th></tr>
+<tr><th>(&#8594; Internships.id)</th><th>(&#8594; Applications.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Internships_Responsibilities</h2><table><thead>
+<tr><th>internshipId</th><th>responsibilityId</th></tr>
+<tr><th>(&#8594; Internships.id)</th><th>(&#8594; Responsibilities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

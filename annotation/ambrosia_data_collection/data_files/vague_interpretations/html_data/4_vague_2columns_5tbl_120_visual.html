@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Rooms</h2><table><thead>
+<tr><th>RoomID</th><th><span style="color:#990000">Building</span></th><th><span style="color:#990000">Area</span></th><th>Spa</th><th>Occupied</th><th>Rate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Building A</td><td>Area 101</td><td>1</td><td>0</td><td>299.99</td></tr>
+<tr><td>2</td><td>Building B</td><td>Area 201</td><td>0</td><td>1</td><td>399.99</td></tr>
+<tr><td>3</td><td>Building C</td><td>Area 301</td><td>1</td><td>1</td><td>499.99</td></tr>
+<tr><td>4</td><td>Building D</td><td>Area 401</td><td>0</td><td>0</td><td>599.99</td></tr>
+<tr><td>5</td><td>Building E</td><td>Area 501</td><td>1</td><td>0</td><td>699.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+123456789</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+987654321</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td><td>+111222333</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emily.white@example.com</td><td>+444555666</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td><td>+777888999</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>ReservationID</th><th>CustomerID</th><th>CheckInDate</th><th>CheckOutDate</th><th>TotalAmount</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>2023-01-05</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-10</td><td>2023-01-15</td><td>1200.0</td></tr>
+<tr><td>3</td><td>3</td><td>2023-01-20</td><td>2023-01-25</td><td>1400.0</td></tr>
+<tr><td>4</td><td>4</td><td>2023-02-01</td><td>2023-02-05</td><td>1600.0</td></tr>
+<tr><td>5</td><td>5</td><td>2023-02-10</td><td>2023-02-15</td><td>1800.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Services</h2><table><thead>
+<tr><th>ServiceID</th><th>Description</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Room upgrade to suite</td><td>150.0</td></tr>
+<tr><td>2</td><td>Extra bed</td><td>50.0</td></tr>
+<tr><td>3</td><td>Late checkout</td><td>100.0</td></tr>
+<tr><td>4</td><td>Breakfast buffet</td><td>30.0</td></tr>
+<tr><td>5</td><td>Welcome drink at bar</td><td>15.0</td></tr>
+</tbody></table></div>
+
+<div><h2>BookedServices</h2><table><thead>
+<tr><th>BookingID</th><th>ReservationID</th><th>ServiceID</th><th>Quantity</th><th>TotalAmount</th></tr>
+<tr><th></th><th>(&#8594; Reservations.ReservationID)</th><th>(&#8594; Services.ServiceID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>150.0</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>1</td><td>50.0</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>1</td><td>100.0</td></tr>
+<tr><td>4</td><td>1</td><td>4</td><td>1</td><td>30.0</td></tr>
+<tr><td>5</td><td>1</td><td>5</td><td>1</td><td>15.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

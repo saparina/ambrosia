@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Participants</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Greta Gerwig</td></tr>
+<tr><td>2</td><td>Joaquin Phoenix</td></tr>
+<tr><td>3</td><td>Brad Pitt</td></tr>
+<tr><td>4</td><td><span style="color:#006600">Meryl Streep</span></td></tr>
+<tr><td>5</td><td>Leonardo DiCaprio</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Film_Festivals</span></h2><table><thead>
+<tr><th>FestivalID</th><th>FestivalName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cannes Film Festival</td></tr>
+<tr><td>2</td><td>Venice Film Festival</td></tr>
+<tr><td>3</td><td>Berlin International Film Festival</td></tr>
+<tr><td>4</td><td>Toronto International Film Festival</td></tr>
+<tr><td>5</td><td>Telluride Film Festival</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Awards_Ceremonies</span></h2><table><thead>
+<tr><th>CeremonyID</th><th>CeremonyName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Academy Awards</td></tr>
+<tr><td>2</td><td>Golden Globe Awards</td></tr>
+<tr><td>3</td><td>BAFTA Awards</td></tr>
+<tr><td>4</td><td>Screen Actors Guild Awards</td></tr>
+<tr><td>5</td><td>Independent Spirit Awards</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>FestivalID</th><th>CeremonyID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Film_Festivals.FestivalID)</th><th>(&#8594; Awards_Ceremonies.CeremonyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lady Bird</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Once Upon a Time...in Hollywood</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>The Irishman</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Marriage Story</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Parasite</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Partcipant_Involvement</h2><table><thead>
+<tr><th>ParticipantID</th><th>FilmID</th><th>Role</th></tr>
+<tr><th>(&#8594; Participants.ID)</th><th>(&#8594; Films.FilmID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Director</td></tr>
+<tr><td>2</td><td>2</td><td>Actor</td></tr>
+<tr><td>3</td><td>3</td><td>Producer</td></tr>
+<tr><td>4</td><td>4</td><td>Actress</td></tr>
+<tr><td>5</td><td>5</td><td>Writer/Director</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>AgeGroups</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>0-9</td></tr>
+<tr><td>2</td><td>10-19</td></tr>
+<tr><td>3</td><td>20-29</td></tr>
+<tr><td>4</td><td>30-39</td></tr>
+<tr><td>5</td><td>40-49</td></tr>
+</tbody></table></div>
+
+<div><h2>BirthYears</h2><table><thead>
+<tr><th>Year</th><th><span style="color:#990000">Number_Of_Births</span></th><th><span style="color:#990000">Crude_Birth_Rate</span></th><th>City</th></tr>
+</thead><tbody>
+<tr><td>2018</td><td>1000</td><td>7.6</td><td>New York</td></tr>
+<tr><td>2019</td><td>1050</td><td>8.1</td><td>Los Angeles</td></tr>
+<tr><td>2020</td><td>1100</td><td>8.6</td><td>Chicago</td></tr>
+<tr><td>2021</td><td>1150</td><td>9.1</td><td>Houston</td></tr>
+<tr><td>2022</td><td>1200</td><td>9.6</td><td>Phoenix</td></tr>
+</tbody></table></div>
+
+<div><h2>Regions</h2><table><thead>
+<tr><th>RegionName</th><th>PopulationCount</th></tr>
+</thead><tbody>
+<tr><td>Northeast</td><td>2000000</td></tr>
+<tr><td>Midwest</td><td>1500000</td></tr>
+<tr><td>South</td><td>1000000</td></tr>
+<tr><td>West</td><td>1200000</td></tr>
+<tr><td>Other</td><td>500000</td></tr>
+</tbody></table></div>
+
+<div><h2>Cities</h2><table><thead>
+<tr><th>CityName</th><th>RegionName</th></tr>
+<tr><th></th><th>(&#8594; Regions.RegionName)</th></tr>
+</thead><tbody>
+<tr><td>New York</td><td>Northeast</td></tr>
+<tr><td>Los Angeles</td><td>West</td></tr>
+<tr><td>Chicago</td><td>Midwest</td></tr>
+<tr><td>Houston</td><td>South</td></tr>
+<tr><td>Phoenix</td><td>West</td></tr>
+</tbody></table></div>
+
+<div><h2>AgeGroupPopulations</h2><table><thead>
+<tr><th>AgeGroupID</th><th>Year</th><th>CityName</th><th>TotalPopulation</th></tr>
+<tr><th>(&#8594; AgeGroups.ID)</th><th>(&#8594; BirthYears.Year)</th><th>(&#8594; Cities.CityName)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2018</td><td>New York</td><td>100000</td></tr>
+<tr><td>1</td><td>2018</td><td>Los Angeles</td><td>80000</td></tr>
+<tr><td>1</td><td>2018</td><td>Chicago</td><td>70000</td></tr>
+<tr><td>1</td><td>2018</td><td>Houston</td><td>60000</td></tr>
+<tr><td>1</td><td>2018</td><td>Phoenix</td><td>50000</td></tr>
+</tbody></table></div>
+
+<div><h2>EducationLevels</h2><table><thead>
+<tr><th>Level</th><th>Percentage</th></tr>
+</thead><tbody>
+<tr><td>High School Diploma</td><td>25</td></tr>
+<tr><td>Some College</td><td>30</td></tr>
+<tr><td>Associate Degree</td><td>10</td></tr>
+<tr><td>Bachelor's Degree</td><td>35</td></tr>
+<tr><td>Graduate Degree</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>CityEducationStats</h2><table><thead>
+<tr><th>CityName</th><th>Level</th><th>Percentage</th></tr>
+<tr><th>(&#8594; Cities.CityName)</th><th>(&#8594; EducationLevels.Level)</th><th></th></tr>
+</thead><tbody>
+<tr><td>New York</td><td>High School Diploma</td><td>27</td></tr>
+<tr><td>Los Angeles</td><td>Some College</td><td>32</td></tr>
+<tr><td>Chicago</td><td>Associate Degree</td><td>11</td></tr>
+<tr><td>Houston</td><td>Bachelor's Degree</td><td>36</td></tr>
+<tr><td>Phoenix</td><td>Graduate Degree</td><td>16</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

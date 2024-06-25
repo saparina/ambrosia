@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michaeljohnson@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emilydavis@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>davidbrown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>id</th><th>customerId</th><th>balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>0.0</td></tr>
+<tr><td>2</td><td>2</td><td>0.0</td></tr>
+<tr><td>3</td><td>3</td><td>0.0</td></tr>
+<tr><td>4</td><td>4</td><td>0.0</td></tr>
+<tr><td>5</td><td>5</td><td>0.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Credit_Cards</span></h2><table><thead>
+<tr><th>id</th><th>accountId</th><th>cardNumber</th><th>expiryDate</th><th>securityCode</th><th>creditLimit</th></tr>
+<tr><th></th><th>(&#8594; Accounts.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1234567890123456</td><td>2023-12-31</td><td>123</td><td>5000.0</td></tr>
+<tr><td>2</td><td>2</td><td>0987654321098765</td><td>2024-12-31</td><td>456</td><td>5000.0</td></tr>
+<tr><td>3</td><td>3</td><td>1122334455667788</td><td>2025-12-31</td><td>789</td><td>5000.0</td></tr>
+<tr><td>4</td><td>4</td><td>6655443322110099</td><td>2026-12-31</td><td>0</td><td>5000.0</td></tr>
+<tr><td>5</td><td>5</td><td>9988776655443322</td><td>2027-12-31</td><td>111</td><td>5000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Benefits</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">benefitName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rewards_Program</td></tr>
+<tr><td>2</td><td>Travel Insurance</td></tr>
+<tr><td>3</td><td>Extended Warranty</td></tr>
+<tr><td>4</td><td>Purchase Protection</td></tr>
+<tr><td>5</td><td>Price Protection</td></tr>
+</tbody></table></div>
+
+<div><h2>Credit_Card_Benefits</h2><table><thead>
+<tr><th>id</th><th>creditCardId</th><th>benefitId</th></tr>
+<tr><th></th><th>(&#8594; Credit_Cards.id)</th><th>(&#8594; Benefits.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

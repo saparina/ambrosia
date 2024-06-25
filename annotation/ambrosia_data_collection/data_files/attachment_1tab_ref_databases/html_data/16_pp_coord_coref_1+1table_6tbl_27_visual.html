@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">ResearchMethod</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">name</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Case Study</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Interview</span></td></tr>
+<tr><td>3</td><td>Survey</td></tr>
+<tr><td>4</td><td>Experiment</td></tr>
+<tr><td>5</td><td>Observation</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Topic</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">topicName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Environmental Science</span></td></tr>
+<tr><td>2</td><td>Educational Technology</td></tr>
+<tr><td>3</td><td>Mathematics Education</td></tr>
+<tr><td>4</td><td>Physical Education</td></tr>
+<tr><td>5</td><td>Chemistry Education</td></tr>
+</tbody></table></div>
+
+<div><h2>Professor</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Emma</td><td>White</td><td>emma.white@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>ResearchProjects</h2><table><thead>
+<tr><th>projectId</th><th>professorID</th><th>methodId</th><th>topicId</th></tr>
+<tr><th></th><th>(&#8594; Professor.id)</th><th>(&#8594; ResearchMethod.id)</th><th>(&#8594; Topic.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>1</td><td>3</td><td>1</td></tr>
+<tr><td>6</td><td>2</td><td>4</td><td>1</td></tr>
+<tr><td>7</td><td>3</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

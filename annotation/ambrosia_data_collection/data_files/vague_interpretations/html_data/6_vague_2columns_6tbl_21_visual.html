@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th>artist_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Thriller</td><td>1982-06-30</td><td>Michael Jackson</td></tr>
+<tr><td>2</td><td>Abbey Road</td><td>1969-09-26</td><td>The Beatles</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>length</th><th>album_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Albums.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Billie Jean</td><td>4.57</td><td>1</td></tr>
+<tr><td>2</td><td>Hey Jude</td><td>7.1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>name</th><th>genre</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Jackson</td><td>Pop</td><td>USA</td></tr>
+<tr><td>2</td><td>The Beatles</td><td>Rock</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Concerts</h2><table><thead>
+<tr><th>id</th><th>date</th><th>location</th><th>headliner_artist_id</th><th>opening_act_artist_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Artists.id)</th><th>(&#8594; Artists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-06-01</td><td>New York City</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2022-06-02</td><td>Los Angeles</td><td>1</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Ballets</h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#990000">choreographer</span></th><th><span style="color:#990000">musician</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Swan Lake</td><td>Marius Petipa</td><td>Pyotr Ilyich Tchaikovsky</td></tr>
+<tr><td>2</td><td>Giselle</td><td>Jean Coralli and Jules Perrot</td><td>Adolphe Adam</td></tr>
+</tbody></table></div>
+
+<div><h2>Performances</h2><table><thead>
+<tr><th>id</th><th>date</th><th>ballet_id</th><th>performers_count</th></tr>
+<tr><th></th><th></th><th>(&#8594; Ballets.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-07-01</td><td>1</td><td>50</td></tr>
+<tr><td>2</td><td>2022-07-02</td><td>2</td><td>45</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

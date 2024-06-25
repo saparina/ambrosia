@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Audio_Media</span></h2><table><thead>
+<tr><th>MediaID</th><th>Title</th><th><span style="color:#186e16">Category</span></th><th>ReleaseDate</th><th>Creator</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily</td><td><span style="color:#186e16">Podcast</span></td><td>2018-03-07</td><td>New York Times</td></tr>
+<tr><td>2</td><td>TED Talks Daily</td><td><span style="color:#186e16">Podcast</span></td><td>2019-06-18</td><td>TED Conferences LLC</td></tr>
+<tr><td>3</td><td>The Breakfast Club</td><td>Radio Show</td><td>2018-06-04</td><td>Power 105.1 FM</td></tr>
+<tr><td>4</td><td>Morning Edition</td><td>Radio Show</td><td>2018-02-06</td><td>NPR</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Episode_Details</span></h2><table><thead>
+<tr><th>EpisodeID</th><th>AudioMediaID</th><th>Title</th><th><span style="color:#1430b2">Length</span></th></tr>
+<tr><th></th><th>(&#8594; Audio_Media.MediaID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Daily News Update</td><td>30</td></tr>
+<tr><td>2</td><td>1</td><td>Politics & World Events</td><td>30</td></tr>
+<tr><td>3</td><td>2</td><td>Inspirational Stories</td><td><span style="color:#1430b2">45</span></td></tr>
+<tr><td>4</td><td>2</td><td>Technology & Science</td><td><span style="color:#1430b2">45</span></td></tr>
+<tr><td>5</td><td>3</td><td>Interviews with Celebrities</td><td>60</td></tr>
+<tr><td>6</td><td>3</td><td>News and Current Affairs</td><td>60</td></tr>
+<tr><td>7</td><td>4</td><td>Feature Story on Education</td><td><span style="color:#1430b2">45</span></td></tr>
+<tr><td>8</td><td>4</td><td>Arts and Culture Segment</td><td><span style="color:#1430b2">45</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Podcast_Category</h2><table><thead>
+<tr><th>CategoryID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Business</td></tr>
+<tr><td>2</td><td>Health</td></tr>
+<tr><td>3</td><td>Technology</td></tr>
+<tr><td>4</td><td>Entertainment</td></tr>
+<tr><td>5</td><td>Comedy</td></tr>
+</tbody></table></div>
+
+<div><h2>RadioShow_Category</h2><table><thead>
+<tr><th>CategoryID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Music</td></tr>
+<tr><td>2</td><td>Sports</td></tr>
+<tr><td>3</td><td>News</td></tr>
+<tr><td>4</td><td>Talk Shows</td></tr>
+<tr><td>5</td><td>Children's Programming</td></tr>
+</tbody></table></div>
+
+<div><h2>Other_Category</h2><table><thead>
+<tr><th>CategoryID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Literature</td></tr>
+<tr><td>2</td><td>History</td></tr>
+<tr><td>3</td><td>Art</td></tr>
+<tr><td>4</td><td>Travel</td></tr>
+<tr><td>5</td><td>Fashion</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

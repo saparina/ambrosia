@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Hotels</h2><table><thead>
+<tr><th>HotelID</th><th>Name</th><th>Address</th><th>City</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Plaza</td><td>123 Main St</td><td>New York</td></tr>
+<tr><td>2</td><td>Luxury Suites</td><td>456 Broadway</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Cozy Inn</td><td>789 Park Ave</td><td>Chicago</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Rooms</span></h2><table><thead>
+<tr><th>RoomID</th><th>HotelID</th><th>RoomType</th><th><span style="color:#006600">NumberOfSeats</span></th></tr>
+<tr><th></th><th>(&#8594; Hotels.HotelID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Deluxe Suite</td><td><span style="color:#006600">4</span></td></tr>
+<tr><td>2</td><td>1</td><td>Standard Room</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>Premium Suite</td><td>5</td></tr>
+<tr><td><span style="color:#006600">4</span></td><td>2</td><td>Economy Room</td><td>2</td></tr>
+<tr><td>5</td><td>3</td><td>Family Suite</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Patios</span></h2><table><thead>
+<tr><th>PatioID</th><th>RoomID</th><th>AreaSize</th></tr>
+<tr><th></th><th>(&#8594; Rooms.RoomID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100 sqm</td></tr>
+<tr><td>2</td><td>2</td><td>200 sqm</td></tr>
+<tr><td>3</td><td>3</td><td>150 sqm</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Verandas</span></h2><table><thead>
+<tr><th>VerandaID</th><th>RoomID</th><th>Length</th><th>Width</th></tr>
+<tr><th></th><th>(&#8594; Rooms.RoomID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>20 m</td><td>10 m</td></tr>
+<tr><td>2</td><td>2</td><td>30 m</td><td>10 m</td></tr>
+<tr><td>3</td><td>3</td><td>25 m</td><td>10 m</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>ReservationID</th><th>GuestID</th><th>CheckInDate</th><th>CheckOutDate</th><th>RoomID</th></tr>
+<tr><th></th><th>(&#8594; Guests.GuestID)</th><th></th><th></th><th>(&#8594; Rooms.RoomID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-07-01</td><td>2021-07-05</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2021-07-10</td><td>2021-07-14</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2021-07-15</td><td>2021-07-19</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>GuestID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>+1112223334</td></tr>
+<tr><td>4</td><td>Mike</td><td>Green</td><td>mike.green@example.com</td><td>+4445556667</td></tr>
+<tr><td>5</td><td>Emma</td><td>White</td><td>emma.white@example.com</td><td>+7778889990</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

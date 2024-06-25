@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Films</span></h2><table><thead>
+<tr><th>FilmID</th><th>Film</th><th>Release_Year</th><th>DirectorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film1</td><td><span style="color:#006600">2020</span></td><td>1</td></tr>
+<tr><td>2</td><td>Film2</td><td>2019</td><td>1</td></tr>
+<tr><td>3</td><td>Film3</td><td>2021</td><td>1</td></tr>
+<tr><td>4</td><td>Film4</td><td><span style="color:#006600">2020</span></td><td>1</td></tr>
+<tr><td>5</td><td>Film5</td><td>2018</td><td>1</td></tr>
+<tr><td>6</td><td>Film6</td><td><span style="color:#006600">2020</span></td><td>2</td></tr>
+<tr><td>7</td><td>Film7</td><td>2019</td><td>2</td></tr>
+<tr><td>8</td><td>Film8</td><td>2021</td><td>2</td></tr>
+<tr><td>9</td><td>Film9</td><td><span style="color:#006600">2020</span></td><td>2</td></tr>
+<tr><td>10</td><td>Film10</td><td>2018</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Amy</td></tr>
+<tr><td>2</td><td>Ben</td></tr>
+<tr><td>3</td><td>Cathy</td></tr>
+<tr><td>4</td><td>Dave</td></tr>
+<tr><td>5</td><td>Emma</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Books</span></h2><table><thead>
+<tr><th>BookID</th><th>Novel</th><th>Release_Year</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Book1</td><td><span style="color:#006600">2020</span></td><td>1</td></tr>
+<tr><td>2</td><td>Book2</td><td>2019</td><td>2</td></tr>
+<tr><td>3</td><td>Book3</td><td>2021</td><td>3</td></tr>
+<tr><td>4</td><td>Book4</td><td><span style="color:#006600">2020</span></td><td>4</td></tr>
+<tr><td>5</td><td>Book5</td><td>2018</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td></tr>
+<tr><td>2</td><td>Bob</td></tr>
+<tr><td>3</td><td>Charlie</td></tr>
+<tr><td>4</td><td>David</td></tr>
+<tr><td>5</td><td>Eva</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

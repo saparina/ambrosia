@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Musician</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-06-23</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1978-05-10</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>1990-07-21</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>1985-09-03</td></tr>
+<tr><td>5</td><td>William Brown</td><td>1992-11-04</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Band</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rockin' Vibes</td><td>Rock</td></tr>
+<tr><td>2</td><td>Electric Waves</td><td>Pop</td></tr>
+<tr><td>3</td><td>Blues Brothers</td><td>Blues</td></tr>
+<tr><td>4</td><td>Funky Beats</td><td>Funk</td></tr>
+<tr><td>5</td><td>Classic Melodies</td><td>Classical</td></tr>
+</tbody></table></div>
+
+<div><h2>Soundtrack</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th>band_id</th><th>musician_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Band.id)</th><th>(&#8594; Musician.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Music Festival</td><td>2022-06-25</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Summer Jams</td><td>2022-07-09</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Blues Night</td><td>2022-08-15</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Party Time!</td><td>2022-09-01</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Orchestral Showcase</td><td>2022-10-05</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Song</h2><table><thead>
+<tr><th>id</th><th>title</th><th>duration</th><th>soundtrack_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Soundtrack.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dancing Through The Stars</td><td>3:30</td><td>1</td></tr>
+<tr><td>2</td><td>Night Rider</td><td>4:00</td><td>2</td></tr>
+<tr><td>3</td><td>Blue Groove</td><td>3:15</td><td>3</td></tr>
+<tr><td>4</td><td>Time To Shine</td><td>3:45</td><td>4</td></tr>
+<tr><td>5</td><td>Symphony In C</td><td>8:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Performance</h2><table><thead>
+<tr><th>id</th><th>date</th><th>location</th><th>song_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Song.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-06-20</td><td>Central Park</td><td>1</td></tr>
+<tr><td>2</td><td>2022-07-10</td><td>Downtown Plaza</td><td>2</td></tr>
+<tr><td>3</td><td>2022-08-15</td><td>Concert Hall</td><td>3</td></tr>
+<tr><td>4</td><td>2022-09-05</td><td>Stadium</td><td>4</td></tr>
+<tr><td>5</td><td>2022-10-03</td><td>Amphitheater</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Fan</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Cooper</td><td>alice@example.com</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>bob@example.com</td></tr>
+<tr><td>3</td><td>Carol Wilson</td><td>carol@example.com</td></tr>
+<tr><td>4</td><td>David Johnson</td><td>david@example.com</td></tr>
+<tr><td>5</td><td>Elizabeth Thompson</td><td>elizabeth@example.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

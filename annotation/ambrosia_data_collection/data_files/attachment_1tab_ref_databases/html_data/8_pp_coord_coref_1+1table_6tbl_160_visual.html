@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>JobPosting</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Location</th><th>DatePosted</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tattoo Artist</td><td>New York</td><td>2021-10-01</td></tr>
+<tr><td>2</td><td>Piercer</td><td>Los Angeles</td><td>2021-10-02</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BodyArtProfession</span></h2><table><thead>
+<tr><th>ProfessionID</th><th><span style="color:#990000"><span style="color:#990000">Name</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Tattoo Artist</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Piercer</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">AgeGroup</span></h2><table><thead>
+<tr><th>AgeID</th><th><span style="color:#006600">MinimumAge</span></th><th>MaximumAge</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>18</td><td>65</td></tr>
+<tr><td>2</td><td><span style="color:#006600">30</span></td><td>90</td></tr>
+</tbody></table></div>
+
+<div><h2>EmploymentType</h2><table><thead>
+<tr><th>TypeID</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Full Time</td></tr>
+<tr><td>2</td><td>Part Time</td></tr>
+</tbody></table></div>
+
+<div><h2>SalaryRange</h2><table><thead>
+<tr><th>RangeID</th><th>LowValue</th><th>HighValue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>30000</td><td>70000</td></tr>
+<tr><td>2</td><td>20000</td><td>50000</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostingDetails</h2><table><thead>
+<tr><th>DetailsID</th><th>JobPostingID</th><th>BodyArtProfessionID</th><th>AgeID</th><th>EmploymentTypeID</th><th>SalaryRangeID</th></tr>
+<tr><th></th><th>(&#8594; JobPosting.ID)</th><th>(&#8594; BodyArtProfession.ProfessionID)</th><th>(&#8594; AgeGroup.AgeID)</th><th>(&#8594; EmploymentType.TypeID)</th><th>(&#8594; SalaryRange.RangeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>2</td><td>2</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

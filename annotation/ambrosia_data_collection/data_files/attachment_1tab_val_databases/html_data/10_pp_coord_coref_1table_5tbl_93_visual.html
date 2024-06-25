@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Accommodations</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>price</th><th>capacity</th><th>accommodation_type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Glamping Pod</span></td><td><span style="color:#006600">Snowdonia</span></td><td>99.99</td><td>6</td><td>Camping</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Glamping Pod</span></td><td>Cornwall</td><td>89.99</td><td>3</td><td>Camping</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Treehouse</span></td><td><span style="color:#006600">Snowdonia</span></td><td>179.99</td><td>5</td><td>Hotel</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Treehouse</span></td><td>Dorset</td><td>149.99</td><td>4</td><td>Hotel</td></tr>
+<tr><td>5</td><td>Motel</td><td>Brighton</td><td>59.99</td><td>10</td><td>Lodging</td></tr>
+<tr><td>6</td><td>Hostel</td><td>Edinburgh</td><td>29.99</td><td>15</td><td>Youth Hostel</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td><td>+44123456789</td><td>London, UK</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td><td>+44987654321</td><td>Manchester, UK</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>alicewonderland@example.com</td><td>+44555555555</td><td>Cardiff, UK</td></tr>
+<tr><td>4</td><td>Charlie</td><td>Brown</td><td>charliebrown@example.com</td><td>+4455555556</td><td>Newcastle, UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>review_id</th><th>rating</th><th>comment</th><th>date</th><th>customer_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Customers.customer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Great experience!</td><td>2021-10-01 12:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>3</td><td>Good but could be better</td><td>2021-10-02 12:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>4</td><td>Nice place, would come back.</td><td>2021-10-03 12:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>5</td><td>Fantastic stay, highly recommended!</td><td>2021-10-04 12:00:00</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>employee_id</th><th>firstName</th><th>lastName</th><th>role</th><th>hireDate</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Emma</td><td>Stone</td><td>Manager</td><td>2021-06-01</td><td>45000.0</td></tr>
+<tr><td>2</td><td>Peter</td><td>Jackson</td><td>Housekeeper</td><td>2021-07-01</td><td>30000.0</td></tr>
+<tr><td>3</td><td>Lucy</td><td>Garcia</td><td>Chef</td><td>2021-08-01</td><td>35000.0</td></tr>
+<tr><td>4</td><td>David</td><td>Williams</td><td>Maintenance</td><td>2021-09-01</td><td>28000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>booking_id</th><th>checkInTime</th><th>checkOutTime</th><th>numberOfGuests</th><th>totalCost</th><th>customer_id</th><th>accommodation_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Customers.customer_id)</th><th>(&#8594; Accommodations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-10-10 10:00:00</td><td>2021-10-12 14:00:00</td><td>2</td><td>199.99</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2021-10-15 10:00:00</td><td>2021-10-17 14:00:00</td><td>4</td><td>399.99</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2021-10-20 10:00:00</td><td>2021-10-22 14:00:00</td><td>2</td><td>249.99</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>2021-10-25 10:00:00</td><td>2021-10-27 14:00:00</td><td>3</td><td>399.99</td><td>3</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

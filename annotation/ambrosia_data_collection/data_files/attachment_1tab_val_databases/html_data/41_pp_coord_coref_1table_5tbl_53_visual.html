@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Audio_Media</span></h2><table><thead>
+<tr><th>id</th><th>Media_Type</th><th>Average_Episode_Length</th><th>Release_Date</th><th>Creator_Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Podcast</span></td><td><span style="color:#006600">45</span></td><td>2021-06-01</td><td>John Doe</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Podcast</span></td><td>30</td><td>2021-07-01</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Radio Show</span></td><td><span style="color:#006600">45</span></td><td>2021-08-01</td><td>Tom Brown</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Radio Show</span></td><td>60</td><td>2021-09-01</td><td>Emma Black</td></tr>
+</tbody></table></div>
+
+<div><h2>Podcasters</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice White</td></tr>
+<tr><td>2</td><td>Bob Green</td></tr>
+<tr><td>3</td><td>Carol Blue</td></tr>
+<tr><td>4</td><td>David Red</td></tr>
+<tr><td>5</td><td>Eva Yellow</td></tr>
+</tbody></table></div>
+
+<div><h2>Radio_Stations</h2><table><thead>
+<tr><th>id</th><th>Station_Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wave FM</td></tr>
+<tr><td>2</td><td>Tune In AM</td></tr>
+<tr><td>3</td><td>Classic Rock Hits</td></tr>
+<tr><td>4</td><td>All Request 101</td></tr>
+<tr><td>5</td><td>The Sports Hub</td></tr>
+</tbody></table></div>
+
+<div><h2>Shows</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Genre</th><th>Date_First_Released</th><th>Audio_Media_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Audio_Media.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mystery Stories</td><td>Fiction</td><td>2021-06-01</td><td>1</td></tr>
+<tr><td>2</td><td>Nature Sounds</td><td>Relaxation</td><td>2021-07-01</td><td>2</td></tr>
+<tr><td>3</td><td>News Headlines</td><td>Current Affairs</td><td>2021-08-01</td><td>3</td></tr>
+<tr><td>4</td><td>Cooking Adventures</td><td>Lifestyle</td><td>2021-09-01</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Episodes</h2><table><thead>
+<tr><th>id</th><th>Episode_Title</th><th>Release_Date</th><th>Length</th><th>Show_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Shows.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Murder Mystery</td><td>2021-06-02</td><td>45</td><td>1</td></tr>
+<tr><td>2</td><td>Ocean Discovery</td><td>2021-07-02</td><td>60</td><td>2</td></tr>
+<tr><td>3</td><td>Daily News Update</td><td>2021-08-02</td><td>30</td><td>3</td></tr>
+<tr><td>4</td><td>Vegan Recipe of the Week</td><td>2021-09-02</td><td>45</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>First_Name</th><th>Last_Name</th><th>Occupation</th><th>Appearance_In_Episode_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Episodes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Samantha</td><td>Johnson</td><td>Author</td><td>1</td></tr>
+<tr><td>2</td><td>Mark</td><td>Williams</td><td>Chef</td><td>2</td></tr>
+<tr><td>3</td><td>Karen</td><td>Smith</td><td>Journalist</td><td>3</td></tr>
+<tr><td>4</td><td>Alexander</td><td>Brown</td><td>Actor</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

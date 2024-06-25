@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Aircraft</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Boeing 787 Dreamliner</span></td></tr>
+<tr><td>2</td><td>Airbus A380</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Onboard_Services</span></h2><table><thead>
+<tr><th>id</th><th>Service_name</th><th>Aircraft_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Aircraft.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Free WiFi</td><td>1</td></tr>
+<tr><td>2</td><td>Meals</td><td>2</td></tr>
+<tr><td>3</td><td>In-flight magazines</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Inflight_Entertainments</span></h2><table><thead>
+<tr><th>id</th><th>Entertainment_name</th><th>Aircraft_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Aircraft.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movies</td><td>1</td></tr>
+<tr><td>2</td><td>Music</td><td>2</td></tr>
+<tr><td>3</td><td>Games</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>id</th><th>First_name</th><th>Last_name</th><th>Age</th><th>Flight_number</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Flights.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>35</td><td>101</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>28</td><td>102</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>42</td><td>103</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>60</td><td>104</td></tr>
+<tr><td>5</td><td>Emma</td><td>Martin</td><td>22</td><td>105</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>Departure_time</th><th>Arrival_time</th><th>Origin_airport</th><th>Destination_airport</th><th>Aircraft_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Aircraft.id)</th></tr>
+</thead><tbody>
+<tr><td>101</td><td>2022-11-01 10:00</td><td>2022-11-01 14:00</td><td>LAX</td><td>ORD</td><td>1</td></tr>
+<tr><td>102</td><td>2022-11-02 09:30</td><td>2022-11-02 13:30</td><td>DFW</td><td>YUL</td><td>1</td></tr>
+<tr><td>103</td><td>2022-11-03 10:00</td><td>2022-11-03 14:00</td><td>LAX</td><td>JFK</td><td>2</td></tr>
+<tr><td>104</td><td>2022-11-04 09:30</td><td>2022-11-04 13:30</td><td>DFW</td><td>YYZ</td><td>2</td></tr>
+<tr><td>105</td><td>2022-11-05 10:00</td><td>2022-11-05 14:00</td><td>LAX</td><td>LHR</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Baggage</h2><table><thead>
+<tr><th>id</th><th>Weight_kg</th><th>Type</th><th>Flight_number</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Flights.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>25</td><td>Checked Luggage</td><td>101</td></tr>
+<tr><td>2</td><td>10</td><td>Carry-on Luggage</td><td>102</td></tr>
+<tr><td>3</td><td>15</td><td>Checked Luggage</td><td>103</td></tr>
+<tr><td>4</td><td>5</td><td>Carry-on Luggage</td><td>104</td></tr>
+<tr><td>5</td><td>20</td><td>Checked Luggage</td><td>105</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

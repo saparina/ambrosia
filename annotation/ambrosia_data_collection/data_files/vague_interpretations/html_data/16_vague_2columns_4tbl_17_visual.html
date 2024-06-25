@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Actor</h2><table><thead>
+<tr><th>actor_id</th><th>first_name</th><th>last_name</th><th>birth_date</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>American</td></tr>
+<tr><td>2</td><td>Meryl</td><td>Streep</td><td>1949-06-22</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>movie_id</th><th>title</th><th>release_year</th><th>genre</th><th>box_office</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Forrest Gump</td><td>1994</td><td>Drama</td><td>6773847284.0</td></tr>
+<tr><td>2</td><td>The Godfather</td><td>1972</td><td>Crime</td><td>245124240.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>director_id</th><th>first_name</th><th>last_name</th><th>birth_date</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Robert</td><td>Zemeckis</td><td>1951-05-14</td><td>American</td></tr>
+<tr><td>2</td><td>Francis</td><td>Ford Coppola</td><td>1939-04-07</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>role_id</th><th>actor_id</th><th>movie_id</th><th>character_name</th></tr>
+<tr><th></th><th>(&#8594; Actor.actor_id)</th><th>(&#8594; Movie.movie_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Forest Gump</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>Jenny Curran</td></tr>
+</tbody></table></div>
+
+<div><h2>Theatre</h2><table><thead>
+<tr><th>theatre_id</th><th>name</th><th>location</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Broadway Theatre</td><td>New York City</td><td>2000</td></tr>
+<tr><td>2</td><td>Apollo Theatre</td><td>London</td><td>1000</td></tr>
+</tbody></table></div>
+
+<div><h2>Performance</h2><table><thead>
+<tr><th>performance_id</th><th>play_id</th><th>theatre_id</th><th>date</th><th>time</th><th>ticket_price</th></tr>
+<tr><th></th><th>(&#8594; Play.play_id)</th><th>(&#8594; Theatre.theatre_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01</td><td>19:00:00</td><td>100.0</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2023-01-01</td><td>19:00:00</td><td>100.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Play</h2><table><thead>
+<tr><th>play_id</th><th><span style="color:#990000">epoch</span></th><th><span style="color:#990000">society</span></th><th>title</th><th>author</th><th>genre</th><th>length</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1606</td><td>Elizabethan England</td><td>Macbeth</td><td>William Shakespeare</td><td>Tragedy</td><td>200</td></tr>
+<tr><td>2</td><td>1897</td><td>Late Imperial Russia</td><td>Uncle Vanya</td><td>Anton Chekhov</td><td>Tragicomedy</td><td>150</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publishDate</th><th>authorId</th><th>publicationId</th><th>topicId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; journalists.id)</th><th>(&#8594; publications.id)</th><th>(&#8594; topics.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News: New Government Policy</td><td>The government has announced a new policy that will impact citizens.</td><td>2023-04-01T10:00:00Z</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Economic Outlook for Q2</td><td>Experts discuss the economic outlook for the second quarter.</td><td>2023-04-02T10:00:00Z</td><td>2</td><td>2</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>publications</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Daily Times</td><td>123 Main St, Anytown, USA</td></tr>
+<tr><td>2</td><td>Weekly Post</td><td>456 Elm St, Anycity, USA</td></tr>
+</tbody></table></div>
+
+<div><h2>topics</h2><table><thead>
+<tr><th>id</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Government and Politics</td></tr>
+<tr><td>2</td><td>Business and Economy</td></tr>
+</tbody></table></div>
+
+<div><h2>journalists</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phoneNumber</th><th><span style="color:#990000">Qualification</span></th><th>Investigative_Journalist</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>123-456-7890</td><td>Bachelor of Arts in Journalism</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>098-765-4321</td><td>Master of Science in Communication</td><td>0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

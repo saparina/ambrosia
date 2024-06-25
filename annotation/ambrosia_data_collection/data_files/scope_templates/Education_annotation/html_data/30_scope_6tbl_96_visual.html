@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Colleges</span></h2><table><thead>
+<tr><th>college_id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>University of California</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>Stanford University</td><td>Palo Alto</td></tr>
+<tr><td>3</td><td>New York University</td><td>New York City</td></tr>
+<tr><td>4</td><td>Harvard University</td><td>Cambridge</td></tr>
+<tr><td>5</td><td>Massachusetts Institute of Technology</td><td>Cambridge</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Majors</span></h2><table><thead>
+<tr><th>major_id</th><th><span style="color:#990000">major_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Business Administration</td></tr>
+<tr><td>2</td><td>Computer Science</td></tr>
+<tr><td>3</td><td>Mathematics</td></tr>
+<tr><td>4</td><td>Physics</td></tr>
+<tr><td>5</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>student_id</th><th>first_name</th><th>last_name</th><th>email</th><th>enrollment_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>2021-09-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>2021-09-01</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>2021-09-01</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td><td>2021-09-01</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie.black@example.com</td><td>2021-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollment_id</th><th>student_id</th><th>college_id</th><th>major_id</th></tr>
+<tr><th></th><th>(&#8594; Students.student_id)</th><th>(&#8594; Colleges.college_id)</th><th>(&#8594; Majors.major_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>5</td><td>3</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>course_id</th><th>course_code</th><th>course_title</th><th>credits</th><th>department_id</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CS101</td><td>Introduction to Computer Science</td><td>4</td><td>1</td></tr>
+<tr><td>2</td><td>MA101</td><td>Calculus I</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>PH101</td><td>General Physics I</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>HIST101</td><td>World History</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>BUS101</td><td>Introductory Business Law</td><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>department_id</th><th>department_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Physics</td></tr>
+<tr><td>4</td><td>History</td></tr>
+<tr><td>5</td><td>Business</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>instructor_id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alicebrown@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bobwhite@example.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

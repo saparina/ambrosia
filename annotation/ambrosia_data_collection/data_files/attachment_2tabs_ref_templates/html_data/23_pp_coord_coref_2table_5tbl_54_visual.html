@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">cocktail_lounges</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phone_number</th><th><span style="color:#1430b2">hours</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Mixologist</td><td>123 Main St</td><td>555-1234</td><td><span style="color:#1430b2">Open from 5 PM to 2 AM</span></td></tr>
+<tr><td>2</td><td>The Rooftop Lounge</td><td>456 Market St</td><td>555-5678</td><td>Closed at midnight</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">sports_bars</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phone_number</th><th>hours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sports Central</td><td>789 Park Ave</td><td>555-9012</td><td><span style="color:#1430b2">Open from 5 PM to 2 AM</span></td></tr>
+<tr><td>2</td><td>Game On!</td><td>987 Lake Blvd</td><td>555-1357</td><td>Opens at noon, closes at 1 AM</td></tr>
+</tbody></table></div>
+
+<div><h2>restaurants</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phone_number</th><th>cuisine</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>La Casa Italiana</td><td>321 Ocean Drive</td><td>555-1123</td><td>Italian</td></tr>
+<tr><td>2</td><td>Yum Cha Palace</td><td>654 Second Street</td><td>555-1415</td><td>Chinese</td></tr>
+</tbody></table></div>
+
+<div><h2>rooms</h2><table><thead>
+<tr><th>id</th><th>hotel_name</th><th>room_type</th><th>price</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Hotel</td><td>Deluxe Suite</td><td>200.0</td><td>2</td></tr>
+<tr><td>2</td><td>Coastal Inn</td><td>Standard Room</td><td>100.0</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>employees</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>position</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Doe</td><td>Manager</td><td>80000.0</td></tr>
+<tr><td>2</td><td>John</td><td>Smith</td><td>Bartender</td><td>60000.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

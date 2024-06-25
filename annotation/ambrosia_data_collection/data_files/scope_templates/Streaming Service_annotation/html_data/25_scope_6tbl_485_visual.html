@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">streaming_service</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>9.99</td></tr>
+<tr><td>2</td><td>Amazon Prime Video</td><td>8.99</td></tr>
+<tr><td>3</td><td>Hulu</td><td>6.99</td></tr>
+<tr><td>4</td><td>Disney+</td><td>7.99</td></tr>
+<tr><td>5</td><td>HBO Max</td><td>14.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">customer_support</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">support_type</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Live Chat</td><td>Real-time chat assistance</td></tr>
+<tr><td>2</td><td>Email Support</td><td>Response within 24 hours</td></tr>
+<tr><td>3</td><td>Phone Support</td><td>Call us at our toll-free number</td></tr>
+<tr><td>4</td><td>Forum Support</td><td>Ask questions and get help from community members</td></tr>
+<tr><td>5</td><td>FAQs</td><td>Find answers to common questions</td></tr>
+</tbody></table></div>
+
+<div><h2>streaming_service_customer_support</h2><table><thead>
+<tr><th>id</th><th>streaming_service_id</th><th>customer_support_id</th></tr>
+<tr><th></th><th>(&#8594; streaming_service.id)</th><th>(&#8594; customer_support.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Studio</span></h2><table><thead>
+<tr><th>studio_id</th><th>name</th><th>founded_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros.</td><td>2017</td></tr>
+<tr><td>2</td><td>Disney</td><td>1938</td></tr>
+<tr><td>3</td><td>Netflix</td><td>1997</td></tr>
+<tr><td>4</td><td>Amazon Prime Video</td><td>2006</td></tr>
+<tr><td>5</td><td>Hulu</td><td>2007</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Address</span></h2><table><thead>
+<tr><th>address_id</th><th>street</th><th>city</th><th>state</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Sunset Blvd</td><td>Los Angeles</td><td>CA</td><td>USA</td></tr>
+<tr><td>2</td><td>456 Central Ave</td><td>New York</td><td>NY</td><td>USA</td></tr>
+<tr><td>3</td><td>789 Ocean Dr</td><td>Miami Beach</td><td>FL</td><td>USA</td></tr>
+<tr><td>4</td><td>1314 S Michigan Ave</td><td>Chicago</td><td>IL</td><td>USA</td></tr>
+<tr><td>5</td><td>901 Main St</td><td>Kansas City</td><td>MO</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Podcast</h2><table><thead>
+<tr><th>podcast_id</th><th>title</th><th>description</th><th>release_date</th><th>studio_id</th><th>address_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Studio.studio_id)</th><th>(&#8594; Address.address_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Morning Show</td><td>A daily news and talk show with interviews and reviews of movies, books, music, television shows, etc..</td><td>2021-01-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Tech Talk Today</td><td>Daily podcast about technology news and events</td><td>2021-01-01</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Breaking Bad</td><td>TV series recap and discussion podcast</td><td>2021-01-01</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Late Night With Stephen Colbert</td><td>Comedy commentary on current events and pop culture</td><td>2021-01-01</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>True Crime Garage</td><td>Investigating true crime stories from around the world</td><td>2021-01-01</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Episode</h2><table><thead>
+<tr><th>episode_id</th><th>number</th><th>duration</th><th>podcast_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Podcast.podcast_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>01:30:00</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>01:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>01:30:00</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>01:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>01:30:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviewer</h2><table><thead>
+<tr><th>reviewer_id</th><th>username</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JaneDoe</td><td>jane@example.com</td></tr>
+<tr><td>2</td><td>JohnSmith</td><td>john@example.com</td></tr>
+<tr><td>3</td><td>AliceBrown</td><td>alice@example.com</td></tr>
+<tr><td>4</td><td>RobertWhite</td><td>robert@example.com</td></tr>
+<tr><td>5</td><td>DavidBlack</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Review</h2><table><thead>
+<tr><th>review_id</th><th>rating</th><th>comment</th><th>episode_id</th><th>reviewer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Episode.episode_id)</th><th>(&#8594; Reviewer.reviewer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Great episode! Very informative and engaging.</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>Interesting topic but could have been better presented.</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>5</td><td>This is my favorite podcast so far.</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>3</td><td>Could be a bit longer to cover all topics.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>Very interesting episodes, looking forward to next one.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

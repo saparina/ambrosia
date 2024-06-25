@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Traffic_Engineers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>20</td></tr>
+<tr><td>2</td><td>Anna</td><td>30</td></tr>
+<tr><td>3</td><td>James</td><td>25</td></tr>
+<tr><td>4</td><td>Emma</td><td>28</td></tr>
+<tr><td>5</td><td>Michael</td><td>27</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Tools</span></h2><table><thead>
+<tr><th>tool_id</th><th><span style="color:#990000">tool_name</span></th><th><span style="color:#990000">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software_Modeling</td><td>software</td></tr>
+<tr><td>2</td><td>Road_Simulation</td><td>hardware</td></tr>
+<tr><td>3</td><td>Vehicle_Tracking</td><td>hardware</td></tr>
+<tr><td>4</td><td>Accident_Analysis</td><td>software</td></tr>
+<tr><td>5</td><td>Signal_Optimization</td><td>software</td></tr>
+</tbody></table></div>
+
+<div><h2>Traffic_Engineers_Tools</h2><table><thead>
+<tr><th>engineer_id</th><th>tool_id</th></tr>
+<tr><th>(&#8594; Traffic_Engineers.id)</th><th>(&#8594; Tools.tool_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

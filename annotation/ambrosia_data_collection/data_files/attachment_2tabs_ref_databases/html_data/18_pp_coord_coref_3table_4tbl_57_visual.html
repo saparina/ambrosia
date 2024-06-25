@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Director</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Sofia Martinez</span></td></tr>
+<tr><td>2</td><td>John Doe</td></tr>
+<tr><td>3</td><td>Jane Smith</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>directorId</th><th>releaseYear</th></tr>
+<tr><th></th><th></th><th>(&#8594; Director.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Secret Adventure</td><td>1</td><td>2023</td></tr>
+<tr><td>2</td><td>Racing Hearts</td><td>1</td><td>2025</td></tr>
+<tr><td>3</td><td>Superhero Squad</td><td>2</td><td>2024</td></tr>
+<tr><td>4</td><td>Epic Quest</td><td>3</td><td>2026</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Adventure_Movie</span></h2><table><thead>
+<tr><th>id</th><th>movieId</th><th>adventureDetails</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A thrilling journey through uncharted lands.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Action_Movie</span></h2><table><thead>
+<tr><th>id</th><th>movieId</th><th>actionDetails</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2</td><td>High-octane car chases and explosive stunts.</td></tr>
+<tr><td>2</td><td>3</td><td>A team of heroes band together to save the world.</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>actorName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td></tr>
+<tr><td>2</td><td>Bob Brown</td></tr>
+<tr><td>3</td><td>Charlie Green</td></tr>
+</tbody></table></div>
+
+<div><h2>Cast</h2><table><thead>
+<tr><th>id</th><th>movieId</th><th>actorId</th><th>role</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Protagonist</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Villain</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Supporting Role</td></tr>
+<tr><td>4</td><td>1</td><td>4</td><td>Sidekick</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

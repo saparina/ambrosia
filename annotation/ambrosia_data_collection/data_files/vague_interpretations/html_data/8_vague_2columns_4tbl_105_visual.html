@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Studio</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address_line1</th><th>address_line2</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros.</td><td>108 W 9th St</td><td>None</td><td>+1-310-786-7711</td></tr>
+<tr><td>2</td><td>Disney Studios</td><td>500 S Buena Vista St</td><td>None</td><td>+1-818-560-1000</td></tr>
+</tbody></table></div>
+
+<div><h2>Producer</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jonathan</td><td>Nolan</td><td>jonathann@gmail.com</td><td>1976-07-24</td></tr>
+<tr><td>2</td><td>Christopher</td><td>Nolan</td><td>christophern@gmail.com</td><td>1970-08-30</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>genre</th><th><span style="color:#990000">studio_id</span></th><th><span style="color:#990000">producer_id</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Studio.id)</th><th>(&#8594; Producer.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Action/Thriller</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>The Dark Knight Rises</td><td>2012</td><td>Action/Adventure</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>date_of_birth</th><th>gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>M</td></tr>
+<tr><td>2</td><td>Tom</td><td>Hardy</td><td>1977-09-15</td><td>M</td></tr>
+</tbody></table></div>
+
+<div><h2>Character</h2><table><thead>
+<tr><th>id</th><th>movie_id</th><th>actor_id</th><th>character_name</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Cobb</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Arthur</td></tr>
+</tbody></table></div>
+
+<div><h2>Review</h2><table><thead>
+<tr><th>id</th><th>movie_id</th><th>reviewer_id</th><th>rating</th><th>comments</th><th>review_date</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>9</td><td>Great movie!</td><td>2021-12-15 12:00:00</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>8</td><td>Amazing visuals and storytelling</td><td>2021-12-16 12:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

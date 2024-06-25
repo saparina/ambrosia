@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Neighborhoods</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>median_house_price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Downtown</td><td>600000.0</td></tr>
+<tr><td>2</td><td>Midtown</td><td>500000.0</td></tr>
+<tr><td>3</td><td>Uptown</td><td>700000.0</td></tr>
+<tr><td>4</td><td>Southside</td><td>400000.0</td></tr>
+<tr><td>5</td><td>Northside</td><td>300000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Parks</span></h2><table><thead>
+<tr><th>id</th><th>park_name</th><th><span style="color:#990000">area_square_feet</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Central_Park</td><td>1200000</td></tr>
+<tr><td>2</td><td>East_Park</td><td>800000</td></tr>
+<tr><td>3</td><td>West_Park</td><td>900000</td></tr>
+<tr><td>4</td><td>South_Park</td><td>700000</td></tr>
+<tr><td>5</td><td>North_Park</td><td>600000</td></tr>
+</tbody></table></div>
+
+<div><h2>Neighborhoods_Parks</h2><table><thead>
+<tr><th>neighborhood_id</th><th>park_id</th></tr>
+<tr><th>(&#8594; Neighborhoods.id)</th><th>(&#8594; Parks.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

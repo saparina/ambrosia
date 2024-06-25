@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Dance_Recitals</span></h2><table><thead>
+<tr><th>RecitalID</th><th>Name</th><th>Date</th><th>Time</th><th><span style="color:#1430b2">Audition_Room</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Spring Fling</td><td>2023-03-27</td><td>19:00:00</td><td><span style="color:#1430b2">Room 101</span></td></tr>
+<tr><td>2</td><td>Autumn Spectacular</td><td>2023-10-15</td><td>20:00:00</td><td>Studio A</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Talent_Shows</span></h2><table><thead>
+<tr><th>ShowID</th><th>Name</th><th>Theme</th><th>Location</th><th>Audition_Room</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rising Stars</td><td>Music Talents</td><td>Gymnasium</td><td><span style="color:#1430b2">Room 101</span></td></tr>
+<tr><td>2</td><td>Creative Expressions</td><td>Artistic Talents</td><td>Conference Hall</td><td>Stage B</td></tr>
+</tbody></table></div>
+
+<div><h2>Performers</h2><table><thead>
+<tr><th>PerformerID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>Role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>18</td><td>Dancer</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>22</td><td>Vocalist</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>26</td><td>Instrumentalist</td></tr>
+</tbody></table></div>
+
+<div><h2>Participation</h2><table><thead>
+<tr><th>ParticipantID</th><th>PerformerID</th><th>Dance_RecitalID</th><th>Talent_ShowID</th></tr>
+<tr><th></th><th>(&#8594; Performers.PerformerID)</th><th>(&#8594; Dance_Recitals.RecitalID)</th><th>(&#8594; Talent_Shows.ShowID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>None</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>None</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

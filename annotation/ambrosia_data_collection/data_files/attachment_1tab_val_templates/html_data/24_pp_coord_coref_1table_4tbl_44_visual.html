@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td></tr>
+<tr><td>2</td><td>HealthPlus</td></tr>
+<tr><td>3</td><td>GreenTech</td></tr>
+<tr><td>4</td><td>SoftWare</td></tr>
+<tr><td>5</td><td>MedicalPioneers</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>id</th><th>companyId</th><th>departmentName</th></tr>
+<tr><th></th><th>(&#8594; Company.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Biotechnology</td></tr>
+<tr><td>2</td><td>2</td><td>Chemistry</td></tr>
+<tr><td>3</td><td>3</td><td>Physics</td></tr>
+<tr><td>4</td><td>4</td><td>Computer Science</td></tr>
+<tr><td>5</td><td>5</td><td>Mathematics</td></tr>
+</tbody></table></div>
+
+<div><h2>PositionType</h2><table><thead>
+<tr><th>id</th><th>typeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Full Time</td></tr>
+<tr><td>2</td><td>Part Time</td></tr>
+<tr><td>3</td><td>Contractual</td></tr>
+<tr><td>4</td><td>Internship</td></tr>
+<tr><td>5</td><td>Volunteering</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">LabPosition</span></h2><table><thead>
+<tr><th>id</th><th>positionTypeId</th><th><span style="color:#186e16"><span style="color:#186e16">labPosition</span></span></th><th><span style="color:#1430b2">gender</span></th><th>minimumEducation</th><th>experienceInYears</th><th>salaryRange</th></tr>
+<tr><th></th><th>(&#8594; PositionType.id)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#186e16">Research Scientist</span></td><td><span style="color:#1430b2">Female</span></td><td>PhD</td><td>5</td><td>60k - 90k</td></tr>
+<tr><td>2</td><td>1</td><td><span style="color:#186e16">Research Scientist</span></td><td>Male</td><td>PhD</td><td>7</td><td>80k - 110k</td></tr>
+<tr><td>3</td><td>2</td><td><span style="color:#186e16">Laboratory Technician</span></td><td><span style="color:#1430b2">Female</span></td><td>BSc</td><td>3</td><td>40k - 60k</td></tr>
+<tr><td>4</td><td>2</td><td><span style="color:#186e16">Laboratory Technician</span></td><td>Male</td><td>BSc</td><td>4</td><td>50k - 70k</td></tr>
+<tr><td>5</td><td>3</td><td>Data Analyst</td><td>Non-binary</td><td>MS</td><td>2</td><td>60k - 80k</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th><th>email</th><th>phoneNumber</th><th>hireDate</th><th>jobTitle</th><th>departmentId</th><th>gender</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Department.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1990-01-15</td><td>johnsmith@email.com</td><td>+1 (234) 567-8910</td><td>2021-06-01</td><td>Research Scientist</td><td>1</td><td>Male</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1988-03-20</td><td>janedoe@email.com</td><td>+1 (123) 456-7890</td><td>2021-07-01</td><td>Laboratory Technician</td><td>2</td><td>Female</td></tr>
+<tr><td>3</td><td>Tom</td><td>Hanks</td><td>1985-09-05</td><td>thomhanks@email.com</td><td>+1 (345) 678-9012</td><td>2021-08-01</td><td>Engineer</td><td>3</td><td>Male</td></tr>
+<tr><td>4</td><td>Alice</td><td>Williams</td><td>1992-11-10</td><td>alicewilliams@email.com</td><td>+1 (456) 789-0123</td><td>2021-09-01</td><td>Analyst</td><td>4</td><td>Female</td></tr>
+<tr><td>5</td><td>Chris</td><td>Evans</td><td>1989-06-25</td><td>chrisevans@email.com</td><td>+1 (567) 890-1234</td><td>2021-10-01</td><td>Manager</td><td>5</td><td>Male</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Films</h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>ReleaseYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank Darabont</td><td>1959-01-28</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tim Robbins</td><td>1958-10-16</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>RoleID</th><th>FilmID</th><th>ActorID</th></tr>
+<tr><th></th><th>(&#8594; Films.FilmID)</th><th>(&#8594; Actors.ActorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>LocationID</th><th>Address</th><th>City</th><th>State</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>Gotham</td><td>NY</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Shooting_Schedule</h2><table><thead>
+<tr><th>ScheduleID</th><th>LocationID</th><th>RoleID</th><th>StartTime</th><th>EndTime</th></tr>
+<tr><th></th><th>(&#8594; Locations.LocationID)</th><th>(&#8594; Roles.RoleID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01 07:00:00</td><td>2022-01-01 18:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Dining_Establishments</span></h2><table><thead>
+<tr><th>EstablishmentID</th><th><span style="color:#990000"><span style="color:#990000">Type</span></span></th><th>Name</th><th>Address</th><th>City</th><th>State</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Restaurant</span></td><td>Green Leaf</td><td>456 Elm St</td><td>Metropolis</td><td>CA</td><td>USA</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Restaurant</span></td><td>Fresh Harvest</td><td>789 Oak St</td><td>Gotham</td><td>NY</td><td>USA</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Restaurant</span></td><td>Steak House</td><td>123 Maple Ave</td><td>Gotham</td><td>NY</td><td>USA</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Cafe</span></td><td>Brewed Awakenings</td><td>456 Pine St</td><td>Metropolis</td><td>CA</td><td>USA</td></tr>
+<tr><td>5</td><td><span style="color:#990000">Cafe</span></td><td>Java Junction</td><td>789 Cedar Ln</td><td>Metropolis</td><td>CA</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Meals</span></h2><table><thead>
+<tr><th>MealID</th><th>EstablishmentID</th><th><span style="color:#006600">MenuOption</span></th></tr>
+<tr><th></th><th>(&#8594; Dining_Establishments.EstablishmentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Vegetarian</td></tr>
+<tr><td>2</td><td>2</td><td>Vegetarian</td></tr>
+<tr><td>3</td><td>3</td><td><span style="color:#006600">Non-Vegetarian</span></td></tr>
+<tr><td>4</td><td>4</td><td>Vegetarian</td></tr>
+<tr><td>5</td><td>5</td><td><span style="color:#006600">Non-Vegetarian</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Equipment</h2><table><thead>
+<tr><th>EquipmentID</th><th>Description</th><th>Quantity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Camera</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Budgets</h2><table><thead>
+<tr><th>BudgetId</th><th>FilmId</th><th>TotalCost</th></tr>
+<tr><th></th><th>(&#8594; Films.FilmId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10000000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

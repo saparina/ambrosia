@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>bob.williams@example.com</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Brown</td><td>charlie.brown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>instructorID</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Ava</td><td>avadoc@email.edu</td></tr>
+<tr><td>2</td><td>Professor</td><td>Xander</td><td>xanderx@email.edu</td></tr>
+<tr><td>3</td><td>Assistant</td><td>Penelope</td><td>pennyassis@email.edu</td></tr>
+<tr><td>4</td><td>Adjunct</td><td>Robert</td><td>robertadjuct@email.edu</td></tr>
+<tr><td>5</td><td>Teaching</td><td>Miles</td><td>milesteach@email.edu</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>classID</th><th>className</th><th>instructorID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Instructors.instructorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>1</td></tr>
+<tr><td>2</td><td>Advanced Calculus</td><td>2</td></tr>
+<tr><td>3</td><td>Organic Chemistry</td><td>3</td></tr>
+<tr><td>4</td><td>Physics I</td><td>4</td></tr>
+<tr><td>5</td><td>World History</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>StudentsEnrolledInClasses</h2><table><thead>
+<tr><th>enrollmentID</th><th>studentID</th><th>classID</th></tr>
+<tr><th></th><th>(&#8594; Students.studentID)</th><th>(&#8594; Classes.classID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Labs</h2><table><thead>
+<tr><th>labID</th><th>labName</th><th>buildingNumber</th><th>roomNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Lab A</td><td>Building 1</td><td>Room 101</td></tr>
+<tr><td>2</td><td>Biology Lab B</td><td>Building 2</td><td>Room 202</td></tr>
+<tr><td>3</td><td>Chemistry Lab C</td><td>Building 3</td><td>Room 303</td></tr>
+<tr><td>4</td><td>Physics Lab D</td><td>Building 4</td><td>Room 404</td></tr>
+<tr><td>5</td><td>Art Studio E</td><td>Building 5</td><td>Room 505</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Lab_Equipments</span></h2><table><thead>
+<tr><th>equipmentID</th><th>labID</th><th>equipName</th><th>dateOfPurchase</th><th>cost</th></tr>
+<tr><th></th><th>(&#8594; Labs.labID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>High Performance Desktop Computers</td><td><span style="color:#006600">January 2023</span></td><td>8999.99</td></tr>
+<tr><td>2</td><td>1</td><td>VR Headsets</td><td>February 2023</td><td>7999.99</td></tr>
+<tr><td>3</td><td>2</td><td>Advanced Microscopes</td><td>April 2023</td><td>6999.99</td></tr>
+<tr><td>4</td><td>2</td><td>Centrifuges</td><td>May 2023</td><td>5999.99</td></tr>
+<tr><td>5</td><td>3</td><td>Electronic Balances</td><td>August 2023</td><td>4999.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Safety_Gears</span></h2><table><thead>
+<tr><th>safetyGearID</th><th>labID</th><th>gearName</th><th>dateOfPurchase</th><th>cost</th></tr>
+<tr><th></th><th>(&#8594; Labs.labID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Fire Extinguishers</td><td><span style="color:#006600">January 2023</span></td><td>1999.99</td></tr>
+<tr><td>2</td><td>1</td><td>First Aid Kits</td><td>February 2023</td><td>999.99</td></tr>
+<tr><td>3</td><td>2</td><td>Eye Wash Stations</td><td>April 2023</td><td>1499.99</td></tr>
+<tr><td>4</td><td>2</td><td>Spill Cleanup Kit</td><td>May 2023</td><td>899.99</td></tr>
+<tr><td>5</td><td>3</td><td>Respirators</td><td>August 2023</td><td>599.99</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

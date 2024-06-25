@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Press_Conferences</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Presidential Speech</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>Tech Company Announcement</td><td>2023-01-02</td></tr>
+<tr><td>3</td><td>Economic Summit</td><td>2023-01-03</td></tr>
+<tr><td>4</td><td>Healthcare Conference</td><td>2023-01-04</td></tr>
+<tr><td>5</td><td>Environmental Symposium</td><td>2023-01-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Participants</span></h2><table><thead>
+<tr><th><span style="color:#990000">id</span></th><th>role</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Reporter</td><td>John Smith</td></tr>
+<tr><td>2</td><td>Reporter</td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>Spokesperson</td><td>Mike Johnson</td></tr>
+<tr><td>4</td><td>Expert Panelist</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>Head of Department</td><td>David Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Press_Conferences_Participants</h2><table><thead>
+<tr><th>press_conference_id</th><th>participant_id</th></tr>
+<tr><th>(&#8594; Press_Conferences.id)</th><th>(&#8594; Participants.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

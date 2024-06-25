@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Movies</span></h2><table><thead>
+<tr><th>MovieId</th><th>Title</th><th><span style="color:#186e16">FilmStyle</span></th><th>DirectorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.DirectorId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Lost City</td><td><span style="color:#186e16">Adventure Movie</span></td><td>1</td></tr>
+<tr><td>2</td><td>Racing Hearts</td><td>Romantic Comedy</td><td>2</td></tr>
+<tr><td>3</td><td>Guns of Glory</td><td>Action Movie</td><td>1</td></tr>
+<tr><td>4</td><td>Alien Invasion</td><td>Science Fiction</td><td>3</td></tr>
+<tr><td>5</td><td>Epic Adventure</td><td><span style="color:#186e16">Adventure Movie</span></td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Directors</span></h2><table><thead>
+<tr><th>DirectorId</th><th><span style="color:#1430b2">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Sofia Martinez</span></td></tr>
+<tr><td>2</td><td>John Doe</td></tr>
+<tr><td>3</td><td>Jane Smith</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieDetails</h2><table><thead>
+<tr><th>DetailID</th><th>MovieId</th><th>ReleaseYear</th><th>Budget</th><th>Revenue</th><th>Duration</th><th>Rating</th></tr>
+<tr><th></th><th>(&#8594; Movies.MovieId)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021</td><td>10000000</td><td>15000000</td><td>120 minutes</td><td>8.5</td></tr>
+<tr><td>2</td><td>2</td><td>2020</td><td>7500000</td><td>9000000</td><td>95 minutes</td><td>7.8</td></tr>
+<tr><td>3</td><td>3</td><td>2021</td><td>15000000</td><td>25000000</td><td>135 minutes</td><td>9.2</td></tr>
+<tr><td>4</td><td>4</td><td>2022</td><td>12000000</td><td>16000000</td><td>100 minutes</td><td>8.0</td></tr>
+<tr><td>5</td><td>5</td><td>2020</td><td>10000000</td><td>12000000</td><td>115 minutes</td><td>7.5</td></tr>
+</tbody></table></div>
+
+<div><h2>CastMembers</h2><table><thead>
+<tr><th>MemberId</th><th>MovieId</th><th>ActorName</th><th>CharacterPlayed</th></tr>
+<tr><th></th><th>(&#8594; Movies.MovieId)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Alice Johnson</td><td>Lead Protagonist</td></tr>
+<tr><td>2</td><td>1</td><td>Bob Brown</td><td>Supporting Role</td></tr>
+<tr><td>3</td><td>2</td><td>Charlie Davis</td><td>Love Interest</td></tr>
+<tr><td>4</td><td>3</td><td>David Wilson</td><td>Protagonist</td></tr>
+<tr><td>5</td><td>4</td><td>Emma Thompson</td><td>Antagonist</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ReviewId</th><th>MovieId</th><th>UserId</th><th>Comment</th><th>Stars</th></tr>
+<tr><th></th><th>(&#8594; Movies.MovieId)</th><th>(&#8594; Users.UserId)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Great adventure! Loved it.</td><td>5</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>Not my cup of tea...</td><td>3</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>Exciting action sequences!</td><td>4</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>Predictable plot...</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>4</td><td>Fun watch overall!</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

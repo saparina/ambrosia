@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Actor</h2><table><thead>
+<tr><th>actor_id</th><th>first_name</th><th>last_name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1998-07-30</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>1986-12-10</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>1995-03-25</td></tr>
+<tr><td>5</td><td>Robert</td><td>Black</td><td>1991-09-09</td></tr>
+</tbody></table></div>
+
+<div><h2>Actress</h2><table><thead>
+<tr><th>actress_id</th><th>first_name</th><th>last_name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Green</td><td>1975-06-02</td></tr>
+<tr><td>2</td><td>Betty</td><td>Blue</td><td>1981-11-13</td></tr>
+<tr><td>3</td><td>Carol</td><td>Yellow</td><td>1992-04-10</td></tr>
+<tr><td>4</td><td>Denise</td><td>Red</td><td>1990-05-15</td></tr>
+<tr><td>5</td><td>Eva</td><td>Purple</td><td>1985-02-03</td></tr>
+</tbody></table></div>
+
+<div><h2>Show</h2><table><thead>
+<tr><th>show_id</th><th>title</th><th>genre</th><th><span style="color:#990000">Number_of_seasons</span></th><th><span style="color:#990000">Number_of_episodes</span></th><th>release_year</th></tr>
+<tr><th></th><th></th><th>(&#8594; Genre.genre_name)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Big Bang Theory</td><td>Comedy</td><td>12</td><td>279</td><td>2007</td></tr>
+<tr><td>2</td><td>Friends</td><td>Romantic Comedy</td><td>10</td><td>236</td><td>1994</td></tr>
+<tr><td>3</td><td>Game of Thrones</td><td>Fantasy Drama</td><td>8</td><td>60</td><td>2011</td></tr>
+<tr><td>4</td><td>Breaking Bad</td><td>Crime Drama</td><td>5</td><td>62</td><td>2008</td></tr>
+<tr><td>5</td><td>Stranger Things</td><td>Horror Sci-Fi</td><td>4</td><td>39</td><td>2016</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>director_id</th><th>first_name</th><th>last_name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David</td><td>Gray</td><td>1964-03-25</td></tr>
+<tr><td>2</td><td>Steven</td><td>Wilson</td><td>1968-06-10</td></tr>
+<tr><td>3</td><td>Quentin</td><td>Tarantino</td><td>1963-03-27</td></tr>
+<tr><td>4</td><td>Christopher</td><td>Nolan</td><td>1970-07-30</td></tr>
+<tr><td>5</td><td>Martin</td><td>Scorsese</td><td>1942-11-17</td></tr>
+</tbody></table></div>
+
+<div><h2>Producer</h2><table><thead>
+<tr><th>producer_id</th><th>first_name</th><th>last_name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Barbara</td><td>Lee</td><td>1957-05-02</td></tr>
+<tr><td>2</td><td>Kevin</td><td>Feige</td><td>1973-06-19</td></tr>
+<tr><td>3</td><td>James</td><td>Weaver</td><td>1961-08-03</td></tr>
+<tr><td>4</td><td>Bryan</td><td>Cranston</td><td>1956-03-07</td></tr>
+<tr><td>5</td><td>Frank</td><td>Marshall</td><td>1950-01-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>genre_id</th><th>genre_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Adventure</td></tr>
+<tr><td>3</td><td>Animation</td></tr>
+<tr><td>4</td><td>Biography</td></tr>
+<tr><td>5</td><td>Drama</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

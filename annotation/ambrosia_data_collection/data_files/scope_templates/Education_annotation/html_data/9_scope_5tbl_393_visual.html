@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Career_Pathways</span></h2><table><thead>
+<tr><th>PathwayID</th><th>Name</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Early Childhood</td><td>This pathway focuses on teaching young children.</td></tr>
+<tr><td>2</td><td>Primary School</td><td>This pathway prepares teachers for grades K-6.</td></tr>
+<tr><td>3</td><td>Secondary School</td><td>This pathway trains educators for grades 7-12.</td></tr>
+<tr><td>4</td><td>Special Education</td><td>This pathway equips teachers with skills to work with students with special needs.</td></tr>
+<tr><td>5</td><td>Adult Education</td><td>This pathway targets educating adult learners.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Opportunities</span></h2><table><thead>
+<tr><th>OpportunityID</th><th><span style="color:#990000">Value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Teaching</td></tr>
+<tr><td>2</td><td>Curriculum Development</td></tr>
+<tr><td>3</td><td>Research</td></tr>
+<tr><td>4</td><td>Administration</td></tr>
+<tr><td>5</td><td>Consultancy</td></tr>
+</tbody></table></div>
+
+<div><h2>Career_Pathways_Opportunities</h2><table><thead>
+<tr><th>CareerPathwayID</th><th>OpportunityID</th></tr>
+<tr><th>(&#8594; Career_Pathways.PathwayID)</th><th>(&#8594; Opportunities.OpportunityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

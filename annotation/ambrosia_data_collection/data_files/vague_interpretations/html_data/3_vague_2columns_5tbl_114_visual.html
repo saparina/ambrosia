@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Neighborhood</h2><table><thead>
+<tr><th>id</th><th>name</th><th>population</th><th><span style="color:#990000">mean_commute_time</span></th><th><span style="color:#990000">median_commute_time</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Downtown</td><td>8000</td><td>30.5</td><td>27.6</td></tr>
+<tr><td>2</td><td>Midtown</td><td>9500</td><td>28.5</td><td>25.3</td></tr>
+<tr><td>3</td><td>Southside</td><td>11000</td><td>29.8</td><td>27.2</td></tr>
+<tr><td>4</td><td>Northside</td><td>12000</td><td>30.2</td><td>26.9</td></tr>
+<tr><td>5</td><td>Eastside</td><td>8500</td><td>31.5</td><td>28.4</td></tr>
+</tbody></table></div>
+
+<div><h2>VehicleType</h2><table><thead>
+<tr><th>id</th><th>type_name</th><th>count_passing</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Car</td><td>500</td></tr>
+<tr><td>2</td><td>Truck</td><td>100</td></tr>
+<tr><td>3</td><td>Bicycle</td><td>50</td></tr>
+<tr><td>4</td><td>Pedestrian</td><td>200</td></tr>
+<tr><td>5</td><td>Bus</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>DailyTrafficVolume</h2><table><thead>
+<tr><th>date</th><th>neighborhood_id</th><th>total_traffic</th></tr>
+<tr><th></th><th>(&#8594; Neighborhood.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>2022-01-01</td><td>1</td><td>3000</td></tr>
+<tr><td>2022-01-02</td><td>2</td><td>4500</td></tr>
+<tr><td>2022-01-03</td><td>3</td><td>6000</td></tr>
+<tr><td>2022-01-04</td><td>4</td><td>5500</td></tr>
+<tr><td>2022-01-05</td><td>5</td><td>4200</td></tr>
+</tbody></table></div>
+
+<div><h2>Accidents</h2><table><thead>
+<tr><th>accident_date</th><th>neighborhood_id</th><th>num_accident</th></tr>
+<tr><th></th><th>(&#8594; Neighborhood.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>2022-01-01</td><td>1</td><td>2</td></tr>
+<tr><td>2022-01-02</td><td>2</td><td>4</td></tr>
+<tr><td>2022-01-03</td><td>3</td><td>3</td></tr>
+<tr><td>2022-01-04</td><td>4</td><td>5</td></tr>
+<tr><td>2022-01-05</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>WeatherConditions</h2><table><thead>
+<tr><th>condition_datetime</th><th>neighborhood_id</th><th>rainfall</th><th>temperature</th><th>windspeed</th></tr>
+<tr><th></th><th>(&#8594; Neighborhood.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>2022-01-01 08:00:00</td><td>1</td><td>0.2</td><td>10.5</td><td>5</td></tr>
+<tr><td>2022-01-01 12:00:00</td><td>1</td><td>0</td><td>12</td><td>7</td></tr>
+<tr><td>2022-01-01 16:00:00</td><td>1</td><td>0</td><td>8</td><td>4</td></tr>
+<tr><td>2022-01-01 20:00:00</td><td>1</td><td>0</td><td>5</td><td>2</td></tr>
+<tr><td>2022-01-02 08:00:00</td><td>2</td><td>0.1</td><td>10.8</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>SpeedLimits</h2><table><thead>
+<tr><th>road_segment_id</th><th>street_name</th><th>neighborhood_id</th><th>start_point</th><th>end_point</th><th>max_limit</th><th>min_limit</th></tr>
+<tr><th></th><th></th><th>(&#8594; Neighborhood.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main St.</td><td>1</td><td>-79.999</td><td>-79.998</td><td>40</td><td>30</td></tr>
+<tr><td>2</td><td>Elm St.</td><td>2</td><td>-79.995</td><td>-79.994</td><td>30</td><td>20</td></tr>
+<tr><td>3</td><td>Oak St.</td><td>3</td><td>-79.993</td><td>-79.992</td><td>30</td><td>20</td></tr>
+<tr><td>4</td><td>Maple St.</td><td>4</td><td>-79.989</td><td>-79.988</td><td>30</td><td>20</td></tr>
+<tr><td>5</td><td>Pine St.</td><td>5</td><td>-79.987</td><td>-79.986</td><td>40</td><td>30</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

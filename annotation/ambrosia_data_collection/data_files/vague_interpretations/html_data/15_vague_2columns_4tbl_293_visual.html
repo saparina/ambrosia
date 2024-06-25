@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Award</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">Award_Name</span></th><th><span style="color:#990000">Winning_Category</span></th><th>Film</th><th>Year</th><th>Presenter</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Picture</td><td>Drama</td><td>The Irishman</td><td>2019</td><td>Robert De Niro</td></tr>
+<tr><td>2</td><td>Best Supporting Actress</td><td>Comedy</td><td>Once Upon a Time...in Hollywood</td><td>2019</td><td>Margot Robbie</td></tr>
+<tr><td>3</td><td>Best Animated Feature</td><td>Animation</td><td>Toy Story 4</td><td>2019</td><td>Tim Allen</td></tr>
+<tr><td>4</td><td>Best Cinematography</td><td>Action</td><td>Joker</td><td>2019</td><td>Zack Snyder</td></tr>
+<tr><td>5</td><td>Best Original Score</td><td>Thriller</td><td>It Chapter Two</td><td>2019</td><td>Bill Skarsgård</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>20/07/1970</td><td>American-British</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td><td>27/03/1963</td><td>American</td></tr>
+<tr><td>3</td><td>Martin Scorsese</td><td>17/11/1942</td><td>American</td></tr>
+<tr><td>4</td><td>Guillermo del Toro</td><td>09/12/1964</td><td>Mexican</td></tr>
+<tr><td>5</td><td>Denis Villeneuve</td><td>03/04/1967</td><td>Canadian</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Date_of_Birth</th><th>Ethnicity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>11/11/1974</td><td>German-Irish-Italian</td></tr>
+<tr><td>2</td><td>Tom Hardy</td><td>15/09/1977</td><td>English</td></tr>
+<tr><td>3</td><td>Brad Pitt</td><td>18/12/1963</td><td>American</td></tr>
+<tr><td>4</td><td>Cate Blanchett</td><td>14/05/1969</td><td>Australian</td></tr>
+<tr><td>5</td><td>Scarlett Johansson</td><td>22/11/1984</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Release_Date</th><th>Runtime</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>16/07/2010</td><td>148</td><td>Science Fiction</td></tr>
+<tr><td>2</td><td>Interstellar</td><td>07/11/2014</td><td>169</td><td>Science Fiction</td></tr>
+<tr><td>3</td><td>Dunkirk</td><td>21/07/2017</td><td>106</td><td>War</td></tr>
+<tr><td>4</td><td>Tenet</td><td>31/08/2020</td><td>150</td><td>Action</td></tr>
+<tr><td>5</td><td>Man of Steel</td><td>14/06/2013</td><td>143</td><td>Superhero</td></tr>
+</tbody></table></div>
+
+<div><h2>Producer</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Production_Company</th><th>Number_Of_Productions</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Heyman</td><td>Heyday Films</td><td>50</td></tr>
+<tr><td>2</td><td>Barbara Broccoli</td><td>EON Productions</td><td>26</td></tr>
+<tr><td>3</td><td>Albert Brooks</td><td>Brooksfilms</td><td>20</td></tr>
+<tr><td>4</td><td>Kevin Feige</td><td>Marvel Studios</td><td>50</td></tr>
+<tr><td>5</td><td>Frank Marshall</td><td>Amblin Entertainment</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2>Viewership</h2><table><thead>
+<tr><th>id</th><th>Movie_ID</th><th>Total_Views</th><th>Peak_Concurrent_Streams</th><th>Platform</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000000</td><td>500000</td><td>Netflix</td></tr>
+<tr><td>2</td><td>2</td><td>750000</td><td>300000</td><td>Hulu</td></tr>
+<tr><td>3</td><td>3</td><td>500000</td><td>200000</td><td>Amazon Prime Video</td></tr>
+<tr><td>4</td><td>4</td><td>250000</td><td>100000</td><td>Disney+</td></tr>
+<tr><td>5</td><td>5</td><td>300000</td><td>150000</td><td>Apple TV+</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Director</span></h2><table><thead>
+<tr><th>director_id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Steven Spielberg</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Producer</span></h2><table><thead>
+<tr><th>producer_id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jerry Bruckheimer</td></tr>
+<tr><td>2</td><td>David Heyman</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Movie</span></h2><table><thead>
+<tr><th>movie_id</th><th>title</th><th>release_date</th><th><span style="color:#006600">award_name</span></th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Award.award_name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jaws</td><td>1975-06-20</td><td>Oscar</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>2008-07-18</td><td><span style="color:#006600">Not Oscar</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>actor_id</th><th>name</th><th>birth_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td><td>1956</td></tr>
+<tr><td>2</td><td>Leonardo DiCaprio</td><td>1974</td></tr>
+</tbody></table></div>
+
+<div><h2>DirectedMovies</h2><table><thead>
+<tr><th>movie_id</th><th>director_id</th></tr>
+<tr><th>(&#8594; Movie.movie_id)</th><th>(&#8594; Director.director_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ProducedMovies</h2><table><thead>
+<tr><th>movie_id</th><th>producer_id</th></tr>
+<tr><th>(&#8594; Movie.movie_id)</th><th>(&#8594; Producer.producer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ActorsInMovies</h2><table><thead>
+<tr><th>actor_id</th><th>movie_id</th></tr>
+<tr><th>(&#8594; Actor.actor_id)</th><th>(&#8594; Movie.movie_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Awards</h2><table><thead>
+<tr><th>award_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>Oscar</td><td>Highest honor in film industry</td></tr>
+<tr><td>Golden Globe</td><td>Distinguished international achievement any branch of the motion picture arts</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

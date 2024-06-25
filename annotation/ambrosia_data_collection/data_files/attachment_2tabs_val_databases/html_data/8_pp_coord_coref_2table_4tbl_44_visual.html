@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Tattoo_Artists</span></h2><table><thead>
+<tr><th>ArtistID</th><th>Name</th><th>Age</th><th>ExperienceLevel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td><span style="color:#006600">30</span></td><td>Intermediate</td></tr>
+<tr><td>2</td><td>Bob</td><td>28</td><td>Advanced</td></tr>
+<tr><td>3</td><td>Carol</td><td>45</td><td>Expert</td></tr>
+<tr><td>4</td><td>Dave</td><td>67</td><td>Beginner</td></tr>
+<tr><td>5</td><td>Eve</td><td>19</td><td>Novice</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Piercers</span></h2><table><thead>
+<tr><th>PiercerID</th><th>Name</th><th>Age</th><th>YearsOfExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank</td><td><span style="color:#006600">30</span></td><td>10</td></tr>
+<tr><td>2</td><td>Grace</td><td>29</td><td>5</td></tr>
+<tr><td>3</td><td>Harry</td><td>35</td><td>15</td></tr>
+<tr><td>4</td><td>Ivy</td><td>40</td><td>20</td></tr>
+<tr><td>5</td><td>Jack</td><td>47</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>Name</th><th>Age</th><th>PreferredServiceType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mary</td><td>30</td><td>Tattoo</td></tr>
+<tr><td>2</td><td>John</td><td>28</td><td>Piercing</td></tr>
+<tr><td>3</td><td>Anna</td><td>45</td><td>Tattoo</td></tr>
+<tr><td>4</td><td>Ben</td><td>19</td><td>Piercing</td></tr>
+<tr><td>5</td><td>Chris</td><td>67</td><td>Tattoo</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>AppointmentID</th><th>ServiceDate</th><th>ServiceType</th><th>TattooArtistID</th><th>PiercerID</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Tattoo_Artists.ArtistID)</th><th>(&#8594; Piercers.PiercerID)</th><th>(&#8594; Customers.CustomerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 10:00:00</td><td>Tattoo</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-01 11:00:00</td><td>Piercing</td><td>None</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2022-01-02 10:00:00</td><td>Tattoo</td><td>2</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>2022-01-02 11:00:00</td><td>Piercing</td><td>3</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>2022-01-03 10:00:00</td><td>Tattoo</td><td>4</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

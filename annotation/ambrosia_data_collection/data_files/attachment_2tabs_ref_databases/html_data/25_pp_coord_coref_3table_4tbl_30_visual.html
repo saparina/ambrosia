@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genre</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Action</td></tr>
+<tr><td>3</td><td>Horror</td></tr>
+<tr><td>4</td><td>Mystery</td></tr>
+<tr><td>5</td><td>Romance</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Film</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th><span style="color:#006600">Release_Year</span></th></tr>
+<tr><th>(&#8594; Genre.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td><span style="color:#006600">2010</span></td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>2008</td></tr>
+<tr><td>3</td><td>Joker</td><td>2019</td></tr>
+<tr><td>4</td><td>Interstellar</td><td>2014</td></tr>
+<tr><td>5</td><td>Avatar</td><td>2009</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AnimationFilm</span></h2><table><thead>
+<tr><th>Film_ID</th><th>Animated</th></tr>
+<tr><th>(&#8594; Film.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>0</td></tr>
+<tr><td>4</td><td>0</td></tr>
+<tr><td>5</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ComedyFilm</span></h2><table><thead>
+<tr><th>Film_ID</th><th>HumorScore</th></tr>
+<tr><th>(&#8594; Film.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>7</td></tr>
+<tr><td>2</td><td>6</td></tr>
+<tr><td>3</td><td>8</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Nolan</td></tr>
+<tr><td>2</td><td>Todd</td><td>Philips</td></tr>
+<tr><td>3</td><td>James</td><td>Cameron</td></tr>
+<tr><td>4</td><td>Kristen</td><td>Wiig</td></tr>
+<tr><td>5</td><td>Paul</td><td>Feig</td></tr>
+</tbody></table></div>
+
+<div><h2>DirectedBy</h2><table><thead>
+<tr><th>Director_ID</th><th>Film_ID</th></tr>
+<tr><th>(&#8594; Director.ID)</th><th>(&#8594; Film.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

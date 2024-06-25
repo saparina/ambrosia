@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Restaurants</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>cuisine</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Garden Bistro</td><td>Downtown</td><td>Italian</td></tr>
+<tr><td>2</td><td>Le Jardin</td><td>Uptown</td><td>French</td></tr>
+<tr><td>3</td><td>Green Oasis</td><td>Northside</td><td>Mediterranean</td></tr>
+<tr><td>4</td><td>La Veggie Cucina</td><td>Eastside</td><td>Vegetarian</td></tr>
+<tr><td>5</td><td>Pasta Palace</td><td>Westside</td><td>Italian</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Cafe</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>specialty</th></tr>
+</thead><tbody>
+<tr><td>6</td><td>The Herb House</td><td>Downtown</td><td>Herbal Teas</td></tr>
+<tr><td>7</td><td>Garden Delights</td><td>Uptown</td><td>Organic Coffee</td></tr>
+<tr><td>8</td><td>Tea Time</td><td>Northside</td><td>Afternoon Tea</td></tr>
+<tr><td>9</td><td>Vegan Treats</td><td>Eastside</td><td>Vegetarian Options</td></tr>
+<tr><td>10</td><td>Brew Haven</td><td>Westside</td><td>Specialty Roasts</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Menu_Options</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">option_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Spaghetti Carbonara</td></tr>
+<tr><td>2</td><td>Margherita Pizza</td></tr>
+<tr><td>3</td><td>Caprese Salad</td></tr>
+<tr><td>4</td><td><span style="color:#006600">Lasagna</span></td></tr>
+<tr><td>5</td><td>Tiramisu</td></tr>
+<tr><td>6</td><td>Ratatouille</td></tr>
+<tr><td>7</td><td>Quiche Lorraine</td></tr>
+<tr><td>8</td><td>Grilled Vegetable Panini</td></tr>
+<tr><td>9</td><td>Minestrone Soup</td></tr>
+<tr><td>10</td><td>Gelato</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurant_Menus</h2><table><thead>
+<tr><th>restaurant_id</th><th>menu_option_id</th></tr>
+<tr><th>(&#8594; Restaurants.id)</th><th>(&#8594; Menu_Options.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>3</td><td>6</td></tr>
+<tr><td>4</td><td>7</td></tr>
+<tr><td>4</td><td>8</td></tr>
+<tr><td>5</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2>Cafe_Menus</h2><table><thead>
+<tr><th>cafe_id</th><th>menu_option_id</th></tr>
+<tr><th>(&#8594; Cafe.id)</th><th>(&#8594; Menu_Options.id)</th></tr>
+</thead><tbody>
+<tr><td>6</td><td>10</td></tr>
+<tr><td>7</td><td>1</td></tr>
+<tr><td>8</td><td>2</td></tr>
+<tr><td>9</td><td>3</td></tr>
+<tr><td>10</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

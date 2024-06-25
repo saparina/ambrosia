@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">CountrySinger</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>BirthDate</th><th>Genre</th><th>Instrument</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-06-23</td><td>Country Musician</td><td><span style="color:#006600">Guitar</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1975-08-01</td><td>Country Musician</td><td>Banjo</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BluegrassSinger</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>BirthDate</th><th>AlbumCount</th><th>Instrument</th></tr>
+</thead><tbody>
+<tr><td>3</td><td>Mike Brown</td><td>1990-01-15</td><td>3</td><td><span style="color:#006600">Guitar</span></td></tr>
+<tr><td>4</td><td>Emily Green</td><td>1995-05-20</td><td>2</td><td>Violin</td></tr>
+</tbody></table></div>
+
+<div><h2>SongList</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>ReleaseYear</th><th>ArtistID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; CountrySinger.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>My First Single</td><td>2021</td><td>1</td></tr>
+<tr><td>2</td><td>Another Great Track</td><td>2022</td><td>2</td></tr>
+<tr><td>3</td><td>A Bluegrass Classic</td><td>2020</td><td>3</td></tr>
+<tr><td>4</td><td>A New Tune</td><td>2021</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Concerts</h2><table><thead>
+<tr><th>ID</th><th>Date</th><th>Location</th><th>PerformerID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; CountrySinger.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-06-01</td><td>New York City</td><td>1</td></tr>
+<tr><td>2</td><td>2023-07-05</td><td>Los Angeles</td><td>2</td></tr>
+<tr><td>3</td><td>2023-08-10</td><td>Nashville</td><td>3</td></tr>
+<tr><td>4</td><td>2023-09-15</td><td>Chicago</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Fans</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th><th>FavoriteSingerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; CountrySinger.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>alice@example.com</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>Bob Williams</td><td>bob@example.com</td><td>None</td><td>2</td></tr>
+<tr><td>3</td><td>Carol Miller</td><td>carol@example.com</td><td>None</td><td>3</td></tr>
+<tr><td>4</td><td>David Wilson</td><td>david@example.com</td><td>None</td><td>4</td></tr>
+<tr><td>5</td><td>Eva Taylor</td><td>eva@example.com</td><td>None</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

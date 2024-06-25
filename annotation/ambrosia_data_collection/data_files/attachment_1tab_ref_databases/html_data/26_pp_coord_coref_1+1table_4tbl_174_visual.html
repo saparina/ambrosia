@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">culture</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#990000"><span style="color:#990000">type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>National <span style="color:#990000">Museum</span></td><td><span style="color:#990000">Museum</span></td></tr>
+<tr><td>2</td><td>Contemporary Art <span style="color:#990000">Gallery</span></td><td><span style="color:#990000">Gallery</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">event</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th><th><span style="color:#006600">date</span></th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to History Lecture</td><td>A lecture about history.</td><td>2023-06-07 19:00:00</td><td>Auditorium A</td></tr>
+<tr><td>2</td><td>Art Exhibition</td><td>An exhibition of modern artworks.</td><td><span style="color:#006600">2023-07-08 15:00:00</span></td><td>Hall B</td></tr>
+</tbody></table></div>
+
+<div><h2>events_at_institutions</h2><table><thead>
+<tr><th>institution_id</th><th>event_id</th></tr>
+<tr><th>(&#8594; culture.id)</th><th>(&#8594; event.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

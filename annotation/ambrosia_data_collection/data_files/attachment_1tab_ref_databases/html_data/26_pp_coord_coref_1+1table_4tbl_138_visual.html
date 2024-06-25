@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">FunctionRooms</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000"><span style="color:#990000">Name</span></span></th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Ballroom</span></td><td>A large room suitable for weddings and conferences.</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Green Room</span></td><td>A cozy room perfect for small gatherings.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">SeatingCapacities</span></h2><table><thead>
+<tr><th>CapacityID</th><th><span style="color:#006600">MaxOccupancy</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>200</td></tr>
+<tr><td>2</td><td><span style="color:#006600">150</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingId</th><th>ClientName</th><th>ContactInfo</th><th>DateOfBooking</th><th>StartTime</th><th>EndTime</th><th>FunctionRoomID</th><th>SeatingCapacityID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; FunctionRooms.ID)</th><th>(&#8594; SeatingCapacities.CapacityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>+123456789</td><td>2023-01-01 10:00:00</td><td>14:00</td><td>16:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>+098765432</td><td>2023-01-02 10:00:00</td><td>14:00</td><td>16:00</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>+123456789</td><td>2023-01-03 10:00:00</td><td>14:00</td><td>16:00</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>+098765432</td><td>2023-01-04 10:00:00</td><td>14:00</td><td>16:00</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeId</th><th>FirstName</th><th>LastName</th><th>Role</th><th>Salary</th><th>HireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Emma</td><td>Wilson</td><td>Event Coordinator</td><td>45000.0</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>Michael</td><td>Davis</td><td>Chef</td><td>50000.0</td><td>2022-01-01</td></tr>
+<tr><td>3</td><td>Anna</td><td>Taylor</td><td>Housekeeping Supervisor</td><td>35000.0</td><td>2022-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Clients</h2><table><thead>
+<tr><th>ClientId</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>tom@example.com</td><td>+123456789</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Chris</td><td>Evans</td><td>chris@example.com</td><td>+987654321</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Linda</td><td>Cardellini</td><td>linda@example.com</td><td>+135792468</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Elijah</td><td>Wood</td><td>elijah@example.com</td><td>+246813579</td><td>123 Pine St</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

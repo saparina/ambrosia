@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Psychologists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>specialty</th><th>experience_years</th><th>clinic</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Clinics.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Jane Smith</td><td>Child & Adolescent</td><td>10</td><td><span style="color:#006600">Harmony Wellness Center</span></td></tr>
+<tr><td>2</td><td>Dr. John Doe</td><td>Cognitive Behavioral Therapy</td><td>7</td><td>Mental Health Solutions</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Psychiatrists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>specialty</th><th>experience_years</th><th>clinic</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Clinics.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Alice Brown</td><td>General Adult</td><td>8</td><td><span style="color:#006600">Harmony Wellness Center</span></td></tr>
+<tr><td>2</td><td>Dr. Bob Johnson</td><td>Geriatric</td><td>9</td><td>Mental Health Associates</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th><th>start_date</th><th>end_date</th><th>status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Psychologist</td><td>Providing therapy to children and adolescents.</td><td>60000</td><td>2023-01-01</td><td>2023-12-31</td><td>Open</td></tr>
+<tr><td>2</td><td>Psychiatrist</td><td>Diagnosing and treating mental disorders.</td><td>80000</td><td>2023-01-01</td><td>2023-12-31</td><td>Open</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th>job_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Jobs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>555-123-4567</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>555-987-6543</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Clinics</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>city</th><th>state</th><th>zipcode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harmony Wellness Center</td><td>123 Main St</td><td>Anytown</td><td>CA</td><td>12345</td></tr>
+<tr><td>2</td><td>Mental Health Solutions</td><td>456 Elm St</td><td>Another City</td><td>NY</td><td>67890</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

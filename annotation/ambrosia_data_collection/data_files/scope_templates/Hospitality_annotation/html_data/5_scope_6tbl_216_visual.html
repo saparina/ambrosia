@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Farm_Stays</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Green Valley</td><td>Rural Area</td></tr>
+<tr><td>2</td><td>Sunrise Farms</td><td>Mountainous Region</td></tr>
+<tr><td>3</td><td>Oak Tree Lodge</td><td>Urban Suburbia</td></tr>
+<tr><td>4</td><td>Country Retreat</td><td>Vineyard Estate</td></tr>
+<tr><td>5</td><td>Cozy Cottage</td><td>Lake Side</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Activities</span></h2><table><thead>
+<tr><th>activity_id</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Milking cows</td></tr>
+<tr><td>2</td><td>Feeding animals</td></tr>
+<tr><td>3</td><td>Egg collection</td></tr>
+<tr><td>4</td><td>Baking bread from freshly harvested grain</td></tr>
+<tr><td>5</td><td>Harvesting fruits</td></tr>
+</tbody></table></div>
+
+<div><h2>Farm_Stays_Activities</h2><table><thead>
+<tr><th>farm_stay_id</th><th>activity_id</th></tr>
+<tr><th>(&#8594; Farm_Stays.id)</th><th>(&#8594; Activities.activity_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

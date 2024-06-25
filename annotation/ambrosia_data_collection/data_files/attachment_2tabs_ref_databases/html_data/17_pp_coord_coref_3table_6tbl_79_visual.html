@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Beach</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>White Sands Beach</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Sunny Shores Beach</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Beach_Club</span></h2><table><thead>
+<tr><th>id</th><th>beach_id</th><th>club_name</th></tr>
+<tr><th></th><th>(&#8594; Beach.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Ocean Waves Club</td></tr>
+<tr><td>2</td><td>2</td><td>Seashells Club</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Watersports_Rental</span></h2><table><thead>
+<tr><th>id</th><th>beach_club_id</th><th>rental_item</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Beach_Club.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Surfboard</td><td>35.99</td></tr>
+<tr><td>2</td><td>2</td><td>Kayak</td><td>29.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Guest</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservation</h2><table><thead>
+<tr><th>id</th><th>guest_id</th><th>rental_date</th><th>start_time</th><th>end_time</th><th>num_people</th></tr>
+<tr><th></th><th>(&#8594; Guest.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-06-01</td><td>10:00</td><td>17:00</td><td>8</td></tr>
+<tr><td>2</td><td>2</td><td>2023-06-02</td><td>11:00</td><td>18:00</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Review</h2><table><thead>
+<tr><th>id</th><th>reservation_id</th><th>rating</th><th>comments</th></tr>
+<tr><th></th><th>(&#8594; Reservation.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5</td><td>Great experience!</td></tr>
+<tr><td>2</td><td>2</td><td>4</td><td>Good time but could have used a little more guidance.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

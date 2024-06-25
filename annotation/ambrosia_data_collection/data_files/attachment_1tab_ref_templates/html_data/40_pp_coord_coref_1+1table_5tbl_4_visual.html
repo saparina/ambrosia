@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Adventure</td></tr>
+<tr><td>3</td><td>Comedy</td></tr>
+<tr><td>4</td><td>Drama</td></tr>
+<tr><td>5</td><td>Fantasy</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">MediaType</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">typeName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Film</span></td></tr>
+<tr><td>2</td><td>Novel</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">EntertainmentItem</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th><span style="color:#1430b2">releaseYear</span></th><th>genreId</th><th>mediaTypeId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genre.id)</th><th>(&#8594; MediaType.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film1</td><td><span style="color:#1430b2">2020</span></td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Film2</td><td>2021</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Novel1</td><td><span style="color:#1430b2">2020</span></td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>Novel2</td><td>2021</td><td>4</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Author</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+</tbody></table></div>
+
+<div><h2>Novel</h2><table><thead>
+<tr><th>id</th><th>authorId</th><th>publicationYear</th></tr>
+<tr><th></th><th>(&#8594; Author.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2020</td></tr>
+<tr><td>2</td><td>2</td><td>2021</td></tr>
+</tbody></table></div>
+
+<div><h2>Film</h2><table><thead>
+<tr><th>id</th><th>director</th><th>filmId</th></tr>
+<tr><th></th><th></th><th>(&#8594; EntertainmentItem.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Director1</td><td>1</td></tr>
+<tr><td>2</td><td>Director2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

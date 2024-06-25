@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Elementary_Schools</span></h2><table><thead>
+<tr><th>SchoolID</th><th>Name</th><th>Location</th><th>YearEstablished</th><th>NumberOfStudents</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Oakwood Elementary</td><td>New York</td><td>2000</td><td>350</td></tr>
+<tr><td>2</td><td>Pine Street Elementary</td><td>Los Angeles</td><td>2010</td><td>450</td></tr>
+<tr><td>3</td><td>Maple Avenue Elementary</td><td>Chicago</td><td>1980</td><td>600</td></tr>
+<tr><td>4</td><td>Birch Lane Elementary</td><td>Houston</td><td>2005</td><td>500</td></tr>
+<tr><td>5</td><td>Cedar Drive Elementary</td><td>Philadelphia</td><td>1995</td><td>700</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Middle_Schools</span></h2><table><thead>
+<tr><th>SchoolID</th><th>Name</th><th>Location</th><th>YearEstablished</th><th>NumberOfStudents</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Riverdale Middle</td><td>New York</td><td>2008</td><td>800</td></tr>
+<tr><td>2</td><td>Sunset Hills Middle</td><td>Los Angeles</td><td>2012</td><td>900</td></tr>
+<tr><td>3</td><td>Lakeview Middle</td><td>Chicago</td><td>1990</td><td>1000</td></tr>
+<tr><td>4</td><td>Woodland Heights Middle</td><td>Houston</td><td>2001</td><td>1100</td></tr>
+<tr><td>5</td><td>Forest Park Middle</td><td>Philadelphia</td><td>1998</td><td>1200</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Head_Teachers</span></h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th><span style="color:#006600">PhoneNumber</span></th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Doe</td><td><span style="color:#006600">555-123-4567</span></td><td>jdoe@example.com</td></tr>
+<tr><td>2</td><td>John</td><td>Smith</td><td>555-987-6543</td><td>jsmith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Elementary_School_Principals</h2><table><thead>
+<tr><th>PrincipalID</th><th>SchoolID</th><th>TeacherID</th></tr>
+<tr><th></th><th>(&#8594; Elementary_Schools.SchoolID)</th><th>(&#8594; Head_Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Middle_School_Principals</h2><table><thead>
+<tr><th>PrincipalID</th><th>SchoolID</th><th>TeacherID</th></tr>
+<tr><th></th><th>(&#8594; Middle_Schools.SchoolID)</th><th>(&#8594; Head_Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Schools</h2><table><thead>
+<tr><th>SchoolID</th><th>Type</th><th>SchoolName</th><th>Location</th><th>YearEstablished</th><th>NumberOfStudents</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Elementary</td><td>Oakwood Elementary</td><td>New York</td><td>2000</td><td>350</td></tr>
+<tr><td>2</td><td>Elementary</td><td>Pine Street Elementary</td><td>Los Angeles</td><td>2010</td><td>450</td></tr>
+<tr><td>3</td><td>Elementary</td><td>Maple Avenue Elementary</td><td>Chicago</td><td>1980</td><td>600</td></tr>
+<tr><td>4</td><td>Elementary</td><td>Birch Lane Elementary</td><td>Houston</td><td>2005</td><td>500</td></tr>
+<tr><td>5</td><td>Elementary</td><td>Cedar Drive Elementary</td><td>Philadelphia</td><td>1995</td><td>700</td></tr>
+<tr><td>6</td><td>Middle</td><td>Riverdale Middle</td><td>New York</td><td>2008</td><td>800</td></tr>
+<tr><td>7</td><td>Middle</td><td>Sunset Hills Middle</td><td>Los Angeles</td><td>2012</td><td>900</td></tr>
+<tr><td>8</td><td>Middle</td><td>Lakeview Middle</td><td>Chicago</td><td>1990</td><td>1000</td></tr>
+<tr><td>9</td><td>Middle</td><td>Woodland Heights Middle</td><td>Houston</td><td>2001</td><td>1100</td></tr>
+<tr><td>10</td><td>Middle</td><td>Forest Park Middle</td><td>Philadelphia</td><td>1998</td><td>1200</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

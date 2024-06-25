@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div name="context_text" class="instance">
+          <div name="instance_text">
+            {{link_to_pdf | safe}} 
+          </div>
+          <div name="instance_text" style="max-width:1000px;">
+            {{instance | safe}}
+          </div>
+        </div>
+        <br>
+        <div name="context_text" class="instance" style="width: 80%; background-color: #fffcf5;">
+          <div name="instance_text">
+            {{template  | safe}} 
+          </div>
+        </div>
+          <div class="annotation_schema">
+              {{annotation_schematic_1}}
+          </div>
+
+          <div name="context_text" class="instance" style="width: 80%;  background-color: #fffcf5;">
+            <div name="instance_text">
+              {{interpretation1 | safe}} 
+            </div>
+          </div>
+
+        <div class="annotation_schema">
+            {{annotation_schematic_2}}
+        </div>
+        <div name="context_text" class="instance" style="width: 80%;  background-color: #fffcf5;">
+          <div name="instance_text">
+            {{interpretation2 | safe}} 
+          </div>
+        </div>
+
+        <div class="annotation_schema">
+            {{annotation_schematic_3}}
+        </div>
+
+        <div class="annotation_schema">
+          {{annotation_schematic_4}}
+      </div>
+
+      </div>
+    </div>
+
+
+    <div style="height: 15px;" />
+
+  </div>
+  <div class="col-md-12">
+
+  </div>
+</div>

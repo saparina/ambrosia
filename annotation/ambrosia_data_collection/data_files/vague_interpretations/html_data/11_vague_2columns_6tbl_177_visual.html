@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employees</h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>JobTitle</th><th>ContactInfo</th><th>HireDate</th><th>Salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Carpenter</td><td>+1-987-654-3210</td><td>2021-01-15</td><td>50000.0</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Electrician</td><td>+1-987-654-3211</td><td>2020-06-01</td><td>55000.0</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>Plumber</td><td>+1-987-654-3212</td><td>2019-08-10</td><td>52000.0</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>Foreman</td><td>+1-987-654-3213</td><td>2018-11-15</td><td>60000.0</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>Supervisor</td><td>+1-987-654-3214</td><td>2017-05-01</td><td>65000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Equipment</h2><table><thead>
+<tr><th>Id</th><th>Type</th><th>ModelNumber</th><th>PurchaseDate</th><th>CostPrice</th><th>MarketValue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Excavator</td><td>EX1000</td><td>2021-02-10</td><td>100000.0</td><td>120000.0</td></tr>
+<tr><td>2</td><td>Bulldozer</td><td>BD2000</td><td>2020-09-01</td><td>150000.0</td><td>180000.0</td></tr>
+<tr><td>3</td><td>Crane</td><td>CR3000</td><td>2019-05-05</td><td>200000.0</td><td>250000.0</td></tr>
+<tr><td>4</td><td>Dumper Truck</td><td>DT4000</td><td>2018-07-10</td><td>50000.0</td><td>65000.0</td></tr>
+<tr><td>5</td><td>Concrete Mixer</td><td>CM5000</td><td>2017-10-01</td><td>30000.0</td><td>40000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>ProjectStatus</h2><table><thead>
+<tr><th>Id</th><th>ProjectId</th><th>Date</th><th>TaskCompleted</th><th>BudgetSpent</th><th>ExpectedCompletionDate</th></tr>
+<tr><th></th><th>(&#8594; ConstuctionSite.Id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-06-15</td><td>Foundation Laid</td><td>20000.0</td><td>2021-07-15</td></tr>
+<tr><td>2</td><td>1</td><td>2021-07-15</td><td>Walls Erected</td><td>35000.0</td><td>2021-08-15</td></tr>
+<tr><td>3</td><td>1</td><td>2021-08-15</td><td>Roof Installed</td><td>50000.0</td><td>2021-09-15</td></tr>
+<tr><td>4</td><td>1</td><td>2021-09-15</td><td>Interior Finished</td><td>65000.0</td><td>2021-10-15</td></tr>
+<tr><td>5</td><td>1</td><td>2021-10-15</td><td>Final Inspection</td><td>75000.0</td><td>2021-11-15</td></tr>
+</tbody></table></div>
+
+<div><h2>ContractorDetails</h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>EmailAddress</th><th>ServicesOffered</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Construction</td><td>123 Main St, Cityville</td><td>+1-123-456-7890</td><td>abc@construction.com</td><td>Residential and Commercial Building</td></tr>
+<tr><td>2</td><td>XYZ Infrastructure</td><td>456 Elm St, Cityville</td><td>+1-123-456-7891</td><td>xyz@infrastructure.com</td><td>Infrastructure Development</td></tr>
+<tr><td>3</td><td>DEF Electricals</td><td>789 Oak St, Cityville</td><td>+1-123-456-7892</td><td>def@electricals.com</td><td>Electrical Works</td></tr>
+<tr><td>4</td><td>GHI Plumbing</td><td>135 Maple St, Cityville</td><td>+1-123-456-7893</td><td>ghi@plumbing.com</td><td>Plumbing Services</td></tr>
+<tr><td>5</td><td>JKL Landscaping</td><td>456 Pine St, Cityville</td><td>+1-123-456-7894</td><td>jkl@landscaping.com</td><td>Landscape Design and Installation</td></tr>
+</tbody></table></div>
+
+<div><h2>Boards</h2><table><thead>
+<tr><th>Id</th><th><span style="color:#990000">GovernmentAgency</span></th><th><span style="color:#990000">RegulatoryBoard</span></th><th>EngineeringProject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>City Planning Department</td><td>Building Code Authority</td><td>Highway Expansion Project</td></tr>
+<tr><td>2</td><td>Department of Transportation</td><td>Transport Safety Board</td><td>Railway Modernization Project</td></tr>
+<tr><td>3</td><td>Environment Protection Agency</td><td>Air Quality Control Committee</td><td>Industrial Waste Treatment Plant</td></tr>
+<tr><td>4</td><td>Health & Safety Executive</td><td>Occupational Health Committee</td><td>Hospital Construction Project</td></tr>
+<tr><td>5</td><td>Local Council</td><td>Heritage Preservation Society</td><td>Historic Building Restoration Project</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

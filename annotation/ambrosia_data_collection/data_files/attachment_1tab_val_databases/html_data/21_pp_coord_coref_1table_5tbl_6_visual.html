@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Helping_Professions</span></h2><table><thead>
+<tr><th>Profession</th><th>Area</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#990000">Social Worker</span></td><td><span style="color:#006600">East End</span></td></tr>
+<tr><td><span style="color:#990000">Social Worker</span></td><td>West Side</td></tr>
+<tr><td><span style="color:#990000">Counselor</span></td><td><span style="color:#006600">East End</span></td></tr>
+<tr><td><span style="color:#990000">Counselor</span></td><td>South Side</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>LocationID</th><th>CityName</th><th>State</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td><td>NY</td><td>USA</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>CA</td><td>USA</td></tr>
+<tr><td>3</td><td>London</td><td>England</td><td>UK</td></tr>
+<tr><td>4</td><td>Paris</td><td>Île-de-France</td><td>France</td></tr>
+<tr><td>5</td><td>Tokyo</td><td>Tokyo</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>SkillID</th><th>SkillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Communication</td></tr>
+<tr><td>2</td><td>Empathy</td></tr>
+<tr><td>3</td><td>Conflict Resolution</td></tr>
+<tr><td>4</td><td>Time Management</td></tr>
+<tr><td>5</td><td>Emotional Intelligence</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobId</th><th>Title</th><th>Description</th><th>LocationID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Locations.LocationID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Child Welfare Specialist</td><td>Working with children and families in need.</td><td>1</td></tr>
+<tr><td>2</td><td>Mental Health Counselor</td><td>Support individuals experiencing mental health issues.</td><td>2</td></tr>
+<tr><td>3</td><td>Substance Abuse Therapist</td><td>Help clients overcome addiction.</td><td>3</td></tr>
+<tr><td>4</td><td>Geriatric Social Worker</td><td>Assisting elderly clients with daily living tasks and emotional support.</td><td>4</td></tr>
+<tr><td>5</td><td>School Social Worker</td><td>Providing social services within a school setting.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicant</h2><table><thead>
+<tr><th>ApplicantId</th><th>Name</th><th>Email</th><th>PhoneNumber</th><th>JobId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Jobs.JobId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>555-123-4567</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>555-987-654-321</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice@example.com</td><td>555-098-765-432</td><td>3</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob@example.com</td><td>555-432-109-876</td><td>4</td></tr>
+<tr><td>5</td><td>Charlie White</td><td>charlie@example.com</td><td>555-123-456-789</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Employers</h2><table><thead>
+<tr><th>EmployerId</th><th>CompanyName</th><th>Address</th><th>ContactEmail</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>City Community Services</td><td>123 Main St</td><td>cityservices@example.com</td></tr>
+<tr><td>2</td><td>State Mental Health Agency</td><td>456 Elm St</td><td>mentalhealth@example.com</td></tr>
+<tr><td>3</td><td>National Substance Abuse Council</td><td>789 Oak St</td><td>substanceabusecouncil@example.com</td></tr>
+<tr><td>4</td><td>Retirement Home</td><td>111 Pine St</td><td>retirementsupport@example.com</td></tr>
+<tr><td>5</td><td>Local School District</td><td>987 Fir St</td><td>schooldistrict@example.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

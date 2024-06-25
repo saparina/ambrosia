@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Film_Festivals</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Festival A</td><td>Location X</td></tr>
+<tr><td>2</td><td>Festival B</td><td>Location Y</td></tr>
+<tr><td>3</td><td>Festival C</td><td>Location Z</td></tr>
+<tr><td>4</td><td>Festival D</td><td>Location W</td></tr>
+<tr><td>5</td><td>Festival E</td><td>Location V</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Categories</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">categoryName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Short_Film</td></tr>
+<tr><td>2</td><td>Feature_Film</td></tr>
+<tr><td>3</td><td>Documentary</td></tr>
+<tr><td>4</td><td>Animation</td></tr>
+<tr><td>5</td><td>Experimental</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>director</th><th>yearReleased</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie A</td><td>Director X</td><td>2020</td></tr>
+<tr><td>2</td><td>Movie B</td><td>Director Y</td><td>2021</td></tr>
+<tr><td>3</td><td>Movie C</td><td>Director Z</td><td>2019</td></tr>
+<tr><td>4</td><td>Movie D</td><td>Director W</td><td>2022</td></tr>
+<tr><td>5</td><td>Movie E</td><td>Director V</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Festival_Entries</h2><table><thead>
+<tr><th>festivalId</th><th>filmId</th><th>entryDate</th></tr>
+<tr><th>(&#8594; Film_Festivals.id)</th><th>(&#8594; Films.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-07-01</td></tr>
+<tr><td>1</td><td>2</td><td>2021-08-01</td></tr>
+<tr><td>2</td><td>3</td><td>2022-06-01</td></tr>
+<tr><td>2</td><td>4</td><td>2022-07-01</td></tr>
+<tr><td>3</td><td>5</td><td>2023-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Festival_Winners</h2><table><thead>
+<tr><th>festivalId</th><th>awardType</th><th>winningFilmId</th><th>winYear</th></tr>
+<tr><th>(&#8594; Film_Festivals.id)</th><th></th><th>(&#8594; Films.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Short Film</td><td>1</td><td>2021</td></tr>
+<tr><td>1</td><td>Best Feature Film</td><td>2</td><td>2021</td></tr>
+<tr><td>2</td><td>Best Animation</td><td>3</td><td>2022</td></tr>
+<tr><td>2</td><td>Best Documentary</td><td>4</td><td>2022</td></tr>
+<tr><td>3</td><td>Best Experimental</td><td>5</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Festival_Categories</h2><table><thead>
+<tr><th>festivalId</th><th>categoryId</th></tr>
+<tr><th>(&#8594; Film_Festivals.id)</th><th>(&#8594; Categories.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

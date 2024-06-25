@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Theaters</span></h2><table><thead>
+<tr><th>theater_id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Broadway Theater</td><td>New York</td></tr>
+<tr><td>2</td><td>West End Theatre</td><td>London</td></tr>
+<tr><td>3</td><td>Apollo Theatre</td><td>Paris</td></tr>
+<tr><td>4</td><td>Drama Centre</td><td>Dublin</td></tr>
+<tr><td>5</td><td>Royal Court Theatre</td><td>Liverpool</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Performances</span></h2><table><thead>
+<tr><th>performance_id</th><th><span style="color:#990000">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Comedy Play</td></tr>
+<tr><td>2</td><td>Tragedy</td></tr>
+<tr><td>3</td><td>Musical</td></tr>
+<tr><td>4</td><td>Opera</td></tr>
+<tr><td>5</td><td>Ballet</td></tr>
+</tbody></table></div>
+
+<div><h2>Theaters_Performances</h2><table><thead>
+<tr><th>theater_id</th><th>performance_id</th></tr>
+<tr><th>(&#8594; Theaters.theater_id)</th><th>(&#8594; Performances.performance_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>actor_id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>Johnson</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>Davis</td></tr>
+<tr><td>5</td><td>William Brown</td><td>Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>role_id</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lead Role</td></tr>
+<tr><td>2</td><td>Supporting Role</td></tr>
+<tr><td>3</td><td>Villain</td></tr>
+<tr><td>4</td><td>Protagonist</td></tr>
+<tr><td>5</td><td>Antagonist</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

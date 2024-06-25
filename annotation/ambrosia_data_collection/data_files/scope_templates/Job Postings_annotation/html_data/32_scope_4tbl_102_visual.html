@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Writers</span></h2><table><thead>
+<tr><th>writerID</th><th>fullName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Johnson</td></tr>
+<tr><td>4</td><td>Emily Williams</td></tr>
+<tr><td>5</td><td>David Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Genres</span></h2><table><thead>
+<tr><th>genreID</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Blog_Post</td></tr>
+<tr><td>2</td><td>Fiction</td></tr>
+<tr><td>3</td><td>Non-fiction</td></tr>
+<tr><td>4</td><td>Poetry</td></tr>
+<tr><td>5</td><td>Essays</td></tr>
+</tbody></table></div>
+
+<div><h2>Writers_Genres</h2><table><thead>
+<tr><th>writerID</th><th>genreID</th></tr>
+<tr><th>(&#8594; Writers.writerID)</th><th>(&#8594; Genres.genreID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

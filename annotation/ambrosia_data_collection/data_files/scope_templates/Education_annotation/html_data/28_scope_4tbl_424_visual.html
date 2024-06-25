@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">College_Campuses</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harvard University</td><td>Cambridge, MA</td></tr>
+<tr><td>2</td><td>Stanford University</td><td>Stanford, CA</td></tr>
+<tr><td>3</td><td>University of California Berkeley</td><td>Berkeley, CA</td></tr>
+<tr><td>4</td><td>Massachusetts Institute of Technology</td><td>Cambridge, MA</td></tr>
+<tr><td>5</td><td>California Institute of Technology</td><td>Pasadena, CA</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Buildings</span></h2><table><thead>
+<tr><th>id</th><th>type</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Library</td><td>A place where books and resources are stored.</td></tr>
+<tr><td>2</td><td>Administration Building</td><td>The main office building on campus.</td></tr>
+<tr><td>3</td><td>Lecture Hall</td><td>Large rooms used for lectures and presentations.</td></tr>
+<tr><td>4</td><td>Dormitory</td><td>Residential living space for students.</td></tr>
+<tr><td>5</td><td>Gymnasium</td><td>Facility for sports activities.</td></tr>
+</tbody></table></div>
+
+<div><h2>College_Campuses_Buildings</h2><table><thead>
+<tr><th>campusId</th><th>buildingId</th></tr>
+<tr><th>(&#8594; College_Campuses.id)</th><th>(&#8594; Buildings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

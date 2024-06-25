@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Interior_Designers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>Email</th><th>PhoneNumber</th><th>Style</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>123 Main St</td><td>john@example.com</td><td>555-1234</td><td><span style="color:#006600">Minimalism</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>456 Elm St</td><td>jane@example.com</td><td>555-5678</td><td>Modern</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Landscape_Architects</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>Email</th><th>PhoneNumber</th><th>Style</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Johnson</td><td>987 Oak St</td><td>michael@example.com</td><td>555-9012</td><td><span style="color:#006600">Minimalism</span></td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>654 Pine St</td><td>emily@example.com</td><td>555-1357</td><td>Contemporary</td></tr>
+</tbody></table></div>
+
+<div><h2>Projects</h2><table><thead>
+<tr><th>ID</th><th>DesignerID</th><th>ArchitectID</th><th>Title</th><th>Location</th><th>StartDate</th><th>EndDate</th><th>Budget</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Interior_Designers.ID)</th><th>(&#8594; Landscape_Architects.ID)</th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td><td>Living Room Redesign</td><td>Los Angeles</td><td>2022-01-01</td><td>2022-03-31</td><td>10000.0</td><td>Completed</td></tr>
+<tr><td>2</td><td>None</td><td>2</td><td>Garden Pathway</td><td>San Francisco</td><td>2022-02-01</td><td>2022-04-30</td><td>7500.0</td><td>In Progress</td></tr>
+</tbody></table></div>
+
+<div><h2>Materials</h2><table><thead>
+<tr><th>ID</th><th>ProjectID</th><th>MaterialName</th><th>Quantity</th><th>UnitPrice</th></tr>
+<tr><th></th><th>(&#8594; Projects.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Wood Flooring</td><td>100</td><td>5.0</td></tr>
+<tr><td>2</td><td>2</td><td>Stone Tiles</td><td>50</td><td>7.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Role</th><th>ContactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Brown</td><td>Interior Designer</td><td>alice@example.com</td></tr>
+<tr><td>2</td><td>Bob Green</td><td>Landscape Architect</td><td>bob@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Staffing</h2><table><thead>
+<tr><th>ID</th><th>ProjectID</th><th>EmployeeID</th><th>HoursWorked</th><th>PayRate</th></tr>
+<tr><th></th><th>(&#8594; Projects.ID)</th><th>(&#8594; Employees.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>40</td><td>25</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>50</td><td>27</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Composers</h2><table><thead>
+<tr><th>composerId</th><th>name</th><th>birthYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wolfgang Amadeus Mozart</td><td>1756</td></tr>
+<tr><td>2</td><td>George Frideric Handel</td><td>1685</td></tr>
+</tbody></table></div>
+
+<div><h2>Operas</h2><table><thead>
+<tr><th>operaID</th><th>title</th><th><span style="color:#990000">Historical_Era</span></th><th><span style="color:#990000">Location</span></th><th>Duration</th><th>composerId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Composers.composerId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Marriage of Figaro</td><td>Classical</td><td>Seville</td><td>300</td><td>1</td></tr>
+<tr><td>2</td><td>Messiah</td><td>Baroque</td><td>Jerusalem</td><td>220</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Venues</h2><table><thead>
+<tr><th>venueID</th><th>name</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Metropolitan Opera House</td><td>3938</td></tr>
+<tr><td>2</td><td>Royal Opera House</td><td>2100</td></tr>
+</tbody></table></div>
+
+<div><h2>Performances</h2><table><thead>
+<tr><th>performanceId</th><th>date</th><th>startTime</th><th>venueId</th><th>operaId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Venues.venueId)</th><th>(&#8594; Operas.operaId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-10-15</td><td>19:30</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2022-11-20</td><td>18:00</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>CastMembers</h2><table><thead>
+<tr><th>castMemberId</th><th>name</th><th>roleInPerformance</th><th>performanceId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Performances.performanceId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane Doe</td><td>Figaro</td><td>1</td></tr>
+<tr><td>2</td><td>John Smith</td><td>Count Almaviva</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

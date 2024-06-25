@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>VideoGames</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">Release_Year</span></th><th><span style="color:#990000">Release_Date</span></th><th>Name</th><th>Platform</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2018</td><td>2018-06-12</td><td>God of War</td><td>PlayStation 4</td></tr>
+<tr><td>2</td><td>2013</td><td>2013-11-02</td><td>Grand Theft Auto V</td><td>PlayStation 3</td></tr>
+<tr><td>3</td><td>2017</td><td>2017-11-07</td><td>The Legend of Zelda: Breath of the Wild</td><td>Nintendo Switch</td></tr>
+<tr><td>4</td><td>2019</td><td>2019-04-25</td><td>Anthem</td><td>Microsoft Windows</td></tr>
+<tr><td>5</td><td>2016</td><td>2016-08-23</td><td>Overwatch</td><td>PlayStation 4</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1970-06-15</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-03-22</td></tr>
+<tr><td>3</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td></tr>
+<tr><td>4</td><td>Emma</td><td>Watson</td><td>1990-04-15</td></tr>
+<tr><td>5</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>FullName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Keanu Reeves</td><td>1964-09-02</td></tr>
+<tr><td>2</td><td>Kate Winslet</td><td>1975-10-05</td></tr>
+<tr><td>3</td><td>Chris Hemsworth</td><td>1983-08-11</td></tr>
+<tr><td>4</td><td>Scarlett Johansson</td><td>1984-11-22</td></tr>
+<tr><td>5</td><td>Christopher Nolan</td><td>1970-07-30</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>YearReleased</th><th>DirectorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>4</td></tr>
+<tr><td>2</td><td>Interstellar</td><td>2014</td><td>5</td></tr>
+<tr><td>3</td><td>Titanic</td><td>1997</td><td>2</td></tr>
+<tr><td>4</td><td>The Matrix</td><td>1999</td><td>6</td></tr>
+<tr><td>5</td><td>Fight Club</td><td>1999</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieRoles</h2><table><thead>
+<tr><th>id</th><th>ActorId</th><th>MovieId</th><th>RoleType</th></tr>
+<tr><th></th><th>(&#8594; Actors.id)</th><th>(&#8594; Movies.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Leading Role</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Supporting Role</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Leading Role</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Supporting Role</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Leading Role</td></tr>
+</tbody></table></div>
+
+<div><h2>GameReviews</h2><table><thead>
+<tr><th>id</th><th>ReviewText</th><th>Rating</th><th>GameId</th><th>ReviewerId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; VideoGames.id)</th><th>(&#8594; Actors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great game with a compelling story.</td><td>9</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Amazing graphics and immersive world.</td><td>10</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>An epic adventure worth playing.</td><td>8</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>A fantastic game that keeps you hooked.</td><td>9</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>One of the best RPGs I have ever played.</td><td>10</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

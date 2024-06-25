@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Medical_Schools</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harvard Medical School</td><td>Boston</td></tr>
+<tr><td>2</td><td>Johns Hopkins University School of Medicine</td><td>Baltimore</td></tr>
+<tr><td>3</td><td>Stanford University School of Medicine</td><td>Stanford</td></tr>
+<tr><td>4</td><td>University of California - San Francisco School of Medicine</td><td>San Francisco</td></tr>
+<tr><td>5</td><td>Yale School of Medicine</td><td>New Haven</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Courses</span></h2><table><thead>
+<tr><th>id</th><th>courseName</th><th><span style="color:#990000">duration</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anatomy</td><td>2</td></tr>
+<tr><td>2</td><td>Biology</td><td>2</td></tr>
+<tr><td>3</td><td>Physiology</td><td>1</td></tr>
+<tr><td>4</td><td>Pharmacology</td><td>3</td></tr>
+<tr><td>5</td><td>Pathology</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Medical_School_Courses</h2><table><thead>
+<tr><th>id</th><th>schoolId</th><th>courseId</th></tr>
+<tr><th></th><th>(&#8594; Medical_Schools.id)</th><th>(&#8594; Courses.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

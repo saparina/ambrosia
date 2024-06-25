@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Books</h2><table><thead>
+<tr><th>BookID</th><th>Title</th><th>Author</th><th>PublicationYear</th><th><span style="color:#990000">Summary</span></th><th><span style="color:#990000">Themes</span></th><th>Novel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pride and Prejudice</td><td>Jane Austen</td><td>1797</td><td>The story follows Elizabeth Bennet as she deals with issues of marriage, morality, education...</td><td>Love, Marriage</td><td>1</td></tr>
+<tr><td>2</td><td>1984</td><td>George Orwell</td><td>1949</td><td>In a dystopian future...</td><td>Politics, Totalitarianism</td><td>0</td></tr>
+<tr><td>3</td><td>Crime and Punishment</td><td>Fyodor Dostoevsky</td><td>1866</td><td>A psychological thriller that delves into the mind of Raskolnikov...</td><td>Psychology, Crime</td><td>0</td></tr>
+<tr><td>4</td><td>Adventures of Huckleberry Finn</td><td>Mark Twain</td><td>1884</td><td>Set against the backdrop of slavery in mid-19th century America...</td><td>Race Relations, Adventure</td><td>0</td></tr>
+<tr><td>5</td><td>Hamlet</td><td>William Shakespeare</td><td>1603</td><td>Prince Hamlet seeks revenge on his uncle...</td><td>Tragedy, Revenge</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>DeathDate</th><th>Biography</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Austen</td><td>1775-04-16</td><td>None</td><td>Jane Austen was an English novelist known primarily for her six major novels...</td></tr>
+<tr><td>2</td><td>George</td><td>Orwell</td><td>1903-06-25</td><td>1950-01-21</td><td>George Orwell was a British writer and journalist...</td></tr>
+<tr><td>3</td><td>Fyodor</td><td>Dostoevsky</td><td>1821-11-11</td><td>1881-02-09</td><td>Fyodor Dostoevsky was a Russian author...</td></tr>
+<tr><td>4</td><td>Mark</td><td>Twain</td><td>1835-11-30</td><td>1910-04-21</td><td>Samuel Langhorne Clemens, better known by his pen name Mark Twain...</td></tr>
+<tr><td>5</td><td>William</td><td>Shakespeare</td><td>1564-04-26</td><td>1616-04-23</td><td>William Shakespeare was an English poet, playwright...</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>Address</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Penguin Random House</td><td>New York City</td><td>+1-212-366-2000</td></tr>
+<tr><td>2</td><td>HarperCollins</td><td>New York City</td><td>+1-212-207-7000</td></tr>
+<tr><td>3</td><td>Hachette Book Group</td><td>New York City</td><td>+1-212-364-1000</td></tr>
+<tr><td>4</td><td>Simon & Schuster</td><td>New York City</td><td>+1-212-698-7000</td></tr>
+<tr><td>5</td><td>Macmillan Publishing</td><td>New York City</td><td>+1-212-339-6000</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>GenreID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Romance</td></tr>
+<tr><td>2</td><td>Mystery</td></tr>
+<tr><td>3</td><td>Historical Fiction</td></tr>
+<tr><td>4</td><td>Science Fiction</td></tr>
+<tr><td>5</td><td>Thriller</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

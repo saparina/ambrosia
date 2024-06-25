@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">MediaFranchises</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th><span style="color:#186e16"><span style="color:#186e16">Business_Strategy</span></span></th><th><span style="color:#1430b2">Audience</span></th><th>OtherColumn1</th><th>OtherColumn2</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Times</td><td><span style="color:#186e16">Media Franchise</span></td><td><span style="color:#1430b2">Liberals</span></td><td>Print</td><td>Digital</td></tr>
+<tr><td>2</td><td>Breitbart News Network</td><td><span style="color:#186e16">Media Franchise</span></td><td>Conservatives</td><td>Website</td><td>Multimedia</td></tr>
+<tr><td>3</td><td>The Huffington Post</td><td><span style="color:#186e16">Cross-Platform Expansion</span></td><td><span style="color:#1430b2">Liberals</span></td><td>News Aggregator</td><td>Online Magazine</td></tr>
+</tbody></table></div>
+
+<div><h2>CrossPlatformExpansions</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Business_Strategy</th><th>Audience</th><th>Platform</th><th>Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>HBO Max</td><td>Cross-Platform Expansion</td><td>General</td><td>Streaming</td><td>2020</td></tr>
+<tr><td>2</td><td>Disney+</td><td>Cross-Platform Expansion</td><td>Family</td><td>Streaming</td><td>2019</td></tr>
+<tr><td>3</td><td>Netflix Original Series</td><td>Cross-Platform Expansion</td><td>Various</td><td>Streaming</td><td>2013</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Content</th><th>PublicationDate</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article about Politics</td><td>Content of politics article...</td><td>2021-08-01 12:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Article about Entertainment</td><td>Content of entertainment article...</td><td>2021-08-02 12:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>Opinion Article</td><td>Content of opinion article...</td><td>2021-08-03 12:00:00</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Role</th><th>AffiliatedMediaFranchiseID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; MediaFranchises.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Editorial Writer</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Reporter</td><td>2</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>Opinion Columnist</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Readers</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>AgeGroup</th><th>PreferredGenre</th><th>FavouriteMediaFranchiseID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; MediaFranchises.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Williams</td><td>Young Adult</td><td>Politics</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Brown</td><td>Adult</td><td>Entertainment</td><td>2</td></tr>
+<tr><td>3</td><td>Carol</td><td>Davis</td><td>Older Adult</td><td>Literature</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

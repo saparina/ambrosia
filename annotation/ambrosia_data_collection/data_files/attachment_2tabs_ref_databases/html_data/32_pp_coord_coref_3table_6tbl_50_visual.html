@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Shifts</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">ShiftName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Night Shift</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Day Shift</span></td></tr>
+<tr><td>3</td><td>Early Morning Shift</td></tr>
+</tbody></table></div>
+
+<div><h2>StaffTypes</h2><table><thead>
+<tr><th>ID</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Registered Nurse</td></tr>
+<tr><td>2</td><td>Licensed Practical Nurse</td></tr>
+<tr><td>3</td><td>Physical Therapist</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">NursePostings</span></h2><table><thead>
+<tr><th>ID</th><th>ShiftID</th><th>StaffTypeID</th></tr>
+<tr><th></th><th>(&#8594; Shifts.ID)</th><th>(&#8594; StaffTypes.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">PhysicalTherapistPostings</span></h2><table><thead>
+<tr><th>ID</th><th>ShiftID</th><th>StaffTypeID</th></tr>
+<tr><th></th><th>(&#8594; Shifts.ID)</th><th>(&#8594; StaffTypes.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>JobRequirements</h2><table><thead>
+<tr><th>ID</th><th>Description</th><th>RequiredSkills</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Care for patients and provide medical assistance.</td><td>Strong communication skills, empathy, critical thinking.</td></tr>
+<tr><td>2</td><td>Assist patients in regaining mobility after injury or surgery.</td><td>Knowledge of anatomy, biomechanics, and exercise physiology.</td></tr>
+</tbody></table></div>
+
+<div><h2>PostedJobs</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Location</th><th>StartDate</th><th>EndDate</th><th>NurseJobId</th><th>PhysiotherapistJobId</th><th>RequirementsId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; NursePostings.ID)</th><th>(&#8594; PhysicalTherapistPostings.ID)</th><th>(&#8594; JobRequirements.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Nursing Position at Hospital A</td><td>New York City</td><td>2023-06-01</td><td>2023-07-31</td><td>1</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>Licensed Practical Nurse at Clinic B</td><td>Los Angeles</td><td>2023-08-01</td><td>2023-12-31</td><td>2</td><td>None</td><td>2</td></tr>
+<tr><td>3</td><td>Physical Therapy Opportunity at Rehab Center C</td><td>Chicago</td><td>2023-09-01</td><td>2024-03-31</td><td>None</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Nurse Manager Role at Hospital D</td><td>Miami</td><td>2023-10-01</td><td>2023-11-30</td><td>1</td><td>None</td><td>4</td></tr>
+<tr><td>5</td><td>Orthopedic Physical Therapist at Sports Medicine E</td><td>Boston</td><td>2023-12-01</td><td>2024-04-30</td><td>None</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

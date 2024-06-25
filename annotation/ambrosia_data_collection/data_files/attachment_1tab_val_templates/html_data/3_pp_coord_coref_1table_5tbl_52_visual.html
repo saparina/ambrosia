@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St, Anytown, USA</td><td>info@companya.com</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St, Othertown, USA</td><td>contact@companyb.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Technologies</h2><table><thead>
+<tr><th>id</th><th>technologyName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python</td></tr>
+<tr><td>2</td><td>JavaScript</td></tr>
+<tr><td>3</td><td>C#</td></tr>
+<tr><td>4</td><td>Ruby</td></tr>
+<tr><td>5</td><td>Swift</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Jobs</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>companyId</th><th><span style="color:#1430b2">salary</span></th><th><span style="color:#186e16"><span style="color:#186e16">technicalProfession</span></span></th><th>skillIds</th><th>locationId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Companies.id)</th><th></th><th></th><th>(&#8594; Technologies.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software <span style="color:#186e16">Engineer</span></td><td>Develop software applications using Python.</td><td>1</td><td><span style="color:#1430b2">80000</span></td><td><span style="color:#186e16">Engineer</span></td><td>2,3</td><td>1</td></tr>
+<tr><td>2</td><td>Senior Software <span style="color:#186e16">Engineer</span></td><td>Lead a team of engineers and develop complex software systems.</td><td>1</td><td>95000</td><td><span style="color:#186e16">Engineer</span></td><td>2,3</td><td>1</td></tr>
+<tr><td>3</td><td>Software <span style="color:#186e16">Architect</span></td><td>Design and implement high-level architecture for large-scale applications.</td><td>2</td><td><span style="color:#1430b2">80000</span></td><td><span style="color:#186e16">Architect</span></td><td>1,4</td><td>2</td></tr>
+<tr><td>4</td><td>Principal Software <span style="color:#186e16">Architect</span></td><td>Define product vision and guide the overall technical direction of the project.</td><td>2</td><td>105000</td><td><span style="color:#186e16">Architect</span></td><td>1,4</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>id</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anytown</td><td>USA</td></tr>
+<tr><td>2</td><td>Othertown</td><td>USA</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

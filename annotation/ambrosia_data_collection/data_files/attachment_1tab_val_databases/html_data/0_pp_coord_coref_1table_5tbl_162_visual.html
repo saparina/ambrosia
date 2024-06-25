@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Reporters</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthDate</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1987-06-13</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1990-03-18</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publishDate</th><th>reporterId</th><th>categoryId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Reporters.id)</th><th>(&#8594; Categories.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article Title 1</td><td>Content of article 1</td><td>2021-07-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Article Title 2</td><td>Content of article 2</td><td>2021-07-02</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Categories</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td></tr>
+<tr><td>2</td><td>Economy</td></tr>
+<tr><td>3</td><td>Technology</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Awards</span></h2><table><thead>
+<tr><th>id</th><th>awardName</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Pulitzer Prize</span></td><td><span style="color:#006600">2010</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Pulitzer Prize</span></td><td>2011</td></tr>
+<tr><td>3</td><td><span style="color:#990000">George Polk Award</span></td><td><span style="color:#006600">2010</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">George Polk Award</span></td><td>2012</td></tr>
+</tbody></table></div>
+
+<div><h2>Reporter_Awards</h2><table><thead>
+<tr><th>reporterId</th><th>awardId</th></tr>
+<tr><th>(&#8594; Reporters.id)</th><th>(&#8594; Awards.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

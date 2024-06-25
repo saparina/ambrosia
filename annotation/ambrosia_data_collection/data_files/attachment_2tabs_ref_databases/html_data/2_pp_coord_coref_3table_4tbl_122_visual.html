@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Publisher</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pearson</td></tr>
+<tr><td>2</td><td>Wiley</td></tr>
+<tr><td>3</td><td><span style="color:#006600">McGraw-Hill</span></td></tr>
+<tr><td>4</td><td>Cengage Learning</td></tr>
+<tr><td>5</td><td>Elsevier</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Textbooks</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>publisherId</th><th>author</th><th>price</th></tr>
+<tr><th></th><th></th><th>(&#8594; Publisher.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Calculus</td><td>1</td><td>Jones</td><td>29.99</td></tr>
+<tr><td>2</td><td>Physics</td><td>1</td><td>Smith</td><td>34.99</td></tr>
+<tr><td>3</td><td>Literature</td><td>2</td><td>Doe</td><td>28.99</td></tr>
+<tr><td>4</td><td>History</td><td>2</td><td>Johnson</td><td>30.99</td></tr>
+<tr><td>5</td><td>Biology</td><td>3</td><td>Brown</td><td>32.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">EBooks</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>publisherId</th><th>format</th><th>price</th></tr>
+<tr><th></th><th></th><th>(&#8594; Publisher.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>4</td><td>EPUB</td><td>27.99</td></tr>
+<tr><td>2</td><td>Mathematics</td><td>4</td><td>PDF</td><td>26.99</td></tr>
+<tr><td>3</td><td>Engineering</td><td>5</td><td>EPUB</td><td>25.99</td></tr>
+<tr><td>4</td><td>Philosophy</td><td>5</td><td>PDF</td><td>24.99</td></tr>
+<tr><td>5</td><td>Art History</td><td>3</td><td>MOBI</td><td>23.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>id</th><th>subjectName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math</td></tr>
+<tr><td>2</td><td>Science</td></tr>
+<tr><td>3</td><td>English</td></tr>
+<tr><td>4</td><td>History</td></tr>
+<tr><td>5</td><td>Arts</td></tr>
+</tbody></table></div>
+
+<div><h2>BooksInSubject</h2><table><thead>
+<tr><th>bookId</th><th>subjectId</th></tr>
+<tr><th>(&#8594; Textbooks.id)</th><th>(&#8594; Subjects.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>subjectId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Subjects.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael</td><td>Williams</td><td>1</td></tr>
+<tr><td>2</td><td>Emma</td><td>Jones</td><td>2</td></tr>
+<tr><td>3</td><td>David</td><td>Martin</td><td>3</td></tr>
+<tr><td>4</td><td>Laura</td><td>Thompson</td><td>4</td></tr>
+<tr><td>5</td><td>Daniel</td><td>Green</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

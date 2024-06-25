@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Company</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">yourcompany1</span></td></tr>
+<tr><td>2</td><td>yourcompany2</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>company_id</th><th>employee_name</th></tr>
+<tr><th></th><th>(&#8594; Company.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Employee of yourcompany1</td></tr>
+<tr><td>2</td><td>1</td><td>Another employee of yourcompany1</td></tr>
+<tr><td>3</td><td>2</td><td>Employee of yourcompany2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Position</span></h2><table><thead>
+<tr><th>id</th><th>position_title</th><th><span style="color:#990000"><span style="color:#990000">trades_jobs</span></span></th><th>company_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Company.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Position1</td><td><span style="color:#990000">Construction worker</span></td><td>1</td></tr>
+<tr><td>2</td><td>Position2</td><td><span style="color:#990000">Electrician</span></td><td>1</td></tr>
+<tr><td>3</td><td>Position3</td><td><span style="color:#990000">Construction worker</span></td><td>2</td></tr>
+<tr><td>4</td><td>Position4</td><td><span style="color:#990000">Electrician</span></td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Skill</h2><table><thead>
+<tr><th>id</th><th>skill_type</th><th>position_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Position.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Skill1</td><td>Position1</td></tr>
+<tr><td>2</td><td>Skill2</td><td>Position2</td></tr>
+<tr><td>3</td><td>Skill3</td><td>Position3</td></tr>
+<tr><td>4</td><td>Skill4</td><td>Position4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Authors</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Evelyn O'Connor</td></tr>
+<tr><td>2</td><td>John Doe</td></tr>
+<tr><td>3</td><td><span style="color:#006600">Jane Smith</span></td></tr>
+<tr><td>4</td><td>Michael Johnson</td></tr>
+<tr><td>5</td><td>Emily Davis</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>article_id</th><th>title</th><th>publication_date</th><th>content</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Importance of Journalism</td><td>2021-09-01</td><td>A discussion on why journalism is crucial in society.</td><td>1</td></tr>
+<tr><td>2</td><td>Understanding Data Analysis</td><td>2021-08-30</td><td>An overview of data analysis and its importance.</td><td>2</td></tr>
+<tr><td>3</td><td>Journalistic Ethics</td><td>2021-08-27</td><td>Exploring ethical considerations in journalism.</td><td>3</td></tr>
+<tr><td>4</td><td>Impact of Social Media</td><td>2021-08-26</td><td>How social media has transformed communication.</td><td>4</td></tr>
+<tr><td>5</td><td>Covering Politics</td><td>2021-08-25</td><td>Strategies for effective political reporting.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Stories</span></h2><table><thead>
+<tr><th>story_id</th><th>title</th><th>short_story</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>My First Adventure</td><td>Once upon a time...</td><td>1</td></tr>
+<tr><td>2</td><td>The Lost City</td><td>In the heart of the jungle...</td><td>2</td></tr>
+<tr><td>3</td><td>The Time Traveler</td><td>What if you could go back...</td><td>3</td></tr>
+<tr><td>4</td><td>The Mysterious Island</td><td>A group of castaways found themselves...</td><td>4</td></tr>
+<tr><td>5</td><td>The Enchanted Forest</td><td>Deep within the woods...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Essays</span></h2><table><thead>
+<tr><th>essay_id</th><th>title</th><th>personal_essay</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Growing Up in New York</td><td>Reflections on my childhood experiences.</td><td>1</td></tr>
+<tr><td>2</td><td>Life Lessons from Traveling</td><td>Important things I learned while exploring the world.</td><td>2</td></tr>
+<tr><td>3</td><td>Overcoming Fear</td><td>Conquering anxiety and self-doubt.</td><td>3</td></tr>
+<tr><td>4</td><td>The Power of Friendship</td><td>Why true friendship matters.</td><td>4</td></tr>
+<tr><td>5</td><td>Pursuing My Passion</td><td>How I followed my dreams and what I learned along the way.</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

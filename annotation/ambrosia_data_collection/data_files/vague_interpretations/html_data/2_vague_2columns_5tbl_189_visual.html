@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-06-18</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2002-07-20</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>2001-08-25</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>2000-09-10</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>1999-10-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>Subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Smith</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Johnson</td><td>Physics</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Williams</td><td>Biology</td></tr>
+<tr><td>4</td><td>Professor</td><td>Baker</td><td>History</td></tr>
+<tr><td>5</td><td>Miss</td><td>Thompson</td><td>English Literature</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>Description</th><th>Credit</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Calculus I</td><td>Introduction to Calculus with focus on limits and derivatives.</td><td>3</td></tr>
+<tr><td>2</td><td>General Physics I</td><td>Fundamental principles of physics including mechanics, heat, sound, light, and electricity.</td><td>4</td></tr>
+<tr><td>3</td><td>Human Biology</td><td>An introduction to human biology covering cellular structure, genetics, physiological systems, and health issues.</td><td>3</td></tr>
+<tr><td>4</td><td>World History II</td><td>Exploration and colonization from 15th century to present day.</td><td>4</td></tr>
+<tr><td>5</td><td>American Literature</td><td>A survey of American literature from its beginnings through the early twentieth century.</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>GradeID</th><th>EnrollmentID</th><th>FinalGrade</th></tr>
+<tr><th></th><th>(&#8594; Enrollments.EnrollmentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>92</td></tr>
+<tr><td>2</td><td>2</td><td>88</td></tr>
+<tr><td>3</td><td>3</td><td>95</td></tr>
+<tr><td>4</td><td>4</td><td>90</td></tr>
+<tr><td>5</td><td>5</td><td>85</td></tr>
+</tbody></table></div>
+
+<div><h2>Programs</h2><table><thead>
+<tr><th>ProgramID</th><th>ProgramName</th><th><span style="color:#990000">Core_Courses</span></th><th><span style="color:#990000">Electives</span></th><th>Requirements</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>Introductory Computer Science, Data Structures, Algorithms, Operating Systems</td><td>Artificial Intelligence, Network Security, Human-Computer Interaction, Software Engineering</td><td>Minimum cumulative GPA of 2.5, Minimum 2 years of college work.</td></tr>
+<tr><td>2</td><td>Mechanical Engineering</td><td>Engineering Mechanics, Materials Science, Thermodynamics, Fluid Mechanics</td><td>Design of Machines, Control Systems, Manufacturing Processes, Robotics</td><td>Minimum cumulative GPA of 2.7, Minimum 2 years of college work.</td></tr>
+<tr><td>3</td><td>Electrical Engineering</td><td>Circuit Analysis, Digital Logic Design, Signals and Systems, Power Electronics</td><td>Communication Systems, Microprocessors, Analog Circuits, Control Systems</td><td>Minimum cumulative GPA of 2.6, Minimum 2 years of college work.</td></tr>
+<tr><td>4</td><td>Civil Engineering</td><td>Structural Analysis, Geotechnical Engineering, Transportation Engineering, Environmental Engineering</td><td>Water Resources, Construction Management, Surveying, Traffic Engineering</td><td>Minimum cumulative GPA of 2.8, Minimum 2 years of college work.</td></tr>
+<tr><td>5</td><td>Business Administration</td><td>Principles of Accounting, Principles of Marketing, Organizational Behavior, Finance</td><td>International Business, Supply Chain Management, Entrepreneurship, Strategic Management</td><td>Minimum cumulative GPA of 2.5, Minimum 2 years of college work.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

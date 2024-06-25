@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Traffic_Camera</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cam1</td><td>Downtown</td></tr>
+<tr><td>2</td><td>Cam2</td><td>Highway Entrance</td></tr>
+<tr><td>3</td><td>Cam3</td><td>Highway Exit</td></tr>
+<tr><td>4</td><td>Cam4</td><td>Main Street</td></tr>
+<tr><td>5</td><td>Cam5</td><td>Side Street</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Function</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">functionName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Speeding</td></tr>
+<tr><td>2</td><td>Accident Detection</td></tr>
+<tr><td>3</td><td>Lane Departure Warning</td></tr>
+<tr><td>4</td><td>Weather Monitoring</td></tr>
+<tr><td>5</td><td>Pedestrian Detection</td></tr>
+</tbody></table></div>
+
+<div><h2>Traffic_Camera_Function</h2><table><thead>
+<tr><th>cameraId</th><th>functionId</th></tr>
+<tr><th>(&#8594; Traffic_Camera.id)</th><th>(&#8594; Function.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Road_Condition</h2><table><thead>
+<tr><th>id</th><th>roadId</th><th>condition</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Camera_Road_Link</h2><table><thead>
+<tr><th>cameraId</th><th>roadId</th></tr>
+<tr><th>(&#8594; Traffic_Camera.id)</th><th>(&#8594; Road_Condition.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

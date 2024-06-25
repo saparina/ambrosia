@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Hospitals</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Western Medical Center</td></tr>
+<tr><td>2</td><td>Eastern General Hospital</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Radiologists</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Department</th><th>HospitalName</th></tr>
+<tr><th></th><th></th><th>(&#8594; Departments.ID)</th><th>(&#8594; Hospitals.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1</td><td><span style="color:#006600">Western Medical Center</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1</td><td>Eastern General Hospital</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>2</td><td><span style="color:#006600">Western Medical Center</span></td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>3</td><td>Eastern General Hospital</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>4</td><td><span style="color:#006600">Western Medical Center</span></td></tr>
+<tr><td>6</td><td>Diana Miller</td><td>5</td><td>Eastern General Hospital</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">UltraSoundTechs</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Department</th><th>HospitalName</th></tr>
+<tr><th></th><th></th><th>(&#8594; Departments.ID)</th><th>(&#8594; Hospitals.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike White</td><td>1</td><td><span style="color:#006600">Western Medical Center</span></td></tr>
+<tr><td>2</td><td>Emily Green</td><td>2</td><td>Eastern General Hospital</td></tr>
+<tr><td>3</td><td>Paul Black</td><td>3</td><td><span style="color:#006600">Western Medical Center</span></td></tr>
+<tr><td>4</td><td>Kelly Red</td><td>4</td><td>Eastern General Hospital</td></tr>
+<tr><td>5</td><td>Robert Blue</td><td>5</td><td><span style="color:#006600">Western Medical Center</span></td></tr>
+<tr><td>6</td><td>Nancy Silver</td><td>6</td><td>Eastern General Hospital</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>ID</th><th>Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Diagnostic Imaging</td></tr>
+<tr><td>2</td><td>Cardiac Care Unit</td></tr>
+<tr><td>3</td><td>Neurology</td></tr>
+<tr><td>4</td><td>Orthopedics</td></tr>
+<tr><td>5</td><td>Pediatrics</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>JobId</th><th>Title</th><th>Description</th><th>StartDate</th><th>EndDate</th><th>Requirements</th><th>Salary</th><th>DepartmentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Departments.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Radiology Technician</td><td>Assist radiologists in performing medical imaging examinations.</td><td>2022-09-01</td><td>2023-08-31</td><td>Bachelor's degree in Radiologic Technology required.</td><td>75000</td><td>1</td></tr>
+<tr><td>2</td><td>Ultrasonographer</td><td>Operate ultrasound equipment to visualize internal organs and structures.</td><td>2022-09-01</td><td>2023-08-31</td><td>Associates degree in Diagnostic Medical Sonography required.</td><td>60000</td><td>2</td></tr>
+<tr><td>3</td><td>Cardiovascular Perfusionist</td><td>Perform cardiopulmonary bypass procedures during open heart surgery.</td><td>2022-09-01</td><td>2023-08-31</td><td>Certified Clinical Perfusionist credential required.</td><td>85000</td><td>3</td></tr>
+<tr><td>4</td><td>Neurosonographer</td><td>Use ultrasound technology to assess neurological conditions.</td><td>2022-09-01</td><td>2023-08-31</td><td>Bachelors Degree in Neurodiagnostics required.</td><td>70000</td><td>4</td></tr>
+<tr><td>5</td><td>Physical Therapist</td><td>Design and implement treatment plans for patients recovering from injuries.</td><td>2022-09-01</td><td>2023-08-31</td><td>Doctor of Physical Therapy degree required.</td><td>80000</td><td>5</td></tr>
+<tr><td>6</td><td>Occupational Therapist</td><td>Help patients develop, recover, and improve skills needed for daily living activities.</td><td>2022-09-01</td><td>2023-08-31</td><td>Master's degree in Occupational Therapy required.</td><td>75000</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ApplicantId</th><th>Fullname</th><th>Email</th><th>PhoneNumber</th><th>Application</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alexander Anderson</td><td>alex@email.com</td><td>+1 555-123-4567</td><td>Attached CV</td></tr>
+<tr><td>2</td><td>Grace Kim</td><td>grace@email.com</td><td>+1 555-987-6543</td><td>Attached CV</td></tr>
+<tr><td>3</td><td>William Lee</td><td>william@email.com</td><td>+1 555-555-5555</td><td>Attached CV</td></tr>
+<tr><td>4</td><td>Samantha Martinez</td><td>samantha@email.com</td><td>+1 555-123-4567</td><td>Attached CV</td></tr>
+<tr><td>5</td><td>Daniel Wilson</td><td>daniel@email.com</td><td>+1 555-987-6543</td><td>Attached CV</td></tr>
+<tr><td>6</td><td>David Harris</td><td>david@email.com</td><td>+1 555-555-5555</td><td>Attached CV</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

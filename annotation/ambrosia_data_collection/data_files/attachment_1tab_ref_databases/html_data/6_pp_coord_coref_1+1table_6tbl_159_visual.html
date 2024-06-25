@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Authors</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">authorName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">John Doe</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Johnson</td></tr>
+<tr><td>4</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>David Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>NewsArticles</h2><table><thead>
+<tr><th>id</th><th>articleTitle</th><th>newsDate</th><th>authorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Article</td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Second Article</td><td>2023-01-02</td><td>2</td></tr>
+<tr><td>3</td><td>Third Article</td><td>2023-01-03</td><td>3</td></tr>
+<tr><td>4</td><td>Fourth Article</td><td>2023-01-04</td><td>4</td></tr>
+<tr><td>5</td><td>Fifth Article</td><td>2023-01-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleSections</h2><table><thead>
+<tr><th>id</th><th>sectionTitle</th><th>content</th><th>articleId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; NewsArticles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction</td><td>This is an introduction...</td><td>1</td></tr>
+<tr><td>2</td><td>Body</td><td>This is the body of the article...</td><td>1</td></tr>
+<tr><td>3</td><td>Conclusion</td><td>This is the conclusion...</td><td>1</td></tr>
+<tr><td>4</td><td>Introduction</td><td>Another introduction...</td><td>2</td></tr>
+<tr><td>5</td><td>Body</td><td>More text about the topic...</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>MediaFiles</h2><table><thead>
+<tr><th>id</th><th>filePath</th><th>articleSectionId</th></tr>
+<tr><th></th><th></th><th>(&#8594; ArticleSections.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>image1.jpg</td><td>1</td></tr>
+<tr><td>2</td><td>video1.mp4</td><td>2</td></tr>
+<tr><td>3</td><td>audio1.mp3</td><td>3</td></tr>
+<tr><td>4</td><td>image2.jpg</td><td>4</td></tr>
+<tr><td>5</td><td>infographic1.png</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Comments</h2><table><thead>
+<tr><th>id</th><th>commentText</th><th>userName</th><th>articleId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; NewsArticles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great read!</td><td>User1</td><td>1</td></tr>
+<tr><td>2</td><td>Interesting perspective.</td><td>User2</td><td>1</td></tr>
+<tr><td>3</td><td>I disagree with this point...</td><td>User3</td><td>2</td></tr>
+<tr><td>4</td><td>Well explained!</td><td>User4</td><td>2</td></tr>
+<tr><td>5</td><td>Could use some improvement.</td><td>User5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">News_Elements</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">elementType</span></span></th><th>value</th><th>articleId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; NewsArticles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Headline</span></td><td>Gopnik's <span style="color:#990000">Headline</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Headline</span></td><td>Different Author's <span style="color:#990000">Headline</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Lede</span></td><td>Gopnik's <span style="color:#990000">Lede</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Lede</span></td><td>Different Author's <span style="color:#990000">Lede</span></td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

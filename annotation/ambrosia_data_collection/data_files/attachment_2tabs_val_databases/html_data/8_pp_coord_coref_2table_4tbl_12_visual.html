@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Box_Office</span></h2><table><thead>
+<tr><th>id</th><th>Movie_Title</th><th>Release_Year</th><th>Genre</th><th>Director</th><th>Country</th><th>Worldwide_Gross</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Avatar</td><td>2009</td><td>Adventure/Fantasy</td><td>James Cameron</td><td><span style="color:#006600">United States</span></td><td>27618387863.64</td></tr>
+<tr><td>2</td><td>The Intouchables</td><td>2011</td><td>Biography/Drama</td><td>Olivier Nakache & Eric Toledano</td><td>France</td><td>42207400.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Critics_Reviews</span></h2><table><thead>
+<tr><th>id</th><th>Movie_Title</th><th>Reviewer_Name</th><th>Rating</th><th>Publication_Date</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Roger Ebert</td><td>3</td><td>2010-07-16</td><td><span style="color:#006600">United States</span></td></tr>
+<tr><td>2</td><td>Blue is the Warmest Color</td><td>Manohla Dargis</td><td>4</td><td>2013-10-18</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>Italy/USA</td></tr>
+<tr><td>2</td><td>Marion Cotillard</td><td>1975-09-30</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>1970-07-30</td><td>England/USA</td></tr>
+<tr><td>2</td><td>Laurent Cantet</td><td>1961-05-03</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Release_Year</th><th>Genre</th><th>Budget</th><th>Runtime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Interstellar</td><td>2014</td><td>Science Fiction</td><td>165000000.0</td><td>169</td></tr>
+<tr><td>2</td><td>Amélie</td><td>2001</td><td>Romantic Comedy</td><td>10000000.0</td><td>122</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Productions</h2><table><thead>
+<tr><th>id</th><th>Production_Company</th><th>Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros.</td><td>2014</td></tr>
+<tr><td>2</td><td>Pathé Films</td><td>2001</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

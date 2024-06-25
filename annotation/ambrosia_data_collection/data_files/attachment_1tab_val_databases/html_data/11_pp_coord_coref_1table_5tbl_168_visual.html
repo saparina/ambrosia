@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Artwork</span></h2><table><thead>
+<tr><th>ID</th><th>Type</th><th>ArtistName</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Contemporary Artwork</span></td><td>Vincent Van Gogh</td><td>5000.0</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Contemporary Artwork</span></td><td>Jackson Pollock</td><td><span style="color:#006600">4500.0</span></td></tr>
+<tr><td>3</td><td><span style="color:#990000">Abstract Artwork</span></td><td>Wassily Kandinsky</td><td>5000.0</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Abstract Artwork</span></td><td>Mark Rothko</td><td><span style="color:#006600">4500.0</span></td></tr>
+<tr><td>5</td><td>Impressionist Artwork</td><td>Claude Monet</td><td>3000.0</td></tr>
+<tr><td>6</td><td>Photorealism Artwork</td><td>Gerhard Richter</td><td>2500.0</td></tr>
+<tr><td>7</td><td>Cubism Artwork</td><td>Pablo Picasso</td><td>3500.0</td></tr>
+<tr><td>8</td><td>Surrealism Artwork</td><td>Salvador Dalí</td><td>4000.0</td></tr>
+<tr><td>9</td><td>Pop Art Artwork</td><td>Andy Warhol</td><td>3000.0</td></tr>
+<tr><td>10</td><td>Expressionism Artwork</td><td>Edvard Munch</td><td>2800.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Comedy</td></tr>
+<tr><td>2</td><td>Action</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Romance</td></tr>
+<tr><td>5</td><td>Thriller</td></tr>
+<tr><td>6</td><td>Fantasy</td></tr>
+<tr><td>7</td><td>Horror</td></tr>
+<tr><td>8</td><td>Adventure</td></tr>
+<tr><td>9</td><td>Animated</td></tr>
+<tr><td>10</td><td>Documentary</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>ReleaseYear</th><th>GenreID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genre.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>1</td></tr>
+<tr><td>2</td><td>Forrest Gump</td><td>1994</td><td>3</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994</td><td>2</td></tr>
+<tr><td>4</td><td>The Godfather</td><td>1972</td><td>4</td></tr>
+<tr><td>5</td><td>Inception</td><td>2010</td><td>5</td></tr>
+<tr><td>6</td><td>Toy Story</td><td>1995</td><td>1</td></tr>
+<tr><td>7</td><td>Avatar</td><td>2009</td><td>3</td></tr>
+<tr><td>8</td><td>Indiana Jones and the Raiders of the Lost Ark</td><td>1981</td><td>2</td></tr>
+<tr><td>9</td><td>Eternal Sunshine of the Spotless Mind</td><td>2004</td><td>4</td></tr>
+<tr><td>10</td><td>Gladiator</td><td>2000</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-07-15</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-11-30</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>1975-03-20</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>1995-06-10</td></tr>
+<tr><td>5</td><td>William</td><td>Black</td><td>1982-12-25</td></tr>
+<tr><td>6</td><td>Alice</td><td>Green</td><td>1998-02-20</td></tr>
+<tr><td>7</td><td>Robert</td><td>Blue</td><td>1985-05-15</td></tr>
+<tr><td>8</td><td>Olivia</td><td>Yellow</td><td>1997-04-10</td></tr>
+<tr><td>9</td><td>David</td><td>Red</td><td>1988-06-25</td></tr>
+<tr><td>10</td><td>Charlie</td><td>Orange</td><td>1992-07-10</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Studio</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros</td></tr>
+<tr><td>2</td><td>Universal Pictures</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>Duration</th><th>Genre</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Genre.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>02:30:06</td><td>Drama</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>02:07:18</td><td>Crime/Action</td></tr>
+<tr><td>3</td><td>Schindler's List</td><td>1993</td><td>03:19:45</td><td>History/Drama</td></tr>
+<tr><td>4</td><td>Fight Club</td><td>1999</td><td>02:18:57</td><td>Drama/Thriller</td></tr>
+<tr><td>5</td><td>Inception</td><td>2010</td><td>02:28:32</td><td>Action/Adventure</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Mystery</span></h2><table><thead>
+<tr><th>id</th><th>MovieID</th><th>StudioID</th><th>Director</th><th>Actors</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th>(&#8594; Studio.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>Frank Darabont</td><td>Tim Robbins, Morgan Freeman</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Quentin Tarantino</td><td>John Travolta, Samuel L. Jackson</td></tr>
+<tr><td>3</td><td>3</td><td><span style="color:#006600">1</span></td><td>Steven Spielberg</td><td>Liam Neeson, Ben Kingsley</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>David Fincher</td><td>Brad Pitt, Edward Norton</td></tr>
+<tr><td>5</td><td>5</td><td><span style="color:#006600">1</span></td><td>Christopher Nolan</td><td>Leonardo DiCaprio, Joseph Gordon-Levitt</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Thriller</span></h2><table><thead>
+<tr><th>id</th><th>MovieID</th><th>StudioID</th><th>Director</th><th>Actors</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th>(&#8594; Studio.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>Frank Darabont</td><td>Tim Robbins, Morgan Freeman</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Quentin Tarantino</td><td>John Travolta, Samuel L. Jackson</td></tr>
+<tr><td>3</td><td>3</td><td><span style="color:#006600">1</span></td><td>Steven Spielberg</td><td>Liam Neeson, Ben Kingsley</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>David Fincher</td><td>Brad Pitt, Edward Norton</td></tr>
+<tr><td>5</td><td>5</td><td><span style="color:#006600">1</span></td><td>Christopher Nolan</td><td>Leonardo DiCaprio, Joseph Gordon-Levitt</td></tr>
+</tbody></table></div>
+
+<div><h2>Action</h2><table><thead>
+<tr><th>id</th><th>MovieID</th><th>StudioID</th><th>Director</th><th>Actors</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th>(&#8594; Studio.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3</td><td>1</td><td>Steven Spielberg</td><td>Liam Neeson, Ben Kingsley</td></tr>
+<tr><td>2</td><td>4</td><td>2</td><td>David Fincher</td><td>Brad Pitt, Edward Norton</td></tr>
+<tr><td>3</td><td>5</td><td>1</td><td>Christopher Nolan</td><td>Leonardo DiCaprio, Joseph Gordon-Levitt</td></tr>
+<tr><td>4</td><td>6</td><td>3</td><td>James Cameron</td><td>Arnold Schwarzenegger, Linda Hamilton</td></tr>
+<tr><td>5</td><td>7</td><td>4</td><td>Robert Ludlum</td><td>Tom Cruise, Vanessa Marcil</td></tr>
+</tbody></table></div>
+
+<div><h2>Comedy</h2><table><thead>
+<tr><th>id</th><th>MovieID</th><th>StudioID</th><th>Director</th><th>Actors</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th>(&#8594; Studio.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>6</td><td>3</td><td>James Cameron</td><td>Arnold Schwarzenegger, Linda Hamilton</td></tr>
+<tr><td>2</td><td>7</td><td>4</td><td>Robert Ludlum</td><td>Tom Cruise, Vanessa Marcil</td></tr>
+<tr><td>3</td><td>8</td><td>1</td><td>Chris Columbus</td><td>Daniel Stern, Billy Crystal</td></tr>
+<tr><td>4</td><td>9</td><td>2</td><td>Penny Marshall</td><td>Tom Hanks, Rosie O'Donnell</td></tr>
+<tr><td>5</td><td>10</td><td>5</td><td>Paul Feig</td><td>Kristen Wiig, Melissa McCarthy</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

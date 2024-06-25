@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>PixarMovies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>director</th><th>box_office</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Toy Story</td><td>2019</td><td>Josh Cooley</td><td>3876123.0</td></tr>
+<tr><td>2</td><td>Finding Nemo</td><td>2003</td><td>Andrew Stanton</td><td>9400480.0</td></tr>
+<tr><td>3</td><td>Inside Out</td><td>2015</td><td>Pete Docter</td><td>8570000.0</td></tr>
+<tr><td>4</td><td>Coco</td><td>2017</td><td>Lee Unkrich</td><td>8070000.0</td></tr>
+<tr><td>5</td><td>Monsters Inc.</td><td>2001</td><td>Peter Docter</td><td>5650000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Awards</h2><table><thead>
+<tr><th>award_id</th><th>award_name</th><th>year_awarded</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Animated Feature Film</td><td>2010</td></tr>
+<tr><td>2</td><td>Best Original Screenplay</td><td>2004</td></tr>
+<tr><td>3</td><td>Best Animated Feature Film</td><td>2016</td></tr>
+<tr><td>4</td><td>Best Picture</td><td>2010</td></tr>
+<tr><td>5</td><td>Best Animated Feature Film</td><td>2018</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">PixarWins</span></h2><table><thead>
+<tr><th>movie_id</th><th>award_id</th></tr>
+<tr><th>(&#8594; PixarMovies.id)</th><th>(&#8594; Awards.award_id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>DreamWorksMovies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>director</th><th>box_office</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Shrek</td><td>2001</td><td>Andrew Adamson</td><td>4270000.0</td></tr>
+<tr><td>2</td><td>Madagascar</td><td>2005</td><td>Eric Darnell</td><td>7910000.0</td></tr>
+<tr><td>3</td><td>Kung Fu Panda</td><td>2008</td><td>Mark Osborne</td><td>6320000.0</td></tr>
+<tr><td>4</td><td>How To Train Your Dragon</td><td>2010</td><td>Dean DeBlois</td><td>4940000.0</td></tr>
+<tr><td>5</td><td>Boss Baby</td><td>2017</td><td>Tom McGrath</td><td>5400000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">DreamWorksWins</span></h2><table><thead>
+<tr><th>movie_id</th><th>award_id</th></tr>
+<tr><th>(&#8594; DreamWorksMovies.id)</th><th>(&#8594; Awards.award_id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>actor_id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td></tr>
+<tr><td>2</td><td>Tim Allen</td></tr>
+<tr><td>3</td><td>John Goodman</td></tr>
+<tr><td>4</td><td>Nick Park</td></tr>
+<tr><td>5</td><td>Randy Newman</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieCast</h2><table><thead>
+<tr><th>movie_id</th><th>actor_id</th><th>character_played</th></tr>
+<tr><th>(&#8594; DreamWorksMovies.id)</th><th>(&#8594; Actors.actor_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Woody</td></tr>
+<tr><td>1</td><td>2</td><td>Buzz Lightyear</td></tr>
+<tr><td>2</td><td>3</td><td>Alex the Lion</td></tr>
+<tr><td>2</td><td>4</td><td>Hiccup Horrendous Haddock III</td></tr>
+<tr><td>3</td><td>5</td><td>Dragon Fang</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

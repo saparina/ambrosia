@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>ProductionHouse</h2><table><thead>
+<tr><th>HouseID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New Horizon Pictures</td></tr>
+<tr><td>2</td><td>Star Studios</td></tr>
+<tr><td>3</td><td>Silver Screen Entertainment</td></tr>
+<tr><td>4</td><td>Moonlight Films</td></tr>
+<tr><td>5</td><td>Sunset Cinema</td></tr>
+</tbody></table></div>
+
+<div><h2>Film</h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>ReleaseYear</th><th>Budget</th><th>BoxOffice</th><th>HouseID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; ProductionHouse.HouseID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>2008</td><td>180000000.0</td><td>1006000000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Avatar</td><td>2009</td><td>300000000.0</td><td>2748000000.0</td><td>2</td></tr>
+<tr><td>3</td><td>Titanic</td><td>1997</td><td>200000000.0</td><td>2202000000.0</td><td>3</td></tr>
+<tr><td>4</td><td>Jurassic Park</td><td>1993</td><td>63000000.0</td><td>914000000.0</td><td>4</td></tr>
+<tr><td>5</td><td>Forrest Gump</td><td>1994</td><td>55000000.0</td><td>677000000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>RoleInFilm</th><th>FilmID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Film.FilmID)</th><th>(&#8594; Film.FilmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Christian</td><td>Bale</td><td>1974-01-30</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Kate</td><td>Winslet</td><td>1975-10-05</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>Samuel</td><td>L. Jackson</td><td>1948-12-21</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>DirectorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>DirectedFilm</th><th>FilmID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Film.FilmID)</th><th>(&#8594; Film.FilmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Nolan</td><td>1970-07-30</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>James</td><td>Cameron</td><td>1954-08-16</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Robert</td><td>Zemeckis</td><td>1951-05-14</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>Steven</td><td>Spielberg</td><td>1946-12-18</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>Ron</td><td>Howard</td><td>1954-03-13</td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Producer</h2><table><thead>
+<tr><th>ProducerID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>ProducedFilm</th><th>FilmID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Film.FilmID)</th><th>(&#8594; Film.FilmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Debra</td><td>Franicich</td><td>1957-07-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Joel</td><td>Silva</td><td>1965-08-05</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Bonnie</td><td>Timmermann</td><td>1963-06-12</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>Michael</td><td>De Luca</td><td>1961-07-13</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>Gary</td><td>Goetzman</td><td>1960-08-16</td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Stunts</span></h2><table><thead>
+<tr><th>StuntID</th><th>Coordinator</th><th>Experience</th><th>SceneID</th><th>FilmID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Film.FilmID)</th><th>(&#8594; Film.FilmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Johnny</td><td><span style="color:#006600">10 years</span></td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>Emily</td><td>5 years</td><td>None</td><td>2</td></tr>
+<tr><td>3</td><td>David</td><td>15 years</td><td>None</td><td>3</td></tr>
+<tr><td>4</td><td>Anna</td><td>20 years</td><td>None</td><td>4</td></tr>
+<tr><td>5</td><td>Mark</td><td>7 years</td><td>None</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FightScenes</span></h2><table><thead>
+<tr><th>SceneID</th><th>Choreographer</th><th>Experience</th><th>SceneDescription</th><th>FilmID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Film.FilmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jackie</td><td><span style="color:#006600">10 years</span></td><td>A fight scene on a train.</td><td>1</td></tr>
+<tr><td>2</td><td>Alex</td><td>5 years</td><td>A fight scene at an airport.</td><td>2</td></tr>
+<tr><td>3</td><td>Luke</td><td>15 years</td><td>A fight scene in a dark alley.</td><td>3</td></tr>
+<tr><td>4</td><td>Helen</td><td>20 years</td><td>A fight scene in a castle.</td><td>4</td></tr>
+<tr><td>5</td><td>Mike</td><td>7 years</td><td>A fight scene on a rooftop.</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

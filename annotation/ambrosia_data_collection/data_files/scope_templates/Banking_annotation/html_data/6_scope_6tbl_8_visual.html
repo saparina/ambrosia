@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Banks</span></h2><table><thead>
+<tr><th>id</th><th>bankName</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank A</td><td>New York</td></tr>
+<tr><td>2</td><td>Bank B</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Bank C</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Bank D</td><td>Miami</td></tr>
+<tr><td>5</td><td>Bank E</td><td>Dallas</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Services</span></h2><table><thead>
+<tr><th>serviceId</th><th><span style="color:#990000">serviceName</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Savings Account</td><td>A basic savings account for daily transactions.</td></tr>
+<tr><td>2</td><td>Checking Account</td><td>An account designed for day-to-day spending.</td></tr>
+<tr><td>3</td><td>Loan</td><td>Financial assistance provided by a lender.</td></tr>
+<tr><td>4</td><td>Credit Card</td><td>A revolving line of credit that allows customers to borrow money.</td></tr>
+<tr><td>5</td><td>Investment</td><td>Professional management of financial assets.</td></tr>
+</tbody></table></div>
+
+<div><h2>Banks_Services</h2><table><thead>
+<tr><th>banksId</th><th>serviceId</th></tr>
+<tr><th>(&#8594; Banks.id)</th><th>(&#8594; Services.serviceId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

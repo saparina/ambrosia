@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td></tr>
+<tr><td>3</td><td>James Cameron</td></tr>
+</tbody></table></div>
+
+<div><h2>Film</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>ProductionCompanyName</th><th>DirectorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Director.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Warner Bros.</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>Miramax Films</td><td>2</td></tr>
+<tr><td>3</td><td>Avatar</td><td>2009</td><td>20th Century Fox</td><td>3</td></tr>
+<tr><td>4</td><td>The Dark Knight</td><td>2008</td><td>Warner Bros.</td><td>1</td></tr>
+<tr><td>5</td><td>Django Unchained</td><td>2012</td><td>The Weinstein Company</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Screenplay</h2><table><thead>
+<tr><th>id</th><th>Content</th><th>FilmId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Film.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A thief who steals corporate secrets...</td><td>1</td></tr>
+<tr><td>2</td><td>Two mobsters kill a rival gangster...</td><td>2</td></tr>
+<tr><td>3</td><td>An exiled former marine...</td><td>3</td></tr>
+<tr><td>4</td><td>A hitman with a bounty on his head...</td><td>4</td></tr>
+<tr><td>5</td><td>A slave freed by a bounty hunter...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>StoryBoard</h2><table><thead>
+<tr><th>id</th><th>Content</th><th>ScreenplayId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Screenplay.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Visual representation of dreams...</td><td>1</td></tr>
+<tr><td>2</td><td>Car chase through LA streets...</td><td>2</td></tr>
+<tr><td>3</td><td>Battle scenes on an alien planet...</td><td>3</td></tr>
+<tr><td>4</td><td>Gunfights in southern states...</td><td>4</td></tr>
+<tr><td>5</td><td>Escape from chains and captivity...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ProductionElement</span></h2><table><thead>
+<tr><th>id</th><th>ElementType</th><th>Value</th><th>CreatorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Director.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#990000">Screenplay</span></td><td>Original idea</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Screenplay</span></td><td>Character development</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Storyboard</span></td><td>Shot composition</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Storyboard</span></td><td>Color scheme</td><td>2</td></tr>
+<tr><td>5</td><td>Costumes</td><td>Period accurate attire</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

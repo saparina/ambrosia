@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Press_Conferences</span></h2><table><thead>
+<tr><th>id</th><th>Date</th><th>Location</th><th>Participant_Type</th><th>Speaker1</th><th>Speaker2</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01</td><td>White House</td><td><span style="color:#006600">Politician</span></td><td>President John Doe</td><td>None</td></tr>
+<tr><td>2</td><td>2023-01-02</td><td>City Hall</td><td>Government Official</td><td>Mayor Jane Smith</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Interviews</span></h2><table><thead>
+<tr><th>id</th><th>Date</th><th>Location</th><th>Interviewer</th><th>Participant_Type</th><th>Topic</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-03</td><td>Studio A</td><td>Journalist Mike Brown</td><td><span style="color:#006600">Politician</span></td><td>Economy</td></tr>
+<tr><td>2</td><td>2023-01-04</td><td>Studio B</td><td>Journalist Susan White</td><td>Business Leader</td><td>Market Trends</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Author</th><th>Publication_Date</th><th>Content</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article Title 1</td><td>Author 1</td><td>2023-01-05</td><td>Content of Article 1</td></tr>
+<tr><td>2</td><td>Article Title 2</td><td>Author 2</td><td>2023-01-06</td><td>Content of Article 2</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Type</th><th>Contact_Info</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Source Name 1</td><td>Newspaper</td><td>source@email.com; +1234567890</td></tr>
+<tr><td>2</td><td>Source Name 2</td><td>Magazine</td><td>source2@email.com; +0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Keywords</h2><table><thead>
+<tr><th>id</th><th>Word</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Keyword 1</td></tr>
+<tr><td>2</td><td>Keyword 2</td></tr>
+<tr><td>3</td><td>Keyword 3</td></tr>
+<tr><td>4</td><td>Keyword 4</td></tr>
+<tr><td>5</td><td>Keyword 5</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Keywords</h2><table><thead>
+<tr><th>article_id</th><th>keyword_id</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; Keywords.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

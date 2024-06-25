@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">EventSpaces</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Event_Space</th><th>Capacity</th><th>Address</th><th>ContactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Ballroom</td><td><span style="color:#990000">Banquet Hall</span></td><td><span style="color:#006600">200</span></td><td>123 Main St</td><td>+1-800-123-4567</td></tr>
+<tr><td>2</td><td>Presidents Suite</td><td><span style="color:#990000">Banquet Hall</span></td><td>150</td><td>456 Elm Street</td><td>+1-800-987-6543</td></tr>
+<tr><td>3</td><td>Meeting Room A</td><td><span style="color:#990000">Conference Room</span></td><td><span style="color:#006600">200</span></td><td>789 Oak Avenue</td><td>+1-800-555-1234</td></tr>
+<tr><td>4</td><td>Boardroom B</td><td><span style="color:#990000">Conference Room</span></td><td>100</td><td>135 Pine Drive</td><td>+1-800-555-5678</td></tr>
+<tr><td>5</td><td>Garden Terrace</td><td>Outdoor Space</td><td>120</td><td>404 Maple Road</td><td>+1-800-111-2222</td></tr>
+<tr><td>6</td><td>Rooftop Lounge</td><td>Indoor/Outdoor Space</td><td>80</td><td>567 Cedar Lane</td><td>+1-800-333-4444</td></tr>
+<tr><td>7</td><td>Wintergarten</td><td><span style="color:#990000">Banquet Hall</span></td><td>250</td><td>987 Palm Boulevard</td><td>+1-800-777-8888</td></tr>
+<tr><td>8</td><td>The Atrium</td><td><span style="color:#990000">Banquet Hall</span></td><td>180</td><td>321 Birch Way</td><td>+1-800-900-1000</td></tr>
+<tr><td>9</td><td>Executive Boardroom</td><td><span style="color:#990000">Conference Room</span></td><td>120</td><td>777 Willow Circle</td><td>+1-800-111-2222</td></tr>
+<tr><td>10</td><td>Pavilion</td><td>Outdoor Space</td><td>150</td><td>123 Spruce Trail</td><td>+1-800-333-4444</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>id</th><th>EventSpaceId</th><th>Date</th><th>Time</th><th>NumberOfGuests</th></tr>
+<tr><th></th><th>(&#8594; EventSpaces.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>15:00</td><td>100</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-02</td><td>19:00</td><td>80</td></tr>
+<tr><td>3</td><td>3</td><td>2023-01-03</td><td>10:00</td><td>120</td></tr>
+<tr><td>4</td><td>4</td><td>2023-01-04</td><td>14:00</td><td>60</td></tr>
+<tr><td>5</td><td>5</td><td>2023-01-05</td><td>18:00</td><td>150</td></tr>
+<tr><td>6</td><td>6</td><td>2023-01-06</td><td>21:00</td><td>100</td></tr>
+<tr><td>7</td><td>7</td><td>2023-01-07</td><td>15:00</td><td>90</td></tr>
+<tr><td>8</td><td>8</td><td>2023-01-08</td><td>19:00</td><td>70</td></tr>
+<tr><td>9</td><td>9</td><td>2023-01-09</td><td>10:00</td><td>80</td></tr>
+<tr><td>10</td><td>10</td><td>2023-01-10</td><td>14:00</td><td>110</td></tr>
+<tr><td>11</td><td>11</td><td>2023-01-11</td><td>18:00</td><td>120</td></tr>
+<tr><td>12</td><td>12</td><td>2023-01-12</td><td>21:00</td><td>130</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johndoe@example.com</td><td>+1-555-555-5555</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janesmith@example.com</td><td>+1-555-555-5556</td></tr>
+<tr><td>3</td><td>Michael</td><td>Williams</td><td>mwilliams@example.com</td><td>+1-555-555-5557</td></tr>
+<tr><td>4</td><td>Emily</td><td>Johnson</td><td>emilyjohnson@example.com</td><td>+1-555-555-5558</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>davidbrown@example.com</td><td>+1-555-555-5559</td></tr>
+<tr><td>6</td><td>Laura</td><td>Taylor</td><td>lataylor@example.com</td><td>+1-555-555-5560</td></tr>
+</tbody></table></div>
+
+<div><h2>Payments</h2><table><thead>
+<tr><th>id</th><th>BookingId</th><th>Amount</th><th>PaymentDate</th><th>CustomerId</th></tr>
+<tr><th></th><th>(&#8594; Bookings.id)</th><th></th><th></th><th>(&#8594; Customers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000</td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>800</td><td>2023-01-02</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1200</td><td>2023-01-03</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>900</td><td>2023-01-04</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>1100</td><td>2023-01-05</td><td>5</td></tr>
+<tr><td>6</td><td>6</td><td>1000</td><td>2023-01-06</td><td>1</td></tr>
+<tr><td>7</td><td>7</td><td>900</td><td>2023-01-07</td><td>2</td></tr>
+<tr><td>8</td><td>8</td><td>1200</td><td>2023-01-08</td><td>3</td></tr>
+<tr><td>9</td><td>9</td><td>1100</td><td>2023-01-09</td><td>4</td></tr>
+<tr><td>10</td><td>10</td><td>1000</td><td>2023-01-10</td><td>5</td></tr>
+<tr><td>11</td><td>11</td><td>1200</td><td>2023-01-11</td><td>6</td></tr>
+<tr><td>12</td><td>12</td><td>1300</td><td>2023-01-12</td><td>7</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

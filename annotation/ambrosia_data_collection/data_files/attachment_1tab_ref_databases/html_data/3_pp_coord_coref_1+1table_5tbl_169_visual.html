@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">EventTypes</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">name</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Tennis Tournament</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Golf Tournament</span></td></tr>
+<tr><td>3</td><td>Concert</td></tr>
+<tr><td>4</td><td>Theater Performance</td></tr>
+<tr><td>5</td><td>Art Exhibition</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>id</th><th>eventTypeId</th><th>racquetSport</th></tr>
+<tr><th></th><th>(&#8594; EventTypes.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>0</td></tr>
+<tr><td>3</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Sponsors</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">sponsorName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Nike</span></td></tr>
+<tr><td>2</td><td>Adidas</td></tr>
+<tr><td>3</td><td>Reebok</td></tr>
+<tr><td>4</td><td>Puma</td></tr>
+<tr><td>5</td><td>Under Armour</td></tr>
+</tbody></table></div>
+
+<div><h2>Sponsorships</h2><table><thead>
+<tr><th>id</th><th>eventId</th><th>sponsorId</th></tr>
+<tr><th></th><th>(&#8594; Events.id)</th><th>(&#8594; Sponsors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>2</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>People</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Player</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Coach</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>Umpire</td></tr>
+<tr><td>4</td><td>Emily</td><td>Green</td><td>Organizer</td></tr>
+<tr><td>5</td><td>David</td><td>White</td><td>Spectator</td></tr>
+</tbody></table></div>
+
+<div><h2>Participants</h2><table><thead>
+<tr><th>id</th><th>personId</th><th>eventId</th></tr>
+<tr><th></th><th>(&#8594; People.id)</th><th>(&#8594; Events.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

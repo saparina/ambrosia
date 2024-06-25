@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Travel_Agencies</span></h2><table><thead>
+<tr><th>AgencyID</th><th>Name</th><th>Address</th><th>ContactNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Explorer Tours</td><td>123 Exploration St.</td><td>+1 9876543210</td></tr>
+<tr><td>2</td><td>World Wanderers</td><td>456 Adventure Blvd.</td><td>+1 9876543211</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Online_Booking_Platforms</span></h2><table><thead>
+<tr><th>PlatformID</th><th>Name</th><th>Website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>GoTrip</td><td>www.gotrip.com</td></tr>
+<tr><td>2</td><td>VacayFinder</td><td>www.vacayfinder.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Tours</span></h2><table><thead>
+<tr><th>TourID</th><th>DestinationName</th><th><span style="color:#006600">Duration</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Machu Picchu</td><td><span style="color:#006600">5</span></td></tr>
+<tr><td>2</td><td>Eiffel Tower</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>CustomerID</th><th>TourID</th><th>TravelAgencyID</th><th>OnlinePlatformID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Tours.TourID)</th><th>(&#8594; Travel_Agencies.AgencyID)</th><th>(&#8594; Online_Booking_Platforms.PlatformID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2022-06-15</td><td>2022-06-20</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2022-07-15</td><td>2022-07-20</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1 9876543212</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+1 9876543213</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

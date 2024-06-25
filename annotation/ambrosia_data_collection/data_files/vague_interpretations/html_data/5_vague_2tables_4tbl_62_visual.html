@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Ceo</span></h2><table><thead>
+<tr><th>ceoID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Board_of_directors</span></h2><table><thead>
+<tr><th>boardID</th><th>directorFirstName</th><th>directorLastName</th><th>ceoID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Ceo.ceoID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Wright</td><td>1</td></tr>
+<tr><td>2</td><td>Robert</td><td>Martinez</td><td>2</td></tr>
+<tr><td>3</td><td>Linda</td><td>Taylor</td><td>3</td></tr>
+<tr><td>4</td><td>Thomas</td><td>Harris</td><td>4</td></tr>
+<tr><td>5</td><td>Laura</td><td>Garcia</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Banks</h2><table><thead>
+<tr><th>bankID</th><th>bankName</th><th>branchNumber</th><th>ceoID</th><th>boardID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Ceo.ceoID)</th><th>(&#8594; Board_of_directors.boardID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank A</td><td>100</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Bank B</td><td>200</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Bank C</td><td>300</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Bank D</td><td>400</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Bank E</td><td>500</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customerID</th><th>customerName</th><th>accountNumber</th><th>bankID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Banks.bankID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Customer A</td><td>987654321</td><td>1</td></tr>
+<tr><td>2</td><td>Customer B</td><td>123456789</td><td>2</td></tr>
+<tr><td>3</td><td>Customer C</td><td>999999999</td><td>3</td></tr>
+<tr><td>4</td><td>Customer D</td><td>888888888</td><td>4</td></tr>
+<tr><td>5</td><td>Customer E</td><td>777777777</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>accountID</th><th>accountType</th><th>balance</th><th>customerID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Customers.customerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Checking</td><td>1000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Savings</td><td>500.0</td><td>2</td></tr>
+<tr><td>3</td><td>Money Market</td><td>2000.0</td><td>3</td></tr>
+<tr><td>4</td><td>CD</td><td>10000.0</td><td>4</td></tr>
+<tr><td>5</td><td>IRA</td><td>5000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>transactionID</th><th>amount</th><th>type</th><th>date</th><th>accountID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.accountID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>500.0</td><td>Deposit</td><td>2024-02-19 14:16:12</td><td>1</td></tr>
+<tr><td>2</td><td>-200.0</td><td>Withdrawal</td><td>2024-02-19 14:16:12</td><td>2</td></tr>
+<tr><td>3</td><td>300.0</td><td>Transfer</td><td>2024-02-19 14:16:12</td><td>3</td></tr>
+<tr><td>4</td><td>-400.0</td><td>Withdrawal</td><td>2024-02-19 14:16:12</td><td>4</td></tr>
+<tr><td>5</td><td>500.0</td><td>Deposit</td><td>2024-02-19 14:16:12</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

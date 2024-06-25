@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Lost_Property</span></h2><table><thead>
+<tr><th>ID</th><th>Item</th><th>FoundAt</th><th>Description</th><th><span style="color:#1430b2">Date</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wristwatch</td><td>Gate A1</td><td>Silver wristwatch with black leather strap</td><td><span style="color:#1430b2">January 5, 2024</span></td></tr>
+<tr><td>2</td><td>Mobile Phone</td><td>Food Court</td><td>iPhone X with a cracked screen</td><td>December 31, 2023</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Customer_Complaints</span></h2><table><thead>
+<tr><th>ComplaintID</th><th>CustomerName</th><th>FlightNumber</th><th>Issue</th><th>Resolution</th><th>Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>AA123</td><td>Late boarding</td><td>Apologized and provided meal voucher</td><td><span style="color:#1430b2">January 5, 2024</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>DL456</td><td>Luggage mishandled</td><td>Delivered luggage within two hours</td><td>December 30, 2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightNumber</th><th>Airline</th><th>DepartureTime</th><th>ArrivalTime</th><th>OriginAirport</th><th>DestinationAirport</th></tr>
+</thead><tbody>
+<tr><td>AA123</td><td>American Airlines</td><td>08:00 AM</td><td>10:00 AM</td><td>LAX</td><td>ORD</td></tr>
+<tr><td>DL456</td><td>Delta Airlines</td><td>09:00 AM</td><td>11:00 AM</td><td>ATL</td><td>MCO</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>Registration</th><th>Model</th><th>Manufacturer</th><th>YearOfManufacture</th><th>SeatCapacity</th></tr>
+</thead><tbody>
+<tr><td>N123AB</td><td>Boeing 737-800</td><td>Boeing</td><td>2010</td><td>160</td></tr>
+<tr><td>N345CD</td><td>Airbus A320</td><td>Airbus</td><td>2012</td><td>180</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>JobTitle</th><th>HireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>Security Officer</td><td>October 1, 2022</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>Pilot</td><td>September 1, 2022</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Communities</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sunnyvale</td><td>California</td></tr>
+<tr><td>2</td><td>Silicon Valley</td><td>California</td></tr>
+<tr><td>3</td><td>Tech City</td><td>Texas</td></tr>
+<tr><td>4</td><td>Software Park</td><td>New York</td></tr>
+<tr><td>5</td><td>Innovation Hub</td><td>Colorado</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Features</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">feature_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Golf Course</td></tr>
+<tr><td>2</td><td>Park</td></tr>
+<tr><td>3</td><td>School</td></tr>
+<tr><td>4</td><td>Library</td></tr>
+<tr><td>5</td><td>Hospital</td></tr>
+</tbody></table></div>
+
+<div><h2>Communities_Features</h2><table><thead>
+<tr><th>community_id</th><th>feature_id</th></tr>
+<tr><th>(&#8594; Communities.id)</th><th>(&#8594; Features.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

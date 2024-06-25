@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>VillageDemographics</h2><table><thead>
+<tr><th>id</th><th>Village</th><th><span style="color:#990000">Divorced_Percentage</span></th><th><span style="color:#990000">Divorced_Count</span></th><th>TotalPopulation</th><th>MaleCount</th><th>FemaleCount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Village1</td><td>0.8</td><td>23</td><td>300</td><td>160</td><td>140</td></tr>
+<tr><td>2</td><td>Village2</td><td>0.7</td><td>20</td><td>290</td><td>150</td><td>140</td></tr>
+</tbody></table></div>
+
+<div><h2>AgeGroup</h2><table><thead>
+<tr><th>id</th><th>AgeRange</th><th>PopulationInThisAgeRange</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>0-18</td><td>120</td></tr>
+<tr><td>2</td><td>19-35</td><td>100</td></tr>
+<tr><td>3</td><td>36-50</td><td>70</td></tr>
+<tr><td>4</td><td>51-65</td><td>50</td></tr>
+<tr><td>5</td><td>65+</td><td>30</td></tr>
+</tbody></table></div>
+
+<div><h2>GenderDemographics</h2><table><thead>
+<tr><th>id</th><th>Gender</th><th>Count</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Male</td><td>200</td></tr>
+<tr><td>2</td><td>Female</td><td>100</td></tr>
+<tr><td>3</td><td>Other</td><td>5</td></tr>
+<tr><td>4</td><td>Nonbinary</td><td>3</td></tr>
+<tr><td>5</td><td>Prefer not to say</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>MaritalStatus</h2><table><thead>
+<tr><th>id</th><th>Status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Single</td></tr>
+<tr><td>2</td><td>Divorced</td></tr>
+<tr><td>3</td><td>Widowed</td></tr>
+<tr><td>4</td><td>Separated</td></tr>
+<tr><td>5</td><td>Married</td></tr>
+</tbody></table></div>
+
+<div><h2>EmploymentStatus</h2><table><thead>
+<tr><th>id</th><th>Status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Unemployed</td></tr>
+<tr><td>2</td><td>Employed full-time</td></tr>
+<tr><td>3</td><td>Employed part-time</td></tr>
+<tr><td>4</td><td>Self-employed</td></tr>
+<tr><td>5</td><td>Retired</td></tr>
+</tbody></table></div>
+
+<div><h2>EducationLevel</h2><table><thead>
+<tr><th>id</th><th>Level</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>No formal education</td></tr>
+<tr><td>2</td><td>Primary school</td></tr>
+<tr><td>3</td><td>Secondary school</td></tr>
+<tr><td>4</td><td>High school diploma</td></tr>
+<tr><td>5</td><td>Some college</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

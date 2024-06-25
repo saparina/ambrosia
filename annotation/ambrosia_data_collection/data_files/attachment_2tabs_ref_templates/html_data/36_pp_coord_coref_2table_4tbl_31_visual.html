@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Civil_Engineers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th><th><span style="color:#1430b2">design_software_expertise</span></th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>7</td><td><span style="color:#1430b2">AutoCAD</span></td><td>80000.0</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>3</td><td>Revit</td><td>65000.0</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>5</td><td><span style="color:#1430b2">AutoCAD</span></td><td>75000.0</td></tr>
+<tr><td>4</td><td>Emily Brown</td><td>9</td><td>SketchUp</td><td>90000.0</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>2</td><td>Rhino</td><td>60000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Design_Softwares</h2><table><thead>
+<tr><th>software_name</th><th>popularity</th></tr>
+</thead><tbody>
+<tr><td>AutoCAD</td><td>90</td></tr>
+<tr><td>Revit</td><td>80</td></tr>
+<tr><td>SketchUp</td><td>70</td></tr>
+<tr><td>Rhino</td><td>50</td></tr>
+<tr><td>ArchiCAD</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Architects</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_in_practice</th><th>design_software_expertise</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lisa Miller</td><td>8</td><td><span style="color:#1430b2">AutoCAD</span></td><td>85000.0</td></tr>
+<tr><td>2</td><td>William Taylor</td><td>5</td><td>Revit</td><td>70000.0</td></tr>
+<tr><td>3</td><td>Olivia Davis</td><td>7</td><td><span style="color:#1430b2">AutoCAD</span></td><td>80000.0</td></tr>
+<tr><td>4</td><td>Samuel Moore</td><td>9</td><td>SketchUp</td><td>95000.0</td></tr>
+<tr><td>5</td><td>Ethan Scott</td><td>3</td><td>Rhino</td><td>65000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Projects</h2><table><thead>
+<tr><th>project_id</th><th>title</th><th>description</th><th>start_date</th><th>end_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bridge Construction</td><td>Building a new bridge across the city river.</td><td>2021-05-01</td><td>2022-07-31</td></tr>
+<tr><td>2</td><td>Office Building</td><td>Constructing a new office building downtown.</td><td>2021-06-01</td><td>2022-10-31</td></tr>
+<tr><td>3</td><td>Residential Complex</td><td>Developing a residential complex on the outskirts of town.</td><td>2021-07-01</td><td>2023-07-31</td></tr>
+<tr><td>4</td><td>Highway Expansion</td><td>Expanding a busy highway to reduce traffic congestion.</td><td>2021-08-01</td><td>2023-12-31</td></tr>
+<tr><td>5</td><td>Shopping Mall</td><td>Building a shopping mall with multiple stores and entertainment options.</td><td>2021-09-01</td><td>2024-01-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Engineer_Projects</h2><table><thead>
+<tr><th>engineer_id</th><th>project_id</th></tr>
+<tr><th>(&#8594; Civil_Engineers.id)</th><th>(&#8594; Projects.project_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Architect_Projects</h2><table><thead>
+<tr><th>architect_id</th><th>project_id</th></tr>
+<tr><th>(&#8594; Architects.id)</th><th>(&#8594; Projects.project_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

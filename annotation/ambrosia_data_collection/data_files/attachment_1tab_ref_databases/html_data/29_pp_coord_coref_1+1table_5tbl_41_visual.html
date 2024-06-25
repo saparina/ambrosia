@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Music_Bands</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Genre</th></tr>
+<tr><th></th><th></th><th>(&#8594; Types.Type)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Jazz Band</td><td>Jazz</td></tr>
+<tr><td>2</td><td>Another Jazz Band</td><td>Jazz</td></tr>
+<tr><td>3</td><td>The Rock Band</td><td>Rock</td></tr>
+<tr><td>4</td><td>Yet Another Rock Band</td><td>Rock</td></tr>
+</tbody></table></div>
+
+<div><h2>Types</h2><table><thead>
+<tr><th>Type</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>Jazz</td><td>A genre of music that originated in African American communities</td></tr>
+<tr><td>Rock</td><td>A genre of popular music that developed in the 1960s</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Founded_Years</span></h2><table><thead>
+<tr><th><span style="color:#006600">Year</span></th><th>Formation</th></tr>
+</thead><tbody>
+<tr><td>1975</td><td>Established in 1975</td></tr>
+<tr><td><span style="color:#006600">1980</span></td><td>Started in <span style="color:#006600">1980</span></td></tr>
+<tr><td>1985</td><td>Incorporated in 1985</td></tr>
+<tr><td>1995</td><td>Created in 1995</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Bands</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000"><span style="color:#990000">Band_Name</span></span></th><th>Genre_ID</th><th>Year_of_Formation</th></tr>
+<tr><th></th><th></th><th>(&#8594; Music_Bands.ID)</th><th>(&#8594; Founded_Years.Year)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Jazz Band</td><td>1</td><td>1985</td></tr>
+<tr><td>2</td><td>Second Jazz Band</td><td>1</td><td>1975</td></tr>
+<tr><td>3</td><td>Third Jazz Band</td><td>1</td><td>1995</td></tr>
+<tr><td>4</td><td>Fourth Jazz Band</td><td>1</td><td><span style="color:#006600">1980</span></td></tr>
+<tr><td>5</td><td>Best Rock Band</td><td>3</td><td>1985</td></tr>
+<tr><td>6</td><td>Greatest Rock Band</td><td>4</td><td>1975</td></tr>
+<tr><td>7</td><td>Amazing Rock Band</td><td>4</td><td>1995</td></tr>
+<tr><td>8</td><td>Superb Rock Band</td><td>4</td><td><span style="color:#006600">1980</span></td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

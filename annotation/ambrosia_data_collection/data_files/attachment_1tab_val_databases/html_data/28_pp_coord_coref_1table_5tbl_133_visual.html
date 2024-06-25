@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>FilmMakers</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1970-06-28</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1985-03-15</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>ReleaseYear</th><th>DirectorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; FilmMakers.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>1</td></tr>
+<tr><td>2</td><td>Inception</td><td>2010</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td></tr>
+<tr><td>2</td><td>Leonardo</td><td>DiCaprio</td><td>1975-11-11</td></tr>
+</tbody></table></div>
+
+<div><h2>Characters</h2><table><thead>
+<tr><th>CharacterID</th><th>CharacterName</th><th>ActorID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Actors.ActorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Andy DuFresne</td><td>1</td></tr>
+<tr><td>2</td><td>Cobb</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieCharacters</h2><table><thead>
+<tr><th>MovieCharacterID</th><th>MovieID</th><th>CharacterID</th></tr>
+<tr><th></th><th>(&#8594; Movies.MovieID)</th><th>(&#8594; Characters.CharacterID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RelaxationFacilities</span></h2><table><thead>
+<tr><th>ID</th><th>Type</th><th>Description</th><th>TreatmentType</th><th>MovieID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Movies.MovieID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Spa</span></td><td>Offers various spa treatments</td><td><span style="color:#006600">Massage Therapy</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Spa</span></td><td>Focuses on relaxation and wellbeing</td><td>Aromatherapy</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Wellness Retreat</span></td><td>Promotes holistic health</td><td><span style="color:#006600">Massage Therapy</span></td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Wellness Retreat</span></td><td>Emphasizes personal growth and development</td><td>Yoga</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Customers</span></h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Organization</th><th>Year_of_establishment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td><span style="color:#990000">Currency Exchange Service</span></td><td><span style="color:#006600">2000</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td><span style="color:#990000">Currency Exchange Service</span></td><td>1998</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td><span style="color:#990000">Commodity Trading Firm</span></td><td><span style="color:#006600">2000</span></td></tr>
+<tr><td>4</td><td>Emma</td><td>White</td><td><span style="color:#990000">Commodity Trading Firm</span></td><td>1996</td></tr>
+</tbody></table></div>
+
+<div><h2>Currencies</h2><table><thead>
+<tr><th>CurrencyID</th><th>Name</th><th>Symbol</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>USD</td><td>$</td></tr>
+<tr><td>2</td><td>EUR</td><td>€</td></tr>
+<tr><td>3</td><td>GBP</td><td>£</td></tr>
+<tr><td>4</td><td>AUD</td><td>$</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

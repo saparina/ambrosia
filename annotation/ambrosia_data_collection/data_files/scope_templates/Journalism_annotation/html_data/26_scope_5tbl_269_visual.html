@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Newspapers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>publication_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily News</td><td>2021-08-01</td></tr>
+<tr><td>2</td><td>The Weekly Times</td><td>2021-09-01</td></tr>
+<tr><td>3</td><td>Daily Post</td><td>2021-10-01</td></tr>
+<tr><td>4</td><td>Weekend Review</td><td>2021-11-01</td></tr>
+<tr><td>5</td><td>Morning Briefing</td><td>2021-12-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Columns</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">column_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Opinion</td></tr>
+<tr><td>2</td><td>Lifestyle</td></tr>
+<tr><td>3</td><td>Politics</td></tr>
+<tr><td>4</td><td>Technology</td></tr>
+<tr><td>5</td><td>Fashion</td></tr>
+</tbody></table></div>
+
+<div><h2>Writers</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>Tom</td><td>Brown</td><td>tom@brown.com</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>alicelgreen@gmail.com</td></tr>
+<tr><td>5</td><td>Robert</td><td>White</td><td>robertwhite@hotmail.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publish_date</th><th>newspaper_id</th><th>writer_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Newspapers.id)</th><th>(&#8594; Writers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>How Technology is Changing Our Lives</td><td>In this article...</td><td>2021-10-03 10:00:00</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>The Impact of Politics on Society</td><td>This piece discusses...</td><td>2021-11-07 16:00:00</td><td>4</td><td>3</td></tr>
+<tr><td>3</td><td>A Look at Fashion Trends</td><td>Here we explore...</td><td>2021-12-12 09:00:00</td><td>1</td><td>4</td></tr>
+<tr><td>4</td><td>Life Hacks from Opinion Columnists</td><td>Some useful tips...</td><td>2021-11-22 14:00:00</td><td>3</td><td>2</td></tr>
+<tr><td>5</td><td>Understanding Modern Technologies</td><td>Exploring the latest tech...</td><td>2021-12-17 08:00:00</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Newspapers_Columns</h2><table><thead>
+<tr><th>newspaper_id</th><th>column_id</th></tr>
+<tr><th>(&#8594; Newspapers.id)</th><th>(&#8594; Columns.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

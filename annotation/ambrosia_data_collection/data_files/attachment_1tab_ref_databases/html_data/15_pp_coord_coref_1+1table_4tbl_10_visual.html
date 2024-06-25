@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2004-02-02</td></tr>
+</tbody></table></div>
+
+<div><h2>Educators</h2><table><thead>
+<tr><th>educatorID</th><th>firstName</th><th>lastName</th><th>subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael</td><td>Johnson</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Emily</td><td>Williams</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>classID</th><th>title</th><th>startDate</th><th>endDate</th><th>EducatorID</th></tr>
+<tr><th>(&#8594; Enrollments.classID)</th><th></th><th></th><th></th><th>(&#8594; Educators.educatorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math Class A</td><td>2023-09-01</td><td>2023-12-20</td><td>1</td></tr>
+<tr><td>2</td><td>English Class B</td><td>2023-09-01</td><td>2023-12-20</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Curriculums</span></h2><table><thead>
+<tr><th>curriculumID</th><th>name</th><th><span style="color:#006600">EducatorID</span></th></tr>
+<tr><th></th><th></th><th>(&#8594; Educators.educatorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grade 6 Mathematics</td><td>1</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>Grade 7 English</td><td><span style="color:#006600">2</span></td></tr>
+</tbody></table></div>
+
+<div><h2>CourseMaterials</h2><table><thead>
+<tr><th>materialID</th><th>title</th><th>url</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algebra Book</td><td>https://example.com/algebra-book</td></tr>
+<tr><td>2</td><td>Grammar Guide</td><td>https://example.com/grammar-guide</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollmentID</th><th>StudentID</th><th>classID</th><th>courseMaterialID</th></tr>
+<tr><th></th><th>(&#8594; Students.studentID)</th><th>(&#8594; Classes.classID)</th><th>(&#8594; CourseMaterials.materialID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Lessons</span></h2><table><thead>
+<tr><th>lessonID</th><th>content</th><th><span style="color:#990000"><span style="color:#990000">educationalMethod</span></span></th><th>curriculumID</th><th>classID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Curriculums.curriculumID)</th><th>(&#8594; Classes.classID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lesson on linear equations</td><td><span style="color:#990000">Online Learning</span></td><td>1</td><td>1</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>Lesson on sentence structure</td><td><span style="color:#990000">Online Learning</span></td><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span></td></tr>
+<tr><td>3</td><td>Introduction to algebra</td><td><span style="color:#990000">Classroom Teaching</span></td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>Vocabulary building</td><td><span style="color:#990000">Classroom Teaching</span></td><td><span style="color:#006600">2</span></td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

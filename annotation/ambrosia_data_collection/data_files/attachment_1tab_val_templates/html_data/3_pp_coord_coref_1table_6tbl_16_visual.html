@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artists</h2><table><thead>
+<tr><th>ArtistID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-06-15</td><td>American</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1991-07-23</td><td>British</td></tr>
+</tbody></table></div>
+
+<div><h2>Concerts</h2><table><thead>
+<tr><th>ConcertID</th><th>VenueID</th><th>Date</th><th>City</th><th>Country</th></tr>
+<tr><th></th><th>(&#8594; Venues.VenueID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-12-31 22:00:00</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>2</td><td>2022-12-30 22:00:00</td><td>Los Angeles</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Venues</h2><table><thead>
+<tr><th>VenueID</th><th>Name</th><th>Address</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Madison Square Garden</td><td>New York</td><td>20000</td></tr>
+<tr><td>2</td><td>Staples Center</td><td>Los Angeles</td><td>19000</td></tr>
+</tbody></table></div>
+
+<div><h2>Tours</h2><table><thead>
+<tr><th>TourID</th><th>ArtistID</th><th>StartDate</th><th>EndDate</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Artists.ArtistID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td><td>2023-01-01</td><td>A world tour promoting their latest album.</td></tr>
+<tr><td>2</td><td>2</td><td>2022-02-01</td><td>2023-02-01</td><td>An acoustic tour featuring their greatest hits.</td></tr>
+</tbody></table></div>
+
+<div><h2>Sponsorships</h2><table><thead>
+<tr><th>SponsorshipID</th><th>ConcertID</th><th>Sponsor</th><th>Amount</th></tr>
+<tr><th></th><th>(&#8594; Concerts.ConcertID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Adidas</td><td>100000</td></tr>
+<tr><td>2</td><td>2</td><td>Puma</td><td>80000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">RacquetsAndTournaments</span></h2><table><thead>
+<tr><th>ID</th><th>EventName</th><th><span style="color:#186e16"><span style="color:#186e16">EventType</span></span></th><th><span style="color:#1430b2">Sponsor</span></th><th>Participants</th><th>PrizeMoney</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Sponsorships.Sponsor)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Summer Grand Slam</td><td><span style="color:#186e16">Tennis Tournament</span></td><td><span style="color:#1430b2">Nike</span></td><td>64</td><td>1000000.0</td></tr>
+<tr><td>2</td><td>Reebok Open</td><td><span style="color:#186e16">Tennis Tournament</span></td><td>Reebok</td><td>64</td><td>1000000.0</td></tr>
+<tr><td>3</td><td><span style="color:#1430b2">Nike</span> Golf Classic</td><td><span style="color:#186e16">Golf Tournament</span></td><td><span style="color:#1430b2">Nike</span></td><td>128</td><td>2000000.0</td></tr>
+<tr><td>4</td><td>Under Armour Invitational</td><td><span style="color:#186e16">Golf Tournament</span></td><td>Under Armour</td><td>128</td><td>2000000.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

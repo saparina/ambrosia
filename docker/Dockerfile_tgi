@@ -1,0 +1,9 @@
+FROM ghcr.io/huggingface/text-generation-inference:latest
+
+RUN pip install inflect mlcroissant sqlparse
+
+COPY src /app/src
+COPY data /app/data
+
+WORKDIR /app
+ENV HUGGINGFACE_HUB_CACHE=/transformers_cache

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Doctors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>specialty</th><th>hospital_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Hospitals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. John Smith</td><td>Cardiology</td><td>1</td></tr>
+<tr><td>2</td><td>Dr. Jane Doe</td><td>General Practice</td><td>2</td></tr>
+<tr><td>3</td><td>Dr. Mike Johnson</td><td>Orthopedics</td><td>3</td></tr>
+<tr><td>4</td><td>Dr. Sarah Brown</td><td>Pediatrics</td><td>4</td></tr>
+<tr><td>5</td><td>Dr. Emily Davis</td><td>Neurology</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Hospitals</h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#990000">city</span></th><th><span style="color:#990000">neighborhood</span></th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>St. Mary's Hospital</td><td>New York City</td><td>Midtown</td><td>+1-212-500-1111</td></tr>
+<tr><td>2</td><td>Mount Sinai Medical Center</td><td>Miami</td><td>Downtown</td><td>+1-305-555-2222</td></tr>
+<tr><td>3</td><td>Memorial Hermann Hospital</td><td>Houston</td><td>Medical Center</td><td>+1-713-244-6000</td></tr>
+<tr><td>4</td><td>Cleveland Clinic</td><td>Cleveland</td><td>Gates Mills Boulevard</td><td>+1-216-444-1000</td></tr>
+<tr><td>5</td><td>Mayo Clinic</td><td>Rochester</td><td>First Street SW</td><td>+1-507-538-0000</td></tr>
+</tbody></table></div>
+
+<div><h2>InsurancePlans</h2><table><thead>
+<tr><th>id</th><th>plan_name</th><th>premium</th><th>coverage_details</th><th>provider_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Providers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Basic Plan</td><td>100</td><td>Covers essential medical services</td><td>1</td></tr>
+<tr><td>2</td><td>Standard Plan</td><td>200</td><td>Includes preventive care and routine checkups</td><td>2</td></tr>
+<tr><td>3</td><td>Deluxe Plan</td><td>300</td><td>Comprehensive coverage with no out-of-pocket costs</td><td>3</td></tr>
+<tr><td>4</td><td>Ultimate Plan</td><td>400</td><td>Most extensive coverage available</td><td>4</td></tr>
+<tr><td>5</td><td>VIP Plan</td><td>500</td><td>Exclusive benefits and concierge service</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Patients</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>birthdate</th><th>insurance_plan_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; InsurancePlans.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-02-02</td><td>2</td></tr>
+<tr><td>3</td><td>Emily</td><td>Brown</td><td>1990-03-03</td><td>3</td></tr>
+<tr><td>4</td><td>Mike</td><td>Johnson</td><td>1995-04-04</td><td>4</td></tr>
+<tr><td>5</td><td>Sarah</td><td>Davis</td><td>2000-05-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Prescriptions</h2><table><thead>
+<tr><th>id</th><th>patient_id</th><th>doctor_id</th><th>medication</th><th>dosage</th><th>quantity</th><th>refillable</th><th>prescription_date</th></tr>
+<tr><th></th><th>(&#8594; Patients.id)</th><th>(&#8594; Doctors.id)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Lisinopril</td><td>5mg</td><td>30</td><td>1</td><td>2021-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Metformin</td><td>500mg</td><td>30</td><td>0</td><td>2021-02-01 11:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Codeine</td><td>60mg</td><td>30</td><td>1</td><td>2021-03-01 12:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Albuterol</td><td>9mg</td><td>30</td><td>1</td><td>2021-04-01 13:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Azathioprine</td><td>50mg</td><td>30</td><td>0</td><td>2021-05-01 14:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

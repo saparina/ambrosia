@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>airportID</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>Heathrow</td><td>London</td><td>UK</td></tr>
+<tr><td>3</td><td>Charles de Gaulle</td><td>Paris</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>airlineID</th><th>name</th><th>headquarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>Chicago</td></tr>
+<tr><td>2</td><td>British Airways</td><td>London</td></tr>
+<tr><td>3</td><td>Air France</td><td>Paris</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flightID</th><th>originAirport</th><th>destinationAirport</th><th>departureTime</th><th>arrivalTime</th><th>airlineID</th></tr>
+<tr><th></th><th>(&#8594; Airports.airportID)</th><th>(&#8594; Airports.airportID)</th><th></th><th></th><th>(&#8594; Airlines.airlineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>2023-01-01 08:00:00</td><td>2023-01-01 10:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>3</td><td>2023-01-01 12:00:00</td><td>2023-01-01 14:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>2023-01-01 16:00:00</td><td>2023-01-01 18:00:00</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>2023-01-01 20:00:00</td><td>2023-01-01 22:00:00</td><td>2</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>2023-01-02 07:00:00</td><td>2023-01-02 09:00:00</td><td>1</td></tr>
+<tr><td>6</td><td>3</td><td>2</td><td>2023-01-02 11:00:00</td><td>2023-01-02 13:00:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passengerID</th><th>firstName</th><th>lastName</th><th>frequentFlyerNumber</th><th>vipStatus</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>12345</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>67890</td><td>0</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>34567</td><td>1</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>23456</td><td>0</td></tr>
+<tr><td>5</td><td>Eve</td><td>Martin</td><td>87654</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Amenities</span></h2><table><thead>
+<tr><th>amenityID</th><th><span style="color:#1430b2">description</span></th><th>availableInFrequentFlyerLounge</th><th>availableInVIPLounge</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Complimentary Wi-Fi</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">Power outlets at every seat</span></td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">VIPLounges</span></h2><table><thead>
+<tr><th>loungeID</th><th>airportID</th><th>amenityID</th><th>capacity</th></tr>
+<tr><th></th><th>(&#8594; Airports.airportID)</th><th>(&#8594; Amenities.amenityID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>40</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">FrequentFlyerLounges</span></h2><table><thead>
+<tr><th>loungeID</th><th>airportID</th><th>amenityID</th><th>capacity</th></tr>
+<tr><th></th><th>(&#8594; Airports.airportID)</th><th>(&#8594; Amenities.amenityID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>250</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>150</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

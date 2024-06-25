@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Building_Name</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Building A</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Building B</td><td>456 Elm St</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">University</span></h2><table><thead>
+<tr><th>id</th><th>university_name</th><th>website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>University of Example</td><td>http://www.example.com/univ</td></tr>
+</tbody></table></div>
+
+<div><h2>Libraries</h2><table><thead>
+<tr><th>id</th><th>library_name</th><th>building_id</th><th>university_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Building_Name.id)</th><th>(&#8594; University.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Library A</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Library B</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Library C</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>Library D</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>student_name</th><th>birthdate</th><th>major</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2000-09-01</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2002-08-15</td><td>Biology</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>2003-10-20</td><td>Mathematics</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>2004-11-25</td><td>English Literature</td></tr>
+<tr><td>5</td><td>David Brown</td><td>2005-12-10</td><td>Physics</td></tr>
+</tbody></table></div>
+
+<div><h2>Buildings</h2><table><thead>
+<tr><th>id</th><th>building_type</th><th>capacity</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Administration Building</td><td>1000</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Engineering Building</td><td>500</td><td>456 Elm St</td></tr>
+</tbody></table></div>
+
+<div><h2>Classrooms</h2><table><thead>
+<tr><th>id</th><th>classroom_number</th><th>building_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Buildings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td><td>1</td></tr>
+<tr><td>2</td><td>102</td><td>1</td></tr>
+<tr><td>3</td><td>103</td><td>1</td></tr>
+<tr><td>4</td><td>104</td><td>2</td></tr>
+<tr><td>5</td><td>105</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

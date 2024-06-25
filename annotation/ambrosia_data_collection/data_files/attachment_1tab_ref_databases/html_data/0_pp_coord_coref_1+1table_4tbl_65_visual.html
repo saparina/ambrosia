@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>ArrivalTime</th><th>AirplaneID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airplanes.AirplaneID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-04-10 10:00</td><td>2023-04-10 12:00</td><td>1</td></tr>
+<tr><td>2</td><td>2023-04-10 14:00</td><td>2023-04-10 16:00</td><td>2</td></tr>
+<tr><td>3</td><td>2023-04-10 18:00</td><td>2023-04-10 20:00</td><td>3</td></tr>
+<tr><td>4</td><td>2023-04-11 10:00</td><td>2023-04-11 12:00</td><td>4</td></tr>
+<tr><td>5</td><td>2023-04-11 14:00</td><td>2023-04-11 16:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerId</th><th>FirstName</th><th>LastName</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>30</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>27</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>29</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>35</td></tr>
+<tr><td>5</td><td>Mary</td><td>Jones</td><td>40</td></tr>
+</tbody></table></div>
+
+<div><h2>Airplanes</h2><table><thead>
+<tr><th>AirplaneID</th><th>Model</th><th>SeatCapacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td><td>180</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>160</td></tr>
+<tr><td>3</td><td>Embraer E190</td><td>100</td></tr>
+<tr><td>4</td><td>Bombardier CRJ700</td><td>70</td></tr>
+<tr><td>5</td><td>De Havilland Canada DHC-8</td><td>37</td></tr>
+</tbody></table></div>
+
+<div><h2>AirportFacilities</h2><table><thead>
+<tr><th>FacilityID</th><th>Name</th><th>Cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal Building</td><td>100000.0</td></tr>
+<tr><td>2</td><td>Parking Lot</td><td>50000.0</td></tr>
+<tr><td>3</td><td>Security Checkpoint</td><td>30000.0</td></tr>
+<tr><td>4</td><td>Restaurant</td><td>20000.0</td></tr>
+<tr><td>5</td><td>Car Rental</td><td>15000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BaggageType</span></h2><table><thead>
+<tr><th>Baggage<span style="color:#990000"><span style="color:#990000">Type</span></span>ID</th><th><span style="color:#990000"><span style="color:#990000">Type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Cabin Baggage</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Checked Baggage</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Baggefees</span></h2><table><thead>
+<tr><th>FeeID</th><th>LuggageTypeID</th><th><span style="color:#006600">Fees</span></th></tr>
+<tr><th></th><th>(&#8594; BaggageType.BaggageTypeID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">25.0</span></td></tr>
+<tr><td>2</td><td>1</td><td>28.0</td></tr>
+<tr><td>3</td><td>2</td><td><span style="color:#006600">25.0</span></td></tr>
+<tr><td>4</td><td>2</td><td>30.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

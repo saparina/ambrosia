@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Participants</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#006600">participant_type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#006600">Politician</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Journalist</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>Expert</td></tr>
+<tr><td>4</td><td>Bob Johnson</td><td><span style="color:#006600">Politician</span></td></tr>
+<tr><td>5</td><td>Charlie White</td><td>Activist</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Press_Conferences</span></h2><table><thead>
+<tr><th>id</th><th>date</th><th>location</th><th>topic</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 10:00:00</td><td>City Hall</td><td>Economy</td></tr>
+<tr><td>2</td><td>2023-01-02 14:00:00</td><td>Government Building</td><td>Healthcare</td></tr>
+<tr><td>3</td><td>2023-01-03 16:00:00</td><td>National Convention Center</td><td>Environment</td></tr>
+<tr><td>4</td><td>2023-01-04 18:00:00</td><td>State House</td><td>Education</td></tr>
+<tr><td>5</td><td>2023-01-05 20:00:00</td><td>Parliament Building</td><td>Foreign Affairs</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Interviews</span></h2><table><thead>
+<tr><th>id</th><th>date</th><th>location</th><th>topic</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-06 10:00:00</td><td>Radio Station A</td><td>Technology</td></tr>
+<tr><td>2</td><td>2023-01-07 14:00:00</td><td>TV Studio B</td><td>Culture</td></tr>
+<tr><td>3</td><td>2023-01-08 16:00:00</td><td>Podcast C</td><td>Politics</td></tr>
+<tr><td>4</td><td>2023-01-09 18:00:00</td><td>Newspaper D</td><td>History</td></tr>
+<tr><td>5</td><td>2023-01-10 20:00:00</td><td>Magazine E</td><td>Science</td></tr>
+</tbody></table></div>
+
+<div><h2>Participant_Details</h2><table><thead>
+<tr><th>id</th><th>participant_id</th><th>details</th></tr>
+<tr><th></th><th>(&#8594; Participants.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>CEO of Tech Company</td></tr>
+<tr><td>2</td><td>2</td><td>Investigative Journalist</td></tr>
+<tr><td>3</td><td>3</td><td>Climate Scientist</td></tr>
+<tr><td>4</td><td>4</td><td>Lawyer</td></tr>
+<tr><td>5</td><td>5</td><td>Historian</td></tr>
+</tbody></table></div>
+
+<div><h2>Conference_Members</h2><table><thead>
+<tr><th>id</th><th>conference_id</th><th>participant_id</th><th>role</th></tr>
+<tr><th></th><th>(&#8594; Press_Conferences.id)</th><th>(&#8594; Participants.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Spokesperson</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Moderator</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Panelist</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Legal Advisor</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Resource Person</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Topics</h2><table><thead>
+<tr><th>id</th><th>article_title</th><th>interview_id</th><th>press_conference_id</th><th>publication_date</th></tr>
+<tr><th></th><th></th><th>(&#8594; Interviews.id)</th><th>(&#8594; Press_Conferences.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Future of AI</td><td>1</td><td>None</td><td>2023-01-11 08:00:00</td></tr>
+<tr><td>2</td><td>Cultural Shifts and Trends</td><td>2</td><td>None</td><td>2023-01-12 09:00:00</td></tr>
+<tr><td>3</td><td>Impact of Politics on Business</td><td>3</td><td>1</td><td>2023-01-13 10:00:00</td></tr>
+<tr><td>4</td><td>Global Warming Solutions</td><td>4</td><td>2</td><td>2023-01-14 11:00:00</td></tr>
+<tr><td>5</td><td>Revolutionary Advancements in Medicine</td><td>5</td><td>3</td><td>2023-01-15 12:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

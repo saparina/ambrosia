@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Streets</h2><table><thead>
+<tr><th>StreetID</th><th><span style="color:#990000">Street_Name</span></th><th><span style="color:#990000">Block_Number</span></th><th>Bus_Stop</th><th>NumLanes</th><th>MaxSpeed</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main St</td><td>123</td><td>1</td><td>2</td><td>30</td></tr>
+<tr><td>2</td><td>Elm St</td><td>456</td><td>0</td><td>1</td><td>25</td></tr>
+<tr><td>3</td><td>Pine Ave</td><td>789</td><td>1</td><td>2</td><td>30</td></tr>
+<tr><td>4</td><td>Maple Dr</td><td>101</td><td>0</td><td>2</td><td>25</td></tr>
+<tr><td>5</td><td>Oak Blvd</td><td>123</td><td>1</td><td>4</td><td>40</td></tr>
+</tbody></table></div>
+
+<div><h2>Accidents</h2><table><thead>
+<tr><th>AccidentID</th><th>Date</th><th>LocationID</th><th>Severity</th></tr>
+<tr><th></th><th></th><th>(&#8594; Streets.StreetID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 10:00:00</td><td>1</td><td>Minor</td></tr>
+<tr><td>2</td><td>2022-02-01 14:30:00</td><td>2</td><td>Moderate</td></tr>
+<tr><td>3</td><td>2022-03-01 19:00:00</td><td>3</td><td>Major</td></tr>
+<tr><td>4</td><td>2022-04-01 23:30:00</td><td>4</td><td>Catastrophic</td></tr>
+<tr><td>5</td><td>2022-05-01 01:00:00</td><td>5</td><td>Fatal</td></tr>
+</tbody></table></div>
+
+<div><h2>Vehicles</h2><table><thead>
+<tr><th>VehicleID</th><th>Type</th><th>LicensePlate</th><th>OwnerID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Users.UserID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Car</td><td>ABC123</td><td>1</td></tr>
+<tr><td>2</td><td>Truck</td><td>DEF456</td><td>2</td></tr>
+<tr><td>3</td><td>SUV</td><td>GHI789</td><td>3</td></tr>
+<tr><td>4</td><td>Motorcycle</td><td>JKL012</td><td>4</td></tr>
+<tr><td>5</td><td>Van</td><td>LMN321</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Users</h2><table><thead>
+<tr><th>UserID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>+1123456789</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td><td>+0987654321</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie.black@example.com</td><td>+1123456789</td></tr>
+</tbody></table></div>
+
+<div><h2>RoadWorks</h2><table><thead>
+<tr><th>WorkID</th><th>StartDate</th><th>EndDate</th><th>StreetID</th><th>WorkType</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Streets.StreetID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-06-01 08:00:00</td><td>2022-06-02 18:00:00</td><td>1</td><td>Repair</td></tr>
+<tr><td>2</td><td>2022-07-01 08:00:00</td><td>2022-07-02 18:00:00</td><td>2</td><td>Resurfacing</td></tr>
+<tr><td>3</td><td>2022-08-01 08:00:00</td><td>2022-08-02 18:00:00</td><td>3</td><td>Construction</td></tr>
+<tr><td>4</td><td>2022-09-01 08:00:00</td><td>2022-09-02 18:00:00</td><td>4</td><td>Drainage</td></tr>
+<tr><td>5</td><td>2022-10-01 08:00:00</td><td>2022-10-02 18:00:00</td><td>5</td><td>Landscaping</td></tr>
+</tbody></table></div>
+
+<div><h2>SpeedingTickets</h2><table><thead>
+<tr><th>TicketID</th><th>IssueDate</th><th>OffenderVehicleID</th><th>FineAmount</th></tr>
+<tr><th></th><th></th><th>(&#8594; Vehicles.VehicleID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-15 12:34:56</td><td>1</td><td>50</td></tr>
+<tr><td>2</td><td>2022-02-15 12:34:56</td><td>2</td><td>100</td></tr>
+<tr><td>3</td><td>2022-03-15 12:34:56</td><td>3</td><td>75</td></tr>
+<tr><td>4</td><td>2022-04-15 12:34:56</td><td>4</td><td>125</td></tr>
+<tr><td>5</td><td>2022-05-15 12:34:56</td><td>5</td><td>150</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

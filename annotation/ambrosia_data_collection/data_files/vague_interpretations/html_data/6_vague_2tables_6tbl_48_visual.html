@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">City</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>country_id</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>1</td></tr>
+<tr><td>2</td><td>London</td><td>2</td></tr>
+<tr><td>3</td><td>Tokyo</td><td>3</td></tr>
+<tr><td>4</td><td>Paris</td><td>4</td></tr>
+<tr><td>5</td><td>Mumbai</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Country</span></h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>USA</td></tr>
+<tr><td>2</td><td>UK</td></tr>
+<tr><td>3</td><td>Japan</td></tr>
+<tr><td>4</td><td>France</td></tr>
+<tr><td>5</td><td>India</td></tr>
+</tbody></table></div>
+
+<div><h2>Banks</h2><table><thead>
+<tr><th>id</th><th>bank_name</th><th>city_id</th><th>country_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; City.id)</th><th>(&#8594; Country.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank A</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Bank B</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Bank C</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Bank D</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Bank E</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>account_number</th><th>balance</th><th>owner_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Banks.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000.0</td><td>1</td></tr>
+<tr><td>2</td><td>800.0</td><td>2</td></tr>
+<tr><td>3</td><td>1200.0</td><td>3</td></tr>
+<tr><td>4</td><td>900.0</td><td>4</td></tr>
+<tr><td>5</td><td>700.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>transaction_id</th><th>date</th><th>amount</th><th>debit_account_id</th><th>credit_account_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Accounts.account_number)</th><th>(&#8594; Accounts.account_number)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2024-02-19 14:18:41</td><td>100.0</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2024-02-19 14:18:41</td><td>200.0</td><td>3</td><td>4</td></tr>
+<tr><td>3</td><td>2024-02-19 14:18:41</td><td>300.0</td><td>5</td><td>1</td></tr>
+<tr><td>4</td><td>2024-02-19 14:18:41</td><td>400.0</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>2024-02-19 14:18:41</td><td>500.0</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>birth_date</th><th>address</th><th>phone</th><th>email</th></tr>
+<tr><th>(&#8594; Accounts.owner_id)</th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td><td>123 Main St</td><td>555-1234</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-06-01</td><td>456 Elm St</td><td>555-5678</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Williams</td><td>1990-12-01</td><td>789 Oak St</td><td>555-9012</td><td>alice.williams@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Johnson</td><td>1988-03-01</td><td>135 Pine St</td><td>555-1314</td><td>bob.johnson@example.com</td></tr>
+<tr><td>5</td><td>Carol</td><td>Brown</td><td>1992-09-01</td><td>246 Maple St</td><td>555-1415</td><td>carol.brown@example.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

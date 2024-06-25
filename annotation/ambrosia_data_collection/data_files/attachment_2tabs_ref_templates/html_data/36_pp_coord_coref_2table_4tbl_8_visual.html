@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Movie</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th><span style="color:#1430b2">genre</span></th><th>releaseYear</th><th>director</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Lord of The Rings: Fellowship of The Ring</td><td><span style="color:#1430b2">Fantasy</span></td><td>2001</td><td>1</td></tr>
+<tr><td>2</td><td>Inception</td><td>Action/Adventure</td><td>2010</td><td>2</td></tr>
+<tr><td>3</td><td>Pan's Labyrinth</td><td><span style="color:#1430b2">Fantasy</span></td><td>2006</td><td>3</td></tr>
+<tr><td>4</td><td>Django Unchained</td><td>Western</td><td>2012</td><td>4</td></tr>
+<tr><td>5</td><td>A Wrinkle In Time</td><td><span style="color:#1430b2">Fantasy</span></td><td>2018</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Tv_Show</span></h2><table><thead>
+<tr><th>id</th><th>showName</th><th>genre</th><th>episodeCount</th><th>network</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Friends</td><td>Comedy</td><td>236</td><td>NBC</td></tr>
+<tr><td>2</td><td>Breaking Bad</td><td>Drama</td><td>62</td><td>AMC</td></tr>
+<tr><td>3</td><td>Game Of Thrones</td><td><span style="color:#1430b2">Fantasy</span></td><td>73</td><td>HBO</td></tr>
+<tr><td>4</td><td>Stranger Things</td><td>Science Fiction</td><td>47</td><td>Netflix</td></tr>
+<tr><td>5</td><td>Black Mirror</td><td>Anthology</td><td>22</td><td>Channel 4</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthDate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-06-27</td><td>American</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1985-11-30</td><td>British</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>1990-02-14</td><td>Canadian</td></tr>
+<tr><td>4</td><td>Robert White</td><td>1975-04-05</td><td>Australian</td></tr>
+<tr><td>5</td><td>Emma Green</td><td>1992-07-09</td><td>New Zealander</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthDate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Peter Jackson</td><td>1961-10-31</td><td>New Zealand</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td><td>1970-07-30</td><td>English</td></tr>
+<tr><td>3</td><td>Guillermo del Toro</td><td>1964-09-09</td><td>Spanish</td></tr>
+<tr><td>4</td><td>Quentin Tarantino</td><td>1963-03-27</td><td>American</td></tr>
+<tr><td>5</td><td>Ava DuVernay</td><td>1978-08-24</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>movieId</th><th>actorId</th><th>roleType</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lead</td></tr>
+<tr><td>2</td><td>2</td><td>Supporting</td></tr>
+<tr><td>3</td><td>3</td><td>Protagonist</td></tr>
+<tr><td>4</td><td>4</td><td>Antagonist</td></tr>
+<tr><td>5</td><td>5</td><td>Recurring</td></tr>
+</tbody></table></div>
+
+<div><h2>Directed</h2><table><thead>
+<tr><th>movieId</th><th>directorId</th><th>year</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Director.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2001</td></tr>
+<tr><td>2</td><td>2</td><td>2010</td></tr>
+<tr><td>3</td><td>3</td><td>2006</td></tr>
+<tr><td>4</td><td>4</td><td>2012</td></tr>
+<tr><td>5</td><td>5</td><td>2018</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Research_Institutes</span></h2><table><thead>
+<tr><th>InstituteID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Institute1</td><td>New York</td></tr>
+<tr><td>2</td><td>Institute2</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Institute3</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Institute4</td><td>Houston</td></tr>
+<tr><td>5</td><td>Institute5</td><td>Philadelphia</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Projects</span></h2><table><thead>
+<tr><th>ProjectID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cancer_Research</td></tr>
+<tr><td>2</td><td>Cardiovascular_Disease_Research</td></tr>
+<tr><td>3</td><td>Mental_Health_Research</td></tr>
+<tr><td>4</td><td>Infectious_Diseases_Research</td></tr>
+<tr><td>5</td><td>Diabetes_Research</td></tr>
+</tbody></table></div>
+
+<div><h2>Research_Institutes_Projects</h2><table><thead>
+<tr><th>InstituteID</th><th>ProjectID</th></tr>
+<tr><th>(&#8594; Research_Institutes.InstituteID)</th><th>(&#8594; Projects.ProjectID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>AccountTypes</h2><table><thead>
+<tr><th>TypeID</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Checking</td></tr>
+<tr><td>2</td><td>Savings</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerID</th><th>AccountTypeID</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; AccountTypes.TypeID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>500.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Products</span></h2><table><thead>
+<tr><th>ProductID</th><th>Name</th><th>Description</th><th>ExitFee</th><th>Category</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; ExchangeRates.RateId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Exchange-Traded Product</span></td><td>This product tracks an index.</td><td><span style="color:#006600">0.01</span></td><td>ETP</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Exchange-Traded Product</span></td><td>Another ETP tracking a different index.</td><td>0.02</td><td>ETP</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Unit Investment Trust</span></td><td>A trust investing in various assets.</td><td><span style="color:#006600">0.01</span></td><td>UIT</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Unit Investment Trust</span></td><td>Another UIT with different asset allocation.</td><td>0.02</td><td>UIT</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountNumber</th><th>ProductID</th><th>Quantity</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th>(&#8594; Products.ProductID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>10</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>5</td></tr>
+<tr><td>3</td><td>1</td><td>2</td><td>20</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>ExchangeRates</h2><table><thead>
+<tr><th>RateId</th><th>Currency</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>USD</td></tr>
+<tr><td>2</td><td>EUR</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

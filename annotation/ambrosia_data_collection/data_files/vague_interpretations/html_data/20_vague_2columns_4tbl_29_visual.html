@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Horror</td></tr>
+<tr><td>5</td><td>Romance</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Jackson</td></tr>
+<tr><td>4</td><td>Emma</td><td>Watson</td></tr>
+<tr><td>5</td><td>Chris</td><td>Evans</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td></tr>
+<tr><td>2</td><td>Scarlett</td><td>Johansson</td></tr>
+<tr><td>3</td><td>Leonardo</td><td>DiCaprio</td></tr>
+<tr><td>4</td><td>Brad</td><td>Pitt</td></tr>
+<tr><td>5</td><td>Angelina</td><td>Jolie</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseDate</th><th>genreId</th><th>directorId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genre.id)</th><th>(&#8594; Director.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010-07-16</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Interstellar</td><td>2014-11-07</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>The Dark Knight</td><td>2008-07-18</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>Avengers: Endgame</td><td>2019-04-26</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>Titanic</td><td>1997-12-19</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Rating</h2><table><thead>
+<tr><th>movieId</th><th><span style="color:#990000">ageRating</span></th><th><span style="color:#990000">criticalRating</span></th><th>tvShow</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>18</td><td>9.0</td><td>0</td></tr>
+<tr><td>2</td><td>12</td><td>8.5</td><td>0</td></tr>
+<tr><td>3</td><td>16</td><td>7.5</td><td>0</td></tr>
+<tr><td>4</td><td>12</td><td>8.0</td><td>0</td></tr>
+<tr><td>5</td><td>15</td><td>7.0</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Review</h2><table><thead>
+<tr><th>id</th><th>reviewText</th><th>rating</th><th>actorId</th><th>movieId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Actor.id)</th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great acting and a thrilling plot.</td><td>5</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>A masterpiece of cinema.</td><td>5</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Amazing visuals but weak storyline.</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>An emotional rollercoaster.</td><td>5</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Too long and not as good as expected.</td><td>2</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

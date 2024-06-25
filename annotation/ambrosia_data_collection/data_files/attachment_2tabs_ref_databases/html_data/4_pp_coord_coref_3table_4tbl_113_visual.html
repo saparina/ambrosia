@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>courseID</th><th>title</th><th>professor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>Dr. John Smith</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>Professor Jane Doe</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollmentID</th><th>studentID</th><th>courseID</th></tr>
+<tr><th></th><th>(&#8594; Students.studentID)</th><th>(&#8594; Courses.courseID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Books</h2><table><thead>
+<tr><th>bookID</th><th>title</th><th>genre</th><th>ISBN</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Great Gatsby</td><td>Fiction</td><td>9780743273565</td></tr>
+<tr><td>2</td><td>To Kill a Mockingbird</td><td>Fiction</td><td>9780060935467</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Ratings</span></h2><table><thead>
+<tr><th>ratingID</th><th><span style="color:#006600">bookID</span></th><th>ratingText</th></tr>
+<tr><th></th><th>(&#8594; Books.bookID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>3.5</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span></td><td>4.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FictionBooks</span></h2><table><thead>
+<tr><th>bookID</th><th>author</th><th>publicationYear</th></tr>
+<tr><th>(&#8594; Books.bookID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>F. Scott Fitzgerald</td><td>1925</td></tr>
+<tr><td>2</td><td>Harper Lee</td><td>1960</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">NonFictionBooks</span></h2><table><thead>
+<tr><th>bookID</th><th>topic</th><th>publisher</th></tr>
+<tr><th>(&#8594; Books.bookID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>History of Computers</td><td>Pearson Education</td></tr>
+<tr><td>2</td><td>Mathematics for Engineers</td><td>McGraw-Hill Education</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">ApartmentTypes</span></h2><table><thead>
+<tr><th>ID</th><th>TypeName</th><th>Commercial_Appliances</th><th>Apartments</th><th>PricePerNight</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Luxury Suite</td><td><span style="color:#990000">Espresso Machine</span></td><td><span style="color:#006600">High-end Residential</span></td><td>200.0</td></tr>
+<tr><td>2</td><td>Standard Room</td><td><span style="color:#990000">Espresso Machine</span></td><td>Not High-end Residential</td><td>150.0</td></tr>
+<tr><td>3</td><td>Deluxe Studio</td><td><span style="color:#990000">Blender</span></td><td><span style="color:#006600">High-end Residential</span></td><td>180.0</td></tr>
+<tr><td>4</td><td>Economy Room</td><td><span style="color:#990000">Blender</span></td><td>Not High-end Residential</td><td>120.0</td></tr>
+<tr><td>5</td><td>Penthouse</td><td>Microwave Oven</td><td><span style="color:#006600">High-end Residential</span></td><td>300.0</td></tr>
+<tr><td>6</td><td>Budget Room</td><td>Toaster</td><td>Not High-end Residential</td><td>90.0</td></tr>
+<tr><td>7</td><td>Villa</td><td>Dishwasher</td><td><span style="color:#006600">High-end Residential</span></td><td>400.0</td></tr>
+<tr><td>8</td><td>Studio</td><td>Air Fryer</td><td>Not High-end Residential</td><td>110.0</td></tr>
+<tr><td>9</td><td>Mansion</td><td>Oven</td><td><span style="color:#006600">High-end Residential</span></td><td>500.0</td></tr>
+<tr><td>10</td><td>Loft</td><td>Coffee Maker</td><td>Not High-end Residential</td><td>130.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th>ApartmentTypeID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; ApartmentTypes.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td><td>123-456-7890</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td><td>098-765-4321</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>alicewonderland@example.com</td><td>555-123-4567</td><td>3</td></tr>
+<tr><td>4</td><td>Bob</td><td>Builder</td><td>bobbuilder@example.com</td><td>555-987-6543</td><td>4</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Sheen</td><td>charliesheen@example.com</td><td>555-111-2222</td><td>5</td></tr>
+<tr><td>6</td><td>David</td><td>Beckham</td><td>davidbeckham@example.com</td><td>555-333-4444</td><td>6</td></tr>
+<tr><td>7</td><td>Emma</td><td>Watson</td><td>emmawatson@example.com</td><td>555-555-5555</td><td>7</td></tr>
+<tr><td>8</td><td>George</td><td>Clooney</td><td>georgeclooney@example.com</td><td>555-777-8888</td><td>8</td></tr>
+<tr><td>9</td><td>Helena</td><td>Bonham Carter</td><td>helanabonhamcarter@example.com</td><td>555-999-0000</td><td>9</td></tr>
+<tr><td>10</td><td>Igor</td><td>Stravinsky</td><td>igorstravinsky@example.com</td><td>555-666-1234</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>ID</th><th>CheckInDate</th><th>CheckOutDate</th><th>NumberOfGuests</th><th>TotalAmount</th><th>GuestID</th><th>ApartmentTypeID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Guests.ID)</th><th>(&#8594; ApartmentTypes.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-10-01</td><td>2021-10-05</td><td>2</td><td>600.0</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2021-10-06</td><td>2021-10-10</td><td>3</td><td>900.0</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2021-10-11</td><td>2021-10-15</td><td>4</td><td>1200.0</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2021-10-16</td><td>2021-10-20</td><td>5</td><td>1500.0</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2021-10-21</td><td>2021-10-25</td><td>6</td><td>1800.0</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>2021-10-26</td><td>2021-10-30</td><td>7</td><td>2100.0</td><td>6</td><td>6</td></tr>
+<tr><td>7</td><td>2021-10-31</td><td>2021-11-04</td><td>8</td><td>2400.0</td><td>7</td><td>7</td></tr>
+<tr><td>8</td><td>2021-11-05</td><td>2021-11-09</td><td>9</td><td>2700.0</td><td>8</td><td>8</td></tr>
+<tr><td>9</td><td>2021-11-10</td><td>2021-11-14</td><td>10</td><td>3000.0</td><td>9</td><td>9</td></tr>
+<tr><td>10</td><td>2021-11-15</td><td>2021-11-19</td><td>11</td><td>3300.0</td><td>10</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ID</th><th>Rating</th><th>Comment</th><th>ReviewedOn</th><th>GuestID</th><th>BookingID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Guests.ID)</th><th>(&#8594; Bookings.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Great experience!</td><td>2021-10-03</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>Good stay, but could have been better.</td><td>2021-10-04</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>The apartment was clean, but not spacious enough.</td><td>2021-10-05</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>5</td><td>Fantastic view of the city!</td><td>2021-10-06</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>We enjoyed our stay at this beautiful place.</td><td>2021-10-07</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>5</td><td>Amazing amenities!</td><td>2021-10-08</td><td>6</td><td>6</td></tr>
+<tr><td>7</td><td>4</td><td>Quiet location, great for relaxation.</td><td>2021-10-09</td><td>7</td><td>7</td></tr>
+<tr><td>8</td><td>3</td><td>Could use some updates.</td><td>2021-10-10</td><td>8</td><td>8</td></tr>
+<tr><td>9</td><td>5</td><td>Everything was perfect!</td><td>2021-10-11</td><td>9</td><td>9</td></tr>
+<tr><td>10</td><td>4</td><td>Would definitely come back.</td><td>2021-10-12</td><td>10</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>MaintenanceRequests</h2><table><thead>
+<tr><th>ID</th><th>RequestDate</th><th>Description</th><th>Status</th><th>ApartmentTypeID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; ApartmentTypes.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-10-01</td><td>Leakage in bathroom</td><td>Pending</td><td>1</td></tr>
+<tr><td>2</td><td>2021-10-02</td><td>Broken air conditioner</td><td>Completed</td><td>2</td></tr>
+<tr><td>3</td><td>2021-10-03</td><td>Damaged kitchen appliance</td><td>Pending</td><td>3</td></tr>
+<tr><td>4</td><td>2021-10-04</td><td>Malfunctioning elevator</td><td>Completed</td><td>4</td></tr>
+<tr><td>5</td><td>2021-10-05</td><td>Issue with WiFi connection</td><td>Pending</td><td>5</td></tr>
+<tr><td>6</td><td>2021-10-06</td><td>Dirty carpets</td><td>Completed</td><td>6</td></tr>
+<tr><td>7</td><td>2021-10-07</td><td>Noisy neighbors</td><td>Pending</td><td>7</td></tr>
+<tr><td>8</td><td>2021-10-08</td><td>Missing toiletries</td><td>Completed</td><td>8</td></tr>
+<tr><td>9</td><td>2021-10-09</td><td>Non-working refrigerator</td><td>Pending</td><td>9</td></tr>
+<tr><td>10</td><td>2021-10-10</td><td>Cracked window pane</td><td>Completed</td><td>10</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

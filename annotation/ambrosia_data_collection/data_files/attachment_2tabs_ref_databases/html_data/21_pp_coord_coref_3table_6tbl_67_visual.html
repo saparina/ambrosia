@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1987-06-20</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1990-05-25</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>1975-11-10</td><td>alicemadness@example.com</td></tr>
+<tr><td>4</td><td>Charlie</td><td>Sheen</td><td>1978-02-28</td><td>charliesheen@example.com</td></tr>
+<tr><td>5</td><td>Betty</td><td>White</td><td>1922-01-17</td><td>bettywhite@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Mortgages</span></h2><table><thead>
+<tr><th>MortgageID</th><th>RepaymentPeriod</th><th>InterestRate</th><th>LoanAmount</th><th>StartDate</th><th>EndDate</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Customers.CustomerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>30 years</td><td>0.03</td><td>300000.0</td><td>2023-01-01</td><td>2053-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>25 years</td><td>0.035</td><td>250000.0</td><td>2022-05-01</td><td>2047-05-01</td><td>2</td></tr>
+<tr><td>3</td><td>30 years</td><td>0.025</td><td>350000.0</td><td>2019-08-01</td><td>2049-08-01</td><td>3</td></tr>
+<tr><td>4</td><td>25 years</td><td>0.04</td><td>200000.0</td><td>2020-12-01</td><td>2045-12-01</td><td>4</td></tr>
+<tr><td>5</td><td>30 years</td><td>0.02</td><td>320000.0</td><td>2018-03-01</td><td>2048-03-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">HomeEquityLoans</span></h2><table><thead>
+<tr><th>EquityLoanID</th><th>RepaymentPeriod</th><th>InterestRate</th><th>LoanAmount</th><th>StartDate</th><th>EndDate</th><th>CustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Customers.CustomerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>30 years</td><td>0.03</td><td>100000.0</td><td>2022-02-01</td><td>2052-02-01</td><td>1</td></tr>
+<tr><td>2</td><td>25 years</td><td>0.035</td><td>150000.0</td><td>2023-06-01</td><td>2048-06-01</td><td>2</td></tr>
+<tr><td>3</td><td>30 years</td><td>0.025</td><td>180000.0</td><td>2019-09-01</td><td>2049-09-01</td><td>3</td></tr>
+<tr><td>4</td><td>25 years</td><td>0.04</td><td>120000.0</td><td>2020-12-01</td><td>2045-12-01</td><td>4</td></tr>
+<tr><td>5</td><td>30 years</td><td>0.02</td><td>160000.0</td><td>2018-03-01</td><td>2048-03-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Repayments</span></h2><table><thead>
+<tr><th>RepaymentID</th><th>AmountPaid</th><th>PaymentDueDate</th><th>PaymentReceivedDate</th><th>MortgageID</th><th><span style="color:#006600">EquityLoanID</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Mortgages.MortgageID)</th><th>(&#8594; HomeEquityLoans.EquityLoanID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1500.0</td><td>2023-01-15</td><td>2023-01-16</td><td>1</td><td>None</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>1600.0</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span>3-01-15</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span>3-01-16</td><td><span style="color:#006600">2</span></td><td>None</td></tr>
+<tr><td>3</td><td>1400.0</td><td>2023-01-15</td><td>2023-01-16</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>1500.0</td><td>2023-01-15</td><td>2023-01-16</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>1400.0</td><td>2023-01-15</td><td>2023-01-16</td><td>5</td><td>None</td></tr>
+<tr><td>6</td><td>1300.0</td><td>2023-01-15</td><td>2023-01-16</td><td>1</td><td>1</td></tr>
+<tr><td>7</td><td>1400.0</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span>3-01-15</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span>3-01-16</td><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span></td></tr>
+<tr><td>8</td><td>1300.0</td><td>2023-01-15</td><td>2023-01-16</td><td>3</td><td>3</td></tr>
+<tr><td>9</td><td>1400.0</td><td>2023-01-15</td><td>2023-01-16</td><td>4</td><td>4</td></tr>
+<tr><td>10</td><td>1300.0</td><td>2023-01-15</td><td>2023-01-16</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

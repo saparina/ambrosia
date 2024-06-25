@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>GradeLevel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>16</td><td>10th</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>17</td><td>11th</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>15</td><td>9th</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>18</td><td>12th</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Green</td><td>16</td><td>10th</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>SubjectTaught</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mrs.</td><td>Davis</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Mr.</td><td>Martin</td><td>Physics</td></tr>
+<tr><td>3</td><td>Ms.</td><td>Hall</td><td>Biology</td></tr>
+<tr><td>4</td><td>Dr.</td><td>Garcia</td><td>English Literature</td></tr>
+<tr><td>5</td><td>Prof.</td><td>Lee</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Clubs</span></h2><table><thead>
+<tr><th>ClubID</th><th>Name</th><th>Description</th><th>AdvisorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math Club</td><td>A club for math enthusiasts.</td><td>1</td></tr>
+<tr><td>2</td><td>Physics Club</td><td>Explore the wonders of physics.</td><td>2</td></tr>
+<tr><td>3</td><td>Book Club</td><td>Discuss books and share ideas.</td><td>3</td></tr>
+<tr><td>4</td><td>Environmental Club</td><td>Promote environmental awareness.</td><td>4</td></tr>
+<tr><td>5</td><td>Chess Club</td><td>Improve strategic thinking through chess.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">LeadershipPrograms</span></h2><table><thead>
+<tr><th>ProgramID</th><th>Name</th><th>Description</th><th>CoordinatorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Peer Mentoring</td><td>Help incoming students adjust to high school.</td><td>1</td></tr>
+<tr><td>2</td><td>School Newspaper</td><td>Write articles and manage production.</td><td>2</td></tr>
+<tr><td>3</td><td>Robotics Team</td><td>Design and build robots.</td><td>3</td></tr>
+<tr><td>4</td><td>Debate Team</td><td>Enhance public speaking skills.</td><td>4</td></tr>
+<tr><td>5</td><td>Art Club</td><td>Express creativity through various art forms.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">ParticipatesIn</span></h2><table><thead>
+<tr><th><span style="color:#006600">ParticipantID</span></th><th>ClubID</th><th>ProgramID</th><th>NumOfParticipants</th></tr>
+<tr><th>(&#8594; Students.StudentID)</th><th>(&#8594; Clubs.ClubID)</th><th>(&#8594; LeadershipPrograms.ProgramID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td><td>30</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span></td><td>1</td><td><span style="color:#006600">2</span>5</td></tr>
+<tr><td>3</td><td>3</td><td>None</td><td>20</td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#006600">2</span></td><td>15</td></tr>
+<tr><td>5</td><td>5</td><td>None</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>GradeID</th><th>CourseID</th><th>StudentID</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Teachers.TeacherID)</th><th>(&#8594; Students.StudentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>B+</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>A-</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>B</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>A</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

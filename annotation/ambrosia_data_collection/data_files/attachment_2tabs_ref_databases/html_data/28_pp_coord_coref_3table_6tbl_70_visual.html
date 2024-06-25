@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Treatment_Types</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">TypeName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Massage Therapy</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Yoga Retreat</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Spa</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>Website</th></tr>
+<tr><th>(&#8594; Treatment_Types.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Aromatherapy Heaven</td><td>123 Main St</td><td>555-1234</td><td>http://www.aromatherapyheaven.com</td></tr>
+<tr><td>2</td><td>Relaxation Oasis</td><td>456 Elm St</td><td>555-5678</td><td>http://www.relaxationoasis.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Wellness_Retreat</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>Website</th></tr>
+<tr><th>(&#8594; Treatment_Types.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Zen Mountain</td><td>789 Pine St</td><td>555-9012</td><td>http://www.zenmountain.com</td></tr>
+<tr><td>2</td><td>Eco Forest Getaway</td><td>321 Oak St</td><td>555-1357</td><td>http://www.ecoforestgetaway.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Clients</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>1985-05-15</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>1990-07-23</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>ID</th><th>ClientId</th><th>ServiceType</th><th>DateBooked</th><th>TimeSlot</th><th>TotalCost</th><th>PaymentMethod</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Clients.ID)</th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Massage</td><td>2021-08-10</td><td>14:00</td><td>100</td><td>Credit Card</td><td>Confirmed</td></tr>
+<tr><td>2</td><td>1</td><td>Yoga</td><td>2021-08-12</td><td>10:00</td><td>80</td><td>PayPal</td><td>Pending</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ID</th><th>ClientId</th><th>ServiceType</th><th>Rating</th><th>ReviewText</th><th>SubmittedOn</th></tr>
+<tr><th></th><th>(&#8594; Clients.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Massage</td><td>5</td><td>Great service! Very relaxing.</td><td>2021-08-11</td></tr>
+<tr><td>2</td><td>1</td><td>Yoga</td><td>4</td><td>Good experience but could have been better organized.</td><td>2021-08-13</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

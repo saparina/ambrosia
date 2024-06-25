@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Stringers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>Phone_Number</th><th><span style="color:#1430b2">Payment</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td><td>123-456-7890</td><td><span style="color:#1430b2">2000.0</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td><td>098-765-4321</td><td>3000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Editors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>Phone_Number</th><th>Payment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>alice.johnson@example.com</td><td>555-123-4567</td><td><span style="color:#1430b2">2000.0</span></td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>bob.brown@example.com</td><td>555-456-7890</td><td>3000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Content</th><th>EditorID</th><th>PublishDate</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Editors.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Impact of Climate Change on Agriculture</td><td>A detailed analysis...</td><td>1</td><td>2024-03-13 18:05:57</td></tr>
+<tr><td>2</td><td>The Rise of Renewable Energy Sources</td><td>An overview of...</td><td>2</td><td>2024-03-13 18:05:57</td></tr>
+</tbody></table></div>
+
+<div><h2>Readerships</h2><table><thead>
+<tr><th>ID</th><th>ArticleID</th><th>SubscriptionType</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Articles.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Monthly</td><td>2022-01-01</td><td>2022-01-31</td></tr>
+<tr><td>2</td><td>2</td><td>Yearly</td><td>2022-01-01</td><td>2023-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Advertisements</h2><table><thead>
+<tr><th>ID</th><th>ArticleID</th><th>AdTitle</th><th>AdDescription</th><th>AdImage</th><th>DisplayOrder</th></tr>
+<tr><th></th><th>(&#8594; Articles.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Eco-Friendly Products</td><td>Discover our range of eco-friendly products...</td><td>image1.jpg</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>Summer Sale</td><td>Up to 50% off on selected items!</td><td>image2.jpg</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

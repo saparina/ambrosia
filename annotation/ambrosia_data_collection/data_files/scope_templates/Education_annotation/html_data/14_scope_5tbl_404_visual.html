@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Textbooks</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>author</th><th>publication_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics Fundamentals</td><td>John Smith</td><td>2018</td></tr>
+<tr><td>2</td><td>Physics Basics</td><td>Jane Doe</td><td>2019</td></tr>
+<tr><td>3</td><td>Chemistry Essentials</td><td>Michael Johnson</td><td>2020</td></tr>
+</tbody></table></div>
+
+<div><h2>Textbook_Chapters</h2><table><thead>
+<tr><th>textbook_chapter_id</th><th>textbook_id</th><th>chapter_id</th><th>content</th><th>created_at</th><th>updated_at</th></tr>
+<tr><th></th><th>(&#8594; Textbooks.id)</th><th>(&#8594; Chapters.chapter_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>This is an introduction to Mathematics</td><td>2024-01-30 18:17:20</td><td>2024-01-30 18:17:20</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Here we discuss Algebra</td><td>2024-01-30 18:17:20</td><td>2024-01-30 18:17:20</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>Welcome to Physics</td><td>2024-01-30 18:17:20</td><td>2024-01-30 18:17:20</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>Learning Mechanics</td><td>2024-01-30 18:17:20</td><td>2024-01-30 18:17:20</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>Starting with Chemistry</td><td>2024-01-30 18:17:20</td><td>2024-01-30 18:17:20</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Chapters</span></h2><table><thead>
+<tr><th>chapter_id</th><th><span style="color:#990000">chapter_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction</td></tr>
+<tr><td>2</td><td>Algebra</td></tr>
+<tr><td>3</td><td>Mechanics</td></tr>
+<tr><td>4</td><td>Organic Chemistry</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>authors</h2><table><thead>
+<tr><th>author_id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>William Shakespeare</td></tr>
+<tr><td>2</td><td>Jane Austen</td></tr>
+<tr><td>3</td><td>Charles Dickens</td></tr>
+<tr><td>4</td><td>Mark Twain</td></tr>
+<tr><td>5</td><td>Leo Tolstoy</td></tr>
+</tbody></table></div>
+
+<div><h2>genres</h2><table><thead>
+<tr><th>genre_id</th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Fantasy</td></tr>
+<tr><td>3</td><td>Romance</td></tr>
+<tr><td>4</td><td>Mystery</td></tr>
+<tr><td>5</td><td>Horror</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">comedies</span></h2><table><thead>
+<tr><th>comedy_id</th><th>title</th><th>genre_id</th><th>author_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; genres.genre_id)</th><th>(&#8594; authors.author_id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>A Midsummer Night's Dream</td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>The Importance of Being Earnest</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Pride and Prejudice</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>The Adventures of Tom Sawyer</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>War and Peace</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">tragedies</span></h2><table><thead>
+<tr><th>tragedy_id</th><th>title</th><th>genre_id</th><th>author_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; genres.genre_id)</th><th>(&#8594; authors.author_id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Romeo and Juliet</td><td>6</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Macbeth</td><td>7</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>3</td><td>Persuasion</td><td>8</td><td>3</td></tr>
+<tr><td>4</td><td>Great Expectations</td><td>9</td><td>4</td></tr>
+<tr><td>5</td><td>Anna Karenina</td><td>10</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>books</h2><table><thead>
+<tr><th>book_id</th><th>title</th><th>comedy_id</th><th>tragedy_id</th><th>author_id</th><th>genre_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; comedies.comedy_id)</th><th>(&#8594; tragedies.tragedy_id)</th><th>(&#8594; authors.author_id)</th><th>(&#8594; genres.genre_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Casino Royale</td><td>None</td><td>None</td><td>6</td><td>11</td></tr>
+<tr><td>2</td><td>Harry Potter and the Philosopher's Stone</td><td>12</td><td>13</td><td>7</td><td>14</td></tr>
+<tr><td>3</td><td>To Kill a Mockingbird</td><td>15</td><td>16</td><td>8</td><td>17</td></tr>
+<tr><td>4</td><td>Crime and Punishment</td><td>18</td><td>19</td><td>9</td><td>20</td></tr>
+<tr><td>5</td><td>Moby Dick</td><td>21</td><td>22</td><td>10</td><td>23</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

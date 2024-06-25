@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Entertainment_Reporters</span></h2><table><thead>
+<tr><th>ReporterID</th><th>Fullname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>Emily White</td></tr>
+<tr><td>5</td><td>William Green</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Genres</span></h2><table><thead>
+<tr><th>GenreID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film</td></tr>
+<tr><td>2</td><td>Music</td></tr>
+<tr><td>3</td><td>Theatre</td></tr>
+<tr><td>4</td><td>TV & Radio</td></tr>
+<tr><td>5</td><td>Fashion</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Latest Film Trends</td><td>This article discusses the latest trends in film...</td><td>2024-01-30 18:54:06</td></tr>
+<tr><td>2</td><td>Upcoming Music Festivals</td><td>Here is a list of upcoming music festivals...</td><td>2024-01-30 18:54:06</td></tr>
+<tr><td>3</td><td>New Broadway Hits</td><td>These are the new hits on Broadway that you should not miss...</td><td>2024-01-30 18:54:06</td></tr>
+<tr><td>4</td><td>Best TV Shows of the Year</td><td>Check out these amazing TV shows from this year...</td><td>2024-01-30 18:54:06</td></tr>
+<tr><td>5</td><td>Top Fashion Designers</td><td>Meet the top fashion designers making waves in the industry...</td><td>2024-01-30 18:54:06</td></tr>
+</tbody></table></div>
+
+<div><h2>Entertainment_Reporters_Articles</h2><table><thead>
+<tr><th>EntertainmentReportersID</th><th>ArticleID</th></tr>
+<tr><th>(&#8594; Entertainment_Reporters.ReporterID)</th><th>(&#8594; Articles.ArticleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles_Genres</h2><table><thead>
+<tr><th>ArticleID</th><th>GenreID</th></tr>
+<tr><th>(&#8594; Articles.ArticleID)</th><th>(&#8594; Genres.GenreID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Entertainment_Reporters_Genres</h2><table><thead>
+<tr><th>EntertainmentReportersID</th><th>GenreID</th></tr>
+<tr><th>(&#8594; Entertainment_Reporters.ReporterID)</th><th>(&#8594; Genres.GenreID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

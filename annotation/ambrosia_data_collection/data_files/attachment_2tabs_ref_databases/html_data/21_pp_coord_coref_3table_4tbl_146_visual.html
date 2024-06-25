@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Services</h2><table><thead>
+<tr><th>ServiceID</th><th>Name</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Massage</td><td>Relax and rejuvenate with our professional massage services</td></tr>
+<tr><td>2</td><td>Facial</td><td>Revitalize your skin with our expertly performed facial treatments</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">DaySpas</span></h2><table><thead>
+<tr><th>SpaID</th><th>ServiceID</th><th>Address</th></tr>
+<tr><th></th><th>(&#8594; Services.ServiceID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>123 Main St, New York, NY 10001</td></tr>
+<tr><td>2</td><td>2</td><td>456 Broadway, Los Angeles, CA 90012</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">WellnessRetreats</span></h2><table><thead>
+<tr><th>RetreatID</th><th>ServiceID</th><th>Location</th></tr>
+<tr><th></th><th>(&#8594; Services.ServiceID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>789 Ocean Blvd, Miami Beach, FL 33139</td></tr>
+<tr><td>2</td><td>2</td><td>101 Mountain Rd, Asheville, NC 28801</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Prices</span></h2><table><thead>
+<tr><th>PriceID</th><th><span style="color:#006600">PriceValue</span></th><th>ServiceID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Services.ServiceID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>150</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#006600">200</span></td><td>1</td></tr>
+<tr><td>3</td><td>250</td><td>2</td></tr>
+<tr><td>4</td><td><span style="color:#006600">200</span></td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>CustomerName</th><th>CheckInDate</th><th>CheckOutDate</th><th>RoomNumber</th><th>TotalCost</th><th>ForeignKey</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; TableThatHasntBeenDefinedYet.PrimaryKeyOfTableThatHasntBeenDefinedYet)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2021-10-01</td><td>2021-10-05</td><td>101</td><td>500.0</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2021-10-10</td><td>2021-10-14</td><td>102</td><td>600.0</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>2021-11-01</td><td>2021-11-05</td><td>103</td><td>550.0</td><td>3</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>2021-11-10</td><td>2021-11-14</td><td>104</td><td>650.0</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>RoomID</th><th>RoomType</th><th>NumberOfGuests</th><th>Rate</th><th>Amenities</th></tr>
+</thead><tbody>
+<tr><td>101</td><td>Deluxe King</td><td>2</td><td>150</td><td>WiFi, Mini fridge, Flat screen TV</td></tr>
+<tr><td>102</td><td>Standard Queen</td><td>2</td><td>100</td><td>WiFi, Coffee maker, Flat screen TV</td></tr>
+<tr><td>103</td><td>Suite</td><td>4</td><td>200</td><td>Separate living area, WiFi, Mini fridge, Flat screen TV</td></tr>
+<tr><td>104</td><td>Accessible King</td><td>2</td><td>120</td><td>Roll-in shower, Wider doorways, WiFi, Mini fridge, Flat screen TV</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

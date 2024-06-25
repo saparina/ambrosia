@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Company_Owners</span></h2><table><thead>
+<tr><th>OwnerID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Derek Brown</span></td></tr>
+<tr><td>2</td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>Mike Smith</td></tr>
+<tr><td>4</td><td>Emily Johnson</td></tr>
+<tr><td>5</td><td>David Williams</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Construction_Workers</span></h2><table><thead>
+<tr><th>WorkerID</th><th>Name</th><th>HourlyRate</th></tr>
+<tr><th></th><th>(&#8594; Company_Owners.Name)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Derek Brown</td><td>20.0</td></tr>
+<tr><td>2</td><td>John Adams</td><td>22.0</td></tr>
+<tr><td>3</td><td>Robert Lee</td><td>21.0</td></tr>
+<tr><td>4</td><td>James Baker</td><td>23.0</td></tr>
+<tr><td>5</td><td>Thomas Jefferson</td><td>24.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Electricians</span></h2><table><thead>
+<tr><th>ElectricianID</th><th>Name</th><th>ExperienceYears</th></tr>
+<tr><th></th><th>(&#8594; Company_Owners.Name)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Derek Brown</td><td>7</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>5</td></tr>
+<tr><td>3</td><td>Mike Smith</td><td>8</td></tr>
+<tr><td>4</td><td>Emily Johnson</td><td>6</td></tr>
+<tr><td>5</td><td>David Williams</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>JobTitle</th><th>Description</th><th>Location</th><th>DatePosted</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Construction_Workers.Name)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Construction Worker</td><td>Building houses and infrastructure.</td><td>New York</td><td>2024-03-13 19:47:31</td><td>Open</td></tr>
+<tr><td>2</td><td>Electrician</td><td>Installing electrical systems in residential and commercial buildings.</td><td>Los Angeles</td><td>2024-03-13 19:47:31</td><td>Open</td></tr>
+<tr><td>3</td><td>Construction Worker</td><td>Constructing roads, bridges, and other public works.</td><td>Chicago</td><td>2024-03-13 19:47:31</td><td>Filled</td></tr>
+<tr><td>4</td><td>Electrician</td><td>Designing and installing electrical systems for industrial facilities.</td><td>Houston</td><td>2024-03-13 19:47:31</td><td>Filled</td></tr>
+<tr><td>5</td><td>Construction Worker</td><td>Specializing in concrete work for construction projects.</td><td>Phoenix</td><td>2024-03-13 19:47:31</td><td>Open</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ApplicationID</th><th>FullName</th><th>EmailAddress</th><th>ResumePath</th><th>JobID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Jobs.JobID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Cooper</td><td>alice@example.com</td><td>/resume/alice_cooper.pdf</td><td>1</td></tr>
+<tr><td>2</td><td>Bob Marley</td><td>bob@example.com</td><td>/resume/bob_marley.pdf</td><td>1</td></tr>
+<tr><td>3</td><td>Carol King</td><td>carol@example.com</td><td>/resume/carol_king.pdf</td><td>2</td></tr>
+<tr><td>4</td><td>Daniel Craig</td><td>daniel@example.com</td><td>/resume/daniel_craig.pdf</td><td>3</td></tr>
+<tr><td>5</td><td>Elizabeth Taylor</td><td>elizabeth@example.com</td><td>/resume/elizabeth_taylor.pdf</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

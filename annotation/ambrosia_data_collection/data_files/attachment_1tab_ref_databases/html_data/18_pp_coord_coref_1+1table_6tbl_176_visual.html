@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Screenwriters</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>DOB</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-06-23</td><td>American</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1975-07-28</td><td>British</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseDate</th><th>Budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie A</td><td>2000-01-01</td><td>1000000.0</td></tr>
+<tr><td>2</td><td>Movie B</td><td>2005-02-05</td><td>500000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthPlace</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Johnson</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>London</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Writers</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">WriterType</span></span></th><th>FilmID</th><th>DirectorID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Films.id)</th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Screenwriter</span></td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Screenwriter</span></td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Playwright</span></td><td>1</td><td>None</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Playwright</span></td><td>2</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Education</span></h2><table><thead>
+<tr><th>id</th><th>InstitutionName</th><th><span style="color:#006600">Degree</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York University</td><td><span style="color:#006600">MFA in Playwriting</span></td></tr>
+<tr><td>2</td><td>University of California, Los Angeles</td><td>BA in English Literature</td></tr>
+</tbody></table></div>
+
+<div><h2>Screenwriter_Education</h2><table><thead>
+<tr><th>ID</th><th>WriterID</th><th>EducationID</th></tr>
+<tr><th></th><th>(&#8594; Writers.id)</th><th>(&#8594; Education.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>3</td></tr>
+<tr><td>6</td><td>6</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

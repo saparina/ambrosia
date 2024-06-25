@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Journalists</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>2 years</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>3 years</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>40</td><td>6 years</td></tr>
+<tr><td>4</td><td>Linda Williams</td><td>35</td><td>7 years</td></tr>
+<tr><td>5</td><td>David Brown</td><td>29</td><td>5 years</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Editors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>PublicationsCount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Robert White</td><td>32</td><td>10</td></tr>
+<tr><td>2</td><td>Emily Black</td><td>29</td><td>8</td></tr>
+<tr><td>3</td><td>Kevin Green</td><td>45</td><td>12</td></tr>
+<tr><td>4</td><td>Laura Blue</td><td>37</td><td>9</td></tr>
+<tr><td>5</td><td>Chris Red</td><td>33</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Languages</span></h2><table><thead>
+<tr><th>LanguageID</th><th><span style="color:#006600">LanguageName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">English</span></td></tr>
+<tr><td>2</td><td>French</td></tr>
+<tr><td>3</td><td>German</td></tr>
+<tr><td>4</td><td>Spanish</td></tr>
+<tr><td>5</td><td>Italian</td></tr>
+</tbody></table></div>
+
+<div><h2>Proficiencies</h2><table><thead>
+<tr><th>JournalistID</th><th>EditorID</th><th>LanguageID</th><th>ProficiencyLevel</th></tr>
+<tr><th>(&#8594; Journalists.ID)</th><th>(&#8594; Editors.ID)</th><th>(&#8594; Languages.LanguageID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Fluent</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Intermediate</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Native</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Advanced</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Beginner</td></tr>
+</tbody></table></div>
+
+<div><h2>Posts</h2><table><thead>
+<tr><th>PostID</th><th>Title</th><th>Description</th><th>Deadline</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News Reporter</td><td>Report on breaking news stories.</td><td>2023-04-01</td></tr>
+<tr><td>2</td><td>Feature Writer</td><td>Write in-depth articles and features.</td><td>2023-04-15</td></tr>
+<tr><td>3</td><td>Investigative Journalist</td><td>Conduct investigative journalism.</td><td>2023-04-30</td></tr>
+<tr><td>4</td><td>News Anchor</td><td>Anchor daily news broadcasts.</td><td>2023-05-10</td></tr>
+<tr><td>5</td><td>Reporter</td><td>Cover local events and write reports.</td><td>2023-05-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>AssignmentID</th><th>PostID</th><th>JournalistID</th><th>EditorID</th></tr>
+<tr><th></th><th>(&#8594; Posts.PostID)</th><th>(&#8594; Journalists.ID)</th><th>(&#8594; Editors.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

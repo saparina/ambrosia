@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Passenger</h2><table><thead>
+<tr><th>PassengerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1998-06-23</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>1997-11-14</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>1995-04-18</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Miller</td><td>1999-08-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>ArrivalTime</th><th>OriginAirport</th><th>DestinationAirport</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 10:00:00</td><td>2023-01-01 12:00:00</td><td>LAX</td><td>ORD</td></tr>
+<tr><td>2</td><td>2023-01-02 12:00:00</td><td>2023-01-02 14:00:00</td><td>DFW</td><td>ATL</td></tr>
+<tr><td>3</td><td>2023-01-03 14:00:00</td><td>2023-01-03 16:00:00</td><td>IAD</td><td>MIA</td></tr>
+<tr><td>4</td><td>2023-01-04 16:00:00</td><td>2023-01-04 18:00:00</td><td>SEA</td><td>MSP</td></tr>
+<tr><td>5</td><td>2023-01-05 18:00:00</td><td>2023-01-05 20:00:00</td><td>PHX</td><td>DTW</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Cabin_Baggage_Fees</span></h2><table><thead>
+<tr><th>BaggageFeeID</th><th>FeeValue</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>$25</td><td>Standard cabin baggage fee.</td></tr>
+<tr><td>2</td><td>$50</td><td>Expedited cabin baggage service.</td></tr>
+<tr><td>3</td><td>$30</td><td>Discounted cabin baggage fare.</td></tr>
+<tr><td>4</td><td>$45</td><td>Promotional cabin baggage rate.</td></tr>
+<tr><td>5</td><td>$20</td><td>Economy cabin baggage charge.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Checked_Baggage_Fees</span></h2><table><thead>
+<tr><th>BaggageFeeID</th><th>FeeValue</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>$25</td><td>Standard checked baggage fee.</td></tr>
+<tr><td>2</td><td>$50</td><td>Priority checked baggage handling.</td></tr>
+<tr><td>3</td><td>$30</td><td>Discounted checked baggage fare.</td></tr>
+<tr><td>4</td><td>$45</td><td>Express checked baggage option.</td></tr>
+<tr><td>5</td><td>$20</td><td>Economy checked baggage cost.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

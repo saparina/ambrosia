@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Kitchen_Personnel</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#990000"><span style="color:#990000">position</span></span></th><th>experience</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; ExperienceTable.column1)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#990000">Sous Chef</span></td><td><span style="color:#006600">5 years</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#990000">Sous Chef</span></td><td>3 years</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td><span style="color:#990000">Cook</span></td><td><span style="color:#006600">5 years</span></td></tr>
+<tr><td>4</td><td>Emily Davis</td><td><span style="color:#990000">Cook</span></td><td>2 years</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">ExperienceTable</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">column1</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">5 years</span></td></tr>
+<tr><td>2</td><td>3 years</td></tr>
+<tr><td>3</td><td>2 years</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>name</th><th>roomNumber</th><th>checkIn</th><th>checkOut</th></tr>
+<tr><th></th><th></th><th>(&#8594; RoomsTable.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Guest A</td><td>101</td><td>2022-06-01 14:00:00</td><td>2022-06-05 12:00:00</td></tr>
+<tr><td>2</td><td>Guest B</td><td>102</td><td>2022-06-10 10:00:00</td><td>2022-06-14 18:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>RoomsTable</h2><table><thead>
+<tr><th>id</th><th>type</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Single Room</td><td>1</td></tr>
+<tr><td>2</td><td>Double Room</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>id</th><th>guestId</th><th>bookingDate</th><th>totalCost</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-06-01 10:00:00</td><td>300.0</td></tr>
+<tr><td>2</td><td>2</td><td>2022-06-10 14:00:00</td><td>500.0</td></tr>
+</tbody></table></div>
+
+<div><h2>MenuItems</h2><table><thead>
+<tr><th>id</th><th>itemName</th><th>price</th><th>category</th><th>kitchenStaffId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Kitchen_Personnel.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Burger</td><td>10.99</td><td>Main Course</td><td>1</td></tr>
+<tr><td>2</td><td>Salad</td><td>7.99</td><td>Appetizer</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Streaming_Services</span></h2><table><thead>
+<tr><th>id</th><th>service_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>A popular streaming platform offering movies, TV shows, documentaries.</td></tr>
+<tr><td>2</td><td>Hulu</td><td>An American subscription video on-demand service offering a library of films and television series.</td></tr>
+<tr><td>3</td><td>Amazon Prime Video</td><td>A subsidiary of Amazon that offers digital video streamings of movies and TV shows.</td></tr>
+<tr><td>4</td><td>Disney+</td><td>A subscription-based streaming service from Walt Disney direct-to-consumer.</td></tr>
+<tr><td>5</td><td>Apple TV+</td><td>Apple’s own streaming service featuring original content by Apple Studios.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Video_Players</span></h2><table><thead>
+<tr><th>id</th><th>player_type</th><th><span style="color:#990000">version</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>HTML5</td><td>3</td></tr>
+<tr><td>2</td><td>Flash</td><td>10</td></tr>
+<tr><td>3</td><td>Silverlight</td><td>5</td></tr>
+<tr><td>4</td><td>RealPlayer</td><td>2</td></tr>
+<tr><td>5</td><td>Windows Media Player</td><td>12</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Services_Video_Players</h2><table><thead>
+<tr><th>streaming_service_id</th><th>video_player_id</th></tr>
+<tr><th>(&#8594; Streaming_Services.id)</th><th>(&#8594; Video_Players.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

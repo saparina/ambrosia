@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Maintenance_Facilities</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Facility1</td><td>Location1</td></tr>
+<tr><td>2</td><td>Facility2</td><td>Location2</td></tr>
+<tr><td>3</td><td>Facility3</td><td>Location3</td></tr>
+<tr><td>4</td><td>Facility4</td><td>Location4</td></tr>
+<tr><td>5</td><td>Facility5</td><td>Location5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Equipment</span></h2><table><thead>
+<tr><th>equipmentId</th><th><span style="color:#990000">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jet_Bridge</td></tr>
+<tr><td>2</td><td>Luggage_Conveyor</td></tr>
+<tr><td>3</td><td>Security_Scanner</td></tr>
+<tr><td>4</td><td>Aircraft_Tow_Vehicle</td></tr>
+<tr><td>5</td><td>Passenger_Board_bridge</td></tr>
+</tbody></table></div>
+
+<div><h2>Maintenance_Facilities_Equipment</h2><table><thead>
+<tr><th>maintenanceId</th><th>equipmentTypeId</th></tr>
+<tr><th>(&#8594; Maintenance_Facilities.id)</th><th>(&#8594; Equipment.equipmentId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>4</td><td>6</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>5</td><td>7</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

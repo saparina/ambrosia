@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Activities</span></h2><table><thead>
+<tr><th>ActivityID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Art</td></tr>
+<tr><td>2</td><td>Math</td></tr>
+<tr><td>3</td><td>Physical Education</td></tr>
+<tr><td>4</td><td>History</td></tr>
+<tr><td>5</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">AfterSchoolPrograms</span></h2><table><thead>
+<tr><th>ProgramID</th><th>Name</th><th>Description</th><th>StartDate</th><th>EndDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Art Classes</td><td>Learn various art forms like painting, drawing, sculpture etc.</td><td>2023-09-15</td><td>2023-12-18</td></tr>
+<tr><td>2</td><td>Math Club</td><td>Club to help students improve their math skills.</td><td>2023-09-16</td><td>2023-12-20</td></tr>
+<tr><td>3</td><td>Fitness Camp</td><td>A physical education program aimed at improving fitness levels.</td><td>2023-09-17</td><td>2023-12-21</td></tr>
+<tr><td>4</td><td>Historical Society</td><td>Study about different historical periods.</td><td>2023-09-18</td><td>2023-12-22</td></tr>
+<tr><td>5</td><td>Book Club</td><td>Discuss various books read by members.</td><td>2023-09-19</td><td>2023-12-23</td></tr>
+</tbody></table></div>
+
+<div><h2>Participants</h2><table><thead>
+<tr><th>ParticipantId</th><th>FirstName</th><th>LastName</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>12</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>11</td></tr>
+<tr><td>3</td><td>Tom</td><td>Brown</td><td>13</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>12</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>14</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>ParticipantID</th><th>ProgramID</th></tr>
+<tr><th></th><th>(&#8594; Participants.ParticipantId)</th><th>(&#8594; AfterSchoolPrograms.ProgramID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>AfterSchoolPrograms_Activities</h2><table><thead>
+<tr><th>AfterSchoolProgramsID</th><th>ActivityID</th></tr>
+<tr><th>(&#8594; AfterSchoolPrograms.ProgramID)</th><th>(&#8594; Activities.ActivityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

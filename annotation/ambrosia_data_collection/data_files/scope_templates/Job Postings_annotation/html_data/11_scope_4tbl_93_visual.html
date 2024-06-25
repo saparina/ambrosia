@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Employers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>companya@example.com</td></tr>
+<tr><td>2</td><td>Company B</td><td>companyb@example.com</td></tr>
+<tr><td>3</td><td>Company C</td><td>companyc@example.com</td></tr>
+<tr><td>4</td><td>Company D</td><td>companyd@example.com</td></tr>
+<tr><td>5</td><td>Company E</td><td>companye@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Benefits</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">benefit_name</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Health Insurance</td><td>Comprehensive health insurance coverage for employees</td></tr>
+<tr><td>2</td><td>Dental Coverage</td><td>Includes preventative care, basic restoratives, and major services</td></tr>
+<tr><td>3</td><td>Vision Care</td><td>Covers annual eye exams, glasses, and contact lenses</td></tr>
+<tr><td>4</td><td>Retirement Plan</td><td>Matching contributions up to 6% of employee earnings</td></tr>
+<tr><td>5</td><td>Paid Time Off</td><td>Accrued PTO based on years of service</td></tr>
+</tbody></table></div>
+
+<div><h2>Employers_Benefits</h2><table><thead>
+<tr><th>employer_id</th><th>benefit_id</th></tr>
+<tr><th>(&#8594; Employers.id)</th><th>(&#8594; Benefits.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>location</th><th>salary</th><th>posting_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Design and develop software applications.</td><td>New York</td><td>90000</td><td>CURRENT_TIMESTAMP</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data sets to provide insights and recommendations.</td><td>Los Angeles</td><td>75000</td><td>CURRENT_TIMESTAMP</td></tr>
+<tr><td>3</td><td>Marketing Manager</td><td>Lead marketing strategies and campaigns.</td><td>Chicago</td><td>80000</td><td>CURRENT_TIMESTAMP</td></tr>
+<tr><td>4</td><td>Product Designer</td><td>Create user-centered designs for products.</td><td>San Francisco</td><td>85000</td><td>CURRENT_TIMESTAMP</td></tr>
+<tr><td>5</td><td>HR Specialist</td><td>Manage recruitment and onboarding processes.</td><td>Boston</td><td>60000</td><td>CURRENT_TIMESTAMP</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th>resume</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>555-123-4567</td><td>file://path/to/resume.pdf</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td><td>555-987-6543</td><td>file://path/to/resume.pdf</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>michaeljohnson@email.com</td><td>555-321-7654</td><td>file://path/to/resume.pdf</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>emilywilliams@email.com</td><td>555-555-5555</td><td>file://path/to/resume.pdf</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>davidbrown@email.com</td><td>555-111-2222</td><td>file://path/to/resume.pdf</td></tr>
+</tbody></table></div>
+
+<div><h2>ApplicationStatuses</h2><table><thead>
+<tr><th>application_id</th><th>status</th><th>interview_date</th><th>feedback</th></tr>
+<tr><th>(&#8594; Applicants.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pending Interview</td><td>None</td><td>None</td></tr>
+<tr><td>2</td><td>Rejected</td><td>None</td><td>Not a good fit.</td></tr>
+<tr><td>3</td><td>Accepted</td><td>2022-09-15 10:00:00</td><td>Excellent candidate!</td></tr>
+<tr><td>4</td><td>Interview Scheduled</td><td>2022-09-17 14:00:00</td><td>Thank you for applying.</td></tr>
+<tr><td>5</td><td>Offer Made</td><td>None</td><td>We would like to offer you the position.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

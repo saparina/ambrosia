@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Industries</h2><table><thead>
+<tr><th>IndustryID</th><th><span style="color:#990000">Primary_Industry</span></th><th><span style="color:#990000">Most_Common_Job</span></th><th>Region</th><th>NumberOfEmployees</th><th>AnnualRevenue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Construction</td><td>Laborer</td><td>Northeast</td><td>2000</td><td>500000.0</td></tr>
+<tr><td>2</td><td>Technology</td><td>Software Developer</td><td>Southwest</td><td>3000</td><td>600000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>People</h2><table><thead>
+<tr><th>PersonID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Gender</th><th>Race</th><th>Ethnicity</th><th>MaritalStatus</th><th>EducationLevel</th><th>Occupation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1985-07-15</td><td>M</td><td>White</td><td>Hispanic</td><td>Single</td><td>Bachelor's Degree</td><td>Engineer</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-02-20</td><td>F</td><td>Black</td><td>Non-Hispanic</td><td>Married</td><td>Master's Degree</td><td>Teacher</td></tr>
+</tbody></table></div>
+
+<div><h2>Regions</h2><table><thead>
+<tr><th>RegionID</th><th>Name</th><th>Population</th><th>AreaInSqKm</th><th>CapitalCity</th><th>Climate</th><th>MajorCities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New England</td><td>16000000</td><td>89000.0</td><td>Boston</td><td>Continental climate</td><td>Boston, Providence, Hartford</td></tr>
+<tr><td>2</td><td>Great Lakes</td><td>52000000</td><td>250000.0</td><td>Chicago</td><td>Humid continental climate</td><td>Chicago, Detroit, Cleveland</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>SkillsRequired</th><th>AverageSalary</th><th>GrowthProspects</th><th>RequiredEducation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Design, develop, and maintain software applications.</td><td>Programming languages, problem solving skills, teamwork</td><td>80000.0</td><td>High</td><td>Bachelor's degree in Computer Science</td></tr>
+<tr><td>2</td><td>Registered Nurse</td><td>Provide and coordinate patient care, educate patients and the public about various aspects of health</td><td>Communication skills, critical thinking, empathy</td><td>70000.0</td><td>Good</td><td>Associate degree in Nursing</td></tr>
+</tbody></table></div>
+
+<div><h2>EmploymentStats</h2><table><thead>
+<tr><th>Year</th><th>TotalNumberOfJobs</th><th>UnemployedCount</th><th>UnemploymentRate</th><th>MinimumWage</th><th>MaximumWage</th></tr>
+</thead><tbody>
+<tr><td>2020</td><td>150000000</td><td>10000000</td><td>6.67</td><td>7.25</td><td>75000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>HousingData</h2><table><thead>
+<tr><th>HouseID</th><th>Address</th><th>Type</th><th>Price</th><th>SizeInSquareFeet</th><th>Bedrooms</th><th>Bathrooms</th><th>Age</th><th>Neighborhood</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>Condo</td><td>250000.0</td><td>1000</td><td>2</td><td>1</td><td>5</td><td>Uptown</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>Single Family Home</td><td>500000.0</td><td>2500</td><td>4</td><td>2</td><td>10</td><td>Suburbia</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

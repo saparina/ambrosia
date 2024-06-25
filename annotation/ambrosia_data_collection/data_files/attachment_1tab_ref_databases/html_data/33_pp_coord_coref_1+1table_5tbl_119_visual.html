@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>1970-01-01</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>1982-06-15</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>1963-08-22</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>1958-11-11</td></tr>
+<tr><td>5</td><td>Tom Davis</td><td>1969-05-25</td></tr>
+</tbody></table></div>
+
+<div><h2>Books</h2><table><thead>
+<tr><th>BookID</th><th>Title</th><th>PublishYear</th><th>Genre</th><th>Crime_Fiction</th><th>Studio</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genres.Name)</th><th></th><th>(&#8594; Studios.Studio)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Mysterious Case</td><td>2000</td><td>Mystery</td><td>Yes</td><td>Warner Bros</td></tr>
+<tr><td>2</td><td>Deadly Secrets</td><td>2001</td><td>Mystery</td><td>No</td><td>Disney</td></tr>
+<tr><td>3</td><td>Twisted Fate</td><td>2002</td><td>Thriller</td><td>Yes</td><td>Warner Bros</td></tr>
+<tr><td>4</td><td>Dark Desires</td><td>2003</td><td>Thriller</td><td>No</td><td>Universal</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Genres</span></h2><table><thead>
+<tr><th><span style="color:#990000"><span style="color:#990000">Name</span></span></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#990000">Mystery</span></td></tr>
+<tr><td><span style="color:#990000">Thriller</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Studios</span></h2><table><thead>
+<tr><th><span style="color:#006600">Studio</span>ID</th><th><span style="color:#006600">Studio</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Warner Bros</span></td></tr>
+<tr><td>2</td><td>Disney</td></tr>
+<tr><td>3</td><td>Universal</td></tr>
+</tbody></table></div>
+
+<div><h2>Characters</h2><table><thead>
+<tr><th>CharacterID</th><th>Name</th><th>Role</th><th>BookID</th><th>AUTHOR_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Books.BookID)</th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Detective Ace</td><td>Lead Detective</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Dr. Evelyn</td><td>Medical Examiner</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>Agent Lee</td><td>FBI Agent</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>Morgan Black</td><td>Criminal Mastermind</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>Chris Redfield</td><td>Police Officer</td><td>3</td><td>3</td></tr>
+<tr><td>6</td><td>Silva Hightower</td><td>Gang Leader</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ReviewID</th><th>Rating</th><th>Text</th><th>BookID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Books.BookID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Great book! Loved it.</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>Interesting story but could have been better.</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>Not my favorite mystery novel.</td><td>1</td></tr>
+<tr><td>4</td><td>5</td><td>Excellent thriller! Highly recommended.</td><td>3</td></tr>
+<tr><td>5</td><td>3</td><td>Good story but lacked suspense.</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

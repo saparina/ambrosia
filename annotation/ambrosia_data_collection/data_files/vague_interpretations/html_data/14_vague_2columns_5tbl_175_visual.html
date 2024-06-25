@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Projects</h2><table><thead>
+<tr><th>projectID</th><th>projectName</th><th>startDate</th><th>endDate</th><th>budget</th><th><span style="color:#990000">Project_Manager</span></th><th><span style="color:#990000">Construction_Manager</span></th><th>Edifice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New Office Building</td><td>2023-01-01</td><td>2023-12-31</td><td>1000000.0</td><td>John Doe</td><td>Jane Smith</td><td>High Rise</td></tr>
+<tr><td>2</td><td>School Renovation</td><td>2023-02-01</td><td>2023-11-30</td><td>800000.0</td><td>Mike Johnson</td><td>Lisa Brown</td><td>Elementary School</td></tr>
+<tr><td>3</td><td>Warehouse Expansion</td><td>2023-03-01</td><td>2023-12-15</td><td>750000.0</td><td>Mark Williams</td><td>Karen Lee</td><td>Industrial Park</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>employeeID</th><th>firstName</th><th>lastName</th><th>jobTitle</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alan</td><td>Smith</td><td>Carpenter</td><td>60000.0</td></tr>
+<tr><td>2</td><td>Beth</td><td>Davis</td><td>Electrician</td><td>65000.0</td></tr>
+<tr><td>3</td><td>Charlie</td><td>Martin</td><td>Plumber</td><td>62000.0</td></tr>
+<tr><td>4</td><td>David</td><td>Parker</td><td>Site Supervisor</td><td>70000.0</td></tr>
+<tr><td>5</td><td>Eva</td><td>Collins</td><td>Architect</td><td>90000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Materials</h2><table><thead>
+<tr><th>materialID</th><th>name</th><th>quantity</th><th>unitCost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concrete</td><td>100.0</td><td>50.0</td></tr>
+<tr><td>2</td><td>Steel Rebars</td><td>50.0</td><td>60.0</td></tr>
+<tr><td>3</td><td>Windows</td><td>150.0</td><td>150.0</td></tr>
+<tr><td>4</td><td>Doors</td><td>75.0</td><td>200.0</td></tr>
+<tr><td>5</td><td>Roofing Materials</td><td>100.0</td><td>80.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Tasks</h2><table><thead>
+<tr><th>taskID</th><th>description</th><th>status</th><th>startTime</th><th>completionTime</th><th>assignedEmployeeID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Employees.employeeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Prepare site for construction</td><td>In Progress</td><td>2023-01-02 08:00:00</td><td>2023-01-02 17:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Set up temporary office</td><td>Completed</td><td>2023-01-03 09:00:00</td><td>2023-01-03 16:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>Install electrical system</td><td>Not Started</td><td>None</td><td>None</td><td>3</td></tr>
+<tr><td>4</td><td>Install plumbing</td><td>In Progress</td><td>2023-01-04 08:00:00</td><td>2023-01-04 17:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>Begin framing of building</td><td>In Progress</td><td>2023-01-05 08:00:00</td><td>2023-01-05 17:00:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Equipment</h2><table><thead>
+<tr><th>equipmentID</th><th>type</th><th>make</th><th>model</th><th>purchasePrice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Excavator</td><td>Caterpillar</td><td>320D</td><td>75000.0</td></tr>
+<tr><td>2</td><td>Crane</td><td>Manitowoc</td><td>Model 222</td><td>120000.0</td></tr>
+<tr><td>3</td><td>Forklift</td><td>Hyster</td><td>FT30-40</td><td>30000.0</td></tr>
+<tr><td>4</td><td>Scaffolding</td><td>Rosendahl</td><td>RSC 500</td><td>10000.0</td></tr>
+<tr><td>5</td><td>Truck</td><td>Ford</td><td>F-350</td><td>35000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Suppliers</h2><table><thead>
+<tr><th>supplierID</th><th>companyName</th><th>contactName</th><th>phoneNumber</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Concrete</td><td>Tom Anderson</td><td>555-123-4567</td><td>123 Main St, Concrete City</td></tr>
+<tr><td>2</td><td>XYZ Steel</td><td>Jessica Thomas</td><td>555-789-0123</td><td>456 Second Ave, Steelville</td></tr>
+<tr><td>3</td><td>Window Manufacturers Inc.</td><td>George Wilson</td><td>555-321-6540</td><td>789 Third St, Windowtown</td></tr>
+<tr><td>4</td><td>Door Makers Ltd.</td><td>Betty Clark</td><td>555-987-6544</td><td>135 Fourth St, Doorway</td></tr>
+<tr><td>5</td><td>Roofing Solutions</td><td>Samuel Harris</td><td>555-555-5555</td><td>987 Fifth St, Roofsville</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

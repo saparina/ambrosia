@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Newspapers</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Format</th><th>Distributor</th><th>FoundedDate</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Distributors.Name)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Times</td><td><span style="color:#990000">Broadsheet</span></td><td><span style="color:#006600">Sainsbury's</span></td><td>1785-01-01</td></tr>
+<tr><td>2</td><td>The Sun</td><td><span style="color:#990000">Tabloid</span></td><td><span style="color:#006600">Sainsbury's</span></td><td>1964-03-17</td></tr>
+<tr><td>3</td><td>Mail on Sunday</td><td>Compact</td><td>Tesco</td><td>1982-01-01</td></tr>
+<tr><td>4</td><td>Guardian Unlimited</td><td>Berliner</td><td>Tesco</td><td>1999-01-01</td></tr>
+<tr><td>5</td><td>Financial Times</td><td><span style="color:#990000">Tabloid</span></td><td>Direct delivery</td><td>1888-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Distributors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sainsbury's</td><td>123 High St</td><td>+44 1234567890</td><td>distribution@sainburys.com</td></tr>
+<tr><td>2</td><td>Tesco</td><td>456 Low St</td><td>+44 0987654321</td><td>distribution@tesco.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>PublicationDate</th><th>NewspaperId</th><th>AuthorId</th><th>CategoryId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Newspapers.id)</th><th>(&#8594; Authors.id)</th><th>(&#8594; ArticleCategories.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>UK Election Results</td><td>Here are the results of the latest UK election.</td><td>2021-10-01</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Stock Market Rises</td><td>The stock market experienced significant gains today.</td><td>2021-10-01</td><td>3</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1960-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1975-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleCategories</h2><table><thead>
+<tr><th>id</th><th>CategoryName</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td><td>News about governmental activities</td></tr>
+<tr><td>2</td><td>Economy</td><td>Business news and analysis</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

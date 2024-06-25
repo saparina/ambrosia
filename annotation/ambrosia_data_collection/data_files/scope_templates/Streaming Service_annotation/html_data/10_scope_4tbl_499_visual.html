@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Streaming_Service</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>subscription_fee</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>7.99</td></tr>
+<tr><td>2</td><td>Hulu</td><td>5.99</td></tr>
+<tr><td>3</td><td>Amazon Prime Video</td><td>8.99</td></tr>
+<tr><td>4</td><td>Disney+</td><td>6.99</td></tr>
+<tr><td>5</td><td>HBO Max</td><td>14.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Content</span></h2><table><thead>
+<tr><th>content_id</th><th><span style="color:#990000">type</span></th><th><span style="color:#990000">description</span></th><th><span style="color:#990000">price</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie</td><td>A thrilling action movie.</td><td>3.99</td></tr>
+<tr><td>2</td><td>Series</td><td>An exciting crime series.</td><td>2.99</td></tr>
+<tr><td>3</td><td>Documentary</td><td>An educational documentary on space exploration.</td><td>0.99</td></tr>
+<tr><td>4</td><td>Kids Show</td><td>A fun-filled show for kids.</td><td>1.99</td></tr>
+<tr><td>5</td><td>Animation</td><td>An engaging animated film.</td><td>2.99</td></tr>
+<tr><td>6</td><td>Netflix Originals</td><td>Exclusive content available only on Netflix.</td><td>4.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Service_Content</h2><table><thead>
+<tr><th>streaming_service_id</th><th>content_id</th></tr>
+<tr><th>(&#8594; Streaming_Service.id)</th><th>(&#8594; Content.content_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>6</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>6</td></tr>
+<tr><td>5</td><td>2</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

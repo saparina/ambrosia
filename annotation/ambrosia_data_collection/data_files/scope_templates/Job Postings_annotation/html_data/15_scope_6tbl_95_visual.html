@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Financial_Analysts</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>3</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>10</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>7</td></tr>
+<tr><td>5</td><td>Emma Wilson</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Metrics</span></h2><table><thead>
+<tr><th>metric_id</th><th><span style="color:#990000">metric_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Earnings_Per_Share</td></tr>
+<tr><td>2</td><td>Revenue</td></tr>
+<tr><td>3</td><td>Gross_Profit</td></tr>
+<tr><td>4</td><td>Net_Income</td></tr>
+<tr><td>5</td><td>Market_Capitalization</td></tr>
+</tbody></table></div>
+
+<div><h2>Company</h2><table><thead>
+<tr><th>company_id</th><th>company_name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Corporation</td><td>New York</td></tr>
+<tr><td>2</td><td>XYZ Inc.</td><td>California</td></tr>
+<tr><td>3</td><td>LNM Limited</td><td>Texas</td></tr>
+<tr><td>4</td><td>MNO Enterprises</td><td>Florida</td></tr>
+<tr><td>5</td><td>PQR Holdings</td><td>Illinois</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>job_posting_id</th><th>title</th><th>description</th><th>salary</th><th>created_at</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Financial Analyst</td><td>Analyze market trends and make recommendations based on research</td><td>75000.0</td><td>2024-01-30 19:22:37</td></tr>
+<tr><td>2</td><td>Senior Financial Analyst</td><td>Lead a team of analysts in providing investment advice</td><td>100000.0</td><td>2024-01-30 19:22:37</td></tr>
+<tr><td>3</td><td>Associate Financial Analyst</td><td>Assist senior analysts in preparing reports and forecasts</td><td>60000.0</td><td>2024-01-30 19:22:37</td></tr>
+<tr><td>4</td><td>Financial Modelling Analyst</td><td>Develop financial models to assist in decision-making processes</td><td>70000.0</td><td>2024-01-30 19:22:37</td></tr>
+<tr><td>5</td><td>Equity Research Analyst</td><td>Conduct analysis on specific industries and companies to provide buy/sell/hold recommendations</td><td>80000.0</td><td>2024-01-30 19:22:37</td></tr>
+</tbody></table></div>
+
+<div><h2>Financial_Analysts_Metrics</h2><table><thead>
+<tr><th>financial_analyst_id</th><th>metric_id</th></tr>
+<tr><th>(&#8594; Financial_Analysts.id)</th><th>(&#8594; Metrics.metric_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

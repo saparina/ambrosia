@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>AccountTypes</h2><table><thead>
+<tr><th>ID</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Checking</td></tr>
+<tr><td>2</td><td>Savings</td></tr>
+<tr><td>3</td><td>Money Market</td></tr>
+<tr><td>4</td><td>CD</td></tr>
+<tr><td>5</td><td>IRA</td></tr>
+</tbody></table></div>
+
+<div><h2>Banks</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>HeadQuarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank A</td><td>New York</td></tr>
+<tr><td>2</td><td>Bank B</td><td>London</td></tr>
+<tr><td>3</td><td>Bank C</td><td>Paris</td></tr>
+<tr><td>4</td><td>Bank D</td><td>Tokyo</td></tr>
+<tr><td>5</td><td>Bank E</td><td>Los Angeles</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1976-05-15</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1980-08-20</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Peter</td><td>Black</td><td>1992-12-01</td><td>peter.black@example.com</td></tr>
+<tr><td>4</td><td>Alice</td><td>White</td><td>1985-03-17</td><td>alice.white@example.com</td></tr>
+<tr><td>5</td><td>Tom</td><td>Green</td><td>1995-07-05</td><td>tom.green@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">BankAccounts</span></h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerID</th><th>OpenDate</th><th><span style="color:#006600">CurrentBalance</span></th></tr>
+<tr><th></th><th>(&#8594; Customers.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1834293214</td><td>1</td><td>2021-06-01 10:00:00</td><td>10000.0</td></tr>
+<tr><td>2834293214</td><td>2</td><td>2021-07-01 10:00:00</td><td><span style="color:#006600">20000.0</span></td></tr>
+<tr><td>3834293214</td><td>3</td><td>2021-08-01 10:00:00</td><td>30000.0</td></tr>
+<tr><td>4834293214</td><td>4</td><td>2021-09-01 10:00:00</td><td>40000.0</td></tr>
+<tr><td>5834293214</td><td>5</td><td>2021-10-01 10:00:00</td><td>50000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>LoanID</th><th>AccountNumber</th><th>Amount</th><th>StartDate</th><th>EndDate</th><th>MonthlyInterestRate</th><th>AnnualPercentageRate</th><th>ForeignKeyAccountNumber</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; BankAccounts.AccountNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1834293214</td><td>10000</td><td>2021-06-01 10:00:00</td><td>2026-06-01 10:00:00</td><td>0.05</td><td>0.06</td><td>1834293214</td></tr>
+<tr><td>2</td><td>2834293214</td><td>15000</td><td>2021-07-01 10:00:00</td><td>2027-07-01 10:00:00</td><td>0.05</td><td>0.06</td><td>2834293214</td></tr>
+<tr><td>3</td><td>3834293214</td><td>20000</td><td>2021-08-01 10:00:00</td><td>2028-08-01 10:00:00</td><td>0.05</td><td>0.06</td><td>3834293214</td></tr>
+<tr><td>4</td><td>4834293214</td><td>25000</td><td>2021-09-01 10:00:00</td><td>2029-09-01 10:00:00</td><td>0.05</td><td>0.06</td><td>4834293214</td></tr>
+<tr><td>5</td><td>5834293214</td><td>30000</td><td>2021-10-01 10:00:00</td><td>2030-10-01 10:00:00</td><td>0.05</td><td>0.06</td><td>5834293214</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Terms</span></h2><table><thead>
+<tr><th>TermId</th><th><span style="color:#990000"><span style="color:#990000">Description</span></span></th><th>MonthlyInterestRate</th><th>AnnualPercentageRate</th><th>OtherValue</th><th>AccountTypeID</th><th>LOAN_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; AccountTypes.ID)</th><th>(&#8594; Loans.LoanID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Monthly Interest Rate</span></td><td>0.05</td><td>0.06</td><td>None</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Monthly Interest Rate</span></td><td>0.05</td><td>0.06</td><td>None</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Annual Percentage Rate</span></td><td>0.05</td><td>0.06</td><td>None</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Annual Percentage Rate</span></td><td>0.05</td><td>0.06</td><td>None</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>Some other value</td><td>0.05</td><td>0.06</td><td>somevalue</td><td>3</td><td>3</td></tr>
+<tr><td>6</td><td>Another term</td><td>0.04</td><td>0.05</td><td>None</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

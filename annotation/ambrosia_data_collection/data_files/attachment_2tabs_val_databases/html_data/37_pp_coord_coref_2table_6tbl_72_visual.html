@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Concerts</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Artist</th><th>Date</th><th>Venue_Capacity</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Venues.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rock Out</td><td>AC/DC</td><td>2023-06-17</td><td><span style="color:#006600">500</span></td></tr>
+<tr><td>2</td><td>Pop Explosion</td><td>Justin Timberlake</td><td>2023-08-19</td><td>1000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">TheaterPlays</span></h2><table><thead>
+<tr><th>id</th><th>PlayName</th><th>Director</th><th>PerformanceDate</th><th>Venue_Capacity</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Venues.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>Kenneth Branagh</td><td>2023-05-24</td><td><span style="color:#006600">500</span></td></tr>
+<tr><td>2</td><td>Les Miserables</td><td>Tom Hooper</td><td>2023-11-10</td><td>1000</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Genre</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Brian</td><td>Johnson</td><td>Hard Rock</td><td>71</td></tr>
+<tr><td>2</td><td>Jessie</td><td>Ware</td><td>Pop</td><td>35</td></tr>
+</tbody></table></div>
+
+<div><h2>Venues</h2><table><thead>
+<tr><th>id</th><th>VenueName</th><th>Address</th><th>City</th><th>State</th><th>ZipCode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Madison Square Garden</td><td>4 Pennsylvania Plaza</td><td>New York</td><td>NY</td><td>10001</td></tr>
+<tr><td>2</td><td>Orpheum Theatre</td><td>129 S Main St</td><td>Memphis</td><td>TN</td><td>38103</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>BirthYear</th><th>ActiveInIndustry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Kenneth</td><td>Branagh</td><td>1960</td><td>1</td></tr>
+<tr><td>2</td><td>Tom</td><td>Hooper</td><td>1974</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Performances</h2><table><thead>
+<tr><th>id</th><th>ConcertID</th><th>PlayID</th></tr>
+<tr><th></th><th>(&#8594; Concerts.id)</th><th>(&#8594; TheaterPlays.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>None</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

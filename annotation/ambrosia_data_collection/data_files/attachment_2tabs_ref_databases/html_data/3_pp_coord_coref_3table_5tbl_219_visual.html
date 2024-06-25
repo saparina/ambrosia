@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Salads</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Greek Salad</td><td>A classic Greek salad made with fresh vegetables and feta cheese.</td></tr>
+<tr><td>2</td><td>Caesar Salad</td><td>A popular salad featuring romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.</td></tr>
+<tr><td>3</td><td>Chicken Salad</td><td>A creamy chicken salad made with diced chicken, celery, and mayonnaise.</td></tr>
+<tr><td>4</td><td>Fruit Salad</td><td>A refreshing fruit salad made with a mix of seasonal fruits.</td></tr>
+<tr><td>5</td><td>Tuna Salad</td><td>A tasty tuna salad made with canned tuna, mayo, and various spices.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Soups</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tomato Soup</td><td>A comforting tomato soup made with fresh tomatoes, basil, and a touch of cream.</td></tr>
+<tr><td>2</td><td>Vegetable Soup</td><td>A hearty vegetable soup made with assorted vegetables and herbs.</td></tr>
+<tr><td>3</td><td>Lentil Soup</td><td>A warm and satisfying lentil soup made with green lentils, carrots, and celery.</td></tr>
+<tr><td>4</td><td>Mushroom Soup</td><td>A rich mushroom soup made with sautéed mushrooms, onions, and cream.</td></tr>
+<tr><td>5</td><td>Chicken Noodle Soup</td><td>A classic chicken noodle soup made with tender chicken, egg noodles, and vegetables.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Buffets</span></h2><table><thead>
+<tr><th>id</th><th>buffet_name</th><th><span style="color:#006600">salad_id</span></th><th>soup_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Salads.id)</th><th>(&#8594; Soups.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hilton Buffet</td><td>1</td><td>1</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>Waldorf Astoria Buffet</td><td><span style="color:#006600">2</span></td><td>3</td></tr>
+<tr><td>3</td><td>Marriott Buffet</td><td>3</td><td>6</td></tr>
+<tr><td>4</td><td>Hyatt Regency Buffet</td><td>4</td><td>7</td></tr>
+<tr><td>5</td><td>InterContinental Buffet</td><td>5</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>id</th><th>restaurant_name</th><th>location</th><th>phone</th><th>manager_email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Garden Bistro</td><td>New York City</td><td>555-0198</td><td>gardengarden@gmail.com</td></tr>
+<tr><td>2</td><td>Le Petit Plateau</td><td>Paris</td><td>444-0178</td><td>petitplateau@gmail.com</td></tr>
+<tr><td>3</td><td>La Dolce Vita</td><td>Rome</td><td>555-0199</td><td>dolcedivina@gmail.com</td></tr>
+<tr><td>4</td><td>Harbor View Diner</td><td>Boston</td><td>333-0180</td><td>harbourviewdiner@gmail.com</td></tr>
+<tr><td>5</td><td>Al Fresco Café</td><td>London</td><td>444-0179</td><td>alfrescocafelondon@gmail.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

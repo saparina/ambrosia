@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Company</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Events Unlimited</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Celebration Events</span></td></tr>
+<tr><td>3</td><td>Party Time</td></tr>
+<tr><td>4</td><td>Gala Planning</td></tr>
+<tr><td>5</td><td>Festive Occasions</td></tr>
+</tbody></table></div>
+
+<div><h2>Skill</h2><table><thead>
+<tr><th>id</th><th>skill_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Event Management</td></tr>
+<tr><td>2</td><td>Coordination</td></tr>
+<tr><td>3</td><td>Budgeting</td></tr>
+<tr><td>4</td><td>Vendor Relations</td></tr>
+<tr><td>5</td><td>Design</td></tr>
+</tbody></table></div>
+
+<div><h2>Experience</h2><table><thead>
+<tr><th>id</th><th>years_of_experience</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3</td><td>Experienced Event Planner looking for new opportunities.</td></tr>
+<tr><td>2</td><td>2</td><td>Recent graduate seeking entry-level position as a Wedding Coordinator.</td></tr>
+<tr><td>3</td><td>10</td><td>Seasoned professional with extensive event planning background.</td></tr>
+<tr><td>4</td><td>7</td><td>Skilled coordinator specializing in corporate events.</td></tr>
+<tr><td>5</td><td>5</td><td>Creative designer with strong portfolio of themed events.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPost</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">title</span></span></th><th>job_description</th><th>company_id</th><th>experience_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Company.id)</th><th>(&#8594; Experience.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Event Planner</span></td><td>Plan and execute various types of events.</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Wedding Coordinator</span></td><td>Organize and manage wedding ceremonies and receptions.</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Event Planner</span></td><td>Manage events for clients at our venue.</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Wedding Coordinator</span></td><td>Assist couples in organizing their dream weddings.</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>Conference Organizer</td><td>Arrange logistics and coordinate vendors for conferences.</td><td>3</td><td>5</td></tr>
+<tr><td>6</td><td>Themed Party Planner</td><td>Create unique themes and plan parties for all occasions.</td><td>4</td><td>1</td></tr>
+<tr><td>7</td><td>Corporate Event Manager</td><td>Oversee large-scale corporate events.</td><td>4</td><td>3</td></tr>
+<tr><td>8</td><td>Destination Wedding Specialist</td><td>Plan and coordinate destination weddings for international clients.</td><td>5</td><td>4</td></tr>
+<tr><td>9</td><td>Exhibition Designer</td><td>Design and set up exhibition booths for trade shows.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

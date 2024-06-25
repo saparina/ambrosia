@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>CustomerInfo</h2><table><thead>
+<tr><th>customerID</th><th>name</th><th>address</th><th>phoneNumber</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>123 Main St</td><td>555-1234</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>456 Elm St</td><td>555-5678</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>SavingsAccounts</h2><table><thead>
+<tr><th>accountID</th><th>customerID</th><th>balance</th></tr>
+<tr><th></th><th>(&#8594; CustomerInfo.customerID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>2000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>loanID</th><th>customerID</th><th>amount</th><th>rate</th></tr>
+<tr><th></th><th>(&#8594; CustomerInfo.customerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>15000</td><td>0.05</td></tr>
+<tr><td>2</td><td>2</td><td>20000</td><td>0.04</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>transactionID</th><th>accountID</th><th>type</th><th>amount</th><th>date</th></tr>
+<tr><th></th><th>(&#8594; SavingsAccounts.accountID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Deposit</td><td>100.0</td><td>2024-03-07 23:55:31</td></tr>
+<tr><td>2</td><td>1</td><td>Withdrawal</td><td>50.0</td><td>2024-03-07 23:55:31</td></tr>
+<tr><td>3</td><td>2</td><td>Deposit</td><td>200.0</td><td>2024-03-07 23:55:31</td></tr>
+<tr><td>4</td><td>2</td><td>Withdrawal</td><td>100.0</td><td>2024-03-07 23:55:31</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">InterestRates</span></h2><table><thead>
+<tr><th>id</th><th>terms</th><th>monthlyRate</th><th>annualPercentageRate</th><th>Bank_Account</th><th>additionalColumn</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Monthly Interest Rate</span></td><td>0.015</td><td>0.18</td><td><span style="color:#006600">1834293214</span></td><td>InterestRate1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Monthly Interest Rate</span></td><td>0.01</td><td>0.12</td><td>9876543210</td><td>InterestRate2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Annual Percentage Rate</span></td><td>0.05</td><td>0.6</td><td><span style="color:#006600">1834293214</span></td><td>APR1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Annual Percentage Rate</span></td><td>0.04</td><td>0.48</td><td>9876543210</td><td>APR2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

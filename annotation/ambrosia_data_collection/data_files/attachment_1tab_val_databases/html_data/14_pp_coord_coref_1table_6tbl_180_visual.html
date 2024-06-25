@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Music</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>artist</th><th>releaseDate</th><th>Music_Genre</th><th>Venue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Some <span style="color:#990000">Pop Song</span></td><td>Some Artist</td><td>2021-08-30</td><td><span style="color:#990000">Pop Song</span></td><td>Madison Square Garden</td></tr>
+<tr><td>2</td><td>Another <span style="color:#990000">Pop Song</span></td><td>Another Artist</td><td>2021-09-01</td><td><span style="color:#990000">Pop Song</span></td><td><span style="color:#006600">Different Venue</span></td></tr>
+<tr><td>3</td><td>Some <span style="color:#990000">Hip Hop Song</span></td><td>Some Rapper</td><td>2021-07-26</td><td><span style="color:#990000">Hip Hop Song</span></td><td>Madison Square Garden</td></tr>
+<tr><td>4</td><td>Yet Another <span style="color:#990000">Hip Hop Song</span></td><td>Another Rapper</td><td>2021-07-28</td><td><span style="color:#990000">Hip Hop Song</span></td><td><span style="color:#006600">Different Venue</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>name</th><th>genre</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Artist</td><td>Rock</td><td>USA</td></tr>
+<tr><td>2</td><td>Second Artist</td><td>Electronic</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Concerts</h2><table><thead>
+<tr><th>id</th><th>date</th><th>venueName</th><th>location</th><th>ticketPrice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-08-30 20:00:00</td><td>MSG</td><td>New York City</td><td>100.0</td></tr>
+<tr><td>2</td><td>2021-09-01 20:00:00</td><td>Different Venue</td><td>Los Angeles</td><td>80.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Tickets</h2><table><thead>
+<tr><th>id</th><th>concertId</th><th>seatNumber</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Concerts.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A1</td><td>100.0</td></tr>
+<tr><td>2</td><td>2</td><td>B1</td><td>80.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>id</th><th>concertId</th><th>reviewerName</th><th>rating</th><th>comments</th></tr>
+<tr><th></th><th>(&#8594; Concerts.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John Doe</td><td>5</td><td>Great show!</td></tr>
+<tr><td>2</td><td>2</td><td>Jane Smith</td><td>4</td><td>Good performance.</td></tr>
+</tbody></table></div>
+
+<div><h2>Fans</h2><table><thead>
+<tr><th>id</th><th>fanName</th><th>favoriteArtistId</th><th>favoriteConcertId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Artists.id)</th><th>(&#8594; Concerts.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike Johnson</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

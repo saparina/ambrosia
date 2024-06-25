@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Levels</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">level</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beginner</td></tr>
+<tr><td>2</td><td>Intermediate</td></tr>
+<tr><td>3</td><td>Advanced</td></tr>
+<tr><td>4</td><td>Expert</td></tr>
+<tr><td>5</td><td>Professional</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Language_Programs</span></h2><table><thead>
+<tr><th>id</th><th>programName</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python Programming</td><td>A comprehensive course on Python programming language.</td></tr>
+<tr><td>2</td><td>Java Development</td><td>An advanced Java development course covering object-oriented concepts.</td></tr>
+<tr><td>3</td><td>Web Design</td><td>A hands-on course on designing websites using HTML, CSS, and JavaScript.</td></tr>
+<tr><td>4</td><td>Data Science</td><td>In-depth exploration of data science techniques and tools like R and Python.</td></tr>
+<tr><td>5</td><td>Mobile App Development</td><td>Developing mobile apps for iOS and Android platforms.</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>firstname</th><th>lastname</th><th>email</th><th>registrationDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>2024-01-30 18:17:55</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>2024-01-30 18:17:55</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>2024-01-30 18:17:55</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td><td>2024-01-30 18:17:55</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie.black@example.com</td><td>2024-01-30 18:17:55</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>studentId</th><th>programId</th><th>enrollmentDate</th></tr>
+<tr><th>(&#8594; Students.id)</th><th>(&#8594; Language_Programs.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-01 11:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>2023-01-01 12:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>2023-01-01 13:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>2023-01-01 14:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Student_Level</h2><table><thead>
+<tr><th>studentId</th><th>levelId</th></tr>
+<tr><th>(&#8594; Students.id)</th><th>(&#8594; Levels.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Student_Enrolled_Program_Level</h2><table><thead>
+<tr><th>studentId</th><th>programId</th><th>levelId</th></tr>
+<tr><th>(&#8594; Students.id)</th><th>(&#8594; Language_Programs.id)</th><th>(&#8594; Levels.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customer</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1987-06-15</td></tr>
+</tbody></table></div>
+
+<div><h2>AccountType</h2><table><thead>
+<tr><th>TypeID</th><th>AccountTypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Checking</td></tr>
+<tr><td>2</td><td>Savings</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Account</span></h2><table><thead>
+<tr><th>AccountNumber</th><th>Balance</th><th><span style="color:#1430b2">InterestRate</span></th><th><span style="color:#186e16"><span style="color:#186e16">ConsumerLending</span></span></th><th>ForeignKeyCustomerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Customer.CustomerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000.0</td><td><span style="color:#1430b2">15.0</span></td><td><span style="color:#186e16">Credit Card</span></td><td>None</td></tr>
+<tr><td>2</td><td>2000.0</td><td>10.0</td><td><span style="color:#186e16">Credit Card</span></td><td>None</td></tr>
+<tr><td>3</td><td>3000.0</td><td><span style="color:#1430b2">15.0</span></td><td><span style="color:#186e16">Personal Loan</span></td><td>None</td></tr>
+<tr><td>4</td><td>4000.0</td><td>12.0</td><td><span style="color:#186e16">Personal Loan</span></td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

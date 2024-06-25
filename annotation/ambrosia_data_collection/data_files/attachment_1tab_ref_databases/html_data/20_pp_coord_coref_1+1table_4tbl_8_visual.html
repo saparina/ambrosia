@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">JobRoles</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">Job_Title</span></span></th><th>NewsAgencyID</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Public Relations</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Public Relations</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Government Communications</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Government Communications</span></td><td>2</td></tr>
+<tr><td>5</td><td>Editorial Director</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">NewsAgencies</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Contacts</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Contact1@bbc.com</span></td></tr>
+<tr><td>2</td><td>Contact2@abcnews.com</td></tr>
+<tr><td>3</td><td>Contact3@nytimes.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleId</th><th>Title</th><th>Content</th><th>PublishDate</th><th>AuthorID</th><th>AgencyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Journalists.id)</th><th>(&#8594; NewsAgencies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article1</td><td>Content of article 1...</td><td>2022-07-01 10:00:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Article2</td><td>Content of article 2...</td><td>2022-07-02 10:00:00</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Article3</td><td>Content of article 3...</td><td>2022-07-03 10:00:00</td><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Journalists</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Contact</th><th>RoleID</th><th>ArticleID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; JobRoles.id)</th><th>(&#8594; Articles.ArticleId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael.johnson@example.com</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

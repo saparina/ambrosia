@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Producers</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">ProducerName</span></th><th><span style="color:#990000">Company</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Steven Spielberg</td><td>DreamWorks Pictures</td></tr>
+<tr><td>2</td><td>James Cameron</td><td>Lightstorm Entertainment</td></tr>
+<tr><td>3</td><td>Christopher Nolan</td><td>Syncopy Films</td></tr>
+<tr><td>4</td><td>Quentin Tarantino</td><td>A Band Apart</td></tr>
+<tr><td>5</td><td>Martin Scorsese</td><td>Sikelia Productions</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>DirectorName</th><th>YearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Steven Spielberg</td><td>49</td></tr>
+<tr><td>2</td><td>James Cameron</td><td>38</td></tr>
+<tr><td>3</td><td>Christopher Nolan</td><td>26</td></tr>
+<tr><td>4</td><td>Quentin Tarantino</td><td>32</td></tr>
+<tr><td>5</td><td>Martin Scorsese</td><td>57</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>MovieTitle</th><th>ReleaseYear</th><th>Genre</th><th>ProducerId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Producers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>E.T.</td><td>1982</td><td>Science-Fiction</td><td>1</td></tr>
+<tr><td>2</td><td>Avatar</td><td>2009</td><td>Adventure/Fantasy</td><td>2</td></tr>
+<tr><td>3</td><td>Inception</td><td>2010</td><td>Thriller</td><td>3</td></tr>
+<tr><td>4</td><td>Pulp Fiction</td><td>1994</td><td>Crime/Drama</td><td>4</td></tr>
+<tr><td>5</td><td>The Wolf of Wall Street</td><td>2013</td><td>Biographical Drama</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>ActorName</th><th>Age</th><th>FeePerMovie</th><th>MovieId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Movies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td><td>64</td><td>20000000</td><td>1</td></tr>
+<tr><td>2</td><td>Samuel L Jackson</td><td>72</td><td>1500000</td><td>1</td></tr>
+<tr><td>3</td><td>Leonardo DiCaprio</td><td>47</td><td>2500000</td><td>2</td></tr>
+<tr><td>4</td><td>Kate Winslet</td><td>45</td><td>1800000</td><td>2</td></tr>
+<tr><td>5</td><td>Johnny Depp</td><td>58</td><td>2000000</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmRatings</h2><table><thead>
+<tr><th>id</th><th>Rating</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>G</td><td>General Audience</td></tr>
+<tr><td>2</td><td>PG</td><td>Parental Guidance Suggested</td></tr>
+<tr><td>3</td><td>PG-13</td><td>Special parental guidance suggested for children under 13</td></tr>
+<tr><td>4</td><td>R</td><td>Restricted - Under 17 requires accompanying parent or adult guardian.</td></tr>
+<tr><td>5</td><td>NC-17</td><td>No one under 17 admitted</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieRatings</h2><table><thead>
+<tr><th>id</th><th>MovieId</th><th>RatingId</th></tr>
+<tr><th></th><th>(&#8594; Movies.id)</th><th>(&#8594; FilmRatings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Manufacturers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Company C</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Company D</td><td>001 Pine St</td></tr>
+<tr><td>5</td><td>Company E</td><td>246 Maple Ave</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Products</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">product_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Widget</td></tr>
+<tr><td>2</td><td>Gadget</td></tr>
+<tr><td>3</td><td>Tool</td></tr>
+<tr><td>4</td><td>Accessory</td></tr>
+<tr><td>5</td><td>Component</td></tr>
+</tbody></table></div>
+
+<div><h2>Manufacturers_Products</h2><table><thead>
+<tr><th>manufacturer_id</th><th>product_id</th></tr>
+<tr><th>(&#8594; Manufacturers.id)</th><th>(&#8594; Products.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>job_title</th><th>company_name</th><th>location</th><th>required_skills</th></tr>
+<tr><th></th><th>(&#8594; Manufacturers.name)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>Software Engineer</td><td>Company A</td><td>New York</td><td>Java, Python, C++</td></tr>
+<tr><td>Data Analyst</td><td>Company B</td><td>Los Angeles</td><td>SQL, R, Excel</td></tr>
+<tr><td>Project Manager</td><td>Company C</td><td>Chicago</td><td>PMP, Agile, Scrum</td></tr>
+<tr><td>Graphic Designer</td><td>Company D</td><td>San Francisco</td><td>Adobe Creative Suite, Sketch, Figma</td></tr>
+<tr><td>QA Tester</td><td>Company E</td><td>Boston</td><td>Jira, TestRail, Selenium</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

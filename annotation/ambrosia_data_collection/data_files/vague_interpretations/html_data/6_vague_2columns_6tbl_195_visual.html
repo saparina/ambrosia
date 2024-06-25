@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>major</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>20</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>19</td><td>Biology</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>21</td><td>Mathematics</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>22</td><td>Chemistry</td></tr>
+<tr><td>5</td><td>David Brown</td><td>23</td><td>Physics</td></tr>
+</tbody></table></div>
+
+<div><h2>Universities</h2><table><thead>
+<tr><th>id</th><th>universityName</th><th><span style="color:#990000">admissionRate</span></th><th><span style="color:#990000">ranking</span></th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>University of California</td><td>0.67</td><td>8</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>Stanford University</td><td>0.53</td><td>1</td><td>Palo Alto</td></tr>
+<tr><td>3</td><td>Harvard University</td><td>0.51</td><td>3</td><td>Boston</td></tr>
+<tr><td>4</td><td>Massachusetts Institute of Technology</td><td>0.89</td><td>2</td><td>Cambridge</td></tr>
+<tr><td>5</td><td>California Institute of Technology</td><td>0.11</td><td>6</td><td>Pasadena</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>id</th><th>departmentName</th><th>universityId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Universities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Department of Computer Science</td><td>1</td></tr>
+<tr><td>2</td><td>Department of Biology</td><td>2</td></tr>
+<tr><td>3</td><td>Department of Mathematics</td><td>3</td></tr>
+<tr><td>4</td><td>Department of Chemistry</td><td>4</td></tr>
+<tr><td>5</td><td>Department of Physics</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>studentID</th><th>courseID</th><th>semester</th><th>grade</th><th>enrollmentDate</th></tr>
+<tr><th>(&#8594; Students.id)</th><th>(&#8594; Courses.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Fall 2021</td><td>A</td><td>2021-08-25</td></tr>
+<tr><td>2</td><td>2</td><td>Spring 2022</td><td>B+</td><td>2022-01-10</td></tr>
+<tr><td>3</td><td>3</td><td>Summer 2022</td><td>A-</td><td>2022-05-20</td></tr>
+<tr><td>4</td><td>4</td><td>Fall 2022</td><td>A</td><td>2022-08-25</td></tr>
+<tr><td>5</td><td>5</td><td>Winter 2023</td><td>A</td><td>2023-01-10</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>id</th><th>courseCode</th><th>courseTitle</th><th>creditHours</th><th>departmentId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Departments.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CS101</td><td>Introduction to Computer Science</td><td>4</td><td>1</td></tr>
+<tr><td>2</td><td>BIOL101</td><td>General Biology</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>MATH101</td><td>Elementary Calculus</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>CH101</td><td>General Chemistry</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>PHYS101</td><td>Classical Mechanics</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

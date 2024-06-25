@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Addresses</h2><table><thead>
+<tr><th>AddressID</th><th>StreetAddress</th><th>City</th><th>State</th><th>ZipCode</th><th>StudentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Students.StudentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>Anytown</td><td>CA</td><td>90210</td><td>1</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>Othertown</td><td>NY</td><td>10001</td><td>2</td></tr>
+<tr><td>3</td><td>789 Oak St</td><td>Anytown</td><td>TX</td><td>77301</td><td>3</td></tr>
+<tr><td>4</td><td>101 Pine St</td><td>Townville</td><td>IL</td><td>60601</td><td>4</td></tr>
+<tr><td>5</td><td>111 Maple Ave</td><td>Villagetown</td><td>NJ</td><td>07601</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>PhoneNumbers</h2><table><thead>
+<tr><th>PhoneNumberID</th><th>Number</th><th>Type</th><th>StudentID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Students.StudentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>(555) 123-4567</td><td>Home</td><td>1</td></tr>
+<tr><td>2</td><td>(555) 987-6543</td><td>Mobile</td><td>2</td></tr>
+<tr><td>3</td><td>(555) 321-0987</td><td>Work</td><td>3</td></tr>
+<tr><td>4</td><td>(555) 765-4321</td><td>Home</td><td>4</td></tr>
+<tr><td>5</td><td>(555) 135-7890</td><td>Mobile</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>EmailAddresses</h2><table><thead>
+<tr><th>EmailAddressID</th><th>Email</th><th>IsPrimary</th><th>StudentID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Students.StudentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>johndoe@example.com</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>janedoe@example.com</td><td>0</td><td>1</td></tr>
+<tr><td>3</td><td>emilywilliams@example.net</td><td>1</td><td>4</td></tr>
+<tr><td>4</td><td>davidbrown@example.org</td><td>0</td><td>5</td></tr>
+<tr><td>5</td><td>michaeljohnson@example.edu</td><td>1</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>CourseID</th><th>Semester</th><th>Year</th><th>Grade</th><th>StudentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Students.StudentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Fall</td><td>2021</td><td>A</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>Spring</td><td>2022</td><td>B+</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>Summer</td><td>2022</td><td>A-</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>Fall</td><td>2021</td><td>B</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>Winter</td><td>2022</td><td>Incomplete</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>ExamScores</h2><table><thead>
+<tr><th>ScoreID</th><th><span style="color:#990000">Month</span></th><th><span style="color:#990000">Day</span></th><th>ExamDescription</th><th>Score</th><th>StudentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Students.StudentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10</td><td>15</td><td>Final Exam</td><td>95</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>20</td><td>Midterm</td><td>85</td><td>2</td></tr>
+<tr><td>3</td><td>6</td><td>5</td><td>Quiz</td><td>90</td><td>3</td></tr>
+<tr><td>4</td><td>12</td><td>10</td><td>Project</td><td>92</td><td>4</td></tr>
+<tr><td>5</td><td>3</td><td>15</td><td>Assignment</td><td>88</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

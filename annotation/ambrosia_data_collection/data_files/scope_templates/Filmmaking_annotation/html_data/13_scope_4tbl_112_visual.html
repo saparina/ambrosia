@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Post_Production_Sound_Mixers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>10</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>8</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>7</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>6</td></tr>
+<tr><td>5</td><td>Tom Green</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Recording_Environments</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">environment_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Isolation Booths</td></tr>
+<tr><td>2</td><td>Live Studio</td></tr>
+<tr><td>3</td><td>Outdoor Location</td></tr>
+<tr><td>4</td><td>Foley Stage</td></tr>
+<tr><td>5</td><td>Dubbing Theatre</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmProjects</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film A</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>Film B</td><td>2023-02-01</td></tr>
+<tr><td>3</td><td>Film C</td><td>2023-03-01</td></tr>
+<tr><td>4</td><td>Film D</td><td>2023-04-01</td></tr>
+<tr><td>5</td><td>Film E</td><td>2023-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Films_with_Sound_Mixing</h2><table><thead>
+<tr><th>film_id</th><th>mixer_id</th></tr>
+<tr><th>(&#8594; FilmProjects.id)</th><th>(&#8594; Post_Production_Sound_Mixers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Sound_Mixer_Environment_History</h2><table><thead>
+<tr><th>sound_mixer_id</th><th>environment_id</th><th>start_year</th><th>end_year</th></tr>
+<tr><th>(&#8594; Post_Production_Sound_Mixers.id)</th><th>(&#8594; Recording_Environments.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2013</td><td>2017</td></tr>
+<tr><td>1</td><td>2</td><td>2017</td><td>2020</td></tr>
+<tr><td>2</td><td>2</td><td>2015</td><td>2019</td></tr>
+<tr><td>2</td><td>3</td><td>2019</td><td>2022</td></tr>
+<tr><td>3</td><td>3</td><td>2014</td><td>2018</td></tr>
+<tr><td>2</td><td>1</td><td>2015</td><td>2019</td></tr>
+<tr><td>3</td><td>1</td><td>2014</td><td>2018</td></tr>
+<tr><td>4</td><td>1</td><td>None</td><td>None</td></tr>
+<tr><td>5</td><td>1</td><td>None</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

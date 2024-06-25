@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>New York</td></tr>
+<tr><td>2</td><td>LAX International</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>ORD International</td><td>Chicago</td></tr>
+<tr><td>4</td><td>ATL Hartsfield-Jackson</td><td>Atlanta</td></tr>
+<tr><td>5</td><td>SEA Seattle/Tacoma</td><td>Seattle</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>id</th><th>airportId</th><th>terminalName</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Terminal 1</td></tr>
+<tr><td>2</td><td>1</td><td>Terminal 2</td></tr>
+<tr><td>3</td><td>1</td><td>Terminal 3</td></tr>
+<tr><td>4</td><td>2</td><td>Terminal A</td></tr>
+<tr><td>5</td><td>2</td><td>Terminal B</td></tr>
+<tr><td>6</td><td>3</td><td>Terminal C</td></tr>
+<tr><td>7</td><td>3</td><td>Terminal D</td></tr>
+</tbody></table></div>
+
+<div><h2>Gates</h2><table><thead>
+<tr><th>id</th><th>terminalId</th><th>gateNumber</th></tr>
+<tr><th></th><th>(&#8594; Terminals.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10</td></tr>
+<tr><td>2</td><td>1</td><td>20</td></tr>
+<tr><td>3</td><td>1</td><td>30</td></tr>
+<tr><td>4</td><td>2</td><td>10</td></tr>
+<tr><td>5</td><td>2</td><td>20</td></tr>
+<tr><td>6</td><td>3</td><td>10</td></tr>
+<tr><td>7</td><td>3</td><td>20</td></tr>
+<tr><td>8</td><td>4</td><td>10</td></tr>
+<tr><td>9</td><td>4</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flightID</th><th>departureGateId</th><th>arrivalGateId</th><th>departureTime</th><th>arrivalTime</th><th>departureAirportId</th><th>arrivalAirportId</th></tr>
+<tr><th></th><th>(&#8594; Gates.id)</th><th>(&#8594; Gates.id)</th><th></th><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-09-01 07:00:00</td><td>2022-09-01 08:00:00</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-09-01 08:00:00</td><td>2022-09-01 09:00:00</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-09-01 09:00:00</td><td>2022-09-01 10:00:00</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-09-01 10:00:00</td><td>2022-09-01 11:00:00</td><td>1</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-09-01 11:00:00</td><td>2022-09-01 12:00:00</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RetailOutlets</span></h2><table><thead>
+<tr><th>id</th><th>type</th><th>location</th><th>terminalId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Terminals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Duty-Free Shop</span></td><td><span style="color:#006600">Terminal 3</span></td><td>3</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Duty-Free Shop</span></td><td>Concourse E</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Souvenir Store</span></td><td><span style="color:#006600">Terminal 3</span></td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Souvenir Store</span></td><td>Concourse F</td><td>2</td></tr>
+<tr><td>5</td><td>Bookshop</td><td>Terminal 2</td><td>2</td></tr>
+<tr><td>6</td><td>Coffee Shop</td><td>Terminal 1</td><td>1</td></tr>
+<tr><td>7</td><td>Restaurant</td><td><span style="color:#006600">Terminal 3</span></td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

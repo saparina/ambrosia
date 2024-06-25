@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airport</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>San Francisco International</td><td>San Francisco</td><td>USA</td></tr>
+<tr><td>2</td><td>London Heathrow</td><td>London</td><td>UK</td></tr>
+<tr><td>3</td><td>Dubai International</td><td>Dubai</td><td>UAE</td></tr>
+<tr><td>4</td><td>Tokyo Haneda</td><td>Tokyo</td><td>Japan</td></tr>
+<tr><td>5</td><td>New York JFK</td><td>New York</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminal</h2><table><thead>
+<tr><th>id</th><th>number</th><th>capacity</th><th>airportId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airport.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>30</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>28</td><td>1</td></tr>
+<tr><td>3</td><td>1</td><td>27</td><td>2</td></tr>
+<tr><td>4</td><td>2</td><td>26</td><td>2</td></tr>
+<tr><td>5</td><td>1</td><td>25</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Gate</h2><table><thead>
+<tr><th>id</th><th>gateNumber</th><th>terminalId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Terminal.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>flightNumber</th><th>airlineName</th><th>departureTime</th><th>arrivalTime</th><th>originAirportId</th><th>destinationAirportId</th><th>gateId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Airport.id)</th><th>(&#8594; Airport.id)</th><th>(&#8594; Gate.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA101</td><td>American Airlines</td><td>2022-12-10 09:00:00</td><td>2022-12-10 12:00:00</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>BA202</td><td>British Airways</td><td>2022-12-11 11:00:00</td><td>2022-12-11 15:00:00</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>EK310</td><td>Emirates</td><td>2022-12-12 08:00:00</td><td>2022-12-12 14:00:00</td><td>3</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>UA888</td><td>United Airlines</td><td>2022-12-13 09:00:00</td><td>2022-12-13 12:00:00</td><td>1</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>NH100</td><td>All Nippon Airways</td><td>2022-12-14 11:00:00</td><td>2022-12-14 15:00:00</td><td>4</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FlightOperation</span></h2><table><thead>
+<tr><th>id</th><th>operationType</th><th>details</th><th>facilities</th><th>flightId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Flight.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Departure</span></td><td>Check-in counters open at 6am</td><td>Lounge Access</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Departure</span></td><td>Security checkpoint opens at 5:30am</td><td><span style="color:#006600">Free WiFi</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Arrival</span></td><td>Customs and immigration hall open at 6am</td><td>Lounge Access</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Arrival</span></td><td>Baggage claim area opens at 5:30am</td><td><span style="color:#006600">Free WiFi</span></td><td>4</td></tr>
+<tr><td>5</td><td><span style="color:#990000">Departure</span></td><td>Gates close at 8:45am</td><td></td><td>5</td></tr>
+<tr><td>6</td><td><span style="color:#990000">Arrival</span></td><td>Gates open at 7am</td><td></td><td>6</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

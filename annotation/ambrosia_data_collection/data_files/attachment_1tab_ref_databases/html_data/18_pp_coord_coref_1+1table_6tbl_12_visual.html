@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>CompanyName</th><th>Address</th><th>City</th><th>State</th><th>ZipCode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St</td><td>New York</td><td>NY</td><td>10001</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St</td><td>Los Angeles</td><td>CA</td><td>90001</td></tr>
+<tr><td>3</td><td>Company C</td><td>789 Oak St</td><td>Chicago</td><td>IL</td><td>60601</td></tr>
+<tr><td>4</td><td>Company D</td><td>001 Pine St</td><td>Houston</td><td>TX</td><td>77001</td></tr>
+<tr><td>5</td><td>Company E</td><td>111 Fir St</td><td>Miami</td><td>FL</td><td>33101</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPosts</span></h2><table><thead>
+<tr><th>JobPostID</th><th><span style="color:#990000"><span style="color:#990000">Title</span></span></th><th>Description</th><th>Location</th><th>PostedDate</th><th>DeadlineDate</th><th>CompanyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Real Estate Agent</span></td><td>Sell properties on commission</td><td>Anywhere</td><td>2022-01-01</td><td>2022-02-01</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Real Estate Agent</span></td><td>Assist clients buying/selling homes</td><td>Anywhere</td><td>2022-01-15</td><td>2022-02-15</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Property Manager</span></td><td>Manage rental properties</td><td>Anywhere</td><td>2022-01-05</td><td>2022-02-05</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Property Manager</span></td><td>Oversee maintenance and leasing of commercial buildings</td><td>Anywhere</td><td>2022-01-10</td><td>2022-02-10</td><td>4</td></tr>
+<tr><td>5</td><td>Real Estate Analyst</td><td>Analyze market trends and provide insights</td><td>Anywhere</td><td>2022-01-02</td><td>2022-02-02</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>RealEstateJobTypes</h2><table><thead>
+<tr><th>TypeID</th><th>TypeDescription</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Residential Sales</td></tr>
+<tr><td>2</td><td>Commercial Leasing</td></tr>
+<tr><td>3</td><td>Property Management</td></tr>
+<tr><td>4</td><td>Real Estate Analysis</td></tr>
+<tr><td>5</td><td>Appraisal Services</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">JobRoles</span></h2><table><thead>
+<tr><th>RoleID</th><th>RoleTitle</th><th><span style="color:#006600">CommissionRate</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sales Agent</td><td><span style="color:#006600">5%</span></td></tr>
+<tr><td>2</td><td>Associate Broker</td><td>6%</td></tr>
+<tr><td>3</td><td>Broker</td><td>7%</td></tr>
+<tr><td>4</td><td>Leasing Specialist</td><td><span style="color:#006600">5%</span></td></tr>
+<tr><td>5</td><td>Asset Manager</td><td>N/A</td></tr>
+</tbody></table></div>
+
+<div><h2>AssignedJobs</h2><table><thead>
+<tr><th>AssignmentID</th><th>JobPostID</th><th>RoleID</th><th>TypeID</th></tr>
+<tr><th></th><th>(&#8594; JobPosts.JobPostID)</th><th>(&#8594; JobRoles.RoleID)</th><th>(&#8594; RealEstateJobTypes.TypeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

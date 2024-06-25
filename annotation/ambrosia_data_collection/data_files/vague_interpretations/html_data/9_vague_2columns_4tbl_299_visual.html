@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Studio</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">studio_name</span></th><th><span style="color:#990000">address</span></th><th>podcast</th><th>genre</th><th>rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Studio A</td><td>123 Main St.</td><td>Podcast XYZ</td><td>Comedy</td><td>4.8</td></tr>
+<tr><td>2</td><td>Studio B</td><td>456 Elm Rd.</td><td>Podcast ABC</td><td>Drama</td><td>4.7</td></tr>
+</tbody></table></div>
+
+<div><h2>SubscriptionPlan</h2><table><thead>
+<tr><th>plan_id</th><th>plan_name</th><th>monthly_price</th><th>annual_price</th><th>features</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Basic Plan</td><td>9.99</td><td>99.0</td><td>Access to all shows</td></tr>
+<tr><td>2</td><td>Premium Plan</td><td>14.99</td><td>149.0</td><td>Ad-free experience</td></tr>
+</tbody></table></div>
+
+<div><h2>ContentLibrary</h2><table><thead>
+<tr><th>content_id</th><th>title</th><th>description</th><th>duration</th><th>release_date</th><th>category</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie A</td><td>A thrilling action movie</td><td>120</td><td>2022-01-01</td><td>Action</td></tr>
+<tr><td>2</td><td>TV Show B</td><td>An exciting crime drama series</td><td>480</td><td>2021-10-01</td><td>Crime Drama</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th><th>password</th><th>subscription_plan_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; SubscriptionPlan.plan_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>password123</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>passwordabc</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>PlayHistory</h2><table><thead>
+<tr><th>history_id</th><th>customer_id</th><th>content_id</th><th>play_date</th></tr>
+<tr><th></th><th>(&#8594; Customer.customer_id)</th><th>(&#8594; ContentLibrary.content_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-02 12:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-01-03 15:30:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

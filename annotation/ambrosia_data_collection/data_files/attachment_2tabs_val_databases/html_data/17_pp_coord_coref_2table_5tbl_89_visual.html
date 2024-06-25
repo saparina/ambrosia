@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-07-03</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-10-15</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>HireDate</th><th>Position</th><th>Salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Johnson</td><td>2015-06-01</td><td>Manager</td><td>60000.0</td></tr>
+<tr><td>2</td><td>Bob</td><td>Williams</td><td>2018-01-01</td><td>Accountant</td><td>50000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Balance_Sheet</span></h2><table><thead>
+<tr><th>ID</th><th>BalanceAmount</th><th>ReportedDate</th></tr>
+<tr><th></th><th></th><th>(&#8594; Employees.HireDate)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000000.0</td><td><span style="color:#006600">2010-12-10</span></td></tr>
+<tr><td>2</td><td>1200000.0</td><td>2011-01-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Income_Statement</span></h2><table><thead>
+<tr><th>StatementID</th><th>TotalRevenue</th><th>Costs</th><th>NetProfit</th><th>ReportedDate</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Employees.HireDate)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000000.0</td><td>500000.0</td><td>500000.0</td><td><span style="color:#006600">2010-12-10</span></td></tr>
+<tr><td>2</td><td>1200000.0</td><td>600000.0</td><td>600000.0</td><td>2011-01-05</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>Amount</th><th>Type</th><th>TransactionDate</th><th>CustomerID</th><th>EmployeeID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Employees.EmployeeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000.0</td><td>Deposit</td><td>2021-01-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>-500.0</td><td>Withdrawal</td><td>2021-01-02</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

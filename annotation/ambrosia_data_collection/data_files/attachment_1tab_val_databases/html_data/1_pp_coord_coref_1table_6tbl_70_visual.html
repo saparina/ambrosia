@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">news</span></h2><table><thead>
+<tr><th>id</th><th>source</th><th>article</th><th>author_id</th><th>category_id</th><th>publication_id</th><th>tag_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; authors.id)</th><th>(&#8594; categories.id)</th><th>(&#8594; publications.id)</th><th>(&#8594; tags.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Press Release</span></td><td><span style="color:#006600">Britain Is Cutting Taxes Again. Why Now?</span></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Press Release</span></td><td>Global Warming Threatens Coastal Cities.</td><td>2</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Interview</span></td><td><span style="color:#006600">Britain Is Cutting Taxes Again. Why Now?</span></td><td>1</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Interview</span></td><td>The Impact of AI on Jobs.</td><td>3</td><td>3</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>bio</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>A renowned journalist.</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>An experienced reporter.</td></tr>
+</tbody></table></div>
+
+<div><h2>categories</h2><table><thead>
+<tr><th>id</th><th>title</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td></tr>
+<tr><td>2</td><td>Economy</td></tr>
+</tbody></table></div>
+
+<div><h2>publications</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Daily News</td><td>New York City</td></tr>
+<tr><td>2</td><td>Financial Times</td><td>London</td></tr>
+</tbody></table></div>
+
+<div><h2>tags</h2><table><thead>
+<tr><th>id</th><th>text</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>#Taxes</td></tr>
+<tr><td>2</td><td>#UK</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>Location A</td></tr>
+<tr><td>2</td><td>Company B</td><td>Location B</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>companyId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Company.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Education</h2><table><thead>
+<tr><th>id</th><th>level</th><th>employeeId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Employee.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Doctor of Dental Surgery</td><td>1</td></tr>
+<tr><td>2</td><td>Bachelor of Science</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Specialty</h2><table><thead>
+<tr><th>id</th><th>type</th><th>employeeId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Employee.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Orthodontics</td><td>1</td></tr>
+<tr><td>2</td><td>Endodontics</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Dentists</span></h2><table><thead>
+<tr><th>id</th><th>dentalCareer</th><th>educationLevel</th><th>specialtyType</th><th>employeeId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Employee.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Orthodontist</span></td><td><span style="color:#006600">Doctor of Dental Surgery</span></td><td>Orthodontics</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Orthodontist</span></td><td>Master of Science</td><td>Orthodontics</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Periodontist</span></td><td><span style="color:#006600">Doctor of Dental Surgery</span></td><td>Periodontics</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Periodontist</span></td><td>Bachelor of Science</td><td>Periodontics</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

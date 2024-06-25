@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Hotel</h2><table><thead>
+<tr><th>hotelID</th><th>name</th><th>address</th><th>city</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Ritz</td><td>123 Main St.</td><td>New York</td></tr>
+<tr><td>2</td><td>Hilton Garden Inn</td><td>456 Elm St.</td><td>Chicago</td></tr>
+</tbody></table></div>
+
+<div><h2>Room</h2><table><thead>
+<tr><th>roomID</th><th>hotelID</th><th>type</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Hotel.hotelID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Luxury Suite</td><td>300.0</td></tr>
+<tr><td>2</td><td>1</td><td>Standard Room</td><td>150.0</td></tr>
+<tr><td>3</td><td>2</td><td>Deluxe Room</td><td>200.0</td></tr>
+<tr><td>4</td><td>2</td><td>Economy Room</td><td>100.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Amenity</h2><table><thead>
+<tr><th>amenityID</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Swimming pool with sun loungers</td></tr>
+<tr><td>2</td><td>Fitness center with sauna and steam rooms</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Feature</span></h2><table><thead>
+<tr><th>featureID</th><th>amenityID</th><th>Leisure_Features</th><th>City</th></tr>
+<tr><th></th><th>(&#8594; Amenity.amenityID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#990000">Swimming Pool</span></td><td><span style="color:#006600">Miami</span></td></tr>
+<tr><td>2</td><td>2</td><td><span style="color:#990000">Swimming Pool</span></td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>1</td><td><span style="color:#990000">Hot Tub</span></td><td><span style="color:#006600">Miami</span></td></tr>
+<tr><td>4</td><td>2</td><td><span style="color:#990000">Hot Tub</span></td><td>Dallas</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>bookingID</th><th>customerName</th><th>checkInDate</th><th>checkOutDate</th><th>roomID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Room.roomID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2022-09-01</td><td>2022-09-07</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2022-08-15</td><td>2022-08-21</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

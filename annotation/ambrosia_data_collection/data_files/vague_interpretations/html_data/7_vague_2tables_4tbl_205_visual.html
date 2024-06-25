@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Textbooks</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>author</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Physics for Scientists and Engineers</td><td>Serway & Jewett</td></tr>
+<tr><td>3</td><td>Chemistry: The Central Science</td><td>Paula B. Welch</td></tr>
+<tr><td>4</td><td>Biology: The Dynamic Universe</td><td>James S. Aber</td></tr>
+<tr><td>5</td><td>Mathematical Methods for Physicists</td><td>Michael Abramowitz</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Supplies</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>quantity_needed</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lab Coats</td><td>10</td></tr>
+<tr><td>2</td><td>Goggles</td><td>20</td></tr>
+<tr><td>3</td><td>Bunsen Burners</td><td>8</td></tr>
+<tr><td>4</td><td>Scales</td><td>3</td></tr>
+<tr><td>5</td><td>Beakers</td><td>25</td></tr>
+</tbody></table></div>
+
+<div><h2>Projects</h2><table><thead>
+<tr><th>id</th><th>project_name</th><th>description</th><th>supplies_id</th><th>textbook_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Supplies.id)</th><th>(&#8594; Textbooks.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Electric Circuit Experiment</td><td>Designing an electric circuit using various components.</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Acids and Bases Laboratory</td><td>Identifying different types of acids and bases.</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Molecular Model Building</td><td>Creating molecular models based on chemical formulas.</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Optical Spectroscopy</td><td>Analyzing light absorption patterns of elements and compounds.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Calorimetry Measurements</td><td>Measuring heat capacity using a calorimeter.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>student_name</th><th>age</th><th>class_id</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Smith</td><td>16</td><td>1</td></tr>
+<tr><td>2</td><td>Bob Johnson</td><td>17</td><td>1</td></tr>
+<tr><td>3</td><td>Charlie Brown</td><td>16</td><td>2</td></tr>
+<tr><td>4</td><td>Diana Prince</td><td>17</td><td>2</td></tr>
+<tr><td>5</td><td>Emma Watson</td><td>16</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>id</th><th>teacher_name</th><th>subject</th><th>class_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Students.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr. Green</td><td>Physics</td><td>1</td></tr>
+<tr><td>2</td><td>Ms. Blue</td><td>Chemistry</td><td>2</td></tr>
+<tr><td>3</td><td>Dr. Red</td><td>Biology</td><td>3</td></tr>
+<tr><td>4</td><td>Professor White</td><td>Mathematics</td><td>1</td></tr>
+<tr><td>5</td><td>Assistant Professor Black</td><td>Computer Science</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

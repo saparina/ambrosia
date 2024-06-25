@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Photojournalists</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-06-23</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1991-07-05</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>1985-10-02</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>1993-01-10</td></tr>
+<tr><td>5</td><td>David Brown</td><td>1989-05-20</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Location</th><th>Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Protest Rally</td><td>Downtown</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>Election Day</td><td>City Hall</td><td>2022-11-08</td></tr>
+<tr><td>3</td><td>Festival</td><td>Park</td><td>2022-07-15</td></tr>
+<tr><td>4</td><td>Concert</td><td>Arena</td><td>2022-10-20</td></tr>
+<tr><td>5</td><td>Marathon</td><td>Streets</td><td>2022-04-10</td></tr>
+</tbody></table></div>
+
+<div><h2>Photos</h2><table><thead>
+<tr><th>id</th><th>FilePath</th><th>Caption</th><th>TakenOn</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>/path/to/photo1.jpg</td><td>Riot police at protest rally</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>/path/to/photo2.jpg</td><td>Voters waiting to vote</td><td>2022-11-08</td></tr>
+<tr><td>3</td><td>/path/to/photo3.jpg</td><td>Crowd enjoying music</td><td>2022-07-15</td></tr>
+<tr><td>4</td><td>/path/to/photo4.jpg</td><td>Musician performing on stage</td><td>2022-10-20</td></tr>
+<tr><td>5</td><td>/path/to/photo5.jpg</td><td>Runners crossing finish line</td><td>2022-04-10</td></tr>
+</tbody></table></div>
+
+<div><h2>PublishedPhotos</h2><table><thead>
+<tr><th>id</th><th>AssignmentId</th><th>PhotoId</th><th>PublicationDate</th></tr>
+<tr><th></th><th>(&#8594; Assignments.id)</th><th>(&#8594; Photos.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-02</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-11-10</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-07-20</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-10-25</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-04-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">Origin</span></th></tr>
+<tr><th></th><th>(&#8594; Events.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th><th>major</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>Physics</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>Biology</td></tr>
+<tr><td>5</td><td>Emily</td><td>White</td><td>Chemistry</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Academics</span></h2><table><thead>
+<tr><th>academicID</th><th><span style="color:#990000"><span style="color:#990000">title</span></span></th><th>submissionDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Dissertation</span></td><td>2023-12-01</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Thesis Proposal</span></td><td>2023-12-01</td></tr>
+<tr><td>3</td><td>Research Paper</td><td>2023-12-01</td></tr>
+<tr><td>4</td><td>Journal Article</td><td>2023-12-01</td></tr>
+<tr><td>5</td><td>Conference Presentation</td><td>2023-12-01</td></tr>
+</tbody></table></div>
+
+<div><h2>WritingSubmissions</h2><table><thead>
+<tr><th>writingID</th><th>studentID</th><th>type</th></tr>
+<tr><th></th><th>(&#8594; Students.studentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Essay</td></tr>
+<tr><td>2</td><td>2</td><td>Literature Review</td></tr>
+<tr><td>3</td><td>3</td><td>Experimental Report</td></tr>
+<tr><td>4</td><td>4</td><td>Case Study</td></tr>
+<tr><td>5</td><td>5</td><td>Policy Analysis</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Supervisors</span></h2><table><thead>
+<tr><th>supervisorID</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Dr. Jane Smith</span></td></tr>
+<tr><td>2</td><td>Dr. John Doe</td></tr>
+<tr><td>3</td><td>Dr. Michael Brown</td></tr>
+<tr><td>4</td><td>Dr. Alice Green</td></tr>
+<tr><td>5</td><td>Dr. Emily White</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>assignmentID</th><th>academicID</th><th>supervisorID</th></tr>
+<tr><th></th><th>(&#8594; Academics.academicID)</th><th>(&#8594; Supervisors.supervisorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>3</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>SubmissionDetails</h2><table><thead>
+<tr><th>detailID</th><th>writingID</th><th>submissionDate</th><th>wordCount</th><th>grade</th></tr>
+<tr><th></th><th>(&#8594; WritingSubmissions.writingID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-12-01</td><td>2000</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>2023-12-01</td><td>3000</td><td>A+</td></tr>
+<tr><td>3</td><td>3</td><td>2023-12-01</td><td>2500</td><td>A</td></tr>
+<tr><td>4</td><td>4</td><td>2023-12-01</td><td>3500</td><td>A-</td></tr>
+<tr><td>5</td><td>5</td><td>2023-12-01</td><td>2800</td><td>B+</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

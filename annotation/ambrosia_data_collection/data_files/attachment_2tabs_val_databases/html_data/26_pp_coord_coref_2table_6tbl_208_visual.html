@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Ballrooms</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>seating_capacity</th><th>price</th><th>availability</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Hall</td><td>300</td><td>8</td><td>1</td></tr>
+<tr><td>2</td><td>Conference Room</td><td><span style="color:#006600">100</span></td><td>6</td><td>1</td></tr>
+<tr><td>3</td><td>Executive Suite</td><td>50</td><td>10</td><td>1</td></tr>
+<tr><td>4</td><td>Board Room</td><td>20</td><td>12</td><td>1</td></tr>
+<tr><td>5</td><td>Meeting Room A</td><td>75</td><td>9</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">GreenRooms</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>seating_capacity</th><th>price</th><th>availability</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terrace Garden</td><td>200</td><td>7</td><td>1</td></tr>
+<tr><td>2</td><td>Rooftop Lounge</td><td>150</td><td>9</td><td>1</td></tr>
+<tr><td>3</td><td>Poolside Patio</td><td><span style="color:#006600">100</span></td><td>8</td><td>1</td></tr>
+<tr><td>4</td><td>Gazebo</td><td>50</td><td>10</td><td>1</td></tr>
+<tr><td>5</td><td>Foyer</td><td>30</td><td>7</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>event_id</th><th>ballroom_id</th><th>greenroom_id</th><th>event_name</th><th>date</th></tr>
+<tr><th></th><th>(&#8594; Ballrooms.id)</th><th>(&#8594; GreenRooms.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Annual Conference</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>None</td><td>Company Meeting</td><td>2023-02-15</td></tr>
+<tr><td>3</td><td>None</td><td>2</td><td>Wedding Reception</td><td>2023-03-20</td></tr>
+<tr><td>4</td><td>3</td><td>None</td><td>Product Launch</td><td>2023-04-01</td></tr>
+<tr><td>5</td><td>4</td><td>4</td><td>Holiday Party</td><td>2023-12-20</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>guest_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th>event_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Events.event_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+0987654321</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td><td>+1122334455</td><td>3</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>bob.williams@example.com</td><td>+2233445566</td><td>4</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Miller</td><td>charlie.miller@example.com</td><td>+3344556677</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>booking_id</th><th>guest_id</th><th>event_date</th><th>special_requests</th></tr>
+<tr><th></th><th>(&#8594; Guests.guest_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-02 18:00:00</td><td>Vegan meal option</td></tr>
+<tr><td>2</td><td>2</td><td>2023-02-16 14:00:00</td><td>Gluten-free menu</td></tr>
+<tr><td>3</td><td>3</td><td>2023-03-21 20:00:00</td><td>Extra chairs required</td></tr>
+<tr><td>4</td><td>4</td><td>2023-04-02 19:00:00</td><td>Music system setup</td></tr>
+<tr><td>5</td><td>5</td><td>2023-12-21 22:00:00</td><td>Extended bar hours</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

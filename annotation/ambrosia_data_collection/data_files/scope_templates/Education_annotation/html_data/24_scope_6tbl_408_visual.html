@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Libraries</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Library A</td><td>123 Main St.</td><td>555-1234</td></tr>
+<tr><td>2</td><td>Library B</td><td>456 Elm St.</td><td>555-5678</td></tr>
+<tr><td>3</td><td>Library C</td><td>789 Oak St.</td><td>555-9012</td></tr>
+<tr><td>4</td><td>Library D</td><td>321 Pine St.</td><td>555-1357</td></tr>
+<tr><td>5</td><td>Library E</td><td>654 Fir St.</td><td>555-1415</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Collections</span></h2><table><thead>
+<tr><th>collection_id</th><th><span style="color:#990000">collection_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Children's Books</td></tr>
+<tr><td>2</td><td>Young Adult</td></tr>
+<tr><td>3</td><td>Non-Fiction</td></tr>
+<tr><td>4</td><td>Biography</td></tr>
+<tr><td>5</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2>Libraries_Collections</h2><table><thead>
+<tr><th>library_id</th><th>collection_id</th></tr>
+<tr><th>(&#8594; Libraries.id)</th><th>(&#8594; Collections.collection_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>IATA_Code</th><th>ICAA_Code</th><th>Latitude</th><th>Longitude</th><th>Elevation</th><th>Timezone</th><th>Direction_Indicator</th><th>Surface_Area</th><th>Movement_Area</th><th>Runway_Length</th><th><span style="color:#990000">City</span></th><th><span style="color:#990000">State</span></th><th>Phone_Number</th><th>Website</th><th>Email</th><th>Year_Established</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John F Kennedy International Airport</td><td>JFK</td><td>N7988</td><td>-73.6954</td><td>-40.6452</td><td>13</td><td>-5</td><td>R</td><td>1627.4</td><td>1627.4</td><td>3147.0</td><td>New York</td><td>Queens</td><td>+1-800-222-1222</td><td>https://www.jfkairport.com/</td><td>info@jfkairport.com</td><td>1943</td></tr>
+<tr><td>2</td><td>Los Angeles International Airport</td><td>LAX</td><td>LACI</td><td>-118.4053</td><td>33.9435</td><td>279</td><td>-8</td><td>W</td><td>2560.0</td><td>2560.0</td><td>9899.0</td><td>Los Angeles</td><td>Los Angeles County</td><td>+1-855-463-5252</td><td>https://www.flylax.com/</td><td>information@flylax.com</td><td>1937</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>Flight_ID</th><th>Origin_Airport</th><th>Destination_Airport</th><th>Departure_Time</th><th>Arrival_Time</th><th>Carrier_Airlines</th><th>Aircraft_Type</th><th>Number_of_Passengers</th><th>Flight_Status</th><th>Gate_Number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>LAX</td><td>2023-01-01 08:00:00</td><td>2023-01-01 11:00:00</td><td>American Airlines</td><td>Boeing 787 Dreamliner</td><td>250</td><td>On Time</td><td>10</td></tr>
+<tr><td>2</td><td>Dallas/Fort Worth International Airport</td><td>Heathrow Airport</td><td>2023-01-02 14:00:00</td><td>2023-01-02 19:00:00</td><td>British Airways</td><td>Boeing 747 Jumbo Jet</td><td>300</td><td>On Time</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilots</h2><table><thead>
+<tr><th>Pilot_Id</th><th>FirstName</th><th>LastName</th><th>License_Number</th><th>Date_Of_Birth</th><th>Total_Flight_Hours</th><th>Rating</th><th>Current_Assignment</th><th>Hire_Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>ABCD1234</td><td>1985-06-15</td><td>5000</td><td>ATP</td><td>Captain</td><td>2015-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>EFGH5678</td><td>1990-09-20</td><td>4000</td><td>ATP</td><td>Co-pilot</td><td>2018-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>Passenger_Id</th><th>FirstName</th><th>LastName</th><th>Date_Of_Birth</th><th>Nationality</th><th>Passport_Number</th><th>Contact_Phone_Number</th><th>Seat_Preference</th><th>Special_Assistance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Johnson</td><td>1985-07-25</td><td>USA</td><td>US123456789</td><td>+1-555-123-4567</td><td>Window</td><td>0</td></tr>
+<tr><td>2</td><td>Bob</td><td>Williams</td><td>1990-03-10</td><td>UK</td><td>GB987654321</td><td>+44-777-123-4567</td><td>Aisle</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Baggage</h2><table><thead>
+<tr><th>Bag_Id</th><th>Flight_Id</th><th>Owner_FirstName</th><th>Owner_LastName</th><th>Size_Inches</th><th>Weight_Kgs</th><th>Description</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Flights.Flight_Id)</th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John</td><td>Smith</td><td>22x15x10</td><td>10.0</td><td>Business suit and laptop</td><td>Checked</td></tr>
+<tr><td>2</td><td>2</td><td>Jane</td><td>Doe</td><td>21x14x9</td><td>8.0</td><td>Personal items and toiletries</td><td>Carry on</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>Aircraft_Id</th><th>Model_Name</th><th>Manufacturer</th><th>Registration_Mark</th><th>Type</th><th>Capacity</th><th>Range_Miles</th><th>Maximum_Speed</th><th>Cruise_Speed</th><th>Service_Ceiling</th><th>Operator_Id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Airlines.Airline_Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 787-8</td><td>Boeing</td><td>N123BA</td><td>Passenger</td><td>265</td><td>7000</td><td>0.85</td><td>0.8</td><td>41000</td><td>1</td></tr>
+<tr><td>2</td><td>Airbus A320neo</td><td>Airbus</td><td>F-HSEZ</td><td>Passenger</td><td>180</td><td>3100</td><td>0.85</td><td>0.8</td><td>43000</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

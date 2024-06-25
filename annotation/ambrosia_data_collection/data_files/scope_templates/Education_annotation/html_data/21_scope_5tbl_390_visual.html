@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Textbooks</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>author</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>World History</td><td>John Smith</td></tr>
+<tr><td>2</td><td>American History</td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>European History</td><td>Michael Johnson</td></tr>
+<tr><td>4</td><td>Ancient Civilizations</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>Modern World History</td><td>William Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Chapters</span></h2><table><thead>
+<tr><th>chapterName</th><th><span style="color:#990000">subject</span></th></tr>
+</thead><tbody>
+<tr><td>Introduction</td><td>History</td></tr>
+<tr><td>Colonial America</td><td>History</td></tr>
+<tr><td>Renaissance</td><td>History</td></tr>
+<tr><td>Industrial Revolution</td><td>History</td></tr>
+<tr><td>Fall of Empires</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>authorId</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td></tr>
+<tr><td>2</td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>Michael Johnson</td></tr>
+<tr><td>4</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>William Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>publisherId</th><th>companyName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pearson</td></tr>
+<tr><td>2</td><td>McGraw-Hill</td></tr>
+<tr><td>3</td><td>Cengage Learning</td></tr>
+<tr><td>4</td><td>Wiley</td></tr>
+<tr><td>5</td><td>Elsevier</td></tr>
+</tbody></table></div>
+
+<div><h2>Textbooks_Chapters</h2><table><thead>
+<tr><th>textbookId</th><th>chapterName</th></tr>
+<tr><th>(&#8594; Textbooks.id)</th><th>(&#8594; Chapters.chapterName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction</td></tr>
+<tr><td>1</td><td>Colonial America</td></tr>
+<tr><td>2</td><td>Fall of Empires</td></tr>
+<tr><td>2</td><td>Introduction</td></tr>
+<tr><td>3</td><td>Introduction</td></tr>
+<tr><td>4</td><td>Introduction</td></tr>
+<tr><td>5</td><td>Introduction</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Designers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>3</td></tr>
+<tr><td>2</td><td>Bob</td><td>2</td></tr>
+<tr><td>3</td><td>Carol</td><td>5</td></tr>
+<tr><td>4</td><td>Dave</td><td>1</td></tr>
+<tr><td>5</td><td>Eve</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Tools</span></h2><table><thead>
+<tr><th><span style="color:#990000">tool_name</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>Adobe Creative Suite</td><td>A collection of graphic design software</td></tr>
+<tr><td>Illustrator</td><td>A vector graphics editor</td></tr>
+<tr><td>Photoshop</td><td>An image editing software</td></tr>
+<tr><td>InDesign</td><td>Page layout and typesetting software</td></tr>
+<tr><td>Premiere Pro</td><td>Video editing software</td></tr>
+</tbody></table></div>
+
+<div><h2>Designer_Tools</h2><table><thead>
+<tr><th>designer_id</th><th>tool_name</th></tr>
+<tr><th>(&#8594; Designers.id)</th><th>(&#8594; Tools.tool_name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adobe Creative Suite</td></tr>
+<tr><td>1</td><td>Illustrator</td></tr>
+<tr><td>2</td><td>Photoshop</td></tr>
+<tr><td>3</td><td>InDesign</td></tr>
+<tr><td>4</td><td>Premiere Pro</td></tr>
+<tr><td>1</td><td>Photoshop</td></tr>
+<tr><td>3</td><td>Photoshop</td></tr>
+<tr><td>4</td><td>Photoshop</td></tr>
+<tr><td>5</td><td>Photoshop</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>company_id</th><th>company_name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tech Company One</td><td>New York</td></tr>
+<tr><td>2</td><td>Software Inc.</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>Web Solutions</td><td>Los Angeles</td></tr>
+<tr><td>4</td><td>App Developers</td><td>Chicago</td></tr>
+<tr><td>5</td><td>Technology Group</td><td>Washington DC</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>posting_id</th><th>title</th><th>description</th><th>salary</th><th>posted_date</th><th>company_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.company_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>UX/UI Designer</td><td>We need a UX/UI designer to create user interfaces for our new product line</td><td>70000</td><td>2022-08-01</td><td>1</td></tr>
+<tr><td>2</td><td>Graphic Designer</td><td>Our team needs an experienced graphic designer to work on various projects</td><td>60000</td><td>2022-09-01</td><td>2</td></tr>
+<tr><td>3</td><td>Web Developer</td><td>We are looking for a web developer to join our growing team</td><td>75000</td><td>2022-08-05</td><td>3</td></tr>
+<tr><td>4</td><td>Mobile App Developer</td><td>We want a mobile app developer to help us build our next big app</td><td>80000</td><td>2022-08-10</td><td>4</td></tr>
+<tr><td>5</td><td>Data Analyst</td><td>Looking for data analyst to support business decisions</td><td>65000</td><td>2022-08-15</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>application_id</th><th>applicant_name</th><th>email</th><th>resume_path</th><th>status</th><th>job_posting_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; JobPostings.posting_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@email.com</td><td>/resume/john_doe.pdf</td><td>Pending</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@email.com</td><td>/resume/jane_smith.pdf</td><td>Accepted</td><td>2</td></tr>
+<tr><td>3</td><td>Mike Brown</td><td>mikebrown@email.com</td><td>/resume/mike_brown.pdf</td><td>Rejected</td><td>3</td></tr>
+<tr><td>4</td><td>Emily Johnson</td><td>emilyjohnson@email.com</td><td>/resume/emily_johnson.pdf</td><td>Pending</td><td>4</td></tr>
+<tr><td>5</td><td>Tom Green</td><td>tomgreen@email.com</td><td>/resume/tom_green.pdf</td><td>Accepted</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

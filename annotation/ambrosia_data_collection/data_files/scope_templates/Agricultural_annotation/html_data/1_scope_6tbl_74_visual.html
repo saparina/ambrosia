@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Farms</span></h2><table><thead>
+<tr><th>FarmID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Farm A</td><td>Location A</td></tr>
+<tr><td>2</td><td>Farm B</td><td>Location B</td></tr>
+<tr><td>3</td><td>Farm C</td><td>Location C</td></tr>
+<tr><td>4</td><td>Farm D</td><td>Location D</td></tr>
+<tr><td>5</td><td>Farm E</td><td>Location E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Certificates</span></h2><table><thead>
+<tr><th>CertificateID</th><th><span style="color:#990000">CertType</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Usda_Organic</td></tr>
+<tr><td>2</td><td>Non-GMO_Project_Verified</td></tr>
+<tr><td>3</td><td>Biodynamic_Farming</td></tr>
+<tr><td>4</td><td>Rainforest_Alliance_Certified</td></tr>
+<tr><td>5</td><td>Climate_Smart_Agriculture_Certified</td></tr>
+</tbody></table></div>
+
+<div><h2>Farms_Certificates</h2><table><thead>
+<tr><th>FarmID</th><th>CertificateID</th></tr>
+<tr><th>(&#8594; Farms.FarmID)</th><th>(&#8594; Certificates.CertificateID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

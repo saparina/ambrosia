@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phoneNumber</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>123-456-7890</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>987-654-3210</td><td>456 Elm St</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>id</th><th>departmentName</th><th>managerId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Employees.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sales</td><td>1</td></tr>
+<tr><td>2</td><td>Marketing</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Sales_and_marketing_jobs</span></h2><table><thead>
+<tr><th>jobTitle</th><th>targetMarket</th><th>salary</th><th>departmentId</th></tr>
+<tr><th>(&#8594; Jobs.title)</th><th></th><th></th><th>(&#8594; Departments.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#990000">Sales Associate</span></td><td><span style="color:#006600">B2B</span></td><td>50000</td><td>1</td></tr>
+<tr><td><span style="color:#990000">Sales Associate</span></td><td>Retail</td><td>40000</td><td>1</td></tr>
+<tr><td><span style="color:#990000">Marketing Specialist</span></td><td><span style="color:#006600">B2B</span></td><td>60000</td><td>2</td></tr>
+<tr><td><span style="color:#990000">Marketing Specialist</span></td><td>Consumer Goods</td><td>55000</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>skillName</th><th>requiredForJobId</th></tr>
+<tr><th></th><th>(&#8594; Jobs.id)</th></tr>
+</thead><tbody>
+<tr><td>Customer Service</td><td>1</td></tr>
+<tr><td>Digital Marketing</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Experience</h2><table><thead>
+<tr><th>employeeId</th><th>yearsOfExperience</th><th>jobTitle</th><th>companyName</th><th>startDate</th><th>endDate</th></tr>
+<tr><th>(&#8594; Employees.id)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Account Manager</td><td>ABC Corporation</td><td>2015-01-01</td><td>2020-01-01</td></tr>
+<tr><td>2</td><td>3</td><td>Graphic Designer</td><td>XYZ Company</td><td>2017-01-01</td><td>2020-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>location</th><th>postedOn</th><th>closingDate</th><th>minimumYearsOfExperience</th><th>skillsRequiredId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Skills.skillName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sales Associate</td><td>Responsible for selling products to B2B clients.</td><td>New York</td><td>2021-01-01</td><td>2021-02-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Sales Associate</td><td>Assisting customers at a retail store.</td><td>Los Angeles</td><td>2021-01-01</td><td>2021-02-01</td><td>0</td><td>2</td></tr>
+<tr><td>3</td><td>Marketing Specialist</td><td>Developing digital marketing campaigns.</td><td>San Francisco</td><td>2021-01-01</td><td>2021-02-01</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>Marketing Specialist</td><td>Creating traditional advertising materials.</td><td>Chicago</td><td>2021-01-01</td><td>2021-02-01</td><td>1</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

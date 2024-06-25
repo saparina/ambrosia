@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Adventure_Tour_Operators</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>New York</td></tr>
+<tr><td>2</td><td>Company B</td><td>California</td></tr>
+<tr><td>3</td><td>Company C</td><td>Texas</td></tr>
+<tr><td>4</td><td>Company D</td><td>Florida</td></tr>
+<tr><td>5</td><td>Company E</td><td>Arizona</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Activities</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">activity_name</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Zipline</td><td>An adrenaline-pumping aerial ride down a mountain.</td></tr>
+<tr><td>2</td><td>Rafting</td><td>Navigate white waters on an exciting river trip.</td></tr>
+<tr><td>3</td><td>Hiking</td><td>Explore scenic trails through beautiful landscapes.</td></tr>
+<tr><td>4</td><td>Biking</td><td>Cycle through picturesque countryside.</td></tr>
+<tr><td>5</td><td>Camping</td><td>Set up camp under starry skies in nature.</td></tr>
+</tbody></table></div>
+
+<div><h2>Adventure_Tour_Operators_Activities</h2><table><thead>
+<tr><th>adventure_tour_operator_id</th><th>activity_id</th></tr>
+<tr><th>(&#8594; Adventure_Tour_Operators.id)</th><th>(&#8594; Activities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

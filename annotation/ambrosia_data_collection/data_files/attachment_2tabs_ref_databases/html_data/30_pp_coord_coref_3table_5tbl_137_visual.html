@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Operating_System</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Windows 10</td></tr>
+<tr><td>2</td><td><span style="color:#006600">macOS Big Sur</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Tablet</span></h2><table><thead>
+<tr><th>ID</th><th>Model</th><th>OS_ID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Operating_System.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Surface Pro 7</td><td>1</td></tr>
+<tr><td>2</td><td>iPad Air</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Laptop</span></h2><table><thead>
+<tr><th>ID</th><th>Model</th><th>OS_ID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Operating_System.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dell XPS 13</td><td>1</td></tr>
+<tr><td>2</td><td>MacBook Pro 16'</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Genre</th><th>ReleaseYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Action/Adventure</td><td>2010</td></tr>
+<tr><td>2</td><td>The Matrix</td><td>Science Fiction</td><td>1999</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>Crime/Drama</td><td>1994</td></tr>
+<tr><td>4</td><td>Jurassic Park</td><td>Adventure/Sci-Fi</td><td>1993</td></tr>
+<tr><td>5</td><td>Titanic</td><td>Romance/Disaster</td><td>1997</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>46</td></tr>
+<tr><td>2</td><td>Kate</td><td>Winslet</td><td>45</td></tr>
+<tr><td>3</td><td>Christopher</td><td>Nolan</td><td>51</td></tr>
+<tr><td>4</td><td>Tom</td><td>Cruise</td><td>58</td></tr>
+<tr><td>5</td><td>Ellen</td><td>Page</td><td>34</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieActor</h2><table><thead>
+<tr><th>MovieID</th><th>ActorID</th><th>Role</th></tr>
+<tr><th>(&#8594; Movie.ID)</th><th>(&#8594; Actor.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Jack Dawson</td></tr>
+<tr><td>1</td><td>2</td><td>Rose DeWitt Bukater</td></tr>
+<tr><td>2</td><td>3</td><td>Neo</td></tr>
+<tr><td>2</td><td>4</td><td>John Doe</td></tr>
+<tr><td>3</td><td>5</td><td>Annie Wilkes</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

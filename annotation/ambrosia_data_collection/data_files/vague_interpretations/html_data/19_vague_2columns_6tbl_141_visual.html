@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emily.white@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Time Inc.</td><td>New York, USA</td></tr>
+<tr><td>2</td><td>Conde Nast</td><td>London, UK</td></tr>
+<tr><td>3</td><td>Hearst Corporation</td><td>New York, USA</td></tr>
+<tr><td>4</td><td>Rodale Inc.</td><td>Emmaus, Pennsylvania, USA</td></tr>
+<tr><td>5</td><td>Gannett Company</td><td>McLean, Virginia, USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Magazines</h2><table><thead>
+<tr><th>MagazineID</th><th>Title</th><th>YearEstablished</th><th>PublisherId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Publishers.PublisherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Time</td><td>1923</td><td>1</td></tr>
+<tr><td>2</td><td>National Geographic</td><td>1888</td><td>2</td></tr>
+<tr><td>3</td><td>People</td><td>1974</td><td>3</td></tr>
+<tr><td>4</td><td>Men's Health</td><td>1987</td><td>4</td></tr>
+<tr><td>5</td><td>USA Today</td><td>1982</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>PublicationDate</th><th>WordCount</th><th>MagazineId</th><th>AuthorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Magazines.MagazineID)</th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article One</td><td>2024-02-19 15:09:29</td><td>1000</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Article Two</td><td>2024-02-19 15:09:29</td><td>1500</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Article Three</td><td>2024-02-19 15:09:29</td><td>2000</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Article Four</td><td>2024-02-19 15:09:29</td><td>2500</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Article Five</td><td>2024-02-19 15:09:29</td><td>3000</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Documentaries</h2><table><thead>
+<tr><th>DocumentaryId</th><th>Title</th><th>ReleaseYear</th><th><span style="color:#990000">Producer</span></th><th><span style="color:#990000">Director</span></th><th>LengthInMinutes</th><th>MagazineId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Magazines.MagazineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Doc One</td><td>2001</td><td>Producer One</td><td>Director One</td><td>60</td><td>1</td></tr>
+<tr><td>2</td><td>Doc Two</td><td>2002</td><td>Producer Two</td><td>Director Two</td><td>90</td><td>2</td></tr>
+<tr><td>3</td><td>Doc Three</td><td>2003</td><td>Producer Three</td><td>Director Three</td><td>120</td><td>3</td></tr>
+<tr><td>4</td><td>Doc Four</td><td>2004</td><td>Producer Four</td><td>Director Four</td><td>150</td><td>4</td></tr>
+<tr><td>5</td><td>Doc Five</td><td>2005</td><td>Producer Five</td><td>Director Five</td><td>180</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

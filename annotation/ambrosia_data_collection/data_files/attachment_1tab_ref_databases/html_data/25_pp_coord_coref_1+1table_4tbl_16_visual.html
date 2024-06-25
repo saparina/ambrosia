@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">SpecialOccasions</span></h2><table><thead>
+<tr><th>Id</th><th><span style="color:#990000"><span style="color:#990000">Name</span></span></th><th>NumberOfGuests</th><th>Date</th><th>LocationId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Locations.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Wedding Venue</span></td><td>100</td><td>2023-01-15</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Wedding Venue</span></td><td>50</td><td>2023-02-16</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Corporate Event Space</span></td><td>200</td><td>2023-03-17</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Corporate Event Space</span></td><td>150</td><td>2023-04-18</td><td>2</td></tr>
+<tr><td>5</td><td>Party</td><td>75</td><td>2023-05-19</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Locations</span></h2><table><thead>
+<tr><th>Id</th><th><span style="color:#006600">Address</span></th><th>Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1 High Street</td><td>Venue</td></tr>
+<tr><td>2</td><td><span style="color:#006600">2 Low Street</span></td><td>Venue</td></tr>
+<tr><td>3</td><td>3 Middle Road</td><td>Venue</td></tr>
+<tr><td>4</td><td>4 East Avenue</td><td>Venue</td></tr>
+<tr><td>5</td><td>5 West Boulevard</td><td>Venue</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>Id</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>+1122334455</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td><td>+2233445566</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie.black@example.com</td><td>+3344556677</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>Id</th><th>CustomerId</th><th>OccasionDate</th><th>SpecialOccasionId</th><th>TotalCost</th></tr>
+<tr><th></th><th>(&#8594; Customers.Id)</th><th></th><th>(&#8594; SpecialOccasions.Id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-15</td><td>1</td><td>1500</td></tr>
+<tr><td>2</td><td>2</td><td>2023-02-16</td><td>2</td><td>1200</td></tr>
+<tr><td>3</td><td>3</td><td>2023-03-17</td><td>1</td><td>2500</td></tr>
+<tr><td>4</td><td>4</td><td>2023-04-18</td><td>2</td><td>2000</td></tr>
+<tr><td>5</td><td>5</td><td>2023-05-19</td><td>3</td><td>1800</td></tr>
+</tbody></table></div>
+
+<div><h2>Staff</h2><table><thead>
+<tr><th>Id</th><th>FirstName</th><th>LastName</th><th>Role</th><th>Salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike</td><td>Johnson</td><td>Chef</td><td>45000</td></tr>
+<tr><td>2</td><td>Anna</td><td>Williams</td><td>Waitress</td><td>30000</td></tr>
+<tr><td>3</td><td>Tom</td><td>Baker</td><td>Manager</td><td>50000</td></tr>
+<tr><td>4</td><td>Emily</td><td>Jones</td><td>Hostess</td><td>25000</td></tr>
+<tr><td>5</td><td>David</td><td>Martin</td><td>Busser</td><td>20000</td></tr>
+</tbody></table></div>
+
+<div><h2>Menus</h2><table><thead>
+<tr><th>Id</th><th>MenuName</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Appetizer Platter</td><td>15.99</td></tr>
+<tr><td>2</td><td>Main Course - Steak</td><td>25.99</td></tr>
+<tr><td>3</td><td>Side Dish - Garlic Mashed Potatoes</td><td>5.99</td></tr>
+<tr><td>4</td><td>Dessert - Chocolate Cake</td><td>7.99</td></tr>
+<tr><td>5</td><td>Drink - Wine</td><td>10.99</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

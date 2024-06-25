@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">PerformanceTypes</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">TypeName</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Improvised Theatre</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Musical</span></td></tr>
+<tr><td>3</td><td>Concert</td></tr>
+<tr><td>4</td><td>Play</td></tr>
+<tr><td>5</td><td>Dance Recital</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Venues</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Cambridge Theatre</span></td></tr>
+<tr><td>2</td><td>Broadway Theater</td></tr>
+<tr><td>3</td><td>West End Theatre</td></tr>
+<tr><td>4</td><td>Off Broadway Theatre</td></tr>
+<tr><td>5</td><td>Royal Albert Hall</td></tr>
+</tbody></table></div>
+
+<div><h2>Performances</h2><table><thead>
+<tr><th>id</th><th>TypeID</th><th>VenueID</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; PerformanceTypes.id)</th><th>(&#8594; Venues.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-03-13 12:35:54</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2024-03-13 12:35:54</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>2024-03-13 12:35:54</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>2024-03-13 12:35:54</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>2024-03-13 12:35:54</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Biography</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1980-06-15</td><td>Born in London, John Smith is a talented musician.</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1978-03-22</td><td>A famous actress known for her work in theater.</td></tr>
+<tr><td>3</td><td>Michael</td><td>Jackson</td><td>1958-08-29</td><td>The King of Pop, Michael Jackson, has left an indelible mark on music history.</td></tr>
+<tr><td>4</td><td>Emma</td><td>Watson</td><td>1990-04-15</td><td>English actress best known for playing Hermione Granger in the Harry Potter series.</td></tr>
+<tr><td>5</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>One of Hollywood's most versatile actors, Leonardo DiCaprio has won numerous awards throughout his career.</td></tr>
+</tbody></table></div>
+
+<div><h2>ArtistPerformances</h2><table><thead>
+<tr><th>id</th><th>ArtistID</th><th>PerformanceID</th><th>Role</th></tr>
+<tr><th></th><th>(&#8594; Artists.id)</th><th>(&#8594; Performances.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>3</td><td>Lead Singer</td></tr>
+<tr><td>2</td><td>2</td><td>None</td><td>Actress</td></tr>
+<tr><td>3</td><td>3</td><td>5</td><td>Main Act</td></tr>
+<tr><td>4</td><td>4</td><td>None</td><td>Supporting Actress</td></tr>
+<tr><td>5</td><td>5</td><td>None</td><td>Actor</td></tr>
+</tbody></table></div>
+
+<div><h2>Tickets</h2><table><thead>
+<tr><th>id</th><th>PerformanceID</th><th>Price</th><th>Quantity</th></tr>
+<tr><th></th><th>(&#8594; Performances.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>30</td><td>100</td></tr>
+<tr><td>2</td><td>2</td><td>40</td><td>150</td></tr>
+<tr><td>3</td><td>3</td><td>45</td><td>200</td></tr>
+<tr><td>4</td><td>4</td><td>50</td><td>250</td></tr>
+<tr><td>5</td><td>5</td><td>60</td><td>300</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

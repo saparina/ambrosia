@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Agricultural_Research_Institutes</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Institute A</td><td>Location A</td></tr>
+<tr><td>2</td><td>Institute B</td><td>Location B</td></tr>
+<tr><td>3</td><td>Institute C</td><td>Location C</td></tr>
+<tr><td>4</td><td>Institute D</td><td>Location D</td></tr>
+<tr><td>5</td><td>Institute E</td><td>Location E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Focus_Areas</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">area_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sustainability Research</td></tr>
+<tr><td>2</td><td>Soil Management</td></tr>
+<tr><td>3</td><td>Pest Control</td></tr>
+<tr><td>4</td><td>Crop Rotation</td></tr>
+<tr><td>5</td><td>Fertilization Techniques</td></tr>
+</tbody></table></div>
+
+<div><h2>Agricultural_Research_Institutes_Focus_Areas</h2><table><thead>
+<tr><th>institute_id</th><th>focus_area_id</th></tr>
+<tr><th>(&#8594; Agricultural_Research_Institutes.id)</th><th>(&#8594; Focus_Areas.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

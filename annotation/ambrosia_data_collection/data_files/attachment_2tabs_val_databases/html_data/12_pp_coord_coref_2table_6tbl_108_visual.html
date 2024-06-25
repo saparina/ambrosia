@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Boeing</span></h2><table><thead>
+<tr><th>id</th><th>Model</th><th>Number_of_seats</th><th>Manufacture_year</th><th>LastMaintenanceDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>737</td><td><span style="color:#006600">180</span></td><td>2000</td><td>2022-06-01</td></tr>
+<tr><td>2</td><td>747</td><td>400</td><td>1990</td><td>2021-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Airbus</span></h2><table><thead>
+<tr><th>id</th><th>Model</th><th>Number_of_seats</th><th>Manufacture_year</th><th>LastMaintenanceDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A320</td><td><span style="color:#006600">180</span></td><td>2010</td><td>2022-07-01</td></tr>
+<tr><td>2</td><td>A380</td><td>800</td><td>2007</td><td>2021-12-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>airplaneId</th><th>departureTime</th><th>arrivalTime</th><th>destination</th></tr>
+<tr><th></th><th>(&#8594; Airbus.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-08-01 08:00:00</td><td>2022-08-01 12:00:00</td><td>New York</td></tr>
+<tr><td>2</td><td>2</td><td>2022-08-02 09:00:00</td><td>2022-08-02 13:00:00</td><td>Los Angeles</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilot</h2><table><thead>
+<tr><th>id</th><th>name</th><th>licenseNumber</th><th>experienceYears</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>ABC1234</td><td>10</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>XYZ7890</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Maintenance</h2><table><thead>
+<tr><th>id</th><th>airplaneId</th><th>maintenanceType</th><th>datePerformed</th><th>technicianName</th></tr>
+<tr><th></th><th>(&#8594; Airbus.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Engine Overhaul</td><td>2021-05-01</td><td>Mike Brown</td></tr>
+<tr><td>2</td><td>2</td><td>Landing Gear Repair</td><td>2021-06-01</td><td>Lisa Johnson</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

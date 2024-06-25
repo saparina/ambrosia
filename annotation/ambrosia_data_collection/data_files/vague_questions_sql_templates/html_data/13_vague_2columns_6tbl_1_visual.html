@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employee</h2><table><thead>
+<tr><th>employeeID</th><th>firstName</th><th>lastName</th><th>hireDate</th><th>position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2021-01-01</td><td>Project Manager</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2021-02-01</td><td>Engineer</td></tr>
+<tr><td>3</td><td>Mike</td><td>Johnson</td><td>2021-03-01</td><td>Construction Worker</td></tr>
+<tr><td>4</td><td>Emily</td><td>Brown</td><td>2021-04-01</td><td>Supervisor</td></tr>
+<tr><td>5</td><td>Tom</td><td>White</td><td>2021-05-01</td><td>Architect</td></tr>
+</tbody></table></div>
+
+<div><h2>Safety</h2><table><thead>
+<tr><th>safetyID</th><th>employeeID</th><th><span style="color:#990000">Safety_Measures</span></th><th>constructionWorker</th></tr>
+<tr><th></th><th>(&#8594; Employee.employeeID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Hard Hat, Gloves, Steel-toed Boots</td><td>Experienced</td></tr>
+<tr><td>2</td><td>2</td><td>Helmet, Earplugs, Safety Glasses</td><td>Intermediate</td></tr>
+<tr><td>3</td><td>3</td><td>Hard Hat, Gloves, Safety Vest</td><td>Novice</td></tr>
+<tr><td>4</td><td>4</td><td>Helmet, Safety Shoes, Goggles</td><td>Skilled</td></tr>
+<tr><td>5</td><td>5</td><td>Hard Hat, Gloves, Knee Pads</td><td>Expert</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

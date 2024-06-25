@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Hospitality_Job_Postings</span></h2><table><thead>
+<tr><th>job_id</th><th>job_title</th><th>agency</th><th>experience_level</th><th>required_skills</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Tour Guide</span></td><td><span style="color:#006600">Expedia</span></td><td>Entry Level</td><td>Communication Skills</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Tour Guide</span></td><td>ABC Travel</td><td>Mid Level</td><td>Multilingual</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Travel Agent</span></td><td><span style="color:#006600">Expedia</span></td><td>Experienced</td><td>Computer Skills</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Travel Agent</span></td><td>XYZ Vacations</td><td>Beginner</td><td>Customer Service</td></tr>
+</tbody></table></div>
+
+<div><h2>Agency_Information</h2><table><thead>
+<tr><th>agency_name</th><th>location</th><th>number_of_employees</th><th>reputation_score</th></tr>
+</thead><tbody>
+<tr><td>Expedia</td><td>New York</td><td>1000</td><td>8.7</td></tr>
+<tr><td>ABC Travel</td><td>Los Angeles</td><td>500</td><td>7.6</td></tr>
+<tr><td>XYZ Vacations</td><td>Chicago</td><td>800</td><td>9.1</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicant_Info</h2><table><thead>
+<tr><th>applicant_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th>resume_path</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johndoe@email.com</td><td>+123456789</td><td>/resumes/john_doe.pdf</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janesmith@email.com</td><td>+987654321</td><td>/resumes/jane_smith.pdf</td></tr>
+</tbody></table></div>
+
+<div><h2>Applied_Jobs</h2><table><thead>
+<tr><th>applied_job_id</th><th>applicant_id</th><th>job_id</th><th>application_date</th></tr>
+<tr><th></th><th>(&#8594; Applicant_Info.applicant_id)</th><th>(&#8594; Hospitality_Job_Postings.job_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>2022-01-02 10:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Interview_Schedule</h2><table><thead>
+<tr><th>interview_schedule_id</th><th>applied_job_id</th><th>interviewee_name</th><th>interviewer_name</th><th>date_time</th><th>duration</th></tr>
+<tr><th></th><th>(&#8594; Applied_Jobs.applied_job_id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John Doe</td><td>Alice Johnson</td><td>2022-01-05 10:00:00</td><td>60.0</td></tr>
+<tr><td>2</td><td>2</td><td>Jane Smith</td><td>Bob Brown</td><td>2022-01-06 10:00:00</td><td>45.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Feedback</h2><table><thead>
+<tr><th>feedback_id</th><th>interview_schedule_id</th><th>rating</th><th>comments</th></tr>
+<tr><th></th><th>(&#8594; Interview_Schedule.interview_schedule_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>8.5</td><td>Good communication skills.</td></tr>
+<tr><td>2</td><td>2</td><td>9.0</td><td>Very professional and friendly.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

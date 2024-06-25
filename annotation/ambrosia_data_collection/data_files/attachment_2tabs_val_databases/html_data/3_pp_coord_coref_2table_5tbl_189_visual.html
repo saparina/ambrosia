@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">tennis_tournaments</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>date</th><th>sponsor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Australian Open</td><td>Melbourne Park, Australia</td><td>2023-01-16 00:00:00</td><td>Kia</td></tr>
+<tr><td>2</td><td>Wimbledon</td><td>All England Lawn Tennis and Croquet Club, London, United Kingdom</td><td>2023-07-03 00:00:00</td><td>Nike</td></tr>
+<tr><td>3</td><td>US Open</td><td>USTA Billie Jean King National Tennis Center, New York City, USA</td><td>2023-08-28 00:00:00</td><td>Emirates</td></tr>
+<tr><td>4</td><td>French Open</td><td>Stade Roland Garros, Paris, France</td><td>2023-05-28 00:00:00</td><td><span style="color:#006600">Rolex</span></td></tr>
+<tr><td>5</td><td>BNP Paribas Open</td><td>Indian Wells Tennis Garden, Indian Wells, USA</td><td>2023-03-09 00:00:00</td><td>BNP Paribas</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">golf_tournaments</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>date</th><th>sponsor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Masters Tournament</td><td>Augusta National Golf Club, Augusta, Georgia, USA</td><td>2023-04-09 00:00:00</td><td><span style="color:#006600">Rolex</span></td></tr>
+<tr><td>2</td><td>PGA Championship</td><td>Ocean Course at Kiawah Island Golf Resort, South Carolina, USA</td><td>2023-05-15 00:00:00</td><td>KPMG</td></tr>
+<tr><td>3</td><td>U.S. Open</td><td>Country Club for the U.S. Open, New York State, USA</td><td>2023-06-12 00:00:00</td><td>Mercedes-Benz</td></tr>
+<tr><td>4</td><td>Open Championship</td><td>Royal Liverpool Golf Club, Hoylake, England</td><td>2023-07-16 00:00:00</td><td>AIG</td></tr>
+<tr><td>5</td><td>The Players Championship</td><td>TPC Sawgrass, Ponte Vedra Beach, Florida, USA</td><td>2023-03-12 00:00:00</td><td>DM Orthopaedics</td></tr>
+</tbody></table></div>
+
+<div><h2>movie_ratings</h2><table><thead>
+<tr><th>id</th><th>title</th><th>director</th><th>release_date</th><th>rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Christopher Nolan</td><td>2010-07-16</td><td>8.8</td></tr>
+<tr><td>2</td><td>Interstellar</td><td>Christopher Nolan</td><td>2014-11-07</td><td>8.6</td></tr>
+<tr><td>3</td><td>The Dark Knight Rises</td><td>Christopher Nolan</td><td>2012-07-16</td><td>8.4</td></tr>
+<tr><td>4</td><td>Avatar</td><td>James Cameron</td><td>2009-12-18</td><td>7.9</td></tr>
+<tr><td>5</td><td>Titanic</td><td>James Cameron</td><td>1997-12-19</td><td>7.8</td></tr>
+</tbody></table></div>
+
+<div><h2>music_albums</h2><table><thead>
+<tr><th>id</th><th>artist</th><th>album_title</th><th>release_date</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Queen</td><td>A Night At The Opera</td><td>1975-10-31</td><td>Progressive Rock</td></tr>
+<tr><td>2</td><td>The Beatles</td><td>Abbey Road</td><td>1969-09-26</td><td>Rock</td></tr>
+<tr><td>3</td><td>Led Zeppelin</td><td>IV</td><td>1971-11-08</td><td>Hard Rock</td></tr>
+<tr><td>4</td><td>David Bowie</td><td>Ziggy Stardust And The Spiders From Mars</td><td>1972-06-16</td><td>Glam Rock</td></tr>
+<tr><td>5</td><td>Pink Floyd</td><td>Dark Side Of The Moon</td><td>1973-03-01</td><td>Progressive Rock</td></tr>
+</tbody></table></div>
+
+<div><h2>video_games</h2><table><thead>
+<tr><th>id</th><th>game_name</th><th>developer</th><th>release_date</th><th>platform</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Red Dead Redemption II</td><td>Rockstar Games</td><td>2018-10-26</td><td>PlayStation 4, Xbox One, PC</td></tr>
+<tr><td>2</td><td>Grand Theft Auto V</td><td>Rockstar North</td><td>2013-09-17</td><td>PlayStation 3, PlayStation 4, Xbox 360, Xbox One, PC</td></tr>
+<tr><td>3</td><td>The Witcher III: Wild Hunt</td><td>CD Projekt RED</td><td>2015-05-19</td><td>PlayStation 4, Xbox One, Windows</td></tr>
+<tr><td>4</td><td>The Elder Scrolls V: Skyrim</td><td>Bethesda Game Studios</td><td>2011-11-11</td><td>PlayStation 3, Xbox 360, Microsoft Windows</td></tr>
+<tr><td>5</td><td>Assassin’s Creed Odyssey</td><td>Ubisoft Quebec</td><td>2018-10-05</td><td>PlayStation 4, Xbox One, Microsoft Windows</td></tr>
+</tbody></table></div>
+
+<div><h2>book_authors</h2><table><thead>
+<tr><th>id</th><th>author_name</th><th>birth_year</th><th>death_year</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ernest Hemingway</td><td>1899</td><td>1961</td><td>American</td></tr>
+<tr><td>2</td><td>George Orwell</td><td>1903</td><td>1950</td><td>English</td></tr>
+<tr><td>3</td><td>Vladimir Nabokov</td><td>1899</td><td>1977</td><td>Russian/American</td></tr>
+<tr><td>4</td><td>William Faulkner</td><td>1897</td><td>1962</td><td>American</td></tr>
+<tr><td>5</td><td>Thomas Hardy</td><td>1840</td><td>1928</td><td>English</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Location</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>High Street</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Downtown Plaza</span></td></tr>
+<tr><td>3</td><td>Lakeside Resort</td></tr>
+<tr><td>4</td><td>Ocean View Villa</td></tr>
+<tr><td>5</td><td>Uptown Ballroom</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Wedding_Venue</span></h2><table><thead>
+<tr><th>id</th><th>location_id</th><th>capacity</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Location.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>300</td><td>8999.99</td></tr>
+<tr><td>2</td><td>2</td><td>400</td><td>7999.99</td></tr>
+<tr><td>3</td><td>3</td><td>600</td><td>12999.99</td></tr>
+<tr><td>4</td><td>4</td><td>1000</td><td>2999.99</td></tr>
+<tr><td>5</td><td>5</td><td>500</td><td>6999.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Corporate_Event_Space</span></h2><table><thead>
+<tr><th>id</th><th>location_id</th><th>area_sqft</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Location.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1500</td><td>4999.99</td></tr>
+<tr><td>2</td><td>2</td><td>2000</td><td>6999.99</td></tr>
+<tr><td>3</td><td>3</td><td>2500</td><td>9999.99</td></tr>
+<tr><td>4</td><td>4</td><td>3000</td><td>12999.99</td></tr>
+<tr><td>5</td><td>5</td><td>3500</td><td>16999.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>234-567-8901</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michaeljohnson@example.com</td><td>345-678-9012</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emilydavis@example.com</td><td>456-789-0123</td></tr>
+<tr><td>5</td><td>David Brown</td><td>davidbrown@example.com</td><td>567-890-1234</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

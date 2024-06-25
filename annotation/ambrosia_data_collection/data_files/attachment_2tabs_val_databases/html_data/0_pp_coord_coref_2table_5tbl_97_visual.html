@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1970-06-15</td><td>American</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1985-03-20</td><td>British</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>PublishDate</th><th>WordCount</th><th>Content</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>My First Article</td><td>2021-01-01</td><td>500</td><td>This is my first article.</td><td>1</td></tr>
+<tr><td>2</td><td>Another Interesting Piece</td><td>2021-02-01</td><td>1000</td><td>Here is another interesting piece.</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Pulitzers</span></h2><table><thead>
+<tr><th>PrizeID</th><th>AwardedArticleID</th><th>Category</th><th>Year</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Feature Writing</td><td><span style="color:#006600">2010</span></td></tr>
+<tr><td>2</td><td>2</td><td>Breaking News Reporting</td><td>2011</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Polks</span></h2><table><thead>
+<tr><th>AwardID</th><th>AwardedArticleID</th><th>Category</th><th>Year</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>International Reporting</td><td><span style="color:#006600">2010</span></td></tr>
+<tr><td>2</td><td>2</td><td>National Security Reporting</td><td>2011</td></tr>
+</tbody></table></div>
+
+<div><h2>Magazines</h2><table><thead>
+<tr><th>MagazineID</th><th>Name</th><th>PublicationFrequency</th><th>HeadquarterLocation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Time</td><td>Weekly</td><td>New York City</td></tr>
+<tr><td>2</td><td>The Economist</td><td>Weekly</td><td>London</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscriptions</h2><table><thead>
+<tr><th>SubscriptionID</th><th>CustomerID</th><th>MagazineID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Magazines.MagazineID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

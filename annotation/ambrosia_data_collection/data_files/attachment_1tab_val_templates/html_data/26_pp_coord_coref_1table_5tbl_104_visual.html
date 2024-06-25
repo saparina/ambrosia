@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-10-07</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2002-08-21</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>2005-06-29</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>2004-09-15</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>2006-07-23</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>SubjectTaught</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Davis</td><td>Math</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Martin</td><td>History</td></tr>
+<tr><td>3</td><td>Mrs.</td><td>Wilson</td><td>English</td></tr>
+<tr><td>4</td><td>Mr.</td><td>Hall</td><td>Science</td></tr>
+<tr><td>5</td><td>Mrs.</td><td>Jackson</td><td>Art</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>ClassID</th><th>Name</th><th>GradeLevel</th><th>TeacherID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algebra I</td><td>9</td><td>1</td></tr>
+<tr><td>2</td><td>World History</td><td>10</td><td>2</td></tr>
+<tr><td>3</td><td>American Literature</td><td>11</td><td>3</td></tr>
+<tr><td>4</td><td>Physics</td><td>10</td><td>4</td></tr>
+<tr><td>5</td><td>Advanced Art</td><td>12</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">LearningActivities</span></h2><table><thead>
+<tr><th>ActivityID</th><th><span style="color:#186e16"><span style="color:#186e16">ActivityType</span></span></th><th><span style="color:#1430b2">Purpose</span></th><th>Date</th><th>ClassID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Classes.ClassID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Field Trip</span></td><td><span style="color:#1430b2">Real-world Application</span></td><td>2023-03-15</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#186e16">Field Trip</span></td><td>Team Building</td><td>2023-03-22</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#186e16">Study Group</span></td><td><span style="color:#1430b2">Real-world Application</span></td><td>2023-03-18</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#186e16">Study Group</span></td><td>Preparation for Test</td><td>2023-03-25</td><td>4</td></tr>
+<tr><td>5</td><td>Online Lecture</td><td>Review Material</td><td>2023-03-20</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

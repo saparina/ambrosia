@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Accessibility_Features</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">featureName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Closed_Captioning</td></tr>
+<tr><td>2</td><td>Audio_Description</td></tr>
+<tr><td>3</td><td>Subtitles</td></tr>
+<tr><td>4</td><td>Sign_Language_Support</td></tr>
+<tr><td>5</td><td>Adaptive_Audio</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Streaming_Services</span></h2><table><thead>
+<tr><th>id</th><th>serviceName</th><th>basePrice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>12.99</td></tr>
+<tr><td>2</td><td>Amazon Prime Video</td><td>8.99</td></tr>
+<tr><td>3</td><td>Hulu</td><td>7.99</td></tr>
+<tr><td>4</td><td>Disney+</td><td>6.99</td></tr>
+<tr><td>5</td><td>HBO Max</td><td>14.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Services_Accessibility_Features</h2><table><thead>
+<tr><th>id</th><th>streamingServiceId</th><th>accessibilityFeatureId</th></tr>
+<tr><th></th><th>(&#8594; Streaming_Services.id)</th><th>(&#8594; Accessibility_Features.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

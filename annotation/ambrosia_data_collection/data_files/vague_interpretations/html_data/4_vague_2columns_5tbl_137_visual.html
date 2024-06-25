@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>Bob</td><td>Brown</td><td>bobbrown@example.com</td></tr>
+<tr><td>4</td><td>Alice</td><td>White</td><td>alicewhite@example.com</td></tr>
+<tr><td>5</td><td>Mike</td><td>Green</td><td>mikgreen@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th><th><span style="color:#990000">Managing_Editor</span></th><th><span style="color:#990000">Copy_Editor</span></th><th>Final_Draft</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Article</td><td>This is content of first article...</td><td>2024-02-19 14:01:08</td><td>Managing Editor One</td><td>Copy Editor One</td><td>Final Draft One</td></tr>
+<tr><td>2</td><td>Second Article</td><td>This is content of second article...</td><td>2024-02-19 14:01:08</td><td>Managing Editor Two</td><td>Copy Editor Two</td><td>Final Draft Two</td></tr>
+<tr><td>3</td><td>Third Article</td><td>This is content of third article...</td><td>2024-02-19 14:01:08</td><td>Managing Editor Three</td><td>Copy Editor Three</td><td>Final Draft Three</td></tr>
+<tr><td>4</td><td>Fourth Article</td><td>This is content of fourth article...</td><td>2024-02-19 14:01:08</td><td>Managing Editor Four</td><td>Copy Editor Four</td><td>Final Draft Four</td></tr>
+<tr><td>5</td><td>Fifth Article</td><td>This is content of fifth article...</td><td>2024-02-19 14:01:08</td><td>Managing Editor Five</td><td>Copy Editor Five</td><td>Final Draft Five</td></tr>
+</tbody></table></div>
+
+<div><h2>Readers</h2><table><thead>
+<tr><th>ReaderID</th><th>Name</th><th>SubscriptionDate</th><th>PreferredEmail</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Subscriber One</td><td>2021-01-01</td><td>subone@example.com</td></tr>
+<tr><td>2</td><td>Subscriber Two</td><td>2021-01-02</td><td>subtwo@example.com</td></tr>
+<tr><td>3</td><td>Subscriber Three</td><td>2021-01-03</td><td>subthree@example.com</td></tr>
+<tr><td>4</td><td>Subscriber Four</td><td>2021-01-04</td><td>subfour@example.com</td></tr>
+<tr><td>5</td><td>Subscriber Five</td><td>2021-01-05</td><td>subfive@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Comments</h2><table><thead>
+<tr><th>CommentID</th><th>ArticleID</th><th>ReaderID</th><th>CommentText</th><th>Rating</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th>(&#8594; Readers.ReaderID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Great article!</td><td>5</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Interesting read.</td><td>4</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>Not bad but could be better.</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>Could use improvement.</td><td>2</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>Love this!</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Advertisements</h2><table><thead>
+<tr><th>AdID</th><th>Description</th><th>ImgURL</th><th>StartDate</th><th>EndDate</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Car ad description</td><td>http://caradimageurl.com/img.jpg</td><td>2021-01-06</td><td>2021-01-12</td><td>10000</td></tr>
+<tr><td>2</td><td>Electronics ad description</td><td>http://electronicadimageurl.com/img.jpg</td><td>2021-01-13</td><td>2021-01-19</td><td>7500</td></tr>
+<tr><td>3</td><td>Clothing ad description</td><td>http://clothingadimageurl.com/img.jpg</td><td>2021-01-20</td><td>2021-01-26</td><td>5000</td></tr>
+<tr><td>4</td><td>Job ad description</td><td>http://jobadimageurl.com/img.jpg</td><td>2021-01-27</td><td>2021-01-31</td><td>Free</td></tr>
+<tr><td>5</td><td>Real Estate ad description</td><td>http://realestateadimageurl.com/img.jpg</td><td>2021-02-01</td><td>2021-02-05</td><td>8000</td></tr>
+</tbody></table></div>
+
+<div><h2>AdAssignments</h2><table><thead>
+<tr><th>AdAssignmentID</th><th>AdID</th><th>ArticleID</th><th>AssignmentDate</th></tr>
+<tr><th></th><th>(&#8594; Advertisements.AdID)</th><th>(&#8594; Articles.ArticleID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-01-02</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-01-03</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-01-04</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-01-05</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

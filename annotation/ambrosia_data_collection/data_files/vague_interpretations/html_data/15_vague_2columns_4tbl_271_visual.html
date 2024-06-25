@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Patients</h2><table><thead>
+<tr><th>PatientID</th><th>FirstName</th><th>LastName</th><th>DOB</th><th>PhoneNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1987-06-15</td><td>+1234567890</td><td>john.doe@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>DoctorID</th><th>FirstName</th><th>LastName</th><th>Specialty</th><th>LicenseNumber</th><th>OfficePhone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Smith</td><td>Cardiology</td><td>LIC001234567</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Medications</h2><table><thead>
+<tr><th>DrugID</th><th>Name</th><th>Classification</th><th>Manufacturer</th><th><span style="color:#990000">Side_Effects</span></th><th><span style="color:#990000">Effectiveness</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Aspirin</td><td>Analgesic</td><td>Bayer</td><td>Gastrointestinal upset</td><td>High</td></tr>
+</tbody></table></div>
+
+<div><h2>Prescriptions</h2><table><thead>
+<tr><th>PrescriptionID</th><th>PatientID</th><th>DoctorID</th><th>MedicationID</th><th>StartDate</th><th>EndDate</th><th>Quantity</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; Doctors.DoctorID)</th><th>(&#8594; Medications.MedicationID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2022-01-01</td><td>2022-01-31</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Diagnoses</h2><table><thead>
+<tr><th>DiagnosisID</th><th>PatientID</th><th>DoctorID</th><th>Code</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; Doctors.DoctorID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>A123</td><td>Hypertension</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>AppointmentID</th><th>PatientID</th><th>DoctorID</th><th>AppointmentDateTime</th><th>ReasonForVisit</th><th>IsCancelled</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; Doctors.DoctorID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-02-19 12:14:44</td><td>Routine checkup</td><td>0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Experience</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">experience</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">5 years</span></td></tr>
+<tr><td>2</td><td>10 years</td></tr>
+<tr><td>3</td><td>3 years</td></tr>
+<tr><td>4</td><td>6 months</td></tr>
+<tr><td>5</td><td>2 years</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MarineBiologists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>salary</th></tr>
+<tr><th>(&#8594; Experience.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>70000.0</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>35</td><td>80000.0</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>29</td><td>65000.0</td></tr>
+<tr><td>4</td><td>Emily Brown</td><td>32</td><td>75000.0</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>28</td><td>60000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Zoologists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>salary</th></tr>
+<tr><th>(&#8594; Experience.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lisa Thompson</td><td>27</td><td>68000.0</td></tr>
+<tr><td>2</td><td>Robert Martin</td><td>31</td><td>72000.0</td></tr>
+<tr><td>3</td><td>William Taylor</td><td>26</td><td>62000.0</td></tr>
+<tr><td>4</td><td>Amy Clark</td><td>29</td><td>69000.0</td></tr>
+<tr><td>5</td><td>Steven Davis</td><td>25</td><td>58000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>companyName</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ocean Life Inc.</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>Wildlife Exploration LLC</td><td>New York</td></tr>
+<tr><td>3</td><td>Animal Research Corporation</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Eco Discovery Group</td><td>Houston</td></tr>
+<tr><td>5</td><td>Nature Conservation Association</td><td>Philadelphia</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>jobId</th><th>jobTitle</th><th>description</th><th>postedDate</th><th>marineBiologist</th><th>zoologist</th><th>foreignKeyID</th></tr>
+<tr><th>(&#8594; MarineBiologists.id)</th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Marine Biologist Position</td><td>Study and protect marine life.</td><td>2021-01-01</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>2</td><td>Zoologist Position</td><td>Study and conserve various species of animals.</td><td>2021-01-02</td><td>0</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Research Scientist</td><td>Conduct research on animal behavior.</td><td>2021-01-03</td><td>1</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>Curator</td><td>Manage a collection of live animals and plants.</td><td>2021-01-04</td><td>1</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>Field Technician</td><td>Assist researchers in field studies.</td><td>2021-01-05</td><td>0</td><td>0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>applicationId</th><th>applicantName</th><th>appliedJobId</th><th>appliedCompanyId</th><th>applyDate</th></tr>
+<tr><th></th><th></th><th>(&#8594; Jobs.jobId)</th><th>(&#8594; Companies.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>1</td><td>1</td><td>2021-01-06</td></tr>
+<tr><td>2</td><td>Alice Jones</td><td>2</td><td>2</td><td>2021-01-07</td></tr>
+<tr><td>3</td><td>Bob Williams</td><td>3</td><td>3</td><td>2021-01-08</td></tr>
+<tr><td>4</td><td>Carol Brown</td><td>4</td><td>4</td><td>2021-01-09</td></tr>
+<tr><td>5</td><td>Daniel Davis</td><td>5</td><td>5</td><td>2021-01-10</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

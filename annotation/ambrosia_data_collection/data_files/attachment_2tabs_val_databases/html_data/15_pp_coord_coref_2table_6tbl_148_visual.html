@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Breaking_News</span></h2><table><thead>
+<tr><th>id</th><th>Event</th><th>Date</th><th>Source</th><th>Reporter</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Turkey–Syria Earthquakes</span></td><td>2023-01-01 12:34:56</td><td>Reuters</td><td>John Smith</td></tr>
+<tr><td>2</td><td>Political Crisis in Europe</td><td>2023-01-02 10:20:00</td><td>BBC</td><td>Emma Jones</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">News_Analysis</span></h2><table><thead>
+<tr><th>id</th><th>Event</th><th>Analysis</th><th>Published_Date</th><th>Author</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Turkey–Syria Earthquakes</span></td><td>In-depth analysis of the earthquake impact on both countries...</td><td>2023-01-03 18:45:00</td><td>Jane Doe</td></tr>
+<tr><td>2</td><td>Climate Change Impact on Disasters</td><td>A comprehensive study on how climate change is contributing to natural disasters...</td><td>2023-01-04 09:00:00</td><td>Michael Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Journalists</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Email</th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>alice@example.com</td><td>World Affairs</td></tr>
+<tr><td>2</td><td>Robert Williams</td><td>robert@example.com</td><td>Environment</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>Publication_Date</th><th>Writer_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Journalists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Rising Tension Between Two Nations</td><td>An article discussing the recent escalations between two nations...</td><td>2023-01-01 17:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Saving the Coral Reefs</td><td>A detailed guide on protecting coral reefs around the world...</td><td>2023-01-02 12:00:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Comments</h2><table><thead>
+<tr><th>id</th><th>Article_Id</th><th>Commenter_Name</th><th>Text</th><th>Posted_At</th></tr>
+<tr><th></th><th>(&#8594; Articles.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>User1</td><td>Great insight! Keep up the good work.</td><td>2023-01-01 18:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>User2</td><td>Very informative article. I learned a lot about coral reef conservation.</td><td>2023-01-02 14:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

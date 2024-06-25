@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Textbooks</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Author</th><th>Subject</th><th><span style="color:#1430b2">Difficulty_Level</span></th><th>ISBN</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Calculus</td><td>Isaac Newton</td><td>Maths</td><td><span style="color:#1430b2">Intermediate</span></td><td>9783652003</td></tr>
+<tr><td>2</td><td>Physics</td><td>Albert Einstein</td><td>Physics</td><td>Advanced</td><td>9781543220</td></tr>
+<tr><td>3</td><td>English Literature</td><td>Shakespeare</td><td>Literature</td><td>Beginner</td><td>9780141029</td></tr>
+<tr><td>4</td><td>Biology</td><td>Charles Darwin</td><td>Science</td><td><span style="color:#1430b2">Intermediate</span></td><td>9780123456</td></tr>
+<tr><td>5</td><td>History</td><td>Herodotus</td><td>History</td><td>Advanced</td><td>9787654321</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Online_Courses</span></h2><table><thead>
+<tr><th>id</th><th>Course_Name</th><th>Instructor</th><th>Topic</th><th>Difficulty_Level</th><th>URL</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>John Doe</td><td>Programming</td><td><span style="color:#1430b2">Intermediate</span></td><td>https://www.example.com/cs101</td></tr>
+<tr><td>2</td><td>Ancient History</td><td>Jane Smith</td><td>History</td><td>Advanced</td><td>https://www.example.com/history201</td></tr>
+<tr><td>3</td><td>Graphic Design</td><td>Mike Johnson</td><td>Design</td><td>Beginner</td><td>https://www.example.com/design101</td></tr>
+<tr><td>4</td><td>Quantum Mechanics</td><td>Emma Wilson</td><td>Physics</td><td><span style="color:#1430b2">Intermediate</span></td><td>https://www.example.com/qm101</td></tr>
+<tr><td>5</td><td>Mathematical Logic</td><td>William Brown</td><td>Maths</td><td>Advanced</td><td>https://www.example.com/ml101</td></tr>
+</tbody></table></div>
+
+<div><h2>Schools</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Address</th><th>City</th><th>State</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Springfield High School</td><td>123 Main St</td><td>Springfield</td><td>IL</td></tr>
+<tr><td>2</td><td>Evergreen Middle School</td><td>456 Oak Ave</td><td>Evergreen</td><td>CO</td></tr>
+<tr><td>3</td><td>Sunrise Elementary</td><td>789 Pine St</td><td>Sunrise</td><td>CA</td></tr>
+<tr><td>4</td><td>Oakwood College</td><td>123 Maple Dr</td><td>Oakwood</td><td>TX</td></tr>
+<tr><td>5</td><td>Riverview Academy</td><td>456 Cedar Ln</td><td>Riverview</td><td>FL</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>School_ID</th><th>Degree</th><th>Years_Experience</th></tr>
+<tr><th></th><th></th><th>(&#8594; Schools.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr. Thompson</td><td>1</td><td>PhD in Math</td><td>10</td></tr>
+<tr><td>2</td><td>Ms. Williams</td><td>2</td><td>MA in English</td><td>5</td></tr>
+<tr><td>3</td><td>Dr. Baker</td><td>3</td><td>PhD in Physics</td><td>15</td></tr>
+<tr><td>4</td><td>Ms. Rodriguez</td><td>4</td><td>BSc in Biology</td><td>8</td></tr>
+<tr><td>5</td><td>Prof. Lee</td><td>5</td><td>PhD in Computer Science</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>First_Name</th><th>Last_Name</th><th>Age</th><th>Grade_Level</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>15</td><td>9th</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>16</td><td>10th</td></tr>
+<tr><td>3</td><td>Tom</td><td>Hanks</td><td>14</td><td>8th</td></tr>
+<tr><td>4</td><td>Lucy</td><td>Grey</td><td>17</td><td>11th</td></tr>
+<tr><td>5</td><td>Michael</td><td>Jackson</td><td>16</td><td>10th</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

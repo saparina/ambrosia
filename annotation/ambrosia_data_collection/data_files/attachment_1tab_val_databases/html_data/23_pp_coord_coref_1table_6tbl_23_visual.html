@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>flightID</th><th>origin</th><th>destination</th><th>departureTime</th><th>arrivalTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>LAX</td><td>JFK</td><td>2021-09-01 08:30:00</td><td>2021-09-01 17:00:00</td></tr>
+<tr><td>2</td><td>ORD</td><td>ATL</td><td>2021-09-01 12:30:00</td><td>2021-09-01 19:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passengerID</th><th>firstName</th><th>lastName</th><th>passportNumber</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>ABC123456</td><td>28</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>XYZ789012</td><td>34</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>aircraftID</th><th>model</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 787</td><td>300</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>500</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>terminalID</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal 1</td></tr>
+<tr><td>2</td><td>Terminal 2</td></tr>
+</tbody></table></div>
+
+<div><h2>AccessibilityServices</h2><table><thead>
+<tr><th>accessibilityServiceId</th><th>serviceName</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Assisted Transportation</td><td>Transportation assistance for passengers with disabilities.</td></tr>
+<tr><td>2</td><td>TTY Services</td><td>Telecommunications relay services for deaf or hard of hearing passengers.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AmenityServices</span></h2><table><thead>
+<tr><th>amenityServiceId</th><th>serviceName</th><th>description</th><th>Passenger_Amenities</th><th>Accessibility</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Airport Lounge</span></td><td>Relaxing area for passengers.</td><td><span style="color:#990000">Airport Lounge</span></td><td>Wheelchair Users</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Airport Lounge</span></td><td>Relaxing area for passengers.</td><td><span style="color:#990000">Airport Lounge</span></td><td><span style="color:#006600">Not Wheelchair Users</span></td></tr>
+<tr><td>3</td><td><span style="color:#990000">Observation Deck</span></td><td>Viewing platform for planes taking off and landing.</td><td><span style="color:#990000">Observation Deck</span></td><td>Wheelchair Users</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Observation Deck</span></td><td>Viewing platform for planes taking off and landing.</td><td><span style="color:#990000">Observation Deck</span></td><td><span style="color:#006600">Not Wheelchair Users</span></td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

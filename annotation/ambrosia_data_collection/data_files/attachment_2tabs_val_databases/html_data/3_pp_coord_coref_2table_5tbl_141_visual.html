@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Biometric_Authentication</span></h2><table><thead>
+<tr><th>id</th><th>customer</th><th>date</th><th>status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">James Davies</span></td><td>2024-03-13 17:13:29</td><td>None</td></tr>
+<tr><td>2</td><td>John Smith</td><td>2024-03-13 17:13:29</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Manual_Verification</span></h2><table><thead>
+<tr><th>id</th><th>customer</th><th>date</th><th>status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">James Davies</span></td><td>2024-03-13 17:13:29</td><td>None</td></tr>
+<tr><td>2</td><td>Michael Johnson</td><td>2024-03-13 17:13:29</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>flightNumber</th><th>departureAirport</th><th>destinationAirport</th><th>departureTime</th><th>arrivalTime</th></tr>
+</thead><tbody>
+<tr><td>None</td><td>New York</td><td>London</td><td>2023-01-01 10:00:00</td><td>2023-01-01 16:00:00</td></tr>
+<tr><td>None</td><td>Los Angeles</td><td>Paris</td><td>2023-01-02 10:00:00</td><td>2023-01-02 18:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>aircraftId</th><th>model</th><th>capacity</th><th>registrationNumber</th></tr>
+</thead><tbody>
+<tr><td>None</td><td>Boing 787 Dreamliner</td><td>350</td><td>N900AN</td></tr>
+<tr><td>None</td><td>Airbus A380</td><td>853</td><td>EI-DUB</td></tr>
+</tbody></table></div>
+
+<div><h2>CheckIn</h2><table><thead>
+<tr><th>checkinID</th><th>passengerName</th><th>flightNum</th><th>boardingPassNum</th><th>checkedBaggage</th><th>checkInTime</th></tr>
+<tr><th></th><th></th><th>(&#8594; Flight.flightNumber)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>James Davies</td><td>1</td><td>100</td><td>1</td><td>2023-01-01 09:00:00</td></tr>
+<tr><td>2</td><td>Emma Watson</td><td>2</td><td>200</td><td>0</td><td>2023-01-02 09:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Baggage</h2><table><thead>
+<tr><th>baggageId</th><th>customer</th><th>weight</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>None</td><td>James Davies</td><td>25.0</td><td>Laptop Bag</td></tr>
+<tr><td>None</td><td>Emma Watson</td><td>30.0</td><td>Cosmetic Bag</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

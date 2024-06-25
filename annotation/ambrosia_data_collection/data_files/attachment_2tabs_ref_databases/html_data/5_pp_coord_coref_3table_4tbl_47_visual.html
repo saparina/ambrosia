@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Festivals</h2><table><thead>
+<tr><th>FestivalID</th><th>Name</th><th>Location</th><th>Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cannes Film Festival</td><td>France</td><td>2023-05-16</td></tr>
+<tr><td>2</td><td>Venice Film Festival</td><td>Italy</td><td>2023-09-01</td></tr>
+<tr><td>3</td><td>Berlin International Film Festival</td><td>Germany</td><td>2023-02-17</td></tr>
+<tr><td>4</td><td>Toronto International Film Festival</td><td>Canada</td><td>2023-09-08</td></tr>
+<tr><td>5</td><td>Telluride Film Festival</td><td>USA</td><td>2023-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Awards</span></h2><table><thead>
+<tr><th>AwardID</th><th>Name</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Palme d'Or</td><td>The highest prize awarded at Cannes Film Festival.</td></tr>
+<tr><td>2</td><td>Golden Lion</td><td>The top award given by Venice Film Festival.</td></tr>
+<tr><td>3</td><td>Golden Bear</td><td>The main prize presented at Berlin International Film Festival.</td></tr>
+<tr><td>4</td><td>People's Choice Award</td><td>An audience choice award at Toronto International Film Festival.</td></tr>
+<tr><td>5</td><td>Teller Prize</td><td>A special recognition award at Telluride Film Festival.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Films</span></h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>Year</th><th>DirectorName</th><th>CommitteeMemberID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; CommitteeMembers.MemberID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Christopher Nolan</td><td>1</td></tr>
+<tr><td>2</td><td>The Matrix</td><td>1999</td><td>Lana Wachowski, Lilly Wachowski</td><td>2</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994</td><td>Quentin Tarantino</td><td>None</td></tr>
+<tr><td>4</td><td>Schindler's List</td><td>1993</td><td>Steven Spielberg</td><td>None</td></tr>
+<tr><td>5</td><td>La La Land</td><td>2016</td><td>Damien Chazelle</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">CommitteeMembers</span></h2><table><thead>
+<tr><th>MemberID</th><th><span style="color:#006600">FullName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gerardo Prat</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Alice Johnson</span></td></tr>
+<tr><td>3</td><td>Bob Smith</td></tr>
+<tr><td>4</td><td>Carol Williams</td></tr>
+<tr><td>5</td><td>David Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmParticipations</h2><table><thead>
+<tr><th>ParticipationID</th><th>FilmID</th><th>FestivalID</th><th>AwardID</th></tr>
+<tr><th></th><th>(&#8594; Films.FilmID)</th><th>(&#8594; Festivals.FestivalID)</th><th>(&#8594; Awards.AwardID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

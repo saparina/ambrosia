@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Nurses</span></h2><table><thead>
+<tr><th>NurseID</th><th>Name</th><th>PatientID</th><th>HoursWorked</th><th>ExperienceLevel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anne Buche</td><td><span style="color:#006600">230</span></td><td>8.5</td><td>Intermediate</td></tr>
+<tr><td>2</td><td>John Smith</td><td>367</td><td>9.0</td><td>Advanced</td></tr>
+<tr><td>3</td><td>Jane Doe</td><td>455</td><td>7.5</td><td>Beginner</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">PhysiciansAssistants</span></h2><table><thead>
+<tr><th>PAID</th><th>Name</th><th>PatientID</th><th>HoursWorked</th><th>Specialization</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anne Buche</td><td><span style="color:#006600">230</span></td><td>8.5</td><td>Cardiology</td></tr>
+<tr><td>2</td><td>John Smith</td><td>367</td><td>9.0</td><td>Gastroenterology</td></tr>
+<tr><td>3</td><td>Jane Doe</td><td>455</td><td>7.5</td><td>Orthopedics</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>DoctorID</th><th>Name</th><th>MedicalLicenseNumber</th><th>YearsOfPractice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Alice Johnson</td><td>M123456</td><td>10</td></tr>
+<tr><td>2</td><td>Dr. Bob Brown</td><td>B654321</td><td>15</td></tr>
+<tr><td>3</td><td>Dr. Carol White</td><td>W789012</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Clinics</h2><table><thead>
+<tr><th>ClinicID</th><th>Address</th><th>PhoneNumber</th><th>NumberofDoctors</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St, Anytown</td><td>555-1234</td><td>3</td></tr>
+<tr><td>2</td><td>456 Elm St, Anothertown</td><td>555-5678</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>ClinicID</th><th>DepartmentName</th></tr>
+<tr><th></th><th>(&#8594; Clinics.ClinicID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Family Medicine</td></tr>
+<tr><td>2</td><td>2</td><td>Dermatology</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointment</h2><table><thead>
+<tr><th>AppointmentID</th><th>DoctorID</th><th>Date</th><th>ReasonForVisit</th></tr>
+<tr><th></th><th>(&#8594; Doctors.DoctorID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01 10:00:00</td><td>Routine checkup</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-02 14:00:00</td><td>Flu shot</td></tr>
+<tr><td>3</td><td>3</td><td>2022-01-03 16:00:00</td><td>Skin rash consultation</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

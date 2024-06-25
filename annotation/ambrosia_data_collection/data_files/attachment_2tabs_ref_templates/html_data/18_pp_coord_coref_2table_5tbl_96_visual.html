@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Student</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td></tr>
+<tr><td>2</td><td>Bob Smith</td></tr>
+<tr><td>3</td><td>Carol Williams</td></tr>
+<tr><td>4</td><td>David Brown</td></tr>
+<tr><td>5</td><td>Eva Green</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Attendance</span></h2><table><thead>
+<tr><th>AttendID</th><th><span style="color:#1430b2">StudentID</span></th><th>Date</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Student.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#1430b2">1</span></td><td><span style="color:#1430b2">1</span></td><td>2023-0<span style="color:#1430b2">1</span>-0<span style="color:#1430b2">1</span></td><td>Present</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-01</td><td>Absent</td></tr>
+<tr><td>3</td><td><span style="color:#1430b2">1</span></td><td>2023-0<span style="color:#1430b2">1</span>-02</td><td>Present</td></tr>
+<tr><td>4</td><td>2</td><td>2023-01-02</td><td>Absent</td></tr>
+<tr><td>5</td><td>3</td><td>2023-01-01</td><td>Present</td></tr>
+<tr><td>6</td><td>4</td><td>2023-01-01</td><td>Present</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Grades</span></h2><table><thead>
+<tr><th>GradeID</th><th>StudentID</th><th>Subject</th><th>Score</th></tr>
+<tr><th></th><th>(&#8594; Student.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#1430b2">1</span></td><td><span style="color:#1430b2">1</span></td><td>Math</td><td>98</td></tr>
+<tr><td>2</td><td>2</td><td>English</td><td>87</td></tr>
+<tr><td>3</td><td><span style="color:#1430b2">1</span></td><td>History</td><td>93</td></tr>
+<tr><td>4</td><td>2</td><td>Biology</td><td>76</td></tr>
+<tr><td>5</td><td>3</td><td>Chemistry</td><td>92</td></tr>
+<tr><td>6</td><td>4</td><td>Physics</td><td>97</td></tr>
+</tbody></table></div>
+
+<div><h2>Teacher</h2><table><thead>
+<tr><th>TeachID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr. White</td></tr>
+<tr><td>2</td><td>Mrs. Black</td></tr>
+<tr><td>3</td><td>Ms. Blue</td></tr>
+<tr><td>4</td><td>Dr. Red</td></tr>
+<tr><td>5</td><td>Professor Green</td></tr>
+</tbody></table></div>
+
+<div><h2>Classroom</h2><table><thead>
+<tr><th>ClassID</th><th>TeachID</th><th>Location</th></tr>
+<tr><th></th><th>(&#8594; Teacher.TeachID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Room A</td></tr>
+<tr><td>2</td><td>2</td><td>Room B</td></tr>
+<tr><td>3</td><td>3</td><td>Room C</td></tr>
+<tr><td>4</td><td>4</td><td>Room D</td></tr>
+<tr><td>5</td><td>5</td><td>Room E</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollment</h2><table><thead>
+<tr><th>EnrollID</th><th>StudentID</th><th>ClassID</th></tr>
+<tr><th></th><th>(&#8594; Student.ID)</th><th>(&#8594; Classroom.ClassID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Runways</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Length</th><th>Width</th><th>Construction_Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>R1</td><td>3000.0</td><td>75.0</td><td>2015-08-01</td></tr>
+<tr><td>2</td><td>R2</td><td>2900.0</td><td>60.0</td><td>2020-02-15</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Taxiways</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Length</th><th>Width</th><th>Start_Point_ID</th><th>End_Point_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Runways.ID)</th><th>(&#8594; Runways.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>T1</td><td>1000.0</td><td>50.0</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>T2</td><td>1500.0</td><td>70.0</td><td>2</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Airplanes</h2><table><thead>
+<tr><th>ID</th><th>Model</th><th>Capacity</th><th>Arrival_Time</th><th>Departure_Time</th><th>Current_Location_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Taxiways.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td><td>200</td><td>2022-03-10 10:00:00</td><td>2022-03-10 15:30:00</td><td>1</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>180</td><td>2022-03-11 09:00:00</td><td>2022-03-11 14:30:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Flights</span></h2><table><thead>
+<tr><th>Flight_Number</th><th>Plane_ID</th><th>Origin_Airport_ID</th><th>Destination_Airport_ID</th><th><span style="color:#006600">Date</span></th><th>Time</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Airplanes.ID)</th><th>(&#8594; Taxiways.ID)</th><th>(&#8594; Taxiways.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2</td><td>2022-03-10</td><td>11:00</td><td>Departed</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>1</td><td><span style="color:#006600">2022-03-11</span></td><td>10:00</td><td>Cancelled</td></tr>
+</tbody></table></div>
+
+<div><h2>Maintenance_Records</h2><table><thead>
+<tr><th>Record_ID</th><th>Plane_ID</th><th>Description</th><th>Performed_By</th><th>Completion_Date</th></tr>
+<tr><th></th><th>(&#8594; Airplanes.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Engine overhaul</td><td>Mechanic John Doe</td><td>2021-12-15</td></tr>
+<tr><td>2</td><td>2</td><td>Landing gear repair</td><td>Mechanic Jane Smith</td><td>2021-11-20</td></tr>
+</tbody></table></div>
+
+<div><h2>Weather_Conditions</h2><table><thead>
+<tr><th>Condition_ID</th><th>Location_ID</th><th>Temperature</th><th>Wind_Speed</th><th>Precipitation</th><th>Visibility</th></tr>
+<tr><th></th><th>(&#8594; Taxiways.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>25.0</td><td>10.0</td><td>Clear</td><td>10000.0</td></tr>
+<tr><td>2</td><td>2</td><td>30.0</td><td>20.0</td><td>Foggy</td><td>8000.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

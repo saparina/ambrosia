@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">growth_equity</span></h2><table><thead>
+<tr><th>id</th><th>firm_name</th><th><span style="color:#1430b2">funding_amount</span></th><th>deal_date</th><th>notes</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td><span style="color:#1430b2">5000000.0</span></td><td>2023-06-18</td><td>Initial Investment</td></tr>
+<tr><td>2</td><td>Company B</td><td>7000000.0</td><td>2023-06-19</td><td>Series B Funding Round</td></tr>
+<tr><td>3</td><td>Company C</td><td>2000000.0</td><td>2023-06-20</td><td>Seed Capital</td></tr>
+<tr><td>4</td><td>Company D</td><td>4000000.0</td><td>2023-06-21</td><td>Pre-Series A Financing</td></tr>
+<tr><td>5</td><td>Company E</td><td>9000000.0</td><td>2023-06-22</td><td>Series C Funding</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">venture_capital</span></h2><table><thead>
+<tr><th>id</th><th>trust_name</th><th>funding_amount</th><th>investment_period</th><th>exit_strategy</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>VC Trust 1</td><td><span style="color:#1430b2">5000000.0</span></td><td>2021-01-01</td><td>IPO Exit</td></tr>
+<tr><td>2</td><td>VC Trust 2</td><td>3000000.0</td><td>2019-01-01</td><td>Acquisition Exit</td></tr>
+<tr><td>3</td><td>VC Trust 3</td><td>6000000.0</td><td>2020-01-01</td><td>Merger Exit</td></tr>
+<tr><td>4</td><td>VC Trust 4</td><td>8000000.0</td><td>2022-01-01</td><td>Secondary Share Sale</td></tr>
+<tr><td>5</td><td>VC Trust 5</td><td>10000000.0</td><td>2024-01-01</td><td>Return of Capital</td></tr>
+</tbody></table></div>
+
+<div><h2>customers</h2><table><thead>
+<tr><th>customer_id</th><th>company_name</th><th>address</th><th>contact_person_name</th><th>phone_number</th><th>email</th><th>equity_firm_id</th><th>venture_capital_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; growth_equity.id)</th><th>(&#8594; venture_capital.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Customer 1</td><td>123 Main St</td><td>John Doe</td><td>555-1234</td><td>john@example.com</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Customer 2</td><td>456 Elm St</td><td>Jane Smith</td><td>555-5678</td><td>jane@example.com</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Customer 3</td><td>789 Oak St</td><td>Michael Johnson</td><td>555-9101</td><td>michael@example.com</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Customer 4</td><td>246 Pine St</td><td>Emily Davis</td><td>555-1314</td><td>emily@example.com</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Customer 5</td><td>678 Fir St</td><td>David Brown</td><td>555-2425</td><td>david@example.com</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>employees</h2><table><thead>
+<tr><th>employee_id</th><th>name</th><th>hire_date</th><th>position</th><th>assigned_customer_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; customers.customer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>2023-01-15</td><td>Account Manager</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>2023-02-15</td><td>Business Analyst</td><td>2</td></tr>
+<tr><td>3</td><td>Charlie</td><td>2023-03-15</td><td>Financial Advisor</td><td>3</td></tr>
+<tr><td>4</td><td>Diana</td><td>2023-04-15</td><td>Marketing Specialist</td><td>4</td></tr>
+<tr><td>5</td><td>Eva</td><td>2023-05-15</td><td>Data Scientist</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

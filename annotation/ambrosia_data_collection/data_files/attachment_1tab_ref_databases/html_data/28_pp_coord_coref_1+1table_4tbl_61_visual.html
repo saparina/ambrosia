@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>21</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>22</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>23</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>20</td><td>emily.white@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Green</td><td>24</td><td>david.green@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Classrooms</span></h2><table><thead>
+<tr><th>ClassroomID</th><th>Name</th><th><span style="color:#006600">Capacity</span></th><th>TypeOfEnvironment</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; LearningEnvironments.Value)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Room A</td><td><span style="color:#006600">30</span></td><td>Classroom</td></tr>
+<tr><td>2</td><td>Room B</td><td>25</td><td>Classroom</td></tr>
+<tr><td>3</td><td>Virtual Room C</td><td><span style="color:#006600">30</span></td><td>Virtual Room</td></tr>
+<tr><td>4</td><td>Virtual Room D</td><td>20</td><td>Virtual Room</td></tr>
+<tr><td>5</td><td>Physical Room E</td><td>15</td><td>Classroom</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">LearningEnvironments</span></h2><table><thead>
+<tr><th>EnvironmentID</th><th><span style="color:#990000"><span style="color:#990000">Value</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Classroom</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Virtual Room</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>ClassroomID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Classrooms.ClassroomID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-09-01</td><td>2022-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-08-26</td><td>2022-12-17</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-09-01</td><td>2022-12-31</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-08-26</td><td>2022-12-17</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-09-01</td><td>2022-12-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

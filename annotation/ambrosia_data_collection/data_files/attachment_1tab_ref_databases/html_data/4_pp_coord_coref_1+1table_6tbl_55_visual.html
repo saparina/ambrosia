@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>IATA_Code</th><th>ICAO_Code</th><th>airport_services</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York JFK</td><td>Queens, New York</td><td>JFK</td><td>NYJF</td><td>Lost Property</td></tr>
+<tr><td>2</td><td>Los Angeles LAX</td><td>Los Angeles, California</td><td>LAX</td><td>KLAX</td><td>Lost Property</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Services</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">service_name</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Lost Property</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Customer Complaints</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">ServiceOfferings</span></h2><table><thead>
+<tr><th>id</th><th>airport_id</th><th>service_id</th><th><span style="color:#006600">date</span></th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Services.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td><span style="color:#006600">2023-12-01</span></td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td><span style="color:#006600">2023-12-01</span></td></tr>
+<tr><td>3</td><td>1</td><td>1</td><td>2024-01-05</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>2024-01-06</td></tr>
+</tbody></table></div>
+
+<div><h2>CustomerComplaints</h2><table><thead>
+<tr><th>complaint_id</th><th>airport_service_offering_id</th><th>customer_complaint</th></tr>
+<tr><th></th><th>(&#8594; ServiceOfferings.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Delayed baggage claim</td></tr>
+<tr><td>2</td><td>2</td><td>Unclean restrooms</td></tr>
+<tr><td>3</td><td>3</td><td>Poor wifi connection</td></tr>
+<tr><td>4</td><td>4</td><td>Lack of seating</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

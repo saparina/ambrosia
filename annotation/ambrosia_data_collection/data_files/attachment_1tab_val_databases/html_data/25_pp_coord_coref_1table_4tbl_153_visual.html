@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Guest</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>PhoneNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>+1234567890</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>+0987654321</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>+1112223334</td><td>alice@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>+2223334445</td><td>bob@example.com</td></tr>
+<tr><td>5</td><td>Carol</td><td>Black</td><td>+3334445556</td><td>carol@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>EventType</h2><table><thead>
+<tr><th>TypeID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wedding</td></tr>
+<tr><td>2</td><td>Corporate Event</td></tr>
+<tr><td>3</td><td>Conference</td></tr>
+<tr><td>4</td><td>Party</td></tr>
+<tr><td>5</td><td>Exhibition</td></tr>
+</tbody></table></div>
+
+<div><h2>Event</h2><table><thead>
+<tr><th>EventID</th><th>Date</th><th>StartTime</th><th>EndTime</th><th>TypeID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; EventType.TypeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 18:00:00</td><td>19:00:00</td><td>22:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>2022-02-01 18:00:00</td><td>19:00:00</td><td>22:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>2022-03-01 18:00:00</td><td>19:00:00</td><td>22:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>2022-04-01 18:00:00</td><td>19:00:00</td><td>22:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>2022-05-01 18:00:00</td><td>19:00:00</td><td>22:00:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Venue</span></h2><table><thead>
+<tr><th>VenueID</th><th>Address</th><th>Capacity</th><th>SpecialOccasionLocation</th><th>Location</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1 <span style="color:#006600">High Street</span></td><td>500</td><td><span style="color:#990000">Wedding Venue</span></td><td><span style="color:#006600">High Street</span></td><td>A beautiful wedding venue with a capacity of 500 guests.</td></tr>
+<tr><td>2</td><td>2 Low Street</td><td>300</td><td><span style="color:#990000">Wedding Venue</span></td><td>Low Street</td><td>An intimate wedding venue with a capacity of 300 guests.</td></tr>
+<tr><td>3</td><td>3 <span style="color:#006600">High Street</span></td><td>400</td><td><span style="color:#990000">Corporate Event Space</span></td><td><span style="color:#006600">High Street</span></td><td>A modern corporate event space with a capacity of 400 guests.</td></tr>
+<tr><td>4</td><td>4 Low Street</td><td>200</td><td><span style="color:#990000">Corporate Event Space</span></td><td>Low Street</td><td>A classic corporate event space with a capacity of 200 guests.</td></tr>
+<tr><td>5</td><td>5 Main Street</td><td>550</td><td>Multi-purpose Hall</td><td>Main Street</td><td>A versatile multi-purpose hall with a capacity of 550 guests.</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>BookingID</th><th>GuestID</th><th>EventID</th><th>VenueID</th><th>NumberOfGuests</th></tr>
+<tr><th></th><th>(&#8594; Guest.ID)</th><th>(&#8594; Event.EventID)</th><th>(&#8594; Venue.VenueID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>200</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>150</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td><td>300</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td><td>100</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td><td>500</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

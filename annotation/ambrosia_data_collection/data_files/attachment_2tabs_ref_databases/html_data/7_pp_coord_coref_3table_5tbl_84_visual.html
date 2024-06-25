@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Awards</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">AwardName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Best Animated Feature</span></td></tr>
+<tr><td>2</td><td>Best Original Score</td></tr>
+</tbody></table></div>
+
+<div><h2>Studios</h2><table><thead>
+<tr><th>StudioID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Disney</td></tr>
+<tr><td>2</td><td>Universal Pictures</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>ReleaseYear</th><th>StudioID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Studios.StudioID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Toy Story</td><td>1995</td><td>1</td></tr>
+<tr><td>2</td><td>Frozen</td><td>2013</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">PixarFilms</span></h2><table><thead>
+<tr><th>FilmID</th><th>Pixar</th><th>StudiosID</th></tr>
+<tr><th>(&#8594; Films.FilmID)</th><th></th><th>(&#8594; Studios.StudioID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">DreamWorksFilms</span></h2><table><thead>
+<tr><th>FilmID</th><th>Dreamworks</th><th>StudiosID</th></tr>
+<tr><th>(&#8594; Films.FilmID)</th><th></th><th>(&#8594; Studios.StudioID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmAwards</h2><table><thead>
+<tr><th>FilmID</th><th>AwardsID</th></tr>
+<tr><th>(&#8594; Films.FilmID)</th><th>(&#8594; Awards.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

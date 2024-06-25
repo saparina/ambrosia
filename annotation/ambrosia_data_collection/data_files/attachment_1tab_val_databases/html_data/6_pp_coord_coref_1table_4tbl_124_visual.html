@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Investors</h2><table><thead>
+<tr><th>InvestorID</th><th>FirstName</th><th>LastName</th><th>TotalAssets</th></tr>
+<tr><th>(&#8594; Shares.InvestorID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1000000.0</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>800000.0</td></tr>
+<tr><td>3</td><td>Alice</td><td>Spencer</td><td>600000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Industry</th><th>MarketCapitalization</th></tr>
+<tr><th>(&#8594; Shares.CompanyID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Apple Inc.</td><td>Technology</td><td>2000000000.0</td></tr>
+<tr><td>2</td><td>Amazon Inc.</td><td>Retail</td><td>1500000000.0</td></tr>
+<tr><td>3</td><td>Google Inc.</td><td>Technology</td><td>900000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Shares</span></h2><table><thead>
+<tr><th>ShareID</th><th>CompanyID</th><th>InvestorID</th><th>PurchaseDate</th><th>Metrics</th></tr>
+<tr><th></th><th>(&#8594; Companies.CompanyID)</th><th>(&#8594; Investors.InvestorID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>202<span style="color:#006600">1</span>-0<span style="color:#006600">1</span>-0<span style="color:#006600">1</span></td><td><span style="color:#990000">Earnings per Share</span></td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-01-01</td><td><span style="color:#990000">Earnings per Share</span></td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-01-01</td><td><span style="color:#990000">Share Price</span></td></tr>
+<tr><td>4</td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>202<span style="color:#006600">1</span>-0<span style="color:#006600">1</span>-0<span style="color:#006600">1</span></td><td><span style="color:#990000">Share Price</span></td></tr>
+<tr><td>5</td><td>2</td><td>2</td><td>2021-01-01</td><td><span style="color:#990000">Earnings per Share</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>ShareID</th><th>Quantity</th><th>Price</th><th>DateOfTransaction</th></tr>
+<tr><th></th><th>(&#8594; Shares.ShareID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10</td><td>150</td><td>2021-01-02</td></tr>
+<tr><td>2</td><td>2</td><td>5</td><td>200</td><td>2021-01-02</td></tr>
+<tr><td>3</td><td>3</td><td>7</td><td>170</td><td>2021-01-02</td></tr>
+<tr><td>4</td><td>4</td><td>15</td><td>160</td><td>2021-01-02</td></tr>
+<tr><td>5</td><td>5</td><td>20</td><td>180</td><td>2021-01-02</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

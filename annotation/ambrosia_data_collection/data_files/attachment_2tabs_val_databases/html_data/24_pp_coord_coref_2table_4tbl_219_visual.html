@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Los Angeles International Airport</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>2</td><td>Dubai International Airport</td><td>Dubai</td><td>UAE</td></tr>
+<tr><td>3</td><td>London Heathrow Airport</td><td>London</td><td>UK</td></tr>
+<tr><td>4</td><td>Tokyo Haneda Airport</td><td>Tokyo</td><td>Japan</td></tr>
+<tr><td>5</td><td>Sydney Kingsford Smith Airport</td><td>Sydney</td><td>Australia</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>name</th><th>alliance</th><th>independent_carrier</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>OneWorld</td><td>0</td></tr>
+<tr><td>2</td><td>Emirates</td><td>None</td><td>1</td></tr>
+<tr><td>3</td><td>British Airways</td><td>OneWorld</td><td>0</td></tr>
+<tr><td>4</td><td>ANA</td><td>None</td><td>0</td></tr>
+<tr><td>5</td><td>Qantas</td><td>OneWorld</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>id</th><th>model</th><th>max_capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Airbus A320</td><td>180</td></tr>
+<tr><td>2</td><td>Boeing 747</td><td>400</td></tr>
+<tr><td>3</td><td>Airbus A380</td><td>850</td></tr>
+<tr><td>4</td><td>Boeing 777</td><td>360</td></tr>
+<tr><td>5</td><td>Embraer E190</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Alliance_Aircraft</span></h2><table><thead>
+<tr><th>airline_alliance</th><th>aircraft</th></tr>
+<tr><th>(&#8594; Airlines.name)</th><th>(&#8594; Aircrafts.model)</th></tr>
+</thead><tbody>
+<tr><td>American Airlines</td><td><span style="color:#006600">Airbus A320</span></td></tr>
+<tr><td>British Airways</td><td>Boeing 747</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Independent_Aircraft</span></h2><table><thead>
+<tr><th>independent_carrier</th><th>aircraft</th></tr>
+<tr><th>(&#8594; Airlines.name)</th><th>(&#8594; Aircrafts.model)</th></tr>
+</thead><tbody>
+<tr><td>Emirates</td><td><span style="color:#006600">Airbus A320</span></td></tr>
+<tr><td>Qantas</td><td>Boeing 777</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flight_id</th><th>departure_airport</th><th>arrival_airport</th><th>airline_id</th><th>aircraft_id</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th><th>(&#8594; Airlines.id)</th><th>(&#8594; Aircrafts.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>4</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

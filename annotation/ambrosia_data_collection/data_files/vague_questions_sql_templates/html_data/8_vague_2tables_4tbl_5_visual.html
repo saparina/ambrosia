@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Production</span></h2><table><thead>
+<tr><th>studio_id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros</td><td>Burbank, California</td></tr>
+<tr><td>2</td><td>Universal Studios</td><td>Universal City, California</td></tr>
+<tr><td>3</td><td>Disney Studios</td><td>Glendale, California</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>actor_id</th><th>first_name</th><th>last_name</th><th>date_of_birth</th><th>gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>M</td></tr>
+<tr><td>2</td><td>Emma</td><td>Watson</td><td>1990-04-15</td><td>F</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieActor</h2><table><thead>
+<tr><th>movie_actor_id</th><th>movie_id</th><th>actor_id</th><th>role</th></tr>
+<tr><th></th><th>(&#8594; Movies.movie_id)</th><th>(&#8594; Actor.actor_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Cobb</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Arthur</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>director_id</th><th>first_name</th><th>last_name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Nolan</td><td>1970-06-20</td></tr>
+<tr><td>2</td><td>Pierre</td><td>Perifel</td><td>1962-01-20</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieDirector</h2><table><thead>
+<tr><th>movie_director_id</th><th>movie_id</th><th>director_id</th></tr>
+<tr><th></th><th>(&#8594; Movies.movie_id)</th><th>(&#8594; Director.director_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>movie_id</th><th>title</th><th>release_year</th><th>genre</th><th>studio_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Production.studio_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Action/Adventure</td><td>1</td></tr>
+<tr><td>2</td><td>Minions</td><td>2015</td><td>Animation</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

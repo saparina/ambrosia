@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Terminals</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Terminal A</span></td><td>First Floor</td></tr>
+<tr><td>2</td><td>Terminal B</td><td>Second Floor</td></tr>
+</tbody></table></div>
+
+<div><h2>Shops</h2><table><thead>
+<tr><th>ID</th><th>ShopName</th><th>TypeOfShop</th><th>TerminalID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Terminals.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Duty Free Store</td><td>General Merchandise</td><td>1</td></tr>
+<tr><td>2</td><td>Books and Magazines</td><td>Reading Materials</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>ID</th><th>RestaurantName</th><th>CuisineType</th><th>TerminalID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Terminals.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Burger King</td><td>Fast Food</td><td>1</td></tr>
+<tr><td>2</td><td>Italian Bistro</td><td>Italian</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Amenities</h2><table><thead>
+<tr><th>ID</th><th>AmenityName</th><th>Description</th><th>TerminalID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Terminals.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Luggage Storage</td><td>Store your luggage here</td><td>1</td></tr>
+<tr><td>2</td><td>Information Desk</td><td>Get information about flights</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CurrencyExchangeServices</span></h2><table><thead>
+<tr><th>ID</th><th>ServiceProvider</th><th>ExchangeRate</th><th>ATMMachineID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; AtmMachines.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>EXCHANGE CORP</td><td>1:1</td><td>None</td></tr>
+<tr><td>2</td><td>CURRENCY SERVICE</td><td>1.03:1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AtmMachines</span></h2><table><thead>
+<tr><th>ID</th><th>MachineNumber</th><th>LocationWithinTerminal</th><th>TerminalID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Terminals.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ATM 101</td><td>Near Gate 10</td><td>1</td></tr>
+<tr><td>2</td><td>ATM 102</td><td>Food Court Area</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Airplanes</span></h2><table><thead>
+<tr><th>id</th><th>model</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 787 Dreamliner</td><td>300</td></tr>
+<tr><td>2</td><td>Airbus A321neo</td><td>200</td></tr>
+<tr><td>3</td><td>Embraer E195</td><td>106</td></tr>
+<tr><td>4</td><td>Bombardier CRJ900</td><td>86</td></tr>
+<tr><td>5</td><td>A380 Superjumbo</td><td>853</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Cabin_Classes</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">class_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Economy Class</td></tr>
+<tr><td>2</td><td>Business Class</td></tr>
+<tr><td>3</td><td>First Class</td></tr>
+<tr><td>4</td><td>Premium Economy</td></tr>
+<tr><td>5</td><td>Full-Flat Bed</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York JFK</td><td>New York City, USA</td></tr>
+<tr><td>2</td><td>Los Angeles LAX</td><td>Los Angeles, USA</td></tr>
+<tr><td>3</td><td>Dubai DXB</td><td>Dubai, UAE</td></tr>
+<tr><td>4</td><td>London Heathrow LHR</td><td>London, UK</td></tr>
+<tr><td>5</td><td>Tokyo Haneda HND</td><td>Tokyo, Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>flight_number</th><th>departure_airport_id</th><th>arrival_airport_id</th><th>airplane_id</th><th>departure_time</th></tr>
+<tr><th></th><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th><th>(&#8594; Airplanes.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA123</td><td>1</td><td>2</td><td>1</td><td>2022-01-01T08:00:00Z</td></tr>
+<tr><td>2</td><td>DL456</td><td>2</td><td>5</td><td>2</td><td>2022-01-01T12:00:00Z</td></tr>
+<tr><td>3</td><td>BA987</td><td>3</td><td>4</td><td>3</td><td>2022-01-01T16:00:00Z</td></tr>
+<tr><td>4</td><td>QR123</td><td>4</td><td>1</td><td>4</td><td>2022-01-01T20:00:00Z</td></tr>
+<tr><td>5</td><td>JL567</td><td>5</td><td>3</td><td>5</td><td>2022-01-01T24:00:00Z</td></tr>
+</tbody></table></div>
+
+<div><h2>Airplanes_Cabin_Classes</h2><table><thead>
+<tr><th>airplane_id</th><th>cabin_class_id</th></tr>
+<tr><th>(&#8594; Airplanes.id)</th><th>(&#8594; Cabin_Classes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

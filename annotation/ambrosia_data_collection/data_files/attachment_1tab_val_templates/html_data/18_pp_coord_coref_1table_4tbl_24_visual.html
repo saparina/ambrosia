@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Film</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>ReleaseYear</th><th>Runtime</th><th><span style="color:#186e16"><span style="color:#186e16">Film_Style</span></span></th><th><span style="color:#1430b2">Director</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Person.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Adventures of Tom Sawyer</td><td>1986</td><td>90</td><td><span style="color:#186e16">Adventure Movie</span></td><td><span style="color:#1430b2">Sofia Martinez</span></td></tr>
+<tr><td>2</td><td>Jurassic Park</td><td>2013</td><td>127</td><td><span style="color:#186e16">Adventure Movie</span></td><td>Steven Spielberg</td></tr>
+<tr><td>3</td><td>Inception</td><td>2021</td><td>120</td><td><span style="color:#186e16">Action Movie</span></td><td><span style="color:#1430b2">Sofia Martinez</span></td></tr>
+<tr><td>4</td><td>Die Hard</td><td>2022</td><td>132</td><td><span style="color:#186e16">Action Movie</span></td><td>John McTiernan</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Birthdate</th><th>Nationality</th><th>Gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td><td>1956-07-09</td><td>American</td><td>Male</td></tr>
+<tr><td>2</td><td>Halle Berry</td><td>1966-08-14</td><td>American</td><td>Female</td></tr>
+</tbody></table></div>
+
+<div><h2>Character</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Description</th><th>Role</th><th>Film_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Actor.ID)</th><th>(&#8594; Film.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Captain Nemo</td><td>A brave adventurer</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Dr. John Dolittle</td><td>An animal communicator</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ProductionCompany</h2><table><thead>
+<tr><th>ID</th><th>CompanyName</th><th>Address</th><th>ContactEmail</th><th>Founded</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Walt Disney Pictures</td><td>Burbank, CA</td><td>contact@disney.com</td><td>1923-10-16</td></tr>
+<tr><td>2</td><td>Universal Studios</td><td>Universal City, CA</td><td>info@universalstudios.com</td><td>1912-04-21</td></tr>
+</tbody></table></div>
+
+<div><h2>Producer</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Birthdate</th><th>Nationality</th><th>ProductionCompany_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; ProductionCompany.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Foster</td><td>1949-01-11</td><td>Canadian</td><td>1</td></tr>
+<tr><td>2</td><td>Karen Lunder</td><td>1978-01-15</td><td>Swedish</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmCrew</h2><table><thead>
+<tr><th>ID</th><th>Position</th><th>Department</th><th>Film_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Film.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Director</td><td>Direction</td><td>1</td></tr>
+<tr><td>2</td><td>Screenwriter</td><td>Script</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

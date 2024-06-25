@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Topics</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">topic_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Differentiated Instruction</td></tr>
+<tr><td>2</td><td>Inclusive Classroom Management</td></tr>
+<tr><td>3</td><td>Curriculum Design</td></tr>
+<tr><td>4</td><td>Assessment Techniques</td></tr>
+<tr><td>5</td><td>Technology Integration</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Professional_Development_Programs</span></h2><table><thead>
+<tr><th>program_id</th><th>program_name</th><th>duration</th><th>cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>PDP A</td><td>30</td><td>999.99</td></tr>
+<tr><td>2</td><td>PDP B</td><td>60</td><td>1899.99</td></tr>
+<tr><td>3</td><td>PDP C</td><td>45</td><td>799.99</td></tr>
+<tr><td>4</td><td>PDP D</td><td>90</td><td>2999.99</td></tr>
+<tr><td>5</td><td>PDP E</td><td>120</td><td>3899.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Professional_Development_Programs_Topics</h2><table><thead>
+<tr><th>pdp_topics_id</th><th>topics_id</th></tr>
+<tr><th>(&#8594; Professional_Development_Programs.program_id)</th><th>(&#8594; Topics.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

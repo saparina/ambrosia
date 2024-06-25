@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+123456789</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+098765432</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>+1123456789</td></tr>
+<tr><td>4</td><td>Charlie</td><td>White</td><td>charlie.white@example.com</td><td>+0098765432</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td><td>+11123456789</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>RestaurantID</th><th>Name</th><th>Address</th><th>OpeningTime</th><th>ClosingTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Gourmet Place</td><td>123 Main St</td><td>08:00:00</td><td>22:00:00</td></tr>
+<tr><td>2</td><td>Fast Bites</td><td>456 Market St</td><td>07:00:00</td><td>23:00:00</td></tr>
+<tr><td>3</td><td>Cozy Cafe</td><td>789 High St</td><td>09:00:00</td><td>21:00:00</td></tr>
+<tr><td>4</td><td>Deli Delight</td><td>321 Ocean Blvd</td><td>10:00:00</td><td>20:00:00</td></tr>
+<tr><td>5</td><td>Pizza Palace</td><td>987 Second Ave</td><td>11:00:00</td><td>23:59:59</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Meals</span></h2><table><thead>
+<tr><th>MealID</th><th><span style="color:#186e16"><span style="color:#186e16">MealType</span></span></th><th><span style="color:#1430b2">BestBefore</span></th><th>Description</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Prepared Meal</span></td><td><span style="color:#1430b2">10.11.2018</span></td><td>A delicious steak dinner.</td><td>29.99</td></tr>
+<tr><td>2</td><td><span style="color:#186e16">Prepared Meal</span></td><td>11.12.2018</td><td>Grilled salmon with asparagus.</td><td>19.99</td></tr>
+<tr><td>3</td><td><span style="color:#186e16">Takeaway</span></td><td><span style="color:#1430b2">10.11.2018</span></td><td>Fried chicken combo meal.</td><td>9.99</td></tr>
+<tr><td>4</td><td><span style="color:#186e16">Takeaway</span></td><td>11.12.2018</td><td>Veggie burger and fries.</td><td>8.99</td></tr>
+<tr><td>5</td><td>Breakfast</td><td>12.13.2018</td><td>Eggs Benedict with hollandaise sauce.</td><td>14.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>OrderID</th><th>CustomerID</th><th>MealID</th><th>Quantity</th><th>OrderDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Meals.MealID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2</td><td>2024-03-07 21:09:43</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>1</td><td>2024-03-07 21:09:43</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td><td>2024-03-07 21:09:43</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>1</td><td>2024-03-07 21:09:43</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2</td><td>2024-03-07 21:09:43</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

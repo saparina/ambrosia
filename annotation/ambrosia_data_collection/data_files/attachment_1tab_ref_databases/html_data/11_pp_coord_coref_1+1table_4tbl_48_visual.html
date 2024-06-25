@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Genres</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">name</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Drama</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Romance</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Music_Composers</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">composer_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Hans Zimmer</span></td></tr>
+<tr><td>2</td><td>John Williams</td></tr>
+<tr><td>3</td><td>Danny Elfman</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>2008</td></tr>
+<tr><td>2</td><td>Titanic</td><td>1997</td></tr>
+<tr><td>3</td><td>Beauty and the Beast</td><td>1991</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Genres</h2><table><thead>
+<tr><th>film_id</th><th>genre_id</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Composer_Films</h2><table><thead>
+<tr><th>composer_id</th><th>film_id</th><th>score_composed</th></tr>
+<tr><th>(&#8594; Music_Composers.id)</th><th>(&#8594; Films.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>0</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>1</td><td>3</td><td>0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

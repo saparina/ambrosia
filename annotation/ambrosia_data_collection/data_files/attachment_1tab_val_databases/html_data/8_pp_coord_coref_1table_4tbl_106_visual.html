@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>098-765-4321</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>id</th><th>pubName</th><th>address</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Newspaper Co.</td><td>123 Main St.</td><td>Anytown</td><td>USA</td></tr>
+<tr><td>2</td><td>Magazine Inc.</td><td>456 Elm St.</td><td>Bigcity</td><td>Canada</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Articles</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>authorId</th><th>pubId</th><th>publicationDate</th><th>visualStorytelling</th><th>articleType</th></tr>
+<tr><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Publishers.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The World's Largest Robots</td><td>1</td><td>1</td><td>2024-03-07 23:10:34</td><td><span style="color:#990000">Photo</span></td><td><span style="color:#006600">Technology</span></td></tr>
+<tr><td>2</td><td>Another Interesting Article</td><td>2</td><td>2</td><td>2024-03-07 23:10:34</td><td><span style="color:#990000">Photo</span></td><td>Politics</td></tr>
+<tr><td>3</td><td>World's Biggest Machines</td><td>3</td><td>1</td><td>2024-03-07 23:10:34</td><td><span style="color:#990000">Video</span></td><td><span style="color:#006600">Technology</span></td></tr>
+<tr><td>4</td><td>Yet Another Topic</td><td>4</td><td>2</td><td>2024-03-07 23:10:34</td><td><span style="color:#990000">Video</span></td><td>Environment</td></tr>
+</tbody></table></div>
+
+<div><h2>Categories</h2><table><thead>
+<tr><th>id</th><th>catName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Technology</td></tr>
+<tr><td>2</td><td>Politics</td></tr>
+<tr><td>3</td><td>Environment</td></tr>
+<tr><td>4</td><td>Health</td></tr>
+<tr><td>5</td><td>Culture</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

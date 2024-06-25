@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechNews</td><td>New York</td></tr>
+<tr><td>2</td><td>WorldReport</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>GlobalInsight</td><td>San Francisco</td></tr>
+<tr><td>4</td><td>InfoHub</td><td>Chicago</td></tr>
+<tr><td>5</td><td>DigitalTimes</td><td>Seattle</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>Requirements</th><th>PostedOn</th><th>CompanyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Senior Journalist</td><td>Lead a team of journalists...</td><td>Strong leadership skills required.</td><td>2024-03-13 12:10:07</td><td>1</td></tr>
+<tr><td>2</td><td>Web Developer</td><td>Design and develop web applications...</td><td>Proficiency in JavaScript and HTML/CSS.</td><td>2024-03-13 12:10:07</td><td>2</td></tr>
+<tr><td>3</td><td>Data Analyst</td><td>Analyze large datasets...</td><td>Advanced knowledge of R programming.</td><td>2024-03-13 12:10:07</td><td>3</td></tr>
+<tr><td>4</td><td>Graphic Designer</td><td>Create visual content...</td><td>Expertise in Adobe Creative Suite.</td><td>2024-03-13 12:10:07</td><td>4</td></tr>
+<tr><td>5</td><td>Marketing Manager</td><td>Develop marketing strategies...</td><td>MBA degree preferred.</td><td>2024-03-13 12:10:07</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MediaCareers</span></h2><table><thead>
+<tr><th>CareerID</th><th><span style="color:#990000"><span style="color:#990000">Careertype</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Journalist</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Editor</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Languages</span></h2><table><thead>
+<tr><th>LanguageID</th><th><span style="color:#006600">Languagename</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">English</span></td></tr>
+<tr><td>2</td><td>Spanish</td></tr>
+</tbody></table></div>
+
+<div><h2>JobRequirements</h2><table><thead>
+<tr><th>JobRequirementID</th><th>Skillname</th><th>MinimumYearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Project Management</td><td>5</td></tr>
+<tr><td>2</td><td>UX Design</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostingDetails</h2><table><thead>
+<tr><th>JobPostingID</th><th>JobID</th><th>CareerID</th><th>LanguageID</th><th>JobRequirementID</th></tr>
+<tr><th></th><th>(&#8594; Jobs.JobID)</th><th>(&#8594; MediaCareers.CareerID)</th><th>(&#8594; Languages.LanguageID)</th><th>(&#8594; JobRequirements.JobRequirementID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

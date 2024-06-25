@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-06-03</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1992-12-15</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Programs</h2><table><thead>
+<tr><th>ProgramID</th><th>Name</th><th>Description</th><th><span style="color:#990000">Amount_Per_Semester</span></th><th><span style="color:#990000">Annual_Cost</span></th><th>ProgramType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>A program focusing on computer science concepts and skills.</td><td>2000.0</td><td>8000.0</td><td>Undergraduate</td></tr>
+<tr><td>2</td><td>Mathematics</td><td>A comprehensive mathematics program covering various branches.</td><td>2000.0</td><td>8000.0</td><td>Undergraduate</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>Name</th><th>Description</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>The department focuses on teaching and research in computer science.</td><td>Building A, Room 201</td></tr>
+<tr><td>2</td><td>Mathematics</td><td>The department offers a wide range of mathematical courses and research opportunities.</td><td>Building B, Room 101</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th><th>Semester</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021</td><td>B+</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>InstructorID</th><th>FirstName</th><th>LastName</th><th>HireDate</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael</td><td>Johnson</td><td>2017-07-01</td><td>michael.johnson@example.com</td></tr>
+<tr><td>2</td><td>Emma</td><td>Williams</td><td>2019-08-01</td><td>emma.williams@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>Description</th><th>DepartmentID</th><th>Credits</th><th>InstructorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Departments.DepartmentID)</th><th></th><th>(&#8594; Instructors.InstructorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>An introductory course covering programming fundamentals.</td><td>1</td><td>4</td><td>1</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>A course covering fundamental calculus topics.</td><td>2</td><td>4</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

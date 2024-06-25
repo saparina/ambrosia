@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Specialists</span></h2><table><thead>
+<tr><th>specialist_id</th><th>specialty</th><th>hospital_name</th><th>years_of_experience</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Radiologist</span></td><td><span style="color:#006600">Western Medical Center</span></td><td>7</td><td>80000.0</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Radiologist</span></td><td>St. Luke's Hospital</td><td>6</td><td>90000.0</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Ultrasound Technician</span></td><td><span style="color:#006600">Western Medical Center</span></td><td>5</td><td>60000.0</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Ultrasound Technician</span></td><td>Memorial Hospital</td><td>4</td><td>55000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Hospitals</h2><table><thead>
+<tr><th>hospital_id</th><th>name</th><th>location</th><th>number_of_beds</th><th>annual_revenue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Western Medical Center</td><td>California</td><td>250</td><td>200000000.0</td></tr>
+<tr><td>2</td><td>St. Luke's Hospital</td><td>New York</td><td>300</td><td>150000000.0</td></tr>
+<tr><td>3</td><td>Memorial Hospital</td><td>Florida</td><td>150</td><td>100000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>department_id</th><th>name</th><th>description</th><th>budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Medical Imaging Department</td><td>This department provides diagnostic imaging services using X-ray machines, ultrasounds, MRI scanners etc.</td><td>100000.0</td></tr>
+<tr><td>2</td><td>Surgery Department</td><td>A team of surgeons perform various operations including open surgery and minimally invasive procedures.</td><td>200000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>job_id</th><th>title</th><th>description</th><th>required_skills</th><th>starting_salary</th><th>posted_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Radiologist</td><td>A radiologist interprets x-rays, CT scans, MRIs, and other medical images to diagnose disease.</td><td>Knowledge of anatomy, strong problem-solving skills, excellent communication skills.</td><td>80000.0</td><td>2024-03-07 21:24:38</td></tr>
+<tr><td>2</td><td>Ultrasound Technician</td><td>An ultrasonographer operates ultrasound equipment to visualize internal organs and tissues, guide biopsies and other needle procedures.</td><td>Strong technical skills, physical stamina, good bedside manner.</td><td>60000.0</td><td>2024-03-07 21:24:38</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>application_id</th><th>applicant_name</th><th>email</th><th>phone_number</th><th>resume</th><th>cover_letter</th><th>applied_on</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@gmail.com</td><td>555-123-4567</td><td>resume.pdf</td><td>cover_letter.txt</td><td>2021-01-01 00:00:00</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@yahoo.com</td><td>555-987-6543</td><td>resumeworker.docx</td><td>cov_let.odt</td><td>2021-01-10 00:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

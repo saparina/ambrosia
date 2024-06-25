@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Human Resources</td></tr>
+<tr><td>2</td><td>IT</td></tr>
+<tr><td>3</td><td>Finance</td></tr>
+<tr><td>4</td><td>Marketing</td></tr>
+<tr><td>5</td><td>Sales</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th>HireDate</th><th>Salary</th><th>DepartmentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Departments.DepartmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>123-456-7890</td><td>2020-01-01</td><td>60000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>987-654-3210</td><td>2019-02-01</td><td>50000.0</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>456-789-0123</td><td>2018-03-01</td><td>55000.0</td><td>3</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td><td>246-865-1357</td><td>2017-04-01</td><td>65000.0</td><td>4</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie.black@example.com</td><td>654-321-0987</td><td>2016-05-01</td><td>70000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">WorkingArrangements</span></h2><table><thead>
+<tr><th>ArrangementID</th><th><span style="color:#006600">Description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Remote</span></td></tr>
+<tr><td>2</td><td>Onsite</td></tr>
+<tr><td>3</td><td>Hybrid</td></tr>
+<tr><td>4</td><td>Flexible</td></tr>
+<tr><td>5</td><td>Rotational</td></tr>
+</tbody></table></div>
+
+<div><h2>Positions</h2><table><thead>
+<tr><th>PositionID</th><th>Title</th><th>MinimumQualifications</th><th>MaximumSalary</th><th>MINumberOfYearsExperience</th><th>ForeignKey_PositionType</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; PositionTypes.PositionTypeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Bachelor's degree in Computer Science</td><td>100000.0</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Bachelor's degree in Mathematics or Statistics</td><td>80000.0</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Product Manager</td><td>MBA or equivalent experience</td><td>120000.0</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>UX Designer</td><td>Bachelor's degree in Graphic Design or Interaction Design</td><td>90000.0</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>HR Generalist</td><td>Bachelor's degree in Human Resources</td><td>60000.0</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>JobID</th><th>PositionID</th><th>CompanyId</th><th>OpeningDate</th><th>ClosingDate</th><th>Description</th><th>Location</th><th>ApplicationInstructions</th><th>RequisitionNumber</th><th>IsActive</th></tr>
+<tr><th></th><th>(&#8594; Positions.PositionID)</th><th>(&#8594; Companies.CompanyId)</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-01-01</td><td>2021-12-31</td><td>Seeking a software engineer...</td><td>New York</td><td>Apply online at our website.</td><td>REQ12345</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-02-01</td><td>2021-12-31</td><td>Looking for an experienced product manager...</td><td>San Francisco</td><td>Submit resume and cover letter via email.</td><td>REQ67890</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-03-01</td><td>2021-12-31</td><td>We are hiring a UX designer...</td><td>Los Angeles</td><td>Apply through our careers portal.</td><td>REQ13579</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-04-01</td><td>2021-12-31</td><td>A HR generalist is needed for our team...</td><td>Chicago</td><td>Email resume to hr@company.com.</td><td>REQ24680</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-05-01</td><td>2021-12-31</td><td>Join us as a data analyst...</td><td>Dallas</td><td>Complete this form on our website.</td><td>REQ36901</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SalesManagers</span></h2><table><thead>
+<tr><th>ManagerID</th><th>EmployeeID</th><th>DepartmentID</th></tr>
+<tr><th></th><th>(&#8594; Employees.EmployeeID)</th><th>(&#8594; Departments.DepartmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MarketingSpecialists</span></h2><table><thead>
+<tr><th>SpecialistID</th><th>EmployeeID</th><th>DepartmentID</th></tr>
+<tr><th></th><th>(&#8594; Employees.EmployeeID)</th><th>(&#8594; Departments.DepartmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>EmploymentArrangements</h2><table><thead>
+<tr><th>EmpArrangementID</th><th>EmployeeID</th><th>ArrangementID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Employees.EmployeeID)</th><th>(&#8594; WorkingArrangements.ArrangementID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2020-06-01</td><td>2022-06-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2019-07-01</td><td>2021-07-01</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2018-08-01</td><td>2020-08-01</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2017-09-01</td><td>2019-09-01</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2016-10-01</td><td>2018-10-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

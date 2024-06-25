@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Project</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>StartDate</th><th>EndDate</th><th><span style="color:#990000">Monetary_Value</span></th><th><span style="color:#990000">Percentage_Of_Budget</span></th><th>Infrastructure</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Project1</td><td>2023-01-01</td><td>2023-06-01</td><td>500000.0</td><td>75.0</td><td>Residential Building</td></tr>
+<tr><td>2</td><td>Project2</td><td>2023-02-01</td><td>2023-08-01</td><td>900000.0</td><td>80.0</td><td>Commercial Complex</td></tr>
+</tbody></table></div>
+
+<div><h2>Worker</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>JobTitle</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Carpenter</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Electrician</td></tr>
+</tbody></table></div>
+
+<div><h2>Materials</h2><table><thead>
+<tr><th>id</th><th>MaterialName</th><th>Quantity</th><th>UnitCost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concrete Blocks</td><td>500</td><td>5.0</td></tr>
+<tr><td>2</td><td>Bricks</td><td>300</td><td>3.5</td></tr>
+</tbody></table></div>
+
+<div><h2>Equipment</h2><table><thead>
+<tr><th>id</th><th>EquipName</th><th>PurchasePrice</th><th>RentalRate</th><th>DailyUsage</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Excavator</td><td>20000.0</td><td>1000.0</td><td>8</td></tr>
+<tr><td>2</td><td>Crane</td><td>30000.0</td><td>1500.0</td><td>6</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Customs</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">Airport</span></th><th>CustomOfficerName</th><th>CustomOfficePhoneNumber</th><th>OpeningHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Gatwick</span></td><td>John Doe</td><td>1234567890</td><td>06:00 - 22:00</td></tr>
+<tr><td>2</td><td>Heathrow</td><td>Jane Smith</td><td>0987654321</td><td>06:30 - 21:30</td></tr>
+<tr><td>3</td><td>Stansted</td><td>Alice Brown</td><td>1122334455</td><td>07:00 - 21:00</td></tr>
+<tr><td>4</td><td>Luton</td><td>Bob Johnson</td><td>2233445566</td><td>06:00 - 22:00</td></tr>
+<tr><td>5</td><td>Manchester</td><td>Charlie White</td><td>3344556677</td><td>06:30 - 21:30</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Immigration</span></h2><table><thead>
+<tr><th>id</th><th>Airport</th><th>ImmigrationOfficerName</th><th>ImmigrationOfficePhoneNumber</th><th>OpeningHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Gatwick</span></td><td>Michael Black</td><td>1357924680</td><td>06:00 - 22:00</td></tr>
+<tr><td>2</td><td>Heathrow</td><td>Emma Green</td><td>0987654321</td><td>06:30 - 21:30</td></tr>
+<tr><td>3</td><td>Stansted</td><td>David Blue</td><td>1122334455</td><td>07:00 - 21:00</td></tr>
+<tr><td>4</td><td>Luton</td><td>Nathan Red</td><td>2233445566</td><td>06:00 - 22:00</td></tr>
+<tr><td>5</td><td>Manchester</td><td>Simon Yellow</td><td>3344556677</td><td>06:30 - 21:30</td></tr>
+</tbody></table></div>
+
+<div><h2>Runway</h2><table><thead>
+<tr><th>id</th><th>Airport</th><th>Length</th><th>Width</th><th>SurfaceType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gatwick</td><td>3000.0</td><td>45.0</td><td>Asphalt</td></tr>
+<tr><td>2</td><td>Heathrow</td><td>3200.0</td><td>60.0</td><td>Concrete</td></tr>
+<tr><td>3</td><td>Stansted</td><td>2800.0</td><td>40.0</td><td>Asphalt</td></tr>
+<tr><td>4</td><td>Luton</td><td>2500.0</td><td>35.0</td><td>Asphalt</td></tr>
+<tr><td>5</td><td>Manchester</td><td>3100.0</td><td>50.0</td><td>Concrete</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminal</h2><table><thead>
+<tr><th>id</th><th>Airport</th><th>Name</th><th>NumberOfDoors</th><th>Facilities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gatwick</td><td>Terminal A</td><td>10</td><td>Shops, Restaurants, Baggage Claim</td></tr>
+<tr><td>2</td><td>Heathrow</td><td>Terminal 2</td><td>15</td><td>Duty Free Shops, Lounge, Currency Exchange</td></tr>
+<tr><td>3</td><td>Stansted</td><td>Terminal 1</td><td>8</td><td>Cafes, Information Desk, Baby Changing Rooms</td></tr>
+<tr><td>4</td><td>Luton</td><td>Main Terminal</td><td>6</td><td>ATMs, Lost & Found, Car Rental</td></tr>
+<tr><td>5</td><td>Manchester</td><td>Terminal 1</td><td>12</td><td>WiFi, Parking, Disabled Access</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>DepartureTime</th><th>ArrivalTime</th><th>DestinationAirport</th><th>PlaneId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Aircraft.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-04-01 08:00:00</td><td>2023-04-01 11:00:00</td><td>New York</td><td>1</td></tr>
+<tr><td>2</td><td>2023-04-01 10:00:00</td><td>2023-04-01 13:00:00</td><td>Los Angeles</td><td>2</td></tr>
+<tr><td>3</td><td>2023-04-01 12:00:00</td><td>2023-04-01 15:00:00</td><td>Paris</td><td>3</td></tr>
+<tr><td>4</td><td>2023-04-01 14:00:00</td><td>2023-04-01 17:00:00</td><td>Tokyo</td><td>4</td></tr>
+<tr><td>5</td><td>2023-04-01 16:00:00</td><td>2023-04-01 19:00:00</td><td>Rome</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>id</th><th>Model</th><th>Capacity</th><th>RegistrationNumber</th><th>Manufacturer</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 747-400</td><td>400</td><td>G-BNAC</td><td>Boeing</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>800</td><td>G-KBJS</td><td>Airbus</td></tr>
+<tr><td>3</td><td>Bombardier CRJ-1000</td><td>100</td><td>EI-EEE</td><td>Bombardier</td></tr>
+<tr><td>4</td><td>Embraer E190</td><td>100</td><td>PS-AMZ</td><td>Embraer</td></tr>
+<tr><td>5</td><td>AIRBUS A320</td><td>180</td><td>VQ-BEA</td><td>Airbus</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

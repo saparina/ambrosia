@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Online_News_Portals</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Times</td><td>https://www.nytimes.com/</td></tr>
+<tr><td>2</td><td>The Guardian</td><td>https://www.theguardian.com/</td></tr>
+<tr><td>3</td><td>BBC News</td><td>https://www.bbc.co.uk/news</td></tr>
+<tr><td>4</td><td>Al Jazeera</td><td>https://www.aljazeera.com/</td></tr>
+<tr><td>5</td><td>Deutsche Welle</td><td>https://www.dw.com/</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Categories</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">category_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News</td></tr>
+<tr><td>2</td><td>Politics</td></tr>
+<tr><td>3</td><td>Economy</td></tr>
+<tr><td>4</td><td>Technology</td></tr>
+<tr><td>5</td><td>Entertainment</td></tr>
+</tbody></table></div>
+
+<div><h2>Online_News_Portals_Categories</h2><table><thead>
+<tr><th>online_news_portal_id</th><th>category_id</th></tr>
+<tr><th>(&#8594; Online_News_Portals.id)</th><th>(&#8594; Categories.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

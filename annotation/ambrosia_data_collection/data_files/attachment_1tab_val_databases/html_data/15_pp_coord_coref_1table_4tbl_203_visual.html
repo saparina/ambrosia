@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>AirportID</th><th>Name</th><th>Location</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>New York, USA</td><td>100</td></tr>
+<tr><td>2</td><td>LAX</td><td>Los Angeles, USA</td><td>80</td></tr>
+<tr><td>3</td><td>CDG</td><td>Paris, France</td><td>75</td></tr>
+<tr><td>4</td><td>HKG</td><td>Hong Kong, China</td><td>60</td></tr>
+<tr><td>5</td><td>SYD</td><td>Sydney, Australia</td><td>90</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>AirlineID</th><th>Name</th><th>Headquarters</th><th>NumberOfFleets</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>Chicago, USA</td><td>300</td></tr>
+<tr><td>2</td><td>American Airlines</td><td>Dallas, USA</td><td>500</td></tr>
+<tr><td>3</td><td>Air France</td><td>Paris, France</td><td>120</td></tr>
+<tr><td>4</td><td>Cathay Pacific</td><td>Hong Kong, China</td><td>100</td></tr>
+<tr><td>5</td><td>Qantas</td><td>Sydney, Australia</td><td>70</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilots</h2><table><thead>
+<tr><th>PilotID</th><th>FirstName</th><th>LastName</th><th>LicenseNumber</th><th>HoursExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>AB1234CD</td><td>5000</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>EF5678GH</td><td>4500</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>IJ9LMNOP</td><td>6000</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>STUVWXYZ</td><td>7000</td></tr>
+<tr><td>5</td><td>Tom</td><td>Black</td><td>AB1234CD</td><td>5500</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Flights</span></h2><table><thead>
+<tr><th>FlightID</th><th>DepartureDate</th><th>ArrivalTime</th><th>Destination</th><th>Origin</th><th>Airline</th><th>Pilot</th><th>Status</th><th>Disruptions</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.AirportID)</th><th>(&#8594; Airports.AirportID)</th><th>(&#8594; Airlines.AirlineID)</th><th>(&#8594; Pilots.PilotID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01</td><td>12:00</td><td>1</td><td>2</td><td>1</td><td>1</td><td><span style="color:#006600">Delayed</span></td><td><span style="color:#990000">Weather Condition</span></td></tr>
+<tr><td>2</td><td>2023-01-02</td><td>15:30</td><td>2</td><td>3</td><td>2</td><td>2</td><td>On Time</td><td>None</td></tr>
+<tr><td>3</td><td>2023-01-03</td><td>10:00</td><td>3</td><td>1</td><td>3</td><td>3</td><td>Cancelled</td><td><span style="color:#990000">Mechanical Issue</span></td></tr>
+<tr><td>4</td><td>2023-01-04</td><td>11:00</td><td>4</td><td>5</td><td>4</td><td>4</td><td>On Time</td><td>None</td></tr>
+<tr><td>5</td><td>2023-01-05</td><td>13:00</td><td>5</td><td>4</td><td>5</td><td>5</td><td><span style="color:#006600">Delayed</span></td><td><span style="color:#990000">Mechanical Issue</span></td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

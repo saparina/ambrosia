@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Performance_Events</span></h2><table><thead>
+<tr><th>EventID</th><th><span style="color:#990000"><span style="color:#990000">Name</span></span></th><th>Type</th><th>Audition_RoomID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; AuditionRooms.RoomID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Dance Recital</span></td><td>Recital</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Dance Recital</span></td><td>Competition</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Talent Show</span></td><td>Showcase</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Talent Show</span></td><td>Festival</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Talents</h2><table><thead>
+<tr><th>TalentID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Acting</td></tr>
+<tr><td>2</td><td>Singng</td></tr>
+</tbody></table></div>
+
+<div><h2>Performers</h2><table><thead>
+<tr><th>PerformerID</th><th>Name</th><th>Age</th><th>TalentID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Talents.TalentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Participants</h2><table><thead>
+<tr><th>ParticipantID</th><th>PerformerID</th><th>EventID</th></tr>
+<tr><th></th><th>(&#8594; Performers.PerformerID)</th><th>(&#8594; Performance_Events.EventID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">AuditionRooms</span></h2><table><thead>
+<tr><th>RoomID</th><th><span style="color:#006600">Number</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Room 101</span></td></tr>
+<tr><td>2</td><td>Room 102</td></tr>
+</tbody></table></div>
+
+<div><h2>Schedules</h2><table><thead>
+<tr><th>ScheduleID</th><th>EventID</th><th>RoomID</th><th>StartTime</th><th>EndTime</th></tr>
+<tr><th></th><th>(&#8594; Performance_Events.EventID)</th><th>(&#8594; AuditionRooms.RoomID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>19:00:00</td><td>22:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>17:00:00</td><td>20:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>16:00:00</td><td>19:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>14:00:00</td><td>17:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>1970-07-30</td><td>United Kingdom</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td><td>1963-03-27</td><td>United States</td></tr>
+<tr><td>3</td><td>Martin Scorsese</td><td>1942-11-22</td><td>United States</td></tr>
+<tr><td>4</td><td>Ava DuVernay</td><td>1982-08-24</td><td>United States</td></tr>
+<tr><td>5</td><td>Denis Villeneuve</td><td>1967-03-03</td><td>Canada</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th>DateOfBirth</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>United States</td></tr>
+<tr><td>2</td><td>Meryl Streep</td><td>1949-06-22</td><td>United States</td></tr>
+<tr><td>3</td><td>Jennifer Lawrence</td><td>1990-08-15</td><td>United States</td></tr>
+<tr><td>4</td><td>Robert Downey Jr.</td><td>1965-04-04</td><td>United States</td></tr>
+<tr><td>5</td><td>Gal Gadot</td><td>1985-04-30</td><td>Israel</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>ProducerID</th><th>Name</th><th>CompanyName</th><th>ContactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Kevin Feige</td><td>Marvel Studios</td><td>kevin@marvelstudios.com</td></tr>
+<tr><td>2</td><td>Frank Marshall</td><td>Amblin Entertainment</td><td>frank@amblinentertainment.com</td></tr>
+<tr><td>3</td><td>Barbara Broccoli</td><td>EON Productions</td><td>barbara@eonproductions.com</td></tr>
+<tr><td>4</td><td>David Heyman</td><td>Heyday Films</td><td>david@heydayfilms.com</td></tr>
+<tr><td>5</td><td>Jason Blum</td><td>Blumhouse Productions</td><td>jason@blumhouse.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>RoleID</th><th>MovieTitle</th><th>CharacterName</th><th>DirectorID</th><th>ProducerID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th><th>(&#8594; Producers.ProducerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Cobb</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>Mia Wallace</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>The Departed</td><td>Colin Sullivan</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>A Wrinkle in Time</td><td>Meg Murry</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Interstellar</td><td>Cooper</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Movies</span></h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>ReleaseYear</th><th>Genre</th><th>Rating</th><th>FilmFestival</th><th>Budget</th><th>BoxOffice</th><th>DirectorID</th><th>ProducerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th><th>(&#8594; Producers.ProducerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td><span style="color:#990000">Blockbuster</span></td><td>PG-13</td><td><span style="color:#006600">Sundance Film Festival</span></td><td>160</td><td>829</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Titanic</td><td>1997</td><td><span style="color:#990000">Blockbuster</span></td><td>PG-13</td><td>Academy Awards</td><td>200</td><td>2202</td><td>None</td><td>2</td></tr>
+<tr><td>3</td><td>Good Will Hunting</td><td>1997</td><td><span style="color:#990000">Indie Film</span></td><td>R</td><td><span style="color:#006600">Sundance Film Festival</span></td><td>30</td><td>330</td><td>None</td><td>3</td></tr>
+<tr><td>4</td><td>Little Miss Sunshine</td><td>2006</td><td><span style="color:#990000">Indie Film</span></td><td>PG-13</td><td><span style="color:#006600">Sundance Film Festival</span></td><td>8</td><td>60</td><td>None</td><td>4</td></tr>
+<tr><td>5</td><td>Dunkirk</td><td>2017</td><td><span style="color:#990000">Blockbuster</span></td><td>PG-13</td><td>Cannes Film Festival</td><td>100</td><td>527</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

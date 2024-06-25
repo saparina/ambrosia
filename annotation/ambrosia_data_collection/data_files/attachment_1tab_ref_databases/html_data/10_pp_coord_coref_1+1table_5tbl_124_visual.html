@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>Musical_Instrument</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>20</td><td>Piano</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>22</td><td>Violin</td></tr>
+<tr><td>3</td><td>Mike</td><td>Johnson</td><td>23</td><td>None</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>21</td><td>Guitar</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>InstructorID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>Teaches</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>White</td><td>35</td><td>Music Theory</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Black</td><td>30</td><td>Vocal Training</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Green</td><td>45</td><td>Composition</td></tr>
+<tr><td>4</td><td>Professor</td><td>Red</td><td>60</td><td>History of Music</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>ClassID</th><th>CourseName</th><th>StartTime</th><th>EndTime</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beginner Piano</td><td>2022-09-01 08:00:00</td><td>2022-09-01 09:00:00</td><td>Room A</td></tr>
+<tr><td>2</td><td>Advanced Guitar</td><td>2022-09-01 10:00:00</td><td>2022-09-01 11:00:00</td><td>Room B</td></tr>
+<tr><td>3</td><td>Introduction to Music Theory</td><td>2022-09-01 12:00:00</td><td>2022-09-01 13:00:00</td><td>Room C</td></tr>
+<tr><td>4</td><td>Intermediate Violin</td><td>2022-09-02 08:00:00</td><td>2022-09-02 09:00:00</td><td>Room D</td></tr>
+<tr><td>5</td><td>History of Rock Music</td><td>2022-09-02 10:00:00</td><td>2022-09-02 11:00:00</td><td>Room E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Owners</span></h2><table><thead>
+<tr><th>OwnerID</th><th><span style="color:#006600">Fullname</span></th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bob Smith</td><td>bob@example.com</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Alice Johnson</span></td><td>alice@example.com</td></tr>
+<tr><td>3</td><td>Charlie Brown</td><td>charlie@example.com</td></tr>
+<tr><td>4</td><td>David Lee</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">InstrumentOwnership</span></h2><table><thead>
+<tr><th>ID</th><th>OwnerID</th><th><span style="color:#990000"><span style="color:#990000">Musical_Instrument</span></span></th></tr>
+<tr><th></th><th>(&#8594; Owners.OwnerID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#990000">Piano</span></td></tr>
+<tr><td>2</td><td>1</td><td><span style="color:#990000">Guitar</span></td></tr>
+<tr><td>3</td><td>2</td><td><span style="color:#990000">Piano</span></td></tr>
+<tr><td>4</td><td>2</td><td><span style="color:#990000">Guitar</span></td></tr>
+<tr><td>5</td><td>3</td><td>Clarinet</td></tr>
+<tr><td>6</td><td>4</td><td>Flute</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

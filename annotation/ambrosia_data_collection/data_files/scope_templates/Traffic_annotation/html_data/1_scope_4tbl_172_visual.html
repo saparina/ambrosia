@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">City</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>population</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>8419000</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>3792600</td></tr>
+<tr><td>3</td><td>Chicago</td><td>2693910</td></tr>
+<tr><td>4</td><td>Houston</td><td>2209945</td></tr>
+<tr><td>5</td><td>Phoenix</td><td>1660273</td></tr>
+<tr><td>6</td><td>Philadelphia</td><td>1526000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Transportation_Mode</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">mode</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Buses</td></tr>
+<tr><td>2</td><td>Trains</td></tr>
+<tr><td>3</td><td>Taxis</td></tr>
+<tr><td>4</td><td>Cycling</td></tr>
+<tr><td>5</td><td>Walking</td></tr>
+</tbody></table></div>
+
+<div><h2>Roads</h2><table><thead>
+<tr><th>id</th><th>road_id</th><th>city_id</th><th>length</th></tr>
+<tr><th></th><th></th><th>(&#8594; City.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>10.0</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>15.0</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>20.0</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>25.0</td></tr>
+<tr><td>5</td><td>5</td><td>3</td><td>30.0</td></tr>
+<tr><td>6</td><td>6</td><td>3</td><td>35.0</td></tr>
+<tr><td>7</td><td>7</td><td>4</td><td>40.0</td></tr>
+<tr><td>8</td><td>8</td><td>4</td><td>45.0</td></tr>
+<tr><td>9</td><td>9</td><td>5</td><td>50.0</td></tr>
+<tr><td>10</td><td>10</td><td>5</td><td>55.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Traffic_Volume</h2><table><thead>
+<tr><th>id</th><th>volume</th><th>road_id</th><th>timestamp</th></tr>
+<tr><th></th><th></th><th>(&#8594; Roads.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000</td><td>1</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>2</td><td>1500</td><td>2</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>3</td><td>2000</td><td>3</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>4</td><td>2500</td><td>4</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>5</td><td>3000</td><td>5</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>6</td><td>3500</td><td>6</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>7</td><td>4000</td><td>7</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>8</td><td>4500</td><td>8</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>9</td><td>5000</td><td>9</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>10</td><td>5500</td><td>10</td><td>2024-01-30 18:39:55</td></tr>
+</tbody></table></div>
+
+<div><h2>Accidents</h2><table><thead>
+<tr><th>id</th><th>accident_type</th><th>severity</th><th>road_id</th><th>timestamp</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Roads.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Fender Bender</td><td>Minor</td><td>1</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>2</td><td>Hit and Run</td><td>Moderate</td><td>2</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>3</td><td>Head-on Collision</td><td>Major</td><td>3</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>4</td><td>Multi Vehicle Pileup</td><td>Catastrophic</td><td>4</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>5</td><td>DUI Accident</td><td>Serious</td><td>5</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>6</td><td>Distracted Driver Accident</td><td>Moderate</td><td>6</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>7</td><td>Speeding Ticket</td><td>Minor</td><td>7</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>8</td><td>Reckless Driving</td><td>Major</td><td>8</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>9</td><td>Texting While Driving</td><td>Minor</td><td>9</td><td>2024-01-30 18:39:55</td></tr>
+<tr><td>10</td><td>Red Light Running</td><td>Serious</td><td>10</td><td>2024-01-30 18:39:55</td></tr>
+</tbody></table></div>
+
+<div><h2>City_Transportation_Mode</h2><table><thead>
+<tr><th>city_id</th><th>transportation_mode_id</th></tr>
+<tr><th>(&#8594; City.id)</th><th>(&#8594; Transportation_Mode.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

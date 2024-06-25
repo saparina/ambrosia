@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td></tr>
+<tr><td>2</td><td>Software Inc.</td></tr>
+<tr><td>3</td><td>Data Solutions Ltd.</td></tr>
+<tr><td>4</td><td>AI Developers</td></tr>
+<tr><td>5</td><td>Network Services Co.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Customer_Facing_Roles</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">role</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Customer Service Advisor</span></td></tr>
+<tr><td>2</td><td>IT Support Technician</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Language_Proficiencies</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">language</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Bilingual</span></td></tr>
+<tr><td>2</td><td>Multilingual</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone</th><th>customer_role_id</th><th>language_proficiency_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Customer_Facing_Roles.id)</th><th>(&#8594; Language_Proficiencies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike</td><td>Adams</td><td>mikeadams@email.com</td><td>+1112223333</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Nancy</td><td>Walker</td><td>nancywalker@email.com</td><td>+2223334444</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Tom</td><td>Hanks</td><td>thanks@email.com</td><td>+3344556677</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>Laura</td><td>Williams</td><td>laurawilliams@email.com</td><td>+4455667788</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>Steve</td><td>Martin</td><td>stevemartin@email.com</td><td>+5566778899</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        .table-container div {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+        table {
+            width: auto;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        ol li {
+            margin-bottom: 5px; /* Adjust the space as needed */
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        img {
+        width: 100%;
+        height: auto
+        }
+    </style>
+</head>
+<body style="width: 1000px; margin: 0 auto;">
+
+<h3><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Objective</strong></span></span></span></h3>
+
+<span style="text-align:justify"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">You will be given a database and a question or command related to that database. That question is vague, i.e., it may be interpreted in different ways. To clarify the question, you will receive two items related to the topic of the question. Your task is to provide three different interpretations of the question using these items.
+
+<h4><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Examples</strong></span></span></span></h4>
+<p><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Let's consider the following task (database not shown for simplicity):</span></span></p>
+
+<img src="images/example_vague_disamb_1.png" alt="Interface">
+
+</div>
+<p style="margin-top:10px;"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">
+    <strong>Vagueness:</strong> The question is vague as "where" could refer to the museum (Subject 1) or the city (Subject 2) or both. You will also see a Common Name (Location in this example), but it may not be mentioned directly in the question.
+
+<p><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Example of a completed task:</span></span></p>
+
+<img src="images/example_vague_disamb_2.png" alt="Interface">
+
+<h3><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Rewriting rules</strong></span></span></span></h3>
+
+    <ul>
+        <li>All unformatted words must be replaced with plain words;</li>
+        <li>You can rephrase the question, but keep the original meaning (check the database if necessary);</li>
+        <li>You can use either question or command format.</li>
+        <li>Rewritten questions should be unambiguous, that is, have one clear reading.</li>
+    </ul>
+</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Example with unformatted Subject 1 and Subject 2 and paraphrased answers (database not shown for simplicity):</span></span></p>
+
+<img src="images/example_vague_disamb_3.png" alt="Interface">
+
+</body>
+</html>

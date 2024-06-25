@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Director</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th><th>Country</th><th><span style="color:#1430b2">Award</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1960-07-28</td><td>USA</td><td><span style="color:#1430b2">Oscar</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1970-03-12</td><td>Canada</td><td>Golden Globe</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Producer</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th><th>Country</th><th>Award</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>1955-09-03</td><td>UK</td><td><span style="color:#1430b2">Oscar</span></td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>1965-12-15</td><td>Australia</td><td>BAFTA</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>Genre</th><th>Rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie1</td><td>2000</td><td>Drama</td><td>8.5</td></tr>
+<tr><td>2</td><td>Movie2</td><td>2005</td><td>Comedy</td><td>7.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td><td>1956-07-09</td><td>USA</td></tr>
+<tr><td>2</td><td>Helen Mirren</td><td>1945-07-26</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Casting</h2><table><thead>
+<tr><th>movie_id</th><th>actor_id</th><th>role</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lead Role</td></tr>
+<tr><td>1</td><td>2</td><td>Supporting Role</td></tr>
+</tbody></table></div>
+
+<div><h2>Review</h2><table><thead>
+<tr><th>review_id</th><th>movie_id</th><th>rating</th><th>comment</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>9</td><td>Great film! Loved it.</td></tr>
+<tr><td>2</td><td>2</td><td>8</td><td>Good movie but could have been better.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

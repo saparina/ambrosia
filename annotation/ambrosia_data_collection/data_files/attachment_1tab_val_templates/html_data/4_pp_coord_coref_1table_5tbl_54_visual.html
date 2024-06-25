@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Corporation</td></tr>
+<tr><td>2</td><td>XYZ Industries</td></tr>
+<tr><td>3</td><td>MNO Consultancy</td></tr>
+<tr><td>4</td><td>PQR Bank</td></tr>
+<tr><td>5</td><td>LST Technology</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>ID</th><th>City</th><th>State</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td></tr>
+<tr><td>2</td><td>Chicago</td><td>IL</td><td>USA</td></tr>
+<tr><td>3</td><td>London</td><td>England</td><td>UK</td></tr>
+<tr><td>4</td><td>Paris</td><td>Ile-de-France</td><td>France</td></tr>
+<tr><td>5</td><td>Tokyo</td><td>Tokyo</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>Education_Requirements</h2><table><thead>
+<tr><th>ID</th><th>Degree_Required</th><th>Years_Experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bachelor's degree</td><td>2</td></tr>
+<tr><td>2</td><td>Master's degree</td><td>3</td></tr>
+<tr><td>3</td><td>PhD</td><td>5</td></tr>
+<tr><td>4</td><td>Bachelor's degree</td><td>1</td></tr>
+<tr><td>5</td><td>Associate degree</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">JobPostings</span></h2><table><thead>
+<tr><th>ID</th><th>CompanyID</th><th>LocationID</th><th>Title</th><th>Description</th><th><span style="color:#186e16"><span style="color:#186e16">Roles</span></span></th><th><span style="color:#1430b2">Data</span></th></tr>
+<tr><th></th><th>(&#8594; Companies.ID)</th><th>(&#8594; Locations.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td><span style="color:#186e16">Economist</span> - <span style="color:#1430b2">Demographics</span> Analyst</td><td>Analyze demographic trends for economic forecasting.</td><td><span style="color:#186e16">Economist</span></td><td><span style="color:#1430b2">Demographics</span></td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td><span style="color:#186e16">Economist</span> - Market Researcher</td><td>Conduct market research and analyze economic indicators.</td><td><span style="color:#186e16">Economist</span></td><td>Market</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td><span style="color:#186e16">Statistician</span> - <span style="color:#1430b2">Demographics</span> Expert</td><td>Apply statistical methods to study demographic patterns.</td><td><span style="color:#186e16">Statistician</span></td><td><span style="color:#1430b2">Demographics</span></td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td><span style="color:#186e16">Statistician</span> - Financial Analyst</td><td>Use statistics to assess financial risks and opportunities.</td><td><span style="color:#186e16">Statistician</span></td><td>Financial</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Software Engineer - Full Stack Developer</td><td>Design and develop full stack software solutions.</td><td>Engineer</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">News_Contents</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th><span style="color:#186e16">News_Type</span></th><th>Volume_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Volumes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Opinion</td><td>This is an opinion piece...</td><td><span style="color:#186e16">Opinion Piece</span></td><td>1</td></tr>
+<tr><td>2</td><td>Second Feature</td><td>Another feature article...</td><td>Feature Article</td><td>1</td></tr>
+<tr><td>3</td><td>Third Opinion</td><td>Yet another opinion piece...</td><td><span style="color:#186e16">Opinion Piece</span></td><td>2</td></tr>
+<tr><td>4</td><td>Fourth Feature</td><td>More on features...</td><td>Feature Article</td><td>2</td></tr>
+<tr><td>5</td><td>Mixed Bag</td><td>A mix of news types...</td><td>Miscellaneous</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Alice Johnson</td></tr>
+<tr><td>4</td><td>Bob Brown</td></tr>
+<tr><td>5</td><td>Charlie White</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Author_ID</th><th>Published_Date</th></tr>
+<tr><th></th><th>(&#8594; Authors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2022-02-01</td></tr>
+<tr><td>3</td><td>3</td><td>2022-03-01</td></tr>
+<tr><td>4</td><td>4</td><td>2022-04-01</td></tr>
+<tr><td>5</td><td>5</td><td>2022-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Volumes</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">Issue_Number</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>01</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">02</span></td></tr>
+<tr><td>3</td><td>03</td></tr>
+<tr><td>4</td><td>04</td></tr>
+<tr><td>5</td><td>05</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>id</th><th>Volume_ID</th><th>Publisher_Name</th></tr>
+<tr><th></th><th>(&#8594; Volumes.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Newspaper A</td></tr>
+<tr><td>2</td><td>2</td><td>Newspaper B</td></tr>
+<tr><td>3</td><td>3</td><td>Newspaper C</td></tr>
+<tr><td>4</td><td>4</td><td>Newspaper D</td></tr>
+<tr><td>5</td><td>5</td><td>Newspaper E</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

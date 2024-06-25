@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>TV_Show</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Genre</th><th>Network</th><th>CreatedDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Big Bang Theory</td><td>Comedy</td><td>CBS</td><td>2007-09-24</td></tr>
+<tr><td>2</td><td>Friends</td><td>Comedy</td><td>NBC</td><td>1994-09-22</td></tr>
+<tr><td>3</td><td>Breaking Bad</td><td>Crime Drama</td><td>AMC</td><td>2008-01-20</td></tr>
+<tr><td>4</td><td>Game of Thrones</td><td>Fantasy Drama</td><td>HBO</td><td>2011-04-17</td></tr>
+<tr><td>5</td><td>Stranger Things</td><td>Mystery Sci-fi</td><td>Netflix</td><td>2016-07-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chuck Lorre</td><td>1952-10-18</td></tr>
+<tr><td>2</td><td>Martin Scorsese</td><td>1942-11-22</td></tr>
+<tr><td>3</td><td>Vince Gilligan</td><td>1960-02-10</td></tr>
+<tr><td>4</td><td>David Benioff</td><td>1969-09-25</td></tr>
+<tr><td>5</td><td>Ronald D. Moore</td><td>1963-07-07</td></tr>
+</tbody></table></div>
+
+<div><h2>Editor</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>James Cox</td><td>1972-07-29</td></tr>
+<tr><td>2</td><td>Tommy Kendziora</td><td>1977-03-04</td></tr>
+<tr><td>3</td><td>Tim Binzer</td><td>1975-02-10</td></tr>
+<tr><td>4</td><td>Kelley Dixon</td><td>1965-09-19</td></tr>
+<tr><td>5</td><td>Brent Bird</td><td>1970-11-16</td></tr>
+</tbody></table></div>
+
+<div><h2>Episode</h2><table><thead>
+<tr><th>id</th><th>ShowID</th><th>EpisodeNumber</th><th>Title</th><th>ReleaseDate</th></tr>
+<tr><th></th><th>(&#8594; TV_Show.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Pilot</td><td>2007-09-24</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>The Big Bang Theory Pilot</td><td>2007-09-27</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>Pilot</td><td>1994-09-22</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>Friends Pilot</td><td>1994-09-22</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>Breaking Bad Pilot</td><td>2008-01-20</td></tr>
+<tr><td>6</td><td>3</td><td>2</td><td>A No-Good, Very Bad Day</td><td>2008-01-20</td></tr>
+<tr><td>7</td><td>4</td><td>1</td><td>Winter Is Coming</td><td>2011-04-17</td></tr>
+<tr><td>8</td><td>4</td><td>2</td><td>The Veldt</td><td>2011-04-24</td></tr>
+<tr><td>9</td><td>5</td><td>1</td><td>The Vanishing of Will Byers</td><td>2016-07-15</td></tr>
+<tr><td>10</td><td>5</td><td>2</td><td>The Weirdo on Maple Street</td><td>2016-07-22</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CrewMember</span></h2><table><thead>
+<tr><th>ID</th><th>Role</th><th>EpisodeID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Episode.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#990000">Director</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Director</span></td><td>3</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Editor</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Editor</span></td><td>2</td></tr>
+<tr><td>5</td><td><span style="color:#990000">Director</span></td><td>4</td></tr>
+<tr><td>6</td><td><span style="color:#990000">Director</span></td><td>5</td></tr>
+<tr><td>7</td><td><span style="color:#990000">Editor</span></td><td>4</td></tr>
+<tr><td>8</td><td><span style="color:#990000">Editor</span></td><td>5</td></tr>
+<tr><td>9</td><td>Actor</td><td>2</td></tr>
+<tr><td>10</td><td>Writer</td><td>3</td></tr>
+<tr><td>11</td><td>Camera Operator</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Media_Franchises</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Type</th><th>Founded</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Times</td><td>Newspaper</td><td>1857-09-18</td></tr>
+<tr><td>2</td><td>Breitbart News</td><td>Website</td><td>2007-03-06</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CrossPlatformExpansions</span></h2><table><thead>
+<tr><th>id</th><th>FranchiseID</th><th>Platform</th><th>ExpandedOnDate</th></tr>
+<tr><th></th><th>(&#8594; Media_Franchises.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Web App</td><td>2015-03-01</td></tr>
+<tr><td>2</td><td>2</td><td>Mobile Application</td><td>2019-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ContentText</th><th>PublishDate</th><th>AuthorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Impact of Climate Change on Agriculture</td><td>A detailed analysis...</td><td>2023-02-15</td><td>1</td></tr>
+<tr><td>2</td><td>Economic Outlook for 2023</td><td>An overview of the global economy...</td><td>2023-01-20</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Audience</span></h2><table><thead>
+<tr><th>id</th><th>PreferredNewsType</th><th><span style="color:#006600">FavoriteFranchiseID</span></th></tr>
+<tr><th></th><th></th><th>(&#8594; Media_Franchises.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td><td>1</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>Technology</td><td><span style="color:#006600">2</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Birthdate</th><th>Specialty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td><td>Environmental Science</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-05-05</td><td>Economy</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleAssignments</h2><table><thead>
+<tr><th>id</th><th>ArticleId</th><th>AssignedToAuthorId</th><th>DueDate</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Articles.id)</th><th>(&#8594; Authors.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-02-20</td><td>In Progress</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-03-05</td><td>Completed</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

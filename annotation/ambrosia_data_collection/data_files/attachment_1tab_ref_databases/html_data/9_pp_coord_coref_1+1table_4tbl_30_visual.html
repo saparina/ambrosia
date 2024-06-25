@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Educational_Venues</span></h2><table><thead>
+<tr><th>VenueID</th><th>Name</th><th><span style="color:#990000"><span style="color:#990000">Type</span></span></th><th>Address</th><th>City</th><th>State</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>National History <span style="color:#990000">Museum</span></td><td><span style="color:#990000">Museum</span></td><td>123 Main St.</td><td>Washington</td><td>DC</td></tr>
+<tr><td>2</td><td>Smithsonian Air & Space <span style="color:#990000">Museum</span></td><td><span style="color:#990000">Museum</span></td><td>600 Independence Ave SW</td><td>Washington</td><td>DC</td></tr>
+<tr><td>3</td><td>Adler <span style="color:#990000">Planetarium</span></td><td><span style="color:#990000">Planetarium</span></td><td>1300 S Lake Shore Drive</td><td>Chicago</td><td>IL</td></tr>
+<tr><td>4</td><td>Field <span style="color:#990000">Museum</span> of Natural History</td><td><span style="color:#990000">Museum</span></td><td>1400 S DuSable Lake Shore Dr.</td><td>Chicago</td><td>IL</td></tr>
+<tr><td>5</td><td>The Franklin Institute Science <span style="color:#990000">Museum</span></td><td><span style="color:#990000">Museum</span></td><td>222 N 20th St.</td><td>Philadelphia</td><td>PA</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Tickets</span></h2><table><thead>
+<tr><th>TicketID</th><th><span style="color:#006600">Price</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>15.0</td></tr>
+<tr><td>2</td><td><span style="color:#006600">20.0</span></td></tr>
+<tr><td>3</td><td>25.0</td></tr>
+<tr><td>4</td><td>30.0</td></tr>
+<tr><td>5</td><td>35.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Venue_Tickets</h2><table><thead>
+<tr><th>VenueID</th><th>TicketID</th></tr>
+<tr><th>(&#8594; Educational_Venues.VenueID)</th><th>(&#8594; Tickets.TicketID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Visitors</h2><table><thead>
+<tr><th>VisitorID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>30</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>28</td><td>jane.doe@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>25</td><td>alice.brown@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>35</td><td>bob.white@example.com</td></tr>
+<tr><td>5</td><td>Carol</td><td>Green</td><td>40</td><td>carol.green@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Visit_Records</h2><table><thead>
+<tr><th>RecordID</th><th>VenueID</th><th>VisitorID</th><th>Date</th><th>Time</th></tr>
+<tr><th></th><th>(&#8594; Educational_Venues.VenueID)</th><th>(&#8594; Visitors.VisitorID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01</td><td>10:00:00</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2022-01-01</td><td>14:00:00</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>2022-01-02</td><td>10:00:00</td></tr>
+<tr><td>4</td><td>3</td><td>1</td><td>2022-01-03</td><td>10:00:00</td></tr>
+<tr><td>5</td><td>3</td><td>2</td><td>2022-01-03</td><td>14:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

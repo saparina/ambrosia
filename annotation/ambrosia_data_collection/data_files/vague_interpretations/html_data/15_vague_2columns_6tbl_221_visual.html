@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-06-18</td><td>john.doe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2002-05-20</td><td>jane.smith@example.com</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>CourseTitle</th><th>Instructor</th><th>StartDate</th><th>EndDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Programming</td><td>Dr. Jane Smith</td><td>2023-01-01</td><td>2023-05-31</td></tr>
+<tr><td>2</td><td>Advanced Database Management</td><td>Prof. John Doe</td><td>2023-01-15</td><td>2023-05-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th><th>Semester</th><th>Year</th></tr>
+<tr><th></th><th>(&#8594; Students.ID)</th><th>(&#8594; Courses.CourseID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Fall</td><td>2023</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Spring</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>GradeID</th><th>EnrollmentID</th><th>FinalGrade</th></tr>
+<tr><th></th><th>(&#8594; Enrollments.EnrollmentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>88.5</td></tr>
+<tr><td>2</td><td>2</td><td>92.3</td></tr>
+</tbody></table></div>
+
+<div><h2>Library</h2><table><thead>
+<tr><th>LibraryID</th><th><span style="color:#990000">Number_Of_Volumes</span></th><th><span style="color:#990000">Shelving_Space</span></th><th>Library</th><th>Accessible</th><th>OpeningHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>500</td><td>1000 sq ft</td><td>University Main Library</td><td>Yes</td><td>Monday - Friday: 8am - 6pm, Saturday: 10am - 2pm, Sunday: Closed</td></tr>
+<tr><td>2</td><td>300</td><td>750 sq ft</td><td>Engineering Library</td><td>No</td><td>Monday - Thursday: 8am - 8pm, Friday: 8am - 6pm, Weekends: Closed</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

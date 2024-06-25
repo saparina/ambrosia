@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Fertilizers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>quantity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Fertilizer1</td><td>100.0</td></tr>
+<tr><td>2</td><td>Fertilizer2</td><td>150.0</td></tr>
+<tr><td>3</td><td>Fertilizer3</td><td>200.0</td></tr>
+<tr><td>4</td><td>Fertilizer4</td><td>250.0</td></tr>
+<tr><td>5</td><td>Fertilizer5</td><td>300.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Components</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">componentName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Nitrogen</td></tr>
+<tr><td>2</td><td>Phosphorus</td></tr>
+<tr><td>3</td><td>Potassium</td></tr>
+<tr><td>4</td><td>Calcium</td></tr>
+<tr><td>5</td><td>Magnesium</td></tr>
+</tbody></table></div>
+
+<div><h2>FarmerInfo</h2><table><thead>
+<tr><th>id</th><th>farmerName</th><th>farmLocation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Farmer1</td><td>New York</td></tr>
+<tr><td>2</td><td>Farmer2</td><td>Chicago</td></tr>
+<tr><td>3</td><td>Farmer3</td><td>Los Angeles</td></tr>
+<tr><td>4</td><td>Farmer4</td><td>Houston</td></tr>
+<tr><td>5</td><td>Farmer5</td><td>Philadelphia</td></tr>
+</tbody></table></div>
+
+<div><h2>Crops</h2><table><thead>
+<tr><th>id</th><th>cropName</th><th>yield</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wheat</td><td>7000.0</td></tr>
+<tr><td>2</td><td>Corn</td><td>8000.0</td></tr>
+<tr><td>3</td><td>Rice</td><td>6000.0</td></tr>
+<tr><td>4</td><td>Barley</td><td>5000.0</td></tr>
+<tr><td>5</td><td>Oats</td><td>4000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Farmers_Crops</h2><table><thead>
+<tr><th>farmerId</th><th>cropId</th></tr>
+<tr><th>(&#8594; FarmerInfo.id)</th><th>(&#8594; Crops.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Fertilizers_Components</h2><table><thead>
+<tr><th>fertilizerId</th><th>componentId</th></tr>
+<tr><th>(&#8594; Fertilizers.id)</th><th>(&#8594; Components.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

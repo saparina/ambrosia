@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Users</h2><table><thead>
+<tr><th>id</th><th>username</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>User1</td><td>user1@example.com</td></tr>
+<tr><td>2</td><td>User2</td><td>user2@example.com</td></tr>
+<tr><td>3</td><td>User3</td><td>user3@example.com</td></tr>
+<tr><td>4</td><td>User4</td><td>user4@example.com</td></tr>
+<tr><td>5</td><td>User5</td><td>user5@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>genre_id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Horror</td></tr>
+<tr><td>5</td><td>Romance</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>movie_id</th><th>title</th><th>release_year</th><th>genre_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genres.genre_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie1</td><td>2021</td><td>1</td></tr>
+<tr><td>2</td><td>Movie2</td><td>2020</td><td>2</td></tr>
+<tr><td>3</td><td>Movie3</td><td>2019</td><td>3</td></tr>
+<tr><td>4</td><td>Movie4</td><td>2022</td><td>4</td></tr>
+<tr><td>5</td><td>Movie5</td><td>2018</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscriptions</h2><table><thead>
+<tr><th>subscription_id</th><th>user_id</th><th>start_date</th><th>end_date</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Users.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>2023-12-31</td><td>Active</td></tr>
+<tr><td>2</td><td>2</td><td>2023-02-01</td><td>2023-12-31</td><td>Inactive</td></tr>
+<tr><td>3</td><td>3</td><td>2023-03-01</td><td>2023-12-31</td><td>Canceled</td></tr>
+<tr><td>4</td><td>4</td><td>2023-04-01</td><td>2023-12-31</td><td>Expired</td></tr>
+<tr><td>5</td><td>5</td><td>2023-05-01</td><td>2023-12-31</td><td>Active</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Payments</span></h2><table><thead>
+<tr><th><span style="color:#990000">payment_type</span></th></tr>
+<tr><th>(&#8594; PaymentTypes.payment_type)</th></tr>
+</thead><tbody>
+<tr><td>Credit_Card</td></tr>
+<tr><td>Debit_Card</td></tr>
+<tr><td>PayPal</td></tr>
+<tr><td>Bank_Transfer</td></tr>
+<tr><td>Google_Pay</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Streamings</span></h2><table><thead>
+<tr><th>streaming_id</th><th>movie_id</th><th>user_id</th><th>stream_start_time</th><th>stream_end_time</th></tr>
+<tr><th></th><th>(&#8594; Movies.movie_id)</th><th>(&#8594; Users.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01 10:00:00</td><td>2023-01-01 12:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-02 10:00:00</td><td>2023-01-02 12:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-01-03 10:00:00</td><td>2023-01-03 12:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-01-04 10:00:00</td><td>2023-01-04 12:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-01-05 10:00:00</td><td>2023-01-05 12:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Streamings_Payments</h2><table><thead>
+<tr><th>streaming_id</th><th>payment_id</th></tr>
+<tr><th>(&#8594; Streamings.streaming_id)</th><th>(&#8594; Payments.payment_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

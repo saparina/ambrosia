@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>098-765-4321</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountID</th><th>CustomerID</th><th>Type</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Checking</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>Savings</td><td>500.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Pensions</span></h2><table><thead>
+<tr><th>PensionID</th><th>AccountID</th><th>PlanName</th><th><span style="color:#006600">RateOfReturn</span></th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Golden Years</td><td><span style="color:#006600">5%</span></td></tr>
+<tr><td>2</td><td>2</td><td>Silver Years</td><td>4%</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Brokerages</span></h2><table><thead>
+<tr><th>BrokerageID</th><th>AccountID</th><th>InvestmentAmount</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2000.0</td></tr>
+<tr><td>2</td><td>2</td><td>3000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Rates</h2><table><thead>
+<tr><th>RateID</th><th>Name</th><th>Value</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>High Yield</td><td>5.5</td><td>A high yield rate of return.</td></tr>
+<tr><td>2</td><td>Low Yield</td><td>3.5</td><td>A low yield rate of return.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">PensionPlans</span></h2><table><thead>
+<tr><th>PensionPlanID</th><th>PensionID</th><th>RateID</th></tr>
+<tr><th></th><th>(&#8594; Pensions.PensionID)</th><th>(&#8594; Rates.RateID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

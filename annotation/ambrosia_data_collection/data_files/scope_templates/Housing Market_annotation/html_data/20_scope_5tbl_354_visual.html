@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Condominium_Complexes</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Parkside Towers</td><td>Downtown</td></tr>
+<tr><td>2</td><td>Riverview Estates</td><td>Suburb</td></tr>
+<tr><td>3</td><td>City Heights</td><td>Uptown</td></tr>
+<tr><td>4</td><td>Lakeshore Villas</td><td>Waterfront</td></tr>
+<tr><td>5</td><td>Green Meadows</td><td>Country</td></tr>
+<tr><td>6</td><td>Mountain View Residence</td><td>Hills</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Facilities</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">facilityName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Fitness Center</td></tr>
+<tr><td>2</td><td>Swimming Pool</td></tr>
+<tr><td>3</td><td>Tennis Court</td></tr>
+<tr><td>4</td><td>Playground</td></tr>
+<tr><td>5</td><td>Clubhouse</td></tr>
+<tr><td>6</td><td>Community Garden</td></tr>
+</tbody></table></div>
+
+<div><h2>Condominium_Complexes_Facilities</h2><table><thead>
+<tr><th>condoId</th><th>facilityId</th></tr>
+<tr><th>(&#8594; Condominium_Complexes.id)</th><th>(&#8594; Facilities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>6</td><td>7</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Amusement_Parks</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Disneyland</td><td>California</td></tr>
+<tr><td>2</td><td>Universal Studios</td><td>Florida</td></tr>
+<tr><td>3</td><td>SeaWorld</td><td>Texas</td></tr>
+<tr><td>4</td><td>Six Flags Magic Mountain</td><td>California</td></tr>
+<tr><td>5</td><td>Legoland</td><td>California</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Rides</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">ride_name</span></th><th><span style="color:#990000">ride_type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ferris Wheel</td><td>Attraction</td></tr>
+<tr><td>2</td><td>Roller Coaster</td><td>Thrill Ride</td></tr>
+<tr><td>3</td><td>Carousel</td><td>Family Ride</td></tr>
+<tr><td>4</td><td>Bumper Cars</td><td>Kids Ride</td></tr>
+<tr><td>5</td><td>Water Rides</td><td>Wet & Wild</td></tr>
+</tbody></table></div>
+
+<div><h2>Amusement_Parks_Rides</h2><table><thead>
+<tr><th>amusement_park_id</th><th>rides_id</th></tr>
+<tr><th>(&#8594; Amusement_Parks.id)</th><th>(&#8594; Rides.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

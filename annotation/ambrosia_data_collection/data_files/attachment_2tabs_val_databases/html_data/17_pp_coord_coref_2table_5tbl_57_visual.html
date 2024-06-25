@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Photography</span></h2><table><thead>
+<tr><th>id</th><th>photograph</th><th>subject</th><th>description</th><th>difficulty_level</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sunset</td><td><span style="color:#006600">Nature</span></td><td>A beautiful sunset over a lake.</td><td>Beginner</td><td>2024-03-13 18:14:00</td></tr>
+<tr><td>2</td><td>Cityscape</td><td>Architecture</td><td>A panoramic view of a bustling city.</td><td>Intermediate</td><td>2024-03-13 18:14:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Illustrations</span></h2><table><thead>
+<tr><th>id</th><th>illustration</th><th>subject</th><th>description</th><th>difficulty_level</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Forest Scene</td><td><span style="color:#006600">Nature</span></td><td>An intricate drawing of a dense forest.</td><td>Advanced</td><td>2024-03-13 18:14:00</td></tr>
+<tr><td>2</td><td>Urban Landscape</td><td>Architecture</td><td>An artistic depiction of an urban landscape.</td><td>Expert</td><td>2024-03-13 18:14:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>specialization</th><th>experience</th><th>contact</th><th>hire_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Art History</td><td>10</td><td>johndoe@example.com</td><td>2024-03-13 18:14:00</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Literature</td><td>8</td><td>janesmith@example.com</td><td>2024-03-13 18:14:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>firstname</th><th>lastname</th><th>grade</th><th>enrollment_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>12th Grade</td><td>2024-03-13 18:14:00</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>9th Grade</td><td>2024-03-13 18:14:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>class_id</th><th>teacher_id</th><th>student_id</th><th>start_time</th><th>end_time</th></tr>
+<tr><th></th><th>(&#8594; Teachers.id)</th><th>(&#8594; Students.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>09:00:00</td><td>10:30:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>10:00:00</td><td>11:30:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>subject_id</th><th>subject_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td><td>The study of numbers, quantities, shapes, and patterns.</td></tr>
+<tr><td>2</td><td>History</td><td>The study of past events and their causes, effects, and significance.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

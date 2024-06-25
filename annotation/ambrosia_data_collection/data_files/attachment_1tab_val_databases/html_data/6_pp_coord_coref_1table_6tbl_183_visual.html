@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adam Gopnik</td></tr>
+<tr><td>2</td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>John Smith</td></tr>
+<tr><td>4</td><td>Emily Dickinson</td></tr>
+<tr><td>5</td><td>Mark Twain</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">News</span></h2><table><thead>
+<tr><th>NewsID</th><th>Headline</th><th>Lede</th><th>PublishDate</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>GOPNIK HEADLINE</td><td>This is a headline by Adam Gopnik</td><td>202<span style="color:#006600">1</span>-<span style="color:#006600">1</span>0-<span style="color:#006600">1</span>7</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>OTHER HEADLINE</td><td>This is another headline</td><td>2021-10-18</td><td>2</td></tr>
+<tr><td>3</td><td>GOPNIK LEDE</td><td>This is a lede by Adam Gopnik</td><td>202<span style="color:#006600">1</span>-<span style="color:#006600">1</span>0-<span style="color:#006600">1</span>9</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td>OTHER LEDE</td><td>This is another lede</td><td>2021-10-20</td><td>3</td></tr>
+<tr><td>5</td><td>ANOTHER NEWS</td><td>This news does not have an author</td><td>2021-10-21</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>NewsSources</h2><table><thead>
+<tr><th>SourceID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The New Yorker</td></tr>
+<tr><td>2</td><td>The Times</td></tr>
+<tr><td>3</td><td>CNN</td></tr>
+<tr><td>4</td><td>BBC</td></tr>
+<tr><td>5</td><td>Washington Post</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>NewsSourceID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; NewsSources.SourceID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ARTICLE TITLE</td><td>This is the content of article one</td><td>1</td></tr>
+<tr><td>2</td><td>ARTICLE TWO</td><td>This is the second article</td><td>2</td></tr>
+<tr><td>3</td><td>THIRD ARTICLE</td><td>Here we go again with another article</td><td>3</td></tr>
+<tr><td>4</td><td>FOURTH ARTICLE</td><td>Fourth time is the charm</td><td>4</td></tr>
+<tr><td>5</td><td>FIFTH ARTICLE</td><td>Last but not least</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleContents</h2><table><thead>
+<tr><th>ContentsID</th><th>ArticleID</th><th>ContentType</th><th>FilePath</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>TEXT</td><td>textfilepathone.txt</td></tr>
+<tr><td>2</td><td>2</td><td>IMAGE</td><td>imagefilepathtwo.jpg</td></tr>
+<tr><td>3</td><td>3</td><td>AUDIO</td><td>audiofilepaththree.mp3</td></tr>
+<tr><td>4</td><td>4</td><td>VIDEO</td><td>videofilepathfour.mov</td></tr>
+<tr><td>5</td><td>5</td><td>MIXED MEDIA</td><td>mixedmediapathfive.html</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

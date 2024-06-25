@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1978-06-30</td><td>UK</td></tr>
+<tr><td>3</td><td>Emily</td><td>Brown</td><td>1992-11-20</td><td>Canada</td></tr>
+<tr><td>4</td><td>Michael</td><td>White</td><td>1990-07-15</td><td>Australia</td></tr>
+<tr><td>5</td><td>Rachel</td><td>Green</td><td>1985-03-25</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">News_Articles</span></h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th><span style="color:#1430b2">Word_Count</span></th><th>Published_Date</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Global Warming</td><td>The effects of global warming on marine life...</td><td><span style="color:#1430b2">1000</span></td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>New Technology</td><td>A breakthrough in renewable energy technology...</td><td>500</td><td>2022-01-10</td><td>2</td></tr>
+<tr><td>3</td><td>Politics Today</td><td>The current political landscape around the world...</td><td>800</td><td>2022-01-15</td><td>3</td></tr>
+<tr><td>4</td><td>Economic Growth</td><td>Analysis of economic growth trends worldwide...</td><td>1200</td><td>2022-01-20</td><td>4</td></tr>
+<tr><td>5</td><td>Health Crisis</td><td>The ongoing health crisis and its impact on society.</td><td>700</td><td>2022-01-25</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Feature_Articles</span></h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>Word_Count</th><th>Published_Date</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Travel Adventures</td><td>An adventurous journey through South America...</td><td><span style="color:#1430b2">1000</span></td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Culinary Delights</td><td>Exploring unique cuisine across Europe...</td><td>900</td><td>2022-01-10</td><td>2</td></tr>
+<tr><td>3</td><td>Nature Exploration</td><td>Discovering hidden gems of nature around the globe...</td><td>1100</td><td>2022-01-15</td><td>3</td></tr>
+<tr><td>4</td><td>Historical Treasures</td><td>Unraveling the mysteries of ancient civilizations...</td><td>1200</td><td>2022-01-20</td><td>4</td></tr>
+<tr><td>5</td><td>Fashion Trends</td><td>A look at the latest fashion trends worldwide...</td><td>800</td><td>2022-01-25</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>Address</th><th>Website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>World Times</td><td>123 Main St, New York, NY</td><td>https://www.worldtimes.com</td></tr>
+<tr><td>2</td><td>European Gazette</td><td>456 London Rd, London, UK</td><td>https://europeangazette.eu</td></tr>
+<tr><td>3</td><td>Asian Insider</td><td>789 Tokyo Blvd, Tokyo, Japan</td><td>https://asianinsider.asia</td></tr>
+<tr><td>4</td><td>South American Review</td><td>123 Santiago Ave, Santiago, Chile</td><td>https://southamericanreview.cl</td></tr>
+<tr><td>5</td><td>Oceanic Observer</td><td>456 Sydney Cove, Sydney, Australia</td><td>https://oceanicobserver.au</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers_and_Authors</h2><table><thead>
+<tr><th>PublisherID</th><th>AuthorID</th></tr>
+<tr><th>(&#8594; Publications.PublisherID)</th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

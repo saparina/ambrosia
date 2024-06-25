@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Hospitals</span></h2><table><thead>
+<tr><th>HospitalID</th><th>Name</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>St. Mary's General</td><td>123 Medical Avenue</td></tr>
+<tr><td>2</td><td>King's College Hospital</td><td>456 Medical Road</td></tr>
+<tr><td>3</td><td>Queen Elizabeth II Hospital</td><td>789 Medical Street</td></tr>
+<tr><td>4</td><td>City General Hospital</td><td>1011 Medical Lane</td></tr>
+<tr><td>5</td><td>University Hospital</td><td>1213 Medical Circle</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Procedures</span></h2><table><thead>
+<tr><th>ProcedureID</th><th><span style="color:#990000">ProcedureName</span></th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>MRI Scan</td><td>Magnetic Resonance Imaging scan for diagnostic purposes.</td></tr>
+<tr><td>2</td><td>CT Scan</td><td>Computed Tomography scan for diagnostic purposes.</td></tr>
+<tr><td>3</td><td>Ultrasound</td><td>High-frequency sound waves used to visualize internal body structures.</td></tr>
+<tr><td>4</td><td>X-ray</td><td>Use of ionizing radiation to produce images of the inside of a patient's body.</td></tr>
+<tr><td>5</td><td>Blood Test</td><td>Analysis of blood samples for various medical conditions.</td></tr>
+</tbody></table></div>
+
+<div><h2>Hospitals_Procedures</h2><table><thead>
+<tr><th>HospitalID</th><th>ProcedureID</th></tr>
+<tr><th>(&#8594; Hospitals.HospitalID)</th><th>(&#8594; Procedures.ProcedureID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Profession</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">profession</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Actor</td></tr>
+<tr><td>2</td><td>Actress</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Director</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Producer</span></td></tr>
+<tr><td>5</td><td>Screenwriter</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Award</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">awardName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Oscar</span></td></tr>
+<tr><td>2</td><td>Golden Globe</td></tr>
+<tr><td>3</td><td>BAFTA</td></tr>
+<tr><td>4</td><td>Emmy</td></tr>
+<tr><td>5</td><td>Grammy</td></tr>
+</tbody></table></div>
+
+<div><h2>Film</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseDate</th><th>budget</th><th>revenue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010-07-16</td><td>160000000.0</td><td>829000000.0</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>2008-07-16</td><td>185000000.0</td><td>1004000000.0</td></tr>
+<tr><td>3</td><td>Forrest Gump</td><td>1994-06-23</td><td>55000000.0</td><td>677000000.0</td></tr>
+<tr><td>4</td><td>Avatar</td><td>2009-12-18</td><td>237000000.0</td><td>2782000000.0</td></tr>
+<tr><td>5</td><td>Titanic</td><td>1997-11-19</td><td>200000000.0</td><td>2202000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Profession</h2><table><thead>
+<tr><th>filmId</th><th>professionId</th></tr>
+<tr><th>(&#8594; Film.id)</th><th>(&#8594; Profession.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Awards</h2><table><thead>
+<tr><th>filmId</th><th>awardId</th><th>year</th></tr>
+<tr><th>(&#8594; Film.id)</th><th>(&#8594; Award.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2011</td></tr>
+<tr><td>1</td><td>2</td><td>2009</td></tr>
+<tr><td>2</td><td>3</td><td>2009</td></tr>
+<tr><td>3</td><td>1</td><td>1995</td></tr>
+<tr><td>4</td><td>1</td><td>2000</td></tr>
+<tr><td>5</td><td>3</td><td>1998</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

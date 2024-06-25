@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>AirportID</th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>London</td><td>United Kingdom</td></tr>
+<tr><td>2</td><td>New York</td><td>USA</td></tr>
+<tr><td>3</td><td>Tokyo</td><td>Japan</td></tr>
+<tr><td>4</td><td>Paris</td><td>France</td></tr>
+<tr><td>5</td><td>Dubai</td><td>UAE</td></tr>
+</tbody></table></div>
+
+<div><h2>AirportDetails</h2><table><thead>
+<tr><th>AirportID</th><th><span style="color:#990000">Capacity</span></th><th>Latitude</th><th>Longitude</th></tr>
+<tr><th>(&#8594; Airports.AirportID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10000</td><td>51.5074</td><td>-0.1278</td></tr>
+<tr><td>2</td><td>50000</td><td>40.7128</td><td>-74.006</td></tr>
+<tr><td>3</td><td>20000</td><td>35.6895</td><td>139.6917</td></tr>
+<tr><td>4</td><td>25000</td><td>48.8566</td><td>2.3522</td></tr>
+<tr><td>5</td><td>10000</td><td>25.2048</td><td>55.2708</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

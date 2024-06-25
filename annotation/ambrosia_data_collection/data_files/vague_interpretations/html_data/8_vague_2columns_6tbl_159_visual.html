@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airlines</h2><table><thead>
+<tr><th>Airline_ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td></tr>
+<tr><td>2</td><td>Delta Airlines</td></tr>
+<tr><td>3</td><td>American Airlines</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td></tr>
+<tr><td>5</td><td>Alaska Airlines</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>Flight_ID</th><th>FlightNumber</th><th>DepartureTime</th><th>ArrivalTime</th><th>SourceAirport</th><th>DestinationAirport</th><th>Airline_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.Airport_ID)</th><th>(&#8594; Airports.Airport_ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>UA123</td><td>2023-04-01 07:00:00</td><td>2023-04-01 09:00:00</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>DL456</td><td>2023-04-01 10:00:00</td><td>2023-04-01 12:00:00</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>AA789</td><td>2023-04-01 13:00:00</td><td>2023-04-01 15:00:00</td><td>3</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>SW101</td><td>2023-04-01 16:00:00</td><td>2023-04-01 18:00:00</td><td>4</td><td>5</td><td>4</td></tr>
+<tr><td>5</td><td>AS246</td><td>2023-04-01 19:00:00</td><td>2023-04-01 21:00:00</td><td>5</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>Airport_ID</th><th>Name</th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Los Angeles International Airport</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>2</td><td>Hartsfield-Jackson Atlanta International Airport</td><td>Atlanta</td><td>USA</td></tr>
+<tr><td>3</td><td>Dallas/Fort Worth International Airport</td><td>Dallas</td><td>USA</td></tr>
+<tr><td>4</td><td>Seattle-Tacoma International Airport</td><td>Seattle</td><td>USA</td></tr>
+<tr><td>5</td><td>Denver International Airport</td><td>Denver</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>Terminal_ID</th><th>Airport_ID</th><th>Name</th></tr>
+<tr><th></th><th>(&#8594; Airports.Airport_ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Terminal 1</td></tr>
+<tr><td>2</td><td>1</td><td>Terminal 2</td></tr>
+<tr><td>3</td><td>2</td><td>Maynard H. Jackson Jr. International Terminal</td></tr>
+<tr><td>4</td><td>3</td><td>Terminal A</td></tr>
+<tr><td>5</td><td>3</td><td>Terminal B</td></tr>
+</tbody></table></div>
+
+<div><h2>Buildings</h2><table><thead>
+<tr><th>Building_ID</th><th>Terminal_ID</th><th>Floor_Level</th></tr>
+<tr><th></th><th>(&#8594; Terminals.Terminal_ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td><td>3</td></tr>
+<tr><td>3</td><td>2</td><td>4</td></tr>
+<tr><td>4</td><td>3</td><td>2</td></tr>
+<tr><td>5</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Shops</h2><table><thead>
+<tr><th>Shop_ID</th><th>Building_ID</th><th><span style="color:#990000">Terminal_Building</span></th><th><span style="color:#990000">Floor_Level</span></th></tr>
+<tr><th></th><th>(&#8594; Buildings.Building_ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Baggage Claim</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>Concourse A Food Court</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>Concourse B Retail</td><td>3</td></tr>
+<tr><td>4</td><td>3</td><td>Concourse C Lounge</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>Concourse D Newsstand</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>ShopItems</h2><table><thead>
+<tr><th>Item_ID</th><th>Shop_ID</th><th>ItemName</th><th>Price</th><th>Quantity</th></tr>
+<tr><th></th><th>(&#8594; Shops.Shop_ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Water Bottle</td><td>2.99</td><td>50</td></tr>
+<tr><td>2</td><td>1</td><td>Snack Box</td><td>5.99</td><td>100</td></tr>
+<tr><td>3</td><td>2</td><td>Magazine</td><td>4.99</td><td>200</td></tr>
+<tr><td>4</td><td>3</td><td>Chocolate Bar</td><td>1.99</td><td>250</td></tr>
+<tr><td>5</td><td>4</td><td>Newspaper</td><td>1.49</td><td>300</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Affordable_Housing_Projects</span></h2><table><thead>
+<tr><th>project_id</th><th>project_name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Project1</td><td>Location1</td></tr>
+<tr><td>2</td><td>Project2</td><td>Location2</td></tr>
+<tr><td>3</td><td>Project3</td><td>Location3</td></tr>
+<tr><td>4</td><td>Project4</td><td>Location4</td></tr>
+<tr><td>5</td><td>Project5</td><td>Location5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Financing_Sources</span></h2><table><thead>
+<tr><th>source_id</th><th><span style="color:#990000">source_value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Low_Income_Housing_Tax_Credit</td></tr>
+<tr><td>2</td><td>Government_Grants</td></tr>
+<tr><td>3</td><td>Private_Investments</td></tr>
+<tr><td>4</td><td>Public_Private_Partnerships</td></tr>
+<tr><td>5</td><td>Bonds</td></tr>
+</tbody></table></div>
+
+<div><h2>Affordable_Housing_Projects_Financing_Sources</h2><table><thead>
+<tr><th>id</th><th>housing_project_id</th><th>financing_source_id</th></tr>
+<tr><th></th><th>(&#8594; Affordable_Housing_Projects.project_id)</th><th>(&#8594; Financing_Sources.source_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>3</td><td>1</td></tr>
+<tr><td>6</td><td>3</td><td>3</td></tr>
+<tr><td>7</td><td>4</td><td>1</td></tr>
+<tr><td>8</td><td>4</td><td>4</td></tr>
+<tr><td>9</td><td>5</td><td>1</td></tr>
+<tr><td>10</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

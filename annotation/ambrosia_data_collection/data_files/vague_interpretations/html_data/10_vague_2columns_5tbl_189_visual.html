@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>CondoBuildings</h2><table><thead>
+<tr><th>id</th><th>address</th><th>city</th><th>state</th><th>zipcode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>New York</td><td>NY</td><td>10001</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>Chicago</td><td>IL</td><td>60601</td></tr>
+<tr><td>3</td><td>789 Oak St</td><td>Los Angeles</td><td>CA</td><td>90001</td></tr>
+<tr><td>4</td><td>246 Maple Ave</td><td>Houston</td><td>TX</td><td>77001</td></tr>
+<tr><td>5</td><td>135 Pine Blvd</td><td>Miami</td><td>FL</td><td>33101</td></tr>
+</tbody></table></div>
+
+<div><h2>FacilitiesAndServices</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">facilities</span></th><th><span style="color:#990000">services</span></th><th>condos_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; CondoBuildings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pool</td><td>Gym</td><td>1</td></tr>
+<tr><td>2</td><td>Sauna</td><td>Parking Lot</td><td>2</td></tr>
+<tr><td>3</td><td>Laundry Room</td><td>Pet Friendly</td><td>3</td></tr>
+<tr><td>4</td><td>Rooftop Deck</td><td>Security System</td><td>4</td></tr>
+<tr><td>5</td><td>Playground</td><td>Storage Units</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Residents</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>building_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; CondoBuildings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>35</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>2</td></tr>
+<tr><td>3</td><td>Emma Jones</td><td>42</td><td>3</td></tr>
+<tr><td>4</td><td>Tom Brown</td><td>55</td><td>4</td></tr>
+<tr><td>5</td><td>Alice Johnson</td><td>30</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>id</th><th>resident_id</th><th>purchase_price</th><th>transaction_date</th></tr>
+<tr><th></th><th>(&#8594; Residents.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>250000.0</td><td>2024-02-19 11:46:54</td></tr>
+<tr><td>2</td><td>2</td><td>300000.0</td><td>2024-02-19 11:46:54</td></tr>
+<tr><td>3</td><td>3</td><td>450000.0</td><td>2024-02-19 11:46:54</td></tr>
+<tr><td>4</td><td>4</td><td>550000.0</td><td>2024-02-19 11:46:54</td></tr>
+<tr><td>5</td><td>5</td><td>650000.0</td><td>2024-02-19 11:46:54</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

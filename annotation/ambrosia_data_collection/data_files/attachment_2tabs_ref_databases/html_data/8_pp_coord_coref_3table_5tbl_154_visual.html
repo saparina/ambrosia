@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>authors</h2><table><thead>
+<tr><th>authorID</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Alice Johnson</td></tr>
+<tr><td>4</td><td>Bob Brown</td></tr>
+<tr><td>5</td><td>Charlie Green</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">articles</span></h2><table><thead>
+<tr><th>articleID</th><th>title</th><th><span style="color:#006600">content</span></th><th>publishDate</th><th>author</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; authors.authorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The world's largest robots</td><td>This article discusses the latest advancements in robotics technology...</td><td>2024-03-13 20:57:42</td><td>None</td></tr>
+<tr><td>2</td><td>Climate change and its impact on agriculture</td><td>A comprehensive analysis of how climate change is affecting global agricultural practices...</td><td>2024-03-13 20:57:42</td><td>None</td></tr>
+<tr><td>3</td><td>Revolutionary breakthroughs in renewable energy</td><td>An exploration of recent innovations in solar, wind, and other green energy sources...</td><td>2024-03-13 20:57:42</td><td>None</td></tr>
+<tr><td>4</td><td>Advancements in space exploration</td><td>Examining the progress made in sending humans to Mars and beyond...</td><td>2024-03-13 20:57:42</td><td>None</td></tr>
+<tr><td>5</td><td>The rise of electric vehicles</td><td><span style="color:#006600">A look at the growing popularity of electric cars and their implications for the automotive industry...</span></td><td>2024-03-13 20:57:42</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">photos</span></h2><table><thead>
+<tr><th>photoID</th><th>path</th><th>description</th><th>articleID</th></tr>
+<tr><th>(&#8594; photos.photoID)</th><th></th><th></th><th>(&#8594; articles.articleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>images/robot_1.jpg</td><td>Closeup image of a giant robot.</td><td>1</td></tr>
+<tr><td>2</td><td>images/agriculture_field.jpg</td><td>Lush fields of crops being affected by drought.</td><td>2</td></tr>
+<tr><td>3</td><td>images/wind_farm.jpg</td><td>Wind turbines generating clean energy against a sunset backdrop.</td><td>3</td></tr>
+<tr><td>4</td><td>images/mars_lander.jpg</td><td>Mission control watching as a rover lands on Mars.</td><td>4</td></tr>
+<tr><td>5</td><td>images/tesla_model_s.jpg</td><td>Electric car charging station along a highway.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">videos</span></h2><table><thead>
+<tr><th>videoID</th><th>url</th><th>description</th><th>articleID</th></tr>
+<tr><th>(&#8594; videos.videoID)</th><th></th><th></th><th>(&#8594; articles.articleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>https://www.youtube.com/watch?v=abcdefg123</td><td>Interview with a leading robotics expert.</td><td>1</td></tr>
+<tr><td>2</td><td>https://www.youtube.com/watch?v=hijklmnopqr</td><td>Documentary on the effects of climate change on farming communities.</td><td>2</td></tr>
+<tr><td>3</td><td>https://www.youtube.com/watch?v=stuvwxyz123</td><td>Innovative solar panel designs for residential use.</td><td>3</td></tr>
+<tr><td>4</td><td>https://www.youtube.com/watch?v=9876543210</td><td>SpaceX launching another successful mission to Mars.</td><td>4</td></tr>
+<tr><td>5</td><td>https://www.youtube.com/watch?v=jkmnlpqrtu</td><td>Tesla Model S acceleration test on a racetrack.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>article_details</h2><table><thead>
+<tr><th>detailID</th><th>details</th><th>articleID</th></tr>
+<tr><th></th><th></th><th>(&#8594; articles.articleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Key takeaways from the interview.</td><td>1</td></tr>
+<tr><td>2</td><td>Impacts on food security around the globe.</td><td>2</td></tr>
+<tr><td>3</td><td>New developments in photovoltaic cell efficiency.</td><td>3</td></tr>
+<tr><td>4</td><td>Colonization efforts for future human settlements.</td><td>4</td></tr>
+<tr><td>5</td><td>Government incentives for EV adoption.</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

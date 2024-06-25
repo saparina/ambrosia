@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Languages</h2><table><thead>
+<tr><th>LanguageID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>English</td></tr>
+<tr><td>2</td><td>Spanish</td></tr>
+<tr><td>3</td><td>French</td></tr>
+<tr><td>4</td><td>German</td></tr>
+<tr><td>5</td><td>Italian</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>AirportID</th><th>Name</th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>LAX</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>3</td><td>MAD</td><td>Madrid</td><td>Spain</td></tr>
+<tr><td>4</td><td>CDG</td><td>Paris</td><td>France</td></tr>
+<tr><td>5</td><td>FRA</td><td>Frankfurt</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Staff</span></h2><table><thead>
+<tr><th>StaffID</th><th>FirstName</th><th>LastName</th><th>Position</th><th>AirportID</th><th>LanguageID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.AirportID)</th><th>(&#8594; Languages.LanguageID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>John</td><td>Doe</td><td><span style="color:#990000">Gate Agent</span></td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td><span style="color:#990000">Pilot</span></td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>Emily</td><td>Brown</td><td><span style="color:#990000">Gate Agent</span></td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>David</td><td>White</td><td><span style="color:#990000">Pilot</span></td><td>4</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>5</td><td>Alice</td><td>Black</td><td><span style="color:#990000">Gate Agent</span></td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>ArrivalTime</th><th>OriginAirportID</th><th>DestinationAirportID</th><th>AssignedStaffID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.AirportID)</th><th>(&#8594; Airports.AirportID)</th><th>(&#8594; Staff.StaffID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 08:00</td><td>2023-01-01 10:00</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2023-01-01 16:00</td><td>2023-01-01 18:00</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2023-01-02 09:00</td><td>2023-01-02 11:00</td><td>3</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>2023-01-02 17:00</td><td>2023-01-02 19:00</td><td>4</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>2023-01-03 08:00</td><td>2023-01-03 10:00</td><td>5</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

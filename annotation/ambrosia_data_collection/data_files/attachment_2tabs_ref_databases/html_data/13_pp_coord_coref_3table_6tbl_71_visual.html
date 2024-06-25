@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">RoomTypes</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Lobby</th><th>Terrace</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Single</td><td>Yes</td><td>No</td></tr>
+<tr><td>2</td><td>Double</td><td>No</td><td>Yes</td></tr>
+<tr><td>3</td><td>Suite</td><td>Yes</td><td>Yes</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Rooms</span></h2><table><thead>
+<tr><th>ID</th><th>TypeID</th><th><span style="color:#006600">Size</span></th></tr>
+<tr><th></th><th>(&#8594; RoomTypes.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>500.0</td></tr>
+<tr><td>2</td><td>1</td><td><span style="color:#006600">600.0</span></td></tr>
+<tr><td>3</td><td>2</td><td>700.0</td></tr>
+<tr><td>4</td><td>3</td><td>800.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>ID</th><th>RoomID</th><th>CheckInDate</th><th>CheckOutDate</th><th>GuestID</th></tr>
+<tr><th></th><th>(&#8594; Rooms.ID)</th><th></th><th></th><th>(&#8594; Guests.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td><td>2022-01-05</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-06</td><td>2022-01-10</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2022-01-11</td><td>2022-01-15</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>2022-01-16</td><td>2022-01-20</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

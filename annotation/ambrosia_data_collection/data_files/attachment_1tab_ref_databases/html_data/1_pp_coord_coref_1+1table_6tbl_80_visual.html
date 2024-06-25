@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genres</h2><table><thead>
+<tr><th>Id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Documentary</td></tr>
+<tr><td>2</td><td>Drama</td></tr>
+<tr><td>3</td><td>Comedy</td></tr>
+<tr><td>4</td><td>Action</td></tr>
+<tr><td>5</td><td>Fantasy</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">TVShows</span></h2><table><thead>
+<tr><th>Id</th><th>Title</th><th><span style="color:#990000"><span style="color:#990000">Type</span></span></th><th>ReleaseDate</th><th>GENRE_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Genres.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Planets</td><td><span style="color:#990000">Documentary Series</span></td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Nature Calls</td><td><span style="color:#990000">Documentary Series</span></td><td>2023-07-01</td><td>1</td></tr>
+<tr><td>3</td><td>A Mini Adventure</td><td><span style="color:#990000">Mini-Series</span></td><td>2023-06-01</td><td>2</td></tr>
+<tr><td>4</td><td>Time Travelers</td><td><span style="color:#990000">Mini-Series</span></td><td>2023-08-01</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">EpisodeCounts</span></h2><table><thead>
+<tr><th>Show_ID</th><th><span style="color:#006600">Number_of_Episodes</span></th></tr>
+<tr><th>(&#8594; TVShows.Id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>2</td><td>12</td></tr>
+<tr><td>3</td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>4</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>Show_ID</th><th>RatingValue</th><th>ReviewText</th><th>RaterName</th><th>RatedOn</th></tr>
+<tr><th>(&#8594; TVShows.Id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>9.0</td><td>Great documentary!</td><td>JohnDoe</td><td>2024-03-13 10:56:18</td></tr>
+<tr><td>2</td><td>8.5</td><td>Interesting series but could have been better.</td><td>JaneSmith</td><td>2024-03-13 10:56:18</td></tr>
+<tr><td>3</td><td>8.2</td><td>Amazing mini-series!</td><td>AliceBrown</td><td>2024-03-13 10:56:18</td></tr>
+<tr><td>4</td><td>9.1</td><td>Loved it! Can't wait for the next season.</td><td>RobertWhite</td><td>2024-03-13 10:56:18</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

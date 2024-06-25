@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Geologists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Specimens</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">type</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rock</td><td>Igneous rock formed by cooling of magma.</td></tr>
+<tr><td>2</td><td>Fossil</td><td>Remains or impressions of prehistoric life preserved in petrified form or as a mold.</td></tr>
+<tr><td>3</td><td>Mineral</td><td>Naturally occurring solid substance with a definite chemical composition.</td></tr>
+<tr><td>4</td><td>Gemstone</td><td>Polished stone used to make jewelry or decorative objects.</td></tr>
+<tr><td>5</td><td>Metal Ore</td><td>Natural occurrence of metal-containing minerals from which metals are extracted.</td></tr>
+</tbody></table></div>
+
+<div><h2>Geologists_Specimens</h2><table><thead>
+<tr><th>geologistId</th><th>specimenType</th></tr>
+<tr><th>(&#8594; Geologists.id)</th><th>(&#8594; Specimens.type)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rock</td></tr>
+<tr><td>2</td><td>Rock</td></tr>
+<tr><td>3</td><td>Rock</td></tr>
+<tr><td>4</td><td>Rock</td></tr>
+<tr><td>5</td><td>Rock</td></tr>
+<tr><td>1</td><td>Fossil</td></tr>
+<tr><td>2</td><td>Fossil</td></tr>
+<tr><td>3</td><td>Fossil</td></tr>
+<tr><td>4</td><td>Fossil</td></tr>
+<tr><td>5</td><td>Fossil</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

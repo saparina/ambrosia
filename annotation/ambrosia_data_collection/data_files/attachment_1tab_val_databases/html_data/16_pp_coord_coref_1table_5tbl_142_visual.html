@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Company C</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Company D</td><td>001 Pine St</td></tr>
+<tr><td>5</td><td>Company E</td><td>999 Fir St</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th><th>postedDate</th><th>companyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Developing web applications.</td><td>80000.0</td><td>2024-03-07 21:27:39</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyzing customer data.</td><td>70000.0</td><td>2024-03-07 21:27:39</td><td>2</td></tr>
+<tr><td>3</td><td>Graphic Designer</td><td>Creating visual content.</td><td>60000.0</td><td>2024-03-07 21:27:39</td><td>3</td></tr>
+<tr><td>4</td><td>Marketing Specialist</td><td>Promoting products and services.</td><td>50000.0</td><td>2024-03-07 21:27:39</td><td>4</td></tr>
+<tr><td>5</td><td>HR Manager</td><td>Managing employees and recruitment.</td><td>75000.0</td><td>2024-03-07 21:27:39</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>JobTypes</h2><table><thead>
+<tr><th>id</th><th>typeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Design</td></tr>
+<tr><td>2</td><td>Architecture</td></tr>
+<tr><td>3</td><td>Engineering</td></tr>
+<tr><td>4</td><td>Management</td></tr>
+<tr><td>5</td><td>Technology</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SpacePlanningJobTypes</span></h2><table><thead>
+<tr><th>id</th><th>spacePlanningJob</th><th>style</th><th>jobTypeId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; JobTypes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Interior Designer</span></td><td><span style="color:#006600">Minimalism</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Interior Designer</span></td><td>Modern</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Landscape Architect</span></td><td><span style="color:#006600">Minimalism</span></td><td>2</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Landscape Architect</span></td><td>Naturalistic</td><td>2</td></tr>
+<tr><td>5</td><td>Urban Planner</td><td>Traditional</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

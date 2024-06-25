@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Preservation_Societies</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Liberty Hill Society</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Heritage Park Society</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Old Town Village Society</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Woodland Heights Society</td><td>001 Pine St</td></tr>
+<tr><td>5</td><td>Riverbend Community Society</td><td>135 Maple Ave</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Projects</span></h2><table><thead>
+<tr><th>ID</th><th>Type</th><th>Description</th><th><span style="color:#990000">Cost</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Restoration</td><td>Restoring historical buildings in the neighborhood.</td><td>250000.0</td></tr>
+<tr><td>2</td><td>Improvement</td><td>Upgrading infrastructure and amenities.</td><td>150000.0</td></tr>
+<tr><td>3</td><td>Maintenance</td><td>Regular upkeep of properties.</td><td>50000.0</td></tr>
+<tr><td>4</td><td>Development</td><td>Constructing new houses while preserving the architectural style.</td><td>350000.0</td></tr>
+<tr><td>5</td><td>Landscaping</td><td>Creating green spaces and gardens around the community.</td><td>75000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Preservation_Societies_Projects</h2><table><thead>
+<tr><th>Societies_ID</th><th>Projects_ID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th>(&#8594; Preservation_Societies.ID)</th><th>(&#8594; Projects.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>1</td><td>2</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>2</td><td>1</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>3</td><td>1</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>4</td><td>2</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>4</td><td>4</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>5</td><td>3</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>4</td><td>1</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>5</td><td>1</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

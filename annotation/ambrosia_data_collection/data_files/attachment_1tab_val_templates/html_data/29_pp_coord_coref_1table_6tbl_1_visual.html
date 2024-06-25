@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Music_Bands</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th><span style="color:#186e16"><span style="color:#186e16">Genre</span></span></th><th><span style="color:#1430b2">Founding_Year</span></th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The <span style="color:#186e16">Jazz</span> Connection</td><td><span style="color:#186e16">Jazz</span></td><td><span style="color:#1430b2">1985</span></td><td>USA</td></tr>
+<tr><td>2</td><td>Blue Note Ensemble</td><td><span style="color:#186e16">Jazz</span></td><td>1990</td><td>Canada</td></tr>
+<tr><td>3</td><td>Guitar Legends</td><td><span style="color:#186e16">Rock</span></td><td><span style="color:#1430b2">1985</span></td><td>UK</td></tr>
+<tr><td>4</td><td>Vocal Vibes</td><td><span style="color:#186e16">Rock</span></td><td>1993</td><td>Australia</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Release_Date</th><th>Label</th><th>Genre</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Music_Bands.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Impressions</td><td>2000-06-15</td><td>Warner</td><td>Jazz</td></tr>
+<tr><td>2</td><td>Melodic Memories</td><td>2005-03-05</td><td>Universal</td><td>Jazz</td></tr>
+<tr><td>3</td><td>Strumming Strings</td><td>2002-02-20</td><td>EMI</td><td>Rock</td></tr>
+<tr><td>4</td><td>Heavy Metal Beats</td><td>2010-10-15</td><td>Columbia</td><td>Rock</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Length</th><th>Album_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Albums.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Night Flight</td><td>3.5</td><td>1</td></tr>
+<tr><td>2</td><td>Dreamy Skies</td><td>4.2</td><td>2</td></tr>
+<tr><td>3</td><td>Thunderous Riffs</td><td>3.8</td><td>3</td></tr>
+<tr><td>4</td><td>Acoustic Journey</td><td>4.1</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Concerts</h2><table><thead>
+<tr><th>id</th><th>Date</th><th>Venue</th><th>Ticket_Price</th><th>Band_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Music_Bands.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-12-30</td><td>Madison Square Garden</td><td>100.5</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-15</td><td>Wembley Arena</td><td>75.3</td><td>2</td></tr>
+<tr><td>3</td><td>2021-11-20</td><td>Staples Center</td><td>85.75</td><td>3</td></tr>
+<tr><td>4</td><td>2022-02-20</td><td>Sydney Opera House</td><td>120.9</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Fans</h2><table><thead>
+<tr><th>id</th><th>First_name</th><th>Last_name</th><th>Age</th><th>Email</th><th>Favorite_band_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Music_Bands.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>35</td><td>johnsmith@email.com</td><td>1</td></tr>
+<tr><td>2</td><td>Anna</td><td>Doe</td><td>28</td><td>annadoe@email.com</td><td>2</td></tr>
+<tr><td>3</td><td>Peter</td><td>Jackson</td><td>45</td><td>pjackson@email.com</td><td>3</td></tr>
+<tr><td>4</td><td>Emma</td><td>White</td><td>32</td><td>ewhite@email.com</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>id</th><th>Rating</th><th>Review_text</th><th>Song_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Songs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>4</td><td>Great song! Love the melody.</td><td>1</td></tr>
+<tr><td>2</td><td>5</td><td>Amazing guitar work!</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>Good song but not my favorite.</td><td>3</td></tr>
+<tr><td>4</td><td>5</td><td>Awesome lyrics and music!</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

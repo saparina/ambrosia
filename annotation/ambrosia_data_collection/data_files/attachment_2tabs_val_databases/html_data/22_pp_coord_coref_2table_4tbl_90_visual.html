@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Investigative_Journalists</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Experience</th><th>Risk_Level</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>32</td><td>8</td><td><span style="color:#006600">Low</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>30</td><td>10</td><td>Medium</td></tr>
+<tr><td>3</td><td>Michael Brown</td><td>37</td><td>6</td><td>High</td></tr>
+<tr><td>4</td><td>Emma Johnson</td><td>29</td><td>5</td><td><span style="color:#006600">Low</span></td></tr>
+<tr><td>5</td><td>David Wilson</td><td>34</td><td>7</td><td>Medium</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">War_Correspondents</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Years_Experience</th><th>Risk_Level</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alexander White</td><td>40</td><td>15</td><td><span style="color:#006600">Low</span></td></tr>
+<tr><td>2</td><td>Lisa Green</td><td>36</td><td>12</td><td>Medium</td></tr>
+<tr><td>3</td><td>Daniel Black</td><td>39</td><td>14</td><td>High</td></tr>
+<tr><td>4</td><td>Elizabeth Blue</td><td>31</td><td>10</td><td><span style="color:#006600">Low</span></td></tr>
+<tr><td>5</td><td>William Gray</td><td>38</td><td>13</td><td>Medium</td></tr>
+</tbody></table></div>
+
+<div><h2>News_Articles</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Content</th><th>Date</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Investigative_Journalists.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News: New Government Policies</td><td>The government has implemented new policies...</td><td>2023-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Exclusive Interview: Leading Politician</td><td>We had an exclusive interview with a leading politician...</td><td>2023-01-02</td><td>2</td></tr>
+<tr><td>3</td><td>Celebrity Scandal Uncovered</td><td>A major celebrity scandal was uncovered today...</td><td>2023-01-03</td><td>3</td></tr>
+<tr><td>4</td><td>War Update: Latest Developments</td><td>Latest developments in the ongoing war were reported...</td><td>2023-01-04</td><td>4</td></tr>
+<tr><td>5</td><td>New Discovery: Ancient Artifact Found</td><td>An ancient artifact was discovered during an archaeological dig...</td><td>2023-01-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>News_Sources</h2><table><thead>
+<tr><th>ID</th><th>Source_Name</th><th>Contact_Info</th><th>Reliability</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Global Times</td><td>www.globaltimes.com</td><td>Reliable</td></tr>
+<tr><td>2</td><td>Local Gazette</td><td>www.localgazette.com</td><td>Notable</td></tr>
+<tr><td>3</td><td>International Herald</td><td>www.internationalherald.com</td><td>Trusted</td></tr>
+<tr><td>4</td><td>World Report</td><td>www.worldreport.com</td><td>Reputable</td></tr>
+<tr><td>5</td><td>Daily Chronicle</td><td>www.dailychronicle.com</td><td>Credible</td></tr>
+</tbody></table></div>
+
+<div><h2>Readers</h2><table><thead>
+<tr><th>ID</th><th>Full_Name</th><th>Email</th><th>Favorite_News_SourceID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; News_Sources.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Adams</td><td>alice@example.com</td><td>1</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>bob@example.com</td><td>2</td></tr>
+<tr><td>3</td><td>Carol Jackson</td><td>carol@example.com</td><td>3</td></tr>
+<tr><td>4</td><td>Dave Thompson</td><td>dave@example.com</td><td>4</td></tr>
+<tr><td>5</td><td>Eve Williams</td><td>eve@example.com</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Comments</h2><table><thead>
+<tr><th>ID</th><th>Comment_Text</th><th>ArticleID</th><th>ReaderID</th></tr>
+<tr><th></th><th></th><th>(&#8594; News_Articles.ID)</th><th>(&#8594; Readers.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great job on covering this story!</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Very informative article. Thank you.</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>I disagree with the perspective presented here...</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>This is a very important topic that needs more attention.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Interesting findings. Keep up the good work.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Patients</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th><th>gender</th><th>contactNumber</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-06-15</td><td>M</td><td>+1234567890</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-07-25</td><td>F</td><td>+0987654321</td><td>456 Elm St</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>doctorID</th><th>firstName</th><th>lastName</th><th>specialty</th><th>yearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Jones</td><td>Cardiology</td><td>10</td></tr>
+<tr><td>2</td><td>Dr.</td><td>Williams</td><td>Pediatrics</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2>Illnesses</h2><table><thead>
+<tr><th>illnessID</th><th>name</th><th>description</th><th><span style="color:#990000">fiveYearSurvivalRate</span></th><th><span style="color:#990000">tenYearSurvivalRate</span></th><th>treatmentOption</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breast Cancer</td><td>A disease where malignant cells form in the breast tissue.</td><td>85.0</td><td>75.0</td><td>Chemotherapy and radiation therapy</td></tr>
+<tr><td>2</td><td>Diabetes</td><td>A chronic condition characterized by high blood sugar levels.</td><td>85.0</td><td>75.0</td><td>Diet, exercise, and insulin therapy</td></tr>
+</tbody></table></div>
+
+<div><h2>Diagnoses</h2><table><thead>
+<tr><th>diagnosisID</th><th>patientId</th><th>illnessId</th><th>diagnosedDate</th></tr>
+<tr><th></th><th>(&#8594; Patients.id)</th><th>(&#8594; Illnesses.illnessID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-15</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Prescriptions</h2><table><thead>
+<tr><th>prescriptionId</th><th>diagnosisId</th><th>medication</th><th>dosage</th><th>frequency</th><th>startDate</th><th>endDate</th></tr>
+<tr><th></th><th>(&#8594; Diagnoses.diagnosisID)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Tamoxifen</td><td>20mg</td><td>Once daily</td><td>2022-01-16</td><td>2022-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>Metformin</td><td>500mg</td><td>Twice daily</td><td>2021-09-02</td><td>2022-08-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>appointmentId</th><th>patientId</th><th>doctorId</th><th>appointmentDate</th><th>reasonForAppointment</th><th>outcome</th></tr>
+<tr><th></th><th>(&#8594; Patients.id)</th><th>(&#8594; Doctors.doctorID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-02-01 10:00:00</td><td>Regular checkup</td><td>Healthy</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-11-15 14:00:00</td><td>Flu symptoms</td><td>Recovering</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

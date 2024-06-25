@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Clinics</span></h2><table><thead>
+<tr><th>clinic_id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Healthy Living</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Medical Center</td><td>456 Oak Ave</td></tr>
+<tr><td>3</td><td>Family Care</td><td>789 Pine Blvd</td></tr>
+<tr><td>4</td><td>Northside Hospital</td><td>101 Elm Rd</td></tr>
+<tr><td>5</td><td>Southside Medical</td><td>202 Willow Ln</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Services</span></h2><table><thead>
+<tr><th>service_id</th><th><span style="color:#990000">service_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Vaccination</td></tr>
+<tr><td>2</td><td>Physical Examination</td></tr>
+<tr><td>3</td><td>Dental Checkup</td></tr>
+<tr><td>4</td><td>Laboratory Tests</td></tr>
+<tr><td>5</td><td>X-ray Imaging</td></tr>
+</tbody></table></div>
+
+<div><h2>Clinics_Services</h2><table><thead>
+<tr><th>clinics_services_id</th><th>clinic_id</th><th>service_id</th></tr>
+<tr><th></th><th>(&#8594; Clinics.clinic_id)</th><th>(&#8594; Services.service_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Patients</h2><table><thead>
+<tr><th>patient_id</th><th>first_name</th><th>last_name</th><th>date_of_birth</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1985-05-15</td><td>555-123-4567</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1990-08-20</td><td>555-987-6543</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>1988-11-22</td><td>555-345-7890</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>1992-03-01</td><td>555-135-7902</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>1986-07-14</td><td>555-567-8903</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>appointment_id</th><th>patient_id</th><th>clinic_id</th><th>service_id</th><th>appointment_date</th></tr>
+<tr><th></th><th>(&#8594; Patients.patient_id)</th><th>(&#8594; Clinics.clinic_id)</th><th>(&#8594; Services.service_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2022-01-10 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>3</td><td>2022-01-12 14:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>5</td><td>2022-01-14 09:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>1</td><td>2022-01-16 11:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>4</td><td>2022-01-18 15:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

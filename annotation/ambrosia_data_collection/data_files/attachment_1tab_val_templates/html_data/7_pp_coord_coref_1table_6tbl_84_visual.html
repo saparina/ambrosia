@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article1</td><td>Content1</td><td>2024-03-07 23:09:43</td></tr>
+<tr><td>2</td><td>Article2</td><td>Content2</td><td>2024-03-07 23:09:43</td></tr>
+</tbody></table></div>
+
+<div><h2>Reporters</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Reporter1</td><td>email1@example.com</td></tr>
+<tr><td>2</td><td>Reporter2</td><td>email2@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Sources</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#186e16"><span style="color:#186e16">event</span></span></th><th><span style="color:#1430b2">person</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Source1</td><td><span style="color:#186e16">Press Conference</span></td><td><span style="color:#1430b2">Jack Layton</span></td></tr>
+<tr><td>2</td><td>Source2</td><td><span style="color:#186e16">Press Conference</span></td><td>John Doe</td></tr>
+<tr><td>3</td><td>Source3</td><td><span style="color:#186e16">Media Scrum</span></td><td><span style="color:#1430b2">Jack Layton</span></td></tr>
+<tr><td>4</td><td>Source4</td><td><span style="color:#186e16">Media Scrum</span></td><td>Jane Smith</td></tr>
+</tbody></table></div>
+
+<div><h2>Categories</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Category1</td></tr>
+<tr><td>2</td><td>Category2</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleCategories</h2><table><thead>
+<tr><th>article_id</th><th>category_id</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; Categories.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleSources</h2><table><thead>
+<tr><th>source_id</th><th>article_id</th></tr>
+<tr><th>(&#8594; Sources.id)</th><th>(&#8594; Articles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleReporters</h2><table><thead>
+<tr><th>reporter_id</th><th>article_id</th></tr>
+<tr><th>(&#8594; Reporters.id)</th><th>(&#8594; Articles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

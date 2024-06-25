@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Customers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phoneNumber</th><th>Vacation_Option</th><th>Activities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>1234567890</td><td><span style="color:#990000">Cruise Ship</span></td><td><span style="color:#006600">Dance Class</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>0987654321</td><td><span style="color:#990000">Cruise Ship</span></td><td>Yoga</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td><td>5555555555</td><td><span style="color:#990000">All-Inclusive Resort</span></td><td><span style="color:#006600">Dance Class</span></td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td><td>4444444444</td><td><span style="color:#990000">All-Inclusive Resort</span></td><td>Hiking</td></tr>
+<tr><td>5</td><td>Alice Brown</td><td>alice@example.com</td><td>3333333333</td><td><span style="color:#990000">Cruise Ship</span></td><td>Snorkeling</td></tr>
+<tr><td>6</td><td>Bob Wilson</td><td>bob@example.com</td><td>2222222222</td><td><span style="color:#990000">All-Inclusive Resort</span></td><td>Golf</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>id</th><th>type</th><th>capacity</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Single Room</td><td>1</td><td>100.0</td></tr>
+<tr><td>2</td><td>Double Room</td><td>2</td><td>200.0</td></tr>
+<tr><td>3</td><td>Triple Room</td><td>3</td><td>300.0</td></tr>
+<tr><td>4</td><td>Family Suite</td><td>4</td><td>400.0</td></tr>
+<tr><td>5</td><td>Luxury Suite</td><td>2</td><td>500.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>id</th><th>checkInDate</th><th>checkOutDate</th><th>totalPrice</th><th>roomId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Rooms.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01</td><td>2022-01-07</td><td>700.0</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-15</td><td>2022-01-21</td><td>1000.0</td><td>2</td></tr>
+<tr><td>3</td><td>2022-02-01</td><td>2022-02-07</td><td>400.0</td><td>3</td></tr>
+<tr><td>4</td><td>2022-02-15</td><td>2022-02-21</td><td>600.0</td><td>4</td></tr>
+<tr><td>5</td><td>2022-03-01</td><td>2022-03-07</td><td>800.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer_Bookings</h2><table><thead>
+<tr><th>id</th><th>customerId</th><th>bookingId</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th>(&#8594; Bookings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

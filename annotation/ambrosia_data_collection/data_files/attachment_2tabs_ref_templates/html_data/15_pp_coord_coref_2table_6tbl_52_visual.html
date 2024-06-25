@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Patios</span></h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Address</th><th>Phone</th><th><span style="color:#1430b2">Number_of_Seats</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sunny Side</td><td>123 Main St</td><td>555-6789</td><td><span style="color:#1430b2">50</span></td></tr>
+<tr><td>2</td><td>Garden Oasis</td><td>456 Elm St</td><td>555-7890</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Verandas</span></h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Address</th><th>Phone</th><th>Number_of_Seats</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cozy Nook</td><td>789 Oak St</td><td>555-7654</td><td><span style="color:#1430b2">50</span></td></tr>
+<tr><td>2</td><td>Rooftop View</td><td>135 Pine St</td><td>555-6781</td><td>40</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>Id</th><th>RoomNo</th><th>Capacity</th><th>Amenities</th><th>FloorType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td><td>8</td><td>WiFi, TV, AC</td><td>Hardwood</td></tr>
+<tr><td>2</td><td>102</td><td>10</td><td>WiFi, TV, AC</td><td>Tile</td></tr>
+</tbody></table></div>
+
+<div><h2>Staffs</h2><table><thead>
+<tr><th>Id</th><th>FirstName</th><th>LastName</th><th>Position</th><th>Salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>Manager</td><td>60000.0</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>Server</td><td>30000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>Id</th><th>CustomerID</th><th>Fullname</th><th>Contact</th><th>ReservationDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Alice Johnson</td><td>alice@example.com</td><td>2022-09-01T10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>Bob Smith</td><td>bob@example.com</td><td>2022-09-15T14:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>Id</th><th>BookingId</th><th>RoomNo</th><th>CheckInTime</th><th>CheckOutTime</th><th>TotalStayDays</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>101</td><td>10:00:00</td><td>14:00:00</td><td>2</td><td>150</td></tr>
+<tr><td>2</td><td>2</td><td>102</td><td>11:00:00</td><td>15:00:00</td><td>2</td><td>170</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

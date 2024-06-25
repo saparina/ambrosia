@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>Airline</th><th>Destination</th><th>DepartureTime</th><th>ArrivalTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>New York</td><td>10:30 AM</td><td>12:00 PM</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>Los Angeles</td><td>9:00 AM</td><td>11:00 AM</td></tr>
+<tr><td>3</td><td>American Airlines</td><td>Chicago</td><td>7:00 AM</td><td>9:00 AM</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>Dallas</td><td>6:30 AM</td><td>8:00 AM</td></tr>
+<tr><td>5</td><td>JetBlue Airlines</td><td>Miami</td><td>5:00 AM</td><td>7:00 AM</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">BaggageClaims</span></h2><table><thead>
+<tr><th>ClaimID</th><th>FlightID</th><th><span style="color:#1430b2">Location</span></th></tr>
+<tr><th></th><th>(&#8594; Flights.FlightID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#1430b2">Terminal 2</span></td></tr>
+<tr><td>2</td><td>2</td><td>Terminal 3</td></tr>
+<tr><td>3</td><td>3</td><td>Terminal 1</td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#1430b2">Terminal 2</span></td></tr>
+<tr><td>5</td><td>5</td><td>Terminal 4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">SecurityChecks</span></h2><table><thead>
+<tr><th>CheckpointID</th><th>FlightID</th><th>Location</th><th>Time</th></tr>
+<tr><th></th><th>(&#8594; Flights.FlightID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#1430b2">Terminal 2</span></td><td>8:00 AM</td></tr>
+<tr><td>2</td><td>2</td><td>Terminal 3</td><td>7:00 AM</td></tr>
+<tr><td>3</td><td>3</td><td>Terminal 1</td><td>6:00 AM</td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#1430b2">Terminal 2</span></td><td>4:00 AM</td></tr>
+<tr><td>5</td><td>5</td><td>Terminal 4</td><td>3:00 AM</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerID</th><th>Name</th><th>Age</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>25</td><td>UK</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>28</td><td>Canada</td></tr>
+<tr><td>4</td><td>Tom Brown</td><td>45</td><td>Australia</td></tr>
+<tr><td>5</td><td>Emily Davis</td><td>35</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>PassengerID</th><th>FlightID</th><th>Class</th><th>Price</th></tr>
+<tr><th></th><th>(&#8594; Passengers.PassengerID)</th><th>(&#8594; Flights.FlightID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Economy</td><td>250</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Business</td><td>1000</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>Premium Economy</td><td>500</td></tr>
+<tr><td>4</td><td>3</td><td>4</td><td>Economy</td><td>250</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>First Class</td><td>3000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

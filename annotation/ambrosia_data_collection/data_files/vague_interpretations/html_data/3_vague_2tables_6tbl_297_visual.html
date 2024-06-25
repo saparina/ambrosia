@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Location</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>The city that never sleeps</td></tr>
+<tr><td>2</td><td>London</td><td>Home of Big Ben and Buckingham Palace</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Era</span></h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Victorian Era</td></tr>
+<tr><td>2</td><td>Roaring Twenties</td></tr>
+</tbody></table></div>
+
+<div><h2>Story</h2><table><thead>
+<tr><th>id</th><th>title</th><th>location_id</th><th>era_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Location.id)</th><th>(&#8594; Era.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A Victorian Mystery</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Gangsters of the Roaring Twenties</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Character</h2><table><thead>
+<tr><th>id</th><th>name</th><th>role</th><th>story_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Story.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inspector Lestrade</td><td>Detective</td><td>1</td></tr>
+<tr><td>2</td><td>Al Capone</td><td>Mob Boss</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Episode</h2><table><thead>
+<tr><th>id</th><th>episode_number</th><th>title</th><th>release_date</th><th>story_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Story.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Episode One - The Murder</td><td>2022-06-01</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>Episode Two - The Chase</td><td>2022-06-08</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Review</h2><table><thead>
+<tr><th>id</th><th>reviewer_name</th><th>rating</th><th>comment</th><th>episode_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Episode.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>5</td><td>Great acting!</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>4</td><td>Interesting plot but could be better</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

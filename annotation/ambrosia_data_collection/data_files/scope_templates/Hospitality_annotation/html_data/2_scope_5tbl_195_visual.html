@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Art_Galleries</span></h2><table><thead>
+<tr><th>GalleryID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gallery A</td><td>New York</td></tr>
+<tr><td>2</td><td>Gallery B</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Gallery C</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Gallery D</td><td>Miami</td></tr>
+<tr><td>5</td><td>Gallery E</td><td>San Francisco</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Exhibitions</span></h2><table><thead>
+<tr><th>ExhibitionID</th><th><span style="color:#990000">Type</span></th><th><span style="color:#990000">Description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Painting_Exhibitions</td><td>An exhibition showcasing famous paintings from around the world.</td></tr>
+<tr><td>2</td><td>Sculpture_Exhibitions</td><td>A collection of modern sculptures from various artists.</td></tr>
+<tr><td>3</td><td>Photography_Exhibitions</td><td>A display of stunning photography from renowned photographers.</td></tr>
+<tr><td>4</td><td>Digital_Art_Exhibitions</td><td>A showcase of digital art created using cutting-edge technology.</td></tr>
+<tr><td>5</td><td>Installation_Art_Exhibitions</td><td>Immersive installations that engage all senses and create unique experiences.</td></tr>
+</tbody></table></div>
+
+<div><h2>Art_Galleries_Exhibitions</h2><table><thead>
+<tr><th>GalleryID</th><th>ExhibitionID</th></tr>
+<tr><th>(&#8594; Art_Galleries.GalleryID)</th><th>(&#8594; Exhibitions.ExhibitionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

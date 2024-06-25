@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Guestrooms</span></h2><table><thead>
+<tr><th>id</th><th>room_number</th><th>floor_no</th><th>capacity</th><th><span style="color:#1430b2">amenities</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>G001</td><td>2</td><td>3</td><td><span style="color:#1430b2">Air Conditioning</span></td></tr>
+<tr><td>2</td><td>G002</td><td>3</td><td>4</td><td>WiFi Access</td></tr>
+<tr><td>3</td><td>G003</td><td>1</td><td>2</td><td>Parking Facility</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Suites</span></h2><table><thead>
+<tr><th>id</th><th>suite_name</th><th>area_sqft</th><th>occupancy</th><th>amenities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Presidential Suite</td><td>2000</td><td>6</td><td><span style="color:#1430b2">Air Conditioning</span></td></tr>
+<tr><td>2</td><td>Deluxe Suite</td><td>800</td><td>4</td><td>WiFi Access</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>reservation_id</th><th>guest_name</th><th>checkin</th><th>checkout</th><th>room_type</th><th>total_cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2022-09-01</td><td>2022-09-07</td><td>Guestroom</td><td>500.0</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2022-09-15</td><td>2022-09-20</td><td>Guestroom</td><td>700.0</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>2022-09-25</td><td>2022-09-30</td><td>Suite</td><td>1000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>employee_id</th><th>name</th><th>role</th><th>department</th><th>hire_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike Brown</td><td>Housekeeping Supervisor</td><td>Housekeeping</td><td>2021-07-15</td></tr>
+<tr><td>2</td><td>Emily White</td><td>Front Desk Manager</td><td>Reception</td><td>2021-06-01</td></tr>
+<tr><td>3</td><td>David Green</td><td>Maintenance Technician</td><td>Engineering</td><td>2021-05-15</td></tr>
+</tbody></table></div>
+
+<div><h2>GuestReviews</h2><table><thead>
+<tr><th>review_id</th><th>guest_name</th><th>rating</th><th>comments</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Lee</td><td>5</td><td>Excellent service and clean rooms.</td></tr>
+<tr><td>2</td><td>Karen Kim</td><td>4</td><td>Nice location but could use some updates.</td></tr>
+<tr><td>3</td><td>Paul Wang</td><td>3</td><td>Good experience overall but had a minor issue with WiFi.</td></tr>
+</tbody></table></div>
+
+<div><h2>FoodMenu</h2><table><thead>
+<tr><th>menu_item_id</th><th>item_name</th><th>description</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Steak</td><td>Grilled steak served with vegetables.</td><td>25.0</td></tr>
+<tr><td>2</td><td>Seafood Platter</td><td>Assorted seafood with lemon butter sauce.</td><td>30.0</td></tr>
+<tr><td>3</td><td>Veggie Pizza</td><td>Thick crust pizza loaded with vegetables.</td><td>15.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

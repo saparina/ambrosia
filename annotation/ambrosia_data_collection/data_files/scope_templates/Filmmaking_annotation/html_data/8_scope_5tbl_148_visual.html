@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Locations_Managers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>contact_info</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>+9876543210</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>+1112223330</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>+4445556660</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>+7778889990</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Responsibilities</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film Permit Acquisition</td></tr>
+<tr><td>2</td><td>Location Scouting</td></tr>
+<tr><td>3</td><td>Health & Safety Compliance</td></tr>
+<tr><td>4</td><td>Contract Negotiation</td></tr>
+<tr><td>5</td><td>Equipment Coordination</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations_Managers_Responsibilities</h2><table><thead>
+<tr><th>locations_manager_id</th><th>responsibility_id</th></tr>
+<tr><th>(&#8594; Locations_Managers.id)</th><th>(&#8594; Responsibilities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Crews</h2><table><thead>
+<tr><th>id</th><th>crew_name</th><th>role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Camera Team</td><td>Director of Photography</td></tr>
+<tr><td>2</td><td>Sound Team</td><td>Boom Operator</td></tr>
+<tr><td>3</td><td>Production Designers</td><td>Art Director</td></tr>
+<tr><td>4</td><td>Costume Department</td><td>Costumer</td></tr>
+<tr><td>5</td><td>Special Effects</td><td>Pyrotechnics Specialist</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Projects</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th>budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Big Adventure</td><td>2022-12-01</td><td>10000000.0</td></tr>
+<tr><td>2</td><td>Alien Invasion</td><td>2023-06-15</td><td>15000000.0</td></tr>
+<tr><td>3</td><td>Love Story</td><td>2024-02-14</td><td>5000000.0</td></tr>
+<tr><td>4</td><td>Action Thriller</td><td>2025-08-20</td><td>20000000.0</td></tr>
+<tr><td>5</td><td>Comedy Drama</td><td>2026-04-01</td><td>7000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies_Cast</h2><table><thead>
+<tr><th>movie_id</th><th>actor_id</th><th>character_name</th></tr>
+<tr><th>(&#8594; Movie_Projects.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Hero</td></tr>
+<tr><td>1</td><td>2</td><td>Villain</td></tr>
+<tr><td>2</td><td>3</td><td>Lead Scientist</td></tr>
+<tr><td>2</td><td>4</td><td>Intergalactic Warrior</td></tr>
+<tr><td>3</td><td>5</td><td>Lonely Heart</td></tr>
+<tr><td>3</td><td>6</td><td>Business Tycoon</td></tr>
+<tr><td>4</td><td>7</td><td>Detective</td></tr>
+<tr><td>4</td><td>8</td><td>Gang Leader</td></tr>
+<tr><td>5</td><td>9</td><td>Small Town Girl</td></tr>
+<tr><td>5</td><td>10</td><td>Wise Old Man</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>director_name</th><th>birth_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Samuel L Jackson</td><td>1948</td></tr>
+<tr><td>2</td><td>Denzel Washington</td><td>1954</td></tr>
+<tr><td>3</td><td>Tom Hanks</td><td>1956</td></tr>
+<tr><td>4</td><td>Robert De Niro</td><td>1943</td></tr>
+<tr><td>5</td><td>Anthony Hopkins</td><td>1937</td></tr>
+</tbody></table></div>
+
+<div><h2>Directed_Movies</h2><table><thead>
+<tr><th>director_id</th><th>movie_id</th></tr>
+<tr><th>(&#8594; Directors.id)</th><th>(&#8594; Movie_Projects.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

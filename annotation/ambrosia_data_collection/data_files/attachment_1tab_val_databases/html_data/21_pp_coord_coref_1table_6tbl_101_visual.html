@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1968-07-23</td><td>American</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1970-03-10</td><td>Canadian</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>ProducerID</th><th>Name</th><th>ContactNumber</th><th>Email</th><th>AssociatedDirector</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Brown</td><td>+1234567890</td><td>ab@email.com</td><td>1</td></tr>
+<tr><td>2</td><td>Charlie Green</td><td>+0987654321</td><td>cg@email.com</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Films</span></h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>ReleaseYear</th><th>FilmType</th><th>Budget</th><th>ProductionCompanyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The <span style="color:#990000">Documentary</span></td><td>2000</td><td><span style="color:#990000">Documentary</span></td><td><span style="color:#006600">500000.0</span></td><td>1</td></tr>
+<tr><td>2</td><td>Another Doc</td><td>2001</td><td><span style="color:#990000">Documentary</span></td><td>750000.0</td><td>1</td></tr>
+<tr><td>3</td><td>A <span style="color:#990000">Short Film</span></td><td>2002</td><td><span style="color:#990000">Short Film</span></td><td><span style="color:#006600">500000.0</span></td><td>2</td></tr>
+<tr><td>4</td><td>Yet Another Short</td><td>2003</td><td><span style="color:#990000">Short Film</span></td><td>300000.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td></tr>
+<tr><td>2</td><td>Meryl</td><td>Streep</td><td>1949-06-22</td></tr>
+</tbody></table></div>
+
+<div><h2>Casts</h2><table><thead>
+<tr><th>RoleID</th><th>FilmID</th><th>ActorID</th><th>CharacterName</th><th>AppearanceFee</th></tr>
+<tr><th></th><th>(&#8594; Films.FilmID)</th><th>(&#8594; Actors.ActorID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Main Lead</td><td>100000</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Supporting Role</td><td>50000</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>CompanyName</th><th>AddressLine1</th><th>AddressLine2</th><th>City</th><th>StateOrRegion</th><th>PostalCode</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Big Movie Co.</td><td>123 Main St.</td><td></td><td>New York</td><td>NY</td><td>10001</td><td>USA</td></tr>
+<tr><td>2</td><td>Small Indie Studio</td><td>456 Elm Rd.</td><td></td><td>Los Angeles</td><td>CA</td><td>90001</td><td>USA</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

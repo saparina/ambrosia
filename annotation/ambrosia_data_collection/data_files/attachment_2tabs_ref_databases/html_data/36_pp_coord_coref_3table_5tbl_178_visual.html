@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Genres</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Comedy</td></tr>
+<tr><td>2</td><td>Drama</td></tr>
+<tr><td>3</td><td>Action</td></tr>
+<tr><td>4</td><td><span style="color:#006600">Horror</span></td></tr>
+<tr><td>5</td><td>Romance</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Movies</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseDate</th><th>genreId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Big New</td><td>2019-07-01</td><td>1</td></tr>
+<tr><td>2</td><td>Inception</td><td>2010-07-16</td><td>3</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>2014-11-07</td><td>3</td></tr>
+<tr><td>4</td><td>Get Out</td><td>2017-02-24</td><td>4</td></tr>
+<tr><td>5</td><td>La La Land</td><td>2016-12-02</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">TVShows</span></h2><table><thead>
+<tr><th>id</th><th>showName</th><th>startYear</th><th>endYear</th><th>genreId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Friends</td><td>1994</td><td>2004</td><td>1</td></tr>
+<tr><td>2</td><td>Breaking Bad</td><td>2008</td><td>2013</td><td>4</td></tr>
+<tr><td>3</td><td>Game of Thrones</td><td>2011</td><td>2019</td><td>2</td></tr>
+<tr><td>4</td><td>Stranger Things</td><td>2016</td><td>None</td><td>3</td></tr>
+<tr><td>5</td><td>Outlander</td><td>2014</td><td>None</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td></tr>
+<tr><td>2</td><td>Joseph</td><td>Gordon-Levitt</td><td>1981-02-17</td></tr>
+<tr><td>3</td><td>Ellen</td><td>Page</td><td>1987-02-21</td></tr>
+<tr><td>4</td><td>Christopher</td><td>Nolan</td><td>1970-07-30</td></tr>
+<tr><td>5</td><td>Dwayne</td><td>Johnson</td><td>1972-05-02</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieActors</h2><table><thead>
+<tr><th>movieId</th><th>actorId</th><th>character</th></tr>
+<tr><th>(&#8594; Movies.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Jack Torrance</td></tr>
+<tr><td>2</td><td>2</td><td>Cobb</td></tr>
+<tr><td>3</td><td>3</td><td>Murphy Mcauley</td></tr>
+<tr><td>4</td><td>4</td><td>Walter White</td></tr>
+<tr><td>5</td><td>5</td><td>Randy</td></tr>
+</tbody></table></div>
+
+<div><h2>SeriesActors</h2><table><thead>
+<tr><th>tvShowId</th><th>actorId</th><th>character</th><th>seasonNumber</th><th>episodeNumber</th></tr>
+<tr><th>(&#8594; TVShows.id)</th><th>(&#8594; Actors.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Ross Geller</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>Walter White</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>Claire Underwood</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>Hawkeye Pierce</td><td>1</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>Luke Skywalker</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

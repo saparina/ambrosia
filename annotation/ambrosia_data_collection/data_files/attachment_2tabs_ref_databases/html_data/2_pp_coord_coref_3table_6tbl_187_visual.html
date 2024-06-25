@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Airlines</span></h2><table><thead>
+<tr><th>airline_id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alaskan Airlines</td></tr>
+<tr><td>2</td><td>Delta Airlines</td></tr>
+<tr><td>3</td><td>United Airlines</td></tr>
+<tr><td>4</td><td><span style="color:#006600">Southwest Airlines</span></td></tr>
+<tr><td>5</td><td>JetBlue Airlines</td></tr>
+</tbody></table></div>
+
+<div><h2>Airplanes</h2><table><thead>
+<tr><th>airplane_id</th><th>model</th><th>capacity</th><th>current_flight</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Flights.flight_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td><td>180</td><td>None</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>160</td><td>None</td></tr>
+<tr><td>3</td><td>Bombardier Q400</td><td>65</td><td>None</td></tr>
+<tr><td>4</td><td>Embraer E190</td><td>80</td><td>None</td></tr>
+<tr><td>5</td><td>Boeing 787</td><td>250</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flight_id</th><th>departure_time</th><th>destination</th><th>airplane_id</th><th>airline_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airplanes.airplane_id)</th><th>(&#8594; Airlines.airline_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-11-01 08:00:00</td><td>Los Angeles</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2021-11-01 10:00:00</td><td>New York</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2021-11-01 12:00:00</td><td>Chicago</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2021-11-01 14:00:00</td><td>Houston</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2021-11-01 16:00:00</td><td>Dallas</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passenger_id</th><th>first_name</th><th>last_name</th><th>age</th><th>family_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Families.family_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>35</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>28</td><td>None</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>45</td><td>2</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>30</td><td>3</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>50</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Boardings</span></h2><table><thead>
+<tr><th>boarding_id</th><th>priority</th><th>family</th><th>passenger_id</th><th>flight_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Passengers.passenger_id)</th><th>(&#8594; Flights.flight_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>0</td><td>0</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>0</td><td>1</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>0</td><td>0</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>0</td><td>0</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Families</span></h2><table><thead>
+<tr><th>family_id</th><th>head_of_family</th></tr>
+<tr><th></th><th>(&#8594; Passengers.passenger_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

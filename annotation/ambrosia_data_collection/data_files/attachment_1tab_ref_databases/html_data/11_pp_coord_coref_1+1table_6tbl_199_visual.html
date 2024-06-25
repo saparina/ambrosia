@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">HigherEducationInstitutionType</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">institutionType</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">University</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">College</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">AcademicProgram</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">programName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Business Administration</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Computer Science</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th><th>higherEducationInstitutionId</th><th>academicProgramId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; HigherEducationInstitutionType.id)</th><th>(&#8594; AcademicProgram.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>1234567890</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>0987654321</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>mike@example.com</td><td>1112223333</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>Alice</td><td>White</td><td>alice@example.com</td><td>4445556666</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>Tom</td><td>Green</td><td>tom@example.com</td><td>7778889999</td><td>1</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollment</h2><table><thead>
+<tr><th>enrollmentID</th><th>studentId</th><th>startDate</th><th>endDate</th></tr>
+<tr><th></th><th>(&#8594; Student.studentID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-09-01</td><td>2022-05-31</td></tr>
+<tr><td>2</td><td>2</td><td>2021-09-01</td><td>2022-05-31</td></tr>
+<tr><td>3</td><td>3</td><td>2021-09-01</td><td>2022-05-31</td></tr>
+<tr><td>4</td><td>4</td><td>2021-09-01</td><td>2022-05-31</td></tr>
+<tr><td>5</td><td>None</td><td>2021-09-01</td><td>2022-05-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Course</h2><table><thead>
+<tr><th>courseID</th><th>courseTitle</th><th>credits</th><th>academicProgramId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; AcademicProgram.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Business Administration</td><td>3</td><td>1</td></tr>
+<tr><td>2</td><td>Advanced Computer Science</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>Fundamentals of Marketing</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>Data Structures and Algorithms</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>Financial Management</td><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>AttendenceRecord</h2><table><thead>
+<tr><th>attendenceId</th><th>studentId</th><th>courseId</th><th>dateAttended</th></tr>
+<tr><th></th><th>(&#8594; Student.studentID)</th><th>(&#8594; Course.courseID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-10-01</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>2021-10-08</td></tr>
+<tr><td>3</td><td>2</td><td>2</td><td>2021-10-01</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>2021-10-08</td></tr>
+<tr><td>5</td><td>None</td><td>None</td><td>2021-10-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

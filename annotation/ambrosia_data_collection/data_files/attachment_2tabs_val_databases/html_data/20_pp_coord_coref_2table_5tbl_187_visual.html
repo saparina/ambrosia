@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Tablets</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Price</th><th>Operating_System</th><th>ScreenSize</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>iPad Pro</td><td>899.99</td><td>iOS</td><td>12.9</td></tr>
+<tr><td>2</td><td>Galaxy Tab S6</td><td>799.99</td><td>Android</td><td>10.5</td></tr>
+<tr><td>3</td><td>Surface Pro 7</td><td>999.99</td><td><span style="color:#006600">Windows 10</span></td><td>12.3</td></tr>
+<tr><td>4</td><td>Pixel Slate</td><td>799.99</td><td>Chrome OS</td><td>12.3</td></tr>
+<tr><td>5</td><td>Xiaomi Mi Pad 4</td><td>249.99</td><td>Android</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Laptops</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Price</th><th>Operating_System</th><th>RAM</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>MacBook Air</td><td>999.99</td><td>macOS</td><td>8</td></tr>
+<tr><td>2</td><td>Dell XPS 13</td><td>1199.99</td><td><span style="color:#006600">Windows 10</span></td><td>16</td></tr>
+<tr><td>3</td><td>Lenovo Thinkpad T490s</td><td>1499.99</td><td><span style="color:#006600">Windows 10</span></td><td>16</td></tr>
+<tr><td>4</td><td>HP Spectre x360</td><td>1299.99</td><td><span style="color:#006600">Windows 10</span></td><td>16</td></tr>
+<tr><td>5</td><td>Asus Zenbook UX333FA</td><td>1199.99</td><td><span style="color:#006600">Windows 10</span></td><td>16</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>21</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>22</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>23</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>20</td></tr>
+<tr><td>5</td><td>David</td><td>Green</td><td>24</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>TeacherId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Students.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math</td><td>1</td></tr>
+<tr><td>2</td><td>English</td><td>2</td></tr>
+<tr><td>3</td><td>History</td><td>3</td></tr>
+<tr><td>4</td><td>Biology</td><td>4</td></tr>
+<tr><td>5</td><td>Physics</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>StudentId</th><th>ClassId</th><th>Grade</th></tr>
+<tr><th>(&#8594; Students.id)</th><th>(&#8594; Classes.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>B+</td></tr>
+<tr><td>3</td><td>3</td><td>C</td></tr>
+<tr><td>4</td><td>4</td><td>A-</td></tr>
+<tr><td>5</td><td>5</td><td>B</td></tr>
+</tbody></table></div>
+
+<div><h2>Devices</h2><table><thead>
+<tr><th>DeviceType</th><th>OS</th><th>PurchaseDate</th><th>WarrantyPeriod</th></tr>
+</thead><tbody>
+<tr><td>Tablet</td><td>Windows 10</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>Tablet</td><td>iOS</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>Laptop</td><td>macOS</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>Laptop</td><td>Linux</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>Desktop</td><td>Windows 10</td><td>2022-01-01</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

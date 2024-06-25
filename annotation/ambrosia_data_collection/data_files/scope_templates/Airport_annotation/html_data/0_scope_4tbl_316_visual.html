@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chicago O'Hare International Airport</td><td>Chicago</td><td>USA</td></tr>
+<tr><td>2</td><td>Dallas/Fort Worth International Airport</td><td>DFW</td><td>USA</td></tr>
+<tr><td>3</td><td>Los Angeles International Airport</td><td>LAX</td><td>USA</td></tr>
+<tr><td>4</td><td>New York John F. Kennedy International Airport</td><td>NYC</td><td>USA</td></tr>
+<tr><td>5</td><td>London Heathrow Airport</td><td>London</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Code</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>UA</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>DL</td></tr>
+<tr><td>3</td><td>Southwest Airlines</td><td>WN</td></tr>
+<tr><td>4</td><td>JetBlue Airways</td><td>B6</td></tr>
+<tr><td>5</td><td>Spirit Airlines</td><td>NK</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Frequent_Flyer_Program</span></h2><table><thead>
+<tr><th>ProgramId</th><th>AirlineId</th><th>MemberName</th><th>JoinDate</th></tr>
+<tr><th></th><th>(&#8594; Airlines.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John Doe</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>Jane Smith</td><td>2022-07-01</td></tr>
+<tr><td>3</td><td>3</td><td>Mike Johnson</td><td>2022-10-01</td></tr>
+<tr><td>4</td><td>4</td><td>Emily Brown</td><td>2022-11-01</td></tr>
+<tr><td>5</td><td>5</td><td>David Wilson</td><td>2022-12-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Benefits</span></h2><table><thead>
+<tr><th>BenefitId</th><th><span style="color:#990000">Description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Elite Status</td></tr>
+<tr><td>2</td><td>Priority Boarding</td></tr>
+<tr><td>3</td><td>Free Baggage Check</td></tr>
+<tr><td>4</td><td>Lounge Access</td></tr>
+<tr><td>5</td><td>Preferred Seating</td></tr>
+</tbody></table></div>
+
+<div><h2>Frequent_Flyer_Program_Benefits</h2><table><thead>
+<tr><th>ProgramId</th><th>BenefitId</th></tr>
+<tr><th>(&#8594; Frequent_Flyer_Program.ProgramId)</th><th>(&#8594; Benefits.BenefitId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+<tr><td>3</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

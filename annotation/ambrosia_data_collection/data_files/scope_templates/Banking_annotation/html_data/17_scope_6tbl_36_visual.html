@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Banks</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>headquarter</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank A</td><td>New York</td></tr>
+<tr><td>2</td><td>Bank B</td><td>London</td></tr>
+<tr><td>3</td><td>Bank C</td><td>Tokyo</td></tr>
+<tr><td>4</td><td>Bank D</td><td>Paris</td></tr>
+<tr><td>5</td><td>Bank E</td><td>Dubai</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Services</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">serviceName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Savings_Account</td></tr>
+<tr><td>2</td><td>Current_Account</td></tr>
+<tr><td>3</td><td>Loan</td></tr>
+<tr><td>4</td><td>Credit_Card</td></tr>
+<tr><td>5</td><td>Mortgage</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1987-03-25</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1992-06-10</td></tr>
+<tr><td>3</td><td>Peter</td><td>Black</td><td>1980-10-15</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>1995-02-20</td></tr>
+<tr><td>5</td><td>David</td><td>Green</td><td>1977-08-25</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>id</th><th>accountNumber</th><th>balance</th><th>customerId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Customers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123456789</td><td>10000.0</td><td>1</td></tr>
+<tr><td>2</td><td>987654321</td><td>5000.0</td><td>2</td></tr>
+<tr><td>3</td><td>543210987</td><td>7000.0</td><td>3</td></tr>
+<tr><td>4</td><td>654321098</td><td>20000.0</td><td>4</td></tr>
+<tr><td>5</td><td>876543210</td><td>8000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>id</th><th>transactionDate</th><th>amount</th><th>description</th><th>accountId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Accounts.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 10:00:00</td><td>500.0</td><td>Payment</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-02 15:30:00</td><td>-300.0</td><td>Withdrawal</td><td>2</td></tr>
+<tr><td>3</td><td>2022-01-03 09:15:00</td><td>700.0</td><td>Deposit</td><td>3</td></tr>
+<tr><td>4</td><td>2022-01-04 12:45:00</td><td>-400.0</td><td>Transfer</td><td>4</td></tr>
+<tr><td>5</td><td>2022-01-05 17:00:00</td><td>900.0</td><td>Online Purchase</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Banks_Services</h2><table><thead>
+<tr><th>bankId</th><th>serviceId</th></tr>
+<tr><th>(&#8594; Banks.id)</th><th>(&#8594; Services.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

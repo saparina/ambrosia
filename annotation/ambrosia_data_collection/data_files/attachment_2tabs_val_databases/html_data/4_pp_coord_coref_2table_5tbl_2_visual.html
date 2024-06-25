@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>date_of_birth</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-06-30</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>accounts</h2><table><thead>
+<tr><th>account_number</th><th>balance</th><th>interest_rate</th><th>customer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; customers.customer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000.0</td><td>2.0</td><td>1</td></tr>
+<tr><td>2</td><td>3000.0</td><td>2.5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>loans</h2><table><thead>
+<tr><th>loan_id</th><th>amount</th><th>start_date</th><th>end_date</th><th>monthly_payment</th><th>account_number</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; accounts.account_number)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>50000.0</td><td>2022-01-01</td><td>2027-01-01</td><td>1000.0</td><td>1</td></tr>
+<tr><td>2</td><td>75000.0</td><td>2021-01-01</td><td>2026-01-01</td><td>1200.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">life_insurances</span></h2><table><thead>
+<tr><th>policy_number</th><th>payout</th><th>coverage_amount</th><th>term_years</th><th>customer_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; customers.customer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">100000.0</span></td><td>500000.0</td><td>20</td><td>1</td></tr>
+<tr><td>2</td><td>150000.0</td><td>600000.0</td><td>20</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">annuities</span></h2><table><thead>
+<tr><th>contract_number</th><th>payout</th><th>premium_amount</th><th>start_date</th><th>end_date</th><th>customer_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; customers.customer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">100000.0</span></td><td>10000.0</td><td>2023-01-01</td><td>2033-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>150000.0</td><td>15000.0</td><td>2024-01-01</td><td>2034-01-01</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>transactions</h2><table><thead>
+<tr><th>transaction_id</th><th>type</th><th>amount</th><th>account_number</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; accounts.account_number)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Deposit</td><td>1000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Withdrawal</td><td>500.0</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

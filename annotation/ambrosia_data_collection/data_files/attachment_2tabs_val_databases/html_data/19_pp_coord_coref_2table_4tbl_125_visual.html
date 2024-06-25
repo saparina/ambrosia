@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Music_Therapists</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Location</th><th>Experience</th><th>Audio_Equipment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>New York</td><td>3 years</td><td><span style="color:#006600">Beyerdynamic T1</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Los Angeles</td><td>6 months</td><td>Shure SE846</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>Chicago</td><td>2 years</td><td>Beyerdynamic DT 990 PRO</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Sound_Engineers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Location</th><th>Experience</th><th>Audio_Equipment</th></tr>
+</thead><tbody>
+<tr><td>4</td><td>Mike Brown</td><td>San Francisco</td><td>5 years</td><td><span style="color:#006600">Beyerdynamic T1</span></td></tr>
+<tr><td>5</td><td>David Lee</td><td>Washington DC</td><td>7 years</td><td>Audeze LCD-XC</td></tr>
+<tr><td>6</td><td>Robert White</td><td>Houston</td><td>4 years</td><td>Sennheiser HD 800 S</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>CompanyName</th><th>Industry</th><th>NumberOfEmployees</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Acme Inc.</td><td>Technology</td><td>10</td></tr>
+<tr><td>2</td><td>Global Corp.</td><td>Finance</td><td>500</td></tr>
+<tr><td>3</td><td>Creative Solutions</td><td>Design</td><td>5</td></tr>
+<tr><td>4</td><td>Healthcare Provider</td><td>Healthcare</td><td>100</td></tr>
+<tr><td>5</td><td>Education Innovators</td><td>Education</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>Type</th><th>DatePosted</th><th>CompanyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop web applications using Java and Spring Boot.</td><td>Full Time</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Graphic Designer</td><td>Create visually appealing designs for print and digital media.</td><td>Contract</td><td>2022-02-01</td><td>3</td></tr>
+<tr><td>3</td><td>Data Analyst</td><td>Analyse data sets and provide insights for decision making.</td><td>Part Time</td><td>2022-03-01</td><td>5</td></tr>
+<tr><td>4</td><td>Accountant</td><td>Manage financial records and ensure accuracy of all transactions.</td><td>Permanent</td><td>2022-04-01</td><td>2</td></tr>
+<tr><td>5</td><td>Nurse</td><td>Administer patient care and monitor vital signs.</td><td>Temp</td><td>2022-05-01</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ApplicationId</th><th>Fullname</th><th>Email</th><th>PhoneNumber</th><th>ResumePath</th><th>JobId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Jobs.JobId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>555-1234</td><td>/path/to/resume.pdf</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>555-5678</td><td>/path/to/another/resume.pdf</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alicejohnson@example.com</td><td>555-9012</td><td>/path/to/yet/another/resume.pdf</td><td>3</td></tr>
+<tr><td>4</td><td>Michael Brown</td><td>mikebrown@example.com</td><td>555-1357</td><td>/path/to/resume_brown.pdf</td><td>4</td></tr>
+<tr><td>5</td><td>David Lee</td><td>davidlee@example.com</td><td>555-1415</td><td>/path/to/resume_lee.pdf</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

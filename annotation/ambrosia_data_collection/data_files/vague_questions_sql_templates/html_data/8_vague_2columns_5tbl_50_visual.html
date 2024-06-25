@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>companyID</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>New York</td></tr>
+<tr><td>2</td><td>Company B</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>Company C</td><td>Boston</td></tr>
+<tr><td>4</td><td>Company D</td><td>Chicago</td></tr>
+<tr><td>5</td><td>Company E</td><td>Los Angeles</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>deptID</th><th>deptName</th><th>companyID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Companies.companyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering</td><td>1</td></tr>
+<tr><td>2</td><td>Marketing</td><td>2</td></tr>
+<tr><td>3</td><td>Human Resources</td><td>3</td></tr>
+<tr><td>4</td><td>Finance</td><td>4</td></tr>
+<tr><td>5</td><td>Product Development</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Teams</h2><table><thead>
+<tr><th>teamID</th><th>teamName</th><th>deptID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Departments.deptID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Web Developers</td><td>1</td></tr>
+<tr><td>2</td><td>Mobile App Developers</td><td>1</td></tr>
+<tr><td>3</td><td>Graphic Designers</td><td>2</td></tr>
+<tr><td>4</td><td>Content Writers</td><td>2</td></tr>
+<tr><td>5</td><td>Data Analysts</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Positions</h2><table><thead>
+<tr><th>positionID</th><th>title</th><th>description</th><th>teamID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Teams.teamID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop and maintain software applications.</td><td>1</td></tr>
+<tr><td>2</td><td>Android Developer</td><td>Design and develop Android apps.</td><td>2</td></tr>
+<tr><td>3</td><td>UX/UI Designer</td><td>Create user-centered designs.</td><td>2</td></tr>
+<tr><td>4</td><td>Data Scientist</td><td>Analyze data to provide insights.</td><td>4</td></tr>
+<tr><td>5</td><td>Accountant</td><td>Handle financial transactions and reports.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>employeeID</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th><th>hireDate</th><th>positionID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Positions.positionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>123-456-7890</td><td>2021-01-15</td><td>1</td></tr>
+<tr><td>2</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td><td>098-765-4321</td><td>2020-02-10</td><td>2</td></tr>
+<tr><td>3</td><td>Tom</td><td>Brown</td><td>tom.brown@example.com</td><td>555-555-5555</td><td>2019-03-05</td><td>3</td></tr>
+<tr><td>4</td><td>Linda</td><td>Green</td><td>linda.green@example.com</td><td>555-123-4567</td><td>2018-04-01</td><td>4</td></tr>
+<tr><td>5</td><td>Kevin</td><td>Black</td><td>kevin.black@example.com</td><td>111-222-3333</td><td>2017-05-15</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Management</h2><table><thead>
+<tr><th>roleID</th><th>PositionID</th><th><span style="color:#990000">Supervisor</span></th></tr>
+<tr><th></th><th>(&#8594; Positions.positionID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>1</td><td>Alice Johnson</td></tr>
+<tr><td>3</td><td>2</td><td>Tom Brown</td></tr>
+<tr><td>4</td><td>3</td><td>Linda Green</td></tr>
+<tr><td>5</td><td>4</td><td>Kevin Black</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

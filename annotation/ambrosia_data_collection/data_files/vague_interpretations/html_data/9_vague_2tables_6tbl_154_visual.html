@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Website</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>url</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CNN</td><td>https://www.cnn.com</td></tr>
+<tr><td>2</td><td>BBC</td><td>https://www.bbc.co.uk</td></tr>
+<tr><td>3</td><td>The Guardian</td><td>https://www.theguardian.com</td></tr>
+<tr><td>4</td><td>Al Jazeera</td><td>https://www.aljazeera.com</td></tr>
+<tr><td>5</td><td>New York Times</td><td>https://www.nytimes.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Mobile_App</span></h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CNN App</td></tr>
+<tr><td>2</td><td>BBC App</td></tr>
+<tr><td>3</td><td>Guardian App</td></tr>
+<tr><td>4</td><td>Al Jazeera App</td></tr>
+<tr><td>5</td><td>NYT App</td></tr>
+</tbody></table></div>
+
+<div><h2>News_Agency</h2><table><thead>
+<tr><th>id</th><th>name</th><th>websiteId</th><th>mobileAppId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Website.id)</th><th>(&#8594; Mobile_App.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CNN</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>BBC</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>The Guardian</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Al Jazeera</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>New York Times</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Article</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publishedDate</th><th>newsAgencyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; News_Agency.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Test Article 1</td><td>This is a test article.</td><td>2024-02-19 14:31:13</td><td>1</td></tr>
+<tr><td>2</td><td>Test Article 2</td><td>Another test article.</td><td>2024-02-19 14:31:13</td><td>2</td></tr>
+<tr><td>3</td><td>Test Article 3</td><td>Yet another test article.</td><td>2024-02-19 14:31:13</td><td>3</td></tr>
+<tr><td>4</td><td>Test Article 4</td><td>And here is one more test article.</td><td>2024-02-19 14:31:13</td><td>4</td></tr>
+<tr><td>5</td><td>Test Article 5</td><td>Last but not least, a test article!</td><td>2024-02-19 14:31:13</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Author</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>AuthorArticle</h2><table><thead>
+<tr><th>authorId</th><th>articleId</th></tr>
+<tr><th>(&#8594; Author.id)</th><th>(&#8594; Article.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

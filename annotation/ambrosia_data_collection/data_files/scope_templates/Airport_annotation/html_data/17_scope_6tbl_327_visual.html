@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>airportId</th><th>cityId</th><th>name</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>JFK</td><td>USA</td></tr>
+<tr><td>2</td><td>2</td><td>LAX</td><td>USA</td></tr>
+<tr><td>3</td><td>3</td><td>LHR</td><td>UK</td></tr>
+<tr><td>4</td><td>4</td><td>CDG</td><td>France</td></tr>
+<tr><td>5</td><td>5</td><td>AUH</td><td>UAE</td></tr>
+</tbody></table></div>
+
+<div><h2>Cities</h2><table><thead>
+<tr><th>cityId</th><th>name</th><th>population</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td><td>8600000</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>3970000</td></tr>
+<tr><td>3</td><td>London</td><td>9400000</td></tr>
+<tr><td>4</td><td>Paris</td><td>2140000</td></tr>
+<tr><td>5</td><td>Abu Dhabi</td><td>1500000</td></tr>
+</tbody></table></div>
+
+<div><h2>AirportCity</h2><table><thead>
+<tr><th>airportId</th><th>cityId</th></tr>
+<tr><th>(&#8594; Airports.airportId)</th><th>(&#8594; Cities.cityId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Boarding_Areas_Gates</h2><table><thead>
+<tr><th>areaId</th><th>gateId</th></tr>
+<tr><th>(&#8594; Boarding_Areas.areaId)</th><th>(&#8594; Gates.gateId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Boarding_Areas</span></h2><table><thead>
+<tr><th>areaId</th><th>location</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Area A</td><td>10000</td></tr>
+<tr><td>2</td><td>Area B</td><td>12000</td></tr>
+<tr><td>3</td><td>Area C</td><td>11000</td></tr>
+<tr><td>4</td><td>Area D</td><td>13000</td></tr>
+<tr><td>5</td><td>Area E</td><td>10000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Gates</span></h2><table><thead>
+<tr><th>gateId</th><th><span style="color:#990000">gateName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gate_A1</td></tr>
+<tr><td>2</td><td>Gate_B2</td></tr>
+<tr><td>3</td><td>Gate_C3</td></tr>
+<tr><td>4</td><td>Gate_D4</td></tr>
+<tr><td>5</td><td>Gate_E5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

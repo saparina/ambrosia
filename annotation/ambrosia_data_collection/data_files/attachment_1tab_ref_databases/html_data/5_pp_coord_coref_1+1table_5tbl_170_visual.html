@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Manufacturers</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bonners Music</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Yamaha</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Musical_instruments</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">instrument_name</span></span></th><th>manufacturer_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Manufacturers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Guitar</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Guitar</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Piano</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Piano</span></td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>artist_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Artist A</td></tr>
+<tr><td>2</td><td>Artist B</td></tr>
+<tr><td>3</td><td>Artist C</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th>album_title</th><th>release_date</th><th>genre_id</th><th>artist_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genre.id)</th><th>(&#8594; Artists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Album 1</td><td>2021-01-01</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Album 2</td><td>2021-02-02</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Album 3</td><td>2021-03-03</td><td>3</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>id</th><th>song_name</th><th>artist_id</th><th>instrument_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Artists.id)</th><th>(&#8594; Musical_instruments.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Song 1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Song 2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Song 3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>Song 4</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Album_Tracks</h2><table><thead>
+<tr><th>id</th><th>track_number</th><th>album_id</th><th>song_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Albums.id)</th><th>(&#8594; Songs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>genre_type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Genre 1</td></tr>
+<tr><td>2</td><td>Genre 2</td></tr>
+<tr><td>3</td><td>Genre 3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Subjects</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#1430b2">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math</td></tr>
+<tr><td>2</td><td>English</td></tr>
+<tr><td>3</td><td>Physics</td></tr>
+<tr><td>4</td><td><span style="color:#1430b2">History</span></td></tr>
+<tr><td>5</td><td>Chemistry</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>HiredDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>32</td><td>2024-03-13 20:58:03</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>38</td><td>2024-03-13 20:58:03</td></tr>
+<tr><td>3</td><td>Robert Johnson</td><td>47</td><td>2024-03-13 20:58:03</td></tr>
+<tr><td>4</td><td>Michael Brown</td><td>56</td><td>2024-03-13 20:58:03</td></tr>
+<tr><td>5</td><td>Emma Wilson</td><td>45</td><td>2024-03-13 20:58:03</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>EnrollmentDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>19</td><td>2024-03-13 20:58:03</td></tr>
+<tr><td>2</td><td>Bob</td><td>21</td><td>2024-03-13 20:58:03</td></tr>
+<tr><td>3</td><td>Charlie</td><td>20</td><td>2024-03-13 20:58:03</td></tr>
+<tr><td>4</td><td>David</td><td>18</td><td>2024-03-13 20:58:03</td></tr>
+<tr><td>5</td><td>Eva</td><td>22</td><td>2024-03-13 20:58:03</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Photos</span></h2><table><thead>
+<tr><th>PhotoID</th><th>Description</th><th>PathToPhoto</th><th>SubjectID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Subjects.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A beautiful sunrise over a lake.</td><td>path/to/photo1.jpg</td><td>1</td></tr>
+<tr><td>2</td><td>Autumn leaves falling in the park.</td><td>path/to/photo2.jpg</td><td>2</td></tr>
+<tr><td>3</td><td>A group of students learning about nature.</td><td>path/to/photo3.jpg</td><td>3</td></tr>
+<tr><td>4</td><td>Animals in their natural habitat.</td><td>path/to/photo4.jpg</td><td>4</td></tr>
+<tr><td>5</td><td>The wonders of outer space.</td><td>path/to/photo5.jpg</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Illustrations</span></h2><table><thead>
+<tr><th>IllustID</th><th>Description</th><th>PathToIllust</th><th>SubjectID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Subjects.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>An illustration of photosynthesis.</td><td>path/to/illust1.png</td><td>1</td></tr>
+<tr><td>2</td><td>A map of ancient Rome.</td><td>path/to/illust2.png</td><td>2</td></tr>
+<tr><td>3</td><td>The periodic table of elements.</td><td>path/to/illust3.png</td><td>3</td></tr>
+<tr><td>4</td><td>A depiction of the Big Bang theory.</td><td>path/to/illust4.png</td><td>4</td></tr>
+<tr><td>5</td><td>Darwin's theory of evolution.</td><td>path/to/illust5.png</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>ClassID</th><th>TeacherID</th><th>StudentID</th><th>StartTime</th><th>EndTime</th><th>Classroom</th></tr>
+<tr><th></th><th>(&#8594; Teachers.ID)</th><th>(&#8594; Students.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>10:00</td><td>11:00</td><td>Room A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>11:30</td><td>12:30</td><td>Room B</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>1:00</td><td>2:00</td><td>Room C</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2:30</td><td>3:30</td><td>Room D</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>4:00</td><td>5:00</td><td>Room E</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

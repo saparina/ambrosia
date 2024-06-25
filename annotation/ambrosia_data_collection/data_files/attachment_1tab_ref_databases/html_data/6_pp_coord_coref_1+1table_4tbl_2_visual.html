@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Financial_Services</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000"><span style="color:#990000">Type</span></span></th><th>Location_ID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Locations.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Currency Exchange Service</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Currency Exchange Service</span></td><td>3</td></tr>
+<tr><td>3</td><td><span style="color:#990000">ATM Machine</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">ATM Machine</span></td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Locations</span></h2><table><thead>
+<tr><th>ID</th><th>Terminal_Number</th><th><span style="color:#006600">Floor</span></th><th>Location_Name</th></tr>
+<tr><th></th><th>(&#8594; Terminals.Terminal_Code)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">Ground</span></td><td>Food Court</td></tr>
+<tr><td>2</td><td>1</td><td>Departures</td><td>Duty Free Store</td></tr>
+<tr><td>3</td><td>2</td><td>Arrivals</td><td>Luggage Storage</td></tr>
+<tr><td>4</td><td>3</td><td><span style="color:#006600">Ground</span></td><td>Information Desk</td></tr>
+<tr><td>5</td><td>4</td><td>Departures</td><td>Children Play Area</td></tr>
+<tr><td>6</td><td>1</td><td><span style="color:#006600">Ground</span></td><td>Near Gate 10</td></tr>
+<tr><td>7</td><td>3</td><td>Departures</td><td>Level 2</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>Terminal_Code</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>T1</td><td>Terminal 1</td></tr>
+<tr><td>T2</td><td>Terminal 2</td></tr>
+<tr><td>T3</td><td>Terminal 3</td></tr>
+<tr><td>T4</td><td>Terminal 4</td></tr>
+<tr><td>T5</td><td>Terminal 5</td></tr>
+</tbody></table></div>
+
+<div><h2>Shops</h2><table><thead>
+<tr><th>Shop_ID</th><th>Shop_Name</th><th>Shop_Type</th><th>Location_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Locations.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Starbucks</td><td>Coffee Shop</td><td>1</td></tr>
+<tr><td>2</td><td>McDonalds</td><td>Fast Food</td><td>2</td></tr>
+<tr><td>3</td><td>WHSmith</td><td>Bookstore</td><td>3</td></tr>
+<tr><td>4</td><td>Dixons Travel</td><td>Electronics</td><td>4</td></tr>
+<tr><td>5</td><td>The Body Shop</td><td>Beauty Products</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Authors</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane Austen</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Charles Dickens</span></td></tr>
+<tr><td>3</td><td>George Orwell</td></tr>
+<tr><td>4</td><td>Fyodor Dostoevsky</td></tr>
+<tr><td>5</td><td>Gabriel Garcia Marquez</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre_Types</h2><table><thead>
+<tr><th>id</th><th>genre_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Mystery</td></tr>
+<tr><td>3</td><td>Romance</td></tr>
+<tr><td>4</td><td>Science Fiction</td></tr>
+<tr><td>5</td><td>Horror</td></tr>
+</tbody></table></div>
+
+<div><h2>Books</h2><table><thead>
+<tr><th>id</th><th>title</th><th>author_id</th><th>genre_type_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Genre_types.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pride and Prejudice</td><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>A Tale of Two Cities</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Animal Farm</td><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>Crime and Punishment</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>One Hundred Years of Solitude</td><td>5</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Comedy</span></h2><table><thead>
+<tr><th>id</th><th>book_id</th><th>comedy_elements</th></tr>
+<tr><th></th><th>(&#8594; Books.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Humorous dialogue</td></tr>
+<tr><td>2</td><td>2</td><td>Slapstick humor</td></tr>
+<tr><td>3</td><td>3</td><td>Witty satire</td></tr>
+<tr><td>4</td><td>4</td><td>Character-driven humor</td></tr>
+<tr><td>5</td><td>5</td><td>Cultural references</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Tragedy</span></h2><table><thead>
+<tr><th>id</th><th>book_id</th><th>tragedy_elements</th></tr>
+<tr><th></th><th>(&#8594; Books.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Death of a loved one</td></tr>
+<tr><td>2</td><td>2</td><td>Downfall of a hero</td></tr>
+<tr><td>3</td><td>3</td><td>Betrayal by friends</td></tr>
+<tr><td>4</td><td>4</td><td>Unattainable love</td></tr>
+<tr><td>5</td><td>5</td><td>Corruption of innocence</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>id</th><th>book_id</th><th>reviewer_name</th><th>rating</th><th>comments</th></tr>
+<tr><th></th><th>(&#8594; Books.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Alice Smith</td><td>9</td><td>Excellent character development.</td></tr>
+<tr><td>2</td><td>1</td><td>Bob Johnson</td><td>8</td><td>Loved it! Classic literature.</td></tr>
+<tr><td>3</td><td>2</td><td>Carol Williams</td><td>7</td><td>It was good but not as great as I expected.</td></tr>
+<tr><td>4</td><td>2</td><td>David Brown</td><td>6</td><td>Not my cup of tea.</td></tr>
+<tr><td>5</td><td>3</td><td>Eva Green</td><td>10</td><td>Absolutely amazing.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>flight_number</th><th>departure</th><th>arrival</th><th>aircraft_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Aircrafts.aircraft_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 07:00</td><td>2023-01-01 10:00</td><td>1</td></tr>
+<tr><td>2</td><td>2023-01-01 08:00</td><td>2023-01-01 11:00</td><td>2</td></tr>
+<tr><td>3</td><td>2023-01-01 09:00</td><td>2023-01-01 12:00</td><td>3</td></tr>
+<tr><td>4</td><td>2023-01-01 10:00</td><td>2023-01-01 13:00</td><td>4</td></tr>
+<tr><td>5</td><td>2023-01-01 11:00</td><td>2023-01-01 14:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passenger_id</th><th>firstname</th><th>lastname</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td></tr>
+<tr><td>4</td><td>Michael</td><td>Johnson</td></tr>
+<tr><td>5</td><td>Emily</td><td>Williams</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>aircraft_id</th><th>model</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 747</td><td>400</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>800</td></tr>
+<tr><td>3</td><td>Bombardier CRJ200</td><td>50</td></tr>
+<tr><td>4</td><td>Embraer E195</td><td>100</td></tr>
+<tr><td>5</td><td>Airbus A320</td><td>160</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Locations</span></h2><table><thead>
+<tr><th>location_id</th><th><span style="color:#006600">terminal_number</span></th><th>gate_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3</td><td>10</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>1</td><td><span style="color:#006600">2</span>0</td></tr>
+<tr><td>3</td><td><span style="color:#006600">2</span></td><td>30</td></tr>
+<tr><td>4</td><td>1</td><td>40</td></tr>
+<tr><td>5</td><td><span style="color:#006600">2</span></td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RetailOutlets</span></h2><table><thead>
+<tr><th>outlet_id</th><th><span style="color:#990000"><span style="color:#990000">name</span></span></th><th>location_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Locations.location_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Duty-Free Shop</span></td><td>1</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td><span style="color:#990000">Duty-Free Shop</span></td><td>5</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Souvenir Store</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Souvenir Store</span></td><td>5</td></tr>
+<tr><td>5</td><td>Bookstore</td><td><span style="color:#006600">2</span></td></tr>
+<tr><td>6</td><td>Coffee Shop</td><td>3</td></tr>
+<tr><td>7</td><td>Fast Food Restaurant</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

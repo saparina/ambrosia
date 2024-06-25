@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>code</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>New York, USA</td><td>JFK</td></tr>
+<tr><td>2</td><td>LAX</td><td>Los Angeles, USA</td><td>LAX</td></tr>
+<tr><td>3</td><td>YYZ</td><td>Toronto, Canada</td><td>YYZ</td></tr>
+<tr><td>4</td><td>LHR</td><td>London, UK</td><td>LHR</td></tr>
+<tr><td>5</td><td>CDG</td><td>Paris, France</td><td>CDG</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Food_Courts</span></h2><table><thead>
+<tr><th>id</th><th>airport_id</th><th>name</th><th>food_type</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Taste of New York</td><td>American</td></tr>
+<tr><td>2</td><td>2</td><td>California Delights</td><td>Fast Food</td></tr>
+<tr><td>3</td><td>3</td><td>Maple Leaf Bistro</td><td>Canadian</td></tr>
+<tr><td>4</td><td>4</td><td>The British Tavern</td><td>British</td></tr>
+<tr><td>5</td><td>5</td><td>Le Petit Dejeuner</td><td>French</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Retail_Shops</span></h2><table><thead>
+<tr><th>id</th><th>airport_id</th><th>name</th><th>type</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Duty Free Shops</td><td>Duty Free</td></tr>
+<tr><td>2</td><td>2</td><td>Gift Shop</td><td>Gifts</td></tr>
+<tr><td>3</td><td>3</td><td>Books & Magazines</td><td>Bookstore</td></tr>
+<tr><td>4</td><td>4</td><td>Electronics Store</td><td>Electronics</td></tr>
+<tr><td>5</td><td>5</td><td>Clothing and Accessories</td><td>Clothing</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Revenue</span></h2><table><thead>
+<tr><th>id</th><th>date</th><th><span style="color:#006600">revenue</span></th><th>fc_total</th><th>rs_total</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-07-01</td><td>$980,000</td><td>None</td><td>None</td></tr>
+<tr><td>2</td><td>2022-07-01</td><td>$650,000</td><td>None</td><td>None</td></tr>
+<tr><td>3</td><td>2022-07-01</td><td>$1,100,000</td><td>None</td><td>None</td></tr>
+<tr><td>4</td><td>2022-07-01</td><td>$780,000</td><td>None</td><td>None</td></tr>
+<tr><td>5</td><td>2022-07-01</td><td><span style="color:#006600">$550,000</span></td><td>None</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>FC_RS_Revenues</h2><table><thead>
+<tr><th>id</th><th>fc_id</th><th>rs_id</th><th>revenue_id</th></tr>
+<tr><th></th><th>(&#8594; Food_Courts.id)</th><th>(&#8594; Retail_Shops.id)</th><th>(&#8594; Revenue.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

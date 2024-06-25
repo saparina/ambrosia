@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael.johnson@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily.davis@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david.brown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Textbooks</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>author_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>1</td></tr>
+<tr><td>2</td><td>Calculus for Engineers</td><td>2</td></tr>
+<tr><td>3</td><td>General Chemistry</td><td>3</td></tr>
+<tr><td>4</td><td>Organic Chemistry</td><td>4</td></tr>
+<tr><td>5</td><td>Physics for Scientists and Engineers</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Software</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>version_number</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Microsoft Office</td><td>2021</td><td>1</td></tr>
+<tr><td>2</td><td>Adobe Creative Suite</td><td>2022</td><td>2</td></tr>
+<tr><td>3</td><td>Autodesk AutoCAD</td><td>2022</td><td>3</td></tr>
+<tr><td>4</td><td>Oracle Database</td><td>19c</td><td>4</td></tr>
+<tr><td>5</td><td>Red Hat Enterprise Linux</td><td>8.3</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>id</th><th>course_name</th><th>textbook_id</th><th>software_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Textbooks.id)</th><th>(&#8594; Software.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science 101</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Engineering Mathematics</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Introductory Organic Chemistry</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Advanced Physics</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Data Structures and Algorithms</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>student_name</th><th>enrolled_course_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Courses.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Smith</td><td>1</td></tr>
+<tr><td>2</td><td>Bob Johnson</td><td>2</td></tr>
+<tr><td>3</td><td>Carol Williams</td><td>3</td></tr>
+<tr><td>4</td><td>Dave Brown</td><td>4</td></tr>
+<tr><td>5</td><td>Eva Green</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>id</th><th>grade</th><th>student_id</th><th>course_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Courses.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>85</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>78</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>92</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>65</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>80</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

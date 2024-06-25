@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Teacher</h2><table><thead>
+<tr><th>teacherID</th><th>name</th><th>age</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>32</td><td>5 years</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>48</td><td>10 years</td></tr>
+<tr><td>3</td><td>Michael Brown</td><td>27</td><td>3 years</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>studentID</th><th>name</th><th>grade</th><th>teacherID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Teacher.teacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>9</td><td>1</td></tr>
+<tr><td>2</td><td>Bob Williams</td><td>10</td><td>2</td></tr>
+<tr><td>3</td><td>Carol Lee</td><td>9</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Subject</h2><table><thead>
+<tr><th>subjectID</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>English</td></tr>
+<tr><td>3</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2>Class</h2><table><thead>
+<tr><th>classID</th><th>subjectID</th><th>teacherID</th></tr>
+<tr><th></th><th>(&#8594; Subject.subjectID)</th><th>(&#8594; Teacher.teacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Assignment</span></h2><table><thead>
+<tr><th>assignmentID</th><th>title</th><th>dueDate</th><th>educationalMethod</th><th>participants</th><th>classID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Class.classID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math Test</td><td>2022-06-01 14:00:00</td><td><span style="color:#990000">Peer Tutoring</span></td><td><span style="color:#006600">10 students</span></td><td>1</td></tr>
+<tr><td>2</td><td>Literature Essay</td><td>2022-06-15 14:00:00</td><td><span style="color:#990000">Peer Tutoring</span></td><td>5 students</td><td>2</td></tr>
+<tr><td>3</td><td>Historical Project</td><td>2022-07-01 14:00:00</td><td><span style="color:#990000">Group Work</span></td><td><span style="color:#006600">10 students</span></td><td>3</td></tr>
+<tr><td>4</td><td>Quiz on Chapters</td><td>2022-07-15 14:00:00</td><td><span style="color:#990000">Group Work</span></td><td>8 students</td><td>1</td></tr>
+<tr><td>5</td><td>Book Report Presentation</td><td>2022-08-01 14:00:00</td><td><span style="color:#990000">Peer Tutoring</span></td><td>6 students</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

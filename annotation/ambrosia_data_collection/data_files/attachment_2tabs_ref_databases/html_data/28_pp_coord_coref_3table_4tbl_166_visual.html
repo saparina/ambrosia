@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td></tr>
+<tr><td>2</td><td>LAX</td></tr>
+<tr><td>3</td><td>ORD</td></tr>
+<tr><td>4</td><td>YUL</td></tr>
+<tr><td>5</td><td>CDG</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Hotels</span></h2><table><thead>
+<tr><th>airport_id</th><th>hotel_name</th><th>price</th></tr>
+<tr><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hilton</td><td>250.0</td></tr>
+<tr><td>1</td><td>Marriott</td><td>300.0</td></tr>
+<tr><td>2</td><td>Radisson</td><td>280.0</td></tr>
+<tr><td>3</td><td>Hyatt</td><td>350.0</td></tr>
+<tr><td>4</td><td>Accor</td><td>270.0</td></tr>
+<tr><td>5</td><td>Novotel</td><td>260.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SleepPods</span></h2><table><thead>
+<tr><th>airport_id</th><th>pod_name</th><th>price</th></tr>
+<tr><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>GoSleep</td><td>150.0</td></tr>
+<tr><td>1</td><td>RestEZ</td><td>160.0</td></tr>
+<tr><td>2</td><td>SnoozCruz</td><td>190.0</td></tr>
+<tr><td>3</td><td>AirPOD</td><td>170.0</td></tr>
+<tr><td>4</td><td>DreamPOD</td><td>180.0</td></tr>
+<tr><td>5</td><td>SlumberPOD</td><td>200.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Flights</span></h2><table><thead>
+<tr><th>flight_number</th><th>origin_airport_id</th><th>destination_airport_id</th><th>departure_time</th><th>arrival_time</th><th><span style="color:#006600">price</span></th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>AA123</td><td>1</td><td>2</td><td>2022-12-01 10:00</td><td>2022-12-01 14:00</td><td>200.0</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>2022-12-01 12:00</td><td>2022-12-01 16:00</td><td>220.0</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>2022-12-02 10:00</td><td>2022-12-02 14:00</td><td>210.0</td></tr>
+<tr><td>4</td><td>3</td><td>4</td><td>2022-12-02 12:00</td><td>2022-12-02 16:00</td><td>230.0</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>2022-12-03 10:00</td><td>2022-12-03 14:00</td><td><span style="color:#006600">240.0</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passenger_id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>alicewonderland@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Builder</td><td>bobbuilder@example.com</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Sheen</td><td>charliesheen@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>booking_id</th><th>passenger_id</th><th>flight_number</th><th>hotel_id</th><th>sleep_pod_id</th><th>checkin_date</th><th>checkout_date</th></tr>
+<tr><th></th><th>(&#8594; Passengers.passenger_id)</th><th>(&#8594; Flights.flight_number)</th><th>(&#8594; Hotels.id)</th><th>(&#8594; SleepPods.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>AA123</td><td>1</td><td>None</td><td>2022-12-01</td><td>2022-12-03</td></tr>
+<tr><td>2</td><td>2</td><td>BB456</td><td>2</td><td>1</td><td>2022-12-02</td><td>2022-12-04</td></tr>
+<tr><td>3</td><td>3</td><td>CC789</td><td>3</td><td>2</td><td>2022-12-03</td><td>2022-12-05</td></tr>
+<tr><td>4</td><td>4</td><td>DD012</td><td>4</td><td>3</td><td>2022-12-04</td><td>2022-12-06</td></tr>
+<tr><td>5</td><td>5</td><td>EE345</td><td>5</td><td>4</td><td>2022-12-05</td><td>2022-12-07</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>New York City</td><td>USA</td></tr>
+<tr><td>2</td><td>Los Angeles International</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>3</td><td>Dubai International</td><td>Dubai</td><td>UAE</td></tr>
+<tr><td>4</td><td>Heathrow Airport</td><td>London</td><td>UK</td></tr>
+<tr><td>5</td><td>Charles de Gaulle Airport</td><td>Paris</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>Runways</h2><table><thead>
+<tr><th>id</th><th>length</th><th>width</th><th>surfaceType</th><th>airportId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>9876.5</td><td>150.0</td><td>Asphalt</td><td>1</td></tr>
+<tr><td>2</td><td>10000.0</td><td>200.0</td><td>Concrete</td><td>2</td></tr>
+<tr><td>3</td><td>8500.0</td><td>180.0</td><td>Grass</td><td>3</td></tr>
+<tr><td>4</td><td>7500.0</td><td>160.0</td><td>Concrete</td><td>4</td></tr>
+<tr><td>5</td><td>9999.0</td><td>210.0</td><td>Asphalt</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Taxiways</h2><table><thead>
+<tr><th>id</th><th>length</th><th>width</th><th>surfaceType</th><th>airportId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2000.0</td><td>150.0</td><td>Asphalt</td><td>1</td></tr>
+<tr><td>2</td><td>2200.0</td><td>160.0</td><td>Concrete</td><td>2</td></tr>
+<tr><td>3</td><td>1800.0</td><td>140.0</td><td>Grass</td><td>3</td></tr>
+<tr><td>4</td><td>2500.0</td><td>170.0</td><td>Concrete</td><td>4</td></tr>
+<tr><td>5</td><td>2100.0</td><td>180.0</td><td>Asphalt</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Infrastructures</span></h2><table><thead>
+<tr><th>id</th><th>type</th><th>constructionDate</th><th>description</th><th>airportId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Runway</span></td><td><span style="color:#006600">2015-01-01</span></td><td>This runway was built on January 1st, 2015.</td><td>1</td></tr>
+<tr><td>2</td><td>Terminal Building</td><td>2010-03-01</td><td>This terminal building was constructed on March 1st, 2010.</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Runway</span></td><td>2018-06-01</td><td>This runway opened on June 1st, 2018.</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Taxiway</span></td><td><span style="color:#006600">2015-01-01</span></td><td>This taxiway has been in operation since its opening date of January 1st, 2015.</td><td>4</td></tr>
+<tr><td>5</td><td>Control Tower</td><td>2013-02-01</td><td>The control tower started operations on February 1st, 2013.</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Classrooms</span></h2><table><thead>
+<tr><th>id</th><th>classroomName</th><th>capacity</th><th>buildingID</th><th>floorNumber</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Buildings.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lecture Hall</td><td><span style="color:#006600">30</span></td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>Seminar Room</td><td>20</td><td>1</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">VirtualRooms</span></h2><table><thead>
+<tr><th>id</th><th>virtualRoomName</th><th>capacity</th><th>departmentID</th><th>createdAt</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Departments.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Online Lab</td><td><span style="color:#006600">30</span></td><td>2</td><td>2024-03-13 18:37:29</td></tr>
+<tr><td>2</td><td>Web Design Studio</td><td>20</td><td>3</td><td>2024-03-13 18:37:29</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

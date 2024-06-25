@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Singer</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Hurt</td></tr>
+<tr><td>2</td><td>Robert Johnson</td></tr>
+<tr><td>3</td><td>Muddy Waters</td></tr>
+<tr><td>4</td><td><span style="color:#006600">Bessie Smith</span></td></tr>
+<tr><td>5</td><td>Bill Monroe</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Blues_Song</span></h2><table><thead>
+<tr><th>id</th><th>Song_Name</th><th>Genre</th><th>Singer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Singer.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>I Got A Mind To Give Up The Blues</td><td>Blues</td><td>1</td></tr>
+<tr><td>2</td><td>Cross Road Blues</td><td>Blues</td><td>3</td></tr>
+<tr><td>3</td><td>Hoochie Coochie Man</td><td>Blues</td><td>2</td></tr>
+<tr><td>4</td><td>St. Louis Blues</td><td>Blues</td><td>4</td></tr>
+<tr><td>5</td><td>Broken Hearted Blues</td><td>Blues</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Folk_Song</span></h2><table><thead>
+<tr><th>id</th><th>Song_Name</th><th>Genre</th><th>Singer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Singer.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Man Of Constant Sorrow</td><td>Folk</td><td>1</td></tr>
+<tr><td>2</td><td>Tom Dooley</td><td>Folk</td><td>3</td></tr>
+<tr><td>3</td><td>The House Carpenter</td><td>Folk</td><td>5</td></tr>
+<tr><td>4</td><td>Cripple Creek Ferry</td><td>Folk</td><td>4</td></tr>
+<tr><td>5</td><td>Pretty Polly</td><td>Folk</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Album</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Year</th><th>Singer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Singer.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Avalon Blues</td><td>1967</td><td>1</td></tr>
+<tr><td>2</td><td>Biograph</td><td>1980</td><td>2</td></tr>
+<tr><td>3</td><td>Electric Mud</td><td>1968</td><td>3</td></tr>
+<tr><td>4</td><td>The Complete Studio Recordings</td><td>1991</td><td>4</td></tr>
+<tr><td>5</td><td>Bluegrass</td><td>1969</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Instrument</h2><table><thead>
+<tr><th>id</th><th>Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Guitar</td></tr>
+<tr><td>2</td><td>Piano</td></tr>
+<tr><td>3</td><td>Drums</td></tr>
+<tr><td>4</td><td>Violin</td></tr>
+<tr><td>5</td><td>Harmonica</td></tr>
+</tbody></table></div>
+
+<div><h2>Band_Member</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Instrument_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Instrument.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Eddie Boyd</td><td>1</td></tr>
+<tr><td>2</td><td>Big Bill Broonzy</td><td>2</td></tr>
+<tr><td>3</td><td>Sunnyland Slim</td><td>3</td></tr>
+<tr><td>4</td><td>Memphis Minnie</td><td>4</td></tr>
+<tr><td>5</td><td>Jimmy Rogers</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

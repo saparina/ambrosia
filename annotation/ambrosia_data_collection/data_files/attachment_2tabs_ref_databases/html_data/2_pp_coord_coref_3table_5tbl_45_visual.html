@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Tourists</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>30</td></tr>
+<tr><td>2</td><td>Bob</td><td>28</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Attractions</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Description</th><th>Location</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Locations.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Museum of Natural History</td><td>A museum showcasing natural history.</td><td>Portobello</td></tr>
+<tr><td>2</td><td>Art Gallery</td><td>An art gallery featuring local artists.</td><td>Notting Hill</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Markets</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Type</th><th>Location</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Locations.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Farmers Market</td><td>Organic produce and handmade crafts.</td><td>Portobello</td></tr>
+<tr><td>2</td><td>Shopping Centre</td><td>Clothing stores and electronics shops.</td><td>Kensington</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Locations</span></h2><table><thead>
+<tr><th>Name</th><th><span style="color:#006600">Longitude</span></th><th>Latitude</th></tr>
+</thead><tbody>
+<tr><td>Portobello</td><td><span style="color:#006600">-0.1967</span></td><td>51.5164</td></tr>
+<tr><td>Notting Hill</td><td>-0.1897</td><td>51.5172</td></tr>
+<tr><td>Kensington</td><td>-0.1842</td><td>51.5149</td></tr>
+</tbody></table></div>
+
+<div><h2>Visits</h2><table><thead>
+<tr><th>id</th><th>touristId</th><th>attractionId</th><th>marketId</th><th>VisitDate</th></tr>
+<tr><th></th><th>(&#8594; Tourists.id)</th><th>(&#8594; Attractions.id)</th><th>(&#8594; Markets.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>None</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>None</td><td>2</td><td>2</td><td>2022-01-02</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>id</th><th>visitorId</th><th>attractionId</th><th>reviewText</th><th>rating</th></tr>
+<tr><th></th><th>(&#8594; Tourists.id)</th><th>(&#8594; Attractions.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Great experience! Loved it.</td><td>5</td></tr>
+<tr><td>2</td><td>None</td><td>2</td><td>Could have been better.</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

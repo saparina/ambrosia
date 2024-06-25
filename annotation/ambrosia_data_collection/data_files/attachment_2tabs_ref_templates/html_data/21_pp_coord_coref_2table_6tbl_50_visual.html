@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Day_Spa</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Services</th><th><span style="color:#1430b2">Price</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Oasis Day Spa</td><td>New York</td><td>Massage, Facial, Manicure</td><td><span style="color:#1430b2">150</span></td></tr>
+<tr><td>2</td><td>Serenity Day Spa</td><td>Los Angeles</td><td>Aromatherapy, Yoga</td><td>300</td></tr>
+<tr><td>3</td><td>Escape Day Spa</td><td>Chicago</td><td>Hot Stone Massage, Acupuncture</td><td>250</td></tr>
+<tr><td>4</td><td>Zen Day Spa</td><td>Miami</td><td>Reflexology, Herbal Wraps</td><td>200</td></tr>
+<tr><td>5</td><td>Paradise Day Spa</td><td>Dallas</td><td>Infrared Sauna, Meditation</td><td>180</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Wellness_Retreat</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Activities</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mountain Retreat</td><td>Colorado</td><td>Hiking, Birdwatching</td><td><span style="color:#1430b2">150</span></td></tr>
+<tr><td>2</td><td>Beachside Retreat</td><td>Florida</td><td>Surfing, Paddleboarding</td><td>300</td></tr>
+<tr><td>3</td><td>Forest Retreat</td><td>Washington</td><td>Camping, Fishing</td><td>250</td></tr>
+<tr><td>4</td><td>Desert Oasis</td><td>Nevada</td><td>Stargazing, Offroading</td><td>200</td></tr>
+<tr><td>5</td><td>Lakeside Escape</td><td>Minnesota</td><td>Boating, Swimming</td><td>180</td></tr>
+</tbody></table></div>
+
+<div><h2>Hotel</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Rooms</th><th>Amenities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Plaza Hotel</td><td>New York</td><td>300 rooms</td><td>Gym, Pool, Restaurant</td></tr>
+<tr><td>2</td><td>Riverview Inn</td><td>California</td><td>200 rooms</td><td>Spa, Bar, Parking</td></tr>
+<tr><td>3</td><td>City Center Suites</td><td>Illinois</td><td>250 rooms</td><td>Business center, Concierge service, Laundry</td></tr>
+<tr><td>4</td><td>Coastal Breeze Resort</td><td>Texas</td><td>275 rooms</td><td>Kids club, Tennis courts, Beach access</td></tr>
+<tr><td>5</td><td>Urban Loft Hotel</td><td>Georgia</td><td>225 rooms</td><td>Free WiFi, Lounge area, Room service</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurant</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Cuisine</th><th>Menu</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Gourmet Table</td><td>New York</td><td>French</td><td>Steak frites, Coq au vin, Crème brûlée</td></tr>
+<tr><td>2</td><td>Asian Delights</td><td>California</td><td>Japanese</td><td>Sushi rolls, Tempura, Soba noodles</td></tr>
+<tr><td>3</td><td>Italiano Ristorante</td><td>Illinois</td><td>Italian</td><td>Pasta, Risotto, Tiramisu</td></tr>
+<tr><td>4</td><td>Baja Grill</td><td>Texas</td><td>Mexican</td><td>Enchiladas, Fajitas, Churros</td></tr>
+<tr><td>5</td><td>Curry House</td><td>Georgia</td><td>Indian</td><td>Butter chicken, Biryani, Samosas</td></tr>
+</tbody></table></div>
+
+<div><h2>Spa_Therapist</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Specialty</th><th>Experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>Massage</td><td>10</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>Yoga</td><td>8</td></tr>
+<tr><td>3</td><td>Carol</td><td>Williams</td><td>Acupuncture</td><td>6</td></tr>
+<tr><td>4</td><td>David</td><td>Brown</td><td>Herbal Wraps</td><td>12</td></tr>
+<tr><td>5</td><td>Emily</td><td>Jones</td><td>Facials</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2>Guest</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anna</td><td>White</td><td>anna@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Ben</td><td>Black</td><td>ben@example.com</td><td>234-567-8901</td></tr>
+<tr><td>3</td><td>Cathy</td><td>Green</td><td>cathy@example.com</td><td>345-678-9012</td></tr>
+<tr><td>4</td><td>Daniel</td><td>Blue</td><td>daniel@example.com</td><td>456-789-0123</td></tr>
+<tr><td>5</td><td>Elizabeth</td><td>Red</td><td>elizabeth@example.com</td><td>567-890-1234</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

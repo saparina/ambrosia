@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Requirements</span></h2><table><thead>
+<tr><th>id</th><th>criteria</th><th>score</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Credit Score above 700</td><td>1.0</td></tr>
+<tr><td>2</td><td>Business Revenue over $1 million</td><td>0.8</td></tr>
+<tr><td>3</td><td>2 years of business operation</td><td>0.6</td></tr>
+<tr><td>4</td><td>No bankruptcy history</td><td>1.0</td></tr>
+<tr><td>5</td><td>Collateral available</td><td>0.9</td></tr>
+</tbody></table></div>
+
+<div><h2>Business_Loan_Applications</h2><table><thead>
+<tr><th>id</th><th>loan_name</th><th>application_date</th><th>annual_revenue</th><th>num_employees</th><th>loan_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Loans.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Start-up Loan</td><td>2024-02-19 14:54:05</td><td>200000.0</td><td>10</td><td>1</td></tr>
+<tr><td>2</td><td>Small Business Expansion Loan</td><td>2024-02-19 14:54:05</td><td>500000.0</td><td>50</td><td>2</td></tr>
+<tr><td>3</td><td>Equipment Financing Loan</td><td>2024-02-19 14:54:05</td><td>150000.0</td><td>25</td><td>3</td></tr>
+<tr><td>4</td><td>Line of Credit</td><td>2024-02-19 14:54:05</td><td>120000.0</td><td>30</td><td>4</td></tr>
+<tr><td>5</td><td>Commercial Real Estate Loan</td><td>2024-02-19 14:54:05</td><td>1000000.0</td><td>100</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>id</th><th>name</th><th>amount</th><th>term</th><th>eligibility_criteria_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Requirements.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Start-up Loan</td><td>50000.0</td><td>12</td><td>1</td></tr>
+<tr><td>2</td><td>Small Business Expansion Loan</td><td>100000.0</td><td>24</td><td>2</td></tr>
+<tr><td>3</td><td>Equipment Financing Loan</td><td>75000.0</td><td>12</td><td>3</td></tr>
+<tr><td>4</td><td>Line of Credit</td><td>50000.0</td><td>12</td><td>4</td></tr>
+<tr><td>5</td><td>Commercial Real Estate Loan</td><td>200000.0</td><td>36</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

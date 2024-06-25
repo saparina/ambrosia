@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employers</h2><table><thead>
+<tr><th>employerID</th><th>name</th><th>email</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>companyA@example.com</td><td>123456789</td></tr>
+<tr><td>2</td><td>Company B</td><td>companyB@example.com</td><td>987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Categories</h2><table><thead>
+<tr><th>categoryID</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Graphic Design</td></tr>
+<tr><td>2</td><td>Web Development</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>skillID</th><th>skillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adobe Photoshop</td></tr>
+<tr><td>2</td><td>HTML/CSS</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>locationID</th><th>city</th><th>state</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>CA</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Pricing</span></h2><table><thead>
+<tr><th>pricingID</th><th><span style="color:#006600">price</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>500</td></tr>
+<tr><td>2</td><td><span style="color:#006600">700</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPostings</span></h2><table><thead>
+<tr><th>jobID</th><th>title</th><th>postingDate</th><th>employerID</th><th>categoryID</th><th>skills</th><th>locationID</th><th><span style="color:#990000"><span style="color:#990000">visualArtProfession</span></span></th><th>pricingID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Employers.employerID)</th><th>(&#8594; Categories.categoryID)</th><th></th><th>(&#8594; Locations.locationID)</th><th></th><th>(&#8594; Pricing.pricingID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Freelance Graphic Designer</td><td>2024-03-13 13:08:29</td><td>1</td><td>1</td><td>["Adobe Photoshop"]</td><td>1</td><td><span style="color:#990000">Photographer</span></td><td>1</td></tr>
+<tr><td>2</td><td>Full Stack Web Developer</td><td>2024-03-13 13:08:29</td><td>2</td><td>2</td><td>["HTML/CSS", "JavaScript", "React"]</td><td>2</td><td><span style="color:#990000">Photographer</span></td><td>2</td></tr>
+<tr><td>3</td><td>Wedding <span style="color:#990000">Videographer</span></td><td>2024-03-13 13:08:29</td><td>3</td><td>None</td><td>null</td><td>3</td><td><span style="color:#990000">Videographer</span></td><td>2</td></tr>
+<tr><td>4</td><td>Real Estate Photography</td><td>2024-03-13 13:08:29</td><td>4</td><td>None</td><td>["DSLR Camera"]</td><td>4</td><td><span style="color:#990000">Photographer</span></td><td>1</td></tr>
+<tr><td>5</td><td>Corporate Event Videography</td><td>2024-03-13 13:08:29</td><td>5</td><td>None</td><td>null</td><td>5</td><td><span style="color:#990000">Videographer</span></td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

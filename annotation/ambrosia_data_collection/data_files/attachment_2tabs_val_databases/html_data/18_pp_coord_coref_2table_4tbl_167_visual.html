@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">ATM</span></h2><table><thead>
+<tr><th>id</th><th>atm_id</th><th>location</th><th>owner</th><th>capabilities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ATM1</td><td>New York</td><td>Bank A</td><td><span style="color:#006600">Contactless Transaction</span></td></tr>
+<tr><td>2</td><td>ATM2</td><td>Los Angeles</td><td>Bank B</td><td>Card Swipe Only</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">POINT_OF_SALE_TERMINAL</span></h2><table><thead>
+<tr><th>terminal_id</th><th>store_name</th><th>address</th><th>owner</th><th>capabilities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Supermarket X</td><td>Chicago</td><td>Store Owner</td><td><span style="color:#006600">Contactless Transaction</span></td></tr>
+<tr><td>2</td><td>Depot Y</td><td>Dallas</td><td>Store Owner</td><td>Card Swipe Only</td></tr>
+</tbody></table></div>
+
+<div><h2>ACCOUNTS</h2><table><thead>
+<tr><th>account_number</th><th>customer_name</th><th>balance</th><th>interest_rate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1000.0</td><td>3.5</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>800.0</td><td>3.75</td></tr>
+<tr><td>3</td><td>Emma Johnson</td><td>600.0</td><td>3.25</td></tr>
+<tr><td>4</td><td>Michael Brown</td><td>500.0</td><td>3.5</td></tr>
+<tr><td>5</td><td>Olivia Wilson</td><td>900.0</td><td>3.75</td></tr>
+</tbody></table></div>
+
+<div><h2>TRANSACTIONS</h2><table><thead>
+<tr><th>transaction_id</th><th>account_number</th><th>amount</th><th>date</th></tr>
+<tr><th></th><th>(&#8594; ACCOUNTS.account_number)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>-200.0</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>-100.0</td><td>2022-01-02</td></tr>
+<tr><td>3</td><td>3</td><td>-50.0</td><td>2022-01-03</td></tr>
+</tbody></table></div>
+
+<div><h2>EMPLOYEES</h2><table><thead>
+<tr><th>employee_id</th><th>first_name</th><th>last_name</th><th>hire_date</th><th>position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>2021-01-01</td><td>Manager</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>2021-02-01</td><td>Teller</td></tr>
+<tr><td>3</td><td>Carol</td><td>Williams</td><td>2021-03-01</td><td>Branch Manager</td></tr>
+<tr><td>4</td><td>David</td><td>Brown</td><td>2021-04-01</td><td>Teller</td></tr>
+<tr><td>5</td><td>Eva</td><td>Martinez</td><td>2021-05-01</td><td>Assistant Branch Manager</td></tr>
+</tbody></table></div>
+
+<div><h2>BANK_BRANCHES</h2><table><thead>
+<tr><th>branch_id</th><th>branch_name</th><th>city</th><th>phone_number</th><th>manager_employee_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; EMPLOYEES.employee_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank A Headquarters</td><td>New York</td><td>123-456-7890</td><td>1</td></tr>
+<tr><td>2</td><td>Bank B Downtown</td><td>Los Angeles</td><td>987-654-3210</td><td>2</td></tr>
+<tr><td>3</td><td>Bank A Midtown</td><td>Chicago</td><td>555-555-5555</td><td>3</td></tr>
+<tr><td>4</td><td>Bank B Uptown</td><td>Dallas</td><td>444-444-4444</td><td>4</td></tr>
+<tr><td>5</td><td>Bank A Westside</td><td>San Francisco</td><td>333-333-3333</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

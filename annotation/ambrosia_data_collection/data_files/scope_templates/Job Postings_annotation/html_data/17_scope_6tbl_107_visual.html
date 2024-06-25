@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>CompanyName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td></tr>
+<tr><td>2</td><td>CodeInc</td></tr>
+<tr><td>3</td><td>DevMasters</td></tr>
+<tr><td>4</td><td>AppDevelopers</td></tr>
+<tr><td>5</td><td>GamingPioneers</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>LocationID</th><th>LocationName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td></tr>
+<tr><td>2</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>London</td></tr>
+<tr><td>4</td><td>Tokyo</td></tr>
+<tr><td>5</td><td>Bangalore</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>JobTitle</th><th>Description</th><th>Salary</th><th>CompanyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Design and develop software applications.</td><td>80000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Mobile Application Developer</td><td>Create mobile apps using Java/Kotlin.</td><td>70000.0</td><td>2</td></tr>
+<tr><td>3</td><td>Web Developer</td><td>Build and maintain websites.</td><td>60000.0</td><td>3</td></tr>
+<tr><td>4</td><td>Data Scientist</td><td>Analyze complex datasets and provide insights.</td><td>90000.0</td><td>4</td></tr>
+<tr><td>5</td><td>Game Designer</td><td>Design game concepts and create prototypes.</td><td>85000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Software_Engineers</span></h2><table><thead>
+<tr><th>EngineerID</th><th>Name</th><th>Email</th><th>LocationID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Locations.LocationID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>1</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice@example.com</td><td>2</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob@example.com</td><td>3</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>charlie@example.com</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Languages</span></h2><table><thead>
+<tr><th>LanguageID</th><th><span style="color:#990000">LanguageName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python</td></tr>
+<tr><td>2</td><td>JavaScript</td></tr>
+<tr><td>3</td><td>C#</td></tr>
+<tr><td>4</td><td>Ruby</td></tr>
+<tr><td>5</td><td>Swift</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>SkillID</th><th>SkillDescription</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frontend Development</td></tr>
+<tr><td>2</td><td>Backend Development</td></tr>
+<tr><td>3</td><td>Full Stack Development</td></tr>
+<tr><td>4</td><td>Mobile App Development</td></tr>
+<tr><td>5</td><td>Machine Learning</td></tr>
+</tbody></table></div>
+
+<div><h2>Software_Engineers_Languages</h2><table><thead>
+<tr><th>SE_LanguageID</th><th>SE_Id</th></tr>
+<tr><th>(&#8594; Languages.LanguageID)</th><th>(&#8594; Software_Engineers.EngineerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>1</td><td>4</td></tr>
+<tr><td>1</td><td>5</td></tr>
+<tr><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

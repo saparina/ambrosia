@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1986-02-05</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1993-07-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>InstructorID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Brown</td><td>tom.brown@email.com</td></tr>
+<tr><td>2</td><td>Emma</td><td>White</td><td>emma.white@email.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>Description</th><th><span style="color:#990000">JobRole</span></th><th><span style="color:#990000">Industry</span></th><th>Major</th><th>EnrollmentLimit</th><th>CurrentEnrollment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Programming</td><td>Learn how to code and build applications.</td><td>Software Developer</td><td>Technology</td><td>Computer Science</td><td>30</td><td>0</td></tr>
+<tr><td>2</td><td>Data Structures & Algorithms</td><td>Master data structures and algorithms with this course.</td><td>Software Engineer</td><td>Technology</td><td>Computer Science</td><td>30</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>B</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

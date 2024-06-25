@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>courses</h2><table><thead>
+<tr><th>courseID</th><th>courseName</th><th>department</th><th>semester</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>CS</td><td>Fall</td><td>2022</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>Math</td><td>Spring</td><td>2023</td></tr>
+<tr><td>3</td><td>Physics I</td><td>Physics</td><td>Fall</td><td>2022</td></tr>
+<tr><td>4</td><td>Literature Survey</td><td>English</td><td>Winter</td><td>2023</td></tr>
+<tr><td>5</td><td>Economic Principles</td><td>Business</td><td>Spring</td><td>2022</td></tr>
+</tbody></table></div>
+
+<div><h2>students</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th><th>email</th><th>major</th><th>enrollmentYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>Computer Science</td><td>2020</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>Mathematics</td><td>2021</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td><td>Physics</td><td>2020</td></tr>
+<tr><td>4</td><td>Emma</td><td>White</td><td>emma.white@example.com</td><td>English</td><td>2022</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td><td>Economics</td><td>2021</td></tr>
+</tbody></table></div>
+
+<div><h2>instructors</h2><table><thead>
+<tr><th>instructorID</th><th>firstName</th><th>lastName</th><th>email</th><th>department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Smith</td><td>dr.smith@example.com</td><td>CS</td></tr>
+<tr><td>2</td><td>Professor</td><td>Johnson</td><td>prof.johnson@example.com</td><td>Math</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Williams</td><td>dr.williams@example.com</td><td>Physics</td></tr>
+<tr><td>4</td><td>Ms.</td><td>Garcia</td><td>ms.garcia@example.com</td><td>English</td></tr>
+<tr><td>5</td><td>Mr.</td><td>Martinez</td><td>mr.martinez@example.com</td><td>Economics</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">peer_tutoring</span></h2><table><thead>
+<tr><th>sessionID</th><th>courseID</th><th>startDateTime</th><th>endDateTime</th><th><span style="color:#1430b2">participants</span></th></tr>
+<tr><th></th><th>(&#8594; courses.courseID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-<span style="color:#1430b2">10</span>-<span style="color:#1430b2">10</span> 18:00:00</td><td>2022-<span style="color:#1430b2">10</span>-<span style="color:#1430b2">10</span> 20:00:00</td><td><span style="color:#1430b2">10</span></td></tr>
+<tr><td>2</td><td>2</td><td>2023-02-15 16:00:00</td><td>2023-02-15 18:00:00</td><td>8</td></tr>
+<tr><td>3</td><td>3</td><td>2022-10-12 14:00:00</td><td>2022-10-12 16:00:00</td><td>12</td></tr>
+<tr><td>4</td><td>4</td><td>2023-03-10 19:00:00</td><td>2023-03-10 21:00:00</td><td>15</td></tr>
+<tr><td>5</td><td>5</td><td>2022-04-20 13:00:00</td><td>2022-04-20 15:00:00</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">group_work</span></h2><table><thead>
+<tr><th>assignmentID</th><th>courseID</th><th>dueDate</th><th>maxScore</th><th>participants</th></tr>
+<tr><th></th><th>(&#8594; courses.courseID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-<span style="color:#1430b2">10</span>-20 23:59:00</td><td><span style="color:#1430b2">10</span>0</td><td><span style="color:#1430b2">10</span></td></tr>
+<tr><td>2</td><td>2</td><td>2023-02-28 23:59:00</td><td>100</td><td>8</td></tr>
+<tr><td>3</td><td>3</td><td>2022-10-27 23:59:00</td><td>100</td><td>12</td></tr>
+<tr><td>4</td><td>4</td><td>2023-03-24 23:59:00</td><td>100</td><td>15</td></tr>
+<tr><td>5</td><td>5</td><td>2022-04-24 23:59:00</td><td>100</td><td>7</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

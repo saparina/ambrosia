@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Student</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>GradeLevel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>16</td><td>10</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>17</td><td>12</td></tr>
+<tr><td>3</td><td>Emma</td><td>Brown</td><td>18</td><td>11</td></tr>
+<tr><td>4</td><td>Michael</td><td>Johnson</td><td>19</td><td>10</td></tr>
+<tr><td>5</td><td>Olivia</td><td>Williams</td><td>16</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2>Course</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Subject</th><th>TeacherID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Teacher.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algebra I</td><td>Mathematics</td><td>1</td></tr>
+<tr><td>2</td><td>Physics</td><td>Science</td><td>2</td></tr>
+<tr><td>3</td><td>English Literature</td><td>Language Arts</td><td>3</td></tr>
+<tr><td>4</td><td>World History</td><td>History</td><td>4</td></tr>
+<tr><td>5</td><td>Art Appreciation</td><td>Fine Arts</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">LearningActivity</span></h2><table><thead>
+<tr><th>ID</th><th>Description</th><th><span style="color:#186e16">ActivityType</span></th><th>PurposeID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Purpose.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Visit a local museum</td><td><span style="color:#186e16">Field Trip</span></td><td>1</td></tr>
+<tr><td>2</td><td>Visit a science center</td><td><span style="color:#186e16">Field Trip</span></td><td>2</td></tr>
+<tr><td>3</td><td>Organize a group project</td><td>Study Group</td><td>1</td></tr>
+<tr><td>4</td><td>Host a debate on current events</td><td>Study Group</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Purpose</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#1430b2">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Real-world Application</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">Problem Solving Skills Development</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Teacher</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>White</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Green</td><td>Science</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Black</td><td>Language Arts</td></tr>
+<tr><td>4</td><td>Mrs.</td><td>Blue</td><td>History</td></tr>
+<tr><td>5</td><td>Ms.</td><td>Red</td><td>Fine Arts</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollment</h2><table><thead>
+<tr><th>StudentID</th><th>CourseID</th><th>DateEnrolled</th><th>Grades</th></tr>
+<tr><th>(&#8594; Student.ID)</th><th>(&#8594; Course.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-09-01</td><td>85</td></tr>
+<tr><td>2</td><td>2</td><td>2022-09-01</td><td>90</td></tr>
+<tr><td>3</td><td>3</td><td>2022-09-01</td><td>80</td></tr>
+<tr><td>4</td><td>4</td><td>2022-09-01</td><td>75</td></tr>
+<tr><td>5</td><td>5</td><td>2022-09-01</td><td>95</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

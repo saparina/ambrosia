@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>companyName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td></tr>
+<tr><td>2</td><td>Company B</td></tr>
+<tr><td>3</td><td>Company C</td></tr>
+<tr><td>4</td><td>Company D</td></tr>
+<tr><td>5</td><td>Company E</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>id</th><th>locationName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Location 1</td></tr>
+<tr><td>2</td><td>Location 2</td></tr>
+<tr><td>3</td><td>Location 3</td></tr>
+<tr><td>4</td><td>Location 4</td></tr>
+<tr><td>5</td><td>Location 5</td></tr>
+</tbody></table></div>
+
+<div><h2>JobTitles</h2><table><thead>
+<tr><th>id</th><th>title</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td></tr>
+<tr><td>2</td><td>Data Scientist</td></tr>
+<tr><td>3</td><td>Product Manager</td></tr>
+<tr><td>4</td><td>UX Designer</td></tr>
+<tr><td>5</td><td>QA Engineer</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPosts</span></h2><table><thead>
+<tr><th>jobId</th><th>managementRole</th><th>projectDurationEstimate</th><th>salaryRange</th><th>companyID</th><th>locationID</th><th>jobTitleID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Companies.id)</th><th>(&#8594; Locations.id)</th><th>(&#8594; JobTitles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Project Manager</span></td><td><span style="color:#006600">4 weeks</span></td><td>60k - 80k</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Project Manager</span></td><td>8 weeks</td><td>70k - 90k</td><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Business Analyst</span></td><td><span style="color:#006600">4 weeks</span></td><td>50k - 70k</td><td>3</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Business Analyst</span></td><td>6 weeks</td><td>60k - 80k</td><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>Development Lead</td><td>2 months</td><td>90k - 110k</td><td>1</td><td>1</td><td>3</td></tr>
+<tr><td>6</td><td>Design Team Leader</td><td>3 months</td><td>80k - 100k</td><td>2</td><td>2</td><td>4</td></tr>
+<tr><td>7</td><td>Product Owner</td><td>2 years</td><td>100k - 120k</td><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>8</td><td>UI/UX Architect</td><td>1 year</td><td>80k - 100k</td><td>4</td><td>4</td><td>5</td></tr>
+<tr><td>9</td><td>Quality Assurance Specialist</td><td>1 month</td><td>40k - 60k</td><td>5</td><td>5</td><td>6</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

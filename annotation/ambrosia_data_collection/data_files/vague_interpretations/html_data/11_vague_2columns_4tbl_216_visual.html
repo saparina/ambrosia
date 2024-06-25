@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>major</th><th>yearInSchool</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Computer Science</td><td>3</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Electrical Engineering</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>Mechanical Engineering</td><td>4</td></tr>
+<tr><td>4</td><td>Michael</td><td>White</td><td>Civil Engineering</td><td>3</td></tr>
+<tr><td>5</td><td>Emily</td><td>Black</td><td>Aerospace Engineering</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>classId</th><th>className</th><th>professorName</th><th>roomNumber</th><th>capacity</th><th>timeSlot</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>Dr. Johnson</td><td>Room 101</td><td>30</td><td>9:00 AM - 11:00 AM</td></tr>
+<tr><td>2</td><td>Electronic Circuits</td><td>Prof. Smith</td><td>Room 202</td><td>28</td><td>11:30 AM - 1:30 PM</td></tr>
+<tr><td>3</td><td>Fluid Mechanics</td><td>Dr. Brown</td><td>Room 303</td><td>35</td><td>2:00 PM - 4:00 PM</td></tr>
+<tr><td>4</td><td>Structural Analysis</td><td>Prof. White</td><td>Room 404</td><td>32</td><td>4:30 PM - 6:30 PM</td></tr>
+<tr><td>5</td><td>Material Science</td><td>Dr. Black</td><td>Room 505</td><td>27</td><td>7:00 PM - 9:00 PM</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollmentId</th><th>studentId</th><th>classId</th><th>grade</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Classes.classId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>B+</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>A-</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>B</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>A</td></tr>
+</tbody></table></div>
+
+<div><h2>Projects</h2><table><thead>
+<tr><th>projectId</th><th>title</th><th>description</th><th>dueDate</th><th>status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Optimizing Algorithms</td><td>Research on improving sorting algorithms.</td><td>2023-05-15</td><td>Not Started</td></tr>
+<tr><td>2</td><td>Renewable Energy Storage</td><td>Exploring energy storage solutions for renewable sources.</td><td>2023-05-20</td><td>In Progress</td></tr>
+<tr><td>3</td><td>Urban Transportation Systems</td><td>Designing efficient transportation systems for urban areas.</td><td>2023-05-25</td><td>Completed</td></tr>
+<tr><td>4</td><td>Nanotechnology Applications</td><td>Investigating potential applications of nanotechnology in various fields.</td><td>2023-05-30</td><td>Pending Review</td></tr>
+<tr><td>5</td><td>Artificial Intelligence Ethics</td><td>Examining ethical considerations of AI and its impact on society.</td><td>2023-06-05</td><td>Not Started</td></tr>
+</tbody></table></div>
+
+<div><h2>Theme_Tracks</h2><table><thead>
+<tr><th><span style="color:#990000">themeTrack</span>Id</th><th><span style="color:#990000">themeTrack</span></th><th><span style="color:#990000">submissionTopic</span></th><th>conference</th><th>abstract</th><th>fullPaper</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Machine Learning</td><td>Deep learning techniques for natural language processing.</td><td>International Conference on Artificial Intelligence</td><td>This paper presents a novel approach to NLP...</td><td>The full paper can be found at https://example.com/fullpaper.pdf</td></tr>
+<tr><td>2</td><td>Robotics</td><td>Swarm robotics for environmental monitoring.</td><td>Annual Robotics Symposium</td><td>We propose an innovative swarm robotic system for monitoring...</td><td>https://example.com/fullpaper_robotics.pdf</td></tr>
+<tr><td>3</td><td>Green Technologies</td><td>Carbon capture and storage using machine learning.</td><td>Global Climate Summit</td><td>Our research focuses on developing ML models for CCS...</td><td>https://example.com/fullpaper_green.pdf</td></tr>
+<tr><td>4</td><td>Healthcare</td><td>Wearable devices for continuous glucose monitoring.</td><td>World Health Congress</td><td>This study investigates the effectiveness of wearables in continuously monitoring...</td><td>https://example.com/fullpaper_healthcare.pdf</td></tr>
+<tr><td>5</td><td>Space Exploration</td><td>Advanced propulsion systems for interstellar travel.</td><td>Interplanetary Conference</td><td>This paper explores recent breakthroughs in propulsion technology...</td><td>https://example.com/fullpaper_space.pdf</td></tr>
+</tbody></table></div>
+
+<div><h2>Submissions</h2><table><thead>
+<tr><th>submissionId</th><th>studentId</th><th>themeTrackId</th><th>projectId</th><th>dateOfSubmission</th><th>feedback</th><th>grade</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Theme_Tracks.themeTrackId)</th><th>(&#8594; Projects.projectId)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2023-04-15 10:00:00</td><td>Well done! Consider focusing more on practical implementation.</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>2023-04-20 10:00:00</td><td>Good job! More work is needed on the theoretical aspects.</td><td>B</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td><td>2023-04-25 10:00:00</td><td>Great effort! The literature review could be improved further.</td><td>A-</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td><td>2023-05-05 10:00:00</td><td>Needs improvement. Focus on addressing the problem statement more clearly.</td><td>C</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td><td>2023-05-10 10:00:00</td><td>Very well written! Some minor revisions are suggested before final submission.</td><td>A</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

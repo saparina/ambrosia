@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Corporation</td><td>Technology</td></tr>
+<tr><td>2</td><td>XYZ Industries</td><td>Finance</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>LocationID</th><th>City</th><th>State</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>CA</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">TargetMarkets</span></h2><table><thead>
+<tr><th>MarketID</th><th><span style="color:#006600">Type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">B2B</span></td></tr>
+<tr><td>2</td><td>B2C</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>SkillID</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Proficient in CRM software</td></tr>
+<tr><td>2</td><td>Excellent communication skills</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Jobs</span></h2><table><thead>
+<tr><th>JobID</th><th><span style="color:#990000"><span style="color:#990000">Title</span></span></th><th>Salary</th><th>DatePosted</th><th>Sales_and_marketing</th><th>CompanyID</th><th>LocationID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th><th>(&#8594; Locations.LocationID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Sales Associate</span></td><td>60000.0</td><td>2024-03-13 13:38:07</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Sales Associate</span></td><td>60000.0</td><td>2024-03-13 13:38:07</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Marketing Specialist</span></td><td>70000.0</td><td>2024-03-13 13:38:07</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Marketing Specialist</span></td><td>70000.0</td><td>2024-03-13 13:38:07</td><td>1</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>JobSkills</h2><table><thead>
+<tr><th>JobID</th><th>SkillID</th></tr>
+<tr><th>(&#8594; Jobs.JobID)</th><th>(&#8594; Skills.SkillID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>3</td><td>6</td></tr>
+<tr><td>4</td><td>7</td></tr>
+<tr><td>4</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>JobMarkets</h2><table><thead>
+<tr><th>JobID</th><th>MarketID</th></tr>
+<tr><th>(&#8594; Jobs.JobID)</th><th>(&#8594; TargetMarkets.MarketID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

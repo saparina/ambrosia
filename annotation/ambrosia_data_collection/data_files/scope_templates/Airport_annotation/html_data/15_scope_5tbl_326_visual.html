@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Airlines</span></h2><table><thead>
+<tr><th>AirlineID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American_Airlines</td></tr>
+<tr><td>2</td><td>United_Airlines</td></tr>
+<tr><td>3</td><td>Delta_Airlines</td></tr>
+<tr><td>4</td><td>Southwest_Airlines</td></tr>
+<tr><td>5</td><td>JetBlue_Airlines</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Airports</span></h2><table><thead>
+<tr><th>AirportID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New_York_John_F._Kennedy_International_Airport</td><td>New York, USA</td></tr>
+<tr><td>2</td><td>Chicago_O'Hare_International_Airport</td><td>Chicago, USA</td></tr>
+<tr><td>3</td><td>Dallas_Love_Field</td><td>Dallas, USA</td></tr>
+<tr><td>4</td><td>Los_Angeles_International_Airport</td><td>Los Angeles, USA</td></tr>
+<tr><td>5</td><td>Miami_International_Airport</td><td>Miami, USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports_Airlines</h2><table><thead>
+<tr><th>AirportID</th><th>AirlineID</th></tr>
+<tr><th>(&#8594; Airports.AirportID)</th><th>(&#8594; Airlines.AirlineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

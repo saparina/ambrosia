@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>alice@example.com</td></tr>
+<tr><td>2</td><td>Bob</td><td>bob@example.com</td></tr>
+<tr><td>3</td><td>Charlie</td><td>charlie@example.com</td></tr>
+<tr><td>4</td><td>David</td><td>david@example.com</td></tr>
+<tr><td>5</td><td>Eva</td><td>eva@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Papers</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>abstract</th><th>publication_date</th><th>citation_style</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Citation_Styles.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Research on AI</td><td>Abstract about research...</td><td>2021-07-30</td><td>APA</td></tr>
+<tr><td>2</td><td>Study on ML</td><td>Another abstract about study...</td><td>2021-08-15</td><td>MLA</td></tr>
+<tr><td>3</td><td>Analysis of DL</td><td>Yet another abstract about analysis...</td><td>2021-09-05</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Exploration of NLP</td><td>One more abstract about exploration...</td><td>2021-09-15</td><td>Harvard</td></tr>
+<tr><td>5</td><td>Survey of CV</td><td>The last abstract about survey...</td><td>2021-10-01</td><td>Vancouver</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Reviews</span></h2><table><thead>
+<tr><th>id</th><th>review_title</th><th>paper_id</th><th>author_id</th><th>citation_style</th></tr>
+<tr><th></th><th></th><th>(&#8594; Papers.id)</th><th>(&#8594; Authors.id)</th><th>(&#8594; Citation_Styles.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AI Research Review</td><td>1</td><td>1</td><td>APA</td></tr>
+<tr><td>2</td><td>ML Study Review</td><td>2</td><td>2</td><td>MLA</td></tr>
+<tr><td>3</td><td>DL Analysis Review</td><td>3</td><td>3</td><td>Chicago</td></tr>
+<tr><td>4</td><td>NLP Exploration Review</td><td>4</td><td>4</td><td>Harvard</td></tr>
+<tr><td>5</td><td>CV Survey Review</td><td>5</td><td>5</td><td>Vancouver</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Citation_Styles</span></h2><table><thead>
+<tr><th>name</th><th><span style="color:#006600">description</span></th></tr>
+</thead><tbody>
+<tr><td>APA</td><td><span style="color:#006600">American Psychological Association style.</span></td></tr>
+<tr><td>MLA</td><td>Modern Language Association style.</td></tr>
+<tr><td>Chicago</td><td>Chicago Manual of Style.</td></tr>
+<tr><td>Harvard</td><td>Harvard referencing system.</td></tr>
+<tr><td>Vancouver</td><td>Vancouver reference style.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

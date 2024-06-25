@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">FieldTrips</span></h2><table><thead>
+<tr><th>tripID</th><th>fieldTrip</th><th>purpose</th><th>location</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering Plant</td><td><span style="color:#006600">Real-world Application</span></td><td>New York City</td><td>2022-09-15 10:00:00</td></tr>
+<tr><td>2</td><td>Marine Biology Expedition</td><td>Educational</td><td>Caribbean Sea</td><td>2022-08-20 07:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">StudyGroups</span></h2><table><thead>
+<tr><th>groupID</th><th>studyGroupName</th><th>purpose</th><th>leaderName</th><th>meetingDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Data Science Group</td><td><span style="color:#006600">Real-world Application</span></td><td>John Smith</td><td>2022-06-15 18:00:00</td></tr>
+<tr><td>2</td><td>Mathematics Club</td><td>Recreational</td><td>Jane Doe</td><td>2022-07-05 19:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th><th>birthdate</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>2000-05-10</td><td>alice.smith@example.com</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>1998-03-15</td><td>bob.johnson@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>teacherID</th><th>firstName</th><th>lastName</th><th>birthdate</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Doe</td><td>1975-07-01</td><td>mr.doe@example.com</td></tr>
+<tr><td>2</td><td>Ms.</td><td>White</td><td>1972-10-10</td><td>ms.white@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollmentID</th><th>courseId</th><th>studentId</th><th>grade</th></tr>
+<tr><th></th><th>(&#8594; Courses.courseId)</th><th>(&#8594; Students.studentId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>90.5</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>88</td></tr>
+</tbody></table></div>
+
+<div><h2>CourseMaterials</h2><table><thead>
+<tr><th>materialId</th><th>courseId</th><th>title</th><th>description</th><th>format</th><th>dueDate</th></tr>
+<tr><th></th><th>(&#8594; Courses.courseId)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Python Programming</td><td>Learn Python programming basics</td><td>PDF</td><td>2022-09-20</td></tr>
+<tr><td>2</td><td>1</td><td>Advanced Math</td><td>Master advanced mathematical concepts</td><td>Video</td><td>2022-09-25</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

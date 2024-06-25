@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Museums</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>Email</th><th>EventType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Louvre</td><td>Paris, France</td><td>+33140205968</td><td>louvremus@gmail.com</td><td>Art</td></tr>
+<tr><td>2</td><td>British Museum</td><td>London, UK</td><td>+442073238000</td><td>britmusemus@gmail.com</td><td><span style="color:#006600">History</span></td></tr>
+<tr><td>3</td><td>Uffizi Gallery</td><td>Florence, Italy</td><td>+390552388648</td><td>uffizigal@gmail.com</td><td>Arts</td></tr>
+<tr><td>4</td><td>National History Museum</td><td>Washington DC, USA</td><td>+12026331000</td><td>nationalhistoriamu@gmail.com</td><td>Nature</td></tr>
+<tr><td>5</td><td>Van Gogh Museum</td><td>Amsterdam, Netherlands</td><td>+31205705200</td><td>vangoghmuseam@gmail.com</td><td>Painting</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>id</th><th>MuseumID</th><th>EventName</th><th>Date</th><th>Time</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Museums.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Exhibition of Modern Arts</td><td>2023-07-01 09:00:00</td><td>10:00:00</td><td>An exhibition showcasing modern arts.</td></tr>
+<tr><td>2</td><td>3</td><td>Renaissance Art Lecture</td><td>2023-07-02 15:00:00</td><td>16:00:00</td><td>A lecture on Renaissance art.</td></tr>
+</tbody></table></div>
+
+<div><h2>Artworks</h2><table><thead>
+<tr><th>id</th><th>GalleryID</th><th>Title</th><th>Artist</th><th>Year</th><th>Description</th><th>ImagePath</th></tr>
+<tr><th></th><th>(&#8594; Galleries.id)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>None</td><td>The Birth of Venus</td><td>Leonardo da Vinci</td><td>1485</td><td>One of Leonardo's famous painting.</td><td>/path/to/image</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Galleries</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>Email</th><th>EventType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Metropolitan Museum of Art</td><td>New York City, NY, USA</td><td>+12125357710</td><td>metgalleymu@gmail.com</td><td><span style="color:#006600">History</span></td></tr>
+<tr><td>2</td><td>State Hermitage Museum</td><td>Saint Petersburg, Russia</td><td>+78127196151</td><td>hermitagemu@gmail.com</td><td>Cultural</td></tr>
+</tbody></table></div>
+
+<div><h2>Exhibitions</h2><table><thead>
+<tr><th>id</th><th>GalleryID</th><th>StartDate</th><th>EndDate</th><th>Theme</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Galleries.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-07-01</td><td>2023-07-15</td><td>American Art</td><td>Exploring American history through various forms of art.</td></tr>
+<tr><td>2</td><td>2</td><td>2023-07-20</td><td>2023-08-05</td><td>Impressionism</td><td>Discovering the world of Impressionist painters.</td></tr>
+</tbody></table></div>
+
+<div><h2>Visitors</h2><table><thead>
+<tr><th>id</th><th>FullName</th><th>ContactText</th><th>VisitDate</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Events.Date)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>2023-07-01 09:00:00</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jsmith@example.com</td><td>2023-07-02 15:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

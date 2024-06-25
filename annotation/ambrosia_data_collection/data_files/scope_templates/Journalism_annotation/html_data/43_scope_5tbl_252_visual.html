@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Editorial_Teams</span></h2><table><thead>
+<tr><th>TeamID</th><th>TeamName</th><th>TeamDescription</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Team1</td><td>A team focused on sports journalism.</td></tr>
+<tr><td>2</td><td>Team2</td><td>Specializes in political news coverage.</td></tr>
+<tr><td>3</td><td>Team3</td><td>Focuses on technology and innovation articles.</td></tr>
+<tr><td>4</td><td>Team4</td><td>Covering arts, culture, and entertainment stories.</td></tr>
+<tr><td>5</td><td>Team5</td><td>Dedicated to investigative reporting.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Roles</span></h2><table><thead>
+<tr><th>RoleID</th><th><span style="color:#990000">RoleName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Copy_Editor</td></tr>
+<tr><td>2</td><td>Reporter</td></tr>
+<tr><td>3</td><td>Photographer</td></tr>
+<tr><td>4</td><td>Designer</td></tr>
+<tr><td>5</td><td>Web Developer</td></tr>
+</tbody></table></div>
+
+<div><h2>Editorial_Teams_Roles</h2><table><thead>
+<tr><th>TeamID</th><th>RoleID</th></tr>
+<tr><th>(&#8594; Editorial_Teams.TeamID)</th><th>(&#8594; Roles.RoleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

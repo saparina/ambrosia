@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Address</th><th>City</th><th>State</th><th>ZipCode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>123 Main St</td><td>Anytown</td><td>CA</td><td>90210</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>456 Elm St</td><td>Springfield</td><td>IL</td><td>62704</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Products</span></h2><table><thead>
+<tr><th>ProductID</th><th><span style="color:#990000"><span style="color:#990000">Type</span></span></th><th>InterestRate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Savings Account</span></td><td>1%</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Savings Account</span></td><td>2%</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Checking Account</span></td><td>1%</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Checking Account</span></td><td>2%</td></tr>
+</tbody></table></div>
+
+<div><h2>AccountNumbers</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerID</th><th>ProductID</th><th>OpenDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Products.ProductID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-01-02</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-01-03</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-01-04</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountNumber</th><th>Amount</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; AccountNumbers.AccountNumber)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000</td><td>2024-03-13 14:14:05</td></tr>
+<tr><td>2</td><td>2</td><td>2000</td><td>2024-03-13 14:14:05</td></tr>
+<tr><td>3</td><td>3</td><td>-500</td><td>2024-03-13 14:14:05</td></tr>
+<tr><td>4</td><td>4</td><td>3000</td><td>2024-03-13 14:14:05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Loans</span></h2><table><thead>
+<tr><th>LoanID</th><th>AccountNumber</th><th>PrincipalAmount</th><th><span style="color:#006600">AnnualInterestRate</span></th><th>StartDate</th><th>EndDate</th><th>MonthlyPayment</th></tr>
+<tr><th></th><th>(&#8594; AccountNumbers.AccountNumber)</th><th></th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10000</td><td><span style="color:#006600">3.5</span></td><td>2021-01-01</td><td>2025-01-01</td><td>250</td></tr>
+<tr><td>2</td><td>2</td><td>15000</td><td>4.0</td><td>2021-01-02</td><td>2027-01-02</td><td>300</td></tr>
+<tr><td>3</td><td>3</td><td>12000</td><td>3.0</td><td>2021-01-03</td><td>2026-01-03</td><td>240</td></tr>
+<tr><td>4</td><td>4</td><td>18000</td><td><span style="color:#006600">3.5</span></td><td>2021-01-04</td><td>2029-01-04</td><td>325</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

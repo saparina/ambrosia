@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>Major</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>20</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>22</td><td>Mathematics</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AssessmentTypes</span></h2><table><thead>
+<tr><th>TypeID</th><th><span style="color:#990000"><span style="color:#990000">Name</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Exam</span></td></tr>
+<tr><td><span style="color:#006600">2</span></td><td><span style="color:#990000">Quiz</span></td></tr>
+</tbody></table></div>
+
+<div><h2>CourseEnrollment</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Professors</h2><table><thead>
+<tr><th>ProfessorID</th><th>FirstName</th><th>LastName</th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Brown</td><td>Physics</td></tr>
+<tr><td>2</td><td>David</td><td>Black</td><td>Chemistry</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Assessments</span></h2><table><thead>
+<tr><th>AssessmentID</th><th>CourseID</th><th><span style="color:#006600">AssessorID</span></th><th>AssessmentTypeID</th><th>Score</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Courses.CourseID)</th><th>(&#8594; Professors.ProfessorID)</th><th>(&#8594; AssessmentTypes.TypeID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>85</td><td>2023-01-01 10:00:00</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>1</td><td><span style="color:#006600">2</span></td><td>1</td><td>90</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span>3-01-01 11:00:00</td></tr>
+<tr><td>3</td><td><span style="color:#006600">2</span></td><td>1</td><td><span style="color:#006600">2</span></td><td>75</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span>3-01-0<span style="color:#006600">2</span> 10:00:00</td></tr>
+<tr><td>4</td><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span></td><td>80</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span>3-01-0<span style="color:#006600">2</span> 11:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

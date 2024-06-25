@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1997-06-28</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Educators</h2><table><thead>
+<tr><th>EducatorID</th><th>FirstName</th><th>LastName</th><th>Subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Brown</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Charlie</td><td>Green</td><td>English Literature</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>ClassID</th><th>ClassName</th><th>StartTime</th><th>EndTime</th><th>RoomNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Calculus I</td><td>08:00:00</td><td>09:30:00</td><td>101</td></tr>
+<tr><td>2</td><td>Literary Analysis</td><td>09:45:00</td><td>11:15:00</td><td>102</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>ClassID</th><th>Semester</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Classes.ClassID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Fall 2021</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Winter 2022</td><td>B+</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Education_Programs</span></h2><table><thead>
+<tr><th>ProgramID</th><th>name</th><th><span style="color:#186e16"><span style="color:#186e16">Type</span></span></th><th>Description</th><th><span style="color:#1430b2">Credits</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>IB Standard</td><td><span style="color:#186e16">International Baccalaureate Program</span></td><td>An internationally recognized pre-university program...</td><td><span style="color:#1430b2">30</span></td></tr>
+<tr><td>2</td><td>IB Extended</td><td><span style="color:#186e16">International Baccalaureate Program</span></td><td>This program has a slightly different curriculum structure...</td><td>31</td></tr>
+<tr><td>3</td><td>AP College Board</td><td><span style="color:#186e16">Advanced Placement Program</span></td><td>The AP program offers college level courses...</td><td><span style="color:#1430b2">30</span></td></tr>
+<tr><td>4</td><td>General Program</td><td><span style="color:#186e16">Advanced Placement Program</span></td><td>These courses can earn college credit upon completion...</td><td>29</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

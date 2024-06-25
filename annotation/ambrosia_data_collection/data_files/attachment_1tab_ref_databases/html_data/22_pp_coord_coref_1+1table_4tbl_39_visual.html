@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Healthcare Inc.</td><td>New York</td></tr>
+<tr><td>2</td><td>Tech Solutions</td><td>California</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>Salary</th><th>PostedDate</th><th>MedicalProfessional</th><th>CompanyID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Registered Nurse</td><td>Care for patients in a hospital setting.</td><td>70000.0</td><td>2024-03-13 12:50:44</td><td>Yes</td><td>1</td></tr>
+<tr><td>2</td><td>Software Developer</td><td>Design and develop software applications.</td><td>80000.0</td><td>2024-03-13 12:50:44</td><td>No</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ApplicantID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th>ApplicationDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>555-1234</td><td>2024-03-13 12:50:44</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>555-5678</td><td>2024-03-13 12:50:44</td></tr>
+</tbody></table></div>
+
+<div><h2>JobApplications</h2><table><thead>
+<tr><th>ApplicationID</th><th>JobID</th><th>ApplicantID</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Jobs.JobID)</th><th>(&#8594; Applicants.ApplicantID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Rejected</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Patients</span></h2><table><thead>
+<tr><th>PatientID</th><th>FullName</th><th>DateOfBirth</th><th><span style="color:#006600">ContactInfo</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anne Buche</td><td>1990-01-01</td><td>anne.buche@example.com</td></tr>
+<tr><td>2</td><td>Michael Johnson</td><td>1988-02-15</td><td><span style="color:#006600">michael.johnson@example.com</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MedicalProfessionals</span></h2><table><thead>
+<tr><th><span style="color:#990000"><span style="color:#990000">Profession</span></span>ID</th><th><span style="color:#990000"><span style="color:#990000">Profession</span></span></th><th>CertificationNo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Nurse</span></td><td>A12345</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Physician's Assistant</span></td><td>B67890</td></tr>
+</tbody></table></div>
+
+<div><h2>MedicalHistory</h2><table><thead>
+<tr><th>HistoryID</th><th>PatientID</th><th>ProfessionID</th><th>TreatmentPlan</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; MedicalProfessionals.ProfessionID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Monitor blood pressure.</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Manage diabetes.</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>Prescribe medication.</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>Perform routine checkups.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

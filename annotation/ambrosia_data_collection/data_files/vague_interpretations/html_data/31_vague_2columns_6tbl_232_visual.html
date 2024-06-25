@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td></tr>
+<tr><td>4</td><td>Michael</td><td>Green</td><td>michael.green@example.com</td></tr>
+<tr><td>5</td><td>Emma</td><td>White</td><td>emma.white@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>course_id</th><th>course_name</th><th>instructor_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>Dr. Smith</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>Professor Brown</td></tr>
+<tr><td>3</td><td>English Literature</td><td>Dr. Green</td></tr>
+<tr><td>4</td><td>World History</td><td>Professor White</td></tr>
+<tr><td>5</td><td>Biology</td><td>Dr. Doe</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollment_id</th><th>student_id</th><th>course_id</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Courses.course_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>assignment_id</th><th><span style="color:#990000">date</span></th><th><span style="color:#990000">time</span></th><th>description</th><th>grade</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-16</td><td>10:00 AM</td><td>Write a paper on computer science history</td><td>9.0</td></tr>
+<tr><td>2</td><td>2023-02-08</td><td>2:00 PM</td><td>Complete calculus homework set 7</td><td>8.5</td></tr>
+<tr><td>3</td><td>2023-02-22</td><td>3:00 PM</td><td>Read and analyze two novels</td><td>8.0</td></tr>
+<tr><td>4</td><td>2023-03-14</td><td>10:00 AM</td><td>Present biology lab report</td><td>9.5</td></tr>
+<tr><td>5</td><td>2023-03-28</td><td>2:00 PM</td><td>Research and write an essay on global warming</td><td>9.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Submissions</h2><table><thead>
+<tr><th>submission_id</th><th>student_id</th><th>assignment_id</th><th>file_path</th><th>score</th><th>submitted_time</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Assignments.assignment_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>/home/user/submission1.pdf</td><td>9.5</td><td>2024-02-19 14:44:34</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>/home/user/submission2.docx</td><td>8.8</td><td>2024-02-19 14:44:34</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>/home/user/submission3.pdf</td><td>8.2</td><td>2024-02-19 14:44:34</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>/home/user/submission4.pptx</td><td>9.3</td><td>2024-02-19 14:44:34</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>/home/user/submission5.txt</td><td>9.7</td><td>2024-02-19 14:44:34</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>grade_id</th><th>student_id</th><th>course_id</th><th>final_grade</th><th>semester</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th>(&#8594; Courses.course_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>8.5</td><td>Fall 2022</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>8.8</td><td>Spring 2023</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>7.9</td><td>Fall 2022</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>9.3</td><td>Winter 2023</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>9.7</td><td>Spring 2023</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

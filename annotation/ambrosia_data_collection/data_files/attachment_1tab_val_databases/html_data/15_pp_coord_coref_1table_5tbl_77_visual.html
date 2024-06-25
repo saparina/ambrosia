@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Seating_Areas</span></h2><table><thead>
+<tr><th>AreaID</th><th>Name</th><th>Number_Of_Seats</th><th>Type_of_Food</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Patio</span></td><td><span style="color:#006600">50</span></td><td>Italian</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Patio</span></td><td>60</td><td>Mexican</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Veranda</span></td><td><span style="color:#006600">50</span></td><td>Chinese</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Veranda</span></td><td>30</td><td>Indian</td></tr>
+<tr><td>5</td><td>Lobby</td><td>20</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurant</h2><table><thead>
+<tr><th>RestID</th><th>Name</th><th>Address</th><th>Contact_No</th><th>Seating_Area_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Seating_Areas.AreaID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ristorante Italiano</td><td>123 Main St</td><td>+1 800 1234567</td><td>1</td></tr>
+<tr><td>2</td><td>Taco Town</td><td>456 Elm St</td><td>+1 987 6543210</td><td>2</td></tr>
+<tr><td>3</td><td>Wok This Way</td><td>789 Oak St</td><td>+1 234 5678901</td><td>3</td></tr>
+<tr><td>4</td><td>Samosa Palace</td><td>135 Pine St</td><td>+1 345 6789012</td><td>4</td></tr>
+<tr><td>5</td><td>All American Grill</td><td>987 Birch St</td><td>+1 456 7890123</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>MenuItems</h2><table><thead>
+<tr><th>ItemID</th><th>Name</th><th>Category</th><th>Price</th><th>Description</th><th>Restaurant_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Restaurant.RestID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Margherita Pizza</td><td>Pizza</td><td>12.99</td><td>Classic Margherita with mozzarella, tomato sauce, basil.</td><td>1</td></tr>
+<tr><td>2</td><td>Enchiladas Suizas</td><td>Mexican</td><td>10.99</td><td>Three corn tortillas filled with chicken and smothered in a creamy green salsa verde, garnished with sour cream and onions.</td><td>2</td></tr>
+<tr><td>3</td><td>Kung Pao Chicken</td><td>Chinese</td><td>13.99</td><td>Stir-fried diced chicken breast with peanuts, dried red chili pepper, and vegetables in a spicy Kung Pao sauce.</td><td>3</td></tr>
+<tr><td>4</td><td>Biryani</td><td>Indian</td><td>11.99</td><td>Aromatic rice dish made with long grain basmati rice, layered with spices and cooked with meat.</td><td>4</td></tr>
+<tr><td>5</td><td>Cheeseburger</td><td>American</td><td>8.99</td><td>Grilled beef patty served on a sesame seed bun with lettuce, tomatoes, onions, pickles, cheese, and mayonnaise.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>ReservationID</th><th>Date</th><th>Time</th><th>No_Of_Guests</th><th>Customer_Name</th><th>TableID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Seating_Areas.AreaID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 18:30</td><td>5 PM</td><td>4</td><td>John Doe</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-02 20:00</td><td>8 PM</td><td>2</td><td>Jane Smith</td><td>2</td></tr>
+<tr><td>3</td><td>2022-01-03 19:30</td><td>7:30 PM</td><td>6</td><td>Emily Johnson</td><td>3</td></tr>
+<tr><td>4</td><td>2022-01-04 18:00</td><td>6 PM</td><td>8</td><td>William Brown</td><td>4</td></tr>
+<tr><td>5</td><td>2022-01-05 20:30</td><td>9 PM</td><td>10</td><td>Olivia Wilson</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ReviewID</th><th>Rating</th><th>Comment</th><th>Reservation_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Reservations.ReservationID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Great food, amazing service!</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>The ambiance was lovely but I found my meal a bit overpriced.</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>Nice place to hang out but could use some improvement on their menu.</td><td>3</td></tr>
+<tr><td>4</td><td>5</td><td>We had an excellent time at this restaurant. The staff were very friendly and attentive.</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>Really enjoyed our visit here. We will definitely come back again.</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

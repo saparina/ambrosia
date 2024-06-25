@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employers</h2><table><thead>
+<tr><th>id</th><th>companyName</th><th>contactNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Corp</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>XYZ Inc</td><td>234-567-8901</td></tr>
+<tr><td>3</td><td>PQR Ltd</td><td>345-678-9012</td></tr>
+<tr><td>4</td><td>STU Co</td><td>456-789-0123</td></tr>
+<tr><td>5</td><td>MNO Corp</td><td>567-890-1234</td></tr>
+</tbody></table></div>
+
+<div><h2>JobTypes</h2><table><thead>
+<tr><th>id</th><th>typeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td></tr>
+<tr><td>2</td><td>Project Manager</td></tr>
+<tr><td>3</td><td>Data Analyst</td></tr>
+<tr><td>4</td><td>Product Designer</td></tr>
+<tr><td>5</td><td>Quality Assurance</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>id</th><th>locationName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td></tr>
+<tr><td>2</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Los Angeles</td></tr>
+<tr><td>5</td><td>Austin</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>employerId</th><th>jobTypeId</th><th>locationId</th><th><span style="color:#990000">Base_Pay_Range</span></th><th><span style="color:#990000">Benefits</span></th><th>Job_Post</th></tr>
+<tr><th></th><th>(&#8594; Employers.id)</th><th>(&#8594; JobTypes.id)</th><th>(&#8594; Locations.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>80000</td><td>Health Insurance, Retirement Plan</td><td>We are looking for a Software Engineer with 3+ years experience...</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>90000</td><td>Dental Coverage, Paid Time Off</td><td>Experienced Project Managers needed to lead our cross-functional teams...</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td><td>70000</td><td>Medical Insurance, Stock Options</td><td>Seeking Data Analysts to join our team and help us make data-driven decisions...</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td><td>60000</td><td>Vision Care, Gym Membership</td><td>Looking for creative Product Designers to work on our new product line...</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td><td>50000</td><td>Life Insurance, Flexible Hours</td><td>Join our QA team as we expand and improve our software quality...</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>fullName</th><th>emailAddress</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td><td>234-567-8901</td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td>bob.johnson@example.com</td><td>345-678-9012</td></tr>
+<tr><td>4</td><td>Alice Williams</td><td>alice.williams@example.com</td><td>456-789-0123</td></tr>
+<tr><td>5</td><td>Tom Brown</td><td>tom.brown@example.com</td><td>567-890-1234</td></tr>
+</tbody></table></div>
+
+<div><h2>ApplicationStatuses</h2><table><thead>
+<tr><th>applicationId</th><th>applicantId</th><th>status</th><th>dateApplied</th></tr>
+<tr><th></th><th>(&#8594; Applicants.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>In Review</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>Rejected</td><td>2022-01-02</td></tr>
+<tr><td>3</td><td>3</td><td>Interview Scheduled</td><td>2022-01-03</td></tr>
+<tr><td>4</td><td>4</td><td>Hired</td><td>2022-01-04</td></tr>
+<tr><td>5</td><td>5</td><td>Waitlisted</td><td>2022-01-05</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Programs</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Type</th><th>StartYear</th><th>EndYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>International Baccalaureate</td><td>High School Diploma</td><td>2018</td><td>2020</td></tr>
+<tr><td>2</td><td>Advanced Placement</td><td>High School Diploma</td><td>2019</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>RegistrationDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Doe</td><td>17</td><td>None</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Smith</td><td>16</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>ProgramID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Programs.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Credits</span></h2><table><thead>
+<tr><th>CreditID</th><th><span style="color:#006600">EnrollmentID</span></th><th>CreditsEarned</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Enrollments.EnrollmentID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>30</td><td>A</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>1</td><td><span style="color:#006600">2</span>0</td><td>B+</td></tr>
+<tr><td>3</td><td><span style="color:#006600">2</span></td><td>30</td><td>C</td></tr>
+<tr><td>4</td><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span>5</td><td>A-</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">International_Baccalaureate_Program</span></h2><table><thead>
+<tr><th>IBPid</th><th>IBPname</th><th>Description</th><th>Requirements</th></tr>
+<tr><th>(&#8594; Programs.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>IB Program A</td><td>An international education program offering a balanced curriculum.</td><td>Students take six subjects, including three higher level and three standard level courses.</td></tr>
+<tr><td>2</td><td>IB Program B</td><td>Another international education program...</td><td>This program has slightly different requirements than Program A.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Advanced_Placement_Program</span></h2><table><thead>
+<tr><th>APpid</th><th>APpname</th><th>Description</th><th>Requirements</th></tr>
+<tr><th>(&#8594; Programs.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AP Calculus AB</td><td>A college-level calculus course.</td><td>The AP Calculus AB exam covers topics such as limits, derivatives, and integrals.</td></tr>
+<tr><td>2</td><td>AP Physics</td><td>A college-level physics course.</td><td>The AP Physics exam consists of multiple-choice questions and free response questions on various topics in physics.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>terminal</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal A</td><td>Gate A1</td></tr>
+<tr><td>2</td><td>Terminal B</td><td>Gate B2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">arrival_hall</span></h2><table><thead>
+<tr><th>id</th><th>terminal_id</th><th>Arrival_Hall</th><th><span style="color:#1430b2">Maximum_Capacity</span></th><th>number_of_gates</th></tr>
+<tr><th></th><th>(&#8594; terminal.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A Hall 1</td><td><span style="color:#1430b2">500</span></td><td>10</td></tr>
+<tr><td>2</td><td>1</td><td>A Hall 2</td><td>600</td><td>8</td></tr>
+<tr><td>3</td><td>2</td><td>B Hall 1</td><td>700</td><td>12</td></tr>
+<tr><td>4</td><td>2</td><td>B Hall 2</td><td>900</td><td>15</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">baggage_reclaim</span></h2><table><thead>
+<tr><th>id</th><th>terminal_id</th><th>Baggage_Reclaim</th><th>Maximum_Capacity</th><th>number_of_carousels</th></tr>
+<tr><th></th><th>(&#8594; terminal.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A Reclaim 1</td><td><span style="color:#1430b2">500</span></td><td>3</td></tr>
+<tr><td>2</td><td>1</td><td>A Reclaim 2</td><td>600</td><td>5</td></tr>
+<tr><td>3</td><td>2</td><td>B Reclaim 1</td><td>700</td><td>4</td></tr>
+<tr><td>4</td><td>2</td><td>B Reclaim 2</td><td>900</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2>flight</h2><table><thead>
+<tr><th>id</th><th>terminal_id</th></tr>
+<tr><th></th><th>(&#8594; terminal.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

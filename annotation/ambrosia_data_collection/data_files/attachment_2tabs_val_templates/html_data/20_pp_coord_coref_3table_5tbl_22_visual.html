@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Director</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alfred Hitchcock</td><td>20</td></tr>
+<tr><td>2</td><td>Stanley Kubrick</td><td>30</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Cinematographer</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Roger Deakins</td><td>20</td></tr>
+<tr><td>2</td><td>Emmanuel Lubezki</td><td>18</td></tr>
+</tbody></table></div>
+
+<div><h2>Film</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>director_id</th><th>cinematographer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Director.id)</th><th>(&#8594; Cinematographer.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Psycho</td><td>1960</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>The Shining</td><td>1980</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Blade Runner</td><td>1982</td><td>2</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harrison Ford</td></tr>
+<tr><td>2</td><td>Tom Cruise</td></tr>
+</tbody></table></div>
+
+<div><h2>Character</h2><table><thead>
+<tr><th>id</th><th>character_name</th><th>film_id</th><th>actor_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Film.id)</th><th>(&#8594; Actor.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Deckard</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jack Torrance</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Gaff</td><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Award</span></h2><table><thead>
+<tr><th>id</th><th>award_type</th><th>film_id</th><th><span style="color:#1430b2">year</span></th></tr>
+<tr><th></th><th></th><th>(&#8594; Film.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Picture</td><td>1</td><td>1961</td></tr>
+<tr><td>2</td><td>Best Direction</td><td>1</td><td>1961</td></tr>
+<tr><td>3</td><td>Best Adapted Screenplay</td><td>1</td><td>1961</td></tr>
+<tr><td>4</td><td>Best Cinematography</td><td>3</td><td><span style="color:#1430b2">1983</span></td></tr>
+<tr><td>5</td><td>Best Visual Effects</td><td>1</td><td>1961</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

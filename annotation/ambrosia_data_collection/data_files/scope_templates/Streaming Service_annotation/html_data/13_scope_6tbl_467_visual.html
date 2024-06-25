@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Streaming_Services</span></h2><table><thead>
+<tr><th>id</th><th>service_name</th><th>subscription_fee</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>7.99</td></tr>
+<tr><td>2</td><td>Amazon Prime Video</td><td>8.99</td></tr>
+<tr><td>3</td><td>Hulu</td><td>5.99</td></tr>
+<tr><td>4</td><td>Disney+</td><td>6.99</td></tr>
+<tr><td>5</td><td>HBO Max</td><td>9.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Social_Media_Integrations</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">integration_type</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Share Button</td><td>Allows users to share content</td></tr>
+<tr><td>2</td><td>Like Button</td><td>Allows users to like content</td></tr>
+<tr><td>3</td><td>Comment Section</td><td>Enables user comments on content</td></tr>
+<tr><td>4</td><td>Follow Feature</td><td>Lets users follow their favorite channels</td></tr>
+<tr><td>5</td><td>Watch Later List</td><td>A feature that lets users save videos to watch later</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Services_Social_Media_Integrations</h2><table><thead>
+<tr><th>streaming_service_id</th><th>social_media_integration_id</th></tr>
+<tr><th>(&#8594; Streaming_Services.id)</th><th>(&#8594; Social_Media_Integrations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Arbitrary_Table1</h2><table><thead>
+<tr><th>id</th><th>column1</th><th>column2</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Row1 Col1</td><td>10</td></tr>
+<tr><td>2</td><td>Row2 Col1</td><td>20</td></tr>
+<tr><td>3</td><td>Row3 Col1</td><td>30</td></tr>
+<tr><td>4</td><td>Row4 Col1</td><td>40</td></tr>
+<tr><td>5</td><td>Row5 Col1</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2>Arbitrary_Table2</h2><table><thead>
+<tr><th>id</th><th>column1</th><th>column2</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Row1 Col1</td><td>10</td></tr>
+<tr><td>2</td><td>Row2 Col1</td><td>20</td></tr>
+<tr><td>3</td><td>Row3 Col1</td><td>30</td></tr>
+<tr><td>4</td><td>Row4 Col1</td><td>40</td></tr>
+<tr><td>5</td><td>Row5 Col1</td><td>50</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

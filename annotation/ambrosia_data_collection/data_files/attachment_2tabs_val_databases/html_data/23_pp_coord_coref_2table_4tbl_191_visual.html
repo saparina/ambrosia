@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>birthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1978-02-02</td></tr>
+</tbody></table></div>
+
+<div><h2>Episodes</h2><table><thead>
+<tr><th>id</th><th>title</th><th>airdate</th><th>runtime</th><th>sitcom_id</th><th>drama_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Sitcoms.id)</th><th>(&#8594; Dramas.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Big Episode</td><td>2023-01-01</td><td>30</td><td>1</td><td>NULL</td></tr>
+<tr><td>2</td><td>Another Great Show</td><td>2023-01-02</td><td>60</td><td>2</td><td>NULL</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>id</th><th>score</th><th>episode_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Episodes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>8.5</td><td>1</td></tr>
+<tr><td>2</td><td>7.5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Sitcoms</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>number_of_seasons</th><th>genre</th><th>network</th><th>start_year</th><th>end_year</th><th>creator</th><th>actor_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Actors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Friends</td><td><span style="color:#006600">5</span></td><td>Comedy</td><td>NBC</td><td>1994</td><td>2004</td><td>Martin Scorsese</td><td>1</td></tr>
+<tr><td>2</td><td>How I Met Your Mother</td><td>9</td><td>Comedy</td><td>CBS</td><td>2005</td><td>2014</td><td>Baz Luhrmann</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Dramas</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>number_of_seasons</th><th>genre</th><th>network</th><th>start_year</th><th>end_year</th><th>director</th><th>actor_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Actors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking Bad</td><td><span style="color:#006600">5</span></td><td>Crime</td><td>AMC</td><td>2008</td><td>2013</td><td>Vince Gilligan</td><td>1</td></tr>
+<tr><td>2</td><td>Better Call Saul</td><td>6</td><td>Crime</td><td>AMC</td><td>2015</td><td>2022</td><td>Peter Gould</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

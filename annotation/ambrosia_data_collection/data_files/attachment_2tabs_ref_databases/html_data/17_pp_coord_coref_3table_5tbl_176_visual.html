@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Distributor</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sainsbury's</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Tesco</span></td></tr>
+</tbody></table></div>
+
+<div><h2>NewspaperType</h2><table><thead>
+<tr><th>TypeID</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Political Analysis</td></tr>
+<tr><td>2</td><td>Entertainment News</td></tr>
+<tr><td>3</td><td>Fashion Trends</td></tr>
+<tr><td>4</td><td>Technology Innovations</td></tr>
+<tr><td>5</td><td>Health Tips</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Broadsheet</span></h2><table><thead>
+<tr><th>NewspaperID</th><th>Title</th><th>Content</th><th>Price</th><th>DistributorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Distributor.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Guardian</td><td>Latest news and analysis...</td><td>1.2</td><td>1</td></tr>
+<tr><td>2</td><td>Financial Times</td><td>Business and financial news...</td><td>3.0</td><td>1</td></tr>
+<tr><td>3</td><td>Independent</td><td>News and opinion articles...</td><td>1.5</td><td>2</td></tr>
+<tr><td>4</td><td>Telegraph</td><td>Current affairs and commentary...</td><td>2.0</td><td>2</td></tr>
+<tr><td>5</td><td>Times</td><td>UK and world news updates...</td><td>3.5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Tabloid</span></h2><table><thead>
+<tr><th>NewspaperID</th><th>Title</th><th>Content</th><th>Price</th><th>DistributorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Distributor.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sun</td><td>Celebrity gossip and sports...</td><td>0.8</td><td>1</td></tr>
+<tr><td>2</td><td>Mirror</td><td>General interest stories and showbiz news...</td><td>0.6</td><td>1</td></tr>
+<tr><td>3</td><td>Express</td><td>Conservative politics and news...</td><td>0.9</td><td>2</td></tr>
+<tr><td>4</td><td>Star</td><td>Showbiz, entertainment, and celebrity news...</td><td>0.7</td><td>2</td></tr>
+<tr><td>5</td><td>Mail</td><td>General news with conservative bias...</td><td>0.95</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Article</h2><table><thead>
+<tr><th>ArticleID</th><th>Headline</th><th>Body</th><th>DatePublished</th><th>AuthorID</th><th>NewspaperTypeID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.ID)</th><th>(&#8594; NewspaperType.TypeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Economic Growth Boosts UK Markets</td><td>Investment in technology drives growth...</td><td>2024-03-13 21:21:53</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Royal Wedding Coverage</td><td>All the latest details on the royal wedding...</td><td>2024-03-13 21:21:53</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>Apple Unveils New iPhone Model</td><td>Features, specifications, and pricing information...</td><td>2024-03-13 21:21:53</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>Vaccine Development Progress</td><td>Update on COVID-19 vaccine development...</td><td>2024-03-13 21:21:53</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>Obesity Epidemic in Children</td><td>Growing concern over childhood obesity rates...</td><td>2024-03-13 21:21:53</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michaelbrown@email.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emilywhite@email.com</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>davidblack@email.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

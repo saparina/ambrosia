@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">shows</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">show_title</span></span></th><th>show_type</th><th>performer_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; genres.genre_name)</th><th>(&#8594; performers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Stand-Up Comedy Show</span></td><td>Comedy</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Stand-Up Comedy Show</span></td><td>Comedy</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Sketch Comedy Show</span></td><td>Comedy</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Sketch Comedy Show</span></td><td>Comedy</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>episodes</h2><table><thead>
+<tr><th>id</th><th>episode_number</th><th>release_date</th><th>show_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; shows.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-08</td><td>1</td></tr>
+<tr><td>3</td><td>1</td><td>2022-01-15</td><td>2</td></tr>
+<tr><td>4</td><td>2</td><td>2022-01-22</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>seasons</h2><table><thead>
+<tr><th>id</th><th>season_number</th><th>start_date</th><th>end_date</th><th>show_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; shows.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-12-01</td><td>2022-03-31</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2021-12-01</td><td>2022-03-31</td><td>2</td></tr>
+<tr><td>3</td><td>1</td><td>2022-04-01</td><td>2023-06-30</td><td>3</td></tr>
+<tr><td>4</td><td>1</td><td>2022-04-01</td><td>2023-06-30</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>ratings</h2><table><thead>
+<tr><th>id</th><th>rating_value</th><th>review_text</th><th>user_id</th><th>show_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; users.id)</th><th>(&#8594; shows.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Great comedy!</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>Funny but could have been better.</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>Not my favorite type of humor.</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>Really enjoyed this sketch!</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>Laughed so much! Highly recommend.</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">performers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#006600">birth_date</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chris Lee</td><td><span style="color:#006600">2003-06-15</span></td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>1987-10-02</td></tr>
+</tbody></table></div>
+
+<div><h2>users</h2><table><thead>
+<tr><th>id</th><th>username</th><th>email</th><th>password</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>UserOne</td><td>userone@example.com</td><td>password1</td></tr>
+<tr><td>2</td><td>UserTwo</td><td>usertwo@example.com</td><td>password2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

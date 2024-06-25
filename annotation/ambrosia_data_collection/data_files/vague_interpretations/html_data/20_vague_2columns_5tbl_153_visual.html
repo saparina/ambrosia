@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-06-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1975-03-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>PublicationDate</th><th>WordCount</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sample Article 1</td><td>2021-01-01 00:00:00</td><td>500</td><td>1</td></tr>
+<tr><td>2</td><td>Sample Article 2</td><td>2021-02-01 00:00:00</td><td>750</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>NewsOutlets</h2><table><thead>
+<tr><th>OutletID</th><th>Name</th><th>Location</th><th>FoundedYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Newspaper A</td><td>City A</td><td>1900</td></tr>
+<tr><td>2</td><td>Newspaper B</td><td>City B</td><td>1950</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishes</h2><table><thead>
+<tr><th>PublishID</th><th>ArticleID</th><th>OutletID</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th>(&#8594; NewsOutlets.OutletID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Audience</h2><table><thead>
+<tr><th>DemoID</th><th><span style="color:#990000">Age_Group</span></th><th><span style="color:#990000">Income_Level</span></th><th>Article</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Articles.ArticleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>25-34</td><td>High</td><td>1</td></tr>
+<tr><td>2</td><td>35-44</td><td>Medium</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Advertisements</h2><table><thead>
+<tr><th>AdvID</th><th>Description</th><th>Budget</th><th>StartDate</th><th>EndDate</th><th>OutletID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; NewsOutlets.OutletID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Advertisement 1</td><td>1000</td><td>2021-01-01 00:00:00</td><td>2021-01-31 23:59:59</td><td>1</td></tr>
+<tr><td>2</td><td>Advertisement 2</td><td>1500</td><td>2021-02-01 00:00:00</td><td>2021-02-28 23:59:59</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Cruise_Ship</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>capacity</th><th>destination</th><th>cruise_start_date</th><th>cruise_end_date</th><th><span style="color:#1430b2">activities</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Majestic Ocean</td><td>3000</td><td>Caribbean</td><td>2023-06-01</td><td>2023-06-07</td><td><span style="color:#1430b2">Dance Class</span></td></tr>
+<tr><td>2</td><td>Grand Voyage</td><td>2500</td><td>Alaska</td><td>2023-05-15</td><td>2023-05-28</td><td>Bingo Night</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">All_Inclusive_Resort</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>star_rating</th><th>number_of_rooms</th><th>activities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paradise Beach</td><td>Hawaii</td><td>4</td><td>150</td><td><span style="color:#1430b2">Dance Class</span></td></tr>
+<tr><td>2</td><td>Sunset Oasis</td><td>Mexico</td><td>3</td><td>200</td><td>Yoga Session</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th><th>preferredLanguage</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td><td>+1234567890</td><td>English</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td><td>+9876543210</td><td>French</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>position</th><th>yearsOfExperience</th><th>skill</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Anderson</td><td>Receptionist</td><td>5</td><td>Customer Service</td></tr>
+<tr><td>2</td><td>Laura</td><td>Williams</td><td>Chef</td><td>8</td><td>Cooking</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>bookingId</th><th>customerId</th><th>cruiseOrResort</th><th>checkinDate</th><th>checkoutDate</th></tr>
+<tr><th></th><th>(&#8594; Customer.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-06-01</td><td>2023-06-07</td></tr>
+<tr><td>2</td><td>2</td><td>0</td><td>2023-06-10</td><td>2023-06-20</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

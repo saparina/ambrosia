@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Author</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Smith</td><td>alice@example.com</td></tr>
+<tr><td>2</td><td>Bob Johnson</td><td>bob@example.com</td></tr>
+<tr><td>3</td><td>Charlie Brown</td><td>charlie@example.com</td></tr>
+<tr><td>4</td><td>David Lee</td><td>david@example.com</td></tr>
+<tr><td>5</td><td>Eva Green</td><td>eva@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Category</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td><td>Latest political events.</td></tr>
+<tr><td>2</td><td>Culture</td><td>Cultural happenings around the world.</td></tr>
+<tr><td>3</td><td>Technology</td><td>The latest tech trends.</td></tr>
+<tr><td>4</td><td>Business</td><td>Global business news.</td></tr>
+<tr><td>5</td><td>Entertainment</td><td>Hollywood gossip and entertainment news.</td></tr>
+</tbody></table></div>
+
+<div><h2>Publication</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Times</td><td>229 W 43rd St, New York, NY 10036, USA</td></tr>
+<tr><td>2</td><td>Washington Post</td><td>1301 K Street NW, Washington, DC 20071, USA</td></tr>
+<tr><td>3</td><td>Wall Street Journal</td><td>One Market Plaza, San Francisco, CA 94105, USA</td></tr>
+<tr><td>4</td><td>Los Angeles Times</td><td>202 W 1st St, Los Angeles, CA 90012, USA</td></tr>
+<tr><td>5</td><td>USA Today</td><td>1 Tower Center Blvd, Secaucus, NJ 07094, USA</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Article</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th><span style="color:#186e16"><span style="color:#186e16">news_content_type</span></span></th><th><span style="color:#1430b2">volume</span></th><th>date</th><th>author_id</th><th>category_id</th><th>publication_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Author.id)</th><th>(&#8594; Category.id)</th><th>(&#8594; Publication.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Opinion on Brexit</td><td>This is a piece about...</td><td><span style="color:#186e16">Opinion Piece</span></td><td><span style="color:#1430b2">01</span></td><td>2024-03-07 23:50:16</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Climate Change Solutions</td><td>A discussion about...</td><td><span style="color:#186e16">Opinion Piece</span></td><td>02</td><td>2024-03-07 23:50:16</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>Apple Launches iPhone 12</td><td>Details of Apple’s new phone.</td><td><span style="color:#186e16">Feature Article</span></td><td><span style="color:#1430b2">01</span></td><td>2024-03-07 23:50:16</td><td>3</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>Tesla’s Solar Roof</td><td>Innovations by Tesla in solar energy.</td><td><span style="color:#186e16">Feature Article</span></td><td>03</td><td>2024-03-07 23:50:16</td><td>4</td><td>5</td><td>4</td></tr>
+<tr><td>5</td><td>Stock Market Rises</td><td>Details of today’s stock market rise.</td><td>News</td><td><span style="color:#1430b2">01</span></td><td>2024-03-07 23:50:16</td><td>5</td><td>2</td><td>5</td></tr>
+<tr><td>6</td><td>Football Game Results</td><td>Results of last night’s football game.</td><td>Sports</td><td>02</td><td>2024-03-07 23:50:16</td><td>1</td><td>6</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

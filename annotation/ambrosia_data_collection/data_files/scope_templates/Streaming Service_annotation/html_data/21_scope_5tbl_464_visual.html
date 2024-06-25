@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Devices_Compatibility</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">deviceName</span></th><th>isActive</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Smart_TV</td><td>1</td></tr>
+<tr><td>2</td><td>Laptop</td><td>1</td></tr>
+<tr><td>3</td><td>Mobile Phone</td><td>1</td></tr>
+<tr><td>4</td><td>Tablet</td><td>1</td></tr>
+<tr><td>5</td><td>Gaming Console</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Streaming_Services</span></h2><table><thead>
+<tr><th>id</th><th>serviceName</th><th>subscriptionPrice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>8.99</td></tr>
+<tr><td>2</td><td>Amazon Prime Video</td><td>12.99</td></tr>
+<tr><td>3</td><td>Hulu</td><td>6.99</td></tr>
+<tr><td>4</td><td>Disney+</td><td>7.99</td></tr>
+<tr><td>5</td><td>Apple TV+</td><td>4.99</td></tr>
+</tbody></table></div>
+
+<div><h2>SubscriptionPlans</h2><table><thead>
+<tr><th>id</th><th>planName</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Basic Plan</td><td>5</td></tr>
+<tr><td>2</td><td>Standard Plan</td><td>10</td></tr>
+<tr><td>3</td><td>Premium Plan</td><td>15</td></tr>
+<tr><td>4</td><td>Ultra Plan</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>Users</h2><table><thead>
+<tr><th>id</th><th>userName</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JohnDoe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>JaneDoe</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>MikeSmith</td><td>mikesmith@example.com</td></tr>
+<tr><td>4</td><td>AliceBrown</td><td>alicebrown@example.com</td></tr>
+<tr><td>5</td><td>BobWhite</td><td>bobwhite@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Service_Devices_Compatibility</h2><table><thead>
+<tr><th>streamingServiceId</th><th>deviceTypeId</th></tr>
+<tr><th>(&#8594; Streaming_Services.id)</th><th>(&#8594; Devices_Compatibility.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

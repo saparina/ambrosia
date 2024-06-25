@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>123-456-7890</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>987-654-3210</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>alice@example.com</td><td>555-555-5555</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Bob Johnson</td><td>bob@example.com</td><td>111-222-3333</td><td>100 Pine St</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>charlie@example.com</td><td>444-444-4444</td><td>200 Maple Ave</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Publications</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#006600">circulation_numbers</span></th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily News</td><td><span style="color:#006600">20000</span></td><td>USA</td></tr>
+<tr><td>2</td><td>The Weekly Times</td><td>15000</td><td>Canada</td></tr>
+<tr><td>3</td><td>Time Magazine</td><td><span style="color:#006600">20000</span></td><td>USA</td></tr>
+<tr><td>4</td><td>Newsweek</td><td>12000</td><td>UK</td></tr>
+<tr><td>5</td><td>Business Today</td><td>10000</td><td>India</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>pub_date</th><th>author_id</th><th>publication_type</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article Title 1</td><td>Content of Article 1</td><td>2022-01-01</td><td>1</td><td>Print</td></tr>
+<tr><td>2</td><td>Article Title 2</td><td>Content of Article 2</td><td>2022-01-02</td><td>2</td><td>Online</td></tr>
+<tr><td>3</td><td>Article Title 3</td><td>Content of Article 3</td><td>2022-01-03</td><td>3</td><td>Print</td></tr>
+<tr><td>4</td><td>Article Title 4</td><td>Content of Article 4</td><td>2022-01-04</td><td>4</td><td>Online</td></tr>
+<tr><td>5</td><td>Article Title 5</td><td>Content of Article 5</td><td>2022-01-05</td><td>5</td><td>Print</td></tr>
+</tbody></table></div>
+
+<div><h2>Category</h2><table><thead>
+<tr><th>id</th><th>descr</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td></tr>
+<tr><td>2</td><td>Economy</td></tr>
+<tr><td>3</td><td>Technology</td></tr>
+<tr><td>4</td><td>Entertainment</td></tr>
+<tr><td>5</td><td>Sports</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleCategory</h2><table><thead>
+<tr><th>article_id</th><th>cat_id</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; Category.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">PublicationsPeriodicals</span></h2><table><thead>
+<tr><th>publication_id</th><th><span style="color:#990000"><span style="color:#990000">periodical_type</span></span></th></tr>
+<tr><th>(&#8594; Publications.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Newspaper</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Newspaper</span></td></tr>
+<tr><td>3</td><td><span style="color:#990000">Magazine</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Magazine</span></td></tr>
+<tr><td>5</td><td>Journal</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

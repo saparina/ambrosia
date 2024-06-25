@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Theater_Company</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Royal Theatre</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Drama House</td><td>456 Broadway</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Producer</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@gmail.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@yahoo.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Stage_Play</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>theater_company_id</th><th>producer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Theater_Company.id)</th><th>(&#8594; Producer.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>A classic tragedy by William Shakespeare.</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Othello</td><td>Another great work from Shakespeare.</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Cruise</td></tr>
+<tr><td>2</td><td>Matthew</td><td>McConaughey</td></tr>
+</tbody></table></div>
+
+<div><h2>Play_Actor</h2><table><thead>
+<tr><th>play_id</th><th>actor_id</th><th>character_played</th></tr>
+<tr><th>(&#8594; Stage_Play.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Hamlet</td></tr>
+<tr><td>2</td><td>1</td><td>Othello</td></tr>
+<tr><td>1</td><td>2</td><td>Laertes</td></tr>
+<tr><td>2</td><td>2</td><td>Iago</td></tr>
+</tbody></table></div>
+
+<div><h2>Review</h2><table><thead>
+<tr><th>id</th><th>rating</th><th>reviewer_email</th><th>stage_play_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Stage_Play.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>8</td><td>reviews@hotmail.com</td><td>1</td></tr>
+<tr><td>2</td><td>9</td><td>reviews@outlook.com</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Authors</span></h2><table><thead>
+<tr><th>AuthorID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Emily Dickinson</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Robert Frost</span></td></tr>
+<tr><td>3</td><td>Maya Angelou</td></tr>
+<tr><td>4</td><td>George Orwell</td></tr>
+<tr><td>5</td><td>Jane Austen</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>GenreID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Essay</td></tr>
+<tr><td>2</td><td>Poetry</td></tr>
+<tr><td>3</td><td>Novel</td></tr>
+<tr><td>4</td><td>Short Story</td></tr>
+<tr><td>5</td><td>Biography</td></tr>
+</tbody></table></div>
+
+<div><h2>Books</h2><table><thead>
+<tr><th>BookID</th><th>Title</th><th>PublishedYear</th><th>AuthorID</th><th>GenreID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th><th>(&#8594; Genres.GenreID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Poems</td><td>1890</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>The Road Not Taken</td><td>1916</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>I Know Why The Caged Bird Sings</td><td>1969</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Animal Farm</td><td>1945</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Pride and Prejudice</td><td>1797</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">WrittenWorks</span></h2><table><thead>
+<tr><th>WorkID</th><th>BookID</th><th><span style="color:#990000"><span style="color:#990000">TypeOfWork</span></span></th></tr>
+<tr><th></th><th>(&#8594; Books.BookID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#990000">Essay</span></td></tr>
+<tr><td>2</td><td>1</td><td><span style="color:#990000">Poetry</span></td></tr>
+<tr><td>3</td><td>2</td><td><span style="color:#990000">Essay</span></td></tr>
+<tr><td>4</td><td>2</td><td><span style="color:#990000">Poetry</span></td></tr>
+<tr><td>5</td><td>3</td><td>Novel</td></tr>
+<tr><td>6</td><td>4</td><td>Short Story</td></tr>
+<tr><td>7</td><td>5</td><td>Biography</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

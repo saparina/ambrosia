@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Demographic_Groups</span></h2><table><thead>
+<tr><th>id</th><th>group_name</th><th>population</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Age Group A</td><td>100000</td></tr>
+<tr><td>2</td><td>Gender Group B</td><td>200000</td></tr>
+<tr><td>3</td><td>Income Level C</td><td>300000</td></tr>
+<tr><td>4</td><td>Education Level D</td><td>400000</td></tr>
+<tr><td>5</td><td>Occupation E</td><td>500000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Professional_Fields</span></h2><table><thead>
+<tr><th>field_id</th><th>field_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td></tr>
+<tr><td>2</td><td>Technology</td></tr>
+<tr><td>3</td><td>Entertainment</td></tr>
+<tr><td>4</td><td>Business</td></tr>
+<tr><td>5</td><td>Health</td></tr>
+</tbody></table></div>
+
+<div><h2>Magazines</h2><table><thead>
+<tr><th>magazine_id</th><th>title</th><th>publication_date</th><th>demographic_group_id</th><th>professional_field_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Demographic_Groups.id)</th><th>(&#8594; Professional_Fields.field_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>News Weekly</td><td>2023-01-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Tech Monthly</td><td>2023-01-15</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>ShowBiz Daily</td><td>2023-01-07</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Money Matters</td><td>2023-01-10</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Wellness Magazine</td><td>2023-01-12</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>article_id</th><th>title</th><th>content</th><th>author_id</th><th>magazine_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.author_id)</th><th>(&#8594; Magazines.magazine_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News</td><td>Latest news...</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>New Tech Innovations</td><td>Discover new tech products...</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Celebrity Interviews</td><td>Exclusive interviews with stars...</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Stock Market Update</td><td>Market analysis and tips...</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Yoga for Health</td><td>Benefits and practices of yoga...</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>author_id</th><th>name</th><th>occupation</th><th>demographic_group_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Demographic_Groups.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Journalist</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Editor</td><td>2</td></tr>
+<tr><td>3</td><td>Tom Brown</td><td>Photographer</td><td>3</td></tr>
+<tr><td>4</td><td>Alice Johnson</td><td>Reporter</td><td>4</td></tr>
+<tr><td>5</td><td>Bob Williams</td><td>Columnist</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Readers</h2><table><thead>
+<tr><th>reader_id</th><th>name</th><th>email</th><th>preferred_magazine_id</th><th>demographic_group_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Magazines.magazine_id)</th><th>(&#8594; Demographic_Groups.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Jones</td><td>alice@example.com</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>David Miller</td><td>david@example.com</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Emma Taylor</td><td>emma@example.com</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>George Wilson</td><td>george@example.com</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Hannah King</td><td>hannah@example.com</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

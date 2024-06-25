@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Convention_Centers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Center A</td><td>1000</td></tr>
+<tr><td>2</td><td>Center B</td><td>2000</td></tr>
+<tr><td>3</td><td>Center C</td><td>3000</td></tr>
+<tr><td>4</td><td>Center D</td><td>4000</td></tr>
+<tr><td>5</td><td>Center E</td><td>5000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Event_Spaces</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">space_name</span></th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Duty-Free Shopping</td><td>shop</td></tr>
+<tr><td>2</td><td>Exhibition Hall</td><td>hall</td></tr>
+<tr><td>3</td><td>Banquet Room</td><td>room</td></tr>
+<tr><td>4</td><td>Theater</td><td>theatre</td></tr>
+<tr><td>5</td><td>Lounge Area</td><td>lounge</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>id</th><th>room_number</th><th>floor_no</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td><td>1</td><td>50</td></tr>
+<tr><td>2</td><td>102</td><td>1</td><td>60</td></tr>
+<tr><td>3</td><td>103</td><td>1</td><td>70</td></tr>
+<tr><td>4</td><td>201</td><td>2</td><td>80</td></tr>
+<tr><td>5</td><td>202</td><td>2</td><td>90</td></tr>
+<tr><td>6</td><td>203</td><td>2</td><td>100</td></tr>
+<tr><td>7</td><td>301</td><td>3</td><td>110</td></tr>
+<tr><td>8</td><td>302</td><td>3</td><td>120</td></tr>
+<tr><td>9</td><td>303</td><td>3</td><td>130</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Black</td><td>mblack@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emwhite@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Gray</td><td>dgray@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>id</th><th>guest_id</th><th>event_space_id</th><th>checkin</th><th>checkout</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th>(&#8594; Event_Spaces.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-05-01 10:00:00</td><td>2021-05-01 18:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-05-02 10:00:00</td><td>2021-05-02 18:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-05-03 10:00:00</td><td>2021-05-03 18:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-05-04 10:00:00</td><td>2021-05-04 18:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-05-05 10:00:00</td><td>2021-05-05 18:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Convention_Centers_Event_Spaces</h2><table><thead>
+<tr><th>convention_center_id</th><th>event_space_id</th></tr>
+<tr><th>(&#8594; Convention_Centers.id)</th><th>(&#8594; Event_Spaces.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

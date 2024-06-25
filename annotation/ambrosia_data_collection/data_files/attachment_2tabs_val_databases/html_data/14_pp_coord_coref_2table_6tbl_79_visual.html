@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Readership</span></h2><table><thead>
+<tr><th>ID</th><th>Year</th><th>Total_Subscribers</th><th>Digital_Subscribers</th><th>Print_Subscribers</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">2022</span></td><td>10000</td><td>5000</td><td>5000</td></tr>
+<tr><td>2</td><td>2023</td><td>15000</td><td>6000</td><td>9000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Website_Traffic</span></h2><table><thead>
+<tr><th>ID</th><th>Year</th><th>Unique_Visitors</th><th>Pageviews</th><th>Bounce_Rate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">2022</span></td><td>20000</td><td>40000</td><td>0.75</td></tr>
+<tr><td>2</td><td>2023</td><td>25000</td><td>50000</td><td>0.8</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Author</th><th>Category</th><th>PublishDate</th><th>WordCount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Impact of Climate Change on Agriculture</td><td>John Doe</td><td>Environment</td><td>2024-03-13 18:06:58</td><td>1200</td></tr>
+<tr><td>2</td><td>Understanding the Quantum Computing Revolution</td><td>Jane Smith</td><td>Technology</td><td>2024-03-13 18:06:58</td><td>1500</td></tr>
+<tr><td>3</td><td>The Rise of Renewable Energy Sources</td><td>Emma Johnson</td><td>Environment</td><td>2024-03-13 18:06:58</td><td>1800</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>Bio</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>An environmental journalist with a passion for climate change.</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>A technology reporter who covers the latest advancements in the field.</td></tr>
+<tr><td>3</td><td>Emma</td><td>Johnson</td><td>An experienced energy reporter focused on renewable sources.</td></tr>
+</tbody></table></div>
+
+<div><h2>Categories</h2><table><thead>
+<tr><th>CategoryID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td></tr>
+<tr><td>2</td><td>Economy</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleAuthors</h2><table><thead>
+<tr><th>ArticleID</th><th>AuthorID</th></tr>
+<tr><th>(&#8594; Articles.ArticleID)</th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

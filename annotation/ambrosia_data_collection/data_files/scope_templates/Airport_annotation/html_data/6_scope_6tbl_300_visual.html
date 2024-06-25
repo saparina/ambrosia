@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Duty_Free_Shops</span></h2><table><thead>
+<tr><th>shop_id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Shop1</td><td>Terminal A</td></tr>
+<tr><td>2</td><td>Shop2</td><td>Terminal B</td></tr>
+<tr><td>3</td><td>Shop3</td><td>Terminal C</td></tr>
+<tr><td>4</td><td>Shop4</td><td>Terminal D</td></tr>
+<tr><td>5</td><td>Shop5</td><td>Terminal E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Products</span></h2><table><thead>
+<tr><th>product_id</th><th><span style="color:#990000">category</span></th><th><span style="color:#990000">price</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Perfume</td><td>90.78</td></tr>
+<tr><td>2</td><td>Cosmetics</td><td>65.43</td></tr>
+<tr><td>3</td><td>Electronics</td><td>250.89</td></tr>
+<tr><td>4</td><td>Fashion Accessories</td><td>150.99</td></tr>
+<tr><td>5</td><td>Toys</td><td>20.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Duty_Free_Shops_Products</h2><table><thead>
+<tr><th>shop_id</th><th>product_id</th><th>quantity</th></tr>
+<tr><th>(&#8594; Duty_Free_Shops.shop_id)</th><th>(&#8594; Products.product_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10</td></tr>
+<tr><td>1</td><td>2</td><td>20</td></tr>
+<tr><td>2</td><td>3</td><td>15</td></tr>
+<tr><td>2</td><td>4</td><td>30</td></tr>
+<tr><td>3</td><td>1</td><td>5</td></tr>
+<tr><td>3</td><td>2</td><td>10</td></tr>
+<tr><td>4</td><td>1</td><td>15</td></tr>
+<tr><td>4</td><td>3</td><td>20</td></tr>
+<tr><td>5</td><td>2</td><td>25</td></tr>
+<tr><td>5</td><td>4</td><td>30</td></tr>
+<tr><td>2</td><td>1</td><td>15</td></tr>
+<tr><td>5</td><td>1</td><td>25</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

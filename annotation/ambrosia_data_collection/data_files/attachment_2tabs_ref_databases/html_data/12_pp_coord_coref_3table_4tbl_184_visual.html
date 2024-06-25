@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">City</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Miami</span></td></tr>
+<tr><td>2</td><td>Los Angeles</td></tr>
+</tbody></table></div>
+
+<div><h2>Hotel</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>PriceRange</th></tr>
+<tr><th>(&#8594; City.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Palm Beach</td><td>200 Palm St.</td><td>+1234567890</td><td>150.0</td></tr>
+<tr><td>2</td><td>Sunrise Inn</td><td>300 Sun Rise Ave.</td><td>+1345678901</td><td>100.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Amenities</h2><table><thead>
+<tr><th>ID</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Free WiFi</td></tr>
+<tr><td>2</td><td>Gym</td></tr>
+</tbody></table></div>
+
+<div><h2>HotelAmenities</h2><table><thead>
+<tr><th>HotelID</th><th>AmenityID</th><th>Available</th></tr>
+<tr><th>(&#8594; Hotel.ID)</th><th>(&#8594; Amenities.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SwimmingPool</span></h2><table><thead>
+<tr><th>ID</th><th>PoolType</th><th>Size</th><th>MaintenanceFrequency</th></tr>
+<tr><th>(&#8594; Hotel.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Outdoor</td><td>Medium</td><td>Daily</td></tr>
+<tr><td>2</td><td>Indoor</td><td>Small</td><td>Weekly</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">HotTub</span></h2><table><thead>
+<tr><th>ID</th><th>Capacity</th><th>HeatingMethod</th></tr>
+<tr><th>(&#8594; Hotel.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Electric</td></tr>
+<tr><td>2</td><td>8</td><td>Gas</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

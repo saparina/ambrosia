@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Employer A</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Employer B</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Employer C</td><td>789 Oak St</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>id</th><th>city</th><th>state</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>City X</td><td>State AA</td></tr>
+<tr><td>2</td><td>City Y</td><td>State BB</td></tr>
+<tr><td>3</td><td>City Z</td><td>State CC</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>id</th><th>skillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Skill A</td></tr>
+<tr><td>2</td><td>Skill B</td></tr>
+<tr><td>3</td><td>Skill C</td></tr>
+<tr><td>4</td><td>Skill D</td></tr>
+<tr><td>5</td><td>Skill E</td></tr>
+</tbody></table></div>
+
+<div><h2>Requirements</h2><table><thead>
+<tr><th>id</th><th>requirement</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Requirement 1</td></tr>
+<tr><td>2</td><td>Requirement 2</td></tr>
+<tr><td>3</td><td>Requirement 3</td></tr>
+<tr><td>4</td><td>Requirement 4</td></tr>
+<tr><td>5</td><td>Requirement 5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPostings</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>healthcare</th><th>shift</th><th>employerId</th><th>locationId</th><th>skillsIds</th><th>requirementsIds</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Employers.id)</th><th>(&#8594; Locations.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Job 1</td><td>Description of Job 1</td><td><span style="color:#990000">Nurse</span></td><td><span style="color:#006600">Day Shift</span></td><td>1</td><td>1</td><td>A,B</td><td>1,2</td></tr>
+<tr><td>2</td><td>Job 2</td><td>Description of Job 2</td><td><span style="color:#990000">Nurse</span></td><td>Night Shift</td><td>1</td><td>2</td><td>C,D</td><td>3,4</td></tr>
+<tr><td>3</td><td>Job 3</td><td>Description of Job 3</td><td><span style="color:#990000">Physical Therapist</span></td><td><span style="color:#006600">Day Shift</span></td><td>2</td><td>1</td><td>E</td><td>5</td></tr>
+<tr><td>4</td><td>Job 4</td><td>Description of Job 4</td><td><span style="color:#990000">Physical Therapist</span></td><td>Night Shift</td><td>2</td><td>2</td><td></td><td>6</td></tr>
+<tr><td>5</td><td>Job 5</td><td>Description of Job 5</td><td>Software Engineer</td><td>Flexible</td><td>3</td><td>3</td><td>A,C,E</td><td>7,8</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

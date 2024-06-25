@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Physicists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>alice@email.com</td></tr>
+<tr><td>2</td><td>Bob</td><td>bob@email.com</td></tr>
+<tr><td>3</td><td>Carol</td><td>carol@email.com</td></tr>
+<tr><td>4</td><td>Dave</td><td>dave@email.com</td></tr>
+<tr><td>5</td><td>Eve</td><td>eve@email.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Fields</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">fieldName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quantum_Mechanics</td></tr>
+<tr><td>2</td><td>Electromagnetism</td></tr>
+<tr><td>3</td><td>Relativity</td></tr>
+<tr><td>4</td><td>Particle_Physics</td></tr>
+<tr><td>5</td><td>Cosmology</td></tr>
+</tbody></table></div>
+
+<div><h2>Physicist_Fields</h2><table><thead>
+<tr><th>physicistId</th><th>fieldId</th></tr>
+<tr><th>(&#8594; Physicists.id)</th><th>(&#8594; Fields.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

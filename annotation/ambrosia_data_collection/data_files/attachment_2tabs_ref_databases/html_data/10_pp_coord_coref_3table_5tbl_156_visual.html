@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">LANGUAGES</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">language</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">English</span></td></tr>
+<tr><td>2</td><td>Spanish</td></tr>
+<tr><td>3</td><td>French</td></tr>
+<tr><td>4</td><td>German</td></tr>
+<tr><td>5</td><td>Italian</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JOURNALISTS</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>editor_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; EDITORS.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Davis</td><td>2</td></tr>
+<tr><td>3</td><td>Mike Green</td><td>3</td></tr>
+<tr><td>4</td><td>Emily Black</td><td>4</td></tr>
+<tr><td>5</td><td>Ryan Clark</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">EDITORS</span></h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Smith</td></tr>
+<tr><td>2</td><td>Bob Johnson</td></tr>
+<tr><td>3</td><td>Carol Brown</td></tr>
+<tr><td>4</td><td>David Miller</td></tr>
+<tr><td>5</td><td>Eva White</td></tr>
+</tbody></table></div>
+
+<div><h2>JOB_POSTINGS</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>posted_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Reporter</td><td>Cover general news stories.</td><td>2021-09-01</td></tr>
+<tr><td>2</td><td>Investigative Journalist</td><td>Conduct in-depth investigations on various topics.</td><td>2021-09-02</td></tr>
+<tr><td>3</td><td>Feature Writer</td><td>Write long-form articles on specific subjects.</td><td>2021-09-03</td></tr>
+<tr><td>4</td><td>Sports Reporter</td><td>Report on local sports events and teams.</td><td>2021-09-04</td></tr>
+<tr><td>5</td><td>Travel Writer</td><td>Write travel articles about popular destinations.</td><td>2021-09-05</td></tr>
+</tbody></table></div>
+
+<div><h2>SPEAKS</h2><table><thead>
+<tr><th>journalist_id</th><th>language_id</th></tr>
+<tr><th>(&#8594; JOURNALISTS.id)</th><th>(&#8594; LANGUAGES.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

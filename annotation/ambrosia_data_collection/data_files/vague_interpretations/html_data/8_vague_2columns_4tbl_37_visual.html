@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseDate</th><th>Runtime</th><th><span style="color:#990000">Filmmaker</span></th><th><span style="color:#990000">Screenwriter</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994-09-23</td><td>142</td><td>Frank Darabont</td><td>Stephen King</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994-10-14</td><td>154</td><td>Quentin Tarantino</td><td>Quentin Tarantino</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>id</th><th>Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Drama</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieGenre</h2><table><thead>
+<tr><th>id</th><th>MovieId</th><th>GenreId</th></tr>
+<tr><th></th><th>(&#8594; Movies.id)</th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

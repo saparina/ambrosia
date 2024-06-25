@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Engineers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>experience</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>26</td><td>3</td><td><span style="color:#006600">90000.0</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>31</td><td>7</td><td>100000.0</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>28</td><td>5</td><td>80000.0</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>35</td><td>10</td><td>120000.0</td></tr>
+<tr><td>5</td><td>Chris White</td><td>29</td><td>4</td><td>95000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Architects</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>experience</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Black</td><td>32</td><td>6</td><td>80000.0</td></tr>
+<tr><td>2</td><td>Emma Green</td><td>30</td><td>5</td><td><span style="color:#006600">90000.0</span></td></tr>
+<tr><td>3</td><td>Frank Blue</td><td>33</td><td>7</td><td>100000.0</td></tr>
+<tr><td>4</td><td>Grace Red</td><td>27</td><td>4</td><td>95000.0</td></tr>
+<tr><td>5</td><td>Helen Yellow</td><td>25</td><td>3</td><td>85000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CompanyA</td><td>New York</td></tr>
+<tr><td>2</td><td>CompanyB</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>CompanyC</td><td>San Francisco</td></tr>
+<tr><td>4</td><td>CompanyD</td><td>Chicago</td></tr>
+<tr><td>5</td><td>CompanyE</td><td>Houston</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>required_skills</th><th>posted_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td><td>Design and develop software applications.</td><td>Python, Java, C++, .NET</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>2</td><td>Web Designer</td><td>Create visually appealing website layouts.</td><td>HTML, CSS, JavaScript, UI/UX</td><td>2022-01-02 00:00:00</td></tr>
+<tr><td>3</td><td>Data Analyst</td><td>Analyze data sets and provide insights.</td><td>SQL, R, Python, Excel</td><td>2022-01-03 00:00:00</td></tr>
+<tr><td>4</td><td>Graphic Designer</td><td>Create visual content for marketing materials.</td><td>Adobe Illustrator, Photoshop, InDesign, Sketch</td><td>2022-01-04 00:00:00</td></tr>
+<tr><td>5</td><td>Project Manager</td><td>Oversee projects and ensure timely completion.</td><td>PMP, Agile, Scrum, MS Project</td><td>2022-01-05 00:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>EngineeringJobs</h2><table><thead>
+<tr><th>id</th><th>engineer_id</th><th>company_id</th><th>job_id</th></tr>
+<tr><th></th><th>(&#8594; Engineers.id)</th><th>(&#8594; Companies.id)</th><th>(&#8594; Jobs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>ArchitectureJobs</h2><table><thead>
+<tr><th>id</th><th>architect_id</th><th>company_id</th><th>job_id</th></tr>
+<tr><th></th><th>(&#8594; Architects.id)</th><th>(&#8594; Companies.id)</th><th>(&#8594; Jobs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

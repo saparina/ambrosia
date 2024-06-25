@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Article</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>author_id</th><th>publication_date</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Author.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sample Title</td><td>Sample Content</td><td>1</td><td>2024-02-19 14:11:16</td></tr>
+<tr><td>2</td><td>Another Sample Title</td><td>More Sample Content</td><td>2</td><td>2024-02-19 14:11:16</td></tr>
+</tbody></table></div>
+
+<div><h2>Author</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Journalist</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th><span style="color:#990000">education</span></th><th><span style="color:#990000">experience</span></th><th>photojournalist</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Brown</td><td>tom@example.com</td><td>Bachelor of Arts</td><td>5</td><td>1</td></tr>
+<tr><td>2</td><td>Alice Green</td><td>alice@example.com</td><td>Master of Science</td><td>8</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Publisher</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>contact_email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Daily News Group</td><td>123 Main St.</td><td>editor@dailynewsgroup.com</td></tr>
+<tr><td>2</td><td>Weekly Chronicles</td><td>456 Elm St.</td><td>editor@weeklychronicles.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Publication</h2><table><thead>
+<tr><th>id</th><th>publisher_id</th><th>publication_name</th><th>start_year</th><th>end_year</th></tr>
+<tr><th></th><th>(&#8594; Publisher.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>The Daily Sun</td><td>1900</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>The Weekly Herald</td><td>1975</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

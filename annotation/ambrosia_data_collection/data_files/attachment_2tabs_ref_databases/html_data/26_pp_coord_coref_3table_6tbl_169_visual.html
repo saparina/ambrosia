@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>directors</h2><table><thead>
+<tr><th>directorID</th><th>name</th><th>birthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quentin Tarantino</td><td>1963-03-27</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td><td>1970-07-30</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">art_directors</span></h2><table><thead>
+<tr><th>artDirectorID</th><th>name</th><th>birthDate</th><th>directorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; directors.directorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Robert Stromberg</td><td>1968-05-24</td><td>1</td></tr>
+<tr><td>2</td><td>John Myhre</td><td>1957-01-19</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">set_designers</span></h2><table><thead>
+<tr><th>setDesignerID</th><th>name</th><th>birthDate</th><th>artDirectorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; art_directors.artDirectorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Guy Hendrix Dyas</td><td>1961-05-15</td><td>1</td></tr>
+<tr><td>2</td><td>Paul Denham Austerberry</td><td>1963-09-04</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>films</h2><table><thead>
+<tr><th>filmID</th><th>title</th><th>releaseYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">filmworks</span></h2><table><thead>
+<tr><th>workID</th><th><span style="color:#006600">numberOfFilmsWorkedOn</span></th><th>directorID</th><th>artDirectorID</th><th>setDesignerID</th><th>filmID</th></tr>
+<tr><th></th><th></th><th>(&#8594; directors.directorID)</th><th>(&#8594; art_directors.artDirectorID)</th><th>(&#8594; set_designers.setDesignerID)</th><th>(&#8594; films.filmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">25</span></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>30</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#006600">25</span></td><td>1</td><td>1</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>30</td><td>2</td><td>2</td><td>2</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

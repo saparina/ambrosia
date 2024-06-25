@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Activity</span></h2><table><thead>
+<tr><th>activity_id</th><th><span style="color:#990000"><span style="color:#990000">activity_name</span></span></th><th>activity_type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Tourist Attraction</span></td><td>Attraction</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Tourist Attraction</span></td><td>Museum</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Local Market</span></td><td>Market</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Local Market</span></td><td>Farmers Market</td></tr>
+<tr><td>5</td><td>Restaurant</td><td>Italian</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Location</span></h2><table><thead>
+<tr><th>location_id</th><th><span style="color:#006600">location_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Portobello</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Notting Hill</span></td></tr>
+<tr><td>3</td><td>Covent Garden</td></tr>
+<tr><td>4</td><td>Camden Town</td></tr>
+<tr><td>5</td><td>Piccadilly Circus</td></tr>
+</tbody></table></div>
+
+<div><h2>Activity_Location</h2><table><thead>
+<tr><th>activity_location_id</th><th>activity_id</th><th>location_id</th></tr>
+<tr><th></th><th>(&#8594; Activity.activity_id)</th><th>(&#8594; Location.location_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Customer</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>booking_id</th><th>customer_id</th><th>checkin_date</th><th>checkout_date</th></tr>
+<tr><th></th><th>(&#8594; Customer.customer_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>2023-01-07</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-15</td><td>2023-01-22</td></tr>
+<tr><td>3</td><td>3</td><td>2023-02-01</td><td>2023-02-08</td></tr>
+<tr><td>4</td><td>4</td><td>2023-02-16</td><td>2023-02-23</td></tr>
+<tr><td>5</td><td>5</td><td>2023-03-01</td><td>2023-03-09</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservation</h2><table><thead>
+<tr><th>reservation_id</th><th>booking_id</th><th>activity_location_id</th><th>num_people</th></tr>
+<tr><th></th><th>(&#8594; Booking.booking_id)</th><th>(&#8594; Activity_Location.activity_location_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>4</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

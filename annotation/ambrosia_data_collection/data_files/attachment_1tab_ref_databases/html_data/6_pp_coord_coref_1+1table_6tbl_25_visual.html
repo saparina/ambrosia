@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Genres</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">genre</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Action</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Adventure</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Stars</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">star_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Tom Cruise</span></td></tr>
+<tr><td>2</td><td>Keanu Reeves</td></tr>
+<tr><td>3</td><td>Dwayne Johnson</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>film_id</th><th>title</th><th>release_year</th><th>director_name</th><th>country</th><th>runtime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mission Impossible</td><td>2018</td><td>Christopher McQuarrie</td><td>USA</td><td>147</td></tr>
+<tr><td>2</td><td>John Wick</td><td>2014</td><td>Chad Stahelski & David Leitch</td><td>USA</td><td>106</td></tr>
+<tr><td>3</td><td>Oblivion</td><td>2013</td><td>Joseph Kosinski</td><td>USA</td><td>124</td></tr>
+<tr><td>4</td><td>San Andreas</td><td>2015</td><td>Brad Peyton</td><td>USA</td><td>119</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Genres</h2><table><thead>
+<tr><th>film_genre_id</th><th>film_id</th></tr>
+<tr><th>(&#8594; Genres.id)</th><th>(&#8594; Films.film_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Stars</h2><table><thead>
+<tr><th>film_star_id</th><th>film_id</th><th>role</th></tr>
+<tr><th>(&#8594; Stars.id)</th><th>(&#8594; Films.film_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Ethan Hunt</td></tr>
+<tr><td>2</td><td>2</td><td>John Wick</td></tr>
+<tr><td>1</td><td>3</td><td>Jack Harper</td></tr>
+<tr><td>3</td><td>4</td><td>Ray Gaines</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

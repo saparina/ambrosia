@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Streaming_Service</span></h2><table><thead>
+<tr><th>id</th><th>service_name</th><th>service_url</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>https://www.netflix.com/</td></tr>
+<tr><td>2</td><td>Hulu</td><td>https://www.hulu.com/</td></tr>
+<tr><td>3</td><td>Amazon Prime Video</td><td>https://www.amazon.com/Prime-Video/b?ie=UTF8&node=2673912011</td></tr>
+<tr><td>4</td><td>Disney+</td><td>https://www.disneyplus.com/</td></tr>
+<tr><td>5</td><td>Apple TV+</td><td>https://tv.apple.com/</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Social_Media</span></h2><table><thead>
+<tr><th>social_media_id</th><th><span style="color:#990000">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Facebook_Share</td></tr>
+<tr><td>2</td><td>Twitter_Share</td></tr>
+<tr><td>3</td><td>Instagram_Post</td></tr>
+<tr><td>4</td><td>Pinterest_Pin</td></tr>
+<tr><td>5</td><td>LinkedIn_Update</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Service_Social_Media</h2><table><thead>
+<tr><th>streaming_service_id</th><th>social_media_id</th></tr>
+<tr><th>(&#8594; Streaming_Service.id)</th><th>(&#8594; Social_Media.social_media_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscription_Plan</h2><table><thead>
+<tr><th>plan_id</th><th>name</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Basic Plan</td><td>7.99</td></tr>
+<tr><td>2</td><td>Standard Plan</td><td>13.99</td></tr>
+<tr><td>3</td><td>Premium Plan</td><td>19.99</td></tr>
+<tr><td>4</td><td>Ultimate Plan</td><td>29.99</td></tr>
+<tr><td>5</td><td>Family Plan</td><td>4.99</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

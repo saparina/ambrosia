@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Movies</span></h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>ReleaseYear</th><th>Cultural_Festival</th><th>Annual_Attendance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie1</td><td>2000</td><td><span style="color:#990000">Music Festival</span></td><td><span style="color:#006600">50000</span></td></tr>
+<tr><td>2</td><td>Movie2</td><td>2010</td><td><span style="color:#990000">Music Festival</span></td><td>60000</td></tr>
+<tr><td>3</td><td>Movie3</td><td>2005</td><td><span style="color:#990000">Film Festival</span></td><td><span style="color:#006600">50000</span></td></tr>
+<tr><td>4</td><td>Movie4</td><td>2015</td><td><span style="color:#990000">Film Festival</span></td><td>70000</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Actor1</td><td>1980-01-01</td></tr>
+<tr><td>2</td><td>Actor2</td><td>1985-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>BirthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Director1</td><td>1970-01-01</td></tr>
+<tr><td>2</td><td>Director2</td><td>1975-01-01</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieActors</h2><table><thead>
+<tr><th>MovieID</th><th>ActorID</th><th>Role</th></tr>
+<tr><th>(&#8594; Movies.MovieID)</th><th>(&#8594; Actors.ActorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lead Actor</td></tr>
+<tr><td>2</td><td>2</td><td>Supporting Actor</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieDirectors</h2><table><thead>
+<tr><th>MovieID</th><th>DirectorID</th><th>Year</th></tr>
+<tr><th>(&#8594; Movies.MovieID)</th><th>(&#8594; Directors.DirectorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2000</td></tr>
+<tr><td>2</td><td>2</td><td>2010</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>RatingID</th><th>MovieID</th><th>UserRating</th><th>ReviewText</th></tr>
+<tr><th></th><th>(&#8594; Movies.MovieID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>9</td><td>Excellent movie!</td></tr>
+<tr><td>2</td><td>2</td><td>8</td><td>Good movie.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

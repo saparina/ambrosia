@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Location</span></h2><table><thead>
+<tr><th>id</th><th>city</th><th><span style="color:#1430b2">state</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Orlando</td><td>Florida</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td><span style="color:#1430b2">California</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">AmusementPark</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>locationID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Location.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Disney World</td><td>1</td></tr>
+<tr><td>2</td><td>Universal Studios Hollywood</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">WaterPark</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>locationID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Location.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Typhoon Lagoon</td><td>1</td></tr>
+<tr><td>2</td><td> Universal CityWalk</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Rides</h2><table><thead>
+<tr><th>id</th><th>parkID</th><th>rideName</th><th>description</th></tr>
+<tr><th></th><th>(&#8594; AmusementPark.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Space Mountain</td><td>A classic roller coaster experience.</td></tr>
+<tr><td>2</td><td>1</td><td>It's a Small World</td><td>An iconic boat ride through miniature scenes of children from countries around the world.</td></tr>
+<tr><td>3</td><td>1</td><td>Haunted Mansion</td><td>Explore the mysteries and spirits that inhabit this eerie Victorian mansion.</td></tr>
+<tr><td>4</td><td>1</td><td>The Twilight Zone Tower of Terror</td><td>Plunge down a vertical drop on an elevator ride like no other!</td></tr>
+<tr><td>5</td><td>1</td><td>Buzz Lightyear's Space Ranger Spin</td><td>Help Buzz save the galaxy by blasting away at targets.</td></tr>
+<tr><td>6</td><td>2</td><td>Jurassic Park - The Ride</td><td>Experience the thrill of being chased by dinosaurs on this whitewater raft adventure.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>filmmaking</h2><table><thead>
+<tr><th>id</th><th>name</th><th>directorName</th><th>releaseDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Documentary</td><td>John Doe</td><td>2021-09-01</td></tr>
+<tr><td>2</td><td>Another Documentary</td><td>Jane Smith</td><td>2021-08-30</td></tr>
+<tr><td>3</td><td>A Short Film</td><td>Michael Johnson</td><td>2021-07-26</td></tr>
+<tr><td>4</td><td>Yet Another Short Film</td><td>Emily Brown</td><td>2021-07-25</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">film_type</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Documentary</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Short Film</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">budget</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">amount</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>500000.0</td></tr>
+<tr><td>2</td><td><span style="color:#006600">700000.0</span></td></tr>
+</tbody></table></div>
+
+<div><h2>film_details</h2><table><thead>
+<tr><th>id</th><th>filmmakingId</th><th>film_typeId</th><th>budgetId</th></tr>
+<tr><th></th><th>(&#8594; filmmaking.id)</th><th>(&#8594; film_type.id)</th><th>(&#8594; budget.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>crew_members</h2><table><thead>
+<tr><th>id</th><th>role</th><th>memberName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Director</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Producer</td><td>Alice Davis</td></tr>
+<tr><td>3</td><td>Cinematographer</td><td>Charlie Green</td></tr>
+<tr><td>4</td><td>Editor</td><td>David Black</td></tr>
+</tbody></table></div>
+
+<div><h2>casts</h2><table><thead>
+<tr><th>id</th><th>filmmakingId</th><th>characterName</th><th>actorName</th></tr>
+<tr><th></th><th>(&#8594; filmmaking.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Himself</td><td>John Doe</td></tr>
+<tr><td>2</td><td>2</td><td>Herself</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>3</td><td>Child Prodigy</td><td>Michael Johnson</td></tr>
+<tr><td>4</td><td>4</td><td>Leading Role</td><td>Emily Brown</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

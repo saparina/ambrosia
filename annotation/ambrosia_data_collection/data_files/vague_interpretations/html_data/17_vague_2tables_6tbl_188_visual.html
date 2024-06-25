@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Waste_Disposal_Method</span></h2><table><thead>
+<tr><th>id</th><th>method_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Landfill</td><td>Disposing of waste by burying it in a designated area.</td></tr>
+<tr><td>2</td><td>Incineration</td><td>Burning waste to reduce its volume and kill pathogens.</td></tr>
+<tr><td>3</td><td>Recycling</td><td>Processing waste materials to create new products.</td></tr>
+<tr><td>4</td><td>Composting</td><td>Breaking down organic matter into nutrient-rich humus.</td></tr>
+<tr><td>5</td><td>Biodegradable Waste</td><td>Organic waste that can be broken down by microorganisms.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Recycling_Program</span></h2><table><thead>
+<tr><th>id</th><th>program_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Community Recycling Program</td><td>A local initiative to encourage recycling among residents.</td></tr>
+<tr><td>2</td><td>Corporate Recycling Program</td><td>An initiative by companies to recycle their waste.</td></tr>
+<tr><td>3</td><td>Electronic Waste Recycling</td><td>A specialized program to recycle electronic devices.</td></tr>
+<tr><td>4</td><td>Hazardous Waste Recycling</td><td>A program to handle and recycle hazardous waste.</td></tr>
+<tr><td>5</td><td>Construction Materials Recycling</td><td>A program focused on recycling construction materials.</td></tr>
+</tbody></table></div>
+
+<div><h2>Construction_Material</h2><table><thead>
+<tr><th>id</th><th>material_type</th><th>quantity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concrete</td><td>100.0</td></tr>
+<tr><td>2</td><td>Steel</td><td>200.0</td></tr>
+<tr><td>3</td><td>Bricks</td><td>300.0</td></tr>
+<tr><td>4</td><td>Glass</td><td>400.0</td></tr>
+<tr><td>5</td><td>Aluminum</td><td>500.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Construction_Site</h2><table><thead>
+<tr><th>site_id</th><th>site_name</th><th>location</th><th>waste_disposal_method_id</th><th>recycling_program_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Waste_Disposal_Method.id)</th><th>(&#8594; Recycling_Program.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Site A</td><td>New York City</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Site B</td><td>Los Angeles</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Site C</td><td>Chicago</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Site D</td><td>Miami</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Site E</td><td>Dallas</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Site_Material</h2><table><thead>
+<tr><th>site_material_id</th><th>construction_site_id</th><th>construction_material_id</th><th>amount</th></tr>
+<tr><th></th><th>(&#8594; Construction_Site.site_id)</th><th>(&#8594; Construction_Material.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>50.0</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>75.0</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>60.0</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>80.0</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>90.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Disposed_Waste</h2><table><thead>
+<tr><th>disposed_waste_id</th><th>site_material_id</th><th>waste_disposal_method_id</th><th>disposal_date</th></tr>
+<tr><th></th><th>(&#8594; Site_Material.site_material_id)</th><th>(&#8594; Waste_Disposal_Method.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>2022-01-02</td></tr>
+<tr><td>3</td><td>2</td><td>2</td><td>2022-01-03</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>2022-01-04</td></tr>
+<tr><td>5</td><td>3</td><td>3</td><td>2022-01-05</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

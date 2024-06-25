@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>TravelAgency</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phoneNumber</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Agent A</td><td>Street 1</td><td>+123456789</td><td>agent@a.com</td></tr>
+<tr><td>2</td><td>Agent B</td><td>Street 2</td><td>+987654321</td><td>agent@b.com</td></tr>
+<tr><td>3</td><td>Agent C</td><td>Street 3</td><td>+135792468</td><td>agent@c.com</td></tr>
+<tr><td>4</td><td>Agent D</td><td>Street 4</td><td>+246813579</td><td>agent@d.com</td></tr>
+<tr><td>5</td><td>Agent E</td><td>Street 5</td><td>+364815926</td><td>agent@e.com</td></tr>
+</tbody></table></div>
+
+<div><h2>OnlineBookingPlatform</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phoneNumber</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Platform X</td><td>Street 6</td><td>+654321789</td><td>platform@x.com</td></tr>
+<tr><td>2</td><td>Platform Y</td><td>Street 7</td><td>+987654321</td><td>platform@y.com</td></tr>
+<tr><td>3</td><td>Platform Z</td><td>Street 8</td><td>+123456789</td><td>platform@z.com</td></tr>
+<tr><td>4</td><td>Platform W</td><td>Street 9</td><td>+321456789</td><td>platform@w.com</td></tr>
+<tr><td>5</td><td>Platform V</td><td>Street 10</td><td>+46815926</td><td>platform@v.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Tour</h2><table><thead>
+<tr><th>id</th><th>destination</th><th>description</th><th>duration</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Machu Picchu</td><td>An ancient Inca city located high up on a mountain ridge.</td><td>3</td><td>500.0</td></tr>
+<tr><td>2</td><td>Egypt</td><td>Explore the Pyramids of Giza and other historical sites.</td><td>7</td><td>1000.0</td></tr>
+<tr><td>3</td><td>France</td><td>Visit Paris, known as the City of Lights.</td><td>5</td><td>700.0</td></tr>
+<tr><td>4</td><td>Japan</td><td>Experience Japanese culture, cuisine, and technology.</td><td>7</td><td>1200.0</td></tr>
+<tr><td>5</td><td>Australia</td><td>Discover the Great Barrier Reef and unique wildlife.</td><td>10</td><td>1500.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">TripPlanningService</span></h2><table><thead>
+<tr><th>id</th><th>tripType</th><th>serviceProviderId</th><th>tourId</th></tr>
+<tr><th></th><th></th><th>(&#8594; TravelAgency.id)</th><th>(&#8594; Tour.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#990000">Travel Agency</span></td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Travel Agency</span></td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Online Booking Platform</span></td><td>3</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Online Booking Platform</span></td><td>4</td><td>3</td></tr>
+<tr><td>5</td><td><span style="color:#990000">Travel Agency</span></td><td>5</td><td>2</td></tr>
+<tr><td>6</td><td><span style="color:#990000">Online Booking Platform</span></td><td>6</td><td>3</td></tr>
+<tr><td>7</td><td><span style="color:#990000">Travel Agency</span></td><td>7</td><td>3</td></tr>
+<tr><td>8</td><td><span style="color:#990000">Online Booking Platform</span></td><td>8</td><td>4</td></tr>
+<tr><td>9</td><td><span style="color:#990000">Travel Agency</span></td><td>9</td><td>4</td></tr>
+<tr><td>10</td><td><span style="color:#990000">Online Booking Platform</span></td><td>10</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

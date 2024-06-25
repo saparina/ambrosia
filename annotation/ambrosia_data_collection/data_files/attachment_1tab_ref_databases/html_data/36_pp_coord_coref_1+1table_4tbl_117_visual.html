@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Genres</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">genreName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Comedy</span></td></tr>
+<tr><td>2</td><td>Action</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Horror</td></tr>
+<tr><td>5</td><td>Romance</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseYear</th><th>director</th><th>runtime</th><th>visualMediaId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Visual_Media_and_Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>Frank Darabont</td><td>220</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>Quentin Tarantino</td><td>153</td><td>2</td></tr>
+<tr><td>3</td><td>Schindler's List</td><td>1993</td><td>Steven Spielberg</td><td>187</td><td>3</td></tr>
+<tr><td>4</td><td>Jaws</td><td>1975</td><td>Steven Spielberg</td><td>124</td><td>4</td></tr>
+<tr><td>5</td><td>Titanic</td><td>1997</td><td>James Cameron</td><td>186</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>TVShows</h2><table><thead>
+<tr><th>id</th><th>showTitle</th><th>network</th><th>seasonCount</th><th>episodeCount</th><th>visualMediaId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Visual_Media_and_Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Friends</td><td>NBC</td><td>10</td><td>236</td><td>1</td></tr>
+<tr><td>2</td><td>Game of Thrones</td><td>HBO</td><td>8</td><td>73</td><td>2</td></tr>
+<tr><td>3</td><td>Breaking Bad</td><td>AMC</td><td>5</td><td>62</td><td>3</td></tr>
+<tr><td>4</td><td>Stranger Things</td><td>Netflix</td><td>4</td><td>42</td><td>4</td></tr>
+<tr><td>5</td><td>Big Bang Theory</td><td>CBS</td><td>12</td><td>279</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Visual_Media_and_Genres</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">mediaType</span></span></th><th>genreId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Movie</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Movie</span></td><td>3</td></tr>
+<tr><td>3</td><td><span style="color:#990000">TV Show</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">TV Show</span></td><td>4</td></tr>
+<tr><td>5</td><td><span style="color:#990000">Movie</span></td><td>2</td></tr>
+<tr><td>6</td><td><span style="color:#990000">Movie</span></td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

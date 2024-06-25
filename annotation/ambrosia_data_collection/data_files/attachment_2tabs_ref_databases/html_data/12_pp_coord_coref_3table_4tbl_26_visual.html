@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Audition_Room</span></h2><table><thead>
+<tr><th>RoomID</th><th><span style="color:#006600">RoomName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Room 101</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Room 202</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Dance_Recital</span></h2><table><thead>
+<tr><th>RecitalID</th><th>Date</th><th>Time</th><th>RoomID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Audition_Room.RoomID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-07-01</td><td>19:00</td><td>1</td></tr>
+<tr><td>2</td><td>2023-08-15</td><td>20:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Talent_Show</span></h2><table><thead>
+<tr><th>ShowID</th><th>Name</th><th>Description</th><th>RoomID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Audition_Room.RoomID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Summer Talent Extravaganza</td><td>A showcase of local talent.</td><td>1</td></tr>
+<tr><td>2</td><td>Fall Variety Night</td><td>An evening of diverse acts and performances.</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Participant</h2><table><thead>
+<tr><th>ParticipantID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>PhoneNumber</th><th>Email</th><th>Role</th><th>RecitalID</th><th>ShowID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Dance_Recital.RecitalID)</th><th>(&#8594; Talent_Show.ShowID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Smith</td><td>25</td><td>555-1234</td><td>janesmith@email.com</td><td>Dancer</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>John</td><td>Doe</td><td>30</td><td>555-5678</td><td>john.doe@email.com</td><td>Singer</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Emily</td><td>Johnson</td><td>22</td><td>555-8910</td><td>emily.johnson@email.com</td><td>Musician</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>Michael</td><td>Brown</td><td>28</td><td>555-1314</td><td>michaelbrown@email.com</td><td>Actor</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>Olivia</td><td>Wilson</td><td>18</td><td>555-2323</td><td>oliviawilson@email.com</td><td>Comedian</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

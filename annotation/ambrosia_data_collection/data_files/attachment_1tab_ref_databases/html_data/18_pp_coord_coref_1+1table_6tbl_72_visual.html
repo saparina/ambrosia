@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Students</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th><span style="color:#006600">major</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>20</td><td>Journalism</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>23</td><td>Mass Communication</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>22</td><td>Media Studies</td></tr>
+<tr><td>4</td><td>Emma Brown</td><td>21</td><td>Broadcast Journalism</td></tr>
+<tr><td>5</td><td>Anne Smith</td><td>24</td><td><span style="color:#006600">Print Journalism</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">NewsArticles</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th><span style="color:#990000"><span style="color:#990000">structure</span></span></th><th>published_date</th><th>student_name</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Students.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Article Title</td><td>Content of first article...</td><td><span style="color:#990000">Inverted Pyramid</span></td><td>2022-01-01</td><td>Anne Smith</td></tr>
+<tr><td>2</td><td>Second Article Title</td><td>Content of second article...</td><td><span style="color:#990000">Inverted Pyramid</span></td><td>2022-01-02</td><td>Michael Johnson</td></tr>
+<tr><td>3</td><td>Third Article Title</td><td>Content of third article...</td><td><span style="color:#990000">Chronological Structure</span></td><td>2022-01-03</td><td>Anne Smith</td></tr>
+<tr><td>4</td><td>Fourth Article Title</td><td>Content of fourth article...</td><td><span style="color:#990000">Chronological Structure</span></td><td>2022-01-04</td><td>Emma Brown</td></tr>
+<tr><td>5</td><td>Fifth Article Title</td><td>Content of fifth article...</td><td><span style="color:#990000">Inverted Pyramid</span></td><td>2022-01-05</td><td>John Doe</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleCategories</h2><table><thead>
+<tr><th>category_id</th><th>category_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td></tr>
+<tr><td>2</td><td>Economy</td></tr>
+<tr><td>3</td><td>Technology</td></tr>
+<tr><td>4</td><td>Entertainment</td></tr>
+<tr><td>5</td><td>Sports</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticlesByCategory</h2><table><thead>
+<tr><th>article_id</th><th>category_id</th></tr>
+<tr><th>(&#8594; NewsArticles.id)</th><th>(&#8594; ArticleCategories.category_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>source_id</th><th>source_name</th><th>url</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Guardian</td><td>https://www.theguardian.com/</td></tr>
+<tr><td>2</td><td>BBC News</td><td>https://www.bbc.co.uk/news</td></tr>
+<tr><td>3</td><td>Al Jazeera</td><td>https://www.aljazeera.com/</td></tr>
+<tr><td>4</td><td>Reuters</td><td>https://www.reuters.com/</td></tr>
+<tr><td>5</td><td>The New York Times</td><td>https://www.nytimes.com/</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticlesWithSources</h2><table><thead>
+<tr><th>article_id</th><th>source_id</th></tr>
+<tr><th>(&#8594; NewsArticles.id)</th><th>(&#8594; Sources.source_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

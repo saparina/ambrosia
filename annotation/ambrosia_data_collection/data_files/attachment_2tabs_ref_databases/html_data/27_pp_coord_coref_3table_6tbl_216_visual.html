@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Clients</h2><table><thead>
+<tr><th>ClientID</th><th>Name</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wedding Photography</td><td>Capture photos at a beautiful wedding ceremony.</td><td>2023-06-10</td></tr>
+<tr><td>2</td><td>Corporate Video Production</td><td>Produce a professional video for a corporate event.</td><td>2023-07-15</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Photographers</span></h2><table><thead>
+<tr><th>PhotographerID</th><th>Name</th><th>ContactInfo</th><th>HourlyRate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>+1 (555) 123-4567</td><td>500.0</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>+1 (555) 987-6543</td><td>600.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Videographers</span></h2><table><thead>
+<tr><th>VideographerID</th><th>Name</th><th>ContactInfo</th><th>HourlyRate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Charlie White</td><td>+1 (555) 098-7654</td><td>500.0</td></tr>
+<tr><td>2</td><td>Diana Green</td><td>+1 (555) 432-1234</td><td>600.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">JobPostings</span></h2><table><thead>
+<tr><th>PostingID</th><th>JobID</th><th>PhotographerID</th><th>VideographerID</th><th><span style="color:#006600">Price</span></th></tr>
+<tr><th></th><th>(&#8594; Jobs.JobID)</th><th>(&#8594; Photographers.PhotographerID)</th><th>(&#8594; Videographers.VideographerID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1500.0</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td><span style="color:#006600">1800.0</span></td></tr>
+</tbody></table></div>
+
+<div><h2>BookedJobs</h2><table><thead>
+<tr><th>BookingID</th><th>PostingID</th><th>ClientID</th><th>BookDate</th><th>PaymentAmount</th></tr>
+<tr><th></th><th>(&#8594; JobPostings.PostingID)</th><th>(&#8594; Clients.ClientID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-06-12</td><td>1600.0</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-07-17</td><td>1850.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

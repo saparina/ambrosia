@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">HorrorMovies</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>DirectorName</th><th>ReleaseYear</th><th>Budget</th><th>BoxOffice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Exorcist</td><td>William Friedkin</td><td>1973</td><td><span style="color:#006600">20 million USD</span></td><td>Medium</td></tr>
+<tr><td>2</td><td>Hereditary</td><td>Ari Aster</td><td>2018</td><td>6 million USD</td><td>Medium</td></tr>
+<tr><td>3</td><td>Get Out</td><td>Jordan Peele</td><td>2017</td><td>4 million USD</td><td>Medium</td></tr>
+<tr><td>4</td><td>A Nightmare on Elm Street</td><td>Wes Craven</td><td>1984</td><td>1 million USD</td><td>Medium</td></tr>
+<tr><td>5</td><td>It Follows</td><td>David Robert Mitchell</td><td>2014</td><td>2 million USD</td><td>Medium</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ThrillerMovies</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>DirectorName</th><th>ReleaseYear</th><th>Budget</th><th>CriticRating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gone Girl</td><td>David Fincher</td><td>2014</td><td>60 million USD</td><td>3.0</td></tr>
+<tr><td>2</td><td>Argo</td><td>Ben Affleck</td><td>2012</td><td>44 million USD</td><td>3.0</td></tr>
+<tr><td>3</td><td>The Silence of the Lambs</td><td>Jonathan Demme</td><td>1991</td><td><span style="color:#006600">20 million USD</span></td><td>3.0</td></tr>
+<tr><td>4</td><td>Fight Club</td><td>David Fincher</td><td>1999</td><td>60 million USD</td><td>3.0</td></tr>
+<tr><td>5</td><td>Zodiac</td><td>David Fincher</td><td>2007</td><td>70 million USD</td><td>3.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ellen Burstyn</td><td>Dec 7, 1932</td><td>USA</td></tr>
+<tr><td>2</td><td>Kathy Bates</td><td>June 28, 1948</td><td>USA</td></tr>
+<tr><td>3</td><td>Liv Tyler</td><td>July 1, 1977</td><td>USA</td></tr>
+<tr><td>4</td><td>Patrick Wilson</td><td>January 26, 1973</td><td>USA</td></tr>
+<tr><td>5</td><td>Vera Farmiga</td><td>August 6, 1973</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>id</th><th>ActorId</th><th>MovieTitle</th><th>CharacterName</th></tr>
+<tr><th></th><th>(&#8594; Actors.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>The Conjuring</td><td>Carolyn Perron</td></tr>
+<tr><td>2</td><td>2</td><td>The Sixth Sense</td><td>Anna Crowe</td></tr>
+<tr><td>3</td><td>3</td><td>Insomnia</td><td>Alana Maxwell</td></tr>
+<tr><td>4</td><td>4</td><td>The Machinist</td><td>Steve Buscemi</td></tr>
+<tr><td>5</td><td>5</td><td>Downfall</td><td>Adolf Hitler</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmProductions</h2><table><thead>
+<tr><th>id</th><th>ProductionCompany</th><th>Location</th><th>NumberOfDaysInLocation</th><th>TotalCost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paramount Pictures</td><td>London</td><td>45</td><td>150 million USD</td></tr>
+<tr><td>2</td><td>Warner Bros.</td><td>New York City</td><td>60</td><td>200 million USD</td></tr>
+<tr><td>3</td><td>Universal Pictures</td><td>Paris</td><td>50</td><td>180 million USD</td></tr>
+<tr><td>4</td><td>20th Century Fox</td><td>Los Angeles</td><td>75</td><td>250 million USD</td></tr>
+<tr><td>5</td><td>Disney Studios</td><td>Shanghai</td><td>60</td><td>220 million USD</td></tr>
+</tbody></table></div>
+
+<div><h2>Cinematography</h2><table><thead>
+<tr><th>id</th><th>MovieTitle</th><th>CinematographerName</th><th>ShootingFormat</th><th>AspectRatio</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Titanic</td><td>Russell Carpenter</td><td>Film</td><td>2.39:1</td></tr>
+<tr><td>2</td><td>Avatar</td><td>Mauro Fiore</td><td>Digital 3-D</td><td>2.39:1</td></tr>
+<tr><td>3</td><td>Blade Runner</td><td>Roger Deakins</td><td>Film</td><td>2.35:1</td></tr>
+<tr><td>4</td><td>The Dark Knight</td><td>Wally Pfister</td><td>Film</td><td>2.39:1</td></tr>
+<tr><td>5</td><td>Interstellar</td><td>Hoyte Van Hoytema</td><td>IMAX & Digital 3-D</td><td>2.39:1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

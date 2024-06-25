@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Business_Profession</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">profession</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Sales Manager</span></td></tr>
+<tr><td>2</td><td>Sales Associate</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Marketing Specialist</span></td></tr>
+<tr><td>4</td><td>Product Manager</td></tr>
+<tr><td>5</td><td>Data Analyst</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Working_Arrangement</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">arrangement</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Hybrid</span></td></tr>
+<tr><td>2</td><td>Remote</td></tr>
+<tr><td>3</td><td>Onsite</td></tr>
+<tr><td>4</td><td>Flexible</td></tr>
+<tr><td>5</td><td>In-office</td></tr>
+</tbody></table></div>
+
+<div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>industry</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>Technology</td><td>New York</td></tr>
+<tr><td>2</td><td>Finance Inc.</td><td>Financial Services</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Health Solutions</td><td>Healthcare</td><td>Chicago</td></tr>
+<tr><td>4</td><td>EcoFriendly</td><td>Environmental Services</td><td>San Francisco</td></tr>
+<tr><td>5</td><td>Travel World</td><td>Travel & Tourism</td><td>Miami</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Posting</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>required_skills</th><th>salary</th><th>post_date</th><th>business_profession_id</th><th>working_arrangement_id</th><th>company_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Business_Profession.id)</th><th>(&#8594; Working_Arrangement.id)</th><th>(&#8594; Company.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Senior Sales Manager</td><td>Lead a team of sales representatives...</td><td>Strong communication skills, leadership experience...</td><td>80000.0</td><td>2022-06-01</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Regional Sales Manager</td><td>Manage multiple territories across the country...</td><td>Strong negotiation skills, knowledge of CRM systems...</td><td>70000.0</td><td>2022-06-02</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Digital Marketing Specialist</td><td>Develop and execute digital marketing strategies...</td><td>SEO, SEM, social media management...</td><td>60000.0</td><td>2022-06-01</td><td>3</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>Market Research Specialist</td><td>Analyze market trends, customer behavior...</td><td>Statistical analysis, data visualization...</td><td>55000.0</td><td>2022-06-02</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>5</td><td>Software Engineer</td><td>Design and develop software applications...</td><td>JavaScript, Python, HTML/CSS...</td><td>90000.0</td><td>2022-06-01</td><td>4</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

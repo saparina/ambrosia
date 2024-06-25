@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Terminals</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal 1</td></tr>
+<tr><td>2</td><td>Terminal 2</td></tr>
+<tr><td>3</td><td>Terminal 3</td></tr>
+<tr><td>4</td><td>Terminal 4</td></tr>
+<tr><td>5</td><td>Terminal 5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Jet_Bridges</span></h2><table><thead>
+<tr><th>ID</th><th>BridgeName</th><th>TerminalID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Terminals.ID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Jet Bridge A</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Jet Bridge B</td><td>2</td></tr>
+<tr><td>3</td><td>Jet Bridge C</td><td>3</td></tr>
+<tr><td>4</td><td>Jet Bridge D</td><td>4</td></tr>
+<tr><td>5</td><td>Jet Bridge E</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Staircars</span></h2><table><thead>
+<tr><th>ID</th><th>CarName</th><th>TerminalID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Terminals.ID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Staircar X</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Staircar Y</td><td>2</td></tr>
+<tr><td>3</td><td>Staircar Z</td><td>3</td></tr>
+<tr><td>4</td><td>Staircar W</td><td>4</td></tr>
+<tr><td>5</td><td>Staircar V</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>AirlineID</th><th>CompanyName</th><th>HomeTerminalID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Terminals.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>1</td></tr>
+<tr><td>2</td><td>Company B</td><td>2</td></tr>
+<tr><td>3</td><td>Company C</td><td>3</td></tr>
+<tr><td>4</td><td>Company D</td><td>4</td></tr>
+<tr><td>5</td><td>Company E</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Languages</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>English</td></tr>
+<tr><td>2</td><td>Spanish</td></tr>
+<tr><td>3</td><td>French</td></tr>
+<tr><td>4</td><td>German</td></tr>
+<tr><td>5</td><td><span style="color:#006600">Chinese</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Customer_Service_Advisors</span></h2><table><thead>
+<tr><th>id</th><th>advisor_name</th><th>language_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Languages.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>3</td></tr>
+<tr><td>3</td><td>Carol</td><td>None</td></tr>
+<tr><td>4</td><td>Dave</td><td>5</td></tr>
+<tr><td>5</td><td>Eve</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">IT_Support_Technicians</span></h2><table><thead>
+<tr><th>id</th><th>technician_name</th><th>language_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Languages.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank</td><td>1</td></tr>
+<tr><td>2</td><td>Grace</td><td>3</td></tr>
+<tr><td>3</td><td>Hannah</td><td>None</td></tr>
+<tr><td>4</td><td>Isaac</td><td>5</td></tr>
+<tr><td>5</td><td>Jackie</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Postings</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>location</th><th>salary</th><th>posted_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CS Advisor</td><td>Assist customers via phone and email.</td><td>New York</td><td>60000</td><td>2024-03-13 20:10:28</td></tr>
+<tr><td>2</td><td>IT Support Tech</td><td>Troubleshoot hardware and software issues.</td><td>San Francisco</td><td>70000</td><td>2024-03-13 20:10:28</td></tr>
+<tr><td>3</td><td>Manager</td><td>Oversee operations of a department.</td><td>Los Angeles</td><td>90000</td><td>2024-03-13 20:10:28</td></tr>
+<tr><td>4</td><td>Engineer</td><td>Design and develop new products.</td><td>Chicago</td><td>80000</td><td>2024-03-13 20:10:28</td></tr>
+<tr><td>5</td><td>Analyst</td><td>Analyze data and provide insights.</td><td>Miami</td><td>75000</td><td>2024-03-13 20:10:28</td></tr>
+</tbody></table></div>
+
+<div><h2>CS_Jobs</h2><table><thead>
+<tr><th>job_posting_id</th><th>customer_service_advisor_id</th></tr>
+<tr><th>(&#8594; Job_Postings.id)</th><th>(&#8594; Customer_Service_Advisors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>IT_Jobs</h2><table><thead>
+<tr><th>job_posting_id</th><th>it_support_technician_id</th></tr>
+<tr><th>(&#8594; Job_Postings.id)</th><th>(&#8594; IT_Support_Technicians.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

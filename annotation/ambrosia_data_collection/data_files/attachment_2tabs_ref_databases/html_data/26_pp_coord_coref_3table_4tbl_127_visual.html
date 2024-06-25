@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>EventTypes</h2><table><thead>
+<tr><th>Id</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Conference</td></tr>
+<tr><td>2</td><td>Wedding Reception</td></tr>
+<tr><td>3</td><td>Corporate Party</td></tr>
+<tr><td>4</td><td>Gala Dinner</td></tr>
+<tr><td>5</td><td>Cocktail Party</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Venues</span></h2><table><thead>
+<tr><th>Id</th><th>Name</th><th><span style="color:#006600">SeatingCapacity</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Hotel</td><td>800</td></tr>
+<tr><td>2</td><td>Plaza Inn</td><td>600</td></tr>
+<tr><td>3</td><td>Central Conference Center</td><td><span style="color:#006600">1000</span></td></tr>
+<tr><td>4</td><td>Oceanview Resort</td><td>700</td></tr>
+<tr><td>5</td><td>City Hall</td><td>200</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Ballrooms</span></h2><table><thead>
+<tr><th>Id</th><th>VenueId</th><th>RoomNumber</th></tr>
+<tr><th></th><th>(&#8594; Venues.Id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Ballroom A</td></tr>
+<tr><td>2</td><td>2</td><td>Ballroom B</td></tr>
+<tr><td>3</td><td>3</td><td>Ballroom C</td></tr>
+<tr><td>4</td><td>4</td><td>Ballroom D</td></tr>
+<tr><td>5</td><td>5</td><td>Ballroom E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">GreenRooms</span></h2><table><thead>
+<tr><th>Id</th><th>VenueId</th><th>RoomNumber</th></tr>
+<tr><th></th><th>(&#8594; Venues.Id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Green Room A</td></tr>
+<tr><td>2</td><td>2</td><td>Green Room B</td></tr>
+<tr><td>3</td><td>3</td><td>Green Room C</td></tr>
+<tr><td>4</td><td>4</td><td>Green Room D</td></tr>
+<tr><td>5</td><td>5</td><td>Green Room E</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>Id</th><th>TypeId</th><th>StartDate</th><th>EndDate</th><th>VenueId</th></tr>
+<tr><th></th><th>(&#8594; EventTypes.Id)</th><th></th><th></th><th>(&#8594; Venues.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-09-01</td><td>2022-09-02</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2022-09-15</td><td>2022-09-16</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2022-10-01</td><td>2022-10-02</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>2022-10-15</td><td>2022-10-16</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>2022-11-01</td><td>2022-11-02</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

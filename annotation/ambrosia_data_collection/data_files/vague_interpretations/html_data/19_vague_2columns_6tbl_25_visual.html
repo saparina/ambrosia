@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>artists</h2><table><thead>
+<tr><th>id</th><th>name</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Beatles</td><td>Rock</td></tr>
+<tr><td>2</td><td>Michael Jackson</td><td>Pop</td></tr>
+<tr><td>3</td><td>Lady Gaga</td><td>Pop</td></tr>
+<tr><td>4</td><td>Elton John</td><td>Classic Rock</td></tr>
+<tr><td>5</td><td>Adele</td><td>Pop</td></tr>
+</tbody></table></div>
+
+<div><h2>concerts</h2><table><thead>
+<tr><th>id</th><th>artistId</th><th>date</th><th><span style="color:#990000">city</span></th><th><span style="color:#990000">concertHall</span></th></tr>
+<tr><th></th><th>(&#8594; artists.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-06-01</td><td>New York</td><td>Madison Square Garden</td></tr>
+<tr><td>2</td><td>2</td><td>2023-07-15</td><td>Los Angeles</td><td>Staples Center</td></tr>
+<tr><td>3</td><td>3</td><td>2023-08-30</td><td>Chicago</td><td>United Center</td></tr>
+<tr><td>4</td><td>4</td><td>2023-09-10</td><td>Dallas</td><td>American Airlines Center</td></tr>
+<tr><td>5</td><td>5</td><td>2023-10-01</td><td>Boston</td><td>TD Garden</td></tr>
+</tbody></table></div>
+
+<div><h2>venues</h2><table><thead>
+<tr><th>id</th><th>venueName</th><th>location</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Madison Square Garden</td><td>New York</td><td>20000</td></tr>
+<tr><td>2</td><td>Staples Center</td><td>Los Angeles</td><td>19000</td></tr>
+<tr><td>3</td><td>United Center</td><td>Chicago</td><td>23000</td></tr>
+<tr><td>4</td><td>American Airlines Center</td><td>Dallas</td><td>19000</td></tr>
+<tr><td>5</td><td>TD Garden</td><td>Boston</td><td>19000</td></tr>
+</tbody></table></div>
+
+<div><h2>tickets</h2><table><thead>
+<tr><th>id</th><th>concertId</th><th>price</th><th>quantity</th><th>type</th></tr>
+<tr><th></th><th>(&#8594; concerts.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100</td><td>1000</td><td>General Admission</td></tr>
+<tr><td>2</td><td>1</td><td>200</td><td>500</td><td>VIP</td></tr>
+<tr><td>3</td><td>2</td><td>120</td><td>1000</td><td>General Admission</td></tr>
+<tr><td>4</td><td>2</td><td>220</td><td>500</td><td>VIP</td></tr>
+<tr><td>5</td><td>3</td><td>150</td><td>1000</td><td>General Admission</td></tr>
+</tbody></table></div>
+
+<div><h2>users</h2><table><thead>
+<tr><th>id</th><th>username</th><th>email</th><th>passwordHash</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>user1</td><td>user1@example.com</td><td>passwordhash1</td></tr>
+<tr><td>2</td><td>user2</td><td>user2@example.com</td><td>passwordhash2</td></tr>
+<tr><td>3</td><td>user3</td><td>user3@example.com</td><td>passwordhash3</td></tr>
+<tr><td>4</td><td>user4</td><td>user4@example.com</td><td>passwordhash4</td></tr>
+<tr><td>5</td><td>user5</td><td>user5@example.com</td><td>passwordhash5</td></tr>
+</tbody></table></div>
+
+<div><h2>bookings</h2><table><thead>
+<tr><th>id</th><th>userId</th><th>ticketId</th><th>bookingDate</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; users.id)</th><th>(&#8594; tickets.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-02-19 13:13:50</td><td>Confirmed</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2024-02-19 13:13:50</td><td>Confirmed</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2024-02-19 13:13:50</td><td>Confirmed</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2024-02-19 13:13:50</td><td>Confirmed</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2024-02-19 13:13:50</td><td>Confirmed</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

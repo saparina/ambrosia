@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>ContentText</th><th>PublishDate</th><th>ViewCount</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1</td><td>Content of article 1...</td><td>2024-03-13 15:11:18</td><td>0</td><td>1</td></tr>
+<tr><td>2</td><td>Article 2</td><td>Content of article 2...</td><td>2024-03-13 15:11:18</td><td>0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Magazines</span></h2><table><thead>
+<tr><th>MagazineID</th><th><span style="color:#006600">Name</span></th><th>Category</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Good Housekeeping</span></td><td>Lifestyle</td></tr>
+<tr><td>2</td><td>Another Magazine</td><td>Technology</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">News_Industry</span></h2><table><thead>
+<tr><th>IndustryID</th><th><span style="color:#990000"><span style="color:#990000">EconomyColumn</span></span></th><th>MagazineID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Magazines.MagazineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Advertising Revenue</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Advertising Revenue</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Subscription Fees</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Subscription Fees</span></td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>SourceID</th><th>Name</th><th>Type</th><th>ContactEmail</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Newspaper A</td><td>Print</td><td>newspaperA@example.com</td></tr>
+<tr><td>2</td><td>Newspaper B</td><td>Online</td><td>newspaperB@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleSources</h2><table><thead>
+<tr><th>ArticleSourceID</th><th>ArticleID</th><th>SourceID</th><th>SourceQuote</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th>(&#8594; Sources.SourceID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Quote from Newspaper A on Article 1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Quote from Newspaper B on Article 2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

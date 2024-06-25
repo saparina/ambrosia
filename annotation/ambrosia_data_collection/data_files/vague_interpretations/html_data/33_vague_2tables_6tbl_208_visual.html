@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>20</td></tr>
+<tr><td>2</td><td>Bob</td><td>23</td></tr>
+<tr><td>3</td><td>Charlie</td><td>21</td></tr>
+<tr><td>4</td><td>Diana</td><td>22</td></tr>
+<tr><td>5</td><td>Evan</td><td>24</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Core_Concepts</span></h2><table><thead>
+<tr><th>concept_id</th><th>concept_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python Programming</td><td>A high-level programming language</td></tr>
+<tr><td>2</td><td>Linear Algebra</td><td>The study of vector spaces and linear mappings between them</td></tr>
+<tr><td>3</td><td>Calculus</td><td>The study of change and motion</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Advanced_Topics</span></h2><table><thead>
+<tr><th>topic_id</th><th>topic_name</th><th>difficulty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Advanced Python</td><td>Intermediate</td></tr>
+<tr><td>2</td><td>Multivariable Calculus</td><td>Advanced</td></tr>
+<tr><td>3</td><td>Tensor Analysis</td><td>Expert</td></tr>
+</tbody></table></div>
+
+<div><h2>School_Subjects</h2><table><thead>
+<tr><th>subject_id</th><th>subject_name</th><th>core_concept_id</th><th>advanced_topic_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Core_Concepts.concept_id)</th><th>(&#8594; Advanced_Topics.topic_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Python</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Linear Algebra Applications</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Single Variable Calculus</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>Multivariable Calculus Theory</td><td>3</td><td>3</td></tr>
+<tr><td>5</td><td>Tensor Methods in Physics</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>EnrolledStudents</h2><table><thead>
+<tr><th>enrollment_id</th><th>student_id</th><th>subject_id</th><th>grade</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th>(&#8594; School_Subjects.subject_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>87.6</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>92.1</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>81.5</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>79.3</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>98.5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Tourists</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th><span style="color:#186e16"><span style="color:#186e16">Activity</span></span></th><th><span style="color:#1430b2">Location</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#186e16">Tourist Attraction</span></td><td><span style="color:#1430b2">Portobello</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#186e16">Tourist Attraction</span></td><td>Somewhere Else</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td><span style="color:#186e16">Local Market</span></td><td><span style="color:#1430b2">Portobello</span></td></tr>
+<tr><td>4</td><td>Bob Brown</td><td><span style="color:#186e16">Local Market</span></td><td>Somewhere Else</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td><span style="color:#186e16">Tourist Attraction</span></td><td>Another Place</td></tr>
+</tbody></table></div>
+
+<div><h2>Markets</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Activity</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Central Food Market</td><td>Local Market</td><td>Portobello</td></tr>
+<tr><td>2</td><td>Downtown Groceries</td><td>Local Market</td><td>Somewhere Else</td></tr>
+<tr><td>3</td><td>Harbor Bazaar</td><td>Local Market</td><td>Another Place</td></tr>
+<tr><td>4</td><td>Uptown Fare</td><td>Local Market</td><td>Yet Another Place</td></tr>
+<tr><td>5</td><td>Riverfront Pantry</td><td>Local Market</td><td>A Different Place</td></tr>
+</tbody></table></div>
+
+<div><h2>Activities</h2><table><thead>
+<tr><th>ID</th><th>ActivityName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Eiffel Tower</td></tr>
+<tr><td>2</td><td>Colosseum</td></tr>
+<tr><td>3</td><td>Statue of Liberty</td></tr>
+<tr><td>4</td><td>Great Wall of China</td></tr>
+<tr><td>5</td><td>Christ the Redeemer</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>ID</th><th>LocationName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paris</td></tr>
+<tr><td>2</td><td>Rome</td></tr>
+<tr><td>3</td><td>New York City</td></tr>
+<tr><td>4</td><td>Beijing</td></tr>
+<tr><td>5</td><td>Rio de Janeiro</td></tr>
+</tbody></table></div>
+
+<div><h2>Visitors</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>DateOfVisit</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Thompson</td><td>2023-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>Emily Watson</td><td>2023-01-02 12:00:00</td></tr>
+<tr><td>3</td><td>David Jackson</td><td>2023-01-03 14:00:00</td></tr>
+<tr><td>4</td><td>Sophia King</td><td>2023-01-04 16:00:00</td></tr>
+<tr><td>5</td><td>Liam Scott</td><td>2023-01-05 18:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>VisitRecords</h2><table><thead>
+<tr><th>ID</th><th>VisitorID</th><th>TouristAttractionID</th><th>LocalMarketID</th></tr>
+<tr><th></th><th>(&#8594; Visitors.ID)</th><th>(&#8594; Tourists.ID)</th><th>(&#8594; Markets.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

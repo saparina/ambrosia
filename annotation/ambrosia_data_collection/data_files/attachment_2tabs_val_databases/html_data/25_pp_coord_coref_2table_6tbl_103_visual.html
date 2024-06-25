@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Science_Lab</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Capacity</th><th>Available_Resources</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Newton Lab</td><td>20</td><td>Microscopes</td></tr>
+<tr><td>2</td><td>Einstein Lab</td><td>30</td><td><span style="color:#006600">Computers</span></td></tr>
+<tr><td>3</td><td>Hawking Lab</td><td>25</td><td>Chemicals</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Art_Studio</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Capacity</th><th>Available_Resources</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>VanGogh Studio</td><td>15</td><td>Paints</td></tr>
+<tr><td>2</td><td>Dali Studio</td><td>20</td><td><span style="color:#006600">Computers</span></td></tr>
+<tr><td>3</td><td>Warhol Studio</td><td>18</td><td>Canvas</td></tr>
+</tbody></table></div>
+
+<div><h2>Teacher</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>Math</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>Physics</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>English</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>Biology</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Jones</td><td>16</td></tr>
+<tr><td>2</td><td>Emma</td><td>Williams</td><td>17</td></tr>
+<tr><td>3</td><td>Lucas</td><td>Taylor</td><td>15</td></tr>
+<tr><td>4</td><td>Olivia</td><td>Thompson</td><td>14</td></tr>
+<tr><td>5</td><td>Noah</td><td>Jackson</td><td>13</td></tr>
+</tbody></table></div>
+
+<div><h2>Class</h2><table><thead>
+<tr><th>ID</th><th>Classroom</th><th>Time</th><th>Day</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Room A</td><td>9</td><td>Monday</td></tr>
+<tr><td>2</td><td>Room B</td><td>10</td><td>Tuesday</td></tr>
+<tr><td>3</td><td>Room C</td><td>11</td><td>Wednesday</td></tr>
+<tr><td>4</td><td>Room D</td><td>12</td><td>Thursday</td></tr>
+<tr><td>5</td><td>Room E</td><td>13</td><td>Friday</td></tr>
+</tbody></table></div>
+
+<div><h2>Assigns</h2><table><thead>
+<tr><th>TeacherID</th><th>StudentID</th><th>ClassID</th></tr>
+<tr><th>(&#8594; Teacher.ID)</th><th>(&#8594; Student.ID)</th><th>(&#8594; Class.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

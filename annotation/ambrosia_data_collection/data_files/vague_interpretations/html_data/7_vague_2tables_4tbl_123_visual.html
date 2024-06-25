@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>RoomTypes</h2><table><thead>
+<tr><th>id</th><th>typeName</th><th>capacity</th><th>pricePerNight</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Standard</td><td>3</td><td>100.99</td></tr>
+<tr><td>2</td><td>Deluxe</td><td>4</td><td>150.99</td></tr>
+<tr><td>3</td><td>Suite</td><td>6</td><td>200.99</td></tr>
+<tr><td>4</td><td>Family Suite</td><td>7</td><td>250.99</td></tr>
+<tr><td>5</td><td>Executive Suite</td><td>8</td><td>300.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>id</th><th>customerId</th><th>roomTypeId</th><th>checkInDate</th><th>checkOutDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th>(&#8594; RoomTypes.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-06-01</td><td>2022-06-05</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-06-05</td><td>2022-06-10</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-06-10</td><td>2022-06-14</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-06-14</td><td>2022-06-18</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-06-18</td><td>2022-06-22</td></tr>
+</tbody></table></div>
+
+<div><h2>Payments</h2><table><thead>
+<tr><th>id</th><th>reservationId</th><th>amountPaid</th><th>paymentMethod</th><th>transactionTime</th></tr>
+<tr><th></th><th>(&#8594; Reservations.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>300</td><td>Credit Card</td><td>2022-06-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>600</td><td>Debit Card</td><td>2022-06-05 14:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>900</td><td>PayPal</td><td>2022-06-10 08:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>1200</td><td>Wire Transfer</td><td>2022-06-14 12:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>1500</td><td>Cash</td><td>2022-06-18 16:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>CruiseShips</h2><table><thead>
+<tr><th>port</th><th>city</th><th>shipName</th><th>maxCapacity</th></tr>
+<tr><th>(&#8594; Ports.name)</th><th>(&#8594; Cities.name)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>PortMiami</td><td>Miami</td><td>Queen Mary II</td><td>2620</td></tr>
+<tr><td>World Trade Center Barcelona</td><td>Barcelona</td><td>Allure of the Seas</td><td>5400</td></tr>
+<tr><td>Terminal Passeggeri di Venezia</td><td>Venice</td><td>Seabourn Odyssey</td><td>458</td></tr>
+<tr><td>Kowloon Dockyard</td><td>Hong Kong</td><td>Golden Era</td><td>1400</td></tr>
+<tr><td>HarbourFront Centre</td><td>Singapore</td><td>Mariner of the Seas</td><td>3804</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Ports</span></h2><table><thead>
+<tr><th>name</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>PortMiami</td><td>USA</td></tr>
+<tr><td>World Trade Center Barcelona</td><td>Spain</td></tr>
+<tr><td>Terminal Passeggeri di Venezia</td><td>Italy</td></tr>
+<tr><td>Kowloon Dockyard</td><td>China</td></tr>
+<tr><td>HarbourFront Centre</td><td>Singapore</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Cities</span></h2><table><thead>
+<tr><th>name</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>Miami</td><td>USA</td></tr>
+<tr><td>Barcelona</td><td>Spain</td></tr>
+<tr><td>Venice</td><td>Italy</td></tr>
+<tr><td>Hong Kong</td><td>China</td></tr>
+<tr><td>Singapore</td><td>Singapore</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Magazine</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Social_Media</th><th>Email_Newsletters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The New Yorker</td><td>https://www.facebook.com/newyorkermag</td><td>newsletter@thenewyorker.com</td></tr>
+<tr><td>2</td><td>Wired</td><td>https://www.twitter.com/wired</td><td>newsletter@wired.com</td></tr>
+<tr><td>3</td><td>National Geographic</td><td>https://www.instagram.com/natgeo</td><td>newsletter@nationalgeographic.com</td></tr>
+<tr><td>4</td><td>Time</td><td>https://www.linkedin.com/company/time</td><td>newsletter@time.com</td></tr>
+<tr><td>5</td><td>New Scientist</td><td>https://www.youtube.com/c/newscientistvideos</td><td>newsletter@newscientist.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Author</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Bio</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>A writer based in London.</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>An author who loves travelling and writing about her experiences.</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>A renowned journalist known for his investigative work.</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>An expert on environmental issues.</td></tr>
+<tr><td>5</td><td>William</td><td>Black</td><td>A political analyst and commentator.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Article</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>PublishDate</th><th><span style="color:#006600">MagazineID</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Magazine.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Future of AI</td><td>AI is changing our world...</td><td>2024-03-13 20:53:33</td><td>1</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>Climate Change Effects</td><td>Effects of climate change...</td><td><span style="color:#006600">2</span>0<span style="color:#006600">2</span>4-03-13 <span style="color:#006600">2</span>0:53:33</td><td><span style="color:#006600">2</span></td></tr>
+<tr><td>3</td><td>Exploring Mars</td><td>Details about recent discoveries...</td><td>2024-03-13 20:53:33</td><td>3</td></tr>
+<tr><td>4</td><td>Health Benefits of Exercise</td><td>Benefits of daily exercise...</td><td>2024-03-13 20:53:33</td><td>4</td></tr>
+<tr><td>5</td><td>Tech Trends of 2022</td><td>Predictions for the year ahead...</td><td>2024-03-13 20:53:33</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Readership</h2><table><thead>
+<tr><th>id</th><th>FullName</th><th>Age</th><th>City</th><th>Preferred_Magazines</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>28</td><td>Los Angeles</td><td>The New Yorker, Wired</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>35</td><td>Chicago</td><td>National Geographic, Time</td></tr>
+<tr><td>3</td><td>Michael Brown</td><td>42</td><td>San Francisco</td><td>New Scientist, National Geographic</td></tr>
+<tr><td>4</td><td>Emily White</td><td>31</td><td>Denver</td><td>The New Yorker, The Economist</td></tr>
+<tr><td>5</td><td>William Black</td><td>47</td><td>Seattle</td><td>Time, Forbes</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscription</h2><table><thead>
+<tr><th>id</th><th>ReaderID</th><th>MagazineID</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Readership.id)</th><th>(&#8594; Magazine.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-02-01</td><td>2022-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-03-01</td><td>2023-02-28</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-04-01</td><td>2023-03-31</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-05-01</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Comment</h2><table><thead>
+<tr><th>id</th><th>Content</th><th>ArticleID</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Article.id)</th><th>(&#8594; Author.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great article!</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Very informative piece.</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Interesting insights.</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Well-written and engaging.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>I enjoyed this perspective.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>Queens, NY</td><td>USA</td></tr>
+<tr><td>2</td><td>Heathrow Airport</td><td>London, UK</td><td>UK</td></tr>
+<tr><td>3</td><td>Charles de Gaulle</td><td>Paris, France</td><td>France</td></tr>
+<tr><td>4</td><td>Dubai International</td><td>Dubai, UAE</td><td>UAE</td></tr>
+<tr><td>5</td><td>Tokyo Haneda</td><td>Tokyo, Japan</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Facilities</span></h2><table><thead>
+<tr><th>id</th><th>facilityType</th><th><span style="color:#006600">openingHours</span></th><th>airportId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Restaurant</td><td>9 AM to 11 PM</td><td>1</td></tr>
+<tr><td>2</td><td>Shopping Center</td><td>6 AM to 10 PM</td><td>2</td></tr>
+<tr><td>3</td><td>Restroom</td><td><span style="color:#006600">24 Hours</span></td><td>3</td></tr>
+<tr><td>4</td><td>Luggage Storage</td><td>7 AM to 8 PM</td><td>4</td></tr>
+<tr><td>5</td><td>Currency Exchange</td><td>7 AM to 9 PM</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Restaurants</span></h2><table><thead>
+<tr><th>id</th><th>restaurantName</th><th>rating</th><th>facilitiesId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Facilities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cafe des Amis</td><td>4.5</td><td>1</td></tr>
+<tr><td>2</td><td>The Great British Fish and Chips</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>Ramen House</td><td>4.5</td><td>3</td></tr>
+<tr><td>4</td><td>Pizza Express</td><td>3.5</td><td>4</td></tr>
+<tr><td>5</td><td>Burger Joint</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Bars</span></h2><table><thead>
+<tr><th>id</th><th>barName</th><th>capacity</th><th>facilitiesId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Facilities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Moonshine Bar</td><td>50</td><td>1</td></tr>
+<tr><td>2</td><td>Wine Cellar</td><td>30</td><td>2</td></tr>
+<tr><td>3</td><td>Beer Garden</td><td>100</td><td>3</td></tr>
+<tr><td>4</td><td>Martini Lounge</td><td>50</td><td>4</td></tr>
+<tr><td>5</td><td>Whisky Room</td><td>40</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

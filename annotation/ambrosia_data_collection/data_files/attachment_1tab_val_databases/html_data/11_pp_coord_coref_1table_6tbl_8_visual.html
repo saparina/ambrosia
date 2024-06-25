@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>name</th><th>headquarter_city</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Delta</td><td>Atlanta</td></tr>
+<tr><td>2</td><td>United</td><td>Chicago</td></tr>
+<tr><td>3</td><td>Southwest</td><td>Dallas</td></tr>
+<tr><td>4</td><td>American</td><td>Fort Worth</td></tr>
+<tr><td>5</td><td>Alaska</td><td>Seattle</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>flight_id</th><th>airline_id</th><th>departure_time</th><th>arrival_time</th><th>origin_airport</th><th>destination_airport</th></tr>
+<tr><th></th><th>(&#8594; Airlines.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-08-01 09:00:00</td><td>2023-08-01 11:00:00</td><td>ATL</td><td>LAX</td></tr>
+<tr><td>2</td><td>2</td><td>2023-08-01 10:00:00</td><td>2023-08-01 12:00:00</td><td>ORD</td><td>IAD</td></tr>
+<tr><td>3</td><td>3</td><td>2023-08-01 11:00:00</td><td>2023-08-01 13:00:00</td><td>DFW</td><td>MIA</td></tr>
+<tr><td>4</td><td>4</td><td>2023-08-01 12:00:00</td><td>2023-08-01 14:00:00</td><td>SEA</td><td>PHX</td></tr>
+<tr><td>5</td><td>1</td><td>2023-08-01 15:00:00</td><td>2023-08-01 17:00:00</td><td>ATL</td><td>LAX</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircrafts</h2><table><thead>
+<tr><th>aircraft_id</th><th>model</th><th>capacity</th><th>current_flight_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Flight.flight_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 767</td><td>200</td><td>None</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>150</td><td>None</td></tr>
+<tr><td>3</td><td>Embraer E190</td><td>80</td><td>None</td></tr>
+<tr><td>4</td><td>Bombardier CRJ700</td><td>50</td><td>None</td></tr>
+<tr><td>5</td><td>Airbus A380</td><td>400</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passenger_id</th><th>first_name</th><th>last_name</th><th>date_of_birth</th><th>passport_number</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1990-05-15</td><td>AB1234CD</td><td>johnsmith@email.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Anna</td><td>Karenina</td><td>1985-06-20</td><td>EF5678GH</td><td>annakarenina@email.com</td><td>+1234567890</td></tr>
+<tr><td>3</td><td>Michael</td><td>Scott</td><td>1970-07-10</td><td>JK987LN</td><td>mscott@email.com</td><td>+1234567890</td></tr>
+<tr><td>4</td><td>Emma</td><td>Swanson</td><td>1995-08-05</td><td>LM890QP</td><td>emmaswanson@email.com</td><td>+1234567890</td></tr>
+<tr><td>5</td><td>Daniel</td><td>Plainview</td><td>1960-09-15</td><td>NO456RP</td><td>danielplainview@email.com</td><td>+1234567890</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>booking_id</th><th>flight_id</th><th>passenger_id</th><th>seat_number</th></tr>
+<tr><th></th><th>(&#8594; Flight.flight_id)</th><th>(&#8594; Passengers.passenger_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>12B</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>22E</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>28D</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>1F</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Transportations</span></h2><table><thead>
+<tr><th>transportation_id</th><th>service_type</th><th>pick_up_location</th><th>drop_off_location</th><th>available_hours</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Rental Car</span></td><td>Zone D</td><td>Terminal B</td><td>08:00:00</td><td>50</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Rental Car</span></td><td><span style="color:#006600">Zone C</span></td><td>Terminal A</td><td>08:00:00</td><td>50</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Airport Shuttle</span></td><td>Zone D</td><td>Terminal B</td><td>08:00:00</td><td>20</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Airport Shuttle</span></td><td><span style="color:#006600">Zone C</span></td><td>Terminal A</td><td>08:00:00</td><td>20</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

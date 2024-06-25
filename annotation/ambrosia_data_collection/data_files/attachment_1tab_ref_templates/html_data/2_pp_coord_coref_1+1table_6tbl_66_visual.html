@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>Origin</th><th>Destination</th><th>DepartureTime</th><th>ArrivalTime</th><th>AirlineID</th><th>PlaneID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Airlines.AirlineID)</th><th>(&#8594; Planes.PlaneID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Seattle</td><td>New York</td><td>2023-04-01 10:00:00</td><td>2023-04-01 14:00:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>Chicago</td><td>2023-04-01 12:00:00</td><td>2023-04-01 16:00:00</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>San Francisco</td><td>Houston</td><td>2023-04-01 14:00:00</td><td>2023-04-01 18:00:00</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Dallas</td><td>Atlanta</td><td>2023-04-01 16:00:00</td><td>2023-04-01 20:00:00</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Miami</td><td>Philadelphia</td><td>2023-04-01 18:00:00</td><td>2023-04-01 22:00:00</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Passengers</span></h2><table><thead>
+<tr><th>PassengerID</th><th>Name</th><th>Age</th><th><span style="color:#186e16">BoardingType</span></th><th>FlightID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Flights.FlightID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>35</td><td><span style="color:#186e16">Priority Boarding</span></td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>Family Boarding</td><td>1</td></tr>
+<tr><td>3</td><td>Emily Johnson</td><td>32</td><td><span style="color:#186e16">Priority Boarding</span></td><td>2</td></tr>
+<tr><td>4</td><td>Robert Brown</td><td>40</td><td>Family Boarding</td><td>2</td></tr>
+<tr><td>5</td><td>Tom Wilson</td><td>25</td><td><span style="color:#186e16">Priority Boarding</span></td><td>3</td></tr>
+<tr><td>6</td><td>Linda Davis</td><td>30</td><td>Family Boarding</td><td>3</td></tr>
+<tr><td>7</td><td>David Miller</td><td>22</td><td><span style="color:#186e16">Priority Boarding</span></td><td>4</td></tr>
+<tr><td>8</td><td>Sarah Taylor</td><td>28</td><td>Family Boarding</td><td>4</td></tr>
+<tr><td>9</td><td>Mark Lee</td><td>35</td><td><span style="color:#186e16">Priority Boarding</span></td><td>5</td></tr>
+<tr><td>10</td><td>Laura Kim</td><td>30</td><td>Family Boarding</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>PlaneID</th><th>Model</th><th>Capacity</th></tr>
+<tr><th>(&#8594; Flights.PlaneID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td><td>200</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>519</td></tr>
+<tr><td>3</td><td>Embraer E190</td><td>100</td></tr>
+<tr><td>4</td><td>Bombardier CRJ900</td><td>100</td></tr>
+<tr><td>5</td><td>Boeing 747</td><td>600</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Airlines</span></h2><table><thead>
+<tr><th>AirlineID</th><th><span style="color:#1430b2">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alaskan Airlines</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">United Airlines</span></td></tr>
+<tr><td>3</td><td>Delta Airlines</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td></tr>
+<tr><td>5</td><td>American Airlines</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

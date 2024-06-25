@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Blues_Songs</span></h2><table><thead>
+<tr><th>id</th><th>Song</th><th>Singer</th><th>YearOfRelease</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Hellhound on My Trail</td><td><span style="color:#006600">John Hurt</span></td><td>1972</td><td>Blues</td></tr>
+<tr><td>2</td><td>Crossroads</td><td>Robert Johnson</td><td>1936</td><td>Blues</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Folk_Songs</span></h2><table><thead>
+<tr><th>id</th><th>Song</th><th>Singer</th><th>YearOfRelease</th><th>Instrument</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>House of the Rising Sun</td><td><span style="color:#006600">John Hurt</span></td><td>1980</td><td>Guitar</td></tr>
+<tr><td>2</td><td>Dust Bowl Ballads</td><td>Woody Guthrie</td><td>1940</td><td>Acoustic Guitar</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Genres</h2><table><thead>
+<tr><th>id</th><th>GenreName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drama</td></tr>
+<tr><td>2</td><td>Action</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>Director</th><th>GenreID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Movie_Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Casablanca</td><td>1942</td><td>Michael Curtiz</td><td>1</td></tr>
+<tr><td>2</td><td>Die Hard</td><td>1988</td><td>John McTiernan</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bruce Willis</td><td>1955-03-19</td></tr>
+<tr><td>2</td><td>Humphrey Bogart</td><td>1899-12-25</td></tr>
+</tbody></table></div>
+
+<div><h2>Casts</h2><table><thead>
+<tr><th>MovieID</th><th>ActorID</th><th>Role</th></tr>
+<tr><th>(&#8594; Movies.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Rick Blaine</td></tr>
+<tr><td>1</td><td>2</td><td>Captain Louis Renault</td></tr>
+<tr><td>2</td><td>1</td><td>John McClane</td></tr>
+<tr><td>2</td><td>3</td><td>Al Powell</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

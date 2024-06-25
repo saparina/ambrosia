@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Cruise_Ships</span></h2><table><thead>
+<tr><th>ShipID</th><th>Name</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ocean Jewel</td><td>2000</td></tr>
+<tr><td>2</td><td>Mediterranean Treasure</td><td>3000</td></tr>
+<tr><td>3</td><td>Caribbean Dream</td><td>4000</td></tr>
+<tr><td>4</td><td>Atlantic Explorer</td><td>3500</td></tr>
+<tr><td>5</td><td>Pacific Wanderer</td><td>2500</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">All_Inclusive_Resorts</span></h2><table><thead>
+<tr><th>ResortID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tropical Paradise</td><td>Bahamas</td></tr>
+<tr><td>2</td><td>Beachside Bliss</td><td>Costa Rica</td></tr>
+<tr><td>3</td><td>Mountain Retreat</td><td>Colorado</td></tr>
+<tr><td>4</td><td>Desert Oasis</td><td>Arizona</td></tr>
+<tr><td>5</td><td>Lakeside Haven</td><td>Wisconsin</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>bob.williams@example.com</td></tr>
+<tr><td>5</td><td>Emily</td><td>Davis</td><td>emily.davis@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Activities</span></h2><table><thead>
+<tr><th>ActivityID</th><th><span style="color:#006600">Description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Dance Class</span></td></tr>
+<tr><td>2</td><td>Scuba Diving</td></tr>
+<tr><td>3</td><td>Yoga</td></tr>
+<tr><td>4</td><td>Golf</td></tr>
+<tr><td>5</td><td>Hiking</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>CustomerID</th><th>ShipID</th><th>ResortID</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Cruise_Ships.ShipID)</th><th>(&#8594; All_Inclusive_Resorts.ResortID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Participation</h2><table><thead>
+<tr><th>ParticipantID</th><th>BookingID</th><th>ActivityID</th></tr>
+<tr><th></th><th>(&#8594; Bookings.BookingID)</th><th>(&#8594; Activities.ActivityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

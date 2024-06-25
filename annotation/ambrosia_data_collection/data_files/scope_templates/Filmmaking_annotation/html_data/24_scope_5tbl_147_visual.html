@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Screenplays</span></h2><table><thead>
+<tr><th>screenplayID</th><th>title</th><th>director</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Christopher Nolan</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>Christopher Nolan</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>Christopher Nolan</td></tr>
+<tr><td>4</td><td>Pulp Fiction</td><td>Quentin Tarantino</td></tr>
+<tr><td>5</td><td>Reservoir Dogs</td><td>Quentin Tarantino</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Characters</span></h2><table><thead>
+<tr><th>characterID</th><th><span style="color:#990000">roleType</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Protagonist</td></tr>
+<tr><td>2</td><td>Antagonist</td></tr>
+<tr><td>3</td><td>Supporting Role</td></tr>
+</tbody></table></div>
+
+<div><h2>Screenplays_Characters</h2><table><thead>
+<tr><th>screenplayID</th><th>characterID</th></tr>
+<tr><th>(&#8594; Screenplays.screenplayID)</th><th>(&#8594; Characters.characterID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>directorID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Nolan</td></tr>
+<tr><td>2</td><td>Quentin</td><td>Tarantino</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>actorID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td></tr>
+<tr><td>2</td><td>Joseph</td><td>Gordon-Levitt</td></tr>
+<tr><td>3</td><td>Ellen</td><td>Page</td></tr>
+<tr><td>4</td><td>Tom</td><td>Hardy</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>filmID</th><th>title</th><th>releaseYear</th><th>directorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.directorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>2008</td><td>1</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>2014</td><td>1</td></tr>
+<tr><td>4</td><td>Pulp Fiction</td><td>1994</td><td>2</td></tr>
+<tr><td>5</td><td>Reservoir Dogs</td><td>1992</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Actors</h2><table><thead>
+<tr><th>filmID</th><th>actorID</th><th>role</th></tr>
+<tr><th>(&#8594; Films.filmID)</th><th>(&#8594; Actors.actorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Cobb</td></tr>
+<tr><td>1</td><td>3</td><td>Arthur</td></tr>
+<tr><td>2</td><td>1</td><td>Batman</td></tr>
+<tr><td>2</td><td>2</td><td>Rachel Dawes</td></tr>
+<tr><td>3</td><td>3</td><td>Cooper</td></tr>
+<tr><td>3</td><td>2</td><td>Ashley</td></tr>
+<tr><td>4</td><td>1</td><td>Vincent Vega</td></tr>
+<tr><td>4</td><td>4</td><td>Jules Winnfield</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

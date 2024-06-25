@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Actor</h2><table><thead>
+<tr><th>actorID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Tom</td><td>Cruise</td></tr>
+<tr><td>4</td><td>Emily</td><td>Brown</td></tr>
+<tr><td>5</td><td>Chris</td><td>Evans</td></tr>
+</tbody></table></div>
+
+<div><h2>Film</h2><table><thead>
+<tr><th>filmID</th><th>title</th><th>releaseYear</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Matrix</td><td>1999</td><td>Action</td></tr>
+<tr><td>2</td><td>Titanic</td><td>1997</td><td>Romance</td></tr>
+<tr><td>3</td><td>Indiana Jones</td><td>1981</td><td>Adventure</td></tr>
+<tr><td>4</td><td>Avengers Endgame</td><td>2019</td><td>Action</td></tr>
+<tr><td>5</td><td>Spider Man</td><td>2002</td><td>Action</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ActionFilm</span></h2><table><thead>
+<tr><th>actionFilmID</th><th>filmID</th><th>actionColumn</th></tr>
+<tr><th></th><th>(&#8594; Film.filmID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Fight Scenes</td></tr>
+<tr><td>2</td><td>2</td><td>Car Chases</td></tr>
+<tr><td>3</td><td>3</td><td>Explosions</td></tr>
+<tr><td>4</td><td>4</td><td>Superheroes</td></tr>
+<tr><td>5</td><td>5</td><td>Villain Monologues</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AdventureFilm</span></h2><table><thead>
+<tr><th>adventureFilmID</th><th>filmID</th><th>adventureColumn</th></tr>
+<tr><th></th><th>(&#8594; Film.filmID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Puzzle Solving</td></tr>
+<tr><td>2</td><td>2</td><td>Traveling</td></tr>
+<tr><td>3</td><td>3</td><td>Hidden Treasures</td></tr>
+<tr><td>4</td><td>4</td><td>Survival Skills</td></tr>
+<tr><td>5</td><td>5</td><td>Historical Locations</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">StarsInFilms</span></h2><table><thead>
+<tr><th>starsInFilmsID</th><th>actorID</th><th><span style="color:#006600">filmID</span></th></tr>
+<tr><th></th><th>(&#8594; Actor.actorID)</th><th>(&#8594; Film.filmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td><span style="color:#006600">5</span></td><td><span style="color:#006600">5</span></td><td><span style="color:#006600">5</span></td></tr>
+</tbody></table></div>
+
+<div><h2>FilmsByGenre</h2><table><thead>
+<tr><th>filmsByGenreID</th><th>filmID</th><th>genre</th></tr>
+<tr><th></th><th>(&#8594; Film.filmID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>2</td><td>Adventure</td></tr>
+<tr><td>3</td><td>3</td><td>Action</td></tr>
+<tr><td>4</td><td>4</td><td>Adventure</td></tr>
+<tr><td>5</td><td>5</td><td>Action</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

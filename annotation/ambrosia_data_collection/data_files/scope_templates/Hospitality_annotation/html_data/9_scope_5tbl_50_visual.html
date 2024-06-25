@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Gardening_Clubs</span></h2><table><thead>
+<tr><th>clubID</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sunshine Gardeners</td><td>New York</td></tr>
+<tr><td>2</td><td>Green Thumbs Society</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Floral Friends</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Blossom Bunch</td><td>Miami</td></tr>
+<tr><td>5</td><td>Nature Lovers</td><td>Dallas</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Plants</span></h2><table><thead>
+<tr><th>plantID</th><th><span style="color:#990000">type</span></th><th>careInstructions</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rose Bushes</td><td>Water regularly, prune dead leaves.</td></tr>
+<tr><td>2</td><td>Tomatoes</td><td>Keep well-watered but not overly saturated, provide ample sunlight.</td></tr>
+<tr><td>3</td><td>Pansies</td><td>Easy to grow, requires full sun and moist soil.</td></tr>
+<tr><td>4</td><td>Tulips</td><td>Prefer cool weather, plant bulbs in fall for spring blooms.</td></tr>
+<tr><td>5</td><td>Lavender</td><td>Needs well-draining soil, avoid overwatering.</td></tr>
+</tbody></table></div>
+
+<div><h2>Gardening_Clubs_Plants</h2><table><thead>
+<tr><th>gardeningClubID</th><th>plantID</th></tr>
+<tr><th>(&#8594; Gardening_Clubs.clubID)</th><th>(&#8594; Plants.plantID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Members</h2><table><thead>
+<tr><th>memberID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td></tr>
+<tr><td>5</td><td>Emma</td><td>Black</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>eventID</th><th>title</th><th>description</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Spring Planting Party</td><td>Celebrate the beginning of Spring!</td><td>2021-03-20</td></tr>
+<tr><td>2</td><td>Summer Bloom Festival</td><td>Show off your garden's best blooms.</td><td>2021-07-10</td></tr>
+<tr><td>3</td><td>Autumn Leaf Raking</td><td>Get ready for winter by raking leaves.</td><td>2021-10-01</td></tr>
+<tr><td>4</td><td>Winter Pruning Workshop</td><td>Learn how to properly prune plants for next year.</td><td>2021-12-12</td></tr>
+<tr><td>5</td><td>Annual Seed Swap</td><td>Exchange seeds and gardening tips with fellow members.</td><td>2022-02-20</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

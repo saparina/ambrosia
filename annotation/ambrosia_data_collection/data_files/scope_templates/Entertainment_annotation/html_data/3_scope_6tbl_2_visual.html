@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Plays</span></h2><table><thead>
+<tr><th>play_id</th><th>title</th><th>author</th><th>year_of_creation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>William Shakespeare</td><td>1603</td></tr>
+<tr><td>2</td><td>Othello</td><td>William Shakespeare</td><td>1603</td></tr>
+<tr><td>3</td><td>Macbeth</td><td>William Shakespeare</td><td>1606</td></tr>
+<tr><td>4</td><td>King Lear</td><td>William Shakespeare</td><td>1608</td></tr>
+<tr><td>5</td><td>Romeo and Juliet</td><td>William Shakespeare</td><td>1597</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Characters</span></h2><table><thead>
+<tr><th>character_id</th><th><span style="color:#990000">role</span></th><th><span style="color:#990000">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>protagonist</td><td>main</td></tr>
+<tr><td>2</td><td>supporting</td><td>secondary</td></tr>
+<tr><td>3</td><td>villain</td><td>antagonist</td></tr>
+</tbody></table></div>
+
+<div><h2>Plays_Characters</h2><table><thead>
+<tr><th>play_id</th><th>character_id</th></tr>
+<tr><th>(&#8594; Plays.play_id)</th><th>(&#8594; Characters.character_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>director_id</th><th>name</th><th>birth_year</th><th>death_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Peter Brook</td><td>1925</td><td>2022</td></tr>
+<tr><td>2</td><td>Nicholas Hytner</td><td>1954</td><td>None</td></tr>
+<tr><td>3</td><td>Michael Grandage</td><td>1962</td><td>None</td></tr>
+<tr><td>4</td><td>Sam Mendes</td><td>1965</td><td>None</td></tr>
+<tr><td>5</td><td>Sir Trevor Nunn</td><td>1930</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Productions</h2><table><thead>
+<tr><th>production_id</th><th>play_id</th><th>director_id</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th>(&#8594; Plays.play_id)</th><th>(&#8594; Directors.director_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2003-09-01</td><td>2003-10-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2004-09-01</td><td>2004-10-01</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2005-09-01</td><td>2005-10-01</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2006-09-01</td><td>2006-10-01</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2007-09-01</td><td>2007-10-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Awards</h2><table><thead>
+<tr><th>award_id</th><th>award_name</th><th>category</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Play</td><td>Play</td></tr>
+<tr><td>2</td><td>Best Director</td><td>Director</td></tr>
+<tr><td>3</td><td>Best Actor</td><td>Actor</td></tr>
+<tr><td>4</td><td>Best Actress</td><td>Actress</td></tr>
+<tr><td>5</td><td>Lifetime Achievement Award</td><td>Special</td></tr>
+</tbody></table></div>
+
+<div><h2>Play_Awards</h2><table><thead>
+<tr><th>play_award_id</th><th>play_id</th><th>award_id</th><th>year</th></tr>
+<tr><th></th><th>(&#8594; Plays.play_id)</th><th>(&#8594; Awards.award_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2003</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2004</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2005</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2006</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2007</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

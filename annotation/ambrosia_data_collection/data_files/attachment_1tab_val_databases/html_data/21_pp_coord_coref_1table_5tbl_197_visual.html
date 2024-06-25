@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Borders</span></h2><table><thead>
+<tr><th>ID</th><th>Customs</th><th>Immigration</th><th>OtherValues</th><th>AirportName</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Customs</span></td><td><span style="color:#990000">Immigration</span></td><td>None</td><td><span style="color:#006600">Gatwick</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Customs</span></td><td><span style="color:#990000">Immigration</span></td><td>None</td><td>Heathrow</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Immigration</span></td><td><span style="color:#990000">Customs</span></td><td>None</td><td><span style="color:#006600">Gatwick</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Immigration</span></td><td><span style="color:#990000">Customs</span></td><td>None</td><td>Stansted</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>Name</th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>Gatwick</td><td>London</td><td>UK</td></tr>
+<tr><td>Heathrow</td><td>London</td><td>UK</td></tr>
+<tr><td>Stansted</td><td>Essex</td><td>UK</td></tr>
+<tr><td>Charles de Gaulle</td><td>Paris</td><td>France</td></tr>
+<tr><td>Dubai International</td><td>Dubai</td><td>UAE</td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>RegistrationNumber</th><th>Model</th><th>Capacity</th><th>HomeAirportName</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.Name)</th></tr>
+</thead><tbody>
+<tr><td>ABCD1234</td><td>A380</td><td>400</td><td>Gatwick</td></tr>
+<tr><td>EFGH5678</td><td>Boeing777</td><td>350</td><td>Heathrow</td></tr>
+<tr><td>JKLZ9012</td><td>A320</td><td>200</td><td>Stansted</td></tr>
+<tr><td>MNOQ2345</td><td>A320</td><td>200</td><td>Charles de Gaulle</td></tr>
+<tr><td>PSTUV8901</td><td>Boeing747</td><td>400</td><td>Dubai International</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>FirstName</th><th>LastName</th><th>Nationality</th><th>FlightRegistrationNumber</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Planes.RegistrationNumber)</th></tr>
+</thead><tbody>
+<tr><td>John Doe</td><td>Smith</td><td>USA</td><td>ABCD1234</td></tr>
+<tr><td>Jane Smith</td><td>Jones</td><td>Canada</td><td>EFGH5678</td></tr>
+<tr><td>Emily Johnson</td><td>White</td><td>Australia</td><td>JKLZ9012</td></tr>
+<tr><td>David Brown</td><td>Black</td><td>New Zealand</td><td>MNOQ2345</td></tr>
+<tr><td>Lucy Green</td><td>Yellow</td><td>UK</td><td>PSTUV8901</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

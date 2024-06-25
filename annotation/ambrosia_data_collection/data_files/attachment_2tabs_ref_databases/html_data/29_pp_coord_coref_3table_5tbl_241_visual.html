@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Programming_Skills</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">skill</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python</td></tr>
+<tr><td>2</td><td>JavaScript</td></tr>
+<tr><td>3</td><td><span style="color:#006600">C++</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Software_Engineers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>hireDate</th></tr>
+<tr><th>(&#8594; Employees.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td><td>2021-06-01</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td><td>2021-07-01</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice.johnson@example.com</td><td>2021-08-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Data_Scientists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>hireDate</th></tr>
+<tr><th>(&#8594; Employees.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Brown</td><td>michael.brown@example.com</td><td>2021-09-01</td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>emily.davis@example.com</td><td>2021-10-01</td></tr>
+<tr><td>3</td><td>David Wilson</td><td>david.wilson@example.com</td><td>2021-11-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Postings</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>postDate</th><th>requiredSkillId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Programming_Skills.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frontend Developer</td><td>Develop and maintain web applications.</td><td>2021-12-01</td><td>1</td></tr>
+<tr><td>2</td><td>Backend Developer</td><td>Design and implement server-side logic.</td><td>2021-12-02</td><td>2</td></tr>
+<tr><td>3</td><td>Full Stack Developer</td><td>Build complete web applications.</td><td>2021-12-03</td><td>3</td></tr>
+<tr><td>4</td><td>Machine Learning Engineer</td><td>Implement machine learning algorithms.</td><td>2021-12-04</td><td>4</td></tr>
+<tr><td>5</td><td>Data Analyst</td><td>Analyze data and provide insights.</td><td>2021-12-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applies</h2><table><thead>
+<tr><th>id</th><th>jobId</th><th>applicantId</th><th>applyDate</th></tr>
+<tr><th></th><th>(&#8594; Job_Postings.id)</th><th>(&#8594; Employees.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-12-06</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-12-07</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-12-08</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-12-09</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-12-10</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>name</th><th>position</th><th>department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bob Lee</td><td>Software Engineer</td><td>Engineering</td></tr>
+<tr><td>2</td><td>Carol White</td><td>Data Scientist</td><td>Research</td></tr>
+<tr><td>3</td><td>Tom Green</td><td>Manager</td><td>Management</td></tr>
+<tr><td>4</td><td>Ann Black</td><td>HR Specialist</td><td>Human Resources</td></tr>
+<tr><td>5</td><td>Chris Red</td><td>Finance Officer</td><td>Finance</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

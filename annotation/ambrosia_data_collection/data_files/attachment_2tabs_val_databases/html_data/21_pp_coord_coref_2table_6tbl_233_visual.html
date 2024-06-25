@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">SocialWorkers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th><th>qualifications</th><th>area</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>7</td><td>MSW</td><td><span style="color:#006600">South Side</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>10</td><td>BSW</td><td>North Side</td></tr>
+<tr><td>3</td><td>Mary Johnson</td><td>6</td><td>BA in Psychology</td><td>West Side</td></tr>
+<tr><td>4</td><td>Robert Brown</td><td>8</td><td>MA in Social Work</td><td>East End</td></tr>
+<tr><td>5</td><td>Emily Davis</td><td>9</td><td>PhD in Sociology</td><td>Central District</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Counselors</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th><th>qualifications</th><th>area</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Miller</td><td>5</td><td>LCSW</td><td><span style="color:#006600">South Side</span></td></tr>
+<tr><td>2</td><td>Samantha Wilson</td><td>12</td><td>LMFT</td><td>North Side</td></tr>
+<tr><td>3</td><td>William Jackson</td><td>7</td><td>PhD in Clinical Psychology</td><td>West Side</td></tr>
+<tr><td>4</td><td>Laura Taylor</td><td>11</td><td>EdD in School Psychology</td><td>East End</td></tr>
+<tr><td>5</td><td>Elizabeth Thompson</td><td>6</td><td>MS in Mental Health Counseling</td><td>Central District</td></tr>
+</tbody></table></div>
+
+<div><h2>HoursPerWeek</h2><table><thead>
+<tr><th>id</th><th>hours_per_week</th><th>job_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Jobs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>40</td><td>1</td></tr>
+<tr><td>2</td><td>35</td><td>2</td></tr>
+<tr><td>3</td><td>40</td><td>3</td></tr>
+<tr><td>4</td><td>35</td><td>4</td></tr>
+<tr><td>5</td><td>40</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Locations</h2><table><thead>
+<tr><th>id</th><th>location</th><th>jobs_count</th></tr>
+<tr><th></th><th></th><th>(&#8594; Jobs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>East End</td><td>1</td></tr>
+<tr><td>2</td><td>South Side</td><td>2</td></tr>
+<tr><td>3</td><td>North Side</td><td>3</td></tr>
+<tr><td>4</td><td>West Side</td><td>4</td></tr>
+<tr><td>5</td><td>Central District</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

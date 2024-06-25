@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">City</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>population</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>8398748</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>3960215</td></tr>
+<tr><td>3</td><td>Chicago</td><td>2697391</td></tr>
+<tr><td>4</td><td>Houston</td><td>2326146</td></tr>
+<tr><td>5</td><td>Phoenix</td><td>1681115</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">State</span></h2><table><thead>
+<tr><th>id</th><th>full_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td></tr>
+<tr><td>2</td><td>California</td></tr>
+<tr><td>3</td><td>Illinois</td></tr>
+<tr><td>4</td><td>Texas</td></tr>
+<tr><td>5</td><td>Arizona</td></tr>
+</tbody></table></div>
+
+<div><h2>Campus</h2><table><thead>
+<tr><th>id</th><th>campus_name</th><th>city_id</th><th>state_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; City.id)</th><th>(&#8594; State.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York University</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>University of California Los Angeles</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>University of Chicago</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>University of Houston</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Arizona State University</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Teacher</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Wilson</td><td>david.wilson@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>teachesAt</h2><table><thead>
+<tr><th>teacherId</th><th>campusId</th><th>startDate</th><th>endDate</th></tr>
+<tr><th>(&#8594; Teacher.id)</th><th>(&#8594; Campus.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>4</td><td>4</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Emily</td><td>Davis</td><td>emily.davis@example.com</td></tr>
+<tr><td>2</td><td>Alexander</td><td>Martinez</td><td>alexander.martinez@example.com</td></tr>
+<tr><td>3</td><td>Olivia</td><td>Garcia</td><td>olivia.garcia@example.com</td></tr>
+<tr><td>4</td><td>William</td><td>Anderson</td><td>william.anderson@example.com</td></tr>
+<tr><td>5</td><td>Isabelle</td><td>Jackson</td><td>isabelle.jackson@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>enrolledIn</h2><table><thead>
+<tr><th>studentId</th><th>campusId</th><th>enrollmentStartDate</th></tr>
+<tr><th>(&#8594; Student.id)</th><th>(&#8594; Campus.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2021-01-01</td></tr>
+<tr><td>3</td><td>3</td><td>2021-01-01</td></tr>
+<tr><td>4</td><td>4</td><td>2021-01-01</td></tr>
+<tr><td>5</td><td>5</td><td>2021-01-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

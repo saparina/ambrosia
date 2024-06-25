@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Studio</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Warner Bros</span></td></tr>
+<tr><td>2</td><td>Universal Studios</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mystery</td></tr>
+<tr><td>2</td><td>Thriller</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th>studio_id</th><th>genre_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Studio.id)</th><th>(&#8594; Genre.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Maltese Falcon</td><td>1941-08-23</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Casablanca</td><td>1942-11-26</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Inception</td><td>2010-07-16</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>Gone Girl</td><td>2014-10-01</td><td>1</td><td>1</td></tr>
+<tr><td>5</td><td>Jaws</td><td>1975-06-20</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Mysteries</span></h2><table><thead>
+<tr><th>id</th><th>movie_id</th><th>clues</th><th>mystery_level</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Clue 1, Clue 2, Clue 3</td><td>8</td></tr>
+<tr><td>2</td><td>2</td><td>Hint 1, Hint 2, Hint 3</td><td>9</td></tr>
+<tr><td>3</td><td>3</td><td>Tip 1, Tip 2, Tip 3</td><td>7</td></tr>
+<tr><td>4</td><td>4</td><td>Puzzle 1, Puzzle 2, Puzzle 3</td><td>10</td></tr>
+<tr><td>5</td><td>5</td><td>Riddle 1, Riddle 2, Riddle 3</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Thrillers</span></h2><table><thead>
+<tr><th>id</th><th>movie_id</th><th>suspense_level</th><th>climax</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>9</td><td>Surprise ending</td></tr>
+<tr><td>2</td><td>2</td><td>10</td><td>High-speed chase</td></tr>
+<tr><td>3</td><td>3</td><td>8</td><td>Hostage situation</td></tr>
+<tr><td>4</td><td>4</td><td>7</td><td>Twist revelation</td></tr>
+<tr><td>5</td><td>5</td><td>6</td><td>Tension-filled confrontation</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

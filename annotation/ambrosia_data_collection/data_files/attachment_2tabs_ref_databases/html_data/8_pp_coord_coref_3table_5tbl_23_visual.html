@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>20</td></tr>
+<tr><td>2</td><td>Bob</td><td>21</td></tr>
+<tr><td>3</td><td>Charlie</td><td>22</td></tr>
+<tr><td>4</td><td>David</td><td>23</td></tr>
+<tr><td>5</td><td>Eva</td><td>24</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Exams</span></h2><table><thead>
+<tr><th>id</th><th>student_id</th><th>marks</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>85</td></tr>
+<tr><td>2</td><td>2</td><td>90</td></tr>
+<tr><td>3</td><td>3</td><td>75</td></tr>
+<tr><td>4</td><td>4</td><td>65</td></tr>
+<tr><td>5</td><td>5</td><td>80</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Quizzes</span></h2><table><thead>
+<tr><th>id</th><th>student_id</th><th>points</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>70</td></tr>
+<tr><td>2</td><td>2</td><td>85</td></tr>
+<tr><td>3</td><td>3</td><td>60</td></tr>
+<tr><td>4</td><td>4</td><td>55</td></tr>
+<tr><td>5</td><td>5</td><td>75</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Assessors</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Professor Smith</td></tr>
+<tr><td>2</td><td>Dr. Johnson</td></tr>
+<tr><td>3</td><td><span style="color:#006600">Ms. Brown</span></td></tr>
+<tr><td>4</td><td>Mr. White</td></tr>
+<tr><td>5</td><td>Mrs. Green</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>id</th><th>subject_name</th><th>assessor_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Assessors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td><td>1</td></tr>
+<tr><td>2</td><td>Physics</td><td>2</td></tr>
+<tr><td>3</td><td>Chemistry</td><td>3</td></tr>
+<tr><td>4</td><td>Biology</td><td>4</td></tr>
+<tr><td>5</td><td>History</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>StudentSubjects</h2><table><thead>
+<tr><th>student_id</th><th>subject_id</th></tr>
+<tr><th>(&#8594; Students.id)</th><th>(&#8594; Subjects.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

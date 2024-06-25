@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">WeatherConditions</span></h2><table><thead>
+<tr><th>id</th><th>Date</th><th>Time</th><th>Temperature</th><th>WindSpeed</th><th>FlightStatus</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01</td><td>2023-01-01 12:00:00</td><td>-5.0</td><td>20.0</td><td><span style="color:#006600">Cancelled</span></td></tr>
+<tr><td>2</td><td>2023-01-01</td><td>2023-01-01 18:00:00</td><td>25.0</td><td>10.0</td><td>On Schedule</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MechanicalIssues</span></h2><table><thead>
+<tr><th>id</th><th>AircraftID</th><th>IssueDate</th><th>IssueTime</th><th>Description</th><th>FlightStatus</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>2023-01-01 16:00:00</td><td>Engine malfunction</td><td><span style="color:#006600">Cancelled</span></td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-01</td><td>2023-01-01 19:00:00</td><td>Fuel leakage</td><td>On Schedule</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>IATAChar</th><th>ICAOChar</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York John F. Kennedy International Airport</td><td>Queens, New York City, NY</td><td>JFK</td><td>KJFK</td></tr>
+<tr><td>2</td><td>Los Angeles International Airport</td><td>Los Angeles County, California</td><td>LAX</td><td>KLAX</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>DepartureAirportId</th><th>ArrivalAirportId</th><th>ScheduledDeparture</th><th>ActualDeparture</th><th>ScheduledArrival</th><th>ActualArrival</th><th>FlightNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>2023-01-01 07:00:00</td><td>2023-01-01 07:10:00</td><td>2023-01-01 10:00:00</td><td>2023-01-01 10:10:00</td><td>101</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2023-01-01 12:00:00</td><td>2023-01-01 12:10:00</td><td>2023-01-01 15:00:00</td><td>2023-01-01 15:10:00</td><td>202</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilots</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>LicenseNumber</th><th>Rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>P0123456</td><td>ATPL</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>P7890123</td><td>ATPL</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>id</th><th>FullName</th><th>Age</th><th>TicketNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>30</td><td>301</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>45</td><td>302</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Students</span></h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Owner</th><th>Musical_Instrument</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-01-15</td><td><span style="color:#006600">Bob Smith</span></td><td><span style="color:#990000">Piano</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Roe</td><td>2007-06-22</td><td>Alice Johnson</td><td><span style="color:#990000">Piano</span></td></tr>
+<tr><td>3</td><td>Mike</td><td>Smith</td><td>2009-10-18</td><td><span style="color:#006600">Bob Smith</span></td><td><span style="color:#990000">Guitar</span></td></tr>
+<tr><td>4</td><td>Emma</td><td>Johnson</td><td>2011-12-03</td><td>Charlie Brown</td><td><span style="color:#990000">Guitar</span></td></tr>
+<tr><td>5</td><td>Tom</td><td>Hanks</td><td>1990-07-15</td><td>None</td><td>None</td></tr>
+<tr><td>6</td><td>Kate</td><td>Winslet</td><td>1975-10-05</td><td>David Beckham</td><td>Violin</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>Description</th><th>Credits</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Physics</td><td>This course covers basic physics concepts.</td><td>3</td></tr>
+<tr><td>2</td><td>Advanced Calculus</td><td>Delves deep into calculus theories.</td><td>4</td></tr>
+<tr><td>3</td><td>World History</td><td>A comprehensive look at world history.</td><td>5</td></tr>
+<tr><td>4</td><td>Modern Art</td><td>Study of modern art movements.</td><td>2</td></tr>
+<tr><td>5</td><td>Ancient Civilizations</td><td>Explore ancient civilizations around the globe.</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr</td><td>Smith</td><td>smith@email.com</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Ms</td><td>Doe</td><td>doe@email.com</td><td>9876543210</td></tr>
+<tr><td>3</td><td>Professor</td><td>Jones</td><td>jones@email.com</td><td>1112223334</td></tr>
+<tr><td>4</td><td>Dr</td><td>Brown</td><td>brown@email.com</td><td>4445556677</td></tr>
+<tr><td>5</td><td>Associate Professor</td><td>Black</td><td>black@email.com</td><td>7776665544</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>GradeID</th><th>StudentID</th><th>CourseID</th><th>FinalGrade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>85.5</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>92.3</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>78.2</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>89.7</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>94.5</td></tr>
+</tbody></table></div>
+
+<div><h2>Student_Music_Instrument</h2><table><thead>
+<tr><th>StudentID</th><th>Music_Instrument</th></tr>
+<tr><th>(&#8594; Students.StudentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Piano</td></tr>
+<tr><td>2</td><td>Guitar</td></tr>
+<tr><td>3</td><td>Flute</td></tr>
+<tr><td>4</td><td>Trumpet</td></tr>
+<tr><td>5</td><td>Clarinet</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

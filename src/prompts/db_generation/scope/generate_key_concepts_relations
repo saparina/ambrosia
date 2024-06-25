@@ -1,0 +1,22 @@
+Provide 50 examples on different topics in the DOMAIN domain in the following format:
+
+Each [Entity] has many different [Components]. Among them, [Specific Component] is common to many [Entities].
+
+Examples in different domains:
+
+Each University has many different Majors. Among them, Psychology is common to many
+Universities.
+Each Report has many different Sections. Among them, Introduction is common to many
+Reports.
+Each Hospital has many different Amenities. Among them, Waiting Room is common to many
+Hospitals.
+Each Musical has many different Roles. Among them, Narrator is common to many Musicals.
+Each Phone has many different Features. Among them, Touchscreen is common to many Phones.
+Each Museum has many different Events. Among them, Family Day is common to many Museums.
+Each Company has many different Departments. Among them, Human Resources is common to
+many Companies.
+Each Website has many different Pages. Among them, Homepage is common to many Websites.
+Each Restaurant has many different Dishes. Among them, Pizza is common to many Restaurants.
+Each Route has many different Stops. Among them, Transit Hub is common to many Routes.
+
+Examples in the DOMAIN domain:

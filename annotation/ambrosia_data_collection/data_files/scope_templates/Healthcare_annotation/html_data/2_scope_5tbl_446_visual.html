@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Insurance_Plan</span></h2><table><thead>
+<tr><th>PlanID</th><th>PlanName</th><th>MonthlyPremium</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Basic</td><td>30.99</td></tr>
+<tr><td>2</td><td>Standard</td><td>61.98</td></tr>
+<tr><td>3</td><td>Deluxe</td><td>120.97</td></tr>
+<tr><td>4</td><td>Premier</td><td>180.95</td></tr>
+<tr><td>5</td><td>Ultimate</td><td>240.92</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Coverage</span></h2><table><thead>
+<tr><th>CoverageID</th><th><span style="color:#990000">Description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Prescription Drugs</td></tr>
+<tr><td>2</td><td>Preventive Care</td></tr>
+<tr><td>3</td><td>Hospitalization</td></tr>
+<tr><td>4</td><td>Mental Health Services</td></tr>
+<tr><td>5</td><td>Laboratory Tests</td></tr>
+</tbody></table></div>
+
+<div><h2>Insurance_Plan_Coverage</h2><table><thead>
+<tr><th>PlanID</th><th>CoverageID</th></tr>
+<tr><th>(&#8594; Insurance_Plan.PlanID)</th><th>(&#8594; Coverage.CoverageID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Patient</h2><table><thead>
+<tr><th>PatientID</th><th>Name</th><th>DOB</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1990-01-01</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1992-02-02</td></tr>
+<tr><td>3</td><td>Tom Johnson</td><td>1988-03-03</td></tr>
+<tr><td>4</td><td>Emily Brown</td><td>1994-04-04</td></tr>
+<tr><td>5</td><td>William Davis</td><td>1996-05-05</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctor</h2><table><thead>
+<tr><th>DoctorID</th><th>Name</th><th>Specialty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. John Wilson</td><td>Cardiology</td></tr>
+<tr><td>2</td><td>Dr. Jane Thompson</td><td>Gastroenterology</td></tr>
+<tr><td>3</td><td>Dr. Tom Harris</td><td>Neurology</td></tr>
+<tr><td>4</td><td>Dr. Emily Martin</td><td>Orthopedics</td></tr>
+<tr><td>5</td><td>Dr. William Lee</td><td>Endocrinology</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointment</h2><table><thead>
+<tr><th>AppointmentID</th><th>Date</th><th>Reason</th><th>PatientID</th><th>DoctorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Patient.PatientID)</th><th>(&#8594; Doctor.DoctorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 10:00:00</td><td>Annual checkup</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2022-02-01 14:00:00</td><td>Follow-up visit</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2022-03-01 09:00:00</td><td>Consultation</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2022-04-01 11:00:00</td><td>Wound care</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2022-05-01 13:00:00</td><td>Diabetes management</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

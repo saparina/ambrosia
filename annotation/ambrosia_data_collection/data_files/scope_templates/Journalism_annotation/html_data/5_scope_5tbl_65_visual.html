@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Art_Critics</span></h2><table><thead>
+<tr><th>CriticID</th><th>Name</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Smith</td><td>alice@artcritics.com</td></tr>
+<tr><td>2</td><td>Bob Johnson</td><td>bob@artcritics.com</td></tr>
+<tr><td>3</td><td>Carol Williams</td><td>carol@artcritics.com</td></tr>
+<tr><td>4</td><td>David Brown</td><td>david@artcritics.com</td></tr>
+<tr><td>5</td><td>Eva Green</td><td>eva@artcritics.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Mediums</span></h2><table><thead>
+<tr><th>MediumID</th><th><span style="color:#990000">Type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Painting</td></tr>
+<tr><td>2</td><td>Photography</td></tr>
+<tr><td>3</td><td>Sculpture</td></tr>
+<tr><td>4</td><td>Graphic Design</td></tr>
+<tr><td>5</td><td>Digital Art</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Evolution of Modern Painting</td><td>This article discusses...</td><td>2021-11-01</td></tr>
+<tr><td>2</td><td>Breaking Barriers: The Impact of Photography on Society</td><td>In this piece...</td><td>2021-11-10</td></tr>
+<tr><td>3</td><td>A Deep Dive Into Contemporary Sculpture</td><td>Exploring the world of...</td><td>2021-11-17</td></tr>
+<tr><td>4</td><td>The Future of Graphic Design: Trends and Predictions</td><td>An insightful look at...</td><td>2021-11-25</td></tr>
+<tr><td>5</td><td>The Rise of Digital Art: How Technology is Shaping Creativity</td><td>Discover how...</td><td>2021-12-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Williams</td></tr>
+<tr><td>4</td><td>Emily</td><td>Davis</td></tr>
+<tr><td>5</td><td>Thomas</td><td>Martin</td></tr>
+</tbody></table></div>
+
+<div><h2>Art_Critics_Mediums</h2><table><thead>
+<tr><th>CriticID</th><th>MediumID</th></tr>
+<tr><th>(&#8594; Art_Critics.CriticID)</th><th>(&#8594; Mediums.MediumID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

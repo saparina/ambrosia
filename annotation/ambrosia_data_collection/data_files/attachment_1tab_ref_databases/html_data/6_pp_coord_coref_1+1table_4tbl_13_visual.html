@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>GradeLevel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>12</td><td>7</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>13</td><td>8</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>9</td><td>6</td></tr>
+<tr><td>4</td><td>Tom</td><td>Green</td><td>14</td><td>9</td></tr>
+<tr><td>5</td><td>Mike</td><td>Black</td><td>10</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Classrooms</h2><table><thead>
+<tr><th>ClassroomID</th><th>RoomNumber</th><th>TotalCapacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A01</td><td>30</td></tr>
+<tr><td>2</td><td>A02</td><td>35</td></tr>
+<tr><td>3</td><td>A03</td><td>40</td></tr>
+<tr><td>4</td><td>A04</td><td>45</td></tr>
+<tr><td>5</td><td>A05</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2>Educators</h2><table><thead>
+<tr><th>EducatorID</th><th>FirstName</th><th>LastName</th><th>SubjectTaught</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Smith</td><td>Math</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Davis</td><td>English</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Martin</td><td>History</td></tr>
+<tr><td>4</td><td>Mrs.</td><td>Wilson</td><td>Art</td></tr>
+<tr><td>5</td><td>Miss</td><td>Garcia</td><td>Music</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>ClassroomID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Classrooms.ClassroomID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Activities</span></h2><table><thead>
+<tr><th>ActivityID</th><th><span style="color:#990000"><span style="color:#990000">ActivityType</span></span></th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Educators.SubjectTaught)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Field Trip</span></td><td>None</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Study Hall</span></td><td>None</td></tr>
+<tr><td>3</td><td>Laboratory Experiment</td><td>None</td></tr>
+<tr><td>4</td><td>Outdoor Sports</td><td>None</td></tr>
+<tr><td>5</td><td>Art Exhibition</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">ActivitySchedule</span></h2><table><thead>
+<tr><th>ScheduleID</th><th>ActivityID</th><th>ClassroomID</th><th><span style="color:#006600">NumberOfStudents</span></th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; Activities.ActivityID)</th><th>(&#8594; Classrooms.ClassroomID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td><span style="color:#006600">50</span></td><td>2023-05-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td><span style="color:#006600">50</span></td><td>2023-05-01 13:00:00</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>25</td><td>2023-05-01 14:00:00</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>40</td><td>2023-05-01 15:00:00</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>30</td><td>2023-05-01 16:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

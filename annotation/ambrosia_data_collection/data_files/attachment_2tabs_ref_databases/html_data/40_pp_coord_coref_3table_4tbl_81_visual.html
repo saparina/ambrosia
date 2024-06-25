@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genres</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Drama</td></tr>
+<tr><td>3</td><td>Fantasy</td></tr>
+<tr><td>4</td><td>Comedy</td></tr>
+<tr><td>5</td><td>Horror</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Films</span></h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>Release_Year</th><th>GENRE_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genres.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>The Irishman</td><td>2019</td><td>3</td></tr>
+<tr><td>3</td><td>Harry Potter and the Deathly Hallows Part 2</td><td>2011</td><td>4</td></tr>
+<tr><td>4</td><td>Jumanji: Welcome to the Jungle</td><td>2017</td><td>2</td></tr>
+<tr><td>5</td><td>Get Out</td><td>2017</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Novels</span></h2><table><thead>
+<tr><th>NovelID</th><th>Title</th><th>Author</th><th>Publish_Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>To Kill a Mockingbird</td><td>Harper Lee</td><td>1960</td></tr>
+<tr><td>2</td><td>Pride and Prejudice</td><td>Jane Austen</td><td>1813</td></tr>
+<tr><td>3</td><td>1984</td><td>George Orwell</td><td>1949</td></tr>
+<tr><td>4</td><td>A Tale of Two Cities</td><td>Charles Dickens</td><td>1859</td></tr>
+<tr><td>5</td><td>Brave New World</td><td>Aldous Huxley</td><td>1932</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>AUTHOR_ID</th><th>FullName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harper Lee</td></tr>
+<tr><td>2</td><td>Jane Austen</td></tr>
+<tr><td>3</td><td>George Orwell</td></tr>
+<tr><td>4</td><td>Charles Dickens</td></tr>
+<tr><td>5</td><td>Aldous Huxley</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Adaptations</span></h2><table><thead>
+<tr><th>ADAPTATION_ID</th><th>FILM_ID</th><th>NOVEL_ID</th><th><span style="color:#006600">YEAR</span></th></tr>
+<tr><th></th><th>(&#8594; Films.FilmID)</th><th>(&#8594; Novels.NovelID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2010</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>2017</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>2012</td></tr>
+<tr><td>4</td><td>4</td><td>1</td><td><span style="color:#006600">2015</span></td></tr>
+<tr><td>5</td><td>5</td><td>4</td><td>2018</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

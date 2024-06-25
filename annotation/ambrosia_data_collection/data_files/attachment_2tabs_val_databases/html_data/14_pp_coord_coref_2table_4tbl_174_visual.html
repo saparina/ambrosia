@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Banquet_Halls</span></h2><table><thead>
+<tr><th>ID</th><th>Hall_Name</th><th>Capacity</th><th>Price_Per_Person</th><th>Amenities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Ballroom</td><td><span style="color:#006600">200</span></td><td>69.99</td><td>Projector, Sound System</td></tr>
+<tr><td>2</td><td>Ocean View Hall</td><td>150</td><td>74.99</td><td>Sea view, Dance Floor</td></tr>
+<tr><td>3</td><td>Crystal Hall</td><td>250</td><td>89.99</td><td>Chandeliers, Stage</td></tr>
+<tr><td>4</td><td>Royal Hall</td><td>300</td><td>119.99</td><td>Balcony, Private Bar</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Conference_Rooms</span></h2><table><thead>
+<tr><th>ID</th><th>Room_Name</th><th>Capacity</th><th>Price_Per_Day</th><th>Equipment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boardroom</td><td><span style="color:#006600">200</span></td><td>599.99</td><td>Whiteboard, Projector, Microphone</td></tr>
+<tr><td>2</td><td>Multipurpose Room</td><td>150</td><td>499.99</td><td>Flat Screen TV, Podium, Sound System</td></tr>
+<tr><td>3</td><td>Executive Suite</td><td>250</td><td>699.99</td><td>Stage, Piano, Artwork</td></tr>
+<tr><td>4</td><td>Meeting Room</td><td>300</td><td>899.99</td><td>Video Conferencing Facilities, Whiteboard, Flat Screen TV</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>Phone_Number</th><th>Preferences</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>+1234567890</td><td>Vegan Meal</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>+0987654321</td><td>Nut Free Option</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td><td>+1112223334</td><td>Gluten Free Option</td></tr>
+<tr><td>4</td><td>Emma Brown</td><td>emma@example.com</td><td>+44556677889</td><td>Kosher Meal</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>david@example.com</td><td>+2223334455</td><td>Halal Meal</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>ID</th><th>Banquet_Hall_ID</th><th>Conference_Room_ID</th><th>Date</th><th>Number_of_Guests</th></tr>
+<tr><th></th><th>(&#8594; Banquet_Halls.ID)</th><th>(&#8594; Conference_Rooms.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01 10:00:00</td><td>150</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-01-02 10:00:00</td><td>200</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-01-03 10:00:00</td><td>250</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-01-04 10:00:00</td><td>300</td></tr>
+<tr><td>5</td><td>1</td><td>None</td><td>2022-01-05 10:00:00</td><td>225</td></tr>
+</tbody></table></div>
+
+<div><h2>Feedback</h2><table><thead>
+<tr><th>ID</th><th>Guest_ID</th><th>Rating</th><th>Comments</th><th>Timestamp</th></tr>
+<tr><th></th><th>(&#8594; Guests.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5</td><td>Great experience! Will come back.</td><td>2022-01-01 15:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>4</td><td>Good service but food could have been better.</td><td>2022-01-02 15:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>5</td><td>Excellent venue, would recommend it to anyone.</td><td>2022-01-03 15:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>Not what I expected. Need improvement.</td><td>2022-01-04 15:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Fantastic event, thanks for making this happen.</td><td>2022-01-05 15:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

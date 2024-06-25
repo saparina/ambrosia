@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Thriller</td></tr>
+<tr><td>5</td><td>Documentary</td></tr>
+<tr><td>6</td><td>Crime</td></tr>
+<tr><td>7</td><td>Fantasy</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">TvShow</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th><span style="color:#186e16"><span style="color:#186e16">tv</span></span></th><th><span style="color:#1430b2">number_of_episodes</span></th><th>release_date</th><th>genre_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Genre.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Planet Earth</td><td><span style="color:#186e16">Documentary Series</span></td><td>8</td><td>2006-03-29</td><td>1</td></tr>
+<tr><td>2</td><td>Human Planet</td><td><span style="color:#186e16">Documentary Series</span></td><td><span style="color:#1430b2">7</span></td><td>2009-01-09</td><td>2</td></tr>
+<tr><td>3</td><td>Game of Thrones</td><td><span style="color:#186e16">Mini-Series</span></td><td>8</td><td>2011-04-17</td><td>3</td></tr>
+<tr><td>4</td><td>Big Little Lies</td><td><span style="color:#186e16">Mini-Series</span></td><td><span style="color:#1430b2">7</span></td><td>201<span style="color:#1430b2">7</span>-02-19</td><td>4</td></tr>
+<tr><td>5</td><td>Breaking Bad</td><td>Crime Drama</td><td>62</td><td>2008-01-20</td><td>5</td></tr>
+<tr><td>6</td><td>The Witcher</td><td>Fantasy</td><td>16</td><td>2019-12-20</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>CastMember</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>birth_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Peter</td><td>Coyote</td><td>1946-08-11</td></tr>
+<tr><td>2</td><td>Elizabeth</td><td>Banks</td><td>1974-02-10</td></tr>
+<tr><td>3</td><td>Kit</td><td>Harrington</td><td>1986-06-26</td></tr>
+<tr><td>4</td><td>Emilia</td><td>Clarke</td><td>1986-10-16</td></tr>
+<tr><td>5</td><td>Jason</td><td>Momoa</td><td>1979-08-01</td></tr>
+<tr><td>6</td><td>Lena</td><td>Headey</td><td>1973-10-03</td></tr>
+</tbody></table></div>
+
+<div><h2>ShowCast</h2><table><thead>
+<tr><th>show_id</th><th>member_id</th><th>role</th><th>appearance_start_year</th><th>appearance_end_year</th></tr>
+<tr><th>(&#8594; TvShow.id)</th><th>(&#8594; CastMember.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Narrator</td><td>2006</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>DCI Gillian Bray</td><td>2008</td><td>2013</td></tr>
+<tr><td>3</td><td>3</td><td>Ned Stark</td><td>2011</td><td>2014</td></tr>
+<tr><td>3</td><td>4</td><td>Daenerys Targaryen</td><td>2011</td><td>2019</td></tr>
+<tr><td>5</td><td>5</td><td>Walter White</td><td>2008</td><td>2012</td></tr>
+<tr><td>6</td><td>6</td><td>Geralt of Rivia</td><td>2019</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

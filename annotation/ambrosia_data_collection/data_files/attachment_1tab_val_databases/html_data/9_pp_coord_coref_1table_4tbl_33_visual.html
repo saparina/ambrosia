@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Hotels</h2><table><thead>
+<tr><th>HotelID</th><th>Name</th><th>Address</th><th>City</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Central</td><td>34 Vanderbilt Ave</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>Hilton Garden Inn</td><td>7982 West Sunrise Blvd.</td><td>Plantation</td><td>USA</td></tr>
+<tr><td>3</td><td>The Ritz Carlton</td><td>160 E 53rd St</td><td>New York</td><td>USA</td></tr>
+<tr><td>4</td><td>Radisson Blu Mall of America</td><td>2100 Killebrew Drive</td><td>Bloomington</td><td>USA</td></tr>
+<tr><td>5</td><td>Holiday Inn Express</td><td>2804 S College Blvd</td><td>Fort Collins</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Accommodations</span></h2><table><thead>
+<tr><th>AccommodationID</th><th>TypeOfAccomodation</th><th>PricePerNight</th><th>NumberGuests</th><th>HotelID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Hotels.HotelID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Family Suite</span></td><td><span style="color:#006600">150.0</span></td><td>4</td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Family Suite</span></td><td>200.0</td><td>4</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Single Room</span></td><td><span style="color:#006600">150.0</span></td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Single Room</span></td><td>200.0</td><td>1</td><td>2</td></tr>
+<tr><td>5</td><td>Deluxe Double</td><td>250.0</td><td>2</td><td>3</td></tr>
+<tr><td>6</td><td>Standard King</td><td>100.0</td><td>1</td><td>4</td></tr>
+<tr><td>7</td><td>Junior Suite</td><td>300.0</td><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>GuestID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emma</td><td>Wilson</td><td>emma@example.com</td></tr>
+<tr><td>5</td><td>Alice</td><td>Jackson</td><td>alice@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>CheckInDate</th><th>CheckOutDate</th><th>AccommodationID</th><th>GuestID</th><th>TotalCost</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Accommodations.AccommodationID)</th><th>(&#8594; Guests.GuestID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-08-01</td><td>2022-08-05</td><td>1</td><td>1</td><td>750.0</td></tr>
+<tr><td>2</td><td>2022-08-10</td><td>2022-08-14</td><td>2</td><td>2</td><td>1000.0</td></tr>
+<tr><td>3</td><td>2022-08-15</td><td>2022-08-20</td><td>3</td><td>3</td><td>1500.0</td></tr>
+<tr><td>4</td><td>2022-08-21</td><td>2022-08-25</td><td>4</td><td>4</td><td>300.0</td></tr>
+<tr><td>5</td><td>2022-08-26</td><td>2022-08-30</td><td>5</td><td>5</td><td>1200.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

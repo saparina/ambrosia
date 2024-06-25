@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Distributor</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sainsbury's</td></tr>
+<tr><td>2</td><td>Tesco</td></tr>
+</tbody></table></div>
+
+<div><h2>Newspaper_Type</h2><table><thead>
+<tr><th>ID</th><th>Type</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Broadsheet</td><td>A type of newspaper that is larger than a tabloid.</td></tr>
+<tr><td>2</td><td>Tabloid</td><td>A type of newspaper that is smaller than a broadsheet.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Broadsheet_Newspapers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>DistributorId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Distributor.ID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>The Times</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Financial Times</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>3</td><td>The Guardian</td><td>2</td></tr>
+<tr><td>4</td><td>The Independent</td><td>2</td></tr>
+<tr><td>5</td><td>The Daily Telegraph</td><td><span style="color:#006600">1</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Tabloid_Newspapers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>DistributorId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Distributor.ID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>The Sun</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>The Mirror</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>3</td><td>Daily Mail</td><td>2</td></tr>
+<tr><td>4</td><td>The Express</td><td>2</td></tr>
+<tr><td>5</td><td>The Star</td><td><span style="color:#006600">1</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleId</th><th>Title</th><th>Content</th><th>DateOfPublication</th><th>NewspaperId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Newspaper_Type.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Political Crisis Ahead</td><td>Analysis on the political crisis in the country.</td><td>2021-08-01</td><td>1</td></tr>
+<tr><td>2</td><td>Investment Market Booms</td><td>Discussion about recent boom in investment market.</td><td>2021-07-29</td><td>2</td></tr>
+<tr><td>3</td><td>Climate Change Summit</td><td>Reporting on climate change summit held recently.</td><td>2021-06-12</td><td>3</td></tr>
+<tr><td>4</td><td>Olympics Opening Ceremony</td><td>Review of opening ceremony at Tokyo Olympics.</td><td>2021-07-23</td><td>4</td></tr>
+<tr><td>5</td><td>Pandemic Update</td><td>Latest update on COVID pandemic situation.</td><td>2021-08-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>AuthorId</th><th>FullName</th><th>Biography</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>John has been writing since his college years.</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>Jane works as a freelance journalist covering politics.</td></tr>
+<tr><td>3</td><td>Tom Brown</td><td>Tom writes about business and economy issues.</td></tr>
+<tr><td>4</td><td>Emma Wilson</td><td>Emma specializes in sports journalism.</td></tr>
+<tr><td>5</td><td>Michael Johnson</td><td>Michael covers world events and international relations.</td></tr>
+</tbody></table></div>
+
+<div><h2>Authored_Articles</h2><table><thead>
+<tr><th>ArticleId</th><th>AuthorId</th></tr>
+<tr><th>(&#8594; Articles.ArticleId)</th><th>(&#8594; Authors.AuthorId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

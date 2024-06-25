@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2001-03-25</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2002-06-17</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>2000-09-12</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>1998-11-20</td></tr>
+<tr><td>5</td><td>Emma</td><td>Miller</td><td>2003-02-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Programs</span></h2><table><thead>
+<tr><th>ProgramID</th><th>ProgramName</th><th><span style="color:#990000"><span style="color:#990000">AwardType</span></span></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Computer Science</td><td><span style="color:#990000">Diploma</span></td></tr>
+<tr><td>2</td><td>Graphic Design</td><td><span style="color:#990000">Diploma</span></td></tr>
+<tr><td>3</td><td>Web Development</td><td><span style="color:#990000">Certificate</span></td></tr>
+<tr><td>4</td><td>Data Analysis</td><td><span style="color:#990000">Certificate</span></td></tr>
+<tr><td>5</td><td>Mobile App Development</td><td><span style="color:#990000">Certificate</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">CompletionRequirements</span></h2><table><thead>
+<tr><th>RequirementID</th><th>RequirementName</th><th><span style="color:#006600">IsMet</span></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Passing Exam</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Project Submission</td><td>0</td></tr>
+<tr><td>3</td><td>Attendance</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td>Internship</td><td>0</td></tr>
+<tr><td>5</td><td>Final Presentation</td><td><span style="color:#006600">1</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>ProgramID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Programs.ProgramID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>ProgressReports</h2><table><thead>
+<tr><th>ReportID</th><th>EnrollmentID</th><th>CompletionRequirementID</th><th>MetDate</th></tr>
+<tr><th></th><th>(&#8594; Enrollments.EnrollmentID)</th><th>(&#8594; CompletionRequirements.RequirementID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-06-15</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>2023-07-15</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>2023-08-15</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>2023-09-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Scores</h2><table><thead>
+<tr><th>ScoreID</th><th>EnrollmentID</th><th>TestScore</th></tr>
+<tr><th></th><th>(&#8594; Enrollments.EnrollmentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>85</td></tr>
+<tr><td>2</td><td>2</td><td>90</td></tr>
+<tr><td>3</td><td>3</td><td>75</td></tr>
+<tr><td>4</td><td>4</td><td>88</td></tr>
+<tr><td>5</td><td>5</td><td>92</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

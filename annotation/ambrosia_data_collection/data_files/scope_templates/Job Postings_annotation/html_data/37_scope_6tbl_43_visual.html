@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Hospitals</span></h2><table><thead>
+<tr><th>HospitalID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>St. Mary's General</td><td>New York</td></tr>
+<tr><td>2</td><td>Memorial Health System</td><td>Chicago</td></tr>
+<tr><td>3</td><td>University Hospital</td><td>Los Angeles</td></tr>
+<tr><td>4</td><td>Mount Sinai Medical Center</td><td>Miami</td></tr>
+<tr><td>5</td><td>Mercy Regional Medical Center</td><td>Phoenix</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">MedicalRoles</span></h2><table><thead>
+<tr><th>RoleID</th><th><span style="color:#990000">RoleName</span></th><th><span style="color:#990000">Salary</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Registered Nurse</td><td>70000.0</td></tr>
+<tr><td>2</td><td>Physician</td><td>130000.0</td></tr>
+<tr><td>3</td><td>Pharmacist</td><td>90000.0</td></tr>
+<tr><td>4</td><td>Radiologist</td><td>110000.0</td></tr>
+<tr><td>5</td><td>Lab Technician</td><td>65000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Hospitals_Medical_Roles</h2><table><thead>
+<tr><th>HospitalID</th><th>RoleID</th></tr>
+<tr><th>(&#8594; Hospitals.HospitalID)</th><th>(&#8594; MedicalRoles.RoleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Central_Banks</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Country</th><th>Year_Founded</th><th>Currency</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Federal Reserve</td><td><span style="color:#006600">USA</span></td><td>2014</td><td>USD</td></tr>
+<tr><td>2</td><td>European Central Bank</td><td>Germany</td><td>1998</td><td>Euro</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Commercial_Banks</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Country</th><th>Assets</th><th>Headquarter_City</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Citibank</td><td><span style="color:#006600">USA</span></td><td>300000000000.0</td><td>New York</td></tr>
+<tr><td>2</td><td>HSBC</td><td>UK</td><td>670000000000.0</td><td>London</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>AccountNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1990-01-01</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>2000-02-02</td><td>2345678901</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>id</th><th>CustomerID</th><th>Principal</th><th>InterestRate</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100000</td><td>4.5</td><td>2022-01-01</td><td>2025-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>200000</td><td>3.0</td><td>2022-01-15</td><td>2025-12-15</td></tr>
+</tbody></table></div>
+
+<div><h2>SavingsAccounts</h2><table><thead>
+<tr><th>id</th><th>CustomerID</th><th>Balance</th><th>InterestRate</th><th>OpeningDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>50000.0</td><td>1.5</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>30000.0</td><td>2.0</td><td>2021-02-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>id</th><th>FromAccount</th><th>ToAccount</th><th>Amount</th><th>TransactionType</th><th>Date</th></tr>
+<tr><th></th><th>(&#8594; SavingsAccounts.id)</th><th>(&#8594; SavingsAccounts.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>5000.0</td><td>Deposit</td><td>2024-03-13 18:48:25</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>-2500.0</td><td>Withdrawal</td><td>2024-03-13 18:48:25</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

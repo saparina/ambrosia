@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Film</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Matrix</td><td>1999</td></tr>
+<tr><td>2</td><td>Inception</td><td>2010</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>2014</td></tr>
+<tr><td>4</td><td>Avatar</td><td>2009</td></tr>
+<tr><td>5</td><td>Titanic</td><td>1997</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>name</th><th>dob</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>1970-07-30</td><td>American</td></tr>
+<tr><td>2</td><td>Ridley Scott</td><td>1937-11-30</td><td>English</td></tr>
+<tr><td>3</td><td>Michael Bay</td><td>1965-02-17</td><td>American</td></tr>
+<tr><td>4</td><td>James Cameron</td><td>1954-08-16</td><td>Canadian</td></tr>
+<tr><td>5</td><td>Steven Spielberg</td><td>1946-12-18</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>dob</th><th>gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Keanu Reeves</td><td>1964-09-02</td><td>Male</td></tr>
+<tr><td>2</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>Male</td></tr>
+<tr><td>3</td><td>Kate Winslet</td><td>1975-10-05</td><td>Female</td></tr>
+<tr><td>4</td><td>Tom Cruise</td><td>1962-07-03</td><td>Male</td></tr>
+<tr><td>5</td><td>Cate Blanchett</td><td>1969-05-14</td><td>Female</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Crew</span></h2><table><thead>
+<tr><th>id</th><th>filmId</th><th>directorId</th><th>actorId</th><th>productionRole</th><th>workExperience</th></tr>
+<tr><th></th><th>(&#8594; Film.id)</th><th>(&#8594; Director.id)</th><th>(&#8594; Actor.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>None</td><td><span style="color:#990000">Stunt Coordinator</span></td><td><span style="color:#006600">10 years</span></td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>None</td><td><span style="color:#990000">Stunt Coordinator</span></td><td>5 years</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>None</td><td><span style="color:#990000">Fight Choreographer</span></td><td><span style="color:#006600">10 years</span></td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>None</td><td><span style="color:#990000">Fight Choreographer</span></td><td>6 years</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

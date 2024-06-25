@@ -1,0 +1,3 @@
+Create multiple connected tables in the DOMAIN domain via SQLite, including a "ENTITIES" table, a "COMPONENTS" table (values: "SPECIFIC_COMPONENT" and others), and a "ENTITIES_COMPONENTS" table that joins these two tables (multiple rows of "ENTITIES" are connected to "SPECIFIC_COMPONENT" and other values of "COMPONENTS"). Other tables and columns are arbitrary. Each table must contain at least 3 columns.
+
+Provide multiple CREATE TABLE statements in SQLite.

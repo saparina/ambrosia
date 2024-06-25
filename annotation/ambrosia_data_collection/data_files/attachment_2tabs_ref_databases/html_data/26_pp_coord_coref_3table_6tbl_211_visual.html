@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Terminals</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Location</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal 1</td></tr>
+<tr><td>2</td><td>Terminal 2</td></tr>
+<tr><td>3</td><td>Terminal 3</td></tr>
+<tr><td>4</td><td>Terminal 4</td></tr>
+<tr><td>5</td><td><span style="color:#006600">Terminal 5</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>ArrivalTime</th><th>Destination</th><th>GateNumber</th><th>TerminalId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Terminals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 10:00</td><td>2023-01-01 11:30</td><td>New York</td><td>6</td><td>1</td></tr>
+<tr><td>2</td><td>2023-01-02 12:00</td><td>2023-01-02 14:30</td><td>Los Angeles</td><td>8</td><td>2</td></tr>
+<tr><td>3</td><td>2023-01-03 13:00</td><td>2023-01-03 17:30</td><td>Chicago</td><td>9</td><td>3</td></tr>
+<tr><td>4</td><td>2023-01-04 14:00</td><td>2023-01-04 19:30</td><td>Miami</td><td>10</td><td>4</td></tr>
+<tr><td>5</td><td>2023-01-05 15:00</td><td>2023-01-05 20:30</td><td>Honolulu</td><td>11</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SecurityChecks</span></h2><table><thead>
+<tr><th>Id</th><th>TimeStamp</th><th>FlightId</th><th>Result</th></tr>
+<tr><th></th><th></th><th>(&#8594; Flights.FlightID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 09:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2023-01-02 11:00</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2023-01-03 12:00</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>2023-01-04 14:00</td><td>4</td><td>0</td></tr>
+<tr><td>5</td><td>2023-01-05 15:00</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BaggageClaims</span></h2><table><thead>
+<tr><th>Id</th><th>TimeStamp</th><th>FlightId</th><th>Status</th></tr>
+<tr><th></th><th></th><th>(&#8594; Flights.FlightID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01 13:00</td><td>1</td><td>Closed</td></tr>
+<tr><td>2</td><td>2023-01-02 15:00</td><td>2</td><td>Open</td></tr>
+<tr><td>3</td><td>2023-01-03 16:00</td><td>3</td><td>Closed</td></tr>
+<tr><td>4</td><td>2023-01-04 18:00</td><td>4</td><td>Open</td></tr>
+<tr><td>5</td><td>2023-01-05 19:00</td><td>5</td><td>Closed</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

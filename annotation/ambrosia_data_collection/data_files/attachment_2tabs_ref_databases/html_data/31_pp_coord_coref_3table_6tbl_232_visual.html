@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Language</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">language_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Italian</td></tr>
+<tr><td>2</td><td><span style="color:#006600">French</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Novels</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>author_id</th><th>genre_id</th><th>language_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Genres.id)</th><th>(&#8594; Language.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Great Gatsby</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>War And Peace</td><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Poems</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>poet_id</th><th>theme_id</th><th>language_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Poets.id)</th><th>(&#8594; Themes.id)</th><th>(&#8594; Language.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ode To Joy</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>La Vita Nuova</td><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mark Twain</td></tr>
+<tr><td>2</td><td>Leo Tolstoy</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>id</th><th>genre_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Romance</td></tr>
+<tr><td>2</td><td>Adventure</td></tr>
+</tbody></table></div>
+
+<div><h2>Themes</h2><table><thead>
+<tr><th>id</th><th>theme_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Love</td></tr>
+<tr><td>2</td><td>Exploration</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td></tr>
+<tr><td>2</td><td>Julia Roberts</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>movie_title</th><th>release_year</th><th>director_id</th><th>actor_id</th><th>genre_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.id)</th><th>(&#8594; Actors.id)</th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Forrest Gump</td><td>1994</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>2</td><td>Gone With The Wind</td><td>1939</td><td>1</td><td>2</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Robert Zemeckis</td></tr>
+<tr><td>2</td><td>Victor Fleming</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

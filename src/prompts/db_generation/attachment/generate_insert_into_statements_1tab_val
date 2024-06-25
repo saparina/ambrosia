@@ -1,0 +1,12 @@
+SQLite database in the DOMAIN domain:
+CREATE_TABLE_STATEMENTS
+
+Insert 5 or more rows into each table.
+There must be:
+- One row where "GENERAL_CLASS" is equal to "CLASS1" and "COMMON_PROPERTY" is equal to "COMMON_VALUE",
+- One row where "GENERAL_CLASS" is equal to "CLASS1" and "COMMON_PROPERTY" is different from "COMMON_VALUE",
+- One row where "GENERAL_CLASS" is equal to "CLASS2" and "COMMON_PROPERTY" is equal to "COMMON_VALUE",
+- One row where "GENERAL_CLASS" is equal to "CLASS2" and "COMMON_PROPERTY" is different from "COMMON_VALUE",
+Other rows are arbitrary. Use non-trivial values.
+
+Provide 5 or more INSERT INTO statements for each table in SQLite.

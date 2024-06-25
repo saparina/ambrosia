@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Category</h2><table><thead>
+<tr><th>id</th><th>categoryName</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td><td>News related to political events</td></tr>
+<tr><td>2</td><td>Economy</td><td>News about economic trends and financial markets</td></tr>
+<tr><td>3</td><td>Technology</td><td>Latest news on technology advancements</td></tr>
+<tr><td>4</td><td>Entertainment</td><td>Celebrity gossip, movies, music, etc.</td></tr>
+<tr><td>5</td><td>Health</td><td>Medical research, health tips, and wellness</td></tr>
+<tr><td>6</td><td>Travel</td><td>Tips and articles on popular travel destinations</td></tr>
+</tbody></table></div>
+
+<div><h2>Author</h2><table><thead>
+<tr><th>authorId</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Publication.editorEmail)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johndoe@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janesmith@example.com</td><td>987-654-3210</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>michaeljohnson@example.com</td><td>555-555-5550</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>emilywilliams@example.com</td><td>555-123-4560</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>davidbrown@example.com</td><td>555-789-0123</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Article</span></h2><table><thead>
+<tr><th>articleId</th><th>title</th><th>content</th><th>publicationDate</th><th>Audience_Metrics</th><th>year</th><th>views</th><th>commentsCount</th><th>sharesCount</th><th>authorId</th><th>categoryId</th><th>publicationId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Author.authorId)</th><th>(&#8594; Category.id)</th><th>(&#8594; Publication.publicationId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Presidential Elections</td><td>A detailed analysis of the upcoming presidential elections.</td><td>2022-05-01 12:00:00</td><td><span style="color:#990000">Readership</span></td><td>2022</td><td>1000</td><td>50</td><td>200</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Stock Market Update</td><td>An overview of the stock market performance this week.</td><td><span style="color:#006600">2021</span>-06-01 12:00:00</td><td><span style="color:#990000">Readership</span></td><td><span style="color:#006600">2021</span></td><td>800</td><td>40</td><td>150</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>New Tech Innovations</td><td>Exploring the latest tech innovations and their potential impact.</td><td>2022-04-01 12:00:00</td><td><span style="color:#990000">Website Traffic</span></td><td>2022</td><td>700</td><td>30</td><td>120</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Oscar Winners Review</td><td>Reviewing the best films and performances at this year's Oscars.</td><td><span style="color:#006600">2021</span>-03-01 12:00:00</td><td><span style="color:#990000">Website Traffic</span></td><td><span style="color:#006600">2021</span></td><td>600</td><td>20</td><td>100</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Yoga Retreat Experience</td><td>A personal account of a yoga retreat experience in Bali.</td><td><span style="color:#006600">2021</span>-10-01 12:00:00</td><td><span style="color:#990000">Readership</span></td><td><span style="color:#006600">2021</span></td><td>500</td><td>15</td><td>80</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>Viral Health Trends</td><td>Discussing the latest viral health trends and fads.</td><td>2022-06-01 12:00:00</td><td><span style="color:#990000">Website Traffic</span></td><td>2022</td><td>1200</td><td>60</td><td>300</td><td>6</td><td>6</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Publication</h2><table><thead>
+<tr><th>publicationId</th><th>publicationName</th><th>editorFirstName</th><th>editorLastName</th><th>editorEmail</th><th>contactPhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily News</td><td>Alice</td><td>Wonderland</td><td>alicewonderland@example.com</td><td>555-987-6540</td></tr>
+<tr><td>2</td><td>Financial Times</td><td>Charlie</td><td>Banks</td><td>charliebanks@example.com</td><td>555-135-7900</td></tr>
+<tr><td>3</td><td>Tech Today</td><td>Robert</td><td>Geller</td><td>robertgeller@example.com</td><td>555-456-1230</td></tr>
+<tr><td>4</td><td>Hollywood Insider</td><td>Kristen</td><td>Stewart</td><td>kristenstewart@example.com</td><td>555-678-9012</td></tr>
+<tr><td>5</td><td>Wellbeing World</td><td>Helen</td><td>Clark</td><td>helenclark@example.com</td><td>555-012-3456</td></tr>
+<tr><td>6</td><td>Lonely Planet</td><td>Mark</td><td>Twain</td><td>marktwain@example.com</td><td>555-555-5556</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

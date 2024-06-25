@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Themes</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">themeName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sports</td></tr>
+<tr><td>2</td><td>Art</td></tr>
+<tr><td>3</td><td>Science</td></tr>
+<tr><td>4</td><td>Technology</td></tr>
+<tr><td>5</td><td>Mathematics</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Summer_Camps</span></h2><table><thead>
+<tr><th>id</th><th>campName</th><th>location</th><th>startDate</th><th>endDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Camp A</td><td>New York</td><td>2023-06-18</td><td>2023-07-02</td></tr>
+<tr><td>2</td><td>Camp B</td><td>Los Angeles</td><td>2023-06-25</td><td>2023-07-09</td></tr>
+<tr><td>3</td><td>Camp C</td><td>Chicago</td><td>2023-07-03</td><td>2023-07-17</td></tr>
+<tr><td>4</td><td>Camp D</td><td>Miami</td><td>2023-06-20</td><td>2023-07-10</td></tr>
+<tr><td>5</td><td>Camp E</td><td>Houston</td><td>2023-06-25</td><td>2023-07-11</td></tr>
+</tbody></table></div>
+
+<div><h2>Summer_Camp_Themes</h2><table><thead>
+<tr><th>summerCampId</th><th>themeId</th></tr>
+<tr><th>(&#8594; Summer_Camps.id)</th><th>(&#8594; Themes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

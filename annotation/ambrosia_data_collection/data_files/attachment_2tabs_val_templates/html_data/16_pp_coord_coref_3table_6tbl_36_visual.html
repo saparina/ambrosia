@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flight</h2><table><thead>
+<tr><th>FlightID</th><th>Origin</th><th>Destination</th><th>DepartureTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>LAX</td><td>2023-04-01 08:00:00</td></tr>
+<tr><td>2</td><td>ORD</td><td>ATL</td><td>2023-04-02 10:00:00</td></tr>
+<tr><td>3</td><td>SEA</td><td>DEN</td><td>2023-04-03 12:00:00</td></tr>
+<tr><td>4</td><td>IAH</td><td>MIA</td><td>2023-04-04 14:00:00</td></tr>
+<tr><td>5</td><td>DFW</td><td>PHX</td><td>2023-04-05 16:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Passenger</h2><table><thead>
+<tr><th>PassengerID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>555-123-4567</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td><td>555-987-6543</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alicejohnson@email.com</td><td>555-432-1234</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>bobwilliams@email.com</td><td>555-654-3219</td></tr>
+<tr><td>5</td><td>Emma</td><td>Brown</td><td>emmabrown@email.com</td><td>555-111-2222</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Assistant</span></h2><table><thead>
+<tr><th>AssistantID</th><th><span style="color:#1430b2">Name</span></th><th>ContactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Clare Allen</span></td><td>clareallen@assistant.com; +1-234-567-8900</td></tr>
+<tr><td>2</td><td>David Johnson</td><td>davidjohnson@assistant.com; +1-345-678-9012</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">UnaccompaniedMinor</span></h2><table><thead>
+<tr><th>UMID</th><th>PassengerID</th><th>AssistantID</th></tr>
+<tr><th></th><th>(&#8594; Passenger.PassengerID)</th><th>(&#8594; Assistant.AssistantID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">SpecialNeedsPassenger</span></h2><table><thead>
+<tr><th>SNPID</th><th>PassengerID</th><th>AssistantID</th></tr>
+<tr><th></th><th>(&#8594; Passenger.PassengerID)</th><th>(&#8594; Assistant.AssistantID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>BookingID</th><th>FlightID</th><th>PassengerID</th><th>UMID</th><th>SNPID</th></tr>
+<tr><th></th><th>(&#8594; Flight.FlightID)</th><th>(&#8594; Passenger.PassengerID)</th><th>(&#8594; UnaccompaniedMinor.UMID)</th><th>(&#8594; SpecialNeedsPassenger.SNPID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>None</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>1</td><td>None</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>None</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

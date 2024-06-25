@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customer</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>0987654321</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice@example.com</td><td>1112223333</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob@example.com</td><td>4445556666</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>charlie@example.com</td><td>7778889999</td></tr>
+<tr><td>6</td><td>David Wilson</td><td>david@example.com</td><td>1111222333</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Tour</span></h2><table><thead>
+<tr><th>id</th><th>tourName</th><th>location</th><th>duration</th><th><span style="color:#006600">price</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Machu Picchu</td><td>Peru</td><td>6 hours</td><td><span style="color:#006600">100.0</span></td></tr>
+<tr><td>2</td><td>Great Wall of China</td><td>China</td><td>8 hours</td><td>150.0</td></tr>
+<tr><td>3</td><td>Eiffel Tower</td><td>France</td><td>2 hours</td><td>75.0</td></tr>
+<tr><td>4</td><td>Colosseum</td><td>Italy</td><td>4 hours</td><td>80.0</td></tr>
+<tr><td>5</td><td>Statue of Liberty</td><td>USA</td><td>2 hours</td><td>50.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ServiceProvider</span></h2><table><thead>
+<tr><th>id</th><th>type</th><th><span style="color:#990000"><span style="color:#990000">serviceName</span></span></th><th>contactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Trip_Planning_Service</td><td><span style="color:#990000">Travel Agency</span></td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Trip_Planning_Service</td><td><span style="color:#990000">Online Booking Platform</span></td><td>+987654321</td></tr>
+<tr><td>3</td><td>Accommodation</td><td>Hotel A</td><td>+1112223333</td></tr>
+<tr><td>4</td><td>Transportation</td><td>Airline XYZ</td><td>+4445556666</td></tr>
+<tr><td>5</td><td>Food & Beverage</td><td>Restaurant ABC</td><td>+7778889999</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservation</h2><table><thead>
+<tr><th>id</th><th>customerID</th><th>tourID</th><th>trip_planning_serviceID</th><th>reservationDate</th></tr>
+<tr><th></th><th>(&#8594; Customer.id)</th><th>(&#8594; Tour.id)</th><th>(&#8594; ServiceProvider.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2023-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>2023-01-10 10:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>1</td><td>2023-02-01 10:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2</td><td>2023-02-10 10:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>2</td><td>2023-03-01 10:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

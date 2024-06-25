@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>genre</th><th>director</th><th>runtime</th><th>release_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>Drama</td><td>Frank Darabont</td><td>142</td><td>1994-09-23</td></tr>
+<tr><td>2</td><td>The Godfather</td><td>Crime</td><td>Francis Ford Coppola</td><td>175</td><td>1972-03-24</td></tr>
+</tbody></table></div>
+
+<div><h2>Series</h2><table><thead>
+<tr><th>id</th><th>title</th><th>genre</th><th>creator</th><th>episodeCount</th><th>premiereDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking Bad</td><td>Crime Drama</td><td>Vince Gilligan</td><td>62</td><td>2008-01-20</td></tr>
+<tr><td>2</td><td>Game of Thrones</td><td>Fantasy</td><td>David Benioff and D.B. Weiss</td><td>60</td><td>2011-04-17</td></tr>
+</tbody></table></div>
+
+<div><h2>Users</h2><table><thead>
+<tr><th>id</th><th>username</th><th>password</th><th>email</th><th>subscriptionType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>user1</td><td>password1</td><td>user1@example.com</td><td>Premium</td></tr>
+<tr><td>2</td><td>user2</td><td>password2</td><td>user2@example.com</td><td>Standard</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>id</th><th>userId</th><th>contentId</th><th>rating</th><th>reviewText</th></tr>
+<tr><th></th><th>(&#8594; Users.id)</th><th>(&#8594; Content.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>5</td><td>Great movie with a powerful story.</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>4</td><td>Awesome series with amazing characters.</td></tr>
+</tbody></table></div>
+
+<div><h2>Content</h2><table><thead>
+<tr><th>id</th><th>type</th><th>title</th><th>genre</th><th>creator</th><th>numEpisodesOrDuration</th><th><span style="color:#990000">premiereMonth</span></th><th><span style="color:#990000">premiereYear</span></th><th>season</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Creators.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TV Series</td><td>Stranger Things</td><td>Science Fiction</td><td>The Duffer Brothers</td><td>8</td><td>7</td><td>2016</td><td>1</td></tr>
+<tr><td>2</td><td>Film</td><td>Inception</td><td>Action, Adventure, Sci-Fi</td><td>Christopher Nolan</td><td>128</td><td>7</td><td>2010</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Creators</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Quentin Tarantino</td><td>1963</td></tr>
+<tr><td>2</td><td>James Cameron</td><td>1954</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>San Francisco</td></tr>
+<tr><td>2</td><td>HealthPlus</td><td>New York</td></tr>
+<tr><td>3</td><td>EcoGreen</td><td>Los Angeles</td></tr>
+<tr><td>4</td><td>SoftWare</td><td>Chicago</td></tr>
+<tr><td>5</td><td>CyberSecure</td><td>Boston</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Base_Pay_Range</span></h2><table><thead>
+<tr><th>id</th><th>min_pay</th><th>max_pay</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>60000.0</td><td>80000.0</td></tr>
+<tr><td>2</td><td>70000.0</td><td>90000.0</td></tr>
+<tr><td>3</td><td>50000.0</td><td>70000.0</td></tr>
+<tr><td>4</td><td>100000.0</td><td>120000.0</td></tr>
+<tr><td>5</td><td>80000.0</td><td>100000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Benefits</span></h2><table><thead>
+<tr><th>id</th><th>health_insurance</th><th>dental_insurance</th><th>vision_insurance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>4</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>5</td><td>0</td><td>0</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Post</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>base_pay_id</th><th>benefit_package_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Base_Pay_Range.id)</th><th>(&#8594; Benefits.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop and maintain software applications.</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Data Scientist</td><td>Analyze complex datasets to drive business decisions.</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>Marketing Manager</td><td>Lead marketing strategies and campaigns.</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>Product Designer</td><td>Design user-centric products and interfaces.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>HR Specialist</td><td>Manage employee relations and HR processes.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

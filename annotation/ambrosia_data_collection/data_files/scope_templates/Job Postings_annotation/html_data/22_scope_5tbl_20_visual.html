@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Consultants</span></h2><table><thead>
+<tr><th>consultant_id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>mike@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Industries</span></h2><table><thead>
+<tr><th>industry_id</th><th><span style="color:#990000">industry_name</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Healthcare</td><td>The healthcare industry is focused on providing medical services and products.</td></tr>
+<tr><td>2</td><td>Technology</td><td>The technology industry includes companies that develop software, hardware, and other technological solutions.</td></tr>
+<tr><td>3</td><td>Finance</td><td>The finance industry involves activities such as banking, insurance, investment management, and financial planning.</td></tr>
+<tr><td>4</td><td>Education</td><td>The education industry encompasses schools, colleges, universities, and training institutions.</td></tr>
+<tr><td>5</td><td>Construction</td><td>The construction industry deals with building infrastructure like residential homes, commercial buildings, and public works projects.</td></tr>
+</tbody></table></div>
+
+<div><h2>Consultants_Industries</h2><table><thead>
+<tr><th>consultant_id</th><th>industry_id</th></tr>
+<tr><th>(&#8594; Consultants.consultant_id)</th><th>(&#8594; Industries.industry_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Students</span></h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th><span style="color:#006600">BirthDate</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2003-06-15</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2001-07-28</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>2002-09-10</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>2000-10-20</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td><span style="color:#006600">1999-11-25</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">High_Schools</span></h2><table><thead>
+<tr><th>SchoolID</th><th>Name</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>East High School</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>West High School</td><td>456 Elm St</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">College</span></h2><table><thead>
+<tr><th>CollegeID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>University of Science</td><td>789 Maple Ave</td></tr>
+<tr><td>2</td><td>Tech University</td><td>101 Oak St</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>HighSchoolID</th><th>CollegeID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; High_Schools.SchoolID)</th><th>(&#8594; College.CollegeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>SubjectID</th><th>SubjectName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Physics</td></tr>
+<tr><td>3</td><td>English Literature</td></tr>
+<tr><td>4</td><td>History</td></tr>
+<tr><td>5</td><td>Computer Science</td></tr>
+</tbody></table></div>
+
+<div><h2>CourseOfferings</h2><table><thead>
+<tr><th>OfferingID</th><th>SubjectID</th><th>Semester</th><th>Year</th></tr>
+<tr><th></th><th>(&#8594; Subjects.SubjectID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Spring</td><td>2021</td></tr>
+<tr><td>2</td><td>2</td><td>Fall</td><td>2020</td></tr>
+<tr><td>3</td><td>3</td><td>Winter</td><td>2022</td></tr>
+<tr><td>4</td><td>4</td><td>Summer</td><td>2021</td></tr>
+<tr><td>5</td><td>5</td><td>Autumn</td><td>2022</td></tr>
+</tbody></table></div>
+
+<div><h2>StudentCourses</h2><table><thead>
+<tr><th>StudentCourseID</th><th>EnrollmentID</th><th>OfferingID</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Enrollments.EnrollmentID)</th><th>(&#8594; CourseOfferings.OfferingID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>B</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>C</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>D</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>F</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

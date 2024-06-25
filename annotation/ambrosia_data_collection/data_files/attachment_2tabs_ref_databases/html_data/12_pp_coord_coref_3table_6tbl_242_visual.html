@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>name</th><th>headquarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>Fort Worth</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>Atlanta</td></tr>
+<tr><td>3</td><td>United Airlines</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>Dallas</td></tr>
+<tr><td>5</td><td>Alaska Airlines</td><td>Seattle</td></tr>
+</tbody></table></div>
+
+<div><h2>AircraftTypes</h2><table><thead>
+<tr><th>id</th><th>typeName</th><th>manufacturer</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>737</td><td>Boeing</td></tr>
+<tr><td>2</td><td>A320</td><td>Airbus</td></tr>
+<tr><td>3</td><td>787</td><td>Boeing</td></tr>
+<tr><td>4</td><td>A350</td><td>Airbus</td></tr>
+<tr><td>5</td><td>A380</td><td>Airbus</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Planes</span></h2><table><thead>
+<tr><th>id</th><th>model</th><th><span style="color:#006600">number_of_seats</span></th><th>aircraftTypeId</th><th>airlineId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; AircraftTypes.id)</th><th>(&#8594; Airlines.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>737-800</td><td>169</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>A320-200</td><td>180</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>787-9</td><td>284</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>A350-1000</td><td>440</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>A380-800</td><td><span style="color:#006600">514</span></td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>Boeing 747-8i</td><td>467</td><td>6</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BoeingPlanes</span></h2><table><thead>
+<tr><th>planeId</th><th>boeing</th></tr>
+<tr><th>(&#8594; Planes.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>0</td></tr>
+<tr><td>2</td><td>0</td></tr>
+<tr><td>3</td><td>0</td></tr>
+<tr><td>4</td><td>0</td></tr>
+<tr><td>5</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AirbusPlanes</span></h2><table><thead>
+<tr><th>planeId</th><th>airbus</th></tr>
+<tr><th>(&#8594; Planes.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>2</td><td>0</td></tr>
+<tr><td>3</td><td>0</td></tr>
+<tr><td>4</td><td>0</td></tr>
+<tr><td>5</td><td>0</td></tr>
+<tr><td>6</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>FlightRoutes</h2><table><thead>
+<tr><th>routeId</th><th>originAirportCode</th><th>destinationAirportCode</th><th>flightNumber</th><th>planeId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Planes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>LAX</td><td>123</td><td>1</td></tr>
+<tr><td>2</td><td>ORD</td><td>ATL</td><td>456</td><td>2</td></tr>
+<tr><td>3</td><td>IAD</td><td>MCO</td><td>789</td><td>3</td></tr>
+<tr><td>4</td><td>SEA</td><td>PHX</td><td>101</td><td>4</td></tr>
+<tr><td>5</td><td>SFO</td><td>YVR</td><td>202</td><td>5</td></tr>
+<tr><td>6</td><td>EWR</td><td>MIA</td><td>303</td><td>6</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>TelevisionShows</h2><table><thead>
+<tr><th>id</th><th>title</th><th>year</th><th>network</th><th>genre</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Genres.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Big Bang Theory</td><td>2007</td><td>CBS</td><td>Sitcom</td></tr>
+<tr><td>2</td><td>Friends</td><td>1994</td><td>NBC</td><td>Sitcom</td></tr>
+<tr><td>3</td><td>Breaking Bad</td><td>2008</td><td>AMC</td><td>Drama</td></tr>
+<tr><td>4</td><td>Game Of Thrones</td><td>2011</td><td>HBO</td><td>Drama</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Genres</span></h2><table><thead>
+<tr><th><span style="color:#990000"><span style="color:#990000">name</span></span></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#990000">Sitcom</span></td></tr>
+<tr><td><span style="color:#990000">Drama</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Seasons</span></h2><table><thead>
+<tr><th>id</th><th>show_id</th><th><span style="color:#006600">number_of_seasons</span></th><th>release_year</th></tr>
+<tr><th></th><th>(&#8594; TelevisionShows.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">5</span></td><td>2008</td></tr>
+<tr><td>2</td><td>2</td><td>10</td><td>1994</td></tr>
+<tr><td>3</td><td>3</td><td><span style="color:#006600">5</span></td><td>2009</td></tr>
+<tr><td>4</td><td>4</td><td>8</td><td>2011</td></tr>
+</tbody></table></div>
+
+<div><h2>Episodes</h2><table><thead>
+<tr><th>id</th><th>season_id</th><th>episode_number</th><th>title</th><th>run_time</th><th>airdate</th></tr>
+<tr><th></th><th>(&#8594; Seasons.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Pilot</td><td>39mins</td><td>2007-09-24</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>The Pilot</td><td>22mins</td><td>1994-09-22</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>Pilot</td><td>46mins</td><td>2009-01-20</td></tr>
+<tr><td>4</td><td>4</td><td>1</td><td>Winter Is Coming</td><td>55mins</td><td>2011-04-17</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

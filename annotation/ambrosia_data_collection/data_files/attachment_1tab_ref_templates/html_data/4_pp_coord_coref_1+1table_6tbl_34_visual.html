@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Corp.</td><td>New York</td></tr>
+<tr><td>2</td><td>XYZ Inc.</td><td>San Francisco</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Roles</span></h2><table><thead>
+<tr><th>RoleID</th><th><span style="color:#186e16">RoleName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Economist</span></td></tr>
+<tr><td>2</td><td>Statistician</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">DataTypes</span></h2><table><thead>
+<tr><th>DataTypeID</th><th><span style="color:#1430b2">DataTypeName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Demographics</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">Financial Analysis</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th>Title</th><th>Description</th><th>PostedDate</th><th>CompanyID</th><th>ROLEID</th><th>DATAID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th><th>(&#8594; Roles.RoleID)</th><th>(&#8594; DataTypes.DataTypeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Economic Analyst</td><td>Analyze economic data...</td><td>2023-01-01</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Senior Economic Analyst</td><td>Analyze economic data...</td><td>2023-01-02</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Statistical Analyst</td><td>Analyze statistical data...</td><td>2023-01-01</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>Senior Statistical Analyst</td><td>Analyze statistical data...</td><td>2023-01-02</td><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ApplicantID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>ApplicationJobs</h2><table><thead>
+<tr><th>ApplicationID</th><th>ApplicantID</th><th>JobID</th><th>SubmissionDate</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Applicants.ApplicantID)</th><th>(&#8594; Jobs.JobID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-02</td><td>Pending</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

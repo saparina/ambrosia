@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>GradeLevel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>10</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>9</td></tr>
+<tr><td>3</td><td>Emily</td><td>Brown</td><td>8</td></tr>
+<tr><td>4</td><td>Michael</td><td>Johnson</td><td>12</td></tr>
+<tr><td>5</td><td>Sarah</td><td>White</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>SubjectTaught</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Smith</td><td>Math</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Williams</td><td>English</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Harris</td><td>History</td></tr>
+<tr><td>4</td><td>Mrs.</td><td>Davis</td><td>Science</td></tr>
+<tr><td>5</td><td>Mr.</td><td>Martinez</td><td>Art</td></tr>
+</tbody></table></div>
+
+<div><h2>Classrooms</h2><table><thead>
+<tr><th>ID</th><th>RoomNumber</th><th>Building</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td><td>Main</td><td>30</td></tr>
+<tr><td>2</td><td>201</td><td>Annex</td><td>25</td></tr>
+<tr><td>3</td><td>301</td><td>Main</td><td>35</td></tr>
+<tr><td>4</td><td>401</td><td>Annex</td><td>20</td></tr>
+<tr><td>5</td><td>501</td><td>Library</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2>Textbooks_Supplies_Projects</h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000">TextbookTitle</span></th><th><span style="color:#990000">SupplyItem</span></th><th>ProjectDescription</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>To Kill a Mockingbird</td><td>Poster paper</td><td>Create a poster about the novel</td></tr>
+<tr><td>2</td><td>The Great Gatsby</td><td>Pencils</td><td>Write a short story inspired by the book</td></tr>
+<tr><td>3</td><td>A Wrinkle in Time</td><td>Markers</td><td>Draw a map from the book</td></tr>
+<tr><td>4</td><td>Romeo and Juliet</td><td>Glue sticks</td><td>Make a collage about the play</td></tr>
+<tr><td>5</td><td>Of Mice and Men</td><td>Index cards</td><td>Create flashcards to memorize quotes</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Description</th><th>DueDate</th><th>MaxPoints</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Vocabulary Quiz</td><td>Test your knowledge of vocabulary words learned this week</td><td>2023-03-15</td><td>50</td></tr>
+<tr><td>2</td><td>Research Paper</td><td>Write a research paper on a topic related to our current textbook</td><td>2023-04-10</td><td>100</td></tr>
+<tr><td>3</td><td>Creative Writing</td><td>Write a short story based on a scene from a textbook</td><td>2023-03-25</td><td>80</td></tr>
+<tr><td>4</td><td>Group Presentation</td><td>Present a group project on a topic related to the unit</td><td>2023-04-15</td><td>100</td></tr>
+<tr><td>5</td><td>Final Exam</td><td>Review all material covered during the unit</td><td>2023-04-20</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>ID</th><th>StudentID</th><th>AssignmentID</th><th>Score</th><th>Feedback</th></tr>
+<tr><th></th><th>(&#8594; Students.ID)</th><th>(&#8594; Assignments.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>45</td><td>Good effort but needs improvement</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>60</td><td>Great job! Keep up the good work</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>75</td><td>Excellent work! Very well done</td></tr>
+<tr><td>4</td><td>4</td><td>1</td><td>85</td><td>Outstanding performance! Well done</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>90</td><td>Exceptional work! You excelled at this assignment</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td></tr>
+<tr><td>2</td><td>Company B</td></tr>
+<tr><td>3</td><td>Company C</td></tr>
+<tr><td>4</td><td>Company D</td></tr>
+<tr><td>5</td><td>Company E</td></tr>
+</tbody></table></div>
+
+<div><h2>JobsTypes</h2><table><thead>
+<tr><th>id</th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td></tr>
+<tr><td>2</td><td>Data Analyst</td></tr>
+<tr><td>3</td><td>Product Manager</td></tr>
+<tr><td>4</td><td>HR Specialist</td></tr>
+<tr><td>5</td><td>Graphic Designer</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Salaries</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">salary</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">$65,000</span></td></tr>
+<tr><td>2</td><td>$80,000</td></tr>
+<tr><td>3</td><td>$95,000</td></tr>
+<tr><td>4</td><td>$100,000</td></tr>
+<tr><td>5</td><td>$120,000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPostings</span></h2><table><thead>
+<tr><th>id</th><th>companyID</th><th>jobTypeID</th><th><span style="color:#990000"><span style="color:#990000">itJob</span></span></th><th>salaryID</th></tr>
+<tr><th></th><th>(&#8594; Companies.id)</th><th>(&#8594; JobsTypes.id)</th><th></th><th>(&#8594; Salaries.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td><span style="color:#990000">Network Administrator</span></td><td>3</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td><span style="color:#990000">Network Administrator</span></td><td>1</td></tr>
+<tr><td>3</td><td>2</td><td>2</td><td><span style="color:#990000">IT Consultant</span></td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td><span style="color:#990000">IT Consultant</span></td><td>1</td></tr>
+<tr><td>5</td><td>3</td><td>3</td><td>Software Developer</td><td>2</td></tr>
+<tr><td>6</td><td>3</td><td>3</td><td>Software Developer</td><td>4</td></tr>
+<tr><td>7</td><td>4</td><td>4</td><td>HR Coordinator</td><td>5</td></tr>
+<tr><td>8</td><td>4</td><td>4</td><td>HR Coordinator</td><td>2</td></tr>
+<tr><td>9</td><td>5</td><td>5</td><td>Web Designer</td><td>4</td></tr>
+<tr><td>10</td><td>5</td><td>5</td><td>Web Designer</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artists</h2><table><thead>
+<tr><th>id</th><th>name</th><th>genre</th><th>birthdate</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Artist1</td><td>Pop</td><td>2000-01-01</td><td>USA</td></tr>
+<tr><td>2</td><td>Artist2</td><td>Rock</td><td>1985-06-15</td><td>Canada</td></tr>
+<tr><td>3</td><td>Artist3</td><td>Hip Hop</td><td>1990-07-20</td><td>UK</td></tr>
+<tr><td>4</td><td>Artist4</td><td>Jazz</td><td>1970-08-10</td><td>France</td></tr>
+<tr><td>5</td><td>Artist5</td><td>Classical</td><td>1965-09-25</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseDate</th><th>artistId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Artists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Album1</td><td>2001-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Album2</td><td>2002-06-15</td><td>2</td></tr>
+<tr><td>3</td><td>Album3</td><td>2003-07-20</td><td>3</td></tr>
+<tr><td>4</td><td>Album4</td><td>2004-08-10</td><td>4</td></tr>
+<tr><td>5</td><td>Album5</td><td>2005-09-25</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>length</th><th>albumId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Albums.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Song1</td><td>03:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Song2</td><td>04:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>Song3</td><td>05:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>Song4</td><td>06:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>Song5</td><td>07:00:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>DanceTable</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">Culture</span></th><th><span style="color:#990000">Geographical_Area</span></th><th>DanceName</th><th>Popularity</th><th>Tradition</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ghanaian</td><td>Sub Saharan Africa</td><td>Kpanlogo</td><td>90</td><td>Spiritual and social event dance</td></tr>
+<tr><td>2</td><td>Korean</td><td>East Asia</td><td>Fan Dance</td><td>80</td><td>Cultural performance</td></tr>
+<tr><td>3</td><td>Spanish</td><td>Western Europe</td><td>Flamenco</td><td>70</td><td>Expressive art form</td></tr>
+<tr><td>4</td><td>Argentine</td><td>South America</td><td>Tango</td><td>85</td><td>Ballroom and social dance</td></tr>
+<tr><td>5</td><td>American</td><td>North America</td><td>Breakdancing</td><td>75</td><td>Street dance</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

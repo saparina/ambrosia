@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Contractors</h2><table><thead>
+<tr><th>contractorID</th><th>companyName</th><th>address</th><th>phoneNumber</th><th>employeeCount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Contractor A</td><td>Address A</td><td>123-456-7890</td><td>10</td></tr>
+<tr><td>2</td><td>Contractor B</td><td>Address B</td><td>234-567-8901</td><td>15</td></tr>
+<tr><td>3</td><td>Contractor C</td><td>Address C</td><td>345-678-9012</td><td>20</td></tr>
+<tr><td>4</td><td>Contractor D</td><td>Address D</td><td>456-789-0123</td><td>25</td></tr>
+<tr><td>5</td><td>Contractor E</td><td>Address E</td><td>567-890-1234</td><td>30</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>employeeID</th><th>firstName</th><th>lastName</th><th>hireDate</th><th>salary</th><th>contractorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Contractors.contractorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2022-01-01</td><td>50000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2022-01-02</td><td>55000.0</td><td>1</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>2022-01-03</td><td>60000.0</td><td>2</td></tr>
+<tr><td>4</td><td>Emily</td><td>Johnson</td><td>2022-01-04</td><td>65000.0</td><td>2</td></tr>
+<tr><td>5</td><td>Tom</td><td>Wilson</td><td>2022-01-05</td><td>70000.0</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Materials</h2><table><thead>
+<tr><th>materialID</th><th>description</th><th>quantity</th><th>unitCost</th><th>projectID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Projects.projectID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concrete</td><td>100</td><td>50.0</td><td>1</td></tr>
+<tr><td>2</td><td>Steel</td><td>50</td><td>75.0</td><td>1</td></tr>
+<tr><td>3</td><td>Glass</td><td>20</td><td>25.0</td><td>2</td></tr>
+<tr><td>4</td><td>Bricks</td><td>300</td><td>15.0</td><td>2</td></tr>
+<tr><td>5</td><td>Electrical Wiring</td><td>100</td><td>10.0</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Payments</h2><table><thead>
+<tr><th>paymentID</th><th>amount</th><th>paymentDate</th><th>projectID</th><th>contractorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Projects.projectID)</th><th>(&#8594; Contractors.contractorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>10000</td><td>2022-02-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>15000</td><td>2022-02-02</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>20000</td><td>2022-02-03</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>30000</td><td>2022-02-04</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>40000</td><td>2022-02-05</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Funding</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">governmentAgency</span></th><th><span style="color:#990000">privateDonors</span></th><th>publicPark</th><th>fundsAmount</th><th>projectID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Projects.projectID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>City Hall</td><td>Local Businesses</td><td>Yes</td><td>50000.0</td><td>1</td></tr>
+<tr><td>2</td><td>State Department</td><td>Private Foundations</td><td>No</td><td>75000.0</td><td>1</td></tr>
+<tr><td>3</td><td>National Park Service</td><td></td><td>Yes</td><td>100000.0</td><td>2</td></tr>
+<tr><td>4</td><td>Federal Grant Program</td><td></td><td>Yes</td><td>125000.0</td><td>2</td></tr>
+<tr><td>5</td><td>International Organization</td><td>Global Donors</td><td>Yes</td><td>150000.0</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

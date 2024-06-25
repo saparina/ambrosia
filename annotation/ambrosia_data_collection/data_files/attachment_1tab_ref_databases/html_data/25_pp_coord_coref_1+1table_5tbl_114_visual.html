@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Johnson</td></tr>
+<tr><td>4</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>David Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Producers</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Producer A</td></tr>
+<tr><td>2</td><td>Producer B</td></tr>
+<tr><td>3</td><td>Producer C</td></tr>
+<tr><td>4</td><td>Producer D</td></tr>
+<tr><td>5</td><td>Producer E</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Actor X</td></tr>
+<tr><td>2</td><td>Actor Y</td></tr>
+<tr><td>3</td><td>Actor Z</td></tr>
+<tr><td>4</td><td>Actor W</td></tr>
+<tr><td>5</td><td>Actor V</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Films</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th><span style="color:#006600">release_year</span></th><th>director_id</th><th>producer_id</th><th>actor_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.id)</th><th>(&#8594; Producers.id)</th><th>(&#8594; Actors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film 1</td><td><span style="color:#006600">2021</span></td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Film 2</td><td>2022</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Film 3</td><td><span style="color:#006600">2021</span></td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Film 4</td><td>2023</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Film 5</td><td><span style="color:#006600">2021</span></td><td>1</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FilmGenres</span></h2><table><thead>
+<tr><th>film_id</th><th><span style="color:#990000"><span style="color:#990000">genre</span></span></th></tr>
+<tr><th>(&#8594; Films.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Animation</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Animation</span></td></tr>
+<tr><td>3</td><td><span style="color:#990000">Comedy</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Comedy</span></td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

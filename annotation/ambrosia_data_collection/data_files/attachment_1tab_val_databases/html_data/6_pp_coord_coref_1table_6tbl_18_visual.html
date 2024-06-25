@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Financial_Services</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Type</th><th>Location_Within_Terminal</th><th>Operating_Hours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Currency</td><td><span style="color:#990000">Currency Exchange Service</span></td><td><span style="color:#006600">Near Gate 10</span></td><td>8 AM - 6 PM</td></tr>
+<tr><td>2</td><td>Second Currency</td><td><span style="color:#990000">Currency Exchange Service</span></td><td>Before Security Check</td><td>7 AM - 9 PM</td></tr>
+<tr><td>3</td><td>Bank of America ATM</td><td><span style="color:#990000">ATM Machine</span></td><td><span style="color:#006600">Near Gate 10</span></td><td>Open 24 Hours</td></tr>
+<tr><td>4</td><td>Citi Bank Branch</td><td><span style="color:#990000">ATM Machine</span></td><td>After Security Check</td><td>8 AM - 5 PM</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal A</td><td>Gate Area</td></tr>
+<tr><td>2</td><td>Terminal B</td><td>International Departure</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>airline_name</th><th>terminal_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Terminals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>1</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight_Details</h2><table><thead>
+<tr><th>flight_number</th><th>departure_time</th><th>arrival_time</th><th>origin_airport</th><th>destination_airport</th><th>airline_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Airlines.id)</th></tr>
+</thead><tbody>
+<tr><td>101</td><td>2023-04-15 06:00:00</td><td>2023-04-15 08:00:00</td><td>LAX</td><td>JFK</td><td>1</td></tr>
+<tr><td>102</td><td>2023-04-15 07:00:00</td><td>2023-04-15 09:00:00</td><td>ORD</td><td>LHR</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Baggage_Claims</h2><table><thead>
+<tr><th>claim_number</th><th>carousel_location</th><th>airport_code</th></tr>
+<tr><th></th><th></th><th>(&#8594; Airports.code)</th></tr>
+</thead><tbody>
+<tr><td>101</td><td>Carousel 3</td><td>LAX</td></tr>
+<tr><td>102</td><td>Carousel 6</td><td>ORD</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>code</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>LAX</td><td>Los Angeles International Airport</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>ORD</td><td>O'Hare International Airport</td><td>Chicago</td><td>USA</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

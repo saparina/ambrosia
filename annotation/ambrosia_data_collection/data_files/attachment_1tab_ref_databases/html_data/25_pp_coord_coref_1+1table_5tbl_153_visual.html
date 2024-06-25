@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Learning_Space</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">name</span></span></th><th>available_resources</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Science Lab</span></td><td>Computers</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Science Lab</span></td><td>Microscopes</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Art Studio</span></td><td>Computers</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Art Studio</span></td><td><span style="color:#006600">Paints</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Resource</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">resource_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computers</td></tr>
+<tr><td>2</td><td>Microscopes</td></tr>
+<tr><td>3</td><td><span style="color:#006600">Paints</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Course</h2><table><thead>
+<tr><th>id</th><th>course_title</th><th>instructor</th><th>duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Chemistry</td><td>Dr. Smith</td><td>60</td></tr>
+<tr><td>2</td><td>Advanced Physics</td><td>Prof. Johnson</td><td>90</td></tr>
+<tr><td>3</td><td>Beginner Painting Techniques</td><td>Ms. Davis</td><td>80</td></tr>
+<tr><td>4</td><td>Abstract Art</td><td>Mr. Brown</td><td>75</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>id</th><th>student_name</th><th>age</th><th>courses_attending</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>20</td><td>{1}</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>21</td><td>{2}, {3}</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>22</td><td>{2}, {4}</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>23</td><td>{1}, {3}</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollment</h2><table><thead>
+<tr><th>learning_space_id</th><th>resource_id</th><th>course_id</th><th>student_id</th></tr>
+<tr><th>(&#8594; Learning_Space.id)</th><th>(&#8594; Resource.id)</th><th>(&#8594; Course.id)</th><th>(&#8594; Student.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>3</td><td>2</td><td>2</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>3</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>4</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>1</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

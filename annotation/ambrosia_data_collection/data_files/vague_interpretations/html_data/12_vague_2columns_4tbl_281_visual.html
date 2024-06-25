@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Patients</h2><table><thead>
+<tr><th>PatientID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>InsuranceProvider</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1985-07-30</td><td>Blue Cross Blue Shield</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-06-15</td><td>Aetna</td><td>456 Elm St</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>DoctorID</th><th>FirstName</th><th>LastName</th><th>Specialization</th><th>PhoneNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Jones</td><td>Cardiology</td><td>555-1234</td><td>drjones@example.com</td></tr>
+<tr><td>2</td><td>Dr.</td><td>Williams</td><td>Neurology</td><td>555-5678</td><td>dwilliams@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>AppointmentID</th><th>PatientID</th><th>DoctorID</th><th>AppointmentDate</th><th>ReasonForVisit</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; Doctors.DoctorID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-15 10:00:00</td><td>Routine Checkup</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-02-10 14:00:00</td><td>Headache</td></tr>
+</tbody></table></div>
+
+<div><h2>Prescriptions</h2><table><thead>
+<tr><th>PrescriptionID</th><th>AppointmentID</th><th>MedicationName</th><th>Dosage</th><th>Instructions</th></tr>
+<tr><th></th><th>(&#8594; Appointments.AppointmentID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Ibuprofen</td><td>2 tablets every 6 hours</td><td>Take with food</td></tr>
+<tr><td>2</td><td>2</td><td>Amoxicillin</td><td>500mg twice a day</td><td>Take with water on an empty stomach</td></tr>
+</tbody></table></div>
+
+<div><h2>SurgicalProcedures</h2><table><thead>
+<tr><th>ProcedureID</th><th>Description</th><th><span style="color:#990000">InsuranceCovered</span></th><th><span style="color:#990000">OutOfPocketExpense</span></th><th>TimeRequired</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Knee Arthroscopy</td><td>5000</td><td>1000</td><td>2 hours</td></tr>
+<tr><td>2</td><td>Appendectomy</td><td>4000</td><td>2000</td><td>1 hour</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

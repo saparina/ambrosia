@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Users</h2><table><thead>
+<tr><th>userID</th><th>username</th><th>password</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>john_doe</td><td>password123</td></tr>
+<tr><td>2</td><td>jane_smith</td><td>securepass</td></tr>
+<tr><td>3</td><td>bob_brown</td><td>mypassword</td></tr>
+<tr><td>4</td><td>alice_white</td><td>strongPass#1</td></tr>
+<tr><td>5</td><td>emily_black</td><td>mysecretpass</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Online_Learning_Platforms</span></h2><table><thead>
+<tr><th>platformID</th><th>name</th><th>website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Udemy</td><td>www.udemy.com</td></tr>
+<tr><td>2</td><td>Coursera</td><td>www.coursera.org</td></tr>
+<tr><td>3</td><td>edX</td><td>www.edx.org</td></tr>
+<tr><td>4</td><td>Codecademy</td><td>www.codecademy.com</td></tr>
+<tr><td>5</td><td>LinkedIn Learning</td><td>learning.linkedin.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Courses</span></h2><table><thead>
+<tr><th>courseID</th><th><span style="color:#990000">title</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>English_As_A_Second_Language</td><td>This course will teach you English as a second language.</td></tr>
+<tr><td>2</td><td>Programming_Basics</td><td>This course covers the basics of programming languages.</td></tr>
+<tr><td>3</td><td>Mathematics_For_Engineers</td><td>This course is designed for engineering students who need a strong foundation in mathematics.</td></tr>
+<tr><td>4</td><td>Artificial_Intelligence</td><td>This advanced course covers artificial intelligence concepts and applications.</td></tr>
+<tr><td>5</td><td>Data_Science</td><td>This comprehensive course teaches data science skills and techniques.</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrolled_Students</h2><table><thead>
+<tr><th>studentID</th><th>courseID</th><th>enrollmentDate</th></tr>
+<tr><th>(&#8594; Users.userID)</th><th>(&#8594; Courses.courseID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-07-01</td></tr>
+<tr><td>2</td><td>2</td><td>2021-06-20</td></tr>
+<tr><td>3</td><td>3</td><td>2021-08-15</td></tr>
+<tr><td>4</td><td>4</td><td>2021-09-01</td></tr>
+<tr><td>5</td><td>5</td><td>2021-10-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>ratingID</th><th>studentID</th><th>courseID</th><th>stars</th><th>reviewText</th><th>submissionDate</th></tr>
+<tr><th></th><th>(&#8594; Users.userID)</th><th>(&#8594; Courses.courseID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>5</td><td>Excellent course! Highly recommended.</td><td>2021-08-10</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>4</td><td>Good course but could use more examples.</td><td>2021-07-15</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>5</td><td>Very helpful for my studies.</td><td>2021-08-20</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>5</td><td>Great course on AI, highly informative.</td><td>2021-09-05</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>4</td><td>The content was good, but I felt it lacked depth at times.</td><td>2021-10-10</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>instructorID</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johnd@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janes@example.com</td></tr>
+<tr><td>3</td><td>Bob</td><td>Brown</td><td>bobb@example.com</td></tr>
+<tr><td>4</td><td>Alice</td><td>White</td><td>alicw@example.com</td></tr>
+<tr><td>5</td><td>Emily</td><td>Black</td><td>emilbl@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Course_Instructor</h2><table><thead>
+<tr><th>courseID</th><th>instructorID</th><th>startDate</th><th>endDate</th></tr>
+<tr><th>(&#8594; Courses.courseID)</th><th>(&#8594; Instructors.instructorID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-01-01</td><td>2022-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>2021-02-01</td><td>2022-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>2021-03-01</td><td>2022-12-31</td></tr>
+<tr><td>4</td><td>4</td><td>2021-04-01</td><td>2022-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>2021-05-01</td><td>2022-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Online_Learning_Platforms_Courses</h2><table><thead>
+<tr><th>platformID</th><th>courseID</th><th>availabilityStatus</th></tr>
+<tr><th>(&#8594; Online_Learning_Platforms.platformID)</th><th>(&#8594; Courses.courseID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Available</td></tr>
+<tr><td>2</td><td>1</td><td>Unavailable</td></tr>
+<tr><td>3</td><td>2</td><td>Available</td></tr>
+<tr><td>4</td><td>3</td><td>Unavailable</td></tr>
+<tr><td>5</td><td>4</td><td>Available</td></tr>
+<tr><td>3</td><td>1</td><td>Available</td></tr>
+<tr><td>4</td><td>1</td><td>Unavailable</td></tr>
+<tr><td>5</td><td>1</td><td>Available</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Language_Schools</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC School</td><td>New York</td></tr>
+<tr><td>2</td><td>DEF School</td><td>London</td></tr>
+<tr><td>3</td><td>GHI School</td><td>Paris</td></tr>
+<tr><td>4</td><td>JKL School</td><td>Berlin</td></tr>
+<tr><td>5</td><td>MNO School</td><td>Rome</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Course_Levels</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">level</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beginner_Level</td></tr>
+<tr><td>2</td><td>Intermediate_Level</td></tr>
+<tr><td>3</td><td>Advanced_Level</td></tr>
+<tr><td>4</td><td>Expert_Level</td></tr>
+</tbody></table></div>
+
+<div><h2>Language_Schools_Course_Levels</h2><table><thead>
+<tr><th>language_schools_id</th><th>course_levels_id</th></tr>
+<tr><th>(&#8594; Language_Schools.id)</th><th>(&#8594; Course_Levels.id)</th></tr>
+</thead><tbody>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>2</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>1</td><td>4</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

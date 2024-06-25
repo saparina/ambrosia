@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Companies</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Events Unlimited</span></td></tr>
+<tr><td>2</td><td>Party Planners Inc.</td></tr>
+</tbody></table></div>
+
+<div><h2>JobRoles</h2><table><thead>
+<tr><th>id</th><th>roleName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Event_Planner</td></tr>
+<tr><td>2</td><td>Wedding_Coordinator</td></tr>
+<tr><td>3</td><td>Marketing Manager</td></tr>
+<tr><td>4</td><td>Accountant</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">EventPlannerJobPosting</span></h2><table><thead>
+<tr><th>id</th><th>companyId</th><th>jobRoleId</th><th>postedDate</th></tr>
+<tr><th></th><th>(&#8594; Companies.id)</th><th>(&#8594; JobRoles.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-16</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">WeddingCoordinatorJobPosting</span></h2><table><thead>
+<tr><th>id</th><th>companyId</th><th>jobRoleId</th><th>postedDate</th></tr>
+<tr><th></th><th>(&#8594; Companies.id)</th><th>(&#8594; JobRoles.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>3</td><td>2023-02-07</td></tr>
+<tr><td>2</td><td>2</td><td>4</td><td>2023-02-28</td></tr>
+</tbody></table></div>
+
+<div><h2>SalaryRange</h2><table><thead>
+<tr><th>id</th><th>minSalary</th><th>maxSalary</th></tr>
+<tr><th></th><th>(&#8594; EventPlannerJobPosting.postedDate)</th><th>(&#8594; WeddingCoordinatorJobPosting.postedDate)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>35000</td><td>45000</td></tr>
+<tr><td>2</td><td>40000</td><td>50000</td></tr>
+<tr><td>3</td><td>50000</td><td>60000</td></tr>
+<tr><td>4</td><td>55000</td><td>65000</td></tr>
+<tr><td>5</td><td>60000</td><td>70000</td></tr>
+</tbody></table></div>
+
+<div><h2>SkillsRequired</h2><table><thead>
+<tr><th>id</th><th>skillName</th></tr>
+<tr><th></th><th>(&#8594; EventPlannerJobPosting.roleName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Project Management</td></tr>
+<tr><td>2</td><td>Budgeting</td></tr>
+<tr><td>3</td><td>Venue Coordination</td></tr>
+<tr><td>4</td><td>Client Relations</td></tr>
+<tr><td>5</td><td>Negotiation</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

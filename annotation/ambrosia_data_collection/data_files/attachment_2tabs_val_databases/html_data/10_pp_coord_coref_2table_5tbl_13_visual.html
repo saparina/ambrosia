@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>clients</h2><table><thead>
+<tr><th>client_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>098-765-4321</td></tr>
+</tbody></table></div>
+
+<div><h2>accounts</h2><table><thead>
+<tr><th>account_id</th><th>client_id</th><th>balance</th><th>interest_rate</th></tr>
+<tr><th></th><th>(&#8594; clients.client_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5000.0</td><td>0.01</td></tr>
+<tr><td>2</td><td>2</td><td>10000.0</td><td>0.02</td></tr>
+</tbody></table></div>
+
+<div><h2>dividends</h2><table><thead>
+<tr><th>id</th><th>description</th><th>amount</th><th>payout_date</th><th>fund_type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Annual Dividend</td><td>500.0</td><td>2022-01-01</td><td>Stock</td></tr>
+<tr><td>2</td><td>Quarterly Dividend</td><td>200.0</td><td>2022-04-01</td><td>Bond</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">closed_end_funds</span></h2><table><thead>
+<tr><th>fund_id</th><th>ticker</th><th>net_assets</th><th>expense_ratio</th><th>dividends_table_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; dividends.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>ABCD</td><td><span style="color:#006600">1</span>000000.0</td><td>0.0<span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>EFGH</td><td>1500000.0</td><td>0.02</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">exchange_traded_funds</span></h2><table><thead>
+<tr><th>fund_id</th><th>ticker</th><th>net_assets</th><th>expense_ratio</th><th>dividends_table_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; dividends.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>XYZA</td><td>2000000.0</td><td>0.0<span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>LMNO</td><td>2500000.0</td><td>0.02</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Languages</span></h2><table><thead>
+<tr><th>LanguageID</th><th><span style="color:#006600">LanguageName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">English</span></td></tr>
+<tr><td>2</td><td>French</td></tr>
+<tr><td>3</td><td>German</td></tr>
+<tr><td>4</td><td>Italian</td></tr>
+<tr><td>5</td><td>Japanese</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Chefs</span></h2><table><thead>
+<tr><th>ChefID</th><th>FirstName</th><th>LastName</th><th>LanguageID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Languages.LanguageID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1</td></tr>
+<tr><td>2</td><td>Mary</td><td>Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>3</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>4</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Servers</span></h2><table><thead>
+<tr><th>ServerID</th><th>FirstName</th><th>LastName</th><th>LanguageID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Languages.LanguageID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jack</td><td>Green</td><td>1</td></tr>
+<tr><td>2</td><td>Emma</td><td>Blue</td><td>2</td></tr>
+<tr><td>3</td><td>David</td><td>Yellow</td><td>3</td></tr>
+<tr><td>4</td><td>Lucy</td><td>Red</td><td>4</td></tr>
+<tr><td>5</td><td>Oliver</td><td>Orange</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>RestaurantID</th><th>Name</th><th>Address</th><th>PhoneNumber</th><th>OpeningHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Le Jardin</td><td>123 Main St</td><td>555-1234</td><td>9am - 10pm</td></tr>
+<tr><td>2</td><td>La Maison</td><td>456 Elm St</td><td>555-5678</td><td>10am - 11pm</td></tr>
+<tr><td>3</td><td>Der Biergarten</td><td>789 Oak St</td><td>555-9012</td><td>11am - midnight</td></tr>
+<tr><td>4</td><td>Il Ristorante</td><td>999 Pine St</td><td>555-1357</td><td>Noon - 11pm</td></tr>
+<tr><td>5</td><td>The Sushi Bar</td><td>321 Maple Ave</td><td>555-1415</td><td>Lunch & dinner only</td></tr>
+</tbody></table></div>
+
+<div><h2>ChefRestaurants</h2><table><thead>
+<tr><th>ChefID</th><th>RestaurantID</th><th>HireDate</th></tr>
+<tr><th>(&#8594; Chefs.ChefID)</th><th>(&#8594; Restaurants.RestaurantID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2020-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2021-02-01</td></tr>
+<tr><td>3</td><td>3</td><td>2020-06-01</td></tr>
+<tr><td>4</td><td>4</td><td>2021-08-01</td></tr>
+<tr><td>5</td><td>5</td><td>2020-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2>ServerRestaurants</h2><table><thead>
+<tr><th>ServerID</th><th>RestaurantID</th><th>HireDate</th></tr>
+<tr><th>(&#8594; Servers.ServerID)</th><th>(&#8594; Restaurants.RestaurantID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2020-02-01</td></tr>
+<tr><td>2</td><td>2</td><td>2021-03-01</td></tr>
+<tr><td>3</td><td>3</td><td>2020-07-01</td></tr>
+<tr><td>4</td><td>4</td><td>2021-09-01</td></tr>
+<tr><td>5</td><td>5</td><td>2020-10-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

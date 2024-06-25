@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Performances</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Date</th><th>StartTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>2021-12-30</td><td>19:30</td></tr>
+<tr><td>2</td><td>Wicked</td><td>2021-12-31</td><td>19:30</td></tr>
+<tr><td>3</td><td>Phantom of The Opera</td><td>2022-01-01</td><td>19:30</td></tr>
+<tr><td>4</td><td>Mamma Mia!</td><td>2022-01-02</td><td>19:30</td></tr>
+<tr><td>5</td><td>Lion King</td><td>2022-01-03</td><td>19:30</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Improvised_Theatres</span></h2><table><thead>
+<tr><th>id</th><th>PerformanceId</th><th>Name</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Performances.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Comedy Club</td><td>A popular venue for stand-up comedy shows.</td></tr>
+<tr><td>2</td><td>2</td><td>Open Stage</td><td>An intimate theatre where actors can perform their own material.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Musicals</span></h2><table><thead>
+<tr><th>id</th><th>PerformanceId</th><th>Composer</th><th>Lyricist</th></tr>
+<tr><th></th><th>(&#8594; Performances.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Stephen Sondheim</td><td>George Furth</td></tr>
+<tr><td>2</td><td>2</td><td>Andrew Lloyd Webber</td><td>Tim Rice</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Venues</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Cambridge Theatre</span></td></tr>
+<tr><td>2</td><td>Her Majesty's Theatre</td></tr>
+</tbody></table></div>
+
+<div><h2>Showings</h2><table><thead>
+<tr><th>id</th><th>VenueId</th><th>PerformanceId</th></tr>
+<tr><th></th><th>(&#8594; Venues.id)</th><th>(&#8594; Performances.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Guests</h2><table><thead>
+<tr><th>guest_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>room_id</th><th>room_type</th><th>price</th><th>capacity</th></tr>
+<tr><th></th><th>(&#8594; RoomTypes.type_name)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Standard Double</td><td>80.0</td><td>2</td></tr>
+<tr><td>2</td><td>Deluxe Twin</td><td>120.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>RoomTypes</h2><table><thead>
+<tr><th>type_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>Single</td><td>A small room with one bed.</td></tr>
+<tr><td>Suite</td><td>A spacious room with a separate living area.</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>booking_id</th><th>check_in</th><th>check_out</th><th>guest_id</th><th>room_id</th><th>total_price</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Guests.guest_id)</th><th>(&#8594; Rooms.room_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-10-01</td><td>2021-10-05</td><td>1</td><td>1</td><td>320.0</td></tr>
+<tr><td>2</td><td>2021-10-10</td><td>2021-10-14</td><td>2</td><td>2</td><td>440.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FoodServices</span></h2><table><thead>
+<tr><th>service_id</th><th><span style="color:#990000"><span style="color:#990000">food_service</span></span></th><th>cuisine_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Cuisines.cuisine_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Restaurant</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Restaurant</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Café</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Café</span></td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Cuisines</span></h2><table><thead>
+<tr><th>cuisine_id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Italian</span></td></tr>
+<tr><td>2</td><td>Mexican</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

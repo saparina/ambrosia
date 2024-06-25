@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airlines</h2><table><thead>
+<tr><th>AirlineID</th><th>Name</th><th>Headquarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>Fort Worth</td></tr>
+<tr><td>2</td><td>Delta Air Lines</td><td>Atlanta</td></tr>
+<tr><td>3</td><td>United Airlines</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>Dallas</td></tr>
+<tr><td>5</td><td>JetBlue Airways</td><td>New York</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>OriginAirport</th><th>DestinationAirport</th><th>DepartureTime</th><th>ArrivalTime</th><th>AircraftType</th><th>OperatedBy</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Airlines.AirlineID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>DFW</td><td>LAX</td><td>2023-01-01 08:00</td><td>2023-01-01 11:00</td><td>Boing 737</td><td>1</td></tr>
+<tr><td>2</td><td>ORD</td><td>MIA</td><td>2023-01-02 09:00</td><td>2023-01-02 12:00</td><td>Airbus A320</td><td>2</td></tr>
+<tr><td>3</td><td>IAH</td><td>PHX</td><td>2023-01-03 10:00</td><td>2023-01-03 13:00</td><td>Embraer E175</td><td>3</td></tr>
+<tr><td>4</td><td>SFO</td><td>SEA</td><td>2023-01-04 11:00</td><td>2023-01-04 14:00</td><td>Boeing 757</td><td>4</td></tr>
+<tr><td>5</td><td>ATL</td><td>MCO</td><td>2023-01-05 12:00</td><td>2023-01-05 15:00</td><td>Bombardier CRJ900</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-06-15</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1992-08-20</td><td>UK</td></tr>
+<tr><td>3</td><td>Emma</td><td>Nelson</td><td>1988-10-05</td><td>Canada</td></tr>
+<tr><td>4</td><td>Michael</td><td>Jackson</td><td>1995-12-25</td><td>Australia</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>1985-02-12</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>FlightID</th><th>PassengerID</th><th>ClassOfService</th><th>BookedDate</th></tr>
+<tr><th></th><th>(&#8594; Flights.FlightID)</th><th>(&#8594; Passengers.PassengerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Economy</td><td>2022-12-31 10:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Business</td><td>2023-01-01 11:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Premium Economy</td><td>2023-01-02 12:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Economy</td><td>2023-01-03 13:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Business</td><td>2023-01-04 14:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Frequent_Flyer_Lounges</span></h2><table><thead>
+<tr><th>LoungeID</th><th>Name</th><th>Location</th><th>Amenities</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Club</td><td>DFW Terminal C</td><td><span style="color:#006600">Complimentary Wi-Fi</span></td><td>100</td></tr>
+<tr><td>2</td><td>Club ATLAS</td><td>ATL International</td><td>No Complimentary Wi-Fi</td><td>150</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">VIP_Lounges</span></h2><table><thead>
+<tr><th>LoungeID</th><th>Name</th><th>Location</th><th>Amenities</th><th>AccessLevel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Class Lounge</td><td>SFO Terminal G</td><td><span style="color:#006600">Complimentary Wi-Fi</span></td><td>Invitation Only</td></tr>
+<tr><td>2</td><td>Platinum Lounge</td><td>LAX Tom Bradley Intl</td><td>No Complimentary Wi-Fi</td><td>By Invitation/Membership</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

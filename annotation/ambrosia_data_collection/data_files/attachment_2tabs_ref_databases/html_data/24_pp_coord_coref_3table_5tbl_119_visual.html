@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Employee</span></h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>jobTitle</th><th><span style="color:#006600">gender</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Software Engineer</td><td>Male</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Data Scientist</td><td><span style="color:#006600">Female</span></td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>Project Manager</td><td><span style="color:#006600">Female</span></td></tr>
+<tr><td>4</td><td>Charlie</td><td>White</td><td>Quality Analyst</td><td>Male</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>HR Specialist</td><td>Male</td></tr>
+<tr><td>6</td><td>Eva</td><td>Green</td><td>Marketing Executive</td><td><span style="color:#006600">Female</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Research_Scientist</span></h2><table><thead>
+<tr><th>id</th><th>yearsOfExperience</th><th>publications</th></tr>
+<tr><th>(&#8594; Employee.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>7</td><td>10</td></tr>
+<tr><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>9</td><td>8</td></tr>
+<tr><td>4</td><td>5</td><td>6</td></tr>
+<tr><td>5</td><td>2</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Laboratory_Technician</span></h2><table><thead>
+<tr><th>id</th><th>experienceInYears</th><th>certifications</th></tr>
+<tr><th>(&#8594; Employee.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>3</td></tr>
+<tr><td>2</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>6</td><td>4</td></tr>
+<tr><td>4</td><td>3</td><td>1</td></tr>
+<tr><td>5</td><td>2</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>id</th><th>skillName</th><th>proficiencyLevel</th></tr>
+<tr><th>(&#8594; Employee.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python Programming</td><td>8</td></tr>
+<tr><td>2</td><td>JavaScript Development</td><td>7</td></tr>
+<tr><td>3</td><td>SQL Querying</td><td>9</td></tr>
+<tr><td>4</td><td>Web Design</td><td>6</td></tr>
+<tr><td>5</td><td>Database Management</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Projects</h2><table><thead>
+<tr><th>id</th><th>projectName</th><th>startDate</th><th>endDate</th></tr>
+<tr><th>(&#8594; Employee.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Project Alpha</td><td>2020-01-01</td><td>2020-12-31</td></tr>
+<tr><td>2</td><td>Project Beta</td><td>2019-01-01</td><td>2019-12-31</td></tr>
+<tr><td>3</td><td>Project Gamma</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>4</td><td>Project Delta</td><td>2020-01-01</td><td>2020-12-31</td></tr>
+<tr><td>5</td><td>Project Epsilon</td><td>2019-01-01</td><td>2019-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Education</h2><table><thead>
+<tr><th>id</th><th>degreeType</th><th>institution</th><th>graduationYear</th></tr>
+<tr><th>(&#8594; Employee.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>PhD</td><td>University of Science</td><td>2018</td></tr>
+<tr><td>2</td><td>BS</td><td>Tech University</td><td>2015</td></tr>
+<tr><td>3</td><td>MS</td><td>Knowledge Institute</td><td>2017</td></tr>
+<tr><td>4</td><td>BA</td><td>Life College</td><td>2014</td></tr>
+<tr><td>5</td><td>MA</td><td>Wisdom Academy</td><td>2016</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

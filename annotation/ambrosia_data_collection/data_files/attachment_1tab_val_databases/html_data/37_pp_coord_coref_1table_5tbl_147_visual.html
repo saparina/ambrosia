@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Live_Event</span></h2><table><thead>
+<tr><th>EventID</th><th>Title</th><th>Date</th><th>Time</th><th>VenueName</th><th>Live_Performance</th><th>Venue_Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rock <span style="color:#990000">Concert</span></td><td>2021-12-31</td><td>19:00:00</td><td>Citi Field</td><td><span style="color:#990000">Concert</span></td><td><span style="color:#006600">500</span></td></tr>
+<tr><td>2</td><td>Classical Music Night</td><td>2021-12-31</td><td>18:00:00</td><td>Carnegie Hall</td><td><span style="color:#990000">Concert</span></td><td>600</td></tr>
+<tr><td>3</td><td>A Midsummer Night's Dream</td><td>2022-05-27</td><td>19:00:00</td><td>Central Park</td><td><span style="color:#990000">Theater Play</span></td><td><span style="color:#006600">500</span></td></tr>
+<tr><td>4</td><td>Hamlet</td><td>2022-05-27</td><td>18:00:00</td><td>Broadway Theatre</td><td><span style="color:#990000">Theater Play</span></td><td>700</td></tr>
+</tbody></table></div>
+
+<div><h2>Artist</h2><table><thead>
+<tr><th>ArtistID</th><th>Name</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Band A</td><td>Pop</td></tr>
+<tr><td>2</td><td>Band B</td><td>Rock</td></tr>
+<tr><td>3</td><td>Band C</td><td>Jazz</td></tr>
+<tr><td>4</td><td>Band D</td><td>Country</td></tr>
+<tr><td>5</td><td>Band E</td><td>Hip Hop</td></tr>
+</tbody></table></div>
+
+<div><h2>Theater_Play</h2><table><thead>
+<tr><th>PlayID</th><th>Title</th><th>Author</th><th>Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Othello</td><td>Shakespeare</td><td>1603</td></tr>
+<tr><td>2</td><td>Macbeth</td><td>Shakespeare</td><td>1606</td></tr>
+<tr><td>3</td><td>King Lear</td><td>Shakespeare</td><td>1606</td></tr>
+<tr><td>4</td><td>Antony and Cleopatra</td><td>Shakespeare</td><td>1607</td></tr>
+<tr><td>5</td><td>Twelfth Night</td><td>Shakespeare</td><td>1602</td></tr>
+</tbody></table></div>
+
+<div><h2>Concert</h2><table><thead>
+<tr><th>ConcertID</th><th>Band_or_Artist_name</th><th>Album</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Band X</td><td>Album Y</td></tr>
+<tr><td>2</td><td>Band Z</td><td>Album W</td></tr>
+<tr><td>3</td><td>Band AA</td><td>Album BB</td></tr>
+<tr><td>4</td><td>Band AB</td><td>Album BA</td></tr>
+<tr><td>5</td><td>Band AC</td><td>Album CA</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists_in_Concert</h2><table><thead>
+<tr><th>ConcertID</th><th>ArtistID</th></tr>
+<tr><th>(&#8594; Concert.ConcertID)</th><th>(&#8594; Artist.ArtistID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Plays_at_Venues</h2><table><thead>
+<tr><th>PlayID</th><th>VenueName</th></tr>
+<tr><th>(&#8594; Theater_Play.PlayID)</th><th>(&#8594; Live_Event.VenueName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Central Park</td></tr>
+<tr><td>2</td><td>Broadway Theatre</td></tr>
+<tr><td>3</td><td>Central Park</td></tr>
+<tr><td>4</td><td>Broadway Theatre</td></tr>
+<tr><td>5</td><td>Central Park</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>MovieActor</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-07-30</td><td>American</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-06-23</td><td>Canadian</td></tr>
+<tr><td>3</td><td>Tom</td><td>Hanks</td><td>1959-07-09</td><td>American</td></tr>
+<tr><td>4</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td><td>American</td></tr>
+<tr><td>5</td><td>Scarlett</td><td>Johansson</td><td>1984-11-22</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MusicPerformer</span></h2><table><thead>
+<tr><th>PerformerID</th><th>Name</th><th>Genre</th><th>YearsInIndustry</th><th>MusicPerformerType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A <span style="color:#990000">Jazz Musician</span></td><td>Jazz</td><td><span style="color:#006600">10</span></td><td><span style="color:#990000">Jazz Musician</span></td></tr>
+<tr><td>2</td><td>Another <span style="color:#990000">Jazz Musician</span></td><td>Jazz</td><td>5</td><td><span style="color:#990000">Jazz Musician</span></td></tr>
+<tr><td>3</td><td>A <span style="color:#990000">Rock Guitarist</span></td><td>Rock</td><td><span style="color:#006600">10</span></td><td><span style="color:#990000">Rock Guitarist</span></td></tr>
+<tr><td>4</td><td>Another <span style="color:#990000">Rock Guitarist</span></td><td>Rock</td><td>8</td><td><span style="color:#990000">Rock Guitarist</span></td></tr>
+<tr><td>5</td><td>Pop Singer</td><td>Pop</td><td>2</td><td>Pop Singer</td></tr>
+</tbody></table></div>
+
+<div><h2>Album</h2><table><thead>
+<tr><th>AlbumID</th><th>Title</th><th>ReleaseDate</th><th>PerformerID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; MusicPerformer.PerformerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Album</td><td>2005-03-20</td><td>1</td></tr>
+<tr><td>2</td><td>Second Album</td><td>2007-08-15</td><td>2</td></tr>
+<tr><td>3</td><td>Third Album</td><td>2009-11-21</td><td>3</td></tr>
+<tr><td>4</td><td>Fourth Album</td><td>2011-06-10</td><td>4</td></tr>
+<tr><td>5</td><td>Fifth Album</td><td>2013-09-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Song</h2><table><thead>
+<tr><th>SongID</th><th>Title</th><th>Length</th><th>AlbumID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Album.AlbumID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Song 1</td><td>03:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Song 2</td><td>04:30:00</td><td>2</td></tr>
+<tr><td>3</td><td>Song 3</td><td>03:15:00</td><td>3</td></tr>
+<tr><td>4</td><td>Song 4</td><td>03:00:00</td><td>4</td></tr>
+<tr><td>5</td><td>Song 5</td><td>04:15:00</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

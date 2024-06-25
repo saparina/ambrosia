@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>Name</th><th>Age</th><th>Major</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>20</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>21</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>22</td><td>Physics</td></tr>
+<tr><td>4</td><td>Emma Brown</td><td>23</td><td>Biology</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>24</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Diplomas</span></h2><table><thead>
+<tr><th>DiplomaID</th><th>Name</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bachelor of Computer Science</td><td>A degree in computer science</td></tr>
+<tr><td>2</td><td>Bachelor of Mathematics</td><td>A degree in mathematics</td></tr>
+<tr><td>3</td><td>Bachelor of Physics</td><td>A degree in physics</td></tr>
+<tr><td>4</td><td>Bachelor of Biology</td><td>A degree in biology</td></tr>
+<tr><td>5</td><td>Bachelor of History</td><td>A degree in history</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Certificates</span></h2><table><thead>
+<tr><th>CertificateID</th><th>Name</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Data Structures Certification</td><td>Certification in data structures</td></tr>
+<tr><td>2</td><td>Algebra Certification</td><td>Certification in algebra</td></tr>
+<tr><td>3</td><td>Calculus Certification</td><td>Certification in calculus</td></tr>
+<tr><td>4</td><td>Quantum Mechanics Certification</td><td>Certification in quantum mechanics</td></tr>
+<tr><td>5</td><td>Ancient Civilizations Certification</td><td>Certification in ancient civilizations</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">CompletionRequirements</span></h2><table><thead>
+<tr><th>RequirementID</th><th><span style="color:#006600">RequirementName</span></th><th>Type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Passing Exam</td><td>Exam</td></tr>
+<tr><td>2</td><td>Writing a Research Paper</td><td>Paper</td></tr>
+<tr><td>3</td><td><span style="color:#006600">Group Project</span></td><td>Project</td></tr>
+<tr><td>4</td><td>Individual Internship</td><td>Internship</td></tr>
+<tr><td>5</td><td>Teaching Assistance</td><td>Assistantship</td></tr>
+</tbody></table></div>
+
+<div><h2>CourseEnrolment</h2><table><thead>
+<tr><th>EnrolmentID</th><th>StudentID</th><th>CourseID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>Description</th><th>RequiredDiplomaID</th><th>RequiredCertificateID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Diplomas.DiplomaID)</th><th>(&#8594; Certificates.CertificateID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Programming</td><td></td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Discrete Mathematics</td><td></td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>General Relativity</td><td></td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>Evolutionary Biology</td><td></td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>World War II</td><td></td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>StudentProgress</h2><table><thead>
+<tr><th>ProgressID</th><th>StudentID</th><th>CourseID</th><th>CompletionRequirementID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th><th>(&#8594; CompletionRequirements.RequirementID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

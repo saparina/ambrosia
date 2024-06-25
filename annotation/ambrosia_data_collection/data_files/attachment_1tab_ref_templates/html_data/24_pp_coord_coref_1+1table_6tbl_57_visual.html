@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Articles</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>written_by</th><th><span style="color:#186e16">Written_journalism</span></th><th>word_count</th></tr>
+<tr><th></th><th></th><th>(&#8594; Authors.id)</th><th></th><th>(&#8594; WordCounts.column)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First <span style="color:#186e16">News Article</span></td><td>1</td><td><span style="color:#186e16">News Article</span></td><td>1,000 words</td></tr>
+<tr><td>2</td><td>Second <span style="color:#186e16">News Article</span></td><td>2</td><td><span style="color:#186e16">News Article</span></td><td>800 words</td></tr>
+<tr><td>3</td><td>First Feature Article</td><td>3</td><td>Feature Article</td><td>1,000 words</td></tr>
+<tr><td>4</td><td>Second Feature Article</td><td>4</td><td>Feature Article</td><td>900 words</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">WordCounts</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">column</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">1,000 words</span></td></tr>
+<tr><td>2</td><td>750 words</td></tr>
+<tr><td>3</td><td>1,200 words</td></tr>
+<tr><td>4</td><td>800 words</td></tr>
+<tr><td>5</td><td>1,100 words</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Newspaper XYZ</td></tr>
+<tr><td>2</td><td>Magazine ABC</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>id</th><th>article_id</th><th>publisher_id</th><th>publication_date</th></tr>
+<tr><th></th><th>(&#8594; Articles.id)</th><th>(&#8594; Publishers.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-02</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>2023-01-03</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2023-01-04</td></tr>
+</tbody></table></div>
+
+<div><h2>Comments</h2><table><thead>
+<tr><th>id</th><th>comment</th><th>article_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Articles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great article!</td><td>1</td></tr>
+<tr><td>2</td><td>Interesting insights.</td><td>2</td></tr>
+<tr><td>3</td><td>Well-written piece.</td><td>3</td></tr>
+<tr><td>4</td><td>Enjoyed reading this.</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

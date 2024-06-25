@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Curriculum</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>grade_level</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grade 1</td><td>1</td></tr>
+<tr><td>2</td><td>Grade 2</td><td>2</td></tr>
+<tr><td>3</td><td>Grade 3</td><td>3</td></tr>
+<tr><td>4</td><td>Grade 4</td><td>4</td></tr>
+<tr><td>5</td><td>Grade 5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Topics</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">topic_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Literacy</td></tr>
+<tr><td>2</td><td>Math</td></tr>
+<tr><td>3</td><td>Science</td></tr>
+<tr><td>4</td><td>History</td></tr>
+<tr><td>5</td><td>Art</td></tr>
+</tbody></table></div>
+
+<div><h2>Curriculum_Topics</h2><table><thead>
+<tr><th>curriculum_id</th><th>topics_id</th></tr>
+<tr><th>(&#8594; Curriculum.id)</th><th>(&#8594; Topics.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>teacher_id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>class_id</th><th>class_name</th><th>grade_level</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Class 1A</td><td>1</td></tr>
+<tr><td>2</td><td>Class 2B</td><td>2</td></tr>
+<tr><td>3</td><td>Class 3C</td><td>3</td></tr>
+<tr><td>4</td><td>Class 4D</td><td>4</td></tr>
+<tr><td>5</td><td>Class 5E</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>assignment_id</th><th>title</th><th>due_date</th><th>max_score</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Assignment 1</td><td>2022-09-15</td><td>100</td></tr>
+<tr><td>2</td><td>Assignment 2</td><td>2022-09-20</td><td>100</td></tr>
+<tr><td>3</td><td>Assignment 3</td><td>2022-09-25</td><td>100</td></tr>
+<tr><td>4</td><td>Assignment 4</td><td>2022-09-30</td><td>100</td></tr>
+<tr><td>5</td><td>Assignment 5</td><td>2022-10-05</td><td>100</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

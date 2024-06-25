@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2002-02-02</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Clubs</span></h2><table><thead>
+<tr><th>ClubID</th><th>Name</th><th>Description</th><th>Participants</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chess Club</td><td>A club dedicated to playing chess.</td><td><span style="color:#006600">30</span></td></tr>
+<tr><td>2</td><td>Coding Club</td><td>A club focused on coding and programming.</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">LeadershipPrograms</span></h2><table><thead>
+<tr><th>ProgramID</th><th>Name</th><th>Description</th><th>Participants</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Youth Leadership Academy</td><td>A program that helps young people develop leadership skills.</td><td><span style="color:#006600">30</span></td></tr>
+<tr><td>2</td><td>Community Service Initiative</td><td>A program where students engage in community service projects.</td><td>25</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>SubjectTaught</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael</td><td>White</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Emily</td><td>Green</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>ClassID</th><th>ClassroomNumber</th><th>StartTime</th><th>EndTime</th><th>TeacherId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td><td>08:00:00</td><td>09:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>201</td><td>10:00:00</td><td>11:00:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>ClassId</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Classes.ClassID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>B</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>New York</td></tr>
+<tr><td>2</td><td>SoftwareInc</td><td>San Francisco</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ITJobPosting</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">jobTitle</span></span></th><th>companyId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Company.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">IT Support Technician</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Network Administrator</span></td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ITSkillsRequired</h2><table><thead>
+<tr><th>id</th><th>skillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Programming</td></tr>
+<tr><td>2</td><td>Database Management</td></tr>
+</tbody></table></div>
+
+<div><h2>JobRequirement</h2><table><thead>
+<tr><th>id</th><th>itJobPostingId</th><th>requiredSkillId</th></tr>
+<tr><th></th><th>(&#8594; ITJobPosting.id)</th><th>(&#8594; ITSkillsRequired.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">OperatingSystems</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">osName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Windows</span></td></tr>
+<tr><td>2</td><td>Linux</td></tr>
+</tbody></table></div>
+
+<div><h2>ITJobOSRequirements</h2><table><thead>
+<tr><th>id</th><th>itJobPostingId</th><th>operatingSystemId</th></tr>
+<tr><th></th><th>(&#8594; ITJobPosting.id)</th><th>(&#8594; OperatingSystems.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

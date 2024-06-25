@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>2008</td><td>Action/Adventure</td></tr>
+<tr><td>2</td><td>Avatar</td><td>2009</td><td>Science Fiction</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>2014</td><td>Science Fiction</td></tr>
+<tr><td>4</td><td>Inception</td><td>2010</td><td>Action/Adventure</td></tr>
+<tr><td>5</td><td>Gravity</td><td>2013</td><td>Science Fiction</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">CameraAngles</span></h2><table><thead>
+<tr><th>id</th><th>Angle</th><th>Description</th><th>MovieId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Wide Shot</td><td>Captures a large portion of the scene.</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Close Up</td><td>Focuses on small details within the scene.</td><td>2</td></tr>
+<tr><td>3</td><td>Low Angle</td><td>Subject appears taller and more powerful.</td><td>3</td></tr>
+<tr><td>4</td><td>High Angle</td><td>Subject appears smaller and weaker.</td><td>4</td></tr>
+<tr><td>5</td><td>Aerial Shot</td><td>Shows a wide area from above.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">LightingTypes</span></h2><table><thead>
+<tr><th>id</th><th>Type</th><th>Technique</th><th>MovieId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Natural Light</td><td>Using sunlight as the primary light source.</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Artificial Light</td><td>Using manmade lights as the primary light source.</td><td>2</td></tr>
+<tr><td>3</td><td>Three Point Lighting</td><td>Mainly used in filmmaking and photography.</td><td>3</td></tr>
+<tr><td>4</td><td>Flat Lighting</td><td>Used to evenly illuminate the entire subject.</td><td>4</td></tr>
+<tr><td>5</td><td>Rembrandt Lighting</td><td>Creates a triangle of light under the eye.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Characters</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>Director</td></tr>
+<tr><td>2</td><td>Leonardo DiCaprio</td><td>Lead Actor</td></tr>
+<tr><td>3</td><td>Tom Hardy</td><td>Supporting Actor</td></tr>
+<tr><td>4</td><td>Joseph Gordon-Levitt</td><td>Supporting Actor</td></tr>
+<tr><td>5</td><td>Marion Cotillard</td><td>Supporting Actress</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>CharacterId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Characters.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Nolan</td><td>1</td></tr>
+<tr><td>2</td><td>Leonardo</td><td>DiCaprio</td><td>2</td></tr>
+<tr><td>3</td><td>Tom</td><td>Hardy</td><td>3</td></tr>
+<tr><td>4</td><td>Joseph</td><td>Gordon-Levitt</td><td>4</td></tr>
+<tr><td>5</td><td>Marion</td><td>Cotillard</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

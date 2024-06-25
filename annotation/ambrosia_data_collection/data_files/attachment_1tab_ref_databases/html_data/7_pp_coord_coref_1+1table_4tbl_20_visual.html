@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genre</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Fiction</td></tr>
+<tr><td>2</td><td>Nonfiction</td></tr>
+<tr><td>3</td><td>Mystery</td></tr>
+<tr><td>4</td><td>Science Fiction</td></tr>
+<tr><td>5</td><td>Adventure</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AgeGroup</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000"><span style="color:#990000">GroupName</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Children's Book</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Young Adult Book</span></td></tr>
+<tr><td>3</td><td>Teenage Book</td></tr>
+<tr><td>4</td><td>Adult Book</td></tr>
+<tr><td>5</td><td>Older Readers Book</td></tr>
+</tbody></table></div>
+
+<div><h2>Author</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Biography</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>He is a famous author.</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>She is an illustrator.</td></tr>
+<tr><td>3</td><td>Emily</td><td>Brown</td><td>She writes science fiction novels.</td></tr>
+<tr><td>4</td><td>Michael</td><td>White</td><td>He has written many mystery books.</td></tr>
+<tr><td>5</td><td>Linda</td><td>Green</td><td>She writes adventure stories.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Illustrator</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Fullname</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Jane Smith</span></td></tr>
+<tr><td>2</td><td>Robert Johnson</td></tr>
+<tr><td>3</td><td>William Brown</td></tr>
+<tr><td>4</td><td>David White</td></tr>
+<tr><td>5</td><td>Mark Green</td></tr>
+</tbody></table></div>
+
+<div><h2>Publisher</h2><table><thead>
+<tr><th>ID</th><th>CompanyName</th><th>Address</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Random House</td><td>New York, USA</td><td>+1 212-598-6000</td></tr>
+<tr><td>2</td><td>HarperCollins</td><td>London, UK</td><td>+44 207-867-8000</td></tr>
+<tr><td>3</td><td>Macmillan Publishers</td><td>Berlin, Germany</td><td>+49 30-260-00-0</td></tr>
+<tr><td>4</td><td>Simon & Schuster</td><td>New York, USA</td><td>+1 212-698-7000</td></tr>
+<tr><td>5</td><td>Hachette Book Group</td><td>Paris, France</td><td>+33 1-55-62-20-00</td></tr>
+</tbody></table></div>
+
+<div><h2>Books</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Summary</th><th>ReleaseDate</th><th>Price</th><th>GenreID</th><th>AgeGroupID</th><th>AuthorID</th><th>IllustratorID</th><th>PublisherID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Genre.ID)</th><th>(&#8594; AgeGroup.ID)</th><th>(&#8594; Author.ID)</th><th>(&#8594; Illustrator.ID)</th><th>(&#8594; Publisher.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Book A</td><td>Summary of book A.</td><td>2021-01-01</td><td>9.99</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Book B</td><td>Summary of book B.</td><td>2021-02-01</td><td>12.99</td><td>2</td><td>1</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Book C</td><td>Summary of book C.</td><td>2021-03-01</td><td>14.99</td><td>3</td><td>2</td><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>Book D</td><td>Summary of book D.</td><td>2021-04-01</td><td>10.99</td><td>4</td><td>1</td><td>4</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>Book E</td><td>Summary of book E.</td><td>2021-05-01</td><td>11.99</td><td>5</td><td>2</td><td>5</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

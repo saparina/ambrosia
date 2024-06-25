@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Airports</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>airport_structures</th><th>aircraft</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>New York City, USA</td><td><span style="color:#990000">Terminal Building</span></td><td><span style="color:#006600">Boeing 747</span></td></tr>
+<tr><td>2</td><td>LAX</td><td>Los Angeles, USA</td><td><span style="color:#990000">Terminal Building</span></td><td>Airbus A380</td></tr>
+<tr><td>3</td><td>ORD</td><td>Chicago, USA</td><td><span style="color:#990000">Terminal Building</span></td><td>Boeing 737</td></tr>
+<tr><td>4</td><td>DXB</td><td>Dubai, UAE</td><td><span style="color:#990000">Terminal Building</span></td><td>Airbus A380</td></tr>
+<tr><td>5</td><td>PEK</td><td>Beijing, China</td><td><span style="color:#990000">Cargo Terminal</span></td><td><span style="color:#006600">Boeing 747</span></td></tr>
+<tr><td>6</td><td>HND</td><td>Tokyo, Japan</td><td><span style="color:#990000">Cargo Terminal</span></td><td>Boeing 767</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flight_id</th><th>departure_airport_name</th><th>arrival_airport_name</th><th>date</th><th>duration</th><th>aircraft_type</th></tr>
+<tr><th></th><th>(&#8594; Airports.name)</th><th>(&#8594; Airports.name)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>LAX</td><td>2021-09-01 07:00:00</td><td>120</td><td>Boeing 747</td></tr>
+<tr><td>2</td><td>LAX</td><td>ORD</td><td>2021-09-01 11:00:00</td><td>180</td><td>Airbus A380</td></tr>
+<tr><td>3</td><td>ORD</td><td>DXB</td><td>2021-09-01 17:00:00</td><td>240</td><td>Boeing 737</td></tr>
+<tr><td>4</td><td>DXB</td><td>HND</td><td>2021-09-01 22:00:00</td><td>150</td><td>Airbus A380</td></tr>
+<tr><td>5</td><td>LHR</td><td>YVR</td><td>2021-09-02 06:00:00</td><td>120</td><td>Boeing 767</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>airline_id</th><th>name</th><th>country</th><th>fleet_size</th><th>headquarters</th><th>flight_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>USA</td><td>900</td><td>Fort Worth, Texas</td><td>None</td></tr>
+<tr><td>2</td><td>United Airlines</td><td>USA</td><td>800</td><td>Chicago, Illinois</td><td>None</td></tr>
+<tr><td>3</td><td>Delta Airlines</td><td>USA</td><td>700</td><td>Atlanta, Georgia</td><td>None</td></tr>
+<tr><td>4</td><td>Emirates</td><td>UAE</td><td>200</td><td>Dubai, UAE</td><td>None</td></tr>
+<tr><td>5</td><td>Qatar Airways</td><td>Qatar</td><td>100</td><td>Doha, Qatar</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilots</h2><table><thead>
+<tr><th>pilot_id</th><th>first_name</th><th>last_name</th><th>license_date</th><th>total_hours</th><th>airline_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Airlines.airline_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>2010-01-01</td><td>5000</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>2012-02-01</td><td>4000</td><td>2</td></tr>
+<tr><td>3</td><td>Michael</td><td>Jackson</td><td>2014-03-01</td><td>3000</td><td>3</td></tr>
+<tr><td>4</td><td>Susan</td><td>Wilson</td><td>2016-04-01</td><td>2500</td><td>4</td></tr>
+<tr><td>5</td><td>David</td><td>Martin</td><td>2018-05-01</td><td>3500</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passenger_id</th><th>first_name</th><th>last_name</th><th>passport_number</th><th>ticket_number</th><th>seat_number</th><th>flight_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Flights.flight_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>A1234567</td><td>TIC12345</td><td>1A</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Jones</td><td>B6789012</td><td>TIE67890</td><td>2A</td><td>2</td></tr>
+<tr><td>3</td><td>Carol</td><td>Williams</td><td>C3456789</td><td>TIM98765</td><td>3A</td><td>3</td></tr>
+<tr><td>4</td><td>Daniel</td><td>Brown</td><td>D0987654</td><td>TID01234</td><td>4A</td><td>4</td></tr>
+<tr><td>5</td><td>Elizabeth</td><td>Green</td><td>E4567890</td><td>TIE98765</td><td>5A</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

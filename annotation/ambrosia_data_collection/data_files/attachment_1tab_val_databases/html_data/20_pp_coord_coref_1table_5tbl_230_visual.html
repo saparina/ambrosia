@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA</td></tr>
+<tr><td>2</td><td>DL</td></tr>
+<tr><td>3</td><td>UA</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td></tr>
+<tr><td>2</td><td>LAX</td></tr>
+<tr><td>3</td><td>ORD</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Pilots</span></h2><table><thead>
+<tr><th>id</th><th>airline_id</th><th>years_of_experience</th><th>role</th></tr>
+<tr><th></th><th>(&#8594; Airlines.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">10</span></td><td>Pilot</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>None</td></tr>
+<tr><td>3</td><td>3</td><td>7</td><td>Co-Pilot</td></tr>
+<tr><td>4</td><td>4</td><td>9</td><td>Instructor</td></tr>
+<tr><td>5</td><td>5</td><td>6</td><td>Trainee</td></tr>
+<tr><td>6</td><td>1</td><td><span style="color:#006600">10</span></td><td><span style="color:#990000">Aviation Maintenance Technician</span></td></tr>
+<tr><td>7</td><td>2</td><td>8</td><td><span style="color:#990000">Aviation Maintenance Technician</span></td></tr>
+<tr><td>8</td><td>1</td><td><span style="color:#006600">10</span></td><td><span style="color:#990000">Flight Attendant</span></td></tr>
+<tr><td>9</td><td>2</td><td>7</td><td><span style="color:#990000">Flight Attendant</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>id</th><th>model</th><th>registration_number</th><th>current_location_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 787</td><td>N1234E</td><td>1</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>N1235D</td><td>2</td></tr>
+<tr><td>3</td><td>Embraer E190</td><td>N1236D</td><td>3</td></tr>
+<tr><td>4</td><td>Bombardier Q400</td><td>N1237C</td><td>4</td></tr>
+<tr><td>5</td><td>De Havilland Canada DHC-8</td><td>N1238G</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>plane_id</th><th>departure_time</th><th>arrival_time</th><th>destination_id</th><th>origin_id</th><th>pilot_id</th></tr>
+<tr><th></th><th>(&#8594; Planes.id)</th><th></th><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th><th>(&#8594; Pilots.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01 10:00:00</td><td>2023-01-01 12:00:00</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-02 11:00:00</td><td>2023-01-02 13:00:00</td><td>3</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2023-01-03 12:00:00</td><td>2023-01-03 14:00:00</td><td>4</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>2023-01-04 13:00:00</td><td>2023-01-04 15:00:00</td><td>5</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>2023-01-05 14:00:00</td><td>2023-01-05 16:00:00</td><td>1</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>dateOfBirth</th><th>gender</th><th>role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Kevin Spacey</td><td>July 26, 1959</td><td>Male</td><td>Richard III</td></tr>
+<tr><td>2</td><td>Cate Blanchett</td><td>May 14, 1969</td><td>Female</td><td>Lady Macbeth</td></tr>
+</tbody></table></div>
+
+<div><h2>Stage_Play</h2><table><thead>
+<tr><th>id</th><th>title</th><th>year_premiered</th><th>genre</th><th><span style="color:#990000">theater_company</span></th><th><span style="color:#990000">producer</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>1990</td><td>Tragedy</td><td>The Royal Shakespeare Company</td><td>Julia Roberts</td></tr>
+<tr><td>2</td><td>The Glass Menagerie</td><td>1945</td><td>Drama</td><td>Broadway Theatre Group</td><td>Peter Brook</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

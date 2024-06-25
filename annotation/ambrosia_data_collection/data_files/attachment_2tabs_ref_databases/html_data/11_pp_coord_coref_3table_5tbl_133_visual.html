@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artworks</h2><table><thead>
+<tr><th>id</th><th>title</th><th>artistName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mona Lisa</td><td>Leonardo da Vinci</td></tr>
+<tr><td>2</td><td>The Starry Night</td><td>Vincent van Gogh</td></tr>
+<tr><td>3</td><td>Guernica</td><td>Pablo Picasso</td></tr>
+<tr><td>4</td><td>The Scream</td><td>Edvard Munch</td></tr>
+<tr><td>5</td><td>Starry Night Over the Rhone</td><td>Vincent van Gogh</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Contemporary_Artworks</span></h2><table><thead>
+<tr><th>id</th><th>artworkId</th><th>contemporaryArtwork</th></tr>
+<tr><th></th><th>(&#8594; Artworks.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>0</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>0</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Abstract_Artworks</span></h2><table><thead>
+<tr><th>id</th><th>artworkId</th><th>abstractArtwork</th></tr>
+<tr><th></th><th>(&#8594; Artworks.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>0</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>0</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Pricing</span></h2><table><thead>
+<tr><th>id</th><th>artworkId</th><th><span style="color:#006600">price</span></th></tr>
+<tr><th></th><th>(&#8594; Artworks.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">5000.0</span></td></tr>
+<tr><td>2</td><td>2</td><td>7500.0</td></tr>
+<tr><td>3</td><td>3</td><td>8500.0</td></tr>
+<tr><td>4</td><td>4</td><td>9500.0</td></tr>
+<tr><td>5</td><td>5</td><td>6500.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

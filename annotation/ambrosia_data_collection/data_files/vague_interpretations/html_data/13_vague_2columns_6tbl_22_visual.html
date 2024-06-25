@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artists</h2><table><thead>
+<tr><th>ArtistID</th><th>ArtistName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adele</td></tr>
+<tr><td>2</td><td>Beyonce</td></tr>
+<tr><td>3</td><td>Michael Buble</td></tr>
+<tr><td>4</td><td>Elton John</td></tr>
+<tr><td>5</td><td>Justin Timberlake</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>AlbumID</th><th><span style="color:#990000">Year</span></th><th><span style="color:#990000">Month</span></th><th>AlbumName</th><th>Genre</th><th>ArtistID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Artists.ArtistID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2019</td><td>11</td><td>25</td><td>Pop</td><td>1</td></tr>
+<tr><td>2</td><td>2016</td><td>4</td><td>Lemonade</td><td>R&B/Hip Hop</td><td>2</td></tr>
+<tr><td>3</td><td>2013</td><td>11</td><td>To Be Loved</td><td>Jazz</td><td>3</td></tr>
+<tr><td>4</td><td>2018</td><td>11</td><td>Captain Fantastic and The Brown Dirt Cowboy</td><td>Rock</td><td>4</td></tr>
+<tr><td>5</td><td>2007</td><td>6</td><td>FutureSex/LoveSound</td><td>R&B/Pop</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>SongID</th><th>SongTitle</th><th>Duration</th><th>AlbumID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Albums.AlbumID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hello</td><td>306</td><td>1</td></tr>
+<tr><td>2</td><td>Formation</td><td>224</td><td>2</td></tr>
+<tr><td>3</td><td>Stronger</td><td>214</td><td>2</td></tr>
+<tr><td>4</td><td>All of Me</td><td>215</td><td>3</td></tr>
+<tr><td>5</td><td>Can You Feel the Love Tonight</td><td>182</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>MusicLabels</h2><table><thead>
+<tr><th>LabelID</th><th>LabelName</th><th>ArtistID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Artists.ArtistID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>XL Recordings</td><td>1</td></tr>
+<tr><td>2</td><td>Parkwood Entertainment</td><td>2</td></tr>
+<tr><td>3</td><td>Republic Records</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Concerts</h2><table><thead>
+<tr><th>ConcertID</th><th>Date</th><th>Venue</th><th>City</th><th>Country</th><th>HeadlinerID</th><th>OpeningActID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Artists.ArtistID)</th><th>(&#8594; Artists.ArtistID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2020-12-31</td><td>Madison Square Garden</td><td>New York</td><td>USA</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>2021-01-15</td><td>Staples Center</td><td>Los Angeles</td><td>USA</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>2021-02-10</td><td>O2 Arena</td><td>London</td><td>UK</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>2021-02-20</td><td>Barclays Centre</td><td>Brooklyn</td><td>USA</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>2021-03-05</td><td>Sydney Opera House</td><td>Sydney</td><td>Australia</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Tickets</h2><table><thead>
+<tr><th>TicketID</th><th>Quantity</th><th>Price</th><th>ConcertID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Concerts.ConcertID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5000</td><td>100</td><td>1</td></tr>
+<tr><td>2</td><td>4000</td><td>80</td><td>1</td></tr>
+<tr><td>3</td><td>3000</td><td>70</td><td>2</td></tr>
+<tr><td>4</td><td>2000</td><td>60</td><td>3</td></tr>
+<tr><td>5</td><td>1000</td><td>50</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Beverages</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Type</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Coca Cola</td><td>Soft Drink</td><td>2.99</td></tr>
+<tr><td>2</td><td>Red Wine</td><td>Wine</td><td>8.99</td></tr>
+<tr><td>3</td><td>Whiskey Sour</td><td>Cocktail</td><td>7.99</td></tr>
+<tr><td>4</td><td>Beer</td><td>Alcoholic Beverage</td><td>5.99</td></tr>
+<tr><td>5</td><td>Champagne</td><td>Sparkling Wine</td><td>15.99</td></tr>
+<tr><td>6</td><td>Pinot Noir</td><td>Wine</td><td>10.99</td></tr>
+<tr><td>7</td><td>Old Fashioned</td><td>Cocktail</td><td>8.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Professionals</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">First_Name</span></th><th>Last_Name</th><th><span style="color:#186e16"><span style="color:#186e16">Position</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Manager</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Chef</td></tr>
+<tr><td>3</td><td>Alice</td><td>Williams</td><td><span style="color:#186e16">Sommelier</span></td></tr>
+<tr><td>4</td><td>Bob</td><td>Johnson</td><td><span style="color:#186e16">Bartender</span></td></tr>
+<tr><td>5</td><td><span style="color:#1430b2">Alex</span></td><td>Martinez</td><td><span style="color:#186e16">Sommelier</span></td></tr>
+<tr><td>6</td><td><span style="color:#1430b2">Alex</span></td><td>Turner</td><td><span style="color:#186e16">Bartender</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>Professional_id</th><th>Date_of_birth</th><th>Email</th><th>Phone_number</th></tr>
+<tr><th></th><th>(&#8594; Professionals.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2000-01-01</td><td>john.doe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>2</td><td>2001-02-02</td><td>jane.smith@example.com</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>3</td><td>1999-03-03</td><td>alice.williams@example.com</td><td>+1112223334</td></tr>
+<tr><td>4</td><td>4</td><td>1998-04-04</td><td>bob.johnson@example.com</td><td>+44332211556</td></tr>
+<tr><td>5</td><td>5</td><td>1997-05-05</td><td>alex.martinez@example.com</td><td>+7788990011</td></tr>
+<tr><td>6</td><td>6</td><td>1996-06-06</td><td>alex.turner@example.com</td><td>+2233445566</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Opening_hours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Fancy Bistro</td><td>New York City</td><td>Monday - Sunday: 10 AM - 11 PM</td></tr>
+<tr><td>2</td><td>Le Jardin Secret</td><td>Paris</td><td>Monday - Friday: 10 AM - 10 PM, Saturday - Sunday: 11 AM - 11 PM</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>id</th><th>Customer_id</th><th>Table_Number</th><th>Reservation_date</th><th>Party_size</th><th>Total_cost</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01 19:00:00</td><td>4</td><td>200.0</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-02 20:00:00</td><td>2</td><td>100.0</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-01-03 19:00:00</td><td>6</td><td>300.0</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-01-04 20:00:00</td><td>5</td><td>250.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>id</th><th>Ordered_by</th><th>Item_name</th><th>Quantity</th><th>Date_ordered</th><th>Total_amount</th></tr>
+<tr><th></th><th>(&#8594; Reservations.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Steak</td><td>2</td><td>2023-01-01 19:30:00</td><td>70.0</td></tr>
+<tr><td>2</td><td>2</td><td>Pizza Margherita</td><td>3</td><td>2023-01-02 20:30:00</td><td>45.0</td></tr>
+<tr><td>3</td><td>3</td><td>White Burgundy</td><td>4</td><td>2023-01-03 19:30:00</td><td>53.96</td></tr>
+<tr><td>4</td><td>4</td><td>Bloody Mary</td><td>2</td><td>2023-01-04 20:30:00</td><td>17.98</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

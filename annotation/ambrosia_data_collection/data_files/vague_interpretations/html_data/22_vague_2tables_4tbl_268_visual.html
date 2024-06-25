@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Age_Group</span></h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>0-4</td></tr>
+<tr><td>2</td><td>5-9</td></tr>
+<tr><td>3</td><td>10-13</td></tr>
+<tr><td>4</td><td>14-17</td></tr>
+<tr><td>5</td><td>18+</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Health_Condition</span></h2><table><thead>
+<tr><th>id</th><th>condition_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Diabetes</td></tr>
+<tr><td>2</td><td>Hypertension</td></tr>
+<tr><td>3</td><td>Asthma</td></tr>
+<tr><td>4</td><td>Allergy</td></tr>
+<tr><td>5</td><td>Obesity</td></tr>
+</tbody></table></div>
+
+<div><h2>Vaccine</h2><table><thead>
+<tr><th>id</th><th>vaccine_name</th><th>age_group_id</th><th>health_condition_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Age_Group.id)</th><th>(&#8594; Health_Condition.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Flu</td><td>2</td><td>4</td></tr>
+<tr><td>2</td><td>Pneumonia</td><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>Hepatitis B</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>Meningococcal</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>Varicella</td><td>1</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Patient</h2><table><thead>
+<tr><th>patient_id</th><th>first_name</th><th>last_name</th><th>birthdate</th><th>phone_number</th><th>age_group_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Age_Group.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1995-06-15</td><td>555-123-4567</td><td>3</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2000-07-20</td><td>555-987-6543</td><td>5</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>1990-08-25</td><td>555-555-5555</td><td>4</td></tr>
+<tr><td>4</td><td>Emily</td><td>Green</td><td>1988-09-15</td><td>555-333-3333</td><td>2</td></tr>
+<tr><td>5</td><td>William</td><td>Black</td><td>1975-10-20</td><td>555-222-2222</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctor</h2><table><thead>
+<tr><th>doctor_id</th><th>first_name</th><th>last_name</th><th>specialty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Jones</td><td>Cardiology</td></tr>
+<tr><td>2</td><td>Dr.</td><td>Garcia</td><td>Endocrinology</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Lee</td><td>Pediatrics</td></tr>
+<tr><td>4</td><td>Dr.</td><td>Taylor</td><td>Neurology</td></tr>
+<tr><td>5</td><td>Dr.</td><td>Adams</td><td>Nephrology</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointment</h2><table><thead>
+<tr><th>appointment_id</th><th>date</th><th>patient_id</th><th>doctor_id</th><th>medicalrecord_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Patient.patient_id)</th><th>(&#8594; Doctor.doctor_id)</th><th>(&#8594; MedicalRecord.medicalrecord_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-10-12 10:00:00</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2022-10-13 14:00:00</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2022-10-14 16:00:00</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2022-10-15 18:00:00</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2022-10-16 20:00:00</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>MedicalRecord</h2><table><thead>
+<tr><th>medicalrecord_id</th><th>patient_id</th><th>diagnosis</th><th>treatment_plan</th></tr>
+<tr><th></th><th>(&#8594; Patient.patient_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Type 2 Diabetes</td><td>Diet and Exercise</td></tr>
+<tr><td>2</td><td>2</td><td>Epilepsy</td><td>Antiepileptic Drugs</td></tr>
+<tr><td>3</td><td>3</td><td>Anxiety Disorder</td><td>Counseling and Medication</td></tr>
+<tr><td>4</td><td>4</td><td>Depression</td><td>Antidepressants</td></tr>
+<tr><td>5</td><td>5</td><td>Asthma</td><td>Inhalers</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

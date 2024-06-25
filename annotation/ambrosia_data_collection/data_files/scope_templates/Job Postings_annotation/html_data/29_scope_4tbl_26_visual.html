@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Developers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>alice@example.com</td></tr>
+<tr><td>2</td><td>Bob</td><td>bob@example.com</td></tr>
+<tr><td>3</td><td>Charlie</td><td>charlie@example.com</td></tr>
+<tr><td>4</td><td>David</td><td>david@example.com</td></tr>
+<tr><td>5</td><td>Eve</td><td>eve@example.com</td></tr>
+<tr><td>6</td><td>Frank</td><td>frank@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Frameworks</span></h2><table><thead>
+<tr><th>id</th><th>frameworkName</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JavaScript</td><td>A high-level, just-in-time compiled programming language.</td></tr>
+<tr><td>2</td><td>Python</td><td>An interpreted, object-oriented, high-level programming language with dynamic semantics.</td></tr>
+<tr><td>3</td><td>Ruby</td><td>An interpretated, general-purpose, high-level programming language.</td></tr>
+<tr><td>4</td><td>Go</td><td>A statically typed, compiled programming language designed at Google.</td></tr>
+<tr><td>5</td><td>Swift</td><td>A powerful and intuitive programming language developed by Apple.</td></tr>
+</tbody></table></div>
+
+<div><h2>Developers_Frameworks</h2><table><thead>
+<tr><th>developerId</th><th>frameworkId</th></tr>
+<tr><th>(&#8594; Developers.id)</th><th>(&#8594; Frameworks.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>6</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

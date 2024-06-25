@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movies</h2><table><thead>
+<tr><th>movie_id</th><th>title</th><th>director</th><th>release_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie1</td><td>Director1</td><td>2001</td></tr>
+<tr><td>2</td><td>Movie2</td><td>Director2</td><td>2002</td></tr>
+<tr><td>3</td><td>Movie3</td><td>Director3</td><td>2003</td></tr>
+<tr><td>4</td><td>Movie4</td><td>Director4</td><td>2004</td></tr>
+<tr><td>5</td><td>Movie5</td><td>Director5</td><td>2005</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>actor_id</th><th>first_name</th><th>last_name</th><th>date_of_birth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Actor1FirstName</td><td>Actor1LastName</td><td>1976-05-10</td></tr>
+<tr><td>2</td><td>Actor2FirstName</td><td>Actor2LastName</td><td>1980-06-15</td></tr>
+<tr><td>3</td><td>Actor3FirstName</td><td>Actor3LastName</td><td>1985-07-20</td></tr>
+<tr><td>4</td><td>Actor4FirstName</td><td>Actor4LastName</td><td>1990-08-25</td></tr>
+<tr><td>5</td><td>Actor5FirstName</td><td>Actor5LastName</td><td>1995-09-30</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Roles</span></h2><table><thead>
+<tr><th>role_id</th><th>production_role</th><th>salary</th></tr>
+<tr><th></th><th>(&#8594; Roles.production_role)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Casting Director</span></td><td><span style="color:#006600">80000.0</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Casting Director</span></td><td>90000.0</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Location Scout</span></td><td><span style="color:#006600">80000.0</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Location Scout</span></td><td>90000.0</td></tr>
+<tr><td>5</td><td>Assistant Director</td><td>60000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieActors</h2><table><thead>
+<tr><th>movie_actor_id</th><th>movie_id</th><th>actor_id</th><th>role_id</th></tr>
+<tr><th></th><th>(&#8594; Movies.movie_id)</th><th>(&#8594; Actors.actor_id)</th><th>(&#8594; Roles.role_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

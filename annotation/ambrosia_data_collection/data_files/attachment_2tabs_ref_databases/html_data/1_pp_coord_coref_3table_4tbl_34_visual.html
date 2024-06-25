@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Johnson</td></tr>
+<tr><td>4</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>David Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Articles</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>press_release</th><th>interview</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Britain Is Cutting Taxes Again. Why Now?</td><td>This is a press release about Britain cutting taxes again.</td><td>An interview discussing the tax cut.</td><td>1</td></tr>
+<tr><td>2</td><td>US Economy on the Rise.</td><td>A discussion of the recent growth in the US economy.</td><td>No interview.</td><td>2</td></tr>
+<tr><td>3</td><td>European Markets Stabilize.</td><td>Discussing the recent stabilization of European markets.</td><td>An interview with a market analyst.</td><td>3</td></tr>
+<tr><td>4</td><td>Tech Giants Dominate Market.</td><td>Examining the dominance of tech giants in various industries.</td><td>No interview.</td><td>4</td></tr>
+<tr><td>5</td><td>Climate Change Impact on Business.</td><td>Assessing the impact of climate change on business operations.</td><td>An interview with an environmental economist.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>NewsOutlets</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily Herald</td></tr>
+<tr><td>2</td><td>Financial Times</td></tr>
+<tr><td>3</td><td>Wall Street Journal</td></tr>
+<tr><td>4</td><td>Economic Weekly</td></tr>
+<tr><td>5</td><td>Business Today</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">ArticlePublications</span></h2><table><thead>
+<tr><th>article_id</th><th><span style="color:#006600">outlet_id</span></th><th>publication_date</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; NewsOutlets.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-07-01</td></tr>
+<tr><td>2</td><td>2</td><td>2022-07-02</td></tr>
+<tr><td>3</td><td>3</td><td>2022-07-03</td></tr>
+<tr><td>4</td><td>4</td><td>2022-07-04</td></tr>
+<tr><td><span style="color:#006600">5</span></td><td><span style="color:#006600">5</span></td><td>2022-07-0<span style="color:#006600">5</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>id</th><th>source_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>World Bank Report</td></tr>
+<tr><td>2</td><td>International Monetary Fund Study</td></tr>
+<tr><td>3</td><td>Central Intelligence Agency Analysis</td></tr>
+<tr><td>4</td><td>United Nations Environmental Programme Research</td></tr>
+<tr><td>5</td><td>National Bureau of Economic Research Data</td></tr>
+</tbody></table></div>
+
+<div><h2>SourceReferences</h2><table><thead>
+<tr><th>article_id</th><th>source_id</th><th>reference_text</th></tr>
+<tr><th>(&#8594; Articles.id)</th><th>(&#8594; Sources.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>According to the World Bank report...</td></tr>
+<tr><td>1</td><td>2</td><td>As stated in the IMF study...</td></tr>
+<tr><td>2</td><td>3</td><td>Based on CIA analysis...</td></tr>
+<tr><td>3</td><td>4</td><td>UNEP research shows...</td></tr>
+<tr><td>4</td><td>5</td><td>NBER data indicates...</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

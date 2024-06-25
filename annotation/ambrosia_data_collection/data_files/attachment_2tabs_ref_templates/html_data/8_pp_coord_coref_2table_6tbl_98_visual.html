@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Major</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1998-06-15</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2000-03-25</td><td>Mathematics</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>1997-11-10</td><td>Physics</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>1999-07-22</td><td>Chemistry</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Green</td><td>2001-04-05</td><td>Biology</td></tr>
+<tr><td>6</td><td>David</td><td>Black</td><td>1996-12-18</td><td>English Literature</td></tr>
+</tbody></table></div>
+
+<div><h2>Assessors</h2><table><thead>
+<tr><th>AssessorID</th><th>Name</th><th>Title</th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Professor Smith</td><td>Associate Professor</td><td>Literature</td></tr>
+<tr><td>2</td><td>Dr. Johnson</td><td>Full Professor</td><td>History</td></tr>
+<tr><td>3</td><td>Ms. Williams</td><td>Assistant Professor</td><td>Political Science</td></tr>
+<tr><td>4</td><td>Mr. Lee</td><td>Adjunct Instructor</td><td>Economics</td></tr>
+<tr><td>5</td><td>Dr. Jackson</td><td>Associate Professor</td><td>Philosophy</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Exams</span></h2><table><thead>
+<tr><th>ExamID</th><th>CourseTitle</th><th>TotalMarks</th><th>PassingMark</th><th><span style="color:#1430b2">AssessorId</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Assessors.AssessorID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#1430b2">1</span></td><td>Introduction to English Literature</td><td><span style="color:#1430b2">1</span>00</td><td>60</td><td><span style="color:#1430b2">1</span></td></tr>
+<tr><td>2</td><td>World History</td><td>100</td><td>60</td><td>2</td></tr>
+<tr><td>3</td><td>American Politics</td><td>100</td><td>60</td><td>3</td></tr>
+<tr><td>4</td><td>Macroeconomic Theory</td><td>100</td><td>60</td><td>4</td></tr>
+<tr><td>5</td><td>Contemporary Ethics</td><td>100</td><td>60</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Quizzes</span></h2><table><thead>
+<tr><th>QuizID</th><th>Description</th><th>MaxScore</th><th>MinPassingScore</th><th>AssessorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Assessors.AssessorID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#1430b2">1</span></td><td>Weekly quiz on literary themes</td><td>20</td><td><span style="color:#1430b2">1</span>2</td><td><span style="color:#1430b2">1</span></td></tr>
+<tr><td>2</td><td>Midterm exam review questions</td><td>30</td><td>20</td><td>2</td></tr>
+<tr><td>3</td><td>Current events analysis</td><td>20</td><td>12</td><td>3</td></tr>
+<tr><td>4</td><td>Final exam study guide</td><td>30</td><td>20</td><td>4</td></tr>
+<tr><td>5</td><td>Argumentative essay practice</td><td>20</td><td>12</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

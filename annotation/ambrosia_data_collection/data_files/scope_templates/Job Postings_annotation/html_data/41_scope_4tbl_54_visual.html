@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Law_Firms</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ackerman Abramovitz</td><td>6789 Central Ave., Suite 300, Dallas, TX 75206</td><td>http://www.ackermannlawyers.com</td></tr>
+<tr><td>2</td><td>Baker & McKenzie</td><td>1 North LaSalle Street, Chicago, IL 60601-1684</td><td>https://www.bakermckenzie.com/</td></tr>
+<tr><td>3</td><td>Mayer Brown</td><td>122 West Washington St., Chicago, IL 60602</td><td>https://www.mayerbrown.com</td></tr>
+<tr><td>4</td><td>Skadden, Arps, Slate, Meagher & Flom LLP</td><td>One Manhattanville Rd., Purchase, NY 10577</td><td>https://www.skadden.com</td></tr>
+<tr><td>5</td><td>DLA Piper</td><td>Three Embarcadero Center, San Francisco, CA 94111</td><td>https://www.dlapiper.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Legal_Positions</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">position_name</span></th><th><span style="color:#990000">required_experience</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Paralegal</td><td>1 year</td></tr>
+<tr><td>2</td><td>Associate Attorney</td><td>3 years</td></tr>
+<tr><td>3</td><td>Partner</td><td>5 years</td></tr>
+<tr><td>4</td><td>Of Counsel</td><td>7 years</td></tr>
+<tr><td>5</td><td>Contract Attorney</td><td>2 years</td></tr>
+</tbody></table></div>
+
+<div><h2>Law_Firm_Job_Postings</h2><table><thead>
+<tr><th>id</th><th>job_title</th><th>posted_date</th><th>application_deadline</th><th>description</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Corporate Paralegal</td><td>2022-01-01</td><td>2022-01-15</td><td>Assist attorneys in preparing documents for corporate transactions.</td><td>55000</td></tr>
+<tr><td>2</td><td>Real Estate Associate Attorney</td><td>2022-02-01</td><td>2022-02-15</td><td>Represent clients in real estate transactions.</td><td>75000</td></tr>
+<tr><td>3</td><td>Commercial Litigation Partner</td><td>2022-03-01</td><td>2022-03-15</td><td>Lead a team in handling commercial litigation cases.</td><td>150000</td></tr>
+<tr><td>4</td><td>Tax Of Counsel</td><td>2022-04-01</td><td>2022-04-15</td><td>Advise on tax matters and represent clients before tax authorities.</td><td>100000</td></tr>
+<tr><td>5</td><td>Patent Contract Attorney</td><td>2022-05-01</td><td>2022-05-15</td><td>Prepare and review patent applications for clients.</td><td>85000</td></tr>
+</tbody></table></div>
+
+<div><h2>Law_Firms_Legal_Positions</h2><table><thead>
+<tr><th>firm_id</th><th>position_id</th></tr>
+<tr><th>(&#8594; Law_Firms.id)</th><th>(&#8594; Legal_Positions.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

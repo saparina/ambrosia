@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Manufacturers</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bonners Music</td></tr>
+<tr><td>2</td><td>Yamaha</td></tr>
+<tr><td>3</td><td>Fender</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Guitars</span></h2><table><thead>
+<tr><th>ID</th><th>Model_Name</th><th>Price</th><th>Quantity</th><th>ManufacturerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Manufacturers.ID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Epiphone Les Paul</td><td>600.0</td><td>20</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Fender Stratocaster</td><td>900.0</td><td>15</td><td>3</td></tr>
+<tr><td>3</td><td>Gibson SG</td><td>800.0</td><td>10</td><td>3</td></tr>
+<tr><td>4</td><td>PRS McCarty</td><td>3000.0</td><td>5</td><td>2</td></tr>
+<tr><td>5</td><td>Martin D-28</td><td>3500.0</td><td>7</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Pianos</span></h2><table><thead>
+<tr><th>ID</th><th>Model_Name</th><th>Price</th><th>Quantity</th><th>ManufacturerID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Manufacturers.ID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Yamaha CP4 Stage Piano</td><td>2000.0</td><td><span style="color:#006600">1</span>0</td><td>2</td></tr>
+<tr><td>2</td><td>Casio Privia PX-560BK</td><td>1000.0</td><td>15</td><td>3</td></tr>
+<tr><td>3</td><td>Roland FP-10 Digital Piano</td><td>700.0</td><td>20</td><td>3</td></tr>
+<tr><td>4</td><td>Kawai ES110 Portable Keyboard</td><td>500.0</td><td>10</td><td>2</td></tr>
+<tr><td>5</td><td>Nord Stage 3</td><td>4000.0</td><td>5</td><td><span style="color:#006600">1</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>First_name</th><th>Last_name</th><th>Email</th><th>Phone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td><td>+9876543210</td></tr>
+<tr><td>3</td><td>Michael</td><td>Jackson</td><td>michael@example.com</td><td>+1112223330</td></tr>
+<tr><td>4</td><td>Emily</td><td>Davis</td><td>emily@example.com</td><td>+2223334440</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>david@example.com</td><td>+3334445550</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>OrderID</th><th>CustomerID</th><th>OrderDate</th><th>TotalAmount</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2024-03-13 17:07:27</td><td>600.0</td></tr>
+<tr><td>2</td><td>2</td><td>2024-03-13 17:07:27</td><td>900.0</td></tr>
+<tr><td>3</td><td>3</td><td>2024-03-13 17:07:27</td><td>800.0</td></tr>
+<tr><td>4</td><td>4</td><td>2024-03-13 17:07:27</td><td>3000.0</td></tr>
+<tr><td>5</td><td>5</td><td>2024-03-13 17:07:27</td><td>3500.0</td></tr>
+</tbody></table></div>
+
+<div><h2>OrderDetails</h2><table><thead>
+<tr><th>OrderDetailID</th><th>OrderID</th><th>ProductID</th><th>Quantity</th><th>UnitPrice</th></tr>
+<tr><th></th><th>(&#8594; Orders.OrderID)</th><th>(&#8594; Products.ProductID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2</td><td>600.0</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td><td>900.0</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>1</td><td>800.0</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>1</td><td>3000.0</td></tr>
+<tr><td>5</td><td>3</td><td>5</td><td>1</td><td>3500.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

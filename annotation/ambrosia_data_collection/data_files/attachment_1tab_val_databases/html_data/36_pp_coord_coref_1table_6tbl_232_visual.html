@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Visual_Medium</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Visual_Media</th><th>Genre</th><th>Release_Year</th><th>Duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td><span style="color:#990000">Movie</span></td><td>Drama</td><td>1994</td><td>2.03</td></tr>
+<tr><td>2</td><td>Ace Ventura: Pet Detective</td><td><span style="color:#990000">Movie</span></td><td><span style="color:#006600">Comedy</span></td><td>1994</td><td>1.67</td></tr>
+<tr><td>3</td><td>Friends</td><td><span style="color:#990000">TV Show</span></td><td><span style="color:#006600">Comedy</span></td><td>1994</td><td>None</td></tr>
+<tr><td>4</td><td>Breaking Bad</td><td><span style="color:#990000">TV Show</span></td><td>Crime Drama</td><td>2008</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>Actor_ID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Bio</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>American actor and filmmaker</td></tr>
+<tr><td>2</td><td>Jim</td><td>Carrey</td><td>1962-01-17</td><td>Canadian-American actor, comedian, and screenwriter</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>Role_ID</th><th>Movie_or_Show_Title</th><th>Character_Name</th></tr>
+<tr><th></th><th>(&#8594; Visual_Medium.Title)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>Andy Dufresne</td></tr>
+<tr><td>2</td><td>Ace Ventura: Pet Detective</td><td>Ace Ventura</td></tr>
+</tbody></table></div>
+
+<div><h2>Casting</h2><table><thead>
+<tr><th>Casting_ID</th><th>Actor_ID</th><th>Role_ID</th><th>Year_Played</th></tr>
+<tr><th></th><th>(&#8594; Actors.Actor_ID)</th><th>(&#8594; Roles.Role_ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1994</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>1994</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>Director_ID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Biography</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank</td><td>Darabont</td><td>1959-01-28</td><td>Iranian American film director, producer, screenwriter and author.</td></tr>
+<tr><td>2</td><td>Tom</td><td>Shadyac</td><td>1958-05-30</td><td>American film director, writer, producer, and humorist.</td></tr>
+</tbody></table></div>
+
+<div><h2>Productions</h2><table><thead>
+<tr><th>Production_ID</th><th>Movie_or_Show_Title</th><th>Director_ID</th><th>Budget</th><th>BoxOffice</th></tr>
+<tr><th></th><th></th><th>(&#8594; Directors.Director_ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1</td><td>25000000.0</td><td>106850000.0</td></tr>
+<tr><td>2</td><td>Ace Ventura: Pet Detective</td><td>2</td><td>15000000.0</td><td>165000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Directs</h2><table><thead>
+<tr><th>Directs_ID</th><th>Director_ID</th><th>Movie_or_Show_Title</th><th>Year_Directed</th></tr>
+<tr><th></th><th>(&#8594; Directors.Director_ID)</th><th>(&#8594; Visual_Medium.Title)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>The Shawshank Redemption</td><td>1994</td></tr>
+<tr><td>2</td><td>2</td><td>Ace Ventura: Pet Detective</td><td>1994</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

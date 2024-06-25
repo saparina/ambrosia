@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Chalets</span></h2><table><thead>
+<tr><th>id</th><th>chaletName</th><th>pricePerNight</th><th>location</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Aurora</td><td><span style="color:#006600">200.0</span></td><td>Alps</td><td>6</td></tr>
+<tr><td>2</td><td>Sunshine</td><td>300.0</td><td>Beach</td><td>8</td></tr>
+<tr><td>3</td><td>Moonlight</td><td>250.0</td><td>City</td><td>10</td></tr>
+<tr><td>4</td><td>Starlight</td><td>150.0</td><td>Forest</td><td>8</td></tr>
+<tr><td>5</td><td>Dawn</td><td>275.0</td><td>Mountain</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Cabins</span></h2><table><thead>
+<tr><th>id</th><th>cabinName</th><th>pricePerNight</th><th>location</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Lakeshore</td><td><span style="color:#006600">200.0</span></td><td>Lake</td><td>4</td></tr>
+<tr><td>2</td><td>Riverview</td><td>300.0</td><td>Riverside</td><td>6</td></tr>
+<tr><td>3</td><td>Seaside</td><td>250.0</td><td>Coast</td><td>8</td></tr>
+<tr><td>4</td><td>Woodside</td><td>150.0</td><td>Forest</td><td>4</td></tr>
+<tr><td>5</td><td>Valley</td><td>275.0</td><td>Hills</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>firstname</th><th>lastname</th><th>email</th><th>phoneNumber</th><th>checkIn</th><th>checkOut</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@gmail.com</td><td>1234567890</td><td>2022-01-01 10:00:00</td><td>2022-01-05 15:00:00</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@gmail.com</td><td>0987654321</td><td>2022-01-01 15:00:00</td><td>2022-01-05 10:00:00</td></tr>
+<tr><td>3</td><td>Jack</td><td>Brown</td><td>jack@gmail.com</td><td>1112223334</td><td>2022-01-01 12:00:00</td><td>2022-01-05 11:00:00</td></tr>
+<tr><td>4</td><td>Samantha</td><td>White</td><td>samantha@gmail.com</td><td>4321123456</td><td>2022-01-01 13:00:00</td><td>2022-01-05 12:00:00</td></tr>
+<tr><td>5</td><td>Emma</td><td>Black</td><td>emma@gmail.com</td><td>3456789123</td><td>2022-01-01 14:00:00</td><td>2022-01-05 13:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>id</th><th>guestId</th><th>chaletId</th><th>bookingDate</th><th>totalCost</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th>(&#8594; Chalets.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01 00:00:00</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-01-01 00:00:00</td><td>1200.0</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-01-01 00:00:00</td><td>1500.0</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-01-01 00:00:00</td><td>1800.0</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-01-01 00:00:00</td><td>2000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>id</th><th>guestId</th><th>chaletId</th><th>rating</th><th>comment</th><th>reviewDate</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th>(&#8594; Chalets.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>5</td><td>Great stay!</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>4</td><td>Good experience!</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td><td>Fine, could have been better.</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>5</td><td>Excellent service!</td><td>2022-01-01 00:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>4</td><td>Good value for money.</td><td>2022-01-01 00:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

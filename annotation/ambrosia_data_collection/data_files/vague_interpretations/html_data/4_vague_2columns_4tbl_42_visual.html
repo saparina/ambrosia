@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artists</h2><table><thead>
+<tr><th>ArtistID</th><th>Name</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Beatles</td><td>Rock</td></tr>
+<tr><td>2</td><td>Michael Jackson</td><td>Pop</td></tr>
+<tr><td>3</td><td>Adele</td><td>Pop</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>AlbumID</th><th>Title</th><th>ReleaseYear</th><th>ArtistID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Artists.ArtistID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Abbey Road</td><td>1969</td><td>1</td></tr>
+<tr><td>2</td><td>Thriller</td><td>1982</td><td>2</td></tr>
+<tr><td>3</td><td>21</td><td>2011</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Concerts</h2><table><thead>
+<tr><th>ConcertID</th><th>Date</th><th>City</th><th>Country</th><th>VenueName</th><th>HeadlineArtistID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Artists.ArtistID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-07-15 20:00:00</td><td>London</td><td>UK</td><td>Wembley Stadium</td><td>2</td></tr>
+<tr><td>2</td><td>2021-08-01 20:00:00</td><td>New York</td><td>USA</td><td>MetLife Stadium</td><td>1</td></tr>
+<tr><td>3</td><td>2021-09-10 20:00:00</td><td>Paris</td><td>France</td><td>Stade de France</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Tickets</h2><table><thead>
+<tr><th>TicketID</th><th>PurchaseDate</th><th>SeatNumber</th><th>CustomerID</th><th>ConcertID</th><th>Price</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Customers.CustomerID)</th><th>(&#8594; Concerts.ConcertID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-07-15 12:00:00</td><td>Section A, Row 1, Seat 10</td><td>1</td><td>1</td><td>100</td></tr>
+<tr><td>2</td><td>2021-07-15 12:00:00</td><td>Section B, Row 1, Seat 10</td><td>2</td><td>1</td><td>75</td></tr>
+<tr><td>3</td><td>2021-08-01 12:00:00</td><td>Section C, Row 1, Seat 10</td><td>3</td><td>2</td><td>150</td></tr>
+<tr><td>4</td><td>2021-08-01 12:00:00</td><td>Section D, Row 1, Seat 10</td><td>4</td><td>2</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th><span style="color:#990000">AddressLine</span></th><th><span style="color:#990000">PostalCode</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johndoe@example.com</td><td>+1234567890</td><td>123 Main St</td><td>60601</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janesmith@example.com</td><td>+9876543210</td><td>456 Elm St</td><td>90001</td></tr>
+<tr><td>3</td><td>Emily</td><td>Williams</td><td>emilywilliams@example.com</td><td>+1357924680</td><td>789 Oak St</td><td>02110</td></tr>
+<tr><td>4</td><td>Peter</td><td>Jackson</td><td>pjackson@example.com</td><td>+19876543210</td><td>123 Maple Ave</td><td>19101</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

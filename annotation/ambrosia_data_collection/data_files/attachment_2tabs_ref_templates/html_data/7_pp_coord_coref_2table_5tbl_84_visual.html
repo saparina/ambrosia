@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Air_traffic_controller</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Experience</th><th><span style="color:#1430b2">Salary</span></th><th>Training_Center</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>8</td><td><span style="color:#1430b2">60000 per year</span></td><td>ATC Academy</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>12</td><td>70000 per year</td><td>Aviation Institute</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Ground_staff</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Experience</th><th>Salary</th><th>Role</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike Johnson</td><td>5</td><td><span style="color:#1430b2">60000 per year</span></td><td>Baggage Handler</td></tr>
+<tr><td>2</td><td>Emma Brown</td><td>3</td><td>55000 per year</td><td>Gate Agent</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>Date</th><th>Time</th><th>Destination</th><th>Pilot_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Pilots.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01</td><td>10:00:00</td><td>New York</td><td>1</td></tr>
+<tr><td>2</td><td>2022-01-02</td><td>15:00:00</td><td>Los Angeles</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilots</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>License_Number</th><th>Total_Flights</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Williams</td><td>ABCD1234</td><td>300</td></tr>
+<tr><td>2</td><td>Linda Davis</td><td>EFGH5678</td><td>500</td></tr>
+</tbody></table></div>
+
+<div><h2>Runway</h2><table><thead>
+<tr><th>id</th><th>Length</th><th>Width</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>9000.0</td><td>150.0</td><td>Chicago O'Hare International Airport</td></tr>
+<tr><td>2</td><td>8000.0</td><td>140.0</td><td>Dallas/Fort Worth International Airport</td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>id</th><th>Model</th><th>Registration_number</th><th>Capacity</th><th>Current_Location</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Runway.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td><td>N12345</td><td>200</td><td>1</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>N67890</td><td>220</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

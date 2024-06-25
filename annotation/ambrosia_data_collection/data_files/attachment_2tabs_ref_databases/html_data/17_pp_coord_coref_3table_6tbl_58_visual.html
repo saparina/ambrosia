@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Creators</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Williams</td></tr>
+<tr><td>2</td><td>Hans Zimmer</td></tr>
+<tr><td>3</td><td>James Horner</td></tr>
+<tr><td>4</td><td>Danny Elfman</td></tr>
+<tr><td>5</td><td><span style="color:#006600">Thomas Newman</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseDate</th><th>soundDesign</th><th>musicScore</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; SoundDesigns.id)</th><th>(&#8594; MusicScores.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Star Wars</td><td>1977-05-25</td><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>Inception</td><td>2010-07-16</td><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>Titanic</td><td>1997-12-18</td><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>Batman</td><td>1989-06-23</td><td>4</td><td>6</td></tr>
+<tr><td>5</td><td>The Nightmare Before Christmas</td><td>1993-10-08</td><td>5</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SoundDesigns</span></h2><table><thead>
+<tr><th>id</th><th>description</th><th>creatorId</th><th>filmId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Creators.id)</th><th>(&#8594; Films.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Epic Space Battle Sounds</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Complex Dream Sequence Sounds</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Giant Ship Sinking Sounds</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Dark and Mysterious Atmosphere Sounds</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Spooky Town Sounds</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MusicScores</span></h2><table><thead>
+<tr><th>id</th><th>description</th><th>creatorId</th><th>filmId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Creators.id)</th><th>(&#8594; Films.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Orchestral Epic Theme</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Modern Electronic Score</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Romantic Love Theme</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Mysterious Adventure Motif</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Whimsical Halloween Melody</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

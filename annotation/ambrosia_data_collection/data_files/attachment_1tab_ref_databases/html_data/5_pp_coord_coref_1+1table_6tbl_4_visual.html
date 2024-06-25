@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td></tr>
+<tr><td>4</td><td>Mike</td><td>Green</td></tr>
+<tr><td>5</td><td>Emma</td><td>White</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Publications</span></h2><table><thead>
+<tr><th>PubID</th><th>Title</th><th><span style="color:#006600">Magazine</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>News Article</td><td><span style="color:#006600">The New Yorker</span></td></tr>
+<tr><td>2</td><td>Feature Story</td><td>Time</td></tr>
+<tr><td>3</td><td>Opinion Piece</td><td>Washington Post</td></tr>
+<tr><td>4</td><td>Investigative Report</td><td>Vanity Fair</td></tr>
+<tr><td>5</td><td>Profile Interview</td><td>Forbes</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>ContentText</th><th>PublishDate</th><th>AuthorID</th><th>PubID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th><th>(&#8594; Publications.PubID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>This is a news article content...</td><td>2021-08-10</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Another news article content...</td><td>2021-09-13</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Here is an opinion piece content...</td><td>2021-10-07</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>This investigative report content...</td><td>2021-11-05</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>A profile interview content...</td><td>2021-12-02</td><td>5</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Digital_Communications</span></h2><table><thead>
+<tr><th>CommunicationID</th><th><span style="color:#990000"><span style="color:#990000">TypeOfCommunication</span></span></th><th>PubID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Publications.PubID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Social Media</span></td><td>1</td></tr>
+<tr><td>2</td><td>Social Media Different Mag</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Email Newsletters</span></td><td>1</td></tr>
+<tr><td>4</td><td>Email Newsletters Diff Mag</td><td>2</td></tr>
+<tr><td>5</td><td>Podcasts</td><td>3</td></tr>
+<tr><td>6</td><td>Webinars</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

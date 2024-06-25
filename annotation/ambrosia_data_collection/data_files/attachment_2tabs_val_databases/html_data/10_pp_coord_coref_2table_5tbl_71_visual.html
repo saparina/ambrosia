@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>students</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>birthdate</th><th>owner</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-06-30</td><td>Jane</td></tr>
+<tr><td>2</td><td>Alice</td><td>Smith</td><td>2000-07-15</td><td>Mike</td></tr>
+<tr><td>3</td><td>Bob</td><td>Smith</td><td>1995-08-15</td><td>Himself</td></tr>
+<tr><td>4</td><td>Chris</td><td>Brown</td><td>2005-09-15</td><td>Emma</td></tr>
+<tr><td>5</td><td>David</td><td>White</td><td>2010-10-15</td><td>Samantha</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">pianos</span></h2><table><thead>
+<tr><th>piano_id</th><th>model</th><th>age</th><th>condition</th><th>owner</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; students.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Grand Piano</td><td><span style="color:#006600">1</span>0</td><td>Excellent</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Upright Piano</td><td>5</td><td>Good</td><td>2</td></tr>
+<tr><td>3</td><td>Digital Piano</td><td>3</td><td>Very Good</td><td>3</td></tr>
+<tr><td>4</td><td>Spinet Piano</td><td>8</td><td>Fair</td><td>4</td></tr>
+<tr><td>5</td><td>Console Piano</td><td>2</td><td>Poor</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">guitars</span></h2><table><thead>
+<tr><th>guitar_id</th><th>brand</th><th>type</th><th>year_bought</th><th>owner</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; students.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Yamaha</td><td>Acoustic Guitar</td><td>2008</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Martin</td><td>Electric Guitar</td><td>2010</td><td>2</td></tr>
+<tr><td>3</td><td>Ibanez</td><td>Electric Guitar</td><td>2012</td><td>3</td></tr>
+<tr><td>4</td><td>Taylor</td><td>Classical Guitar</td><td>2015</td><td>4</td></tr>
+<tr><td>5</td><td>C. F. Martin & Co.</td><td>Nylon String Acoustic Guitar</td><td>2017</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>teachers</h2><table><thead>
+<tr><th>teacher_id</th><th>first_name</th><th>last_name</th><th>subject</th><th>years_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Green</td><td>Music Theory</td><td>5</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Black</td><td>Piano</td><td>10</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Red</td><td>Voice Lessons</td><td>15</td></tr>
+<tr><td>4</td><td>Professor</td><td>Blue</td><td>Guitar</td><td>20</td></tr>
+<tr><td>5</td><td>Assistant Professor</td><td>Orange</td><td>Composition</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2>classes</h2><table><thead>
+<tr><th>class_id</th><th>class_name</th><th>description</th><th>start_time</th><th>end_time</th><th>days</th><th>teacher_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; teachers.teacher_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Music Theory</td><td>Learn about music theory fundamentals.</td><td>10:00 AM</td><td>12:00 PM</td><td>Mon/Wed/Fri</td><td>1</td></tr>
+<tr><td>2</td><td>Advanced Piano Class</td><td>For those who have mastered basic techniques.</td><td>2:00 PM</td><td>4:00 PM</td><td>Tue/Thu</td><td>2</td></tr>
+<tr><td>3</td><td>Rock Guitar Basics</td><td>Start learning how to play rock guitar.</td><td>5:00 PM</td><td>7:00 PM</td><td>Mon/Wed</td><td>3</td></tr>
+<tr><td>4</td><td>Blues Harmonica Workshop</td><td>Discover the world of blues harmonicas.</td><td>8:00 PM</td><td>10:00 PM</td><td>Thu</td><td>4</td></tr>
+<tr><td>5</td><td>Composing for Film and TV</td><td>Understand how to create music for film and television.</td><td>11:00 AM</td><td>1:00 PM</td><td>Sat</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

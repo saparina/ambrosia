@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ocean Life</td><td>San Francisco</td></tr>
+<tr><td>2</td><td>Wild World</td><td>New York</td></tr>
+<tr><td>3</td><td>Nature Explorers</td><td>Los Angeles</td></tr>
+<tr><td>4</td><td>Sea Discoveries</td><td>Miami</td></tr>
+<tr><td>5</td><td>Earth Guardians</td><td>Chicago</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>postedDate</th><th>companyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Companies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td> Marine Biologist</td><td>Conduct research on marine life.</td><td>2024-03-13 12:20:04</td><td>1</td></tr>
+<tr><td>2</td><td> Zoologist</td><td>Study animals and their habitats.</td><td>2024-03-13 12:20:04</td><td>2</td></tr>
+<tr><td>3</td><td> Conservation Officer</td><td>Protect endangered species.</td><td>2024-03-13 12:20:04</td><td>3</td></tr>
+<tr><td>4</td><td> Aquarist</td><td>Maintain aquatic exhibits.</td><td>2024-03-13 12:20:04</td><td>4</td></tr>
+<tr><td>5</td><td> Environmental Educator</td><td>Teach about environmental issues.</td><td>2024-03-13 12:20:04</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AnimalStudies</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">career</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Marine Biologist</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Zoologist</span></td></tr>
+<tr><td>3</td><td>Veterinarian</td></tr>
+<tr><td>4</td><td>Wildlife Rehabilitator</td></tr>
+<tr><td>5</td><td>Ecologist</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">ExperienceLevels</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">level</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">5 years</span></td></tr>
+<tr><td>2</td><td>7 years</td></tr>
+<tr><td>3</td><td>3 years</td></tr>
+<tr><td>4</td><td>10 years</td></tr>
+<tr><td>5</td><td>8 years</td></tr>
+</tbody></table></div>
+
+<div><h2>JobRequirements</h2><table><thead>
+<tr><th>id</th><th>jobId</th><th>animalCareerId</th><th>experienceLevelId</th></tr>
+<tr><th></th><th>(&#8594; Jobs.id)</th><th>(&#8594; AnimalStudies.id)</th><th>(&#8594; ExperienceLevels.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>3</td></tr>
+<tr><td>5</td><td>3</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phoneNumber</th><th>applicationDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>555-123-4567</td><td>2024-03-13 12:20:04</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>555-987-6543</td><td>2024-03-13 12:20:04</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice@example.com</td><td>555-321-9876</td><td>2024-03-13 12:20:04</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob@example.com</td><td>555-555-5555</td><td>2024-03-13 12:20:04</td></tr>
+<tr><td>5</td><td>Carol White</td><td>carol@example.com</td><td>555-111-2222</td><td>2024-03-13 12:20:04</td></tr>
+</tbody></table></div>
+
+<div><h2>ApplicationJobs</h2><table><thead>
+<tr><th>applicantId</th><th>jobId</th><th>dateApplied</th></tr>
+<tr><th>(&#8594; Applicants.id)</th><th>(&#8594; Jobs.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01</td></tr>
+<tr><td>1</td><td>2</td><td>2022-01-15</td></tr>
+<tr><td>2</td><td>1</td><td>2022-02-01</td></tr>
+<tr><td>2</td><td>2</td><td>2022-02-15</td></tr>
+<tr><td>3</td><td>1</td><td>2022-03-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

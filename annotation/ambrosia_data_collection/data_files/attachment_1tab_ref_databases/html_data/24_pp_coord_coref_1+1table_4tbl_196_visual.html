@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>New York</td></tr>
+<tr><td>2</td><td>MedicalInnovations</td><td>San Francisco</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>DepartmentID</th><th>Name</th><th>Description</th><th>CompanyID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Companies.CompanyID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering</td><td>Developing new technologies.</td><td>1</td></tr>
+<tr><td>2</td><td>Biotechnology</td><td>Researching genetic engineering.</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Jobs</span></h2><table><thead>
+<tr><th>JobID</th><th><span style="color:#990000"><span style="color:#990000">Title</span></span></th><th>Salary</th><th>StartDate</th><th>EndDate</th><th>DepartmentID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Departments.DepartmentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>75000</td><td>2023-01-01</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>Molecular Biologist</td><td>65000</td><td>2023-01-01</td><td>None</td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Research Scientist</span></td><td>80000</td><td>2023-01-01</td><td>None</td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Research Scientist</span></td><td>80000</td><td>2023-01-01</td><td>None</td><td>2</td></tr>
+<tr><td>5</td><td><span style="color:#990000">Laboratory Technician</span></td><td>60000</td><td>2023-01-01</td><td>None</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Applicants</span></h2><table><thead>
+<tr><th>ApplicationID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th><th><span style="color:#006600">Gender</span></th><th>JobID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Jobs.JobID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1234567890</td><td><span style="color:#006600">male</span></td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+1234567890</td><td>female</td><td>1</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>+1234567890</td><td>female</td><td>2</td></tr>
+<tr><td>4</td><td>Robert</td><td>Green</td><td>robert.green@example.com</td><td>+1234567890</td><td><span style="color:#006600">male</span></td><td>3</td></tr>
+<tr><td>5</td><td>Charlotte</td><td>White</td><td>charlotte.white@example.com</td><td>+1234567890</td><td>female</td><td>4</td></tr>
+<tr><td>6</td><td>William</td><td>Black</td><td>william.black@example.com</td><td>+1234567890</td><td><span style="color:#006600">male</span></td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

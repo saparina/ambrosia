@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Types</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wedding</td></tr>
+<tr><td>2</td><td>Corporate</td></tr>
+<tr><td>3</td><td>Birthday</td></tr>
+<tr><td>4</td><td>Anniversary</td></tr>
+<tr><td>5</td><td>Other</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Event_Planners</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>contact_info</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>+1-800-963-7172</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>+1-800-963-7173</td></tr>
+<tr><td>3</td><td>Carol Williams</td><td>+1-800-963-7174</td></tr>
+<tr><td>4</td><td>David Brown</td><td>+1-800-963-7175</td></tr>
+<tr><td>5</td><td>Eve Green</td><td>+1-800-963-7176</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>location</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wedding Planner</td><td>Plan and coordinate wedding events.</td><td>New York City</td><td>60000.0</td></tr>
+<tr><td>2</td><td>Corporate Event Coordinator</td><td>Organize corporate conferences and meetings.</td><td>Los Angeles</td><td>55000.0</td></tr>
+<tr><td>3</td><td>Party Organizer</td><td>Plan and execute various types of parties and celebrations.</td><td>Chicago</td><td>45000.0</td></tr>
+<tr><td>4</td><td>Destination Wedding Specialist</td><td>Coordinate weddings at exotic locations.</td><td>Miami</td><td>70000.0</td></tr>
+<tr><td>5</td><td>Conference Producer</td><td>Manage all aspects of a conference from planning to execution.</td><td>San Francisco</td><td>55000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Event_Planners_Jobs</h2><table><thead>
+<tr><th>event_planner_id</th><th>job_id</th></tr>
+<tr><th>(&#8594; Event_Planners.id)</th><th>(&#8594; Jobs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Event_Planners_Types</h2><table><thead>
+<tr><th>event_planner_id</th><th>type_id</th></tr>
+<tr><th>(&#8594; Event_Planners.id)</th><th>(&#8594; Types.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

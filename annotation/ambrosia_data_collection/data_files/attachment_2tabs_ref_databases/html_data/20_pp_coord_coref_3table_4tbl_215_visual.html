@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Employees</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th><span style="color:#006600">Years_of_experience</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>10</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>7</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>12</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>8</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td><span style="color:#006600">9</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Aviation_Maintenance_Technicians</span></h2><table><thead>
+<tr><th>id</th><th>EmployeeID</th><th>Certification_Level</th></tr>
+<tr><th></th><th>(&#8594; Employees.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Level I</td></tr>
+<tr><td>2</td><td>2</td><td>Level II</td></tr>
+<tr><td>3</td><td>3</td><td>Level III</td></tr>
+<tr><td>4</td><td>4</td><td>Level IV</td></tr>
+<tr><td>5</td><td>5</td><td>Level V</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Flight_Attendants</span></h2><table><thead>
+<tr><th>id</th><th>EmployeeID</th><th>Language_proficiency</th></tr>
+<tr><th></th><th>(&#8594; Employees.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>English, Spanish</td></tr>
+<tr><td>2</td><td>2</td><td>English, French</td></tr>
+<tr><td>3</td><td>3</td><td>English, German</td></tr>
+<tr><td>4</td><td>4</td><td>English, Italian</td></tr>
+<tr><td>5</td><td>5</td><td>English, Russian</td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>id</th><th>Model</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 747</td><td>400</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>860</td></tr>
+<tr><td>3</td><td>Bombardier CRJ-900</td><td>84</td></tr>
+<tr><td>4</td><td>Embraer E190</td><td>96</td></tr>
+<tr><td>5</td><td>Airbus A220</td><td>124</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>Source</th><th>Destination</th><th>Departure_Time</th><th>Arrival_Time</th><th>AircraftID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Planes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>London</td><td>2023-01-01 08:00</td><td>2023-01-01 11:00</td><td>1</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>Tokyo</td><td>2023-01-02 08:00</td><td>2023-01-02 11:00</td><td>2</td></tr>
+<tr><td>3</td><td>Paris</td><td>Dubai</td><td>2023-01-03 08:00</td><td>2023-01-03 11:00</td><td>3</td></tr>
+<tr><td>4</td><td>Rio de Janeiro</td><td>São Paulo</td><td>2023-01-04 08:00</td><td>2023-01-04 11:00</td><td>4</td></tr>
+<tr><td>5</td><td>Cape Town</td><td>Johannesburg</td><td>2023-01-05 08:00</td><td>2023-01-05 11:00</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Maintenance_Records</h2><table><thead>
+<tr><th>id</th><th>TechnicianID</th><th>PlaneID</th><th>Date_performed</th><th>Work_completed</th></tr>
+<tr><th></th><th>(&#8594; Aviation_Maintenance_Technicians.id)</th><th>(&#8594; Planes.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01</td><td>Engine inspection and replacement of filters</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-02</td><td>Landing gear overhaul</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-01-03</td><td>Wing inspection and repair of minor damage</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-01-04</td><td>Avionics system upgrade</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-01-05</td><td>Fuel system cleaning and leak check</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

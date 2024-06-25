@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Team_Type</h2><table><thead>
+<tr><th>id</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>National</td></tr>
+<tr><td>2</td><td>Club</td></tr>
+<tr><td>3</td><td>Youth</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Sports</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">SportName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Football</span></td></tr>
+<tr><td>2</td><td>Rugby</td></tr>
+</tbody></table></div>
+
+<div><h2>Players</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>TeamTypeId</th><th>SportId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Team_Type.id)</th><th>(&#8594; Sports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>28</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>26</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>30</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>Bob Johnson</td><td>29</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>Charlie White</td><td>27</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">FitnessLevels</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">LevelName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Elite</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">Intermediate</span></td></tr>
+<tr><td>3</td><td>Beginner</td></tr>
+</tbody></table></div>
+
+<div><h2>PlayerStats</h2><table><thead>
+<tr><th>id</th><th>PlayerId</th><th>FitnessLevelId</th><th>StatsText</th></tr>
+<tr><th></th><th>(&#8594; Players.id)</th><th>(&#8594; FitnessLevels.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Average stats</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Above average stats</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Below average stats</td></tr>
+<tr><td>4</td><td>4</td><td>1</td><td>Excellent stats</td></tr>
+<tr><td>5</td><td>5</td><td>2</td><td>Impressive stats</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

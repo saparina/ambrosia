@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airline</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td></tr>
+<tr><td>2</td><td>United Airlines</td></tr>
+<tr><td>3</td><td>Delta Airlines</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Flight</span></h2><table><thead>
+<tr><th>flight_id</th><th>airline_id</th><th>departure_airport</th><th>arrival_airport</th><th>aircraft</th><th>inflight_amenities</th></tr>
+<tr><th></th><th>(&#8594; Airline.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>LAX</td><td>JFK</td><td><span style="color:#006600">Boeing 787 Dreamliner</span></td><td><span style="color:#990000">Onboard Service</span></td></tr>
+<tr><td>2</td><td>2</td><td>LAX</td><td>ORD</td><td>Airbus A380</td><td><span style="color:#990000">Inflight Entertainment</span></td></tr>
+<tr><td>3</td><td>1</td><td>DFW</td><td>MIA</td><td><span style="color:#006600">Boeing 787 Dreamliner</span></td><td><span style="color:#990000">Inflight Entertainment</span></td></tr>
+<tr><td>4</td><td>2</td><td>EWR</td><td>SEA</td><td>Airbus A321</td><td><span style="color:#990000">Onboard Service</span></td></tr>
+<tr><td>5</td><td>3</td><td>ATL</td><td>SFO</td><td>Boeing 767</td><td>No Inflight Entertainment</td></tr>
+</tbody></table></div>
+
+<div><h2>Passenger</h2><table><thead>
+<tr><th>passenger_id</th><th>first_name</th><th>last_name</th><th>age</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>35</td><td>johndoe@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>40</td><td>janesmith@example.com</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>25</td><td>alicejohnson@example.com</td><td>+1357924680</td></tr>
+<tr><td>4</td><td>Michael</td><td>Williams</td><td>50</td><td>mwilliams@example.com</td><td>+2468135790</td></tr>
+<tr><td>5</td><td>Emily</td><td>Jones</td><td>30</td><td>emilyjones@example.com</td><td>+3681945230</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>booking_id</th><th>flight_id</th><th>passenger_id</th><th>seat_number</th><th>status</th><th>payment_date</th></tr>
+<tr><th></th><th>(&#8594; Flight.flight_id)</th><th>(&#8594; Passenger.passenger_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>10C</td><td>Confirmed</td><td>2022-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>12A</td><td>Waitlisted</td><td>2022-01-02 15:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>15F</td><td>Refunded</td><td>2022-01-03 10:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>20G</td><td>Canceled</td><td>2022-01-04 15:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>25H</td><td>Pending</td><td>2022-01-05 10:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

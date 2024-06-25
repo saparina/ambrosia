@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">CookingShows</span></h2><table><thead>
+<tr><th>id</th><th>ShowName</th><th>HostName</th><th>SeasonCount</th><th>AudienceScore</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>MasterChef</td><td>Gordon Ramsay</td><td>20</td><td><span style="color:#006600">7.5</span></td></tr>
+<tr><td>2</td><td>The Great British Bake Off</td><td>Mary Berry</td><td>13</td><td>8.0</td></tr>
+<tr><td>3</td><td>Top Chef</td><td>Tom Colicchio</td><td>20</td><td>6.9</td></tr>
+<tr><td>4</td><td>Chopped</td><td>Ted Allen</td><td>51</td><td>7.1</td></tr>
+<tr><td>5</td><td>Junior MasterChef</td><td>Gordon Ramsay</td><td>12</td><td>7.8</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RealityTVShows</span></h2><table><thead>
+<tr><th>id</th><th>ShowName</th><th>Theme</th><th>EpisodeLength</th><th>AudienceScore</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Survivor</td><td>Competitive survival games</td><td>60 minutes</td><td><span style="color:#006600">7.5</span></td></tr>
+<tr><td>2</td><td>Big Brother</td><td>Housemates living together</td><td>45 minutes</td><td>7.1</td></tr>
+<tr><td>3</td><td>American Idol</td><td>Music competition</td><td>1 hour</td><td>7.8</td></tr>
+<tr><td>4</td><td>The Voice</td><td>Vocal competition</td><td>1 hour</td><td>7.2</td></tr>
+<tr><td>5</td><td>Dancing With The Stars</td><td>Ballroom dancing competition</td><td>2 hours</td><td>7.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Genre</th><th>ReleaseYear</th><th>Rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Action/Adventure</td><td>2010</td><td>8.8</td></tr>
+<tr><td>2</td><td>Avatar</td><td>Science Fiction</td><td>2009</td><td>7.3</td></tr>
+<tr><td>3</td><td>Forrest Gump</td><td>Drama</td><td>1994</td><td>8.8</td></tr>
+<tr><td>4</td><td>Pulp Fiction</td><td>Crime/Thriller</td><td>1994</td><td>8.9</td></tr>
+<tr><td>5</td><td>The Dark Knight</td><td>Superhero</td><td>2008</td><td>9.0</td></tr>
+</tbody></table></div>
+
+<div><h2>MusicAlbums</h2><table><thead>
+<tr><th>id</th><th>ArtistName</th><th>AlbumTitle</th><th>YearReleased</th><th>SalesAmount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adele</td><td>21</td><td>2011</td><td>31000000</td></tr>
+<tr><td>2</td><td>Queen</td><td>A Night at the Opera</td><td>1975</td><td>25000000</td></tr>
+<tr><td>3</td><td>Michael Jackson</td><td>Thriller</td><td>1982</td><td>35000000</td></tr>
+<tr><td>4</td><td>Eminem</td><td>Marshall Mathers LP</td><td>2000</td><td>27000000</td></tr>
+<tr><td>5</td><td>Beatles</td><td>Abbey Road</td><td>1969</td><td>30000000</td></tr>
+</tbody></table></div>
+
+<div><h2>Books</h2><table><thead>
+<tr><th>id</th><th>AuthorName</th><th>BookTitle</th><th>PublicationDate</th><th>TotalPages</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>George Orwell</td><td>1984</td><td>1949-06-08</td><td>328</td></tr>
+<tr><td>2</td><td>Fyodor Dostoevsky</td><td>Crime and Punishment</td><td>1866-02-28</td><td>586</td></tr>
+<tr><td>3</td><td>J.K. Rowling</td><td>Harry Potter and the Philosopher's Stone</td><td>1997-06-26</td><td>223</td></tr>
+<tr><td>4</td><td>Ernest Hemingway</td><td>The Old Man and the Sea</td><td>1952-10-01</td><td>127</td></tr>
+<tr><td>5</td><td>Stephen King</td><td>Carrie</td><td>1974-01-15</td><td>264</td></tr>
+</tbody></table></div>
+
+<div><h2>VideoGames</h2><table><thead>
+<tr><th>id</th><th>GameTitle</th><th>Developer</th><th>Platform</th><th>ReleaseDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Legend of Zelda: Breath of the Wild</td><td>Nintendo EPD</td><td>Switch</td><td>2017-03-03</td></tr>
+<tr><td>2</td><td>Red Dead Redemption II</td><td>Rockstar Studios</td><td>PlayStation 4</td><td>2018-10-26</td></tr>
+<tr><td>3</td><td>God of War</td><td>Santa Monica Studio</td><td>PlayStation 4</td><td>2018-04-20</td></tr>
+<tr><td>4</td><td>The Witcher III: Wild Hunt</td><td>CD Projekt RED</td><td>Xbox One</td><td>2015-05-19</td></tr>
+<tr><td>5</td><td>Grand Theft Auto V</td><td>Rockstar North</td><td>PC</td><td>2013-04-14</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

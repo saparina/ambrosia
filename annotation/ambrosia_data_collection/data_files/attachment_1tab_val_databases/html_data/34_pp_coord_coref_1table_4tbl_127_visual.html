@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">job_posting</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>it_jobs</th><th>operating_system_knowledge</th><th>salary</th><th>created_at</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>IT Support Tech</td><td>Support users with computer issues.</td><td><span style="color:#990000">IT Support Technician</span></td><td><span style="color:#006600">Windows</span></td><td>30000.0</td><td>2024-03-07 22:29:45</td></tr>
+<tr><td>2</td><td>Linux Admin</td><td>Manage Linux servers.</td><td><span style="color:#990000">IT Support Technician</span></td><td>Linux</td><td>40000.0</td><td>2024-03-07 22:29:45</td></tr>
+<tr><td>3</td><td>NetAdmin</td><td>Maintain network infrastructure.</td><td><span style="color:#990000">Network Administrator</span></td><td><span style="color:#006600">Windows</span></td><td>60000.0</td><td>2024-03-07 22:29:45</td></tr>
+<tr><td>4</td><td>CloudOps Engineer</td><td>Implement cloud solutions.</td><td><span style="color:#990000">Network Administrator</span></td><td>AWS</td><td>80000.0</td><td>2024-03-07 22:29:45</td></tr>
+<tr><td>5</td><td>Software Developer</td><td>Develop software applications.</td><td></td><td></td><td>75000.0</td><td>2024-03-07 22:29:45</td></tr>
+<tr><td>6</td><td>Web Designer</td><td>Design user interfaces.</td><td></td><td></td><td>55000.0</td><td>2024-03-07 22:29:45</td></tr>
+</tbody></table></div>
+
+<div><h2>company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>info@techcorp.com</td><td>www.techcorp.com</td></tr>
+<tr><td>2</td><td>SoftDev Inc</td><td>contact@softdevinc.com</td><td>www.softdevinc.com</td></tr>
+<tr><td>3</td><td>Innovate Ltd</td><td>helpdesk@innovateltd.com</td><td>www.innovateltd.com</td></tr>
+<tr><td>4</td><td>DataWarehouse AG</td><td>sales@datawarehouseag.com</td><td>www.datawarehouseag.com</td></tr>
+</tbody></table></div>
+
+<div><h2>location</h2><table><thead>
+<tr><th>id</th><th>city</th><th>state</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td></tr>
+<tr><td>2</td><td>Chicago</td><td>IL</td><td>USA</td></tr>
+<tr><td>3</td><td>London</td><td>England</td><td>UK</td></tr>
+<tr><td>4</td><td>Paris</td><td>Ile-de-France</td><td>France</td></tr>
+</tbody></table></div>
+
+<div><h2>employee</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone</th><th>company_id</th><th>location_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; company.id)</th><th>(&#8594; location.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td><td>123-456-7890</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td><td>098-765-4321</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice.johnson@example.com</td><td>555-123-4567</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob.brown@example.com</td><td>555-987-6543</td><td>2</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

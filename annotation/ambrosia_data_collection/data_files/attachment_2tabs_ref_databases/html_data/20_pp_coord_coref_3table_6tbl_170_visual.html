@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Operating_System</span></h2><table><thead>
+<tr><th>OS_ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Windows 10</span></td></tr>
+<tr><td>2</td><td>macOS Big Sur</td></tr>
+<tr><td>3</td><td>Ubuntu 20.04 LTS</td></tr>
+<tr><td>4</td><td>Android 11</td></tr>
+<tr><td>5</td><td>iOS 14</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Tablets</span></h2><table><thead>
+<tr><th>Tablet_ID</th><th>Model</th><th>Brand</th><th>Screen_Size</th><th>RAM_Size</th><th>Storage_Capacity</th><th>Purchase_Price</th><th>OS_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Operating_System.OS_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Surface Pro X</td><td>Microsoft</td><td>13.0</td><td>8</td><td>256</td><td>999.99</td><td>1</td></tr>
+<tr><td>2</td><td>iPad Air</td><td>Apple</td><td>10.9</td><td>4</td><td>64</td><td>599.99</td><td>2</td></tr>
+<tr><td>3</td><td>Galaxy Tab S7+</td><td>Samsung</td><td>12.4</td><td>6</td><td>128</td><td>849.99</td><td>3</td></tr>
+<tr><td>4</td><td>Pixel Slate</td><td>Google</td><td>12.3</td><td>8</td><td>64</td><td>599.99</td><td>4</td></tr>
+<tr><td>5</td><td>Lenovo Yoga C940</td><td>Lenovo</td><td>14.0</td><td>16</td><td>512</td><td>1099.99</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Laptops</span></h2><table><thead>
+<tr><th>Laptop_ID</th><th>Model</th><th>Brand</th><th>Processor</th><th>RAM_Size</th><th>Hard_Disk_Space</th><th>Graphics_Card</th><th>Weight</th><th>Price</th><th>OS_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Operating_System.OS_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>XPS 15</td><td>Dell</td><td>Intel Core i7-10875H</td><td>32</td><td>1024</td><td>NVIDIA GeForce GTX 1650 Ti</td><td>4.5</td><td>1999.99</td><td>1</td></tr>
+<tr><td>2</td><td>MacBook Pro 16</td><td>Apple</td><td>Intel Core i7-9750H</td><td>16</td><td>512</td><td>AMD Radeon Pro 5300M</td><td>4.3</td><td>2399.99</td><td>2</td></tr>
+<tr><td>3</td><td>ThinkPad T490s</td><td>Lenovo</td><td>Intel Core i7-10610U</td><td>16</td><td>1024</td><td>Intel UHD Graphics</td><td>3.1</td><td>1499.99</td><td>3</td></tr>
+<tr><td>4</td><td>ZenBook Pro Duo</td><td>Asus</td><td>Intel Core i9-10980HK</td><td>32</td><td>1024</td><td>NVIDIA GeForce RTX 2060</td><td>4.5</td><td>2599.99</td><td>4</td></tr>
+<tr><td>5</td><td>Yoga C940</td><td>Lenovo</td><td>Intel Core i7-10750H</td><td>16</td><td>1024</td><td>NVIDIA GeForce MX350</td><td>3.7</td><td>1299.99</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>Student_ID</th><th>First_Name</th><th>Last_Name</th><th>Age</th><th>Grade_Level</th><th>Tablet_ID</th><th>Laptop_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Tablets.Tablet_ID)</th><th>(&#8594; Laptops.Laptop_ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>15</td><td>10th</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>14</td><td>9th</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>13</td><td>8th</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Tom</td><td>Williams</td><td>15</td><td>10th</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>Emma</td><td>Jackson</td><td>14</td><td>9th</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

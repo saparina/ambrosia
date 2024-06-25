@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airport</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Location</th><th>RunwayLength</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>New York City</td><td>9876.0</td></tr>
+<tr><td>2</td><td>Dulles International</td><td>Washington D.C.</td><td>10345.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Hotel</span></h2><table><thead>
+<tr><th>ID</th><th>AirportID</th><th>Airport_Name</th><th>Airport_Hotel</th><th><span style="color:#1430b2">Price</span></th></tr>
+<tr><th></th><th>(&#8594; Airport.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>JFK International</td><td>Hyatt Regency JFK</td><td><span style="color:#1430b2">150</span></td></tr>
+<tr><td>2</td><td>1</td><td>JFK International</td><td>Marriott JFK</td><td>200</td></tr>
+<tr><td>3</td><td>2</td><td>Dulles International</td><td>Westin Dulles</td><td>180</td></tr>
+<tr><td>4</td><td>2</td><td>Dulles International</td><td>Hilton Dulles</td><td>220</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">SleepPod</span></h2><table><thead>
+<tr><th>ID</th><th>AirportID</th><th>Airport_Name</th><th>Sleep_Pod</th><th>Price</th></tr>
+<tr><th></th><th>(&#8594; Airport.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>JFK International</td><td>GoSleep Pods</td><td><span style="color:#1430b2">150</span></td></tr>
+<tr><td>2</td><td>1</td><td>JFK International</td><td>YOUpod</td><td>200</td></tr>
+<tr><td>3</td><td>2</td><td>Dulles International</td><td>RestZen Capsules</td><td>180</td></tr>
+<tr><td>4</td><td>2</td><td>Dulles International</td><td>Napcab Private Suites</td><td>220</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurant</h2><table><thead>
+<tr><th>ID</th><th>AirportID</th><th>Airport_Name</th><th>Name</th><th>Cuisine</th></tr>
+<tr><th></th><th>(&#8594; Airport.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>JFK International</td><td>LeGrand NYC</td><td>Italian</td></tr>
+<tr><td>2</td><td>1</td><td>JFK International</td><td>Burger Bar</td><td>Fast Food</td></tr>
+<tr><td>3</td><td>2</td><td>Dulles International</td><td>The Silver Diner</td><td>American</td></tr>
+<tr><td>4</td><td>2</td><td>Dulles International</td><td>Taste of India</td><td>Indian</td></tr>
+</tbody></table></div>
+
+<div><h2>CarRental</h2><table><thead>
+<tr><th>ID</th><th>AirportID</th><th>Airport_Name</th><th>Company</th><th>Rates</th><th>ContactInfo</th></tr>
+<tr><th></th><th>(&#8594; Airport.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>JFK International</td><td>Avis</td><td>Moderate</td><td>+1 800-331-1212</td></tr>
+<tr><td>2</td><td>1</td><td>JFK International</td><td>Enterprise</td><td>Low</td><td>+1 855-263-3522</td></tr>
+<tr><td>3</td><td>2</td><td>Dulles International</td><td>National</td><td>High</td><td>+1 877-222-9350</td></tr>
+<tr><td>4</td><td>2</td><td>Dulles International</td><td>Hertz</td><td>Moderate</td><td>+1 800-654-3131</td></tr>
+</tbody></table></div>
+
+<div><h2>ParkingLot</h2><table><thead>
+<tr><th>ID</th><th>AirportID</th><th>Airport_Name</th><th>Type</th><th>Spaces</th><th>Rate</th></tr>
+<tr><th></th><th>(&#8594; Airport.ID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>JFK International</td><td>Short Term</td><td>100</td><td>30</td></tr>
+<tr><td>2</td><td>1</td><td>JFK International</td><td>Long Term</td><td>500</td><td>20</td></tr>
+<tr><td>3</td><td>2</td><td>Dulles International</td><td>Economy</td><td>300</td><td>15</td></tr>
+<tr><td>4</td><td>2</td><td>Dulles International</td><td>Premium</td><td>100</td><td>35</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

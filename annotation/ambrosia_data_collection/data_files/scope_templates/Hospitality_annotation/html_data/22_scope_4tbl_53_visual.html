@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Accommodations</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cabin</td></tr>
+<tr><td>2</td><td>Hotel</td></tr>
+<tr><td>3</td><td>Resort</td></tr>
+<tr><td>4</td><td>Bungalow</td></tr>
+<tr><td>5</td><td>Apartment</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Vacation_Rentals</span></h2><table><thead>
+<tr><th>id</th><th>rental_name</th><th>location</th><th>price</th><th>accommodation_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Accommodations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beach Cabin</td><td>Coastal Town</td><td>100.0</td><td>1</td></tr>
+<tr><td>2</td><td>Mountain Resort</td><td>Alpine Village</td><td>150.0</td><td>2</td></tr>
+<tr><td>3</td><td>City Apartments</td><td>Urban Center</td><td>80.0</td><td>3</td></tr>
+<tr><td>4</td><td>Lakeside Bungalows</td><td>Lake Side Town</td><td>90.0</td><td>4</td></tr>
+<tr><td>5</td><td>Seaside Hotel</td><td>Ocean View City</td><td>120.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Vacation_Rentals_Accommodations</h2><table><thead>
+<tr><th>vacation_rental_id</th><th>accommodation_type_id</th></tr>
+<tr><th>(&#8594; Vacation_Rentals.id)</th><th>(&#8594; Accommodations.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

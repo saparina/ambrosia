@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phoneNumber</th><th>website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Newspaper Co.</td><td>123 Main St</td><td>555-0198</td><td>https://www.newspapercopublishers.com</td></tr>
+<tr><td>2</td><td>Broadcast News Inc.</td><td>456 Elm St</td><td>555-0197</td><td>https://www.broadcastnewsinc.net</td></tr>
+<tr><td>3</td><td>Digital Media Hub</td><td>789 Oak St</td><td>555-0196</td><td>https://www.digitalmediahubpublishers.org</td></tr>
+<tr><td>4</td><td>Print Journalists Network</td><td>101 Pine St</td><td>555-0195</td><td>https://www.printjournalistsnetwork.info</td></tr>
+<tr><td>5</td><td>Newsroom Professionals Association</td><td>202 Fir St</td><td>555-0194</td><td>https://www.newsroomprofessionalsassociation.biz</td></tr>
+</tbody></table></div>
+
+<div><h2>Location</h2><table><thead>
+<tr><th>id</th><th>city</th><th>state</th><th>country</th><th>zipCode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td><td>10001</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>CA</td><td>USA</td><td>90001</td></tr>
+<tr><td>3</td><td>London</td><td>England</td><td>UK</td><td>W1A 1AA</td></tr>
+<tr><td>4</td><td>Paris</td><td>Île-de-France</td><td>France</td><td>75001</td></tr>
+<tr><td>5</td><td>Tokyo</td><td>Japan</td><td>JP</td><td>100-0001</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>id</th><th>skillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Communication</td></tr>
+<tr><td>2</td><td>Writing</td></tr>
+<tr><td>3</td><td>Editing</td></tr>
+<tr><td>4</td><td>Research</td></tr>
+<tr><td>5</td><td>Marketing</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">JobPosting</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th><span style="color:#186e16"><span style="color:#186e16">mediaCareer</span></span></th><th><span style="color:#1430b2">languages</span></th><th>startDate</th><th>endDate</th><th>companyId</th><th>locationId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Company.id)</th><th>(&#8594; Location.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Senior <span style="color:#186e16">Journalist</span></td><td>Experienced journalist required</td><td><span style="color:#186e16">Journalist</span></td><td><span style="color:#1430b2">English and Spanish</span></td><td>2022-01-01</td><td>2022-12-31</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Freelance <span style="color:#186e16">Journalist</span></td><td>Contributor needed for part-time work</td><td><span style="color:#186e16">Journalist</span></td><td>Italian</td><td>2022-01-01</td><td>2022-12-31</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Chief <span style="color:#186e16">Editor</span></td><td>Looking for a seasoned editor</td><td><span style="color:#186e16">Editor</span></td><td><span style="color:#1430b2">English and Spanish</span></td><td>2022-01-01</td><td>2022-12-31</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Sub-editor</td><td>Assistant editor role available</td><td><span style="color:#186e16">Editor</span></td><td>German</td><td>2022-01-01</td><td>2022-12-31</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Multimedia Designer</td><td>Design skills required</td><td>Graphic Designer</td><td>Portuguese</td><td>2022-01-01</td><td>2022-12-31</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>Content Writer</td><td>Need someone to write news articles</td><td>Writer</td><td>None specified</td><td>2022-01-01</td><td>2022-12-31</td><td>1</td><td>1</td></tr>
+<tr><td>7</td><td>Photographer</td><td>Capturing images for print/online publications</td><td>Photographer</td><td>French</td><td>2022-01-01</td><td>2022-12-31</td><td>2</td><td>2</td></tr>
+<tr><td>8</td><td>Video Producer</td><td>Produce video content for online platforms</td><td>Videographer</td><td>Russian</td><td>2022-01-01</td><td>2022-12-31</td><td>3</td><td>3</td></tr>
+<tr><td>9</td><td>Web Developer</td><td>Developing websites for various clients</td><td>Web Developer</td><td>None specified</td><td>2022-01-01</td><td>2022-12-31</td><td>4</td><td>4</td></tr>
+<tr><td>10</td><td>Data Analyst</td><td>Analyze data for marketing purposes</td><td>Analyst</td><td>Spanish</td><td>2022-01-01</td><td>2022-12-31</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

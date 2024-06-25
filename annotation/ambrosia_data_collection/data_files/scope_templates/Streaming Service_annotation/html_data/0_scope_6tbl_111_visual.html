@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Streaming_Service</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td><td>A leading subscription-based streaming service.</td></tr>
+<tr><td>2</td><td>Hulu</td><td>An American subscription video on demand service.</td></tr>
+<tr><td>3</td><td>Disney+</td><td>The official Disney streaming service featuring movies, shows, series and more.</td></tr>
+<tr><td>4</td><td>Amazon Prime Video</td><td>A premium streaming service offering movies, TV episodes, original programming and more.</td></tr>
+<tr><td>5</td><td>HBO Max</td><td>A subscription-based streaming platform providing access to a vast library of content from HBO and other partners.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Third_Party_App</span></h2><table><thead>
+<tr><th>app_id</th><th><span style="color:#990000">app_name</span></th><th>is_active</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Google Chrome</td><td>1</td></tr>
+<tr><td>2</td><td>Mozilla Firefox</td><td>1</td></tr>
+<tr><td>3</td><td>Microsoft Edge</td><td>1</td></tr>
+<tr><td>4</td><td>Opera</td><td>1</td></tr>
+<tr><td>5</td><td>Brave Browser</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Streaming_Service_Third_party_App</h2><table><thead>
+<tr><th>service_id</th><th>app_id</th></tr>
+<tr><th>(&#8594; Streaming_Service.id)</th><th>(&#8594; Third_Party_App.app_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

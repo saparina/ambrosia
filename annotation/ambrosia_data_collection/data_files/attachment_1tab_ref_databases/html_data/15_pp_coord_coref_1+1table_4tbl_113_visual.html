@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td></tr>
+<tr><td>2</td><td>Company B</td></tr>
+<tr><td>3</td><td>Company C</td></tr>
+<tr><td>4</td><td>Company D</td></tr>
+<tr><td>5</td><td>Company E</td></tr>
+</tbody></table></div>
+
+<div><h2>Technologies</h2><table><thead>
+<tr><th>id</th><th>career_title</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td></tr>
+<tr><td>2</td><td>Data Analyst</td></tr>
+<tr><td>3</td><td>Product Manager</td></tr>
+<tr><td>4</td><td>UX Designer</td></tr>
+<tr><td>5</td><td>QA Engineer</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Grades</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">grade</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Junior</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Middle</span></td></tr>
+<tr><td>3</td><td>Senior</td></tr>
+<tr><td>4</td><td>Lead</td></tr>
+<tr><td>5</td><td>Principal</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>id</th><th>skill_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python</td></tr>
+<tr><td>2</td><td>JavaScript</td></tr>
+<tr><td>3</td><td>SQL</td></tr>
+<tr><td>4</td><td>React</td></tr>
+<tr><td>5</td><td>Angular</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JobPostings</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">title</span></span></th><th>company_id</th><th>technology_id</th><th>grade_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Companies.id)</th><th>(&#8594; Technologies.id)</th><th>(&#8594; Grades.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Software Developer</span></td><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Software Developer</span></td><td>2</td><td>3</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Data Analyst</span></td><td>3</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Data Analyst</span></td><td>4</td><td>5</td><td>2</td></tr>
+<tr><td>5</td><td>Product Manager</td><td>1</td><td>6</td><td>4</td></tr>
+<tr><td>6</td><td>UX Designer</td><td>2</td><td>7</td><td>1</td></tr>
+<tr><td>7</td><td>QA Engineer</td><td>3</td><td>8</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>RequiredSkills</h2><table><thead>
+<tr><th>jobposting_id</th><th>skill_id</th></tr>
+<tr><th>(&#8594; JobPostings.id)</th><th>(&#8594; Skills.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>3</td><td>6</td></tr>
+<tr><td>4</td><td>7</td></tr>
+<tr><td>4</td><td>8</td></tr>
+<tr><td>5</td><td>9</td></tr>
+<tr><td>5</td><td>10</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Political_Reporters</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice@example.com</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob@example.com</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>charlie@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Elections</span></h2><table><thead>
+<tr><th>id</th><th>election_type</th><th>start_date</th><th><span style="color:#990000">end_date</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Presidential_Campaigns</td><td>2021-01-01</td><td>2021-12-31</td></tr>
+<tr><td>2</td><td>Local_Council_elections</td><td>2022-01-01</td><td>2022-12-31</td></tr>
+<tr><td>3</td><td>State_Assembly_elections</td><td>2023-01-01</td><td>2023-12-31</td></tr>
+<tr><td>4</td><td>Referendums</td><td>2024-01-01</td><td>2024-12-31</td></tr>
+<tr><td>5</td><td>By-Elections</td><td>2025-01-01</td><td>2025-12-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Political_Reporters_Elections</h2><table><thead>
+<tr><th>reporter_id</th><th>election_id</th></tr>
+<tr><th>(&#8594; Political_Reporters.id)</th><th>(&#8594; Elections.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

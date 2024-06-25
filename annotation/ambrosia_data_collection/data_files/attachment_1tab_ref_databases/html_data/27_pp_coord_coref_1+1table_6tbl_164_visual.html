@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>New York City</td><td>USA</td></tr>
+<tr><td>2</td><td>ATL</td><td>Atlanta</td><td>USA</td></tr>
+<tr><td>3</td><td>LAX</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>4</td><td>YYZ</td><td>Toronto</td><td>Canada</td></tr>
+<tr><td>5</td><td>EWR</td><td>Newark</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flightId</th><th>sourceAirport</th><th>destinationAirport</th><th>departureTime</th><th>arrivalTime</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>2023-01-01 06:00:00</td><td>2023-01-01 11:00:00</td></tr>
+<tr><td>2</td><td>3</td><td>4</td><td>2023-01-02 07:00:00</td><td>2023-01-02 12:00:00</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>2023-01-03 08:00:00</td><td>2023-01-03 13:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2023-01-04 09:00:00</td><td>2023-01-04 14:00:00</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>2023-01-05 10:00:00</td><td>2023-01-05 15:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Aircrafts</span></h2><table><thead>
+<tr><th>aircraftId</th><th><span style="color:#006600">modelName</span></th><th>capacity</th></tr>
+<tr><th>(&#8594; Flights.aircraftId)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Boeing 787 Dreamliner</span></td><td>250</td></tr>
+<tr><td>2</td><td>Airbus A380</td><td>800</td></tr>
+<tr><td>3</td><td>Bombardier CRJ-900</td><td>70</td></tr>
+<tr><td>4</td><td>Embraer E190</td><td>100</td></tr>
+<tr><td>5</td><td>De Havilland Canada Dash 8 Q400</td><td>78</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">InflightAmenities</span></h2><table><thead>
+<tr><th>amenityId</th><th>aircraftId</th><th><span style="color:#990000"><span style="color:#990000">onBoardService</span></span></th><th>inflightEntertainment</th><th>additionalServices</th></tr>
+<tr><th></th><th>(&#8594; Aircrafts.aircraftId)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#990000">Onboard Service</span></td><td></td><td></td></tr>
+<tr><td>2</td><td>2</td><td><span style="color:#990000">Onboard Service</span></td><td></td><td></td></tr>
+<tr><td>3</td><td>1</td><td><span style="color:#990000">Inflight Entertainment</span></td><td>Movies, TV shows, music</td><td>WiFi, meals</td></tr>
+<tr><td>4</td><td>2</td><td><span style="color:#990000">Inflight Entertainment</span></td><td>Movies, TV shows, music</td><td>WiFi, meals</td></tr>
+<tr><td>5</td><td>3</td><td><span style="color:#990000">Onboard Service</span></td><td></td><td></td></tr>
+<tr><td>6</td><td>3</td><td><span style="color:#990000">Inflight Entertainment</span></td><td>Movies, TV shows, music</td><td>WiFi, meals</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Green</td><td>bob.green@example.com</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>charlie.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Reservations</span></h2><table><thead>
+<tr><th>reservationId</th><th>guestID</th><th>checkInDate</th><th>checkOutDate</th><th>overnightStays</th><th>amenities</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>2023-01-03</td><td><span style="color:#990000">Guestroom</span></td><td><span style="color:#006600">Air Conditioning</span></td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-06</td><td>2023-01-08</td><td><span style="color:#990000">Guestroom</span></td><td>No Air Conditioning</td></tr>
+<tr><td>3</td><td>3</td><td>2023-01-10</td><td>2023-01-12</td><td><span style="color:#990000">Suite</span></td><td><span style="color:#006600">Air Conditioning</span></td></tr>
+<tr><td>4</td><td>4</td><td>2023-01-13</td><td>2023-01-15</td><td><span style="color:#990000">Suite</span></td><td>No Air Conditioning</td></tr>
+<tr><td>5</td><td>5</td><td>2023-01-17</td><td>2023-01-19</td><td><span style="color:#990000">Guestroom</span></td><td>No Air Conditioning</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>roomNumber</th><th>typeOfRoom</th><th>pricePerNight</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Standard Room</td><td>100</td></tr>
+<tr><td>2</td><td>Deluxe Suite</td><td>200</td></tr>
+<tr><td>3</td><td>Premium Suite</td><td>300</td></tr>
+<tr><td>4</td><td>Family Suite</td><td>250</td></tr>
+<tr><td>5</td><td>Executive Suite</td><td>400</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>bookingId</th><th>reservationId</th><th>roomNumber</th></tr>
+<tr><th></th><th>(&#8594; Reservations.reservationId)</th><th>(&#8594; Rooms.roomNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>reviewId</th><th>bookingId</th><th>rating</th><th>comments</th></tr>
+<tr><th></th><th>(&#8594; Bookings.bookingId)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5</td><td>Great stay! Very clean.</td></tr>
+<tr><td>2</td><td>2</td><td>4</td><td>The suite was nice but a bit expensive.</td></tr>
+<tr><td>3</td><td>3</td><td>5</td><td>Loved it! Perfect location.</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Good experience overall.</td></tr>
+<tr><td>5</td><td>5</td><td>3</td><td>Not what I expected.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

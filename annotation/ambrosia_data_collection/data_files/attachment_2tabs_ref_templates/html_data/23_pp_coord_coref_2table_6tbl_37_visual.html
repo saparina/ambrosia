@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Action_Movies</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th><span style="color:#1430b2">Duration</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>Christopher Nolan</td><td>2008</td><td>163</td></tr>
+<tr><td>2</td><td>Inception</td><td>Christopher Nolan</td><td>2010</td><td>148</td></tr>
+<tr><td>3</td><td>Mad Max: Fury Road</td><td>George Miller</td><td>2015</td><td><span style="color:#1430b2">120</span></td></tr>
+<tr><td>4</td><td>John Wick</td><td>Chad Stahelski</td><td>2014</td><td>131</td></tr>
+<tr><td>5</td><td>Avatar</td><td>James Cameron</td><td>2009</td><td>178</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Romantic_Comedies</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>When Harry Met Sally</td><td>Rob Reiner</td><td>1989</td><td>100</td></tr>
+<tr><td>2</td><td>Sleepless In Seattle</td><td>Nora Ephron</td><td>1993</td><td>105</td></tr>
+<tr><td>3</td><td>Pretty Woman</td><td>Garry Marshall</td><td>1990</td><td>119</td></tr>
+<tr><td>4</td><td>Notting Hill</td><td>Roger Michell</td><td>1999</td><td><span style="color:#1430b2">120</span></td></tr>
+<tr><td>5</td><td>Love Actually</td><td>Richard Curtis</td><td>2003</td><td>135</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>11/11/1974</td><td>American</td></tr>
+<tr><td>2</td><td>Tom Hanks</td><td>07/09/1956</td><td>American</td></tr>
+<tr><td>3</td><td>Cate Blanchett</td><td>05/14/1969</td><td>Australian</td></tr>
+<tr><td>4</td><td>Kristen Stewart</td><td>04/09/1990</td><td>American</td></tr>
+<tr><td>5</td><td>Anne Hathaway</td><td>11/12/1982</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>07/30/1970</td><td>English</td></tr>
+<tr><td>2</td><td>George Miller</td><td>03/03/1942</td><td>Australian</td></tr>
+<tr><td>3</td><td>Chad Stahelski</td><td>06/04/1971</td><td>American</td></tr>
+<tr><td>4</td><td>Rob Reiner</td><td>03/29/1947</td><td>American</td></tr>
+<tr><td>5</td><td>Nora Ephron</td><td>06/19/1941</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Ratings</h2><table><thead>
+<tr><th>id</th><th>Rating</th><th>ReviewerName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A+</td><td>Peter Travers</td></tr>
+<tr><td>2</td><td>B</td><td>Owen Gleiberman</td></tr>
+<tr><td>3</td><td>A-</td><td>Todd McCarthy</td></tr>
+<tr><td>4</td><td>A</td><td>Michael Phillips</td></tr>
+<tr><td>5</td><td>B+</td><td>Ann Hornaday</td></tr>
+</tbody></table></div>
+
+<div><h2>Awards</h2><table><thead>
+<tr><th>id</th><th>AwardType</th><th>RecipientId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Actors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Actor</td><td>1</td></tr>
+<tr><td>2</td><td>Best Supporting Actor</td><td>2</td></tr>
+<tr><td>3</td><td>Best Actress</td><td>3</td></tr>
+<tr><td>4</td><td>Best Supporting Actress</td><td>4</td></tr>
+<tr><td>5</td><td>Best Picture</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

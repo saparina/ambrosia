@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>16</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>17</td></tr>
+<tr><td>3</td><td>Tom</td><td>Brown</td><td>18</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>19</td></tr>
+<tr><td>5</td><td>Bob</td><td>White</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>TeacherID</th><th>FirstName</th><th>LastName</th><th>SubjectTaught</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr.</td><td>Davis</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Ms.</td><td>Martin</td><td>Physics</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Parker</td><td>Biology</td></tr>
+<tr><td>4</td><td>Professor</td><td>Lee</td><td>Chemistry</td></tr>
+<tr><td>5</td><td>Mrs.</td><td>Hall</td><td>English Literature</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>Description</th><th>TeacherID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Teachers.TeacherID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Calculus I</td><td>Introductory Calculus with an emphasis on limits and derivatives.</td><td>1</td></tr>
+<tr><td>2</td><td>General Physics</td><td>Introduction to classical physics covering mechanics and thermodynamics.</td><td>2</td></tr>
+<tr><td>3</td><td>Biological Evolution</td><td>A comprehensive study of evolutionary processes in biology.</td><td>3</td></tr>
+<tr><td>4</td><td>Organic Chemistry I</td><td>Introduction to organic chemistry focusing on fundamental concepts and reactions.</td><td>4</td></tr>
+<tr><td>5</td><td>World Literature</td><td>Exploration of world literature from various cultures and time periods.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>B+</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>A-</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>B</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>A</td></tr>
+</tbody></table></div>
+
+<div><h2>Textbooks_and_Software</h2><table><thead>
+<tr><th>ItemID</th><th><span style="color:#990000">TextbookTitle</span></th><th><span style="color:#990000">SoftwareName</span></th><th>CourseID</th><th>Quantity</th><th>Price</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Courses.CourseID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Principia Mathematica</td><td>None</td><td>1</td><td>10</td><td>49.99</td></tr>
+<tr><td>2</td><td>Fundamentals of Biochemistry</td><td>None</td><td>3</td><td>5</td><td>59.99</td></tr>
+<tr><td>3</td><td>The Elements of Style</td><td>Grammarly Premium</td><td>5</td><td>15</td><td>39.99</td></tr>
+<tr><td>4</td><td>Inorganic Chemistry: Structure and Reactivity</td><td>None</td><td>4</td><td>7</td><td>69.99</td></tr>
+<tr><td>5</td><td>Anthropology: A Brief Introduction</td><td>Adobe Creative Cloud</td><td>2</td><td>8</td><td>79.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Exams</h2><table><thead>
+<tr><th>ExamID</th><th>CourseID</th><th>Date</th><th>TotalMarks</th><th>PassMark</th></tr>
+<tr><th></th><th>(&#8594; Courses.CourseID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-12-15</td><td>100</td><td>60</td></tr>
+<tr><td>2</td><td>2</td><td>2021-12-20</td><td>100</td><td>65</td></tr>
+<tr><td>3</td><td>3</td><td>2021-12-17</td><td>100</td><td>70</td></tr>
+<tr><td>4</td><td>4</td><td>2021-12-22</td><td>100</td><td>75</td></tr>
+<tr><td>5</td><td>5</td><td>2021-12-18</td><td>100</td><td>80</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Museum</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>opening_hours</th><th>ticket_price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Natural History Museum</td><td>123 Main St</td><td>9am - 6pm</td><td>15.0</td></tr>
+<tr><td>2</td><td>Art Gallery</td><td>456 Elm St</td><td>10am - 8pm</td><td>20.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Planetarium</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>opening_hours</th><th>ticket_price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Space Exploration Center</td><td>789 Oak St</td><td>11am - 5pm</td><td>15.0</td></tr>
+<tr><td>2</td><td>Astronomy Observatory</td><td>321 Pine St</td><td>8pm - 10pm</td><td>20.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Tickets</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">museum_id</span></th><th>planetarium_id</th><th>ticket_type</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; Museum.id)</th><th>(&#8594; Planetarium.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>None</td><td>Adult</td><td><span style="color:#006600">1</span>5.0</td></tr>
+<tr><td>2</td><td><span style="color:#006600">1</span></td><td>2</td><td>Family Package</td><td>40.0</td></tr>
+<tr><td>3</td><td>2</td><td><span style="color:#006600">1</span></td><td>VIP Pass</td><td>30.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>age</th><th>student_id</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>16</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>15</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Visits</h2><table><thead>
+<tr><th>id</th><th>student_id</th><th>visit_date</th><th>tickets_purchased</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>3</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-02</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

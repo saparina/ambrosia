@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York JFK</td><td>New York City, USA</td></tr>
+<tr><td>2</td><td>Los Angeles LAX</td><td>Los Angeles, USA</td></tr>
+<tr><td>3</td><td>London Heathrow</td><td>London, UK</td></tr>
+<tr><td>4</td><td>Paris CDG</td><td>Paris, France</td></tr>
+<tr><td>5</td><td>Tokyo Narita</td><td>Tokyo, Japan</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>id</th><th>airport_id</th><th>terminal_name</th><th>capacity</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Terminal 1</td><td>20</td></tr>
+<tr><td>2</td><td>1</td><td>Terminal 2</td><td>30</td></tr>
+<tr><td>3</td><td>2</td><td>Terminal 4</td><td>40</td></tr>
+<tr><td>4</td><td>3</td><td>Terminal 2</td><td>50</td></tr>
+<tr><td>5</td><td>4</td><td>Terminal A</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>flight_number</th><th>departure_airport</th><th>arrival_airport</th></tr>
+<tr><th></th><th></th><th>(&#8594; Airports.name)</th><th>(&#8594; Airports.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AA123</td><td>New York JFK</td><td>London Heathrow</td></tr>
+<tr><td>2</td><td>DL456</td><td>Los Angeles LAX</td><td>Paris CDG</td></tr>
+<tr><td>3</td><td>BA789</td><td>London Heathrow</td><td>New York JFK</td></tr>
+<tr><td>4</td><td>AF101</td><td>Paris CDG</td><td>Tokyo Narita</td></tr>
+<tr><td>5</td><td>LH234</td><td>Frankfurt FRA</td><td>New York JFK</td></tr>
+</tbody></table></div>
+
+<div><h2>Buildings</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">Building_Design</span></th><th>airport_terminal</th></tr>
+<tr><th></th><th></th><th>(&#8594; Terminals.terminal_name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Studio A</td><td>Terminal 1</td></tr>
+<tr><td>2</td><td>Studio B</td><td>Terminal 2</td></tr>
+<tr><td>3</td><td>Studio C</td><td>Terminal 4</td></tr>
+<tr><td>4</td><td>Studio D</td><td>Terminal A</td></tr>
+<tr><td>5</td><td>Studio E</td><td>Terminal 2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Construction_Companies</span></h2><table><thead>
+<tr><th>id</th><th>company_name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Company C</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Company D</td><td>001 Pine St</td></tr>
+<tr><td>5</td><td>Company E</td><td>999 Maple Ave</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Building_Roles</span></h2><table><thead>
+<tr><th>role_id</th><th><span style="color:#990000">role_value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Site Supervisor</td></tr>
+<tr><td>2</td><td>Project Manager</td></tr>
+<tr><td>3</td><td>Estimator</td></tr>
+<tr><td>4</td><td>Foreman</td></tr>
+<tr><td>5</td><td>Laborer</td></tr>
+</tbody></table></div>
+
+<div><h2>Construction_Companies_Building_Roles</h2><table><thead>
+<tr><th>construction_company_id</th><th>building_role_id</th></tr>
+<tr><th>(&#8594; Construction_Companies.id)</th><th>(&#8594; Building_Roles.role_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

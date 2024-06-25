@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Staff</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Manager</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Assistant Manager</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Chefs</span></h2><table><thead>
+<tr><th>id</th><th>staffId</th><th><span style="color:#006600">experience</span></th></tr>
+<tr><th></th><th>(&#8594; Staff.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">5 years</span></td></tr>
+<tr><td>2</td><td>2</td><td>3 years</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Sous_Chef</span></h2><table><thead>
+<tr><th>id</th><th>chefId</th></tr>
+<tr><th></th><th>(&#8594; Chefs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Cooks</span></h2><table><thead>
+<tr><th>id</th><th>chefId</th></tr>
+<tr><th></th><th>(&#8594; Chefs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>MenuItems</h2><table><thead>
+<tr><th>id</th><th>itemName</th><th>preparationTime</th><th>price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Burger</td><td>10</td><td>9.99</td></tr>
+<tr><td>2</td><td>Pizza</td><td>15</td><td>12.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>orderId</th><th>sousChefId</th><th>cookId</th><th>totalPrice</th></tr>
+<tr><th></th><th>(&#8594; Sous_Chef.id)</th><th>(&#8594; Cooks.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>28.97</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>26.98</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

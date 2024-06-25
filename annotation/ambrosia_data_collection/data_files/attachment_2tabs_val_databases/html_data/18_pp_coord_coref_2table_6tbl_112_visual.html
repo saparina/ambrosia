@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Real_Estate_Agents</span></h2><table><thead>
+<tr><th>agent_id</th><th>name</th><th>phone_number</th><th>email</th><th>commission</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>+1234567890</td><td>john@example.com</td><td><span style="color:#006600">5%</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>+0987654321</td><td>jane@example.com</td><td>3%</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>+9876543210</td><td>mike@example.com</td><td>2%</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Property_Managers</span></h2><table><thead>
+<tr><th>manager_id</th><th>name</th><th>phone_number</th><th>email</th><th>commission</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Brown</td><td>+9876543211</td><td>alice@example.com</td><td><span style="color:#006600">5%</span></td></tr>
+<tr><td>2</td><td>Bob White</td><td>+1234567891</td><td>bob@example.com</td><td>3%</td></tr>
+<tr><td>3</td><td>Charlie Black</td><td>+1122334455</td><td>charlie@example.com</td><td>2%</td></tr>
+</tbody></table></div>
+
+<div><h2>Listed_Properties</h2><table><thead>
+<tr><th>property_id</th><th>address</th><th>price</th><th>listing_date</th><th>status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>$500000</td><td>2024-03-13 17:23:06</td><td>Available</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>$300000</td><td>2024-03-13 17:23:06</td><td>Under Contract</td></tr>
+<tr><td>3</td><td>789 Oak St</td><td>$400000</td><td>2024-03-13 17:23:06</td><td>Active</td></tr>
+<tr><td>4</td><td>000 Pine St</td><td>$200000</td><td>2024-03-13 17:23:06</td><td>Pending Sale</td></tr>
+<tr><td>5</td><td>999 Fir St</td><td>$100000</td><td>2024-03-13 17:23:06</td><td>Rented</td></tr>
+</tbody></table></div>
+
+<div><h2>Agent_Listings</h2><table><thead>
+<tr><th>agent_listing_id</th><th>real_estate_agent_id</th><th>property_id</th></tr>
+<tr><th></th><th>(&#8594; Real_Estate_Agents.agent_id)</th><th>(&#8594; Listed_Properties.property_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Manager_Listings</h2><table><thead>
+<tr><th>manager_listing_id</th><th>property_manager_id</th><th>property_id</th></tr>
+<tr><th></th><th>(&#8594; Property_Managers.manager_id)</th><th>(&#8594; Listed_Properties.property_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Clients</h2><table><thead>
+<tr><th>client_id</th><th>first_name</th><th>last_name</th><th>phone_number</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>+1112223333</td><td>tomhanks@email.com</td></tr>
+<tr><td>2</td><td>Emma</td><td>Watson</td><td>+4445556666</td><td>emmawatson@email.com</td></tr>
+<tr><td>3</td><td>Leonardo</td><td>DiCaprio</td><td>+7778889999</td><td>leodicaprio@email.com</td></tr>
+<tr><td>4</td><td>Kevin</td><td>Costner</td><td>+9998887777</td><td>kevincostner@email.com</td></tr>
+<tr><td>5</td><td>Angelina</td><td>Jolie</td><td>+10001001000</td><td>angelinajolie@email.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

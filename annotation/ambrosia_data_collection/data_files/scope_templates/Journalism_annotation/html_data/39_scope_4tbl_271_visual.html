@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Journalists</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>William Brown</td><td>william@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>id</th><th>title</th><th>publication_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily News</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>The Weekly Times</td><td>2021-01-08</td></tr>
+<tr><td>3</td><td>News Today</td><td>2021-01-15</td></tr>
+<tr><td>4</td><td>World Report</td><td>2021-01-22</td></tr>
+<tr><td>5</td><td>Global Insight</td><td>2021-01-29</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>journalist_id</th><th>publication_id</th><th>article_title</th><th>publish_date</th></tr>
+<tr><th></th><th>(&#8594; Journalists.id)</th><th>(&#8594; Publications.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Political Crisis Unfolding</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Economic Recovery Progress</td><td>2021-01-08</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Climate Change Effects</td><td>2021-01-15</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Technology Revolution</td><td>2021-01-22</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Healthcare Innovations</td><td>2021-01-29</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Investigative_Reports</span></h2><table><thead>
+<tr><th>id</th><th>report_name</th><th>start_date</th><th>end_date</th><th>article_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Articles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Corruption Scandal</td><td>2021-01-01</td><td>2021-01-31</td><td>1</td></tr>
+<tr><td>2</td><td>Illegal Drug Trade</td><td>2021-01-01</td><td>2021-01-31</td><td>2</td></tr>
+<tr><td>3</td><td>Tax Evasion Schemes</td><td>2021-01-01</td><td>2021-01-31</td><td>3</td></tr>
+<tr><td>4</td><td>Financial Fraud</td><td>2021-01-01</td><td>2021-01-31</td><td>4</td></tr>
+<tr><td>5</td><td>Cybercrime Surge</td><td>2021-01-01</td><td>2021-01-31</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Elements</span></h2><table><thead>
+<tr><th>element_id</th><th><span style="color:#990000">element_value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Interviews</td></tr>
+<tr><td>2</td><td>Documents</td></tr>
+<tr><td>3</td><td>Photos</td></tr>
+<tr><td>4</td><td>Videos</td></tr>
+<tr><td>5</td><td>Witness Testimonies</td></tr>
+</tbody></table></div>
+
+<div><h2>Investigative_Reports_Elements</h2><table><thead>
+<tr><th>id</th><th>investigative_report_id</th><th>element_id</th><th>description</th></tr>
+<tr><th></th><th>(&#8594; Investigative_Reports.id)</th><th>(&#8594; Elements.elements_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Conducted interviews with key witnesses</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Obtained confidential documents from a whistleblower</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Collected photos at crime scenes</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Recorded videos of protestors during the investigation</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Gathered testimonies from eyewitnesses</td></tr>
+<tr><td>6</td><td>2</td><td>1</td><td>Obtained confidential documents from a whistleblower</td></tr>
+<tr><td>7</td><td>3</td><td>1</td><td>Collected photos at crime scenes</td></tr>
+<tr><td>8</td><td>4</td><td>1</td><td>Recorded videos of protestors during the investigation</td></tr>
+<tr><td>9</td><td>5</td><td>1</td><td>Gathered testimonies from eyewitnesses</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

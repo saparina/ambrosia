@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Advertising</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#1430b2">Magazine</span></th><th>Advertising_Revenue</th><th>Subscribers</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Good Housekeeping</span></td><td>1000000.0</td><td>30000</td><td>USA</td></tr>
+<tr><td>2</td><td>Time</td><td>800000.0</td><td>25000</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Subscriptions</span></h2><table><thead>
+<tr><th>ID</th><th>Magazine</th><th>Subscription_Fees</th><th>NumberOfSubscribers</th><th>Duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Good Housekeeping</span></td><td>9.99</td><td>27000</td><td>Monthly</td></tr>
+<tr><td>2</td><td>National Geographic</td><td>6.99</td><td>20000</td><td>Bi-monthly</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>Birthdate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>1990-01-01</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td><td>1985-02-02</td><td>Canada</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Content</th><th>AuthorID</th><th>PublishDate</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Rise of AI</td><td>...</td><td>1</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>Climate Change Effects</td><td>...</td><td>2</td><td>2021-02-02</td></tr>
+</tbody></table></div>
+
+<div><h2>Magazines</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Category</th><th>EditorInChief</th><th>PublishingHouse</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Good Housekeeping</td><td>Lifestyle</td><td>Alice Johnson</td><td>Hearst Communications</td></tr>
+<tr><td>2</td><td>Time</td><td>News & Current Affairs</td><td>Bob Williams</td><td>Time Inc.</td></tr>
+</tbody></table></div>
+
+<div><h2>Issues</h2><table><thead>
+<tr><th>IssueNumber</th><th>MagazineID</th><th>ReleaseDate</th></tr>
+<tr><th></th><th>(&#8594; Magazines.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>1</td><td>2021-02-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

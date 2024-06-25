@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+098-765-4321</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td><td>+456-789-0123</td></tr>
+<tr><td>4</td><td>Alice</td><td>White</td><td>alice.white@example.com</td><td>+135-790-2468</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td><td>+246-890-1357</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>account_id</th><th>customer_id</th><th>account_type</th><th>balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.customer_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>None</td><td>Checking</td><td>1000.0</td></tr>
+<tr><td>2</td><td>None</td><td>Savings</td><td>5000.0</td></tr>
+<tr><td>3</td><td>None</td><td>Credit Card</td><td>2000.0</td></tr>
+<tr><td>4</td><td>None</td><td>Loan</td><td>-1500.0</td></tr>
+<tr><td>5</td><td>None</td><td>Mortgage</td><td>-20000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Mobile_Banking_App</span></h2><table><thead>
+<tr><th>app_id</th><th>app_version</th><th>release_date</th><th>platform</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>v1.0</td><td>2021-01-01</td><td>Android</td></tr>
+<tr><td>2</td><td>v1.1</td><td>2021-05-01</td><td>iOS</td></tr>
+<tr><td>3</td><td>v1.2</td><td>2021-07-01</td><td>Android</td></tr>
+<tr><td>4</td><td>v1.3</td><td>2021-11-01</td><td>iOS</td></tr>
+<tr><td>5</td><td>v1.4</td><td>2022-01-01</td><td>Android</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Features</span></h2><table><thead>
+<tr><th>feature_id</th><th><span style="color:#990000">feature_value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mobile Deposit</td></tr>
+<tr><td>2</td><td>Bill Pay</td></tr>
+<tr><td>3</td><td>Person to Person Payment</td></tr>
+<tr><td>4</td><td>Fund Transfer between accounts</td></tr>
+<tr><td>5</td><td>Account Alerts</td></tr>
+</tbody></table></div>
+
+<div><h2>Mobile_Banking_App_Features</h2><table><thead>
+<tr><th>mobile_app_feature_id</th><th>mobile_banking_app_id</th><th>feature_id</th></tr>
+<tr><th></th><th>(&#8594; Mobile_Banking_App.app_id)</th><th>(&#8594; Features.feature_id)</th></tr>
+</thead><tbody>
+<tr><td>None</td><td>1</td><td>1</td></tr>
+<tr><td>None</td><td>2</td><td>1</td></tr>
+<tr><td>None</td><td>3</td><td>1</td></tr>
+<tr><td>None</td><td>4</td><td>1</td></tr>
+<tr><td>None</td><td>5</td><td>1</td></tr>
+<tr><td>None</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

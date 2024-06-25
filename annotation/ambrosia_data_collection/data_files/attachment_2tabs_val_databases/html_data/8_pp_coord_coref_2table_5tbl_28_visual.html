@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Food_Court</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>cuisine_type</th><th>revenue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Café</td><td>Terminal A</td><td>Continental</td><td><span style="color:#006600">$1 Million</span></td></tr>
+<tr><td>2</td><td>Asian Delights</td><td>Terminal B</td><td>Asian</td><td>N/A</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Retail_Shop</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>type</th><th>revenue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Duty Free Shop</td><td>Terminal C</td><td>Electronics & Accessories</td><td><span style="color:#006600">$1 Million</span></td></tr>
+<tr><td>2</td><td>Books Galore</td><td>Terminal D</td><td>Book Store</td><td>N/A</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>flight_number</th><th>departure_time</th><th>arrival_time</th><th>gate_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-06-01 09:00:00</td><td>2022-06-01 11:00:00</td><td>10</td></tr>
+<tr><td>2</td><td>2</td><td>2022-06-02 07:00:00</td><td>2022-06-02 09:00:00</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>Passenger</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>date_of_birth</th><th>passport_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1990-06-01</td><td>ABCD1234</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1991-07-02</td><td>EFGH5678</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>id</th><th>aircraft_model</th><th>capacity</th><th>manufacturer</th><th>year_built</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737 Max</td><td>200</td><td>Boeing</td><td>2000</td></tr>
+<tr><td>2</td><td>Airbus A320 Neo</td><td>200</td><td>Airbus</td><td>2011</td></tr>
+</tbody></table></div>
+
+<div><h2>Baggage_Handling</h2><table><thead>
+<tr><th>id</th><th>airport_code</th><th>baggage_weight</th><th>destination_airport_code</th><th>handling_fee</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>LAX</td><td>500.0</td><td>ORD</td><td>150</td></tr>
+<tr><td>2</td><td>ORD</td><td>600.0</td><td>LAX</td><td>180</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

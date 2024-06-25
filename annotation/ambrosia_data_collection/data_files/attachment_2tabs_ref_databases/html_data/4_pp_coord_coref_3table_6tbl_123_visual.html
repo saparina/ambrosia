@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Menu</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Description</th><th>PreparationTime</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cheese Burger</td><td>A juicy burger made of beef patty.</td><td>30</td><td>9.99</td></tr>
+<tr><td>2</td><td>Veggie Sandwich</td><td>Healthy sandwich filled with fresh vegetables.</td><td>20</td><td>7.99</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Meals</span></h2><table><thead>
+<tr><th>id</th><th>MenuId</th><th>Quantity</th></tr>
+<tr><th></th><th>(&#8594; Menu.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Orders</span></h2><table><thead>
+<tr><th>OrderID</th><th>CustomerName</th><th>TotalPrice</th><th>OrderDate</th><th><span style="color:#006600">BestBefore</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>16.98</td><td>2024-03-13 19:14:59</td><td><span style="color:#006600">10.11.2018</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>20.0</td><td>2024-03-13 19:14:59</td><td>11.11.2018</td></tr>
+</tbody></table></div>
+
+<div><h2>ItemsInOrder</h2><table><thead>
+<tr><th>ItemId</th><th>OrderId</th><th>MealId</th><th>Quantity</th></tr>
+<tr><th></th><th>(&#8594; Orders.OrderID)</th><th>(&#8594; Meals.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Takeaways</span></h2><table><thead>
+<tr><th>id</th><th>OrderId</th><th>PickupDateTime</th></tr>
+<tr><th></th><th>(&#8594; Orders.OrderID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2018-11-10 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2018-11-11 10:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

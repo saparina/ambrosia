@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Teachers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>English Literature</td></tr>
+<tr><td>3</td><td>Emily Johnson</td><td>Biology</td></tr>
+<tr><td>4</td><td>Michael Brown</td><td>Physical Education</td></tr>
+<tr><td>5</td><td>Linda White</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Materials</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">material_name</span></th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algebra I Textbook</td><td>Textbook</td></tr>
+<tr><td>2</td><td>Geometry Textbook</td><td>Textbook</td></tr>
+<tr><td>3</td><td>To Kill a Mockingbird Novel</td><td>Book</td></tr>
+<tr><td>4</td><td>Cell Biology Book</td><td>Book</td></tr>
+<tr><td>5</td><td>World War II History Book</td><td>Book</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>id</th><th>class_name</th><th>teacher_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Teachers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algebra I</td><td>1</td></tr>
+<tr><td>2</td><td>Geometry</td><td>2</td></tr>
+<tr><td>3</td><td>Biology</td><td>3</td></tr>
+<tr><td>4</td><td>Physical Education</td><td>4</td></tr>
+<tr><td>5</td><td>American History</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>student_name</th><th>age</th><th>class_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Classes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Lee</td><td>16</td><td>1</td></tr>
+<tr><td>2</td><td>Jessica Kim</td><td>17</td><td>1</td></tr>
+<tr><td>3</td><td>Mark Davis</td><td>18</td><td>1</td></tr>
+<tr><td>4</td><td>Ashley Wilson</td><td>19</td><td>1</td></tr>
+<tr><td>5</td><td>David Miller</td><td>15</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignments</h2><table><thead>
+<tr><th>id</th><th>assignment_title</th><th>due_date</th><th>class_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Classes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Homework 1</td><td>2022-09-01</td><td>1</td></tr>
+<tr><td>2</td><td>Quiz 1</td><td>2022-09-07</td><td>1</td></tr>
+<tr><td>3</td><td>Project 1</td><td>2022-09-21</td><td>1</td></tr>
+<tr><td>4</td><td>Test 1</td><td>2022-10-05</td><td>1</td></tr>
+<tr><td>5</td><td>Paper 1</td><td>2022-10-26</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers_Materials</h2><table><thead>
+<tr><th>teachers_id</th><th>materials_id</th></tr>
+<tr><th>(&#8594; Teachers.id)</th><th>(&#8594; Materials.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

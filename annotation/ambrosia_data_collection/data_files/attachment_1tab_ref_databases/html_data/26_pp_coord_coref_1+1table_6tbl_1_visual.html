@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airline</h2><table><thead>
+<tr><th>id</th><th>name</th><th>headquarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American Airlines</td><td>Fort Worth</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>Atlanta</td></tr>
+<tr><td>3</td><td>United Airlines</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>Dallas</td></tr>
+<tr><td>5</td><td>JetBlue Airways</td><td>New York City</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Terminal</span></h2><table><thead>
+<tr><th>id</th><th>number</th><th><span style="color:#006600">location</span></th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Terminal 1</td><td>30</td></tr>
+<tr><td>2</td><td>2</td><td><span style="color:#006600">Terminal 2</span></td><td>60</td></tr>
+<tr><td>3</td><td>3</td><td>Terminal 3</td><td>80</td></tr>
+<tr><td>4</td><td>4</td><td>Terminal 4</td><td>70</td></tr>
+<tr><td>5</td><td>5</td><td>Terminal 5</td><td>90</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>id</th><th>airlineId</th><th>departureTime</th><th>arrivalTime</th><th>destination</th></tr>
+<tr><th></th><th>(&#8594; Airline.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01 08:00:00</td><td>2022-01-01 10:00:00</td><td>Los Angeles</td></tr>
+<tr><td>2</td><td>1</td><td>2022-01-02 08:00:00</td><td>2022-01-02 10:00:00</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>2</td><td>2022-01-03 08:00:00</td><td>2022-01-03 10:00:00</td><td>Miami</td></tr>
+<tr><td>4</td><td>2</td><td>2022-01-04 08:00:00</td><td>2022-01-04 10:00:00</td><td>Honolulu</td></tr>
+<tr><td>5</td><td>3</td><td>2022-01-05 08:00:00</td><td>2022-01-05 10:00:00</td><td>London</td></tr>
+</tbody></table></div>
+
+<div><h2>Passenger</h2><table><thead>
+<tr><th>id</th><th>flightId</th><th>firstName</th><th>lastName</th><th>age</th><th>countryOfResidence</th></tr>
+<tr><th></th><th>(&#8594; Flight.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John</td><td>Smith</td><td>30</td><td>USA</td></tr>
+<tr><td>2</td><td>1</td><td>Jane</td><td>Doe</td><td>25</td><td>Canada</td></tr>
+<tr><td>3</td><td>2</td><td>Alice</td><td>Johnson</td><td>40</td><td>UK</td></tr>
+<tr><td>4</td><td>2</td><td>Bob</td><td>Williams</td><td>50</td><td>Australia</td></tr>
+<tr><td>5</td><td>3</td><td>Emma</td><td>Brown</td><td>22</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>id</th><th>model</th><th>capacity</th><th>currentFlightId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Flight.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td><td>200</td><td>None</td></tr>
+<tr><td>2</td><td>Airbus A320</td><td>180</td><td>None</td></tr>
+<tr><td>3</td><td>Bombardier Q400</td><td>80</td><td>None</td></tr>
+<tr><td>4</td><td>Embraer E190</td><td>100</td><td>None</td></tr>
+<tr><td>5</td><td>De Havilland Dash 8</td><td>50</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Facility</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">type</span></span></th><th>terminalId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Terminal.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Baggage Claim</span></td><td>2</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Baggage Claim</span></td><td>3</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Security Check</span></td><td>2</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Security Check</span></td><td>4</td></tr>
+<tr><td>5</td><td>Restaurant</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

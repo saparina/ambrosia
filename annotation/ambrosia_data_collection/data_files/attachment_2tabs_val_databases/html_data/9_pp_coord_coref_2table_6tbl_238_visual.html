@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Orthodontists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phoneNumber</th><th>email</th><th>education</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Education.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Smith</td><td>123 Main St</td><td>555-1234</td><td>smith@example.com</td><td><span style="color:#006600">Doctor of Dental Surgery</span></td></tr>
+<tr><td>2</td><td>Dr. Johnson</td><td>456 Elm St</td><td>555-5678</td><td>johnson@example.com</td><td>Master of Science in Dentistry</td></tr>
+<tr><td>3</td><td>Dr. Brown</td><td>789 Oak St</td><td>555-9012</td><td>brown@example.com</td><td>Bachelor of Dental Surgery</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Periodontists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phoneNumber</th><th>email</th><th>education</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Education.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Miller</td><td>123 Pine St</td><td>555-3456</td><td>miller@example.com</td><td><span style="color:#006600">Doctor of Dental Surgery</span></td></tr>
+<tr><td>2</td><td>Dr. Wilson</td><td>456 Fir St</td><td>555-7890</td><td>wilson@example.com</td><td>Certificate in Periodontics</td></tr>
+<tr><td>3</td><td>Dr. Davis</td><td>789 Palm St</td><td>555-1357</td><td>davis@example.com</td><td>Doctorate in Clinical Periodontology</td></tr>
+</tbody></table></div>
+
+<div><h2>Employers</h2><table><thead>
+<tr><th>id</th><th>companyName</th><th>location</th><th>jobTitle</th><th>postDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Smile Inc.</td><td>New York</td><td>Dental Hygienist</td><td>2021-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>Teeth Care Center</td><td>Los Angeles</td><td>Dental Assistant</td><td>2021-02-01 10:00:00</td></tr>
+<tr><td>3</td><td>Gum Health Solutions</td><td>Chicago</td><td>Pediatric Dentist</td><td>2021-03-01 10:00:00</td></tr>
+<tr><td>4</td><td>Tooth Fairy Services</td><td>Miami</td><td>Endodontist</td><td>2021-04-01 10:00:00</td></tr>
+<tr><td>5</td><td>Enamel Experts</td><td>Houston</td><td>Prosthodontist</td><td>2021-05-01 10:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Education</h2><table><thead>
+<tr><th>id</th><th>degree</th><th>institution</th><th>startYear</th><th>endYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>PhD</td><td>University of Dentistry</td><td>2010</td><td>2014</td></tr>
+<tr><td>2</td><td>BS</td><td>State University</td><td>2006</td><td>2010</td></tr>
+<tr><td>3</td><td>MD</td><td>Medical School</td><td>2002</td><td>2006</td></tr>
+<tr><td>4</td><td>MS</td><td>Research Institute</td><td>2008</td><td>2012</td></tr>
+<tr><td>5</td><td>DDSc</td><td>Top Dental School</td><td>2004</td><td>2008</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

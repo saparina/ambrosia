@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td></tr>
+<tr><td>2</td><td>MedWell Inc.</td></tr>
+<tr><td>3</td><td>HealthConnect</td></tr>
+<tr><td>4</td><td>LifeBalance Solutions</td></tr>
+<tr><td>5</td><td>Mindful Care</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>id</th><th>company_id</th><th>department_name</th></tr>
+<tr><th></th><th>(&#8594; Company.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>IT</td></tr>
+<tr><td>2</td><td>2</td><td>HR</td></tr>
+<tr><td>3</td><td>3</td><td>Marketing</td></tr>
+<tr><td>4</td><td>4</td><td>Finance</td></tr>
+<tr><td>5</td><td>5</td><td>Operations</td></tr>
+</tbody></table></div>
+
+<div><h2>PositionType</h2><table><thead>
+<tr><th>id</th><th>position_type_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Full Time</td></tr>
+<tr><td>2</td><td>Part Time</td></tr>
+<tr><td>3</td><td>Contract</td></tr>
+<tr><td>4</td><td>Internship</td></tr>
+<tr><td>5</td><td>Freelance</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosting</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>salary</th><th>department_id</th><th>position_type_id</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Department.id)</th><th>(&#8594; PositionType.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop software applications.</td><td>70000</td><td>1</td><td>1</td><td>2022-06-01</td><td>2023-06-01</td></tr>
+<tr><td>2</td><td>HR Manager</td><td>Manage HR operations.</td><td>60000</td><td>2</td><td>1</td><td>2022-06-01</td><td>2023-06-01</td></tr>
+<tr><td>3</td><td>Digital Marketing Specialist</td><td>Create digital marketing strategies.</td><td>50000</td><td>3</td><td>1</td><td>2022-06-01</td><td>2023-06-01</td></tr>
+<tr><td>4</td><td>Financial Analyst</td><td>Analyze financial data.</td><td>65000</td><td>4</td><td>1</td><td>2022-06-01</td><td>2023-06-01</td></tr>
+<tr><td>5</td><td>Project Coordinator</td><td>Coordinate project activities.</td><td>55000</td><td>5</td><td>1</td><td>2022-06-01</td><td>2023-06-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">MentalHealthCareer</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">job_title</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Psychologist</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Psychiatrist</span></td></tr>
+<tr><td>3</td><td>Occupational Therapist</td></tr>
+<tr><td>4</td><td>Mental Health Nurse</td></tr>
+<tr><td>5</td><td>Art Therapist</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Clinic</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">clinic_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Harmony Wellness Center</span></td></tr>
+<tr><td>2</td><td>Peaceful Minds Counseling</td></tr>
+<tr><td>3</td><td>Serenity Psychological Services</td></tr>
+<tr><td>4</td><td>Innovative Behavioral Health</td></tr>
+<tr><td>5</td><td>The Healing Sanctuary</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostingMHC</h2><table><thead>
+<tr><th>id</th><th>job_posting_id</th><th>mental_health_career_id</th><th>clinic_id</th></tr>
+<tr><th></th><th>(&#8594; JobPosting.id)</th><th>(&#8594; MentalHealthCareer.id)</th><th>(&#8594; Clinic.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>5</td><td>3</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

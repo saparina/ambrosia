@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Hoa_Boards</span></h2><table><thead>
+<tr><th>board_id</th><th>address</th><th>president_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>John Doe</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>789 Oak St</td><td>Michael Johnson</td></tr>
+<tr><td>4</td><td>001 Pine St</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>002 Fir St</td><td>David Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Meetings</span></h2><table><thead>
+<tr><th>meeting_id</th><th><span style="color:#990000">meeting_type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Annual_Meeting</td></tr>
+<tr><td>2</td><td>Special_Meeting</td></tr>
+<tr><td>3</td><td>Budget_Meeting</td></tr>
+<tr><td>4</td><td>Maintenance_Meeting</td></tr>
+<tr><td>5</td><td>Election_Meeting</td></tr>
+</tbody></table></div>
+
+<div><h2>Members</h2><table><thead>
+<tr><th>member_id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Green</td><td>alice@example.com</td></tr>
+<tr><td>2</td><td>Bob White</td><td>bob@example.com</td></tr>
+<tr><td>3</td><td>Carol Black</td><td>carol@example.com</td></tr>
+<tr><td>4</td><td>Dave Blue</td><td>dave@example.com</td></tr>
+<tr><td>5</td><td>Elizabeth Red</td><td>elizabeth@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Hoa_Board_Members</h2><table><thead>
+<tr><th>hoa_board_id</th><th>member_id</th></tr>
+<tr><th>(&#8594; Hoa_Boards.board_id)</th><th>(&#8594; Members.member_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Meeting_Attendees</h2><table><thead>
+<tr><th>meeting_id</th><th>attendee_id</th></tr>
+<tr><th>(&#8594; Meetings.meeting_id)</th><th>(&#8594; Members.member_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Hoa_Boards_Meetings</h2><table><thead>
+<tr><th>hoa_board_id</th><th>meeting_id</th></tr>
+<tr><th>(&#8594; Hoa_Boards.board_id)</th><th>(&#8594; Meetings.meeting_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

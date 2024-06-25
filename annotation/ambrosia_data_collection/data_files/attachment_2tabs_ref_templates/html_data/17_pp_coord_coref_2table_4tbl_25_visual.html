@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Librarians</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>experience</th><th><span style="color:#1430b2">location</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>2</td><td><span style="color:#1430b2">University's Main Library</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>31</td><td>5</td><td>New York Public Library</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Archivists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>experience</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Johnson</td><td>28</td><td>7</td><td><span style="color:#1430b2">University's Main Library</span></td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>33</td><td>6</td><td>British Museum</td></tr>
+</tbody></table></div>
+
+<div><h2>Employers</h2><table><thead>
+<tr><th>id</th><th>company_name</th><th>address</th><th>contact_info</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Company</td><td>123 Street, City</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>XYZ Company</td><td>456 Avenue, Town</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alexander</td><td>Anderson</td><td>alex@email.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Laura</td><td>Garcia</td><td>laura@email.com</td><td>+0987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>JobsPosted</h2><table><thead>
+<tr><th>id</th><th>employer_id</th><th>position</th><th>description</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th>(&#8594; Employers.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Librarian</td><td>Responsible for managing library resources.</td><td>2022-01-01</td><td>2023-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>Curator</td><td>Manage museum exhibits and collections.</td><td>2022-07-01</td><td>2023-06-30</td></tr>
+</tbody></table></div>
+
+<div><h2>ApplicationsSubmitted</h2><table><thead>
+<tr><th>application_id</th><th>applicant_id</th><th>job_posting_id</th><th>resume</th><th>cover_letter</th></tr>
+<tr><th></th><th>(&#8594; Applicants.id)</th><th>(&#8594; JobsPosted.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>resume1.pdf</td><td>cover_letter1.txt</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>resume2.pdf</td><td>cover_letter2.txt</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Nutritionists</span></h2><table><thead>
+<tr><th>nutritionist_id</th><th>email</th><th>full_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>john.smith@example.com</td><td>John Smith</td></tr>
+<tr><td>2</td><td>jane.doe@example.com</td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>michael.brown@example.com</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>emily.white@example.com</td><td>Emily White</td></tr>
+<tr><td>5</td><td>david.black@example.com</td><td>David Black</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Diets</span></h2><table><thead>
+<tr><th>diet_type_id</th><th><span style="color:#990000">diet_type_value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Vegan</td></tr>
+<tr><td>2</td><td>Non-vegan</td></tr>
+<tr><td>3</td><td>Low Carb</td></tr>
+<tr><td>4</td><td>Paleo</td></tr>
+<tr><td>5</td><td>Gluten Free</td></tr>
+</tbody></table></div>
+
+<div><h2>Nutritionists_Diets</h2><table><thead>
+<tr><th>nutritionist_id</th><th>diet_type_id</th></tr>
+<tr><th>(&#8594; Nutritionists.nutritionist_id)</th><th>(&#8594; Diets.diet_type_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>job_posting_id</th><th>title</th><th>description</th><th>location</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Registered Dietitian</td><td>Help clients achieve their nutritional goals.</td><td>New York, NY</td><td>80000</td></tr>
+<tr><td>2</td><td>Nutrition Consultant</td><td>Advise on healthy eating habits and meal planning.</td><td>Los Angeles, CA</td><td>65000</td></tr>
+<tr><td>3</td><td>Food Scientist</td><td>Research and develop new food products.</td><td>Chicago, IL</td><td>75000</td></tr>
+<tr><td>4</td><td>Health Coach</td><td>Guide clients towards healthier lifestyles.</td><td>San Francisco, CA</td><td>60000</td></tr>
+<tr><td>5</td><td>Clinical Nutritionist</td><td>Assess and treat patients with malnutrition.</td><td>Seattle, WA</td><td>85000</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>applicant_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Wilson</td><td>alice.wilson@example.com</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Robert</td><td>Lee</td><td>robert.lee@example.com</td><td>+9876543210</td></tr>
+<tr><td>3</td><td>Anna</td><td>Martinez</td><td>anna.martinez@example.com</td><td>+0987654321</td></tr>
+<tr><td>4</td><td>Mark</td><td>Taylor</td><td>mark.taylor@example.com</td><td>+1357924680</td></tr>
+<tr><td>5</td><td>Laura</td><td>Hall</td><td>laura.hall@example.com</td><td>+2468135790</td></tr>
+</tbody></table></div>
+
+<div><h2>ApplicationStatus</h2><table><thead>
+<tr><th>application_id</th><th>job_posting_id</th><th>applicant_id</th><th>status</th><th>applied_date</th></tr>
+<tr><th></th><th>(&#8594; JobPostings.job_posting_id)</th><th>(&#8594; Applicants.applicant_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Applied</td><td>2024-01-30 19:23:08</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Interview Scheduled</td><td>2024-01-30 19:23:08</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>Rejected</td><td>2024-01-30 19:23:08</td></tr>
+<tr><td>4</td><td>3</td><td>4</td><td>Offer Made</td><td>2024-01-30 19:23:08</td></tr>
+<tr><td>5</td><td>4</td><td>5</td><td>On Hold</td><td>2024-01-30 19:23:08</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

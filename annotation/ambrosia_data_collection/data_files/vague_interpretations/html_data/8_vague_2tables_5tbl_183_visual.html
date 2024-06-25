@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Project</h2><table><thead>
+<tr><th>projectID</th><th>name</th><th>startDate</th><th>endDate</th><th>structuralInspectionID</th><th>safetyInspectionID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Structural_Inspection.inspectionID)</th><th>(&#8594; Safety_Inspection.inspectionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bridge Replacement</td><td>2023-01-01</td><td>2023-12-31</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>Highway Repair</td><td>2023-02-01</td><td>2023-12-31</td><td>3</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Material</h2><table><thead>
+<tr><th>materialID</th><th>type</th><th>quantity</th><th>unit</th><th>price</th><th>projectID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Project.projectID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concrete</td><td>100</td><td>cubic yards</td><td>75</td><td>1</td></tr>
+<tr><td>2</td><td>Steel Rebar</td><td>50</td><td>tons</td><td>90</td><td>1</td></tr>
+<tr><td>3</td><td>Asphalt</td><td>100</td><td>tons</td><td>60</td><td>2</td></tr>
+<tr><td>4</td><td>Gravel</td><td>200</td><td>tons</td><td>40</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>employeeID</th><th>firstName</th><th>lastName</th><th>role</th><th>hireDate</th><th>supervisorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Employee.employeeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Structural Engineer</td><td>2022-01-01</td><td>None</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Safety Officer</td><td>2022-01-01</td><td>None</td></tr>
+<tr><td>3</td><td>Mike</td><td>Johnson</td><td>Site Supervisor</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>4</td><td>Anna</td><td>Williams</td><td>Architect</td><td>2022-01-01</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Structural_Inspection</span></h2><table><thead>
+<tr><th>inspectionID</th><th>date</th><th>result</th><th>inspectorEmployeeID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Employee.employeeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-20 10:00:00</td><td>Passed</td><td>1</td></tr>
+<tr><td>2</td><td>2023-02-20 10:00:00</td><td>Failed</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Safety_Inspection</span></h2><table><thead>
+<tr><th>inspectionID</th><th>date</th><th>result</th><th>inspectorEmployeeID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Employee.employeeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-15 10:00:00</td><td>Passed</td><td>1</td></tr>
+<tr><td>2</td><td>2023-02-15 10:00:00</td><td>Failed</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Worker</h2><table><thead>
+<tr><th>workerID</th><th>firstName</th><th>lastName</th><th>employmentStartDate</th><th>currentProjectID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Project.projectID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>2022-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Sam</td><td>Waterson</td><td>2022-01-01</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

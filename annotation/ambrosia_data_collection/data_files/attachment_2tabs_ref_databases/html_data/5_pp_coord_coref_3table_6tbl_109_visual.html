@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Months</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">month</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">January</span></td></tr>
+<tr><td>2</td><td>February</td></tr>
+<tr><td>3</td><td>March</td></tr>
+<tr><td>4</td><td>April</td></tr>
+<tr><td>5</td><td>May</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Money_Market_Fund</span></h2><table><thead>
+<tr><th>id</th><th>fundName</th><th>totalAmount</th><th>monthId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Months.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Fund</td><td>1000000.0</td><td>1</td></tr>
+<tr><td>2</td><td>XYZ Fund</td><td>800000.0</td><td>2</td></tr>
+<tr><td>3</td><td>PQR Fund</td><td>700000.0</td><td>3</td></tr>
+<tr><td>4</td><td>STU Fund</td><td>600000.0</td><td>4</td></tr>
+<tr><td>5</td><td>WTF Fund</td><td>500000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Bond_Fund</span></h2><table><thead>
+<tr><th>id</th><th>fundName</th><th>totalAmount</th><th>monthId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Months.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AAA Fund</td><td>900000.0</td><td>1</td></tr>
+<tr><td>2</td><td>BBB Fund</td><td>750000.0</td><td>2</td></tr>
+<tr><td>3</td><td>CCC Fund</td><td>650000.0</td><td>3</td></tr>
+<tr><td>4</td><td>DDD Fund</td><td>550000.0</td><td>4</td></tr>
+<tr><td>5</td><td>EEE Fund</td><td>450000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice.johnson@example.com</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob.brown@example.com</td></tr>
+<tr><td>5</td><td>Carol White</td><td>carol.white@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>id</th><th>customerId</th><th>moneyMarketFundId</th><th>bondFundId</th><th>amount</th><th>transactionDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th>(&#8594; Money_Market_Fund.id)</th><th>(&#8594; Bond_Fund.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>None</td><td>2000.0</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>None</td><td>2500.0</td><td>2022-02-01</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>None</td><td>3000.0</td><td>2022-03-01</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>None</td><td>3500.0</td><td>2022-04-01</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>None</td><td>4000.0</td><td>2022-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Investments</h2><table><thead>
+<tr><th>id</th><th>customerId</th><th>moneyMarketFundId</th><th>bondFundId</th><th>investmentAmount</th><th>startDate</th><th>endDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th>(&#8594; Money_Market_Fund.id)</th><th>(&#8594; Bond_Fund.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>None</td><td>10000.0</td><td>2022-01-01</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>None</td><td>12000.0</td><td>2022-02-01</td><td>2023-02-01</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>None</td><td>14000.0</td><td>2022-03-01</td><td>2023-03-01</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>None</td><td>16000.0</td><td>2022-04-01</td><td>2023-04-01</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>None</td><td>18000.0</td><td>2022-05-01</td><td>2023-05-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

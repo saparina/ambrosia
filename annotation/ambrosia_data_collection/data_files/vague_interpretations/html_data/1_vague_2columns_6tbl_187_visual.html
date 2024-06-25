@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Construction_Projects</h2><table><thead>
+<tr><th>ProjectID</th><th><span style="color:#990000">Budget</span></th><th><span style="color:#990000">Staff</span></th><th>Location</th><th>StartDate</th><th>EndDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1000000.0</td><td>20</td><td>New York</td><td>2023-01-01</td><td>2023-12-31</td></tr>
+<tr><td>2</td><td>800000.0</td><td>15</td><td>Los Angeles</td><td>2023-02-01</td><td>2023-11-30</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>Name</th><th>Position</th><th>HireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Project Manager</td><td>2022-06-01</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Architect</td><td>2021-09-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Materials</h2><table><thead>
+<tr><th>MaterialID</th><th>Type</th><th>Quantity</th><th>UnitCost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concrete</td><td>500.0</td><td>75.0</td></tr>
+<tr><td>2</td><td>Steel Rebars</td><td>300.0</td><td>100.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Equipment</h2><table><thead>
+<tr><th>EquipmentID</th><th>ModelName</th><th>RentalRate</th><th>PurchasePrice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Excavator X500</td><td>250.0</td><td>500000.0</td></tr>
+<tr><td>2</td><td>Cranes MX700</td><td>300.0</td><td>600000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Suppliers</h2><table><thead>
+<tr><th>SupplierID</th><th>CompanyName</th><th>ContactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Concrete Supply</td><td>(555) 123-4567</td></tr>
+<tr><td>2</td><td>XYZ Steel Distribution</td><td>(555) 765-4321</td></tr>
+</tbody></table></div>
+
+<div><h2>Contractors</h2><table><thead>
+<tr><th>ContractorID</th><th>CompanyName</th><th>ServicesOffered</th><th>LicenseNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>PQR Construction Co.</td><td>General Contracting</td><td>Lic#123456</td></tr>
+<tr><td>2</td><td>STU Building Solutions</td><td>Subcontracting</td><td>Lic#654321</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

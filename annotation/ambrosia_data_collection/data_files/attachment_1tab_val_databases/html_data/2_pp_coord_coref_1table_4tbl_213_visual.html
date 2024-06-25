@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th><th>BirthDate</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane Doe</td><td>1976-03-01</td><td>USA</td></tr>
+<tr><td>2</td><td>John Smith</td><td>1990-06-05</td><td>Canada</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>1985-12-15</td><td>UK</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>1995-08-10</td><td>Australia</td></tr>
+<tr><td>5</td><td>David Brown</td><td>1980-01-05</td><td>New Zealand</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>PublisherID</th><th>Name</th><th>Address</th><th>YearEstablished</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Random House</td><td>NYC, USA</td><td>1927</td></tr>
+<tr><td>2</td><td>HarperCollins</td><td>London, UK</td><td>1919</td></tr>
+<tr><td>3</td><td>Simon & Schuster</td><td>NYC, USA</td><td>1924</td></tr>
+<tr><td>4</td><td>Hachette Book Group</td><td>Paris, France</td><td>1942</td></tr>
+<tr><td>5</td><td>Macmillan Publishers</td><td>London, UK</td><td>1843</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>GenreID</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Science fiction books focus on imaginary elements such as futuristic science advanced technology.</td></tr>
+<tr><td>2</td><td>Fantasy genre consists of works based on myths and legends.</td></tr>
+<tr><td>3</td><td>Horror genre involves suspense and horror elements like ghosts and supernatural events.</td></tr>
+<tr><td>4</td><td>Thriller genre revolves around fast pacing plot filled with unexpected twists.</td></tr>
+<tr><td>5</td><td>Non-fiction genre deals with real life facts, events or people.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Books</span></h2><table><thead>
+<tr><th>BookID</th><th>Title</th><th>PageCount</th><th>Book_Genre</th><th>Year_Of_Publication</th><th>AuthorID</th><th>PublisherID</th><th>GenreID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th><th>(&#8594; Publishers.PublisherID)</th><th>(&#8594; Genres.GenreID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Science of Tomorrow</td><td>320</td><td><span style="color:#990000">Science Fiction Book</span></td><td><span style="color:#006600">2018</span></td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>Love Beyond Time</td><td>280</td><td><span style="color:#990000">Romance Book</span></td><td><span style="color:#006600">2018</span></td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>Into The Stars</td><td>350</td><td><span style="color:#990000">Science Fiction Book</span></td><td>2021</td><td>3</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>A Love Unforgettable</td><td>300</td><td><span style="color:#990000">Romance Book</span></td><td>2020</td><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>Mythical Creatures</td><td>250</td><td>Fantasy Book</td><td>2017</td><td>5</td><td>5</td><td>3</td></tr>
+<tr><td>6</td><td>The Haunting Shadows</td><td>260</td><td>Horror Book</td><td>2019</td><td>6</td><td>2</td><td>4</td></tr>
+<tr><td>7</td><td>The Art Of Deception</td><td>270</td><td>Thriller Book</td><td>2020</td><td>7</td><td>4</td><td>5</td></tr>
+<tr><td>8</td><td>History In Black And White</td><td>310</td><td>Non-Fiction Book</td><td>2017</td><td>8</td><td>3</td><td>6</td></tr>
+<tr><td>9</td><td>The Alien Encounter</td><td>290</td><td><span style="color:#990000">Science Fiction Book</span></td><td>2021</td><td>9</td><td>5</td><td>1</td></tr>
+<tr><td>10</td><td>An Eternal Promise</td><td>285</td><td><span style="color:#990000">Romance Book</span></td><td><span style="color:#006600">2018</span></td><td>10</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

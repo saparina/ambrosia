@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Restaurants</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Type</th><th>Year_of_Establishment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Fine Steaks</td><td><span style="color:#990000">Steakhouse</span></td><td><span style="color:#006600">1980</span></td></tr>
+<tr><td>2</td><td>The Rib House</td><td><span style="color:#990000">Steakhouse</span></td><td>2005</td></tr>
+<tr><td>3</td><td>Surfside Seafood</td><td><span style="color:#990000">Seafood Restaurant</span></td><td><span style="color:#006600">1980</span></td></tr>
+<tr><td>4</td><td>Coastal Catch</td><td><span style="color:#990000">Seafood Restaurant</span></td><td>2010</td></tr>
+</tbody></table></div>
+
+<div><h2>Staff</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Position</th><th>RestaurantId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Restaurants.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>Manager</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Waiter</td><td>1</td></tr>
+<tr><td>3</td><td>Bob</td><td>Johnson</td><td>Chef</td><td>2</td></tr>
+<tr><td>4</td><td>Alice</td><td>Williams</td><td>Hostess</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>MenuItems</h2><table><thead>
+<tr><th>id</th><th>ItemName</th><th>Description</th><th>Price</th><th>RestaurantId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Restaurants.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>T-bone Steak</td><td>A delicious T-bone steak with garlic butter.</td><td>35.99</td><td>1</td></tr>
+<tr><td>2</td><td>Shrimp Scampi</td><td>Grilled shrimps sauteed with white wine, garlic and parsley.</td><td>20.99</td><td>3</td></tr>
+<tr><td>3</td><td>Garlic Bread</td><td>Crusty bread baked with lots of freshly minced garlic.</td><td>6.99</td><td>4</td></tr>
+<tr><td>4</td><td>Mixed Greens Salad</td><td>A refreshing salad with a variety of mixed greens, cherry tomatoes, cucumber and feta cheese.</td><td>8.99</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>id</th><th>CustomerName</th><th>ContactNumber</th><th>NumInParty</th><th>Date</th><th>Time</th><th>RestaurantId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Restaurants.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alex Johnson</td><td>+1234567890</td><td>4</td><td>2022-06-15</td><td>19:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>Emily Smith</td><td>+1234567891</td><td>2</td><td>2022-06-17</td><td>20:00:00</td><td>2</td></tr>
+<tr><td>3</td><td>Chris Brown</td><td>+1234567892</td><td>6</td><td>2022-06-18</td><td>18:00:00</td><td>3</td></tr>
+<tr><td>4</td><td>Kelly Clarkson</td><td>+1234567893</td><td>8</td><td>2022-06-19</td><td>17:00:00</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

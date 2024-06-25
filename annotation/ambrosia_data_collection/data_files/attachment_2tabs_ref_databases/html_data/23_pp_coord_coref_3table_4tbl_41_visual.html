@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>MovieGenres</h2><table><thead>
+<tr><th>id</th><th>genreName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Adventure</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Horror</td></tr>
+<tr><td>5</td><td>Romantic Comedy</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Movies</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseYear</th><th><span style="color:#006600">duration</span></th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; DurationTable.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>2008</td><td><span style="color:#006600">152</span></td></tr>
+<tr><td>2</td><td>Inception</td><td>2010</td><td>163</td></tr>
+<tr><td>3</td><td>Titanic</td><td>1997</td><td>195</td></tr>
+<tr><td>4</td><td>Interstellar</td><td>2014</td><td>169</td></tr>
+<tr><td>5</td><td>Forrest Gump</td><td>1994</td><td>142</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ActionMovies</span></h2><table><thead>
+<tr><th>id</th><th>movieId</th><th>actionMovie</th></tr>
+<tr><th></th><th>(&#8594; Movies.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RomanticComedies</span></h2><table><thead>
+<tr><th>id</th><th>movieId</th><th>romanticComedy</th></tr>
+<tr><th></th><th>(&#8594; Movies.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td></tr>
+<tr><td>2</td><td>Leonardo DiCaprio</td></tr>
+<tr><td>3</td><td>Christopher Nolan</td></tr>
+<tr><td>4</td><td>Brad Pitt</td></tr>
+<tr><td>5</td><td>Kate Winslet</td></tr>
+</tbody></table></div>
+
+<div><h2>Casts</h2><table><thead>
+<tr><th>id</th><th>actorId</th><th>movieId</th><th>role</th></tr>
+<tr><th></th><th>(&#8594; Actors.id)</th><th>(&#8594; Movies.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Jack Dawson</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>James Cameron</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>Cobb</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>Cooper</td></tr>
+<tr><td>5</td><td>1</td><td>4</td><td>Benjamin Button</td></tr>
+</tbody></table></div>
+
+<div><h2>DurationTable</h2><table><thead>
+<tr><th>id</th><th>durationTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>120</td></tr>
+<tr><td>2</td><td>130</td></tr>
+<tr><td>3</td><td>150</td></tr>
+<tr><td>4</td><td>160</td></tr>
+<tr><td>5</td><td>170</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

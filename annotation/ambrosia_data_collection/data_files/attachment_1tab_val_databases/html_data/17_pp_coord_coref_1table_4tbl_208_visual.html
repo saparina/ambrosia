@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Amenities</span></h2><table><thead>
+<tr><th>amenity_id</th><th>amenity</th><th>beach</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Beach Club</span></td><td><span style="color:#006600">White Sands Beach</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Beach Club</span></td><td>Palm Tree Beach</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Watersports Rental</span></td><td><span style="color:#006600">White Sands Beach</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Watersports Rental</span></td><td>Sunset Beach</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>guest_id</th><th>first_name</th><th>last_name</th><th>check_in</th><th>check_out</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Jane Smith</td><td>2023-06-01 18:00:00</td><td>2023-06-07 10:00:00</td></tr>
+<tr><td>2</td><td>Emily Jones</td><td>Michael Brown</td><td>2023-06-10 19:00:00</td><td>2023-06-16 11:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>review_id</th><th>guest_id</th><th>rating</th><th>comment</th></tr>
+<tr><th></th><th>(&#8594; Guests.guest_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5</td><td>Great experience! Highly recommended.</td></tr>
+<tr><td>2</td><td>2</td><td>4</td><td>Nice place but could use some improvements.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

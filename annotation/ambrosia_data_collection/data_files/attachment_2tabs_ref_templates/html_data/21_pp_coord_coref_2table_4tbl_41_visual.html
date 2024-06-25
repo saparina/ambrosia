@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Documentaries</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Genre</th><th>Duration</th><th><span style="color:#1430b2">Budget</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Silent World</td><td>Adventure/Documentary</td><td>21600.0</td><td>300000</td></tr>
+<tr><td>2</td><td>Grizzly Man</td><td>Wildlife/Documentary</td><td>8975.0</td><td><span style="color:#1430b2">500000</span></td></tr>
+<tr><td>3</td><td>Into The Inferno</td><td>Nature/Documentary</td><td>15500.0</td><td>750000</td></tr>
+<tr><td>4</td><td>Blackfish</td><td>Animal Rights/Documentary</td><td>12800.0</td><td>200000</td></tr>
+<tr><td>5</td><td>Chasing Ice</td><td>Environmental/Documentary</td><td>17500.0</td><td>400000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">ShortFilms</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Genre</th><th>Duration</th><th>Budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A Day at the Park</td><td>Comedy/Short Film</td><td>3600.0</td><td><span style="color:#1430b2">500000</span></td></tr>
+<tr><td>2</td><td>My Best Friend</td><td>Drama/Short Film</td><td>4200.0</td><td><span style="color:#1430b2">500000</span></td></tr>
+<tr><td>3</td><td>The Great Escape</td><td>Action/Short Film</td><td>4800.0</td><td>400000</td></tr>
+<tr><td>4</td><td>Lost and Found</td><td>Family/Short Film</td><td>3300.0</td><td>200000</td></tr>
+<tr><td>5</td><td>One Small Step</td><td>Science Fiction/Short Film</td><td>4500.0</td><td>600000</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>1970-01-01</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>1980-01-01</td><td>UK</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>1965-02-15</td><td>Australia</td></tr>
+<tr><td>4</td><td>Emily Brown</td><td>1985-03-20</td><td>Canada</td></tr>
+<tr><td>5</td><td>David Williams</td><td>1972-04-25</td><td>New Zealand</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmsDirectedBy</h2><table><thead>
+<tr><th>FilmID</th><th>DirectorID</th></tr>
+<tr><th>(&#8594; Documentaries.id)</th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>ActorsInFilms</h2><table><thead>
+<tr><th>ActorID</th><th>FilmID</th><th>Role</th></tr>
+<tr><th>(&#8594; Directors.id)</th><th>(&#8594; FilmsDirectedBy.FilmID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Himself</td></tr>
+<tr><td>2</td><td>2</td><td>Her</td></tr>
+<tr><td>3</td><td>3</td><td>Leader of the Wolf Pack</td></tr>
+<tr><td>4</td><td>4</td><td>Daughter</td></tr>
+<tr><td>5</td><td>5</td><td>Scientist</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

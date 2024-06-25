@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Streamings</span></h2><table><thead>
+<tr><th>streaming_id</th><th>title</th><th>duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Movie1</td><td>300.0</td></tr>
+<tr><td>2</td><td>TV Show1</td><td>200.0</td></tr>
+<tr><td>3</td><td>Documentary1</td><td>400.0</td></tr>
+<tr><td>4</td><td>Short Film1</td><td>60.0</td></tr>
+<tr><td>5</td><td>Trailer1</td><td>90.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Captions_and_subtitles</span></h2><table><thead>
+<tr><th>caption_id</th><th><span style="color:#990000">type</span></th><th><span style="color:#990000">language</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Auto_generated_Subtitles</td><td>English</td></tr>
+<tr><td>2</td><td>Manual_subtitles</td><td>Spanish</td></tr>
+<tr><td>3</td><td>Auto_generated_Subtitles</td><td>French</td></tr>
+<tr><td>4</td><td>Manual_subtitles</td><td>German</td></tr>
+<tr><td>5</td><td>No_subtitles</td><td>Italian</td></tr>
+</tbody></table></div>
+
+<div><h2>Streamings_captions_and_subtitles</h2><table><thead>
+<tr><th>streamings_id</th><th>captions_and_subtitles_id</th></tr>
+<tr><th>(&#8594; Streamings.streaming_id)</th><th>(&#8594; Captions_and_subtitles.caption_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Users</h2><table><thead>
+<tr><th>user_id</th><th>username</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>User1</td><td>user1@example.com</td></tr>
+<tr><td>2</td><td>User2</td><td>user2@example.com</td></tr>
+<tr><td>3</td><td>User3</td><td>user3@example.com</td></tr>
+<tr><td>4</td><td>User4</td><td>user4@example.com</td></tr>
+<tr><td>5</td><td>User5</td><td>user5@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Payments</h2><table><thead>
+<tr><th>payment_id</th><th>amount</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>9.99</td><td>2024-01-30 18:45:30</td></tr>
+<tr><td>2</td><td>19.99</td><td>2024-01-30 18:45:30</td></tr>
+<tr><td>3</td><td>29.99</td><td>2024-01-30 18:45:30</td></tr>
+<tr><td>4</td><td>39.99</td><td>2024-01-30 18:45:30</td></tr>
+<tr><td>5</td><td>49.99</td><td>2024-01-30 18:45:30</td></tr>
+</tbody></table></div>
+
+<div><h2>User_Payments</h2><table><thead>
+<tr><th>user_id</th><th>payment_id</th></tr>
+<tr><th>(&#8594; Users.user_id)</th><th>(&#8594; Payments.payment_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

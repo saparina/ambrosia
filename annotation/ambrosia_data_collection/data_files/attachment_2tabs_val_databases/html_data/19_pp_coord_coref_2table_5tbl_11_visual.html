@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Kindergartens</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>phoneNumber</th><th>website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sunshine Kindergarten</td><td><span style="color:#006600">123 Main Street</span></td><td>555-123-4567</td><td>http://www.sunshinelinks.com</td></tr>
+<tr><td>2</td><td>Little Learners</td><td>456 Oak Avenue</td><td>555-987-6543</td><td>http://www.littlelearnersacademy.org</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">High_schools</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>principalName</th><th>mascot</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Central High</td><td><span style="color:#006600">123 Main Street</span></td><td>John Doe</td><td>Bears</td></tr>
+<tr><td>2</td><td>Eastside Academy</td><td>789 Pine Boulevard</td><td>Jane Smith</td><td>Panthers</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>subject</th><th>schoolID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Schools.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael</td><td>Smith</td><td>Math</td><td>1</td></tr>
+<tr><td>2</td><td>Emily</td><td>Johnson</td><td>English</td><td>1</td></tr>
+<tr><td>3</td><td>David</td><td>Williams</td><td>History</td><td>2</td></tr>
+<tr><td>4</td><td>Laura</td><td>Martin</td><td>Biology</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>gradeLevel</th><th>schoolID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Schools.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alexander</td><td>Doe</td><td>9th</td><td>1</td></tr>
+<tr><td>2</td><td>Elizabeth</td><td>Smith</td><td>10th</td><td>1</td></tr>
+<tr><td>3</td><td>Samuel</td><td>Johnson</td><td>9th</td><td>2</td></tr>
+<tr><td>4</td><td>Olivia</td><td>Williams</td><td>10th</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>id</th><th>classTitle</th><th>teacherID</th><th>startTime</th><th>endTime</th></tr>
+<tr><th></th><th></th><th>(&#8594; Teachers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Algebra I</td><td>1</td><td>8:00 AM</td><td>9:30 AM</td></tr>
+<tr><td>2</td><td>World History</td><td>3</td><td>10:00 AM</td><td>11:30 AM</td></tr>
+<tr><td>3</td><td>Physics</td><td>4</td><td>12:00 PM</td><td>1:30 PM</td></tr>
+</tbody></table></div>
+
+<div><h2>School_events</h2><table><thead>
+<tr><th>id</th><th>eventDate</th><th>description</th><th>location</th><th>type</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-05-20</td><td>Spring Formal Dance</td><td>Gymnasium</td><td>Dance</td></tr>
+<tr><td>2</td><td>2023-06-10</td><td>Graduation Ceremony</td><td>Auditorium</td><td>Ceremony</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Accomodations</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#990000"><span style="color:#990000">type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mountain <span style="color:#990000">Chalet</span></td><td><span style="color:#990000">Chalet</span></td></tr>
+<tr><td>2</td><td>Lakeside <span style="color:#990000">Cabin</span></td><td><span style="color:#990000">Cabin</span></td></tr>
+<tr><td>3</td><td>River View Lodge</td><td><span style="color:#990000">Chalet</span></td></tr>
+<tr><td>4</td><td>Forest Hut</td><td><span style="color:#990000">Cabin</span></td></tr>
+<tr><td>5</td><td>Beach Bungalow</td><td><span style="color:#990000">Chalet</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Prices</span></h2><table><thead>
+<tr><th>accommodationId</th><th><span style="color:#006600">price_per_night</span></th></tr>
+<tr><th>(&#8594; Accomodations.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>200.0</td></tr>
+<tr><td>1</td><td><span style="color:#006600">300.0</span></td></tr>
+<tr><td>2</td><td>200.0</td></tr>
+<tr><td>2</td><td><span style="color:#006600">300.0</span></td></tr>
+<tr><td>3</td><td>200.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emily.white@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>reservationId</th><th>guestId</th><th>accommodationId</th><th>checkInDate</th><th>checkOutDate</th><th>totalCost</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th>(&#8594; Accomodations.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-10-01</td><td>2022-10-07</td><td>1200.0</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2022-10-14</td><td>2022-10-21</td><td>1800.0</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>2022-10-01</td><td>2022-10-07</td><td>1600.0</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2022-10-14</td><td>2022-10-21</td><td>2000.0</td></tr>
+<tr><td>5</td><td>5</td><td>3</td><td>2022-10-01</td><td>2022-10-07</td><td>900.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

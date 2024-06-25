@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Film</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Director</th><th>ReleaseDate</th><th>Genre</th><th>Rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>Frank Darabont</td><td>1994-09-23</td><td>Drama</td><td>8.7</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>Quentin Tarantino</td><td>1994-10-14</td><td>Crime</td><td>8.9</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Birthdate</th><th>Nationality</th><th>RoleInFilm</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Morgan Freeman</td><td>1937-06-01</td><td>American</td><td>Red</td></tr>
+<tr><td>2</td><td>Brad Pitt</td><td>1963-12-18</td><td>American</td><td>James</td></tr>
+</tbody></table></div>
+
+<div><h2>Cinematography</h2><table><thead>
+<tr><th>ID</th><th>Technique</th><th>Equipment</th><th>ShotList</th><th>FilmID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Film.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Handheld</td><td>ARRI Alexa Mini</td><td>Scene 1: Establishing shot of prison...</td><td>1</td></tr>
+<tr><td>2</td><td>Dolly Zoom</td><td>Panavision Millennium XL2</td><td>Scene 3: Close up on Andy and Red talking...</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>ProductionDesign</h2><table><thead>
+<tr><th>ID</th><th>Style</th><th>Budget</th><th>Location</th><th>FilmID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Film.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Minimalist</td><td>10 million</td><td>Prison in Ohio</td><td>1</td></tr>
+<tr><td>2</td><td>Neo-noir</td><td>5 million</td><td>Los Angeles streets</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>SoundDesign</h2><table><thead>
+<tr><th>ID</th><th>Type</th><th>Effects</th><th>MixingLocation</th><th>FilmID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Film.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dialogue and Music</td><td>Gunshots, screams</td><td>Dolby Theatre</td><td>1</td></tr>
+<tr><td>2</td><td>Sound effects</td><td>Car screeching, footsteps</td><td>Dolby Theatre</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ID</th><th>CriticName</th><th><span style="color:#990000">Opinion</span></th><th><span style="color:#990000">AudienceReviews</span></th><th>FilmId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Film.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Roger Ebert</td><td>A masterpiece.</td><td>Five stars!</td><td>1</td></tr>
+<tr><td>2</td><td>Pauline Kael</td><td>Terrific acting.</td><td>Audience loved it!</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

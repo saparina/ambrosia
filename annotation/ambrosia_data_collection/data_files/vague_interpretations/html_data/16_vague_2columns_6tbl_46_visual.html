@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountID</th><th>CustomerID</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>500.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>LoanID</th><th>CustomerID</th><th>Amount</th><th>InterestRate</th><th>StartDate</th><th>EndDate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>50000</td><td>3.5</td><td>2023-01-01</td><td>2026-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>75000</td><td>3</td><td>2023-02-01</td><td>2028-01-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>AccountID</th><th>Date</th><th>Type</th><th>Amount</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2024-02-19 15:10:48</td><td>Deposit</td><td>100.0</td></tr>
+<tr><td>2</td><td>2</td><td>2024-02-19 15:10:48</td><td>Withdrawal</td><td>-50.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Banks</h2><table><thead>
+<tr><th>BankID</th><th><span style="color:#990000">Number_of_Branches</span></th><th><span style="color:#990000">Countries_served</span></th><th>Bank</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>100</td><td>USA and Canada</td><td>ABC Bank</td></tr>
+<tr><td>2</td><td>200</td><td>Europe</td><td>XYZ Bank</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>Position</th><th>Salary</th><th>BankID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Banks.BankID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Wright</td><td>Manager</td><td>50000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Hanson</td><td>Teller</td><td>35000.0</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

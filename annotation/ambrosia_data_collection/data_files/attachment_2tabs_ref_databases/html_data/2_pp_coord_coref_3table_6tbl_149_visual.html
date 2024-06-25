@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Newspapers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>editor_in_chief</th><th>headquarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily Chronicle</td><td>Jane Doe</td><td>New York</td></tr>
+<tr><td>2</td><td>Metro News</td><td>John Smith</td><td>London</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Magazines</span></h2><table><thead>
+<tr><th>id</th><th>magazine_name</th><th>publisher_name</th><th>publication_frequency</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Vanity Fair</td><td>Condé Nast</td><td>Monthly</td></tr>
+<tr><td>2</td><td>Time Magazine</td><td>Time Inc.</td><td>Weekly</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Circulation_numbers</span></h2><table><thead>
+<tr><th>newspaper_id</th><th><span style="color:#006600">magazine_id</span></th><th>circulation</th></tr>
+<tr><th>(&#8594; Newspapers.id)</th><th>(&#8594; Magazines.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>20000</td></tr>
+<tr><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span></td><td><span style="color:#006600">2</span>0000</td></tr>
+<tr><td>1</td><td>None</td><td>30000</td></tr>
+<tr><td>None</td><td><span style="color:#006600">2</span></td><td>40000</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>article_id</th><th>title</th><th>content</th><th>author</th><th>publication_date</th><th>newspaper_id</th><th>magazine_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Newspapers.id)</th><th>(&#8594; Magazines.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1 Title</td><td>Content of article 1</td><td>Author A</td><td>2022-01-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Article 2 Title</td><td>Content of article 2</td><td>Author B</td><td>2022-01-02</td><td>2</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>author_id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Author C</td><td>Last Name</td><td>c@example.com</td></tr>
+<tr><td>2</td><td>Author D</td><td>Last Name</td><td>d@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Authors</h2><table><thead>
+<tr><th>article_id</th><th>author_id</th></tr>
+<tr><th>(&#8594; Articles.article_id)</th><th>(&#8594; Authors.author_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

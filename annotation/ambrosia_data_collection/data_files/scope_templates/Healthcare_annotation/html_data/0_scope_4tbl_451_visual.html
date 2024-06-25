@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Health_Promotion_Program</span></h2><table><thead>
+<tr><th>program_id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Weight Management Program</td><td>This program helps people manage their weight.</td></tr>
+<tr><td>2</td><td>Diabetes Prevention Program</td><td>This program educates individuals about diabetes prevention.</td></tr>
+<tr><td>3</td><td>Smoking Cessation Program</td><td>This program provides support for quitting smoking.</td></tr>
+<tr><td>4</td><td>Mental Wellness Program</td><td>This program offers resources for mental health.</td></tr>
+<tr><td>5</td><td>Heart Health Program</td><td>This program focuses on heart disease prevention and management.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Activities</span></h2><table><thead>
+<tr><th>activity_id</th><th><span style="color:#990000">activity_name</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Exercise Classes</td><td>Group exercise sessions that promote physical fitness.</td></tr>
+<tr><td>2</td><td>Nutrition Workshops</td><td>Educational workshops on healthy eating habits.</td></tr>
+<tr><td>3</td><td>Stress Management Sessions</td><td>Sessions designed to help participants cope with stress.</td></tr>
+<tr><td>4</td><td>Support Group Meetings</td><td>Meetings where participants can share experiences and offer support.</td></tr>
+<tr><td>5</td><td>Yoga Sessions</td><td>Relaxing yoga classes to improve flexibility and reduce stress.</td></tr>
+</tbody></table></div>
+
+<div><h2>Health_Promotion_Program_Activities</h2><table><thead>
+<tr><th>id</th><th>program_id</th><th>activity_id</th></tr>
+<tr><th></th><th>(&#8594; Health_Promotion_Program.program_id)</th><th>(&#8594; Activities.activity_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>3</td><td>1</td></tr>
+<tr><td>6</td><td>4</td><td>1</td></tr>
+<tr><td>7</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Participants</h2><table><thead>
+<tr><th>participant_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+123-456-7890</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+987-654-3210</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>+555-123-4567</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>bob.white@example.com</td><td>+333-999-8887</td></tr>
+<tr><td>5</td><td>Emma</td><td>Black</td><td>emma.black@example.com</td><td>+777-666-5555</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

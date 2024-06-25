@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Screenplays</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Description</th><th>CreatorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Creators.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Inception</td><td>A heist film about entering dreams...</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>A crime thriller featuring Batman...</td><td>2</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>An epic space adventure...</td><td>3</td></tr>
+<tr><td>4</td><td>Dunkirk</td><td>A war film set during World War II...</td><td>4</td></tr>
+<tr><td>5</td><td>Memento</td><td>A psychological thriller told backwards...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Storyboards</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Description</th><th>CreatorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Creators.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Inception Storyboard</td><td>Visual storyboard of Inception...</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>The Dark Knight Storyboard</td><td>Visual storyboard of The Dark Knight...</td><td>2</td></tr>
+<tr><td>3</td><td>Interstellar Storyboard</td><td>Visual storyboard of Interstellar...</td><td>3</td></tr>
+<tr><td>4</td><td>Dunkirk Storyboard</td><td>Visual storyboard of Dunkirk...</td><td>4</td></tr>
+<tr><td>5</td><td>Memento Storyboard</td><td>Visual storyboard of Memento...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td></tr>
+<tr><td>2</td><td>Christopher McQuarrie</td></tr>
+<tr><td>3</td><td>Ryan Coogler</td></tr>
+<tr><td>4</td><td>Zack Snyder</td></tr>
+<tr><td>5</td><td>Denis Villeneuve</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>DirectorID</th><th>ScreenplayID</th><th>StoryboardID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Directors.id)</th><th>(&#8594; Screenplays.id)</th><th>(&#8594; Storyboards.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>The Dark Knight</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Interstellar</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Dunkirk</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Memento</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td></tr>
+<tr><td>2</td><td>Joseph Gordon-Levitt</td></tr>
+<tr><td>3</td><td>Tom Hardy</td></tr>
+<tr><td>4</td><td>Ellen Page</td></tr>
+<tr><td>5</td><td>Marion Cotillard</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>id</th><th>ActorID</th><th>FilmID</th><th>Role</th></tr>
+<tr><th></th><th>(&#8594; Actors.id)</th><th>(&#8594; Films.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Cobb</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>Arthur</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>Bane</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>Cooper</td></tr>
+<tr><td>5</td><td>5</td><td>4</td><td>Taylor</td></tr>
+<tr><td>6</td><td>6</td><td>5</td><td>Lenny</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

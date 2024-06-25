@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Customer_Service_Representatives</span></h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>skills</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td><span style="color:#006600">Proactivity</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>Communication Skills</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Call_Center_Agents</span></h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>skills</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike</td><td>Brown</td><td><span style="color:#006600">Proactivity</span></td></tr>
+<tr><td>2</td><td>Emily</td><td>White</td><td>Multitasking</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>XYZ Inc.</td><td>New York</td></tr>
+<tr><td>2</td><td>ABC Corporation</td><td>Los Angeles</td></tr>
+</tbody></table></div>
+
+<div><h2>Postings</h2><table><thead>
+<tr><th>id</th><th>title</th><th>companyID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Companies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CSR</td><td>1</td></tr>
+<tr><td>2</td><td>Call Center Agent</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>id</th><th>applicantId</th><th>postingId</th><th>applicationDate</th></tr>
+<tr><th></th><th>(&#8594; Companies.id)</th><th>(&#8594; Postings.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2024-03-13 17:03:39</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2024-03-13 17:03:39</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Emily Thompson</td></tr>
+<tr><td>2</td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>John Smith</td></tr>
+<tr><td>4</td><td>Emma Watson</td></tr>
+<tr><td>5</td><td>George Orwell</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Written_Works</span></h2><table><thead>
+<tr><th>id</th><th>AuthorID</th><th>Type</th><th>Title</th><th>DatePublished</th></tr>
+<tr><th></th><th>(&#8594; Authors.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td><span style="color:#990000">Essay</span></td><td>My Favorite <span style="color:#990000">Essay</span></td><td>2023-0<span style="color:#006600">1</span>-0<span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>2</td><td><span style="color:#990000">Essay</span></td><td>Some Other <span style="color:#990000">Essay</span></td><td>2023-01-02</td></tr>
+<tr><td>3</td><td><span style="color:#006600">1</span></td><td><span style="color:#990000">Letter</span></td><td>Important <span style="color:#990000">Letter</span></td><td>2023-0<span style="color:#006600">1</span>-03</td></tr>
+<tr><td>4</td><td>2</td><td><span style="color:#990000">Letter</span></td><td>Another Important <span style="color:#990000">Letter</span></td><td>2023-01-04</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Ratings</h2><table><thead>
+<tr><th>id</th><th>MovieID</th><th>Rating</th><th>ReviewerID</th><th>DateRated</th></tr>
+<tr><th></th><th>(&#8594; Movies.id)</th><th></th><th>(&#8594; Reviewers.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Awesome</td><td>3</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>Good</td><td>4</td><td>2023-01-02</td></tr>
+</tbody></table></div>
+
+<div><h2>Books_Sales</h2><table><thead>
+<tr><th>id</th><th>BookID</th><th>Quantity</th><th>SaleDate</th><th>Revenue</th></tr>
+<tr><th></th><th>(&#8594; Books.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10</td><td>2023-01-01</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>5</td><td>2023-01-02</td><td>500.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Mike</td><td>Brown</td><td>mike.brown@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>Green</td><td>emily.green@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david.black@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>room_id</th><th>guest_id</th><th>beach_id</th></tr>
+<tr><th></th><th>(&#8594; Guests.id)</th><th>(&#8594; Beaches.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Amenities</span></h2><table><thead>
+<tr><th>amenity_id</th><th><span style="color:#990000"><span style="color:#990000">amenity_type</span></span></th><th>room_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Rooms.room_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Beach Club</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Beach Club</span></td><td>2</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Watersports Rental</span></td><td>1</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Watersports Rental</span></td><td>3</td></tr>
+<tr><td>5</td><td>Swimming Pool</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Beaches</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">White Sands Beach</span></td><td>This beach has white sand and clear blue waters.</td></tr>
+<tr><td>2</td><td>Sunset Beach</td><td>This beach offers beautiful sunsets.</td></tr>
+<tr><td>3</td><td>Palm Tree Beach</td><td>Lined with palm trees, this beach provides shade and relaxation.</td></tr>
+<tr><td>4</td><td>Coral Reef Beach</td><td>Known for its coral reefs, this beach is perfect for snorkeling.</td></tr>
+<tr><td>5</td><td>Surfing Beach</td><td>With big waves, this beach is ideal for surfing enthusiasts.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

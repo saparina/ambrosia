@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Hospitals</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Western Medical Center</span></td></tr>
+<tr><td>2</td><td>Eastern General Hospital</td></tr>
+<tr><td>3</td><td>Northern Healthcare</td></tr>
+<tr><td>4</td><td>Central Care Clinic</td></tr>
+<tr><td>5</td><td>City Urgent Care</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>location</th><th>salary</th><th>hospital_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Hospitals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CT Scan Technician</td><td>Perform CT scans on patients.</td><td>New York City</td><td>90000</td><td>1</td></tr>
+<tr><td>2</td><td>MRI Tech</td><td>Operate MRI machines.</td><td>New York City</td><td>85000</td><td>1</td></tr>
+<tr><td>3</td><td>ER Physician</td><td>Treat emergency cases.</td><td>New York City</td><td>200000</td><td>1</td></tr>
+<tr><td>4</td><td>Anesthesia Nurse</td><td>Monitor patient during surgeries.</td><td>New York City</td><td>100000</td><td>1</td></tr>
+<tr><td>5</td><td>Pharmacist</td><td>Dispense medications.</td><td>New York City</td><td>95000</td><td>1</td></tr>
+<tr><td>6</td><td>Family Medicine Doctor</td><td>Diagnose and treat illnesses.</td><td>Chicago</td><td>160000</td><td>2</td></tr>
+<tr><td>7</td><td>Dietitian</td><td>Create diet plans for patients.</td><td>Chicago</td><td>70000</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Doctors</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#186e16">specialist_doctor</span></th><th>hospital_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Hospitals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Jane Smith</td><td><span style="color:#186e16">Radiologist</span></td><td>1</td></tr>
+<tr><td>2</td><td>Dr. John Brown</td><td><span style="color:#186e16">Radiologist</span></td><td>2</td></tr>
+<tr><td>3</td><td>Ms. Mary Johnson</td><td>Ultrasound Technician</td><td>1</td></tr>
+<tr><td>4</td><td>Mr. Mike Davis</td><td>Ultrasound Technician</td><td>2</td></tr>
+<tr><td>5</td><td>Dr. Sarah Wilson</td><td>Cardiologist</td><td>3</td></tr>
+<tr><td>6</td><td>Dr. James White</td><td>Gastroenterologist</td><td>4</td></tr>
+<tr><td>7</td><td>Dr. Jennifer Green</td><td>Neurologist</td><td>1</td></tr>
+<tr><td>8</td><td>Dr. David Black</td><td>Orthopedic Surgeon</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

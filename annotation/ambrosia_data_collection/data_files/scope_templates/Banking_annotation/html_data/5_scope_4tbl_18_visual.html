@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Debit_Cards</span></h2><table><thead>
+<tr><th>CardID</th><th>CustomerName</th><th>AccountBalance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2000.0</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>3000.0</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>1500.0</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>4000.0</td></tr>
+<tr><td>5</td><td>David Brown</td><td>5000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Fees</span></h2><table><thead>
+<tr><th>FeeType</th><th><span style="color:#990000">FeeValue</span></th></tr>
+</thead><tbody>
+<tr><td>Overdraft_Fee</td><td>35.0</td></tr>
+<tr><td>Monthly_Maintenance_Fee</td><td>10.0</td></tr>
+<tr><td>Transaction_Fee</td><td>0.5</td></tr>
+<tr><td>Foreign_Exchange_Fee</td><td>3.0</td></tr>
+<tr><td>ATM_Withdrawal_Fee</td><td>2.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Debit_Card_Fees</h2><table><thead>
+<tr><th>CardID</th><th>FeeType</th><th>AmountPaid</th></tr>
+<tr><th>(&#8594; Debit_Cards.CardID)</th><th>(&#8594; Fees.FeeType)</th><th></th></tr>
+</thead><tbody>
+<tr><td>2</td><td>Overdraft_Fee</td><td>0.0</td></tr>
+<tr><td>2</td><td>Monthly_Maintenance_Fee</td><td>0.0</td></tr>
+<tr><td>3</td><td>Overdraft_Fee</td><td>0.0</td></tr>
+<tr><td>3</td><td>Monthly_Maintenance_Fee</td><td>0.0</td></tr>
+<tr><td>4</td><td>Overdraft_Fee</td><td>0.0</td></tr>
+<tr><td>4</td><td>Monthly_Maintenance_Fee</td><td>0.0</td></tr>
+<tr><td>5</td><td>Overdraft_Fee</td><td>0.0</td></tr>
+<tr><td>5</td><td>Monthly_Maintenance_Fee</td><td>0.0</td></tr>
+<tr><td>1</td><td>Foreign_Exchange_Fee</td><td>None</td></tr>
+<tr><td>2</td><td>Foreign_Exchange_Fee</td><td>0.0</td></tr>
+<tr><td>3</td><td>Foreign_Exchange_Fee</td><td>0.0</td></tr>
+<tr><td>4</td><td>Foreign_Exchange_Fee</td><td>0.0</td></tr>
+<tr><td>5</td><td>Foreign_Exchange_Fee</td><td>0.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

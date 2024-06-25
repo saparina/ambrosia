@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Fitness_Level</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Level</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Elite</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Intermediate</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Football_Players</span></h2><table><thead>
+<tr><th>ID</th><th>PlayerName</th><th>Team</th><th>Position</th><th>Age</th><th>Fitness_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Fitness_Level.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Manchester United</td><td>Striker</td><td>30</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Liverpool</td><td>Defender</td><td>28</td><td>2</td></tr>
+<tr><td>3</td><td>Tom Brown</td><td>Chelsea</td><td>Goalkeeper</td><td>32</td><td>1</td></tr>
+<tr><td>4</td><td>Emma Johnson</td><td>Arsenal</td><td>Midfielder</td><td>26</td><td>2</td></tr>
+<tr><td>5</td><td>William Davis</td><td>Tottenham Hotspur</td><td>Winger</td><td>29</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Rugby_Players</span></h2><table><thead>
+<tr><th>ID</th><th>PlayerName</th><th>Team</th><th>Position</th><th>Age</th><th>Fitness_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Fitness_Level.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Jones</td><td>London Irish</td><td>Prop</td><td>31</td><td>1</td></tr>
+<tr><td>2</td><td>Lucy Thompson</td><td>Harlequins</td><td>Scrumhalf</td><td>27</td><td>2</td></tr>
+<tr><td>3</td><td>David Williams</td><td>Saracens</td><td>Center</td><td>30</td><td>1</td></tr>
+<tr><td>4</td><td>Olivia Taylor</td><td>Gloucester</td><td>Flanker</td><td>26</td><td>2</td></tr>
+<tr><td>5</td><td>Ethan Young</td><td>Wasps</td><td>Lock</td><td>32</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>Frank Darabont</td><td>1994</td><td>Drama</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>Quentin Tarantino</td><td>1994</td><td>Crime</td></tr>
+<tr><td>3</td><td>Schindler's List</td><td>Steven Spielberg</td><td>1993</td><td>Historical Drama</td></tr>
+<tr><td>4</td><td>Inception</td><td>Christopher Nolan</td><td>2010</td><td>Science Fiction</td></tr>
+<tr><td>5</td><td>The Godfather</td><td>Francis Ford Coppola</td><td>1972</td><td>Crime Drama</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ID</th><th>ActorName</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>American</td></tr>
+<tr><td>2</td><td>Tom Hanks</td><td>1956-07-09</td><td>American</td></tr>
+<tr><td>3</td><td>Meryl Streep</td><td>1949-06-22</td><td>American</td></tr>
+<tr><td>4</td><td>Kate Winslet</td><td>1975-10-05</td><td>English</td></tr>
+<tr><td>5</td><td>Denzel Washington</td><td>1954-12-28</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Actors</h2><table><thead>
+<tr><th>Movie_ID</th><th>Actor_ID</th><th>Role</th></tr>
+<tr><th>(&#8594; Movies.ID)</th><th>(&#8594; Actors.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Andy Dufresne</td></tr>
+<tr><td>1</td><td>2</td><td>Red</td></tr>
+<tr><td>2</td><td>3</td><td>Vincent Vega</td></tr>
+<tr><td>2</td><td>4</td><td>Jules Winfield</td></tr>
+<tr><td>3</td><td>1</td><td>Abe Lincol</td></tr>
+<tr><td>3</td><td>5</td><td>Carl Hanratty</td></tr>
+<tr><td>4</td><td>2</td><td>Dom Cobb</td></tr>
+<tr><td>4</td><td>3</td><td>Arthur</td></tr>
+<tr><td>5</td><td>4</td><td>Don Corleone</td></tr>
+<tr><td>5</td><td>5</td><td>Paulie</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

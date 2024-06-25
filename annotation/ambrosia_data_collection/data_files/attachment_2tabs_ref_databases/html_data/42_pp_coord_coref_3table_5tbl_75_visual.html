@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Musician</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th><span style="color:#006600">Years_in_Industry</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>20</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>30</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td><span style="color:#006600">10</span></td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>15</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Jazz_Musician</span></h2><table><thead>
+<tr><th>ID</th><th>MusicianID</th><th>BandName</th></tr>
+<tr><th></th><th>(&#8594; Musician.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>The Blue Notes</td></tr>
+<tr><td>2</td><td>3</td><td>The Green Trio</td></tr>
+<tr><td>3</td><td>2</td><td>The Red Quartet</td></tr>
+<tr><td>4</td><td>5</td><td>The Yellow Ensemble</td></tr>
+<tr><td>5</td><td>4</td><td>The Orange Septet</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Rock_Guitarist</span></h2><table><thead>
+<tr><th>ID</th><th>MusicianID</th><th>Instrument</th><th>AlbumCount</th></tr>
+<tr><th></th><th>(&#8594; Musician.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Electric Guitar</td><td>8</td></tr>
+<tr><td>2</td><td>2</td><td>Acoustic Guitar</td><td>7</td></tr>
+<tr><td>3</td><td>3</td><td>Electric Guitar</td><td>9</td></tr>
+<tr><td>4</td><td>4</td><td>Bass Guitar</td><td>6</td></tr>
+<tr><td>5</td><td>5</td><td>Drums</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Concert</h2><table><thead>
+<tr><th>ID</th><th>Date</th><th>Venue</th><th>MusicalEventType</th><th>HeadlinerID</th><th>OpeningActID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Jazz_Musician.ID)</th><th>(&#8594; Rock_Guitarist.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-15</td><td>Madison Square Garden</td><td>Jazz Concert</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2023-02-20</td><td>Carnegie Hall</td><td>Classic Rock Showcase</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2023-03-10</td><td>Royal Albert Hall</td><td>Blues Night</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2023-04-05</td><td>Barclays Center</td><td>Progressive Metal Fest</td><td>None</td><td>4</td></tr>
+<tr><td>5</td><td>2023-05-15</td><td>Wembley Stadium</td><td>Pop Extravaganza</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Historical_Context</span></h2><table><thead>
+<tr><th>id</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1980</td></tr>
+<tr><td>2</td><td>2003</td></tr>
+<tr><td>3</td><td>1965</td></tr>
+<tr><td>4</td><td>1978</td></tr>
+<tr><td>5</td><td>1992</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>employee_name</th><th>position</th><th>healthcare_facility_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Healthcare_Facilities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Emp 1</td><td>Doctor</td><td>1</td></tr>
+<tr><td>2</td><td>Emp 2</td><td>Nurse</td><td>1</td></tr>
+<tr><td>3</td><td>Emp 3</td><td>Receptionist</td><td>2</td></tr>
+<tr><td>4</td><td>Emp 4</td><td>Pharmacist</td><td>2</td></tr>
+<tr><td>5</td><td>Emp 5</td><td>Housekeeper</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Patients</h2><table><thead>
+<tr><th>id</th><th>patient_name</th><th>age</th><th>healthcare_facility_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Healthcare_Facilities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Patient 1</td><td>45</td><td>1</td></tr>
+<tr><td>2</td><td>Patient 2</td><td>60</td><td>1</td></tr>
+<tr><td>3</td><td>Patient 3</td><td>30</td><td>2</td></tr>
+<tr><td>4</td><td>Patient 4</td><td>55</td><td>2</td></tr>
+<tr><td>5</td><td>Patient 5</td><td>25</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Treatments</h2><table><thead>
+<tr><th>id</th><th>treatment_name</th><th>start_date</th><th>end_date</th><th>patient_id</th><th>healthcare_facility_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Patients.id)</th><th>(&#8594; Healthcare_Facilities.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Surgery</td><td>2022-01-01</td><td>2022-01-05</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Physiotherapy</td><td>2022-01-01</td><td>2022-01-31</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Medication</td><td>2022-02-01</td><td>2022-02-28</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>Dialysis</td><td>2022-02-01</td><td>2022-02-28</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>Checkup</td><td>2022-03-01</td><td>2022-03-01</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Healthcare_Facilities</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>founding_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Historical_Context.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Facility 1</td><td>Address 1</td><td>1</td></tr>
+<tr><td>2</td><td>Facility 2</td><td>Address 2</td><td>2</td></tr>
+<tr><td>3</td><td>Facility 3</td><td>Address 3</td><td>3</td></tr>
+<tr><td>4</td><td>Facility 4</td><td>Address 4</td><td>4</td></tr>
+<tr><td>5</td><td>Facility 5</td><td>Address 5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

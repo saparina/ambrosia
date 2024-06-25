@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Students</span></h2><table><thead>
+<tr><th>student_id</th><th>first_name</th><th><span style="color:#1430b2">last_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Johnson</td></tr>
+<tr><td>2</td><td>Bob</td><td>Smith</td></tr>
+<tr><td>3</td><td>Charlie</td><td>Doe</td></tr>
+<tr><td>4</td><td>David</td><td>Black</td></tr>
+<tr><td>5</td><td>Eve</td><td><span style="color:#1430b2">White</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>class_id</th><th>course_name</th><th>teacher_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math</td><td>Mr. Brown</td></tr>
+<tr><td>2</td><td>English</td><td>Mrs. Green</td></tr>
+<tr><td>3</td><td>History</td><td>Ms. Blue</td></tr>
+<tr><td>4</td><td>Science</td><td>Dr. Red</td></tr>
+<tr><td>5</td><td>Art</td><td>Prof. Yellow</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollment_id</th><th>student_id</th><th>class_id</th></tr>
+<tr><th></th><th>(&#8594; Students.student_id)</th><th>(&#8594; Classes.class_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Attendance</span></h2><table><thead>
+<tr><th>attendance_id</th><th>student_id</th><th>date_attended</th></tr>
+<tr><th></th><th>(&#8594; Students.student_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-01 10:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>2023-01-02 10:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>2023-01-02 10:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>2023-01-03 10:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Grades</span></h2><table><thead>
+<tr><th>grade_id</th><th>student_id</th><th>class_id</th><th>grade</th></tr>
+<tr><th></th><th>(&#8594; Students.student_id)</th><th>(&#8594; Classes.class_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>8.5</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>7.5</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>6.5</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>9.5</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>7</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

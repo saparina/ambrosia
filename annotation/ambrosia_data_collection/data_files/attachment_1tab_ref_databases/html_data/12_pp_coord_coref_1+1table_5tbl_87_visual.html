@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>airports</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Auckland</td></tr>
+<tr><td>2</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Tokyo</td></tr>
+<tr><td>4</td><td>Dubai</td></tr>
+<tr><td>5</td><td>New York</td></tr>
+</tbody></table></div>
+
+<div><h2>flights</h2><table><thead>
+<tr><th>id</th><th>from_airport_id</th><th>to_airport_id</th></tr>
+<tr><th></th><th>(&#8594; airports.id)</th><th>(&#8594; airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td><td>4</td></tr>
+<tr><td>3</td><td>5</td><td>6</td></tr>
+<tr><td>4</td><td>7</td><td>8</td></tr>
+<tr><td>5</td><td>9</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">planes</span></h2><table><thead>
+<tr><th>id</th><th>model</th><th>manufacturer</th><th><span style="color:#006600">number_of_seats</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 787</td><td>Boeing</td><td><span style="color:#006600">180</span></td></tr>
+<tr><td>2</td><td>Boeing 787</td><td>Boeing</td><td>200</td></tr>
+<tr><td>3</td><td>Airbus A380</td><td>Airbus</td><td><span style="color:#006600">180</span></td></tr>
+<tr><td>4</td><td>Airbus A380</td><td>Airbus</td><td>200</td></tr>
+<tr><td>5</td><td>Bombardier CRJ900</td><td>Embraer</td><td>88</td></tr>
+<tr><td>6</td><td>Bombardier Q400</td><td>De Havilland Canada</td><td>78</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">manufacturers</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">name</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Boeing</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Airbus</span></td></tr>
+<tr><td>3</td><td>Embraer</td></tr>
+<tr><td>4</td><td>De Havilland Canada</td></tr>
+</tbody></table></div>
+
+<div><h2>plane_details</h2><table><thead>
+<tr><th>plane_id</th><th>manufacturer_id</th></tr>
+<tr><th>(&#8594; planes.id)</th><th>(&#8594; manufacturers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

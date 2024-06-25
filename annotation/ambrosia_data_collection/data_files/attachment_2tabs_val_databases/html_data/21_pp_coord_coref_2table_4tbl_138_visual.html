@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Newspapers</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Publication_Frequency</th><th>Circulation_Size</th><th>Website_URL</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily Tribune</td><td>Daily</td><td>100000</td><td>www.dailytribune.com</td></tr>
+<tr><td>2</td><td>The Weekender</td><td><span style="color:#006600">Weekly</span></td><td>80000</td><td>www.theweekender.com</td></tr>
+<tr><td>3</td><td>The Sunday Post</td><td><span style="color:#006600">Weekly</span></td><td>90000</td><td>www.sundaypost.com</td></tr>
+<tr><td>4</td><td>The Financial Times</td><td>Daily</td><td>200000</td><td>www.ft.com</td></tr>
+<tr><td>5</td><td>The Economist</td><td><span style="color:#006600">Weekly</span></td><td>70000</td><td>www.economist.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Magazines</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Publication_Frequency</th><th>Circulation_Size</th><th>Publisher</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>National Geographic</td><td>Monthly</td><td>300000</td><td>NatGeo Publishing</td></tr>
+<tr><td>2</td><td>Time</td><td><span style="color:#006600">Weekly</span></td><td>250000</td><td>Time Inc.</td></tr>
+<tr><td>3</td><td>Forbes</td><td>Biweekly</td><td>150000</td><td>Forbes Media LLC</td></tr>
+<tr><td>4</td><td>Wired</td><td>Monthly</td><td>200000</td><td>Condé Nast</td></tr>
+<tr><td>5</td><td>Scientific American</td><td>Monthly</td><td>60000</td><td>Springer Nature</td></tr>
+</tbody></table></div>
+
+<div><h2>Journalists</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@example.com</td><td>+1-555-123-4567</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@example.com</td><td>+1-555-987-6543</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michaelbrown@example.com</td><td>+1-555-456-7890</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emilywhite@example.com</td><td>+1-555-111-2222</td></tr>
+<tr><td>5</td><td>David</td><td>Gray</td><td>davidgray@example.com</td><td>+1-555-333-4444</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>Publish_Date</th><th>Magazine_id</th><th>NEWSPAPER_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Magazines.id)</th><th>(&#8594; Newspapers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Climate Change Impact</td><td>A detailed analysis of climate change...</td><td>2022-10-01 10:00:00</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Technology Trends</td><td>Exploring recent developments in technology...</td><td>2022-10-02 10:00:00</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Economic Outlook</td><td>An overview of global economy trends...</td><td>2022-10-03 10:00:00</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Investment Strategies</td><td>Key strategies for successful investing...</td><td>2022-10-04 10:00:00</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>Healthcare Innovations</td><td>Advancements in healthcare technologies...</td><td>2022-10-05 10:00:00</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Categories</h2><table><thead>
+<tr><th>id</th><th>Category_name</th><th>Article_id</th><th>Journalist_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Articles.id)</th><th>(&#8594; Journalists.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Environmental News</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Business & Finance</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>World Affairs</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Personal Finance</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Medical Research</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

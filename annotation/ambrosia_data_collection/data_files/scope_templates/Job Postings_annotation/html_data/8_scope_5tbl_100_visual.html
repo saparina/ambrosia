@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Photographers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Emily Johnson</td><td>emilyjohnson@example.com</td></tr>
+<tr><td>3</td><td>Michael Brown</td><td>michaelbrown@example.com</td></tr>
+<tr><td>4</td><td>Lisa Wilson</td><td>lisawilson@example.com</td></tr>
+<tr><td>5</td><td>David Lee</td><td>davidlee@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Styles</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">styleName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Portrait</td></tr>
+<tr><td>2</td><td>Landscape</td></tr>
+<tr><td>3</td><td>Wedding</td></tr>
+<tr><td>4</td><td>Fashion</td></tr>
+<tr><td>5</td><td>Commercial</td></tr>
+</tbody></table></div>
+
+<div><h2>Photographers_Styles</h2><table><thead>
+<tr><th>photographerId</th><th>styleId</th></tr>
+<tr><th>(&#8594; Photographers.id)</th><th>(&#8594; Styles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>jobID</th><th>title</th><th>description</th><th>deadline</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Family Portrait Session</td><td>A beautiful family portrait session at your home.</td><td>2023-08-01</td></tr>
+<tr><td>2</td><td>Landscape Photography Shoot</td><td>Capture stunning landscapes for a travel blog.</td><td>2023-07-20</td></tr>
+<tr><td>3</td><td>Wedding Ceremony Coverage</td><td>Document the special day of a couple getting married.</td><td>2023-09-01</td></tr>
+<tr><td>4</td><td>Fashion Photo Shoot</td><td>Create a high fashion photo shoot for an upcoming clothing line.</td><td>2023-06-15</td></tr>
+<tr><td>5</td><td>Corporate Event Coverage</td><td>Capture the essence of a corporate event for marketing purposes.</td><td>2023-05-30</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

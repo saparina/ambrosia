@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Podcast</span></h2><table><thead>
+<tr><th>Id</th><th>Title</th><th>Description</th><th>Average_Episode_Length</th><th>ReleaseDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>This American Life</td><td>Storytelling podcast</td><td>30</td><td>2019-10-18</td></tr>
+<tr><td>2</td><td>Serial</td><td>True crime podcast</td><td><span style="color:#006600">45</span></td><td>2016-10-18</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Radio_Show</span></h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Category</th><th>Average_Episode_Length</th><th>HostId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Person.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily</td><td>News</td><td>20</td><td>1</td></tr>
+<tr><td>2</td><td>Freakonomics Radio</td><td>Business & Economics</td><td><span style="color:#006600">45</span></td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>Id</th><th>Title</th><th>Genre</th><th>Runtime</th><th>DirectorId</th><th>ProducerId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Person.Id)</th><th>(&#8594; Person.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Action/Adventure</td><td>128</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>Gravity</td><td>Drama/Thriller</td><td>98</td><td>3</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Book</h2><table><thead>
+<tr><th>Id</th><th>Title</th><th>AuthorId</th><th>PublisherId</th><th>PageCount</th></tr>
+<tr><th></th><th></th><th>(&#8594; Person.Id)</th><th>(&#8594; Publisher.Id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>To Kill A Mockingbird</td><td>1</td><td>1</td><td>320</td></tr>
+<tr><td>2</td><td>1984</td><td>2</td><td>2</td><td>328</td></tr>
+</tbody></table></div>
+
+<div><h2>MusicAlbum</h2><table><thead>
+<tr><th>Id</th><th>AlbumName</th><th>ArtistId</th><th>Genre</th><th>ReleaseYear</th></tr>
+<tr><th></th><th></th><th>(&#8594; Person.Id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Abbey Road</td><td>1</td><td>Rock</td><td>1969</td></tr>
+<tr><td>2</td><td>Revolver</td><td>2</td><td>Rock</td><td>1967</td></tr>
+</tbody></table></div>
+
+<div><h2>Publisher</h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Penguin Books</td><td>New York City, USA</td></tr>
+<tr><td>2</td><td>Random House</td><td>London, UK</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

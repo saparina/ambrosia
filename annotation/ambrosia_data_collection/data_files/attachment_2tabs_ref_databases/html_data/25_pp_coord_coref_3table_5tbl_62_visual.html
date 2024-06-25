@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Time_Periods</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Ancient Rome</span></td></tr>
+<tr><td>2</td><td>Middle Ages</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Historians</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>BirthDate</th><th>DeathDate</th><th>EraID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Time_Periods.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Plutarch</td><td>46 AD</td><td>120 AD</td><td>1</td></tr>
+<tr><td>2</td><td>Gibbon</td><td>1737</td><td>1794</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Archeologists</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>BirthDate</th><th>DeathDate</th><th>EraID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Time_Periods.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Howard Carter</td><td>1874</td><td>1939</td><td>1</td></tr>
+<tr><td>2</td><td>Zahi Hawass</td><td>1947</td><td>2021</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPostings</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Description</th><th>Location</th><th>Salary</th><th>PostedDate</th><th>ClosingDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop and maintain software applications.</td><td>New York</td><td>80000.0</td><td>2023-01-01</td><td>2023-02-01</td></tr>
+<tr><td>2</td><td>Data Scientist</td><td>Analyze large datasets and provide insights.</td><td>San Francisco</td><td>100000.0</td><td>2023-01-15</td><td>2023-02-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th><th>PhoneNumber</th><th>ApplicationDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>123-456-7890</td><td>2023-01-10</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td><td>098-765-4321</td><td>2023-01-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>ApplicationID</th><th>ApplicantID</th><th>JobPostingID</th><th>SubmissionDate</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Applicants.ID)</th><th>(&#8594; JobPostings.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-15</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-20</td><td>Rejected</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Software_Developers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th><th>skills</th><th><span style="color:#1430b2">grade</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>3</td><td>Python, Java, C++</td><td><span style="color:#1430b2">Middle</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>6</td><td>JavaScript, PHP, Ruby</td><td>High</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Data_Analysts</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>experience</th><th>tools</th><th>grade</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>4</td><td>Excel, Tableau, R</td><td><span style="color:#1430b2">Middle</span></td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>7</td><td>SQL, SAS, Python</td><td>Advanced</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>size</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>New York</td><td>Large</td></tr>
+<tr><td>2</td><td>Startup Inc.</td><td>San Francisco</td><td>Small</td></tr>
+</tbody></table></div>
+
+<div><h2>Projects</h2><table><thead>
+<tr><th>id</th><th>description</th><th>startDate</th><th>endDate</th><th>companyId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Companies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Web Application Development</td><td>2021-08-01</td><td>2021-12-31</td><td>1</td></tr>
+<tr><td>2</td><td>Mobile App Design</td><td>2021-09-01</td><td>2021-12-31</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Developers_Projects</h2><table><thead>
+<tr><th>developerId</th><th>projectId</th></tr>
+<tr><th>(&#8594; Software_Developers.id)</th><th>(&#8594; Projects.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Analysts_Projects</h2><table><thead>
+<tr><th>analystId</th><th>projectId</th></tr>
+<tr><th>(&#8594; Data_Analysts.id)</th><th>(&#8594; Projects.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

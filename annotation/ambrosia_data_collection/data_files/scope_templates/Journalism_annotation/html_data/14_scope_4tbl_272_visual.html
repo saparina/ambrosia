@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Cuisines</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">cuisine_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Italian</td></tr>
+<tr><td>2</td><td>Mexican</td></tr>
+<tr><td>3</td><td>Indian</td></tr>
+<tr><td>4</td><td>Chinese</td></tr>
+<tr><td>5</td><td>Japanese</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Food_Critics</span></h2><table><thead>
+<tr><th>id</th><th>critic_name</th><th>contact_email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Tom Brown</td><td>tom.brown@example.com</td></tr>
+<tr><td>4</td><td>Alice Johnson</td><td>alice.johnson@example.com</td></tr>
+<tr><td>5</td><td>Bob Davis</td><td>bob.davis@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Food_Critics_Cuisines</h2><table><thead>
+<tr><th>food_critic_id</th><th>cuisine_id</th></tr>
+<tr><th>(&#8594; Food_Critics.id)</th><th>(&#8594; Cuisines.id)</th></tr>
+</thead><tbody>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>2</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>1</td><td>4</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>1</td><td>5</td></tr>
+<tr><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

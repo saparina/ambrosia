@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Agriculture_Reporters</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Crops</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">crop_name</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Corn</td><td>A cereal grain planted worldwide for its starchy endosperm.</td></tr>
+<tr><td>2</td><td>Wheat</td><td>A cereal grain widely grown for its seed.</td></tr>
+<tr><td>3</td><td>Rice</td><td>An edible seed of a plant, used as food.</td></tr>
+<tr><td>4</td><td>Barley</td><td>A cereal grain that is often processed into flour.</td></tr>
+<tr><td>5</td><td>Soybean</td><td>A legume native to East Asia, cultivated for its protein-rich seeds.</td></tr>
+</tbody></table></div>
+
+<div><h2>Agriculture_Reporters_Crops</h2><table><thead>
+<tr><th>agriculture_reporter_id</th><th>crop_id</th></tr>
+<tr><th>(&#8594; Agriculture_Reporters.id)</th><th>(&#8594; Crops.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>size</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ableton</td><td>Berlin, Germany</td><td>200</td></tr>
+<tr><td>2</td><td>Audiokinetic</td><td>Montreal, Canada</td><td>300</td></tr>
+<tr><td>3</td><td>Beats Electronics</td><td>California, USA</td><td>5000</td></tr>
+<tr><td>4</td><td>Dolby Laboratories</td><td>San Francisco, USA</td><td>8000</td></tr>
+<tr><td>5</td><td>Electronic Arts</td><td>Redwood City, USA</td><td>9000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">AudioProfession</span></h2><table><thead>
+<tr><th><span style="color:#990000"><span style="color:#990000">profession</span></span></th><th>audio_equipment</th></tr>
+<tr><th></th><th>(&#8594; Equipment.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#990000">Music Therapist</span></td><td>1</td></tr>
+<tr><td><span style="color:#990000">Music Therapist</span></td><td>2</td></tr>
+<tr><td><span style="color:#990000">Sound Engineer</span></td><td>1</td></tr>
+<tr><td><span style="color:#990000">Sound Engineer</span></td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Equipment</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">equipmentName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Beyerdynamic DT 770 Pro</span></td></tr>
+<tr><td>2</td><td>Shure SE846</td></tr>
+<tr><td>3</td><td>AKG K701</td></tr>
+<tr><td>4</td><td>Sennheiser HD 650</td></tr>
+<tr><td>5</td><td>Jabra Elite 85h</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosting</h2><table><thead>
+<tr><th>jobID</th><th>title</th><th>description</th><th>companyId</th><th>profession</th><th>audio_equipment</th><th>salary</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Company.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td><td>We need a Software Developer who has experience working with C++.</td><td>1</td><td>General Programming</td><td>None</td><td>65000</td></tr>
+<tr><td>2</td><td>Marketing Manager</td><td>Looking for an experienced Marketing Manager to lead our marketing team.</td><td>2</td><td>Management</td><td>None</td><td>80000</td></tr>
+<tr><td>3</td><td>Network Administrator</td><td>Seeking a Network Administrator to manage our network infrastructure.</td><td>3</td><td>IT Administration</td><td>None</td><td>70000</td></tr>
+<tr><td>4</td><td>Product Designer</td><td>Need a Product Designer skilled in UI/UX design.</td><td>4</td><td>Design</td><td>None</td><td>75000</td></tr>
+<tr><td>5</td><td>Data Analyst</td><td>Searching for a Data Analyst to analyze data and provide insights.</td><td>5</td><td>Analytics</td><td>None</td><td>60000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Fashion_Reporters</span></h2><table><thead>
+<tr><th>ReporterID</th><th>FullName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td></tr>
+<tr><td>2</td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>Emily White</td></tr>
+<tr><td>5</td><td>David Gray</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Designers</span></h2><table><thead>
+<tr><th>DesignerID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christian_Dior</td></tr>
+<tr><td>2</td><td>Gucci</td></tr>
+<tr><td>3</td><td>Prada</td></tr>
+<tr><td>4</td><td>Chanel</td></tr>
+<tr><td>5</td><td>Louis_Vuitton</td></tr>
+</tbody></table></div>
+
+<div><h2>Fashion_Reporters_Designers</h2><table><thead>
+<tr><th>ReporterID</th><th>DesignerID</th></tr>
+<tr><th>(&#8594; Fashion_Reporters.ReporterID)</th><th>(&#8594; Designers.DesignerID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th><th>ReporterID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Fashion_Reporters.ReporterID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Rise of Sustainable Fashion</td><td>...</td><td>2021-08-01 12:34:56</td><td>1</td></tr>
+<tr><td>2</td><td>Inside the World of High Fashion</td><td>...</td><td>2021-09-01 12:34:56</td><td>2</td></tr>
+<tr><td>3</td><td>Street Style: The New Frontier of Fashion</td><td>...</td><td>2021-10-01 12:34:56</td><td>3</td></tr>
+<tr><td>4</td><td>The Evolution of Haute Couture</td><td>...</td><td>2021-11-01 12:34:56</td><td>4</td></tr>
+<tr><td>5</td><td>A Look Back at Iconic Fashion Moments</td><td>...</td><td>2021-12-01 12:34:56</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>PublicationID</th><th>PublisherName</th><th>WebsiteURL</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Vogue Magazine</td><td>www.vogue.com</td></tr>
+<tr><td>2</td><td>Harper’s Bazaar</td><td>www.harpersbazaar.com</td></tr>
+<tr><td>3</td><td>Elle Magazine</td><td>www.elle.com</td></tr>
+<tr><td>4</td><td>GQ Magazine</td><td>www.gq.com</td></tr>
+<tr><td>5</td><td>Esquire Magazine</td><td>www.esquire.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

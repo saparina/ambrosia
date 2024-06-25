@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Media_Franchise</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Type</th><th>Audience</th><th>EstablishedDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Guardian</td><td>Newspaper</td><td><span style="color:#006600">Liberals</span></td><td>2006-08-31</td></tr>
+<tr><td>2</td><td>Fox News</td><td>Cable Network</td><td>Conservatives</td><td>1996-04-07</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Cross_Platform_Expansion</span></h2><table><thead>
+<tr><th>id</th><th>FranchiseName</th><th>Platform</th><th>ExpandedSince</th><th>Audience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harry Potter</td><td>App Store</td><td>2011-09-01</td><td><span style="color:#006600">Liberals</span></td></tr>
+<tr><td>2</td><td>Call of Duty</td><td>Web</td><td>2013-10-01</td><td>Non-liberals</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Category</h2><table><thead>
+<tr><th>id</th><th>Category</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td><td>News about government policies</td></tr>
+<tr><td>2</td><td>Technology</td><td>Advancements in computer technology</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th>PublishedOn</th><th>AuthorId</th><th>CategoryId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Article_Category.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Election Results</td><td>Content...</td><td>2021-11-10</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Quantum Computing Breakthrough</td><td>Content...</td><td>2021-11-11</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Bio</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>A renowned journalist</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>An investigative reporter</td></tr>
+</tbody></table></div>
+
+<div><h2>Subscriptions</h2><table><thead>
+<tr><th>id</th><th>Email</th><th>NewsletterName</th><th>StartDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>john@example.com</td><td>Daily Digest</td><td>2021-11-10</td></tr>
+<tr><td>2</td><td>jane@example.com</td><td>Weekly Update</td><td>2021-11-11</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

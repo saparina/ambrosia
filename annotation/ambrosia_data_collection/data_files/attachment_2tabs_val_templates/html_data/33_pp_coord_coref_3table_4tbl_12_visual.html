@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company1</td></tr>
+<tr><td>2</td><td>Company2</td></tr>
+<tr><td>3</td><td>Company3</td></tr>
+<tr><td>4</td><td>Company4</td></tr>
+<tr><td>5</td><td>Company5</td></tr>
+</tbody></table></div>
+
+<div><h2>Position</h2><table><thead>
+<tr><th>id</th><th>title</th><th>salary</th></tr>
+<tr><th>(&#8594; Company.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Position1</td><td>60000.0</td></tr>
+<tr><td>2</td><td>Position2</td><td>70000.0</td></tr>
+<tr><td>3</td><td>Position3</td><td>80000.0</td></tr>
+<tr><td>4</td><td>Position4</td><td>90000.0</td></tr>
+<tr><td>5</td><td>Position5</td><td>100000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">TargetMarket</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>B2B</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">B2C</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">SalesAssociates</span></h2><table><thead>
+<tr><th>id</th><th>position_id</th><th>target_market_id</th><th>skills</th><th>experience</th></tr>
+<tr><th></th><th>(&#8594; Position.id)</th><th>(&#8594; TargetMarket.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Skill1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Skill2</td><td>3</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>Skill3</td><td>4</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>Skill4</td><td>5</td></tr>
+<tr><td>5</td><td>3</td><td>1</td><td>Skill5</td><td>6</td></tr>
+<tr><td>6</td><td>3</td><td>2</td><td>Skill6</td><td>7</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">MarketingSpecialists</span></h2><table><thead>
+<tr><th>id</th><th>position_id</th><th>target_market_id</th><th>skills</th><th>experience</th></tr>
+<tr><th></th><th>(&#8594; Position.id)</th><th>(&#8594; TargetMarket.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>4</td><td>1</td><td>Skill7</td><td>8</td></tr>
+<tr><td>2</td><td>4</td><td>2</td><td>Skill8</td><td>9</td></tr>
+<tr><td>3</td><td>5</td><td>1</td><td>Skill9</td><td>10</td></tr>
+<tr><td>4</td><td>5</td><td>2</td><td>Skill10</td><td>11</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

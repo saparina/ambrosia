@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Acme Corporation</td></tr>
+<tr><td>2</td><td>XYZ Industries</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Location</span></h2><table><thead>
+<tr><th>LocationID</th><th>Address</th><th>City</th><th>State</th><th><span style="color:#006600">ZipCode</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 University Ave</td><td>San Francisco</td><td>CA</td><td>94102</td></tr>
+<tr><td>2</td><td>456 University Blvd</td><td>Los Angeles</td><td>CA</td><td><span style="color:#006600">90001</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">TypeOfJobPosting</span></h2><table><thead>
+<tr><th>TypeID</th><th><span style="color:#990000"><span style="color:#990000">TypeName</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Librarian</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Archivist</span></td></tr>
+</tbody></table></div>
+
+<div><h2>InformationManagementJobs</h2><table><thead>
+<tr><th>InfoMgmtJobID</th><th>CompanyID</th><th>LocationID</th><th>TypeID</th></tr>
+<tr><th></th><th>(&#8594; Company.CompanyID)</th><th>(&#8594; Location.LocationID)</th><th>(&#8594; TypeOfJobPosting.TypeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>EmailAddress</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johndoe@example.com</td><td>555-1234</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janesmith@example.com</td><td>555-5678</td></tr>
+</tbody></table></div>
+
+<div><h2>AppliedJobs</h2><table><thead>
+<tr><th>ApplicantID</th><th>InfoMgmtJobID</th><th>EmployeeID</th></tr>
+<tr><th></th><th>(&#8594; InformationManagementJobs.InfoMgmtJobID)</th><th>(&#8594; Employee.EmployeeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>Drama</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>Crime/Thriller</td></tr>
+<tr><td>3</td><td>Forrest Gump</td><td>1994</td><td>Drama/Romance</td></tr>
+<tr><td>4</td><td>Inception</td><td>2010</td><td>Action/Science Fiction</td></tr>
+<tr><td>5</td><td>Interstellar</td><td>2014</td><td>Adventure/Science Fiction</td></tr>
+<tr><td>6</td><td>La La Land</td><td>2016</td><td>Musical/Romance</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td><td>July 9, 1956</td></tr>
+<tr><td>2</td><td>Brad Pitt</td><td>December 18, 1963</td></tr>
+<tr><td>3</td><td>Morgan Freeman</td><td>June 1, 1937</td></tr>
+<tr><td>4</td><td>Leonardo DiCaprio</td><td>November 11, 1974</td></tr>
+<tr><td>5</td><td>Ryan Gosling</td><td>October 12, 1980</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank Darabont</td><td>January 28, 1959</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td><td>March 27, 1963</td></tr>
+<tr><td>3</td><td>Robert Zemeckis</td><td>May 14, 1951</td></tr>
+<tr><td>4</td><td>Christopher Nolan</td><td> July 30, 1970</td></tr>
+<tr><td>5</td><td>Damien Chazelle</td><td> January 19, 1980</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Soundtrack</span></h2><table><thead>
+<tr><th>id</th><th>movie_id</th><th>creator</th><th>sound_design</th><th>music_score</th></tr>
+<tr><th></th><th>(&#8594; Movie.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">Hans Zimmer</span></td><td><span style="color:#990000">Sound Design</span></td><td>None</td></tr>
+<tr><td>2</td><td>2</td><td>Danny Elfman</td><td><span style="color:#990000">Sound Design</span></td><td>None</td></tr>
+<tr><td>3</td><td>3</td><td>Alan Silvestri</td><td><span style="color:#990000">Sound Design</span></td><td>None</td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#006600">Hans Zimmer</span></td><td><span style="color:#990000">Music Score</span></td><td>None</td></tr>
+<tr><td>5</td><td>5</td><td>Alexandre Desplat</td><td><span style="color:#990000">Music Score</span></td><td>None</td></tr>
+<tr><td>6</td><td>6</td><td>John Williams</td><td><span style="color:#990000">Sound Design</span></td><td>John Williams</td></tr>
+<tr><td>7</td><td>7</td><td>Dario Marianelli</td><td><span style="color:#990000">Sound Design</span></td><td>Dario Marianelli</td></tr>
+<tr><td>8</td><td>8</td><td>Howard Shore</td><td><span style="color:#990000">Music Score</span></td><td>Howard Shore</td></tr>
+<tr><td>9</td><td>9</td><td>Thomas Newman</td><td><span style="color:#990000">Sound Design</span></td><td>Thomas Newman</td></tr>
+<tr><td>10</td><td>10</td><td>Ennio Morricone</td><td><span style="color:#990000">Music Score</span></td><td>Ennio Morricone</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

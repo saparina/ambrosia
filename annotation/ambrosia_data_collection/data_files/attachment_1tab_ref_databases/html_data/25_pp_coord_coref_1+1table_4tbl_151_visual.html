@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Historical_Studies</span></h2><table><thead>
+<tr><th>study_id</th><th><span style="color:#990000"><span style="color:#990000">profession</span></span></th><th>time_period</th></tr>
+<tr><th></th><th></th><th>(&#8594; Time_Periods.time_period)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Historian</span></td><td><span style="color:#006600">Ancient Rome</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Historian</span></td><td>Medieval Europe</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Archeologist</span></td><td><span style="color:#006600">Ancient Rome</span></td></tr>
+<tr><td>4</td><td><span style="color:#990000">Archeologist</span></td><td>Egyptian Civilization</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Time_Periods</span></h2><table><thead>
+<tr><th>period_id</th><th><span style="color:#006600">time_period</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Ancient Rome</span></td></tr>
+<tr><td>2</td><td>Medieval Europe</td></tr>
+<tr><td>3</td><td>Egyptian Civilization</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>company_id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Company</td></tr>
+<tr><td>2</td><td>XYZ Corporation</td></tr>
+<tr><td>3</td><td>PQR Enterprises</td></tr>
+<tr><td>4</td><td>LMT Industries</td></tr>
+<tr><td>5</td><td>UVW Holdings</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>job_id</th><th>title</th><th>description</th><th>posted_date</th><th>required_skills</th><th>historical_study</th><th>company_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Historical_Studies.study_id)</th><th>(&#8594; Companies.company_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Development of new software applications.</td><td>2023-01-01</td><td>Strong programming skills in Java, Python or C++</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analysis of large datasets to identify trends.</td><td>2023-02-01</td><td>Experience with R or Python</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Graphic Designer</td><td>Design creative visual content for marketing campaigns.</td><td>2023-03-01</td><td>Proficiency in Adobe Creative Suite</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Marketing Manager</td><td>Lead the development of marketing strategies.</td><td>2023-04-01</td><td>MBA degree, experience in digital marketing</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Project Manager</td><td>Oversee projects from initiation to completion.</td><td>2023-05-01</td><td>PMP certification, excellent organizational skills</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>applicant_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th>resume</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@email.com</td><td>+1-123-456-7890</td><td>resume_johnsmith.pdf</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@email.com</td><td>+1-987-654-3210</td><td>resume_janedoe.pdf</td></tr>
+<tr><td>3</td><td>Alex</td><td>Brown</td><td>alexbrown@email.com</td><td>+1-135-790-2460</td><td>resume_alexbrown.pdf</td></tr>
+<tr><td>4</td><td>Emma</td><td>Green</td><td>emmagreen@email.com</td><td>+1-147-895-3600</td><td>resume_emmagreen.pdf</td></tr>
+<tr><td>5</td><td>William</td><td>Black</td><td>williamblack@email.com</td><td>+1-126-489-7500</td><td>resume_williamblack.pdf</td></tr>
+</tbody></table></div>
+
+<div><h2>Application_Statuses</h2><table><thead>
+<tr><th>application_id</th><th>status</th><th>job_id</th><th>applicant_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Jobs.job_id)</th><th>(&#8594; Applicants.applicant_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Pending</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Interview Scheduled</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Rejected</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Offered</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Hired</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

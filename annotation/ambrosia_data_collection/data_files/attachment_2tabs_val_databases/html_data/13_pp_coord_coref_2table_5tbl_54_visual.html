@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Reporters</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone_number</th><th>deadline</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td><td>1234567890</td><td><span style="color:#006600">2020-04-25</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td><td>0987654321</td><td>2020-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Photographers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone_number</th><th>deadline</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike Johnson</td><td>mike.johnson@example.com</td><td>1112223333</td><td><span style="color:#006600">2020-04-25</span></td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>emily.davis@example.com</td><td>4445556666</td><td>2020-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>reporter_id</th><th>photographer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Reporters.id)</th><th>(&#8594; Photographers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Article 1 Title</td><td>Content of Article 1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Article 2 Title</td><td>Content of Article 2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Article_Details</h2><table><thead>
+<tr><th>id</th><th>article_id</th><th>source</th><th>date</th></tr>
+<tr><th></th><th>(&#8594; Articles.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Source A</td><td>2020-04-25 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>Source B</td><td>2020-04-25 11:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Musician</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Genre</th><th>Instrument</th><th>YearOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#990000">Country Singer</span></td><td><span style="color:#006600">Guitar</span></td><td>1980</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#990000">Country Singer</span></td><td>Piano</td><td>1975</td></tr>
+<tr><td>3</td><td>Tom Brown</td><td><span style="color:#990000">Bluegrass Singer</span></td><td><span style="color:#006600">Guitar</span></td><td>1965</td></tr>
+<tr><td>4</td><td>Ann White</td><td><span style="color:#990000">Bluegrass Singer</span></td><td>Violin</td><td>1982</td></tr>
+<tr><td>5</td><td>Rock Star</td><td>Rocker</td><td><span style="color:#006600">Guitar</span></td><td>1990</td></tr>
+<tr><td>6</td><td>Pop Queen</td><td>Pop Star</td><td>Vocals</td><td>1993</td></tr>
+</tbody></table></div>
+
+<div><h2>Album</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>ArtistId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Musician.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Debut</td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>Second Act</td><td>2015</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Song</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Duration</th><th>AlbumId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Album.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Single</td><td>03:30</td><td>1</td></tr>
+<tr><td>2</td><td>Second Track</td><td>04:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Concert</h2><table><thead>
+<tr><th>id</th><th>Date</th><th>Venue</th><th>HeadlinerId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Musician.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-06-10</td><td>Stadium A</td><td>1</td></tr>
+<tr><td>2</td><td>2022-07-15</td><td>Arena B</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Fan</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Fan1</td><td>Lastname1</td><td>fan1@email.com</td></tr>
+<tr><td>2</td><td>Fan2</td><td>Lastname2</td><td>fan2@email.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Purchase</h2><table><thead>
+<tr><th>id</th><th>AmountMoney</th><th>ConcertId</th><th>FanId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Concert.id)</th><th>(&#8594; Fan.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>100.0</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>150.0</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

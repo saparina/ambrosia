@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>Queens, New York City</td><td>70000</td></tr>
+<tr><td>2</td><td>Los Angeles International</td><td>Los Angeles County, California</td><td>90000</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight_Info</h2><table><thead>
+<tr><th>flight_id</th><th>airport_id</th><th>departure</th><th>arrival</th><th>passengers</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-06-01 08:00:00</td><td>2022-06-01 12:00:00</td><td>200</td></tr>
+<tr><td>2</td><td>1</td><td>2022-06-02 10:00:00</td><td>2022-06-02 14:00:00</td><td>250</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Runways</span></h2><table><thead>
+<tr><th>runway_id</th><th>airport_id</th><th>length</th><th>width</th><th><span style="color:#006600">construction_date</span></th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10000</td><td>150</td><td><span style="color:#006600">2015-05-01</span></td></tr>
+<tr><td>2</td><td>1</td><td>12000</td><td>180</td><td>2017-06-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Taxiways</h2><table><thead>
+<tr><th>taxiway_id</th><th>runway_id</th><th>airport_id</th><th>length</th><th>width</th><th>construction_date</th></tr>
+<tr><th></th><th>(&#8594; Runways.runway_id)</th><th>(&#8594; Airports.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td><td>1000</td><td>100</td><td>2015-05-01</td></tr>
+<tr><td>2</td><td>1</td><td>None</td><td>1100</td><td>105</td><td>2017-06-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>terminal_id</th><th>airport_id</th><th>area</th><th>capacity</th><th>construction_date</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>50000</td><td>5000</td><td>2015-05-01</td></tr>
+<tr><td>2</td><td>1</td><td>60000</td><td>6000</td><td>2017-06-01</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Infrastructure</span></h2><table><thead>
+<tr><th>infrastructure_id</th><th>airport_id</th><th><span style="color:#990000"><span style="color:#990000">Airport_Infrastructure</span></span></th><th>Construction_Date</th></tr>
+<tr><th></th><th>(&#8594; Airports.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#990000">Runway</span></td><td><span style="color:#006600">2015-05-01</span></td></tr>
+<tr><td>2</td><td>1</td><td><span style="color:#990000">Taxiway</span></td><td>2017-06-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

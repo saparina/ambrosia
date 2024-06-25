@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Properties</h2><table><thead>
+<tr><th>property_id</th><th><span style="color:#990000">Street_Address</span></th><th><span style="color:#990000">City</span></th><th>Real_Estate_Offices</th><th>Price</th><th>Property_Type</th><th>Square_Feet</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>Anytown</td><td>2</td><td>300000.0</td><td>Single Family Home</td><td>2000</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>Othertown</td><td>1</td><td>400000.0</td><td>Condo</td><td>1200</td></tr>
+<tr><td>3</td><td>789 Oak St</td><td>Anytown</td><td>3</td><td>500000.0</td><td>Townhouse</td><td>2500</td></tr>
+<tr><td>4</td><td>999 Pine St</td><td>Downtown</td><td>1</td><td>600000.0</td><td>Loft</td><td>2000</td></tr>
+<tr><td>5</td><td>222 Maple Ave</td><td>Suburbia</td><td>2</td><td>450000.0</td><td>Single Family Home</td><td>3000</td></tr>
+</tbody></table></div>
+
+<div><h2>RealEstateOffices</h2><table><thead>
+<tr><th>real_estate_office_id</th><th>Name</th><th>Address</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Realty</td><td>123 Office Rd</td><td>555-123-4567</td></tr>
+<tr><td>2</td><td>XYZ Real Estate</td><td>456 Agency Blvd</td><td>555-234-5678</td></tr>
+<tr><td>3</td><td>Mega Brokers</td><td>789 Listing Ln</td><td>555-345-6789</td></tr>
+<tr><td>4</td><td>Local Agents</td><td>999 Open House Dr</td><td>555-456-7890</td></tr>
+<tr><td>5</td><td>First Choice Homes</td><td>222 Sell Now St</td><td>555-567-8901</td></tr>
+</tbody></table></div>
+
+<div><h2>Clients</h2><table><thead>
+<tr><th>client_id</th><th>Name</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>555-111-2222</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janemsmith@email.com</td><td>555-333-4444</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice.johnson@yahoo.com</td><td>555-555-6666</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bobbrown@gmail.com</td><td>555-777-8888</td></tr>
+<tr><td>5</td><td>Carol White</td><td>carolwhite@hotmail.com</td><td>555-999-0000</td></tr>
+</tbody></table></div>
+
+<div><h2>ClientProperties</h2><table><thead>
+<tr><th>client_id</th><th>property_id</th><th>InterestedDate</th></tr>
+<tr><th>(&#8594; Clients.client_id)</th><th>(&#8594; Properties.property_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2023-02-01 10:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>2023-03-01 10:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>2023-04-01 10:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>2023-05-01 10:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>transaction_id</th><th>TransactionDate</th><th>client_id</th><th>property_id</th><th>TypeOfTransaction</th></tr>
+<tr><th></th><th></th><th>(&#8594; Clients.client_id)</th><th>(&#8594; Properties.property_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-10 10:00:00</td><td>1</td><td>1</td><td>Purchase</td></tr>
+<tr><td>2</td><td>2023-02-10 10:00:00</td><td>2</td><td>2</td><td>Rent</td></tr>
+<tr><td>3</td><td>2023-03-10 10:00:00</td><td>3</td><td>3</td><td>Lease</td></tr>
+<tr><td>4</td><td>2023-04-10 10:00:00</td><td>4</td><td>4</td><td>Purchase</td></tr>
+<tr><td>5</td><td>2023-05-10 10:00:00</td><td>5</td><td>5</td><td>Rent</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

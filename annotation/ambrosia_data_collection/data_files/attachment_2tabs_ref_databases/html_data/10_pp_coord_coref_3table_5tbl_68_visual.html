@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Funds</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Type</th><th>Assets</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Fund A</td><td>Stock</td><td>100000.0</td></tr>
+<tr><td>2</td><td>Fund B</td><td>Bond</td><td>80000.0</td></tr>
+<tr><td>3</td><td>Fund C</td><td>Mixed</td><td>90000.0</td></tr>
+<tr><td>4</td><td>Fund D</td><td>Real Estate</td><td>70000.0</td></tr>
+<tr><td>5</td><td>Fund E</td><td>Commodity</td><td>60000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Dividends</span></h2><table><thead>
+<tr><th>ID</th><th>FundID</th><th><span style="color:#006600">Rate</span></th><th>PayDate</th></tr>
+<tr><th></th><th>(&#8594; Funds.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2% Annual</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>1</td><td>1% Quarterly</td><td>2023-04-01</td></tr>
+<tr><td>3</td><td>2</td><td><span style="color:#006600">3% Semi-Annual</span></td><td>2023-07-01</td></tr>
+<tr><td>4</td><td>2</td><td>2% Monthly</td><td>2023-10-01</td></tr>
+<tr><td>5</td><td>3</td><td>4% Bi-annually</td><td>2023-01-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Investors</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>AmountInvested</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>5000.0</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>7000.0</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>10000.0</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>15000.0</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>20000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>FundAllocation</h2><table><thead>
+<tr><th>InvestorID</th><th>FundID</th><th>Shares</th><th>AllocationPercentage</th></tr>
+<tr><th>(&#8594; Investors.ID)</th><th>(&#8594; Funds.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100</td><td>0.2</td></tr>
+<tr><td>1</td><td>2</td><td>150</td><td>0.25</td></tr>
+<tr><td>2</td><td>1</td><td>200</td><td>0.3</td></tr>
+<tr><td>2</td><td>2</td><td>250</td><td>0.35</td></tr>
+<tr><td>3</td><td>1</td><td>300</td><td>0.4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ClosedEndFund</span></h2><table><thead>
+<tr><th>ID</th><th>FundName</th><th>TotalAssets</th><th>DividendsID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Dividends.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CEF A</td><td>100000.0</td><td>1</td></tr>
+<tr><td>2</td><td>CEF B</td><td>80000.0</td><td>2</td></tr>
+<tr><td>3</td><td>CEF C</td><td>90000.0</td><td>3</td></tr>
+<tr><td>4</td><td>CEF D</td><td>70000.0</td><td>4</td></tr>
+<tr><td>5</td><td>CEF E</td><td>60000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ExchangeTradedFund</span></h2><table><thead>
+<tr><th>ID</th><th>FundName</th><th>TotalAssets</th><th>DividendsID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Dividends.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ETF X</td><td>100000.0</td><td>1</td></tr>
+<tr><td>2</td><td>ETF Y</td><td>80000.0</td><td>2</td></tr>
+<tr><td>3</td><td>ETF Z</td><td>90000.0</td><td>3</td></tr>
+<tr><td>4</td><td>ETF W</td><td>70000.0</td><td>4</td></tr>
+<tr><td>5</td><td>ETF V</td><td>60000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

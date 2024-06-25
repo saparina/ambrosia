@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Difficulty_Level</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#1430b2">Level</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beginner</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">Advanced</span></td></tr>
+<tr><td>3</td><td>Expert</td></tr>
+</tbody></table></div>
+
+<div><h2>Subjects</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Description</th><th>DifficultyID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Difficulty_Level.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math</td><td>Introduction to Mathematics</td><td>1</td></tr>
+<tr><td>2</td><td>Physics</td><td>Basic Principles of Physics</td><td>2</td></tr>
+<tr><td>3</td><td>Biology</td><td>Basics of Biological Sciences</td><td>3</td></tr>
+<tr><td>4</td><td>History</td><td>World History Overview</td><td>1</td></tr>
+<tr><td>5</td><td>Literature</td><td>Classic Novels Analysis</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Textbooks</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Author</th><th>ISBN</th><th>SubjectID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Subjects.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics for Beginners</td><td>John Doe</td><td>978-0-123-456789</td><td>1</td></tr>
+<tr><td>2</td><td>The World of Physics</td><td>Jane Smith</td><td>978-0-091-234567</td><td>2</td></tr>
+<tr><td>3</td><td>An Introduction to Biology</td><td>Michael Brown</td><td>978-1-234-567890</td><td>3</td></tr>
+<tr><td>4</td><td>A Brief History of Time</td><td>Stephen Hawking</td><td>978-0-123-987654</td><td>4</td></tr>
+<tr><td>5</td><td>To Kill a Mockingbird</td><td>Harper Lee</td><td>978-0-123-123456</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Online_Courses</span></h2><table><thead>
+<tr><th>ID</th><th>CourseName</th><th>Instructor</th><th>Platform</th><th>URL</th><th>SubjectID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Subjects.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introductory Math</td><td>Prof. James Johnson</td><td>Udemy</td><td>https://www.udemy.com/introductory-math</td><td>1</td></tr>
+<tr><td>2</td><td>Essential Physics</td><td>Dr. Emily White</td><td>Coursera</td><td>https://www.coursera.org/physics</td><td>2</td></tr>
+<tr><td>3</td><td>Foundations of Biology</td><td>Dr. Robert Green</td><td>edX</td><td>https://www.edx.org/biology</td><td>3</td></tr>
+<tr><td>4</td><td>Global History Survey</td><td>Dr. Susan King</td><td>FutureLearn</td><td>https://www.futurelearn.com/history</td><td>4</td></tr>
+<tr><td>5</td><td>Great Literary Works</td><td>Ms. Karen Taylor</td><td>LinkedIn Learning</td><td>https://www.linkedinlearning.com/literature</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>EnrolledStudents</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>20</td><td>alicesmith@example.com</td><td>+1-123-456-7890</td></tr>
+<tr><td>2</td><td>Bob</td><td>Johnson</td><td>21</td><td>bobjohnson@example.com</td><td>+1-987-654-3210</td></tr>
+<tr><td>3</td><td>Charlie</td><td>Williams</td><td>22</td><td>charliewilliams@example.com</td><td>+1-555-123-4567</td></tr>
+<tr><td>4</td><td>David</td><td>Martinez</td><td>23</td><td>davidmartinez@example.com</td><td>+1-321-654-9870</td></tr>
+<tr><td>5</td><td>Eva</td><td>Garcia</td><td>24</td><td>evagarcia@example.com</td><td>+1-789-456-1234</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

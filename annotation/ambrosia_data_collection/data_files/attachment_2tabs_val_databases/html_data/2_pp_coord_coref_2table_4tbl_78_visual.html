@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Textbooks</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Subject</th><th>YearPublished</th><th>NumberOfPages</th><th>Publisher</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>Computer Science</td><td>2019</td><td>300</td><td><span style="color:#006600">Pearson</span></td></tr>
+<tr><td>2</td><td>Physics for Scientists and Engineers</td><td>Physics</td><td>2016</td><td>780</td><td>Cambridge University Press</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">EBooks</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Subject</th><th>SizeInMB</th><th>DownloadCount</th><th>Publisher</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Great Gatsby</td><td>Literature</td><td>5.0</td><td>1200</td><td><span style="color:#006600">Pearson</span></td></tr>
+<tr><td>2</td><td>A Brief History of Time</td><td>Science</td><td>2.5</td><td>800</td><td>Houghton Mifflin Harcourt</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>GradeLevel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>21</td><td>3</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>20</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Exams</h2><table><thead>
+<tr><th>id</th><th>Date</th><th>Score</th><th>StudentId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Students.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-01-01 10:00:00</td><td>85</td><td>1</td></tr>
+<tr><td>2</td><td>2021-02-01 10:00:00</td><td>90</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>ReadingLists</h2><table><thead>
+<tr><th>id</th><th>StudentId</th><th>BookType</th><th>BookId</th><th>READING_DATE</th></tr>
+<tr><th></th><th>(&#8594; Students.id)</th><th></th><th>(&#8594; Books.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Textbook</td><td>1</td><td>2021-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>E_book</td><td>2</td><td>2021-02-01 10:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Books</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Author</th><th>ISBN</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>To Kill a Mockingbird</td><td>Harper Lee</td><td>978-0-06-093546-7</td></tr>
+<tr><td>2</td><td>1984</td><td>George Orwell</td><td>978-0-451-52493-5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

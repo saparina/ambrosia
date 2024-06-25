@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Rooms</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">roomType</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Living Room</td></tr>
+<tr><td>2</td><td>Bedroom</td></tr>
+<tr><td>3</td><td>Dining Room</td></tr>
+<tr><td>4</td><td>Kitchen</td></tr>
+<tr><td>5</td><td>Bathroom</td></tr>
+</tbody></table></div>
+
+<div><h2>HouseFeatures</h2><table><thead>
+<tr><th>id</th><th>featureName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Garage</td></tr>
+<tr><td>2</td><td>Pool</td></tr>
+<tr><td>3</td><td>Balcony</td></tr>
+<tr><td>4</td><td>Air Conditioning</td></tr>
+<tr><td>5</td><td>Fireplace</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Houses</span></h2><table><thead>
+<tr><th>id</th><th>address</th><th>price</th><th>numOfFloors</th></tr>
+<tr><th>(&#8594; Houses_Rooms.houseId)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>300000.0</td><td>2</td></tr>
+<tr><td>2</td><td>456 Oak Ave</td><td>400000.0</td><td>3</td></tr>
+<tr><td>3</td><td>789 Pine St</td><td>500000.0</td><td>4</td></tr>
+<tr><td>4</td><td>101 Elm Blvd</td><td>600000.0</td><td>3</td></tr>
+<tr><td>5</td><td>202 Maple Dr</td><td>700000.0</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Houses_Rooms</h2><table><thead>
+<tr><th>houseId</th><th>roomId</th></tr>
+<tr><th>(&#8594; Houses.id)</th><th>(&#8594; Rooms.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>4</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>4</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Debut_Day</span></h2><table><thead>
+<tr><th>id</th><th>day</th><th>month</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Monday</td><td>10</td></tr>
+<tr><td>2</td><td>Tuesday</td><td>9</td></tr>
+<tr><td>3</td><td>Wednesday</td><td>8</td></tr>
+<tr><td>4</td><td>Thursday</td><td>7</td></tr>
+<tr><td>5</td><td>Friday</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Debut_Year</span></h2><table><thead>
+<tr><th>id</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2019</td></tr>
+<tr><td>2</td><td>2020</td></tr>
+<tr><td>3</td><td>2021</td></tr>
+<tr><td>4</td><td>2022</td></tr>
+<tr><td>5</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Podcast</h2><table><thead>
+<tr><th>id</th><th>podcast_name</th><th>debut_day_id</th><th>debut_year_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Debut_Day.id)</th><th>(&#8594; Debut_Year.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Podcast A</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Podcast B</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Podcast C</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>Podcast D</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>Podcast E</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>genre_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Comedy</td></tr>
+<tr><td>2</td><td>Drama</td></tr>
+<tr><td>3</td><td>Action</td></tr>
+<tr><td>4</td><td>Horror</td></tr>
+<tr><td>5</td><td>Fantasy</td></tr>
+</tbody></table></div>
+
+<div><h2>Podcast_Genre</h2><table><thead>
+<tr><th>pod_genre_id</th><th>podcast_id</th><th>genre_id</th></tr>
+<tr><th></th><th>(&#8594; Podcast.id)</th><th>(&#8594; Genre.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

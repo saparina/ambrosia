@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Brands</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">brand_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Deere</td></tr>
+<tr><td>2</td><td>Caterpillar</td></tr>
+<tr><td>3</td><td>New Holland</td></tr>
+<tr><td>4</td><td>Case IH</td></tr>
+<tr><td>5</td><td>Fendt</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Agricultural_Machinery_Stores</span></h2><table><thead>
+<tr><th>store_id</th><th>store_name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Store A</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Store B</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Store C</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Store D</td><td>012 Pine St</td></tr>
+<tr><td>5</td><td>Store E</td><td>345 Maple St</td></tr>
+</tbody></table></div>
+
+<div><h2>Machines</h2><table><thead>
+<tr><th>machine_id</th><th>model_number</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Model X</td><td>Tractor Model X from John Deere.</td></tr>
+<tr><td>2</td><td>Model Y</td><td>Combine Harvester Model Y by New Holland.</td></tr>
+<tr><td>3</td><td>Model Z</td><td>Plow Model Z made by Case IH.</td></tr>
+<tr><td>4</td><td>Model W</td><td>Tiller Model W produced by Fendt.</td></tr>
+<tr><td>5</td><td>Model V</td><td>Seeder Model V created by Caterpillar.</td></tr>
+</tbody></table></div>
+
+<div><h2>Stores_Brands</h2><table><thead>
+<tr><th>store_id</th><th>brand_id</th></tr>
+<tr><th>(&#8594; Agricultural_Machinery_Stores.store_id)</th><th>(&#8594; Brands.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

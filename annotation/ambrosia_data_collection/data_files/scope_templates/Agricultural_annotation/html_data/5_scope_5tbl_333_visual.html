@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Aquaculture_Facility</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Facility A</td><td>Location A</td></tr>
+<tr><td>2</td><td>Facility B</td><td>Location B</td></tr>
+<tr><td>3</td><td>Facility C</td><td>Location C</td></tr>
+<tr><td>4</td><td>Facility D</td><td>Location D</td></tr>
+<tr><td>5</td><td>Facility E</td><td>Location E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Fish_Species</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">species_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Salmon</td></tr>
+<tr><td>2</td><td>Catfish</td></tr>
+<tr><td>3</td><td>Tilapia</td></tr>
+<tr><td>4</td><td>Trout</td></tr>
+<tr><td>5</td><td>Bass</td></tr>
+</tbody></table></div>
+
+<div><h2>Aquaculture_Facility_Fish_Species</h2><table><thead>
+<tr><th>aquaculture_facility_id</th><th>fish_species_id</th></tr>
+<tr><th>(&#8594; Aquaculture_Facility.id)</th><th>(&#8594; Fish_Species.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

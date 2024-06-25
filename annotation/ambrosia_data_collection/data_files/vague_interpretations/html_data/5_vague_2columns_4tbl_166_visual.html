@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>AirlineName</th><th>DepartureTime</th><th>ArrivalTime</th><th>DestinationCity</th><th>NumberOfPassengers</th><th>BaggageAllowance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United</td><td>2021-08-26 10:00:00</td><td>2021-08-26 17:00:00</td><td>Los Angeles</td><td>200</td><td>25</td></tr>
+<tr><td>2</td><td>Delta</td><td>2021-08-27 12:00:00</td><td>2021-08-27 19:00:00</td><td>New York</td><td>150</td><td>20</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>AirportCode</th><th>AirportName</th><th>City</th><th>Country</th><th>Latitude</th><th>Longitude</th></tr>
+</thead><tbody>
+<tr><td>LAX</td><td>Los Angeles International Airport</td><td>Los Angeles</td><td>USA</td><td>-118.405594</td><td>33.942934</td></tr>
+<tr><td>JFK</td><td>John F Kennedy International Airport</td><td>New York</td><td>USA</td><td>-73.778929</td><td>40.639742</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>TerminalId</th><th>AirportCode</th><th>FloorSpace</th><th>NumberOfGates</th></tr>
+<tr><th></th><th>(&#8594; Airports.AirportCode)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>LAX</td><td>3000000</td><td>100</td></tr>
+<tr><td>2</td><td>JFK</td><td>500000</td><td>80</td></tr>
+</tbody></table></div>
+
+<div><h2>Security</h2><table><thead>
+<tr><th>RestrictionId</th><th><span style="color:#990000">SizeLimit</span></th><th><span style="color:#990000">ProhibitedItem</span></th><th>Airlines</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Flights.AirlineName)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Over 12oz</td><td>Water bottles</td><td>United</td></tr>
+<tr><td>2</td><td>More than 100ml</td><td>Chemical substances</td><td>Delta</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

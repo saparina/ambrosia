@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>studentID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Curriculum</span></h2><table><thead>
+<tr><th>curriculumID</th><th>title</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td><td>This curriculum covers basic mathematical concepts.</td></tr>
+<tr><td>2</td><td>English Language Arts</td><td>This curriculum focuses on reading comprehension and writing skills.</td></tr>
+<tr><td>3</td><td>History</td><td>This curriculum explores various historical events and periods.</td></tr>
+<tr><td>4</td><td>Science</td><td>This curriculum delves into scientific principles and phenomena.</td></tr>
+<tr><td>5</td><td>Art</td><td>This curriculum introduces students to different forms of art expression.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Topics</span></h2><table><thead>
+<tr><th>topicID</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math</td></tr>
+<tr><td>2</td><td>Reading Comprehension</td></tr>
+<tr><td>3</td><td>Writing Skills</td></tr>
+<tr><td>4</td><td>Ancient History</td></tr>
+<tr><td>5</td><td>Modern Science</td></tr>
+<tr><td>6</td><td>Visual Art</td></tr>
+</tbody></table></div>
+
+<div><h2>Curriculum_Topics</h2><table><thead>
+<tr><th>curriculumID</th><th>topicID</th></tr>
+<tr><th>(&#8594; Curriculum.curriculumID)</th><th>(&#8594; Topics.topicID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

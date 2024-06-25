@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Educational_Institutions</span></h2><table><thead>
+<tr><th>InstitutionID</th><th>Name</th><th><span style="color:#990000"><span style="color:#990000">Type</span></span></th><th>AddressID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Addresses.AddressID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC <span style="color:#990000">Kindergarten</span></td><td><span style="color:#990000">Kindergarten</span></td><td>1</td></tr>
+<tr><td>2</td><td>XYZ Kindergarten</td><td>Kindergarden</td><td>2</td></tr>
+<tr><td>3</td><td>PQR <span style="color:#990000">High School</span></td><td><span style="color:#990000">High School</span></td><td>1</td></tr>
+<tr><td>4</td><td>STU <span style="color:#990000">High School</span></td><td><span style="color:#990000">High School</span></td><td>2</td></tr>
+<tr><td>5</td><td>MNO College</td><td>College</td><td>3</td></tr>
+<tr><td>6</td><td>DEF University</td><td>University</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Addresses</span></h2><table><thead>
+<tr><th>AddressID</th><th><span style="color:#006600">Street</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">123 Main St</span></td></tr>
+<tr><td>2</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>000 Pine St</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>EnrollmentDate</th><th>InstituteID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Educational_Institutions.InstitutionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2021-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2021-01-02</td><td>2</td></tr>
+<tr><td>3</td><td>Emily</td><td>Brown</td><td>2021-01-03</td><td>3</td></tr>
+<tr><td>4</td><td>Tom</td><td>White</td><td>2021-01-04</td><td>4</td></tr>
+<tr><td>5</td><td>Nick</td><td>Green</td><td>2021-01-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>Description</th><th>StartDate</th><th>EndDate</th><th>InstituteID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Educational_Institutions.InstitutionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math 101</td><td>Introduction to Mathematics</td><td>2021-01-01</td><td>2021-05-31</td><td>1</td></tr>
+<tr><td>2</td><td>English 101</td><td>Basic English Skills</td><td>2021-02-01</td><td>2021-06-30</td><td>2</td></tr>
+<tr><td>3</td><td>Biology 101</td><td>Fundamentals of Biology</td><td>2021-03-01</td><td>2021-07-31</td><td>3</td></tr>
+<tr><td>4</td><td>Physics 101</td><td>Introduction to Physics</td><td>2021-04-01</td><td>2021-08-31</td><td>4</td></tr>
+<tr><td>5</td><td>History 101</td><td>World History Overview</td><td>2021-05-01</td><td>2021-09-30</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

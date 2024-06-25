@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Scholarships</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>amount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Academic Excellence Scholarship</td><td>2000.0</td></tr>
+<tr><td>2</td><td>Service Leadership Scholarship</td><td>1500.0</td></tr>
+<tr><td>3</td><td>Young Leader Scholarship</td><td>1000.0</td></tr>
+<tr><td>4</td><td>Needy Student Grant</td><td>500.0</td></tr>
+<tr><td>5</td><td>Artistic Talent Award</td><td>750.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Criteria</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Academic Achievement</td></tr>
+<tr><td>2</td><td>Community Service</td></tr>
+<tr><td>3</td><td>Leadership Skills</td></tr>
+<tr><td>4</td><td>Financial Need</td></tr>
+<tr><td>5</td><td>Extracurricular Activities</td></tr>
+</tbody></table></div>
+
+<div><h2>Scholarship_Criteria</h2><table><thead>
+<tr><th>scholarship_id</th><th>criterion_id</th></tr>
+<tr><th>(&#8594; Scholarships.id)</th><th>(&#8594; Criteria.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>student_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th><th>admission_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+123-456-7890</td><td>2021-08-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+123-456-7890</td><td>2021-08-01</td></tr>
+<tr><td>3</td><td>Tom</td><td>Brown</td><td>tom.brown@example.com</td><td>+123-456-7890</td><td>2021-08-01</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>alice.green@example.com</td><td>+123-456-7890</td><td>2021-08-01</td></tr>
+<tr><td>5</td><td>Mike</td><td>Black</td><td>mike.black@example.com</td><td>+123-456-7890</td><td>2021-08-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>application_id</th><th>student_id</th><th>scholarship_id</th><th>submission_date</th><th>status</th></tr>
+<tr><th></th><th>(&#8594; Students.student_id)</th><th>(&#8594; Scholarships.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2021-09-01</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2021-09-01</td><td>Approved</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2021-09-01</td><td>Rejected</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2021-09-01</td><td>Under Review</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2021-09-01</td><td>Withdrawn</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

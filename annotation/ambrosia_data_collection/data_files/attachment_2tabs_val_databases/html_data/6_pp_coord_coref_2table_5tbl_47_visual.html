@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Events Unlimited</td></tr>
+<tr><td>2</td><td>Grand Celebrations</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Event_Planner</span></h2><table><thead>
+<tr><th>id</th><th>companyId</th><th>experience</th><th>skills</th></tr>
+<tr><th></th><th>(&#8594; Company.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>3</td><td>Organization, Communication</td></tr>
+<tr><td>2</td><td>2</td><td>6</td><td>Decorating, Coordination</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Wedding_Coordinator</span></h2><table><thead>
+<tr><th>id</th><th>companyId</th><th>experience</th><th>skills</th></tr>
+<tr><th></th><th>(&#8594; Company.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td><td>2</td><td>Designing, Planning</td></tr>
+<tr><td>2</td><td>2</td><td>7</td><td>Vendor Relationships, Budgeting</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>johnsmith@gmail.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>janedoe@gmail.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alicebrown@gmail.com</td></tr>
+<tr><td>4</td><td>Mike</td><td>White</td><td>mwhite@gmail.com</td></tr>
+<tr><td>5</td><td>Emily</td><td>Black</td><td>eblack@gmail.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Salary</h2><table><thead>
+<tr><th>id</th><th>employeeId</th><th>salary</th><th>startDate</th><th>endDate</th></tr>
+<tr><th></th><th>(&#8594; Employee.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>80000</td><td>2021-01-01</td><td>2023-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>90000</td><td>2019-01-01</td><td>2022-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>85000</td><td>2020-01-01</td><td>Present</td></tr>
+<tr><td>4</td><td>4</td><td>82000</td><td>2018-01-01</td><td>2021-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>88000</td><td>2021-01-01</td><td>Present</td></tr>
+</tbody></table></div>
+
+<div><h2>Benefits</h2><table><thead>
+<tr><th>id</th><th>employeeId</th><th>healthInsurance</th><th>retirementPlan</th><th>vacationDays</th></tr>
+<tr><th></th><th>(&#8594; Employee.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>15</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>1</td><td>20</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>0</td><td>25</td></tr>
+<tr><td>4</td><td>4</td><td>0</td><td>1</td><td>30</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>1</td><td>22</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

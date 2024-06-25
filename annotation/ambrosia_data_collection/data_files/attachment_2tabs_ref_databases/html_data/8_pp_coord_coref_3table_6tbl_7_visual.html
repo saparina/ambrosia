@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Tattoo_Artists</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Experience</th><th>Style</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>7</td><td>Realism</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>5</td><td>Traditional</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>8</td><td>Neotraditional</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>9</td><td>Watercolor</td></tr>
+<tr><td>5</td><td>Charlie Green</td><td>6</td><td>Blackwork</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Piercers</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Years_Experience</th><th>Specialization</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike White</td><td>8</td><td>Body Modification</td></tr>
+<tr><td>2</td><td>Emily Black</td><td>7</td><td>Surface Anchors</td></tr>
+<tr><td>3</td><td>David Blue</td><td>9</td><td>Conchtas</td></tr>
+<tr><td>4</td><td>Steve Gray</td><td>6</td><td>Ear Lobe Expansion</td></tr>
+<tr><td>5</td><td>Kevin Orange</td><td>5</td><td>Nipple and Genital Piercing</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Age_Info</span></h2><table><thead>
+<tr><th>ID</th><th>Tattoo_ArtistID</th><th>PiercerID</th><th><span style="color:#006600">Age</span></th></tr>
+<tr><th></th><th>(&#8594; Tattoo_Artists.ID)</th><th>(&#8594; Piercers.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td><td><span style="color:#006600">30</span></td></tr>
+<tr><td>2</td><td>None</td><td>1</td><td><span style="color:#006600">30</span></td></tr>
+<tr><td>3</td><td>2</td><td>None</td><td>25</td></tr>
+<tr><td>4</td><td>None</td><td>2</td><td>25</td></tr>
+<tr><td>5</td><td>3</td><td>None</td><td>35</td></tr>
+<tr><td>6</td><td>None</td><td>3</td><td>35</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Postings</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Description</th><th>Location</th><th>Salary</th><th>Posted_Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Senior Tattoo Artist</td><td>Seeking experienced tattoo artist...</td><td>New York</td><td>70000</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>Junior Piercer</td><td>Looking for a new piercer...</td><td>Los Angeles</td><td>40000</td><td>2022-01-15</td></tr>
+<tr><td>3</td><td>Tattoo Apprentice</td><td>Apprenticeship program available...</td><td>San Francisco</td><td>30000</td><td>2022-02-01</td></tr>
+<tr><td>4</td><td>Advanced Body Piercer</td><td>Expertise in body modification...</td><td>Chicago</td><td>50000</td><td>2022-02-15</td></tr>
+<tr><td>5</td><td>Part-time Tattoo Artist</td><td>Flexible hours available...</td><td>Houston</td><td>45000</td><td>2022-03-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>Phone_Number</th><th>Application_Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alex Williams</td><td>alex@example.com</td><td>555-555-5555</td><td>2022-01-02</td></tr>
+<tr><td>2</td><td>Samantha Wilson</td><td>samantha@example.com</td><td>555-555-5556</td><td>2022-01-03</td></tr>
+<tr><td>3</td><td>Ryan Taylor</td><td>ryan@example.com</td><td>555-555-5557</td><td>2022-01-04</td></tr>
+<tr><td>4</td><td>Angela Lee</td><td>angela@example.com</td><td>555-555-5558</td><td>2022-01-05</td></tr>
+<tr><td>5</td><td>Chris Clark</td><td>chris@example.com</td><td>555-555-5559</td><td>2022-01-06</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>ID</th><th>ApplicantID</th><th>JobPostingID</th><th>Cover_Letter</th><th>Resume_URL</th><th>Status</th></tr>
+<tr><th></th><th>(&#8594; Applicants.ID)</th><th>(&#8594; Job_Postings.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Dear Hiring Manager...</td><td>http://www.resume.com/alexwilliams</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>Dear Hiring Manager...</td><td>http://www.resume.com/samanthawilson</td><td>Rejected</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>Dear Hiring Manager...</td><td>http://www.resume.com/ryantaylor</td><td>Accepted</td></tr>
+<tr><td>4</td><td>4</td><td>3</td><td>Dear Hiring Manager...</td><td>http://www.resume.com/angelalee</td><td>Interview Scheduled</td></tr>
+<tr><td>5</td><td>5</td><td>4</td><td>Dear Hiring Manager...</td><td>http://www.resume.com/chrisclark</td><td>On Hold</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

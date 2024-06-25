@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>name</th><th>position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Software Engineer</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Data Analyst</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>UI/UX Designer</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>QA Tester</td></tr>
+<tr><td>5</td><td>David Brown</td><td>DevOps Engineer</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ProjectManagers</span></h2><table><thead>
+<tr><th>id</th><th>employeeId</th><th>projectName</th><th>projectDescription</th><th>Project_Manager</th><th>Project_Duration_Estimate</th></tr>
+<tr><th></th><th>(&#8594; Employees.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Web App Development</td><td>Development of an eCommerce web app</td><td>Tom Anderson</td><td>3 weeks</td></tr>
+<tr><td>2</td><td>2</td><td>Mobile Application Development</td><td>Development of a mobile app for Android and iOS platforms</td><td>Lisa Thompson</td><td>6 months</td></tr>
+<tr><td>3</td><td>3</td><td>CRM System Implementation</td><td>Implementation of a CRM system for sales and marketing teams</td><td>Robert Clark</td><td><span style="color:#006600">8 weeks</span></td></tr>
+<tr><td>4</td><td>4</td><td>Content Management System</td><td>Building a content management system for website owners</td><td>Michelle Wilson</td><td>4 weeks</td></tr>
+<tr><td>5</td><td>5</td><td>ERP Integration</td><td>Integrating various ERP systems within a company</td><td>Chris Taylor</td><td>10 weeks</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BusinessAnalysts</span></h2><table><thead>
+<tr><th>id</th><th>employeeId</th><th>businessArea</th><th>analysisTasks</th><th>Business_Analyst</th><th>Project_Duration_Estimate</th></tr>
+<tr><th></th><th>(&#8594; Employees.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Marketing</td><td>Analyzing customer behavior and market trends</td><td>Anna Martinez</td><td>4 weeks</td></tr>
+<tr><td>2</td><td>2</td><td>Finance</td><td>Performing financial analysis and forecasting</td><td>Steven Harris</td><td>5 weeks</td></tr>
+<tr><td>3</td><td>3</td><td>Human Resources</td><td>Evaluating HR processes and policies</td><td>Laura King</td><td>7 weeks</td></tr>
+<tr><td>4</td><td>4</td><td>Operations</td><td>Optimizing supply chain operations</td><td>Kevin White</td><td>6 weeks</td></tr>
+<tr><td>5</td><td>5</td><td>Product Development</td><td>Assessing product viability and potential impact on market</td><td>Nathan Garcia</td><td><span style="color:#006600">8 weeks</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Technologies</h2><table><thead>
+<tr><th>id</th><th>technologyName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python</td></tr>
+<tr><td>2</td><td>JavaScript</td></tr>
+<tr><td>3</td><td>React Native</td></tr>
+<tr><td>4</td><td>SQL Server</td></tr>
+<tr><td>5</td><td>Node.js</td></tr>
+</tbody></table></div>
+
+<div><h2>ProjectTechnologyMapping</h2><table><thead>
+<tr><th>id</th><th>projectId</th><th>techId</th></tr>
+<tr><th></th><th>(&#8594; ProjectManagers.id)</th><th>(&#8594; Technologies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>id</th><th>skillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Agile Methodologies</td></tr>
+<tr><td>2</td><td>Scrum</td></tr>
+<tr><td>3</td><td>Waterfall</td></tr>
+<tr><td>4</td><td>Git</td></tr>
+<tr><td>5</td><td>Test Automation</td></tr>
+</tbody></table></div>
+
+<div><h2>EmployeeSkillMapping</h2><table><thead>
+<tr><th>id</th><th>empId</th><th>skillId</th></tr>
+<tr><th></th><th>(&#8594; Employees.id)</th><th>(&#8594; Skills.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Editors</span></h2><table><thead>
+<tr><th>editor_id</th><th>full_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>Emma White</td></tr>
+<tr><td>5</td><td>David Black</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Software_Programs</span></h2><table><thead>
+<tr><th>program_id</th><th>name</th><th><span style="color:#990000">version</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adobe Premiere</td><td>2021</td></tr>
+<tr><td>2</td><td>Final Cut Pro</td><td>2020</td></tr>
+<tr><td>3</td><td>DaVinci Resolve</td><td>16</td></tr>
+<tr><td>4</td><td>Avid Media Composer</td><td>2020</td></tr>
+<tr><td>5</td><td>HitFilm Express</td><td>13</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmProjects</h2><table><thead>
+<tr><th>project_id</th><th>title</th><th>release_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994-09-22</td></tr>
+<tr><td>2</td><td>The Godfather</td><td>1972-03-24</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994-10-14</td></tr>
+<tr><td>4</td><td>Schindler's List</td><td>1993-12-15</td></tr>
+<tr><td>5</td><td>Forrest Gump</td><td>1994-07-06</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>director_id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank</td><td>Capra</td></tr>
+<tr><td>2</td><td>Martin</td><td>Scorsese</td></tr>
+<tr><td>3</td><td>Quentin</td><td>Tarantino</td></tr>
+<tr><td>4</td><td>Steven</td><td>Spielberg</td></tr>
+<tr><td>5</td><td>Ronald</td><td>Reagan</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>actor_id</th><th>first_name</th><th>last_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Andy</td><td>Dufraine</td></tr>
+<tr><td>2</td><td>Tom</td><td>Hanks</td></tr>
+<tr><td>3</td><td>Leonardo</td><td>DiCaprio</td></tr>
+<tr><td>4</td><td>Elijah</td><td>Wood</td></tr>
+<tr><td>5</td><td>Kevin</td><td>Costner</td></tr>
+</tbody></table></div>
+
+<div><h2>EditorDirectorRelationship</h2><table><thead>
+<tr><th>relationship_id</th><th>director_id</th><th>editor_id</th></tr>
+<tr><th></th><th>(&#8594; Directors.director_id)</th><th>(&#8594; Editors.editor_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>ProjectActors</h2><table><thead>
+<tr><th>project_actor_id</th><th>film_project_id</th><th>actor_id</th></tr>
+<tr><th></th><th>(&#8594; FilmProjects.project_id)</th><th>(&#8594; Actors.actor_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>None</td></tr>
+<tr><td>4</td><td>3</td><td>None</td></tr>
+<tr><td>5</td><td>4</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>DirectorFilmProjects</h2><table><thead>
+<tr><th>director_film_project_id</th><th>director_id</th><th>film_project_id</th></tr>
+<tr><th></th><th>(&#8594; Directors.director_id)</th><th>(&#8594; FilmProjects.project_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>EditorSoftwarePrograms</h2><table><thead>
+<tr><th>editor_software_program_id</th><th>editor_id</th><th>software_program_id</th></tr>
+<tr><th></th><th>(&#8594; Editors.editor_id)</th><th>(&#8594; Software_Programs.program_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>2</td><td>1</td></tr>
+<tr><td>7</td><td>3</td><td>1</td></tr>
+<tr><td>8</td><td>4</td><td>1</td></tr>
+<tr><td>9</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

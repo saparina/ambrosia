@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Online_Banking_Platforms</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Platform1</td><td>www.bank1.com</td></tr>
+<tr><td>2</td><td>Platform2</td><td>www.bank2.com</td></tr>
+<tr><td>3</td><td>Platform3</td><td>www.bank3.com</td></tr>
+<tr><td>4</td><td>Platform4</td><td>www.bank4.com</td></tr>
+<tr><td>5</td><td>Platform5</td><td>www.bank5.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Features</span></h2><table><thead>
+<tr><th>feature_id</th><th><span style="color:#990000">feature_value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bill Pay</td></tr>
+<tr><td>2</td><td>Mobile App</td></tr>
+<tr><td>3</td><td>International Transfers</td></tr>
+<tr><td>4</td><td>Secure Login</td></tr>
+<tr><td>5</td><td>Account Statements</td></tr>
+</tbody></table></div>
+
+<div><h2>Online_Banking_Platforms_Features</h2><table><thead>
+<tr><th>platform_id</th><th>feature_id</th></tr>
+<tr><th>(&#8594; Online_Banking_Platforms.id)</th><th>(&#8594; Features.feature_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>3</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

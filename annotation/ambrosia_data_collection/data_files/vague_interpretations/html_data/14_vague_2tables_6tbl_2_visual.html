@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artists</h2><table><thead>
+<tr><th>artist_id</th><th>name</th><th>genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Michael Jackson</td><td>Pop</td></tr>
+<tr><td>2</td><td>Elvis Presley</td><td>Rock and Roll</td></tr>
+<tr><td>3</td><td>Madonna</td><td>Pop</td></tr>
+<tr><td>4</td><td>Prince</td><td>Pop</td></tr>
+<tr><td>5</td><td>Beyonce</td><td>R&B</td></tr>
+</tbody></table></div>
+
+<div><h2>Venues</h2><table><thead>
+<tr><th>venue_id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wembley Stadium</td><td>London</td></tr>
+<tr><td>2</td><td>Staples Center</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Nissan Stadium</td><td>Nashville</td></tr>
+<tr><td>4</td><td>York Arena</td><td>New York</td></tr>
+<tr><td>5</td><td>Hollywood Bowl</td><td>Los Angeles</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>event_id</th><th>artist_id</th><th>venue_id</th><th>event_date</th></tr>
+<tr><th></th><th>(&#8594; Artists.artist_id)</th><th>(&#8594; Venues.venue_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-08-17</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-09-16</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-10-07</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-10-21</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-11-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">On_Sale_Date</span></h2><table><thead>
+<tr><th>sale_id</th><th>event_id</th><th>start_time</th><th>end_time</th></tr>
+<tr><th></th><th>(&#8594; Events.event_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>12:00</td><td>23:59</td></tr>
+<tr><td>2</td><td>2</td><td>12:00</td><td>23:59</td></tr>
+<tr><td>3</td><td>3</td><td>12:00</td><td>23:59</td></tr>
+<tr><td>4</td><td>4</td><td>12:00</td><td>23:59</td></tr>
+<tr><td>5</td><td>5</td><td>12:00</td><td>23:59</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Pre_sale_Date</span></h2><table><thead>
+<tr><th>presale_id</th><th>event_id</th><th>start_time</th><th>end_time</th></tr>
+<tr><th></th><th>(&#8594; Events.event_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>10:00</td><td>17:00</td></tr>
+<tr><td>2</td><td>2</td><td>10:00</td><td>17:00</td></tr>
+<tr><td>3</td><td>3</td><td>10:00</td><td>17:00</td></tr>
+<tr><td>4</td><td>4</td><td>10:00</td><td>17:00</td></tr>
+<tr><td>5</td><td>5</td><td>10:00</td><td>17:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Tickets</h2><table><thead>
+<tr><th>ticket_id</th><th>event_id</th><th>seat_number</th><th>price</th><th>ON_SALE_DATE_ID</th><th>PRESALE_DATE_ID</th></tr>
+<tr><th></th><th>(&#8594; Events.event_id)</th><th></th><th></th><th>(&#8594; On_Sale_Date.sale_id)</th><th>(&#8594; Pre_sale_Date.presale_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A1</td><td>20</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>A2</td><td>20</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>2</td><td>A1</td><td>20</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>3</td><td>A1</td><td>20</td><td>3</td><td>3</td></tr>
+<tr><td>5</td><td>4</td><td>A1</td><td>20</td><td>4</td><td>4</td></tr>
+<tr><td>6</td><td>5</td><td>A1</td><td>20</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

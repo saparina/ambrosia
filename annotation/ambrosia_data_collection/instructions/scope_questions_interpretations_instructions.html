@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        .table-container div {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+        table {
+            width: auto;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        ol li {
+            margin-bottom: 5px; /* Adjust the space as needed */
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        img {
+        width: 650px;
+        height: auto
+        }
+    </style>
+</head>
+<body style="width: 1000px; margin: 0 auto;">
+
+<h3><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Objective</strong></span></span></span></h3>
+
+<span style="text-align:justify"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">You will be given a set of tables covering a specific topic (e.g., Education or Banking) and templates of an <strong>ambiguous question and its interpretations</strong>.Your task is <strong>to format and paraphrase</strong> the question and its interpretations to appear natural and grammatical. 
+<ul style="margin-left:40px;">
+    <li> <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">
+    You need to understand the information presented in the tables to ensure the template and your question have the same meaning, i.e., they must ask about the same thing.</span></span></span>
+    <li> <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">
+        You also need to preserve ambiguity when writing the question.</span></span></span>
+    </li>
+</ul>
+
+<h4 style="text-align:justify"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">❗️<strong>Please carefully read more detailed instructions below. You can also download the instructions in PDF format <a href="https://drive.google.com/file/d/1t32lhTKTBuKBpYTCyKQ0Bj0_pbmZ9zx2/view?usp=sharing" target="_blank">here</a>.
+</strong></span></span></span></h4>
+
+<h4><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Context</strong></span></span></span></h4>
+
+<p><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">You will be given a database (a set of tables) in some domain (e.g., Education, Banking) and their content. </span></span></span></p>
+
+<p style="margin-left:40px"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><em>Example:&nbsp;</em></strong></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">the following tables are representative of the Fitness domain: &nbsp;</span></span></span></p>
+
+<p style="margin-left:40px">
+    <div class="table-container" style="float:left; margin-bottom:0px; margin-top:0px; width:280px; margin-left:40px" >
+        <div>
+            <h2>Fitness_Studio</h2>
+            <table style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>FitLife</td><td>123 Main St</td></tr>
+                    <tr><td>2</td><td>Wellness Zone</td><td>456 Market St</td></tr>
+                    <tr><td>3</td><td>Active Life</td><td>678 Pine St</td></tr>
+                    <!-- Additional rows here -->
+                </tbody>
+            </table>
+        </div>
+</div>
+</p>
+
+<p style="margin-left:40px">
+    <div class="table-container" style="float:left; margin-bottom:0px; margin-top:0px; width:360px; margin-left:40px" >
+        <div>
+            <h2>Exercise_Program</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>program_name</th>
+                        <th>description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Yoga</td><td>A mind and body practice.</td></tr>
+                    <tr><td>2</td><td>Zumba</td><td>Dance for fitness.</td></tr>
+                    <tr><td>3</td><td>Crossfit</td><td> Intense strength training.</td></tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+</p>
+
+
+<p style="margin-left:40px">
+    <div class="table-container" style="float:left; margin-bottom:0px; margin-top:0px; margin-left:40px; width:240px;" >
+        <div>
+            <h2>Loyalty_Program</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>member_id <br>(&#8594; Member.id)</th>
+                        <th>points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>1</td><td>100</td></tr>
+                    <tr><td>2</td><td>2</td><td>NULL</td></tr>
+                    <tr><td>3</td><td>3</td><td>200</td></tr>
+                    <tr><td>4</td><td>4</td><td>150</td></tr>
+
+                    <!-- Additional rows here -->
+                </tbody>
+            </table>
+        </div>
+</div>
+</p>
+
+<p style="margin-left:40px">
+    <div class="table-container" style="float:left; margin-bottom:0px; margin-top:0px; margin-left:40px; width:400px;" >
+        <div>
+            <h2>Fitness_Studio_Exercise_Program</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>fitness_studio_id <br>(&#8594; Fitness_Studio.id)</th>
+                        <th>exercise_program_id <br>(&#8594; Exercise_Program.id)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>2</td></tr>
+                    <tr><td>2</td><td>1</td></tr>
+                    <tr><td>3</td><td>1</td></tr>
+                    <tr><td>3</td><td>2</td></tr>
+                    <tr><td>3</td><td>3</td></tr>
+                    <!-- Additional rows here -->
+                </tbody>
+            </table>
+        </div>
+</div>
+</p>
+
+
+<p style="margin-top:320px; margin-left:500px"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"></span></span></span>
+    <ul style="margin-left:450px;">
+        <li> <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Usually, there is at least one table connecting two tables in the database. This table and two connected tables are central to the template and its corresponding question.</strong></span></span></span>
+
+<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><br>For example, each fitness studio is connected to one or more fitness classes through <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Fitness_Studio_Exercise_Program</span></span></span></span>.</li>
+
+</ul></p>
+
+<p style="margin-top:150px;"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Your task is to write a question (based on the provided template) which is essentially a request to extract an answer from the database. When writing the question, you must ensure that it has <strong>the same intent (asks about the same columns) as the template</strong>.</span></span></span></p>
+<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><em>&nbsp; &nbsp; Example</em></strong>: the three templates below reflect <strong>different</strong> intents: </span></span></span>
+
+<ul style="margin-left:5px;">
+    <li> <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What</span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="background-color:#fffcf5"> <span style="color:#990000">program_name</span> of <span style="color:#186e16">Exercise_Program</span> </span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">do we have for every</span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"> </span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#1430b2"><span style="background-color:#fffcf5">Fitness_Studio</span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">?</span></span></span></span> 
+    </li>
+    <li> <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What</span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="background-color:#fffcf5"> <span style="color:#990000">description</span> of <span style="color:#186e16">Exercise_Program</span> </span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">do we have for every</span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"> </span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#1430b2"><span style="background-color:#fffcf5">Fitness_Studio</span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">?</span></span></span></span> 
+    </li>
+<li> <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What</span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="background-color:#fffcf5"> <span style="color:#990000">program_name</span> and <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="background-color:#fffcf5"> <span style="color:#990000">description</span> of <span style="color:#186e16">Exercise_Program</span> </span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">do we have for every</span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"> </span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#1430b2"><span style="background-color:#fffcf5">Fitness_Studio</span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">?</span></span></span></span> <div style="margin-top:5pt">
+    <!-- <span style="font-size:12pt;"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">The first template asks to show the <strong>fitness classes</strong> available at the studios, while the second template asks to show <strong>descriptions</strong> of the classes and the third one asks to show both <strong>names and descriptions</strong> of classes.</div><div style="margin-top:5pt"> -->
+        <span style="font-size:12pt;"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Please note that you will only see <strong>only one</strong> of the possible intents each time.</span></span></span>
+</div>
+    </li>
+
+</ul>
+
+<p><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Templates</strong></span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"></span>You will be given a template of an ambiguous question (due to words &ldquo;<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">every</span></span></span></span>&rdquo; or &ldquo;<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">each</span></span></span></span>&rdquo;).</span></span></span></p>
+
+<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><em>&nbsp; &nbsp; Example</em></strong>:</span></span></span>
+
+<p style="margin-left:40px"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"><b>Ambiguous question template:</b><br/>What</span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="background-color:#fffcf5"> <span style="color:#990000">program_name</span> of <span style="color:#186e16">Exercise_Program</span> </span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">do we have for every</span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"> </span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#1430b2"><span style="background-color:#fffcf5">Fitness_Studio</span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">?</span></span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"> 
+    This means that the same question has <strong>two different interpretations</strong>:</span></span></span></p>
+
+<ol>
+	<li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">The request to show <strong>something common</strong> for all items.</span></span></span>
+
+    <div style="margin-top:5pt">
+	<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><em>Example</em></strong></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">:</span></span></span>
+        </div>
+    
+    <div style="margin-top:5pt"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; <span style="background-color:#fffcf5"><b>Template of interpretation 1:</b></span><br/>&nbsp; &nbsp; <span style="background-color:#fffcf5">Give me</span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="background-color:#fffcf5"> <span style="color:#990000">program_name</span> of <span style="color:#186e16">Exercise_Program</span> </span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"> that is common for all </span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"> </span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#1430b2"><span style="background-color:#fffcf5">Fitness_Studio</span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">.</span></span></span></span>
+    </div>
+    <div style="margin-top:5pt">
+	<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp;  <em>i.e., we want to retrieve <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Yoga</span></span></span></span> as all studios in the database offer yoga classes (see table <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Fitness_Studio_Exercise_Program</span></span></span></span>).</em></span></span></span>
+</div></span></span></span></li>
+</ol>
+
+<!-- <table cellspacing="0" style="border-collapse:collapse; border:none; margin-left:65px; width:24px; height:24px">
+	<tbody>
+		<tr><td>Yoga</td></tr>
+	</tbody>
+</table> -->
+<!-- 
+<p style="margin-left:48px"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">as all studios in the database offer yoga classes (see table <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Fitness_Studio_Exercise_Program</span></span></span></span>).</span></span></span></p> -->
+
+
+<ol start="2">
+	<li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">The request to show items and <strong>a list of corresponding properties</strong>.</span></span></span>
+        <div style="margin-top:5pt">
+        <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><em>Example</em></strong></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">:</span></span></span>
+    </div>
+    <div style="margin-top:5pt">
+    <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; <span style="background-color:#fffcf5"><b>Template of interpretation 2:</b></span><br/>&nbsp; &nbsp; <span style="background-color:#fffcf5">For each <span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"> </span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#1430b2"><span style="background-color:#fffcf5">Fitness_Studio</span></span></span></span></span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">, what is the corresponding </span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="background-color:#fffcf5"> <span style="color:#990000">program_name</span> of <span style="color:#186e16">Exercise_Program</span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">?</span></span></span></span>
+    </div>
+    <div style="margin-top:5pt"></div>
+	<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; <em>i.e., we want to retrieve that fitness studio <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">FitLife</span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"> offers </span></span></span></span> <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Yoga</span></span></span></span>, <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Zumba</span></span></span></span> and <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">CrossFit</span></span></span></span> classes, fitness studio <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Wellness Zone</span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"> offers only </span></span></span></span> <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Yoga</span></span></span></span>, fitness studio <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Active Life</span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"> — </span></span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Yoga</span></span></span></span> and </span></span></span></span> <span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"><span style="background-color:#f3f3f3">Zumba</span></span></span></span>.</em></div></span></span></span></li>
+</ol>
+
+<!-- <table cellspacing="0" style="border-collapse:collapse; border:none; margin-left:65px; width:270px">
+	<tbody>
+		<tr>
+			<td >FitLife</td>
+			<td>Yoga, Zumba, CrossFit</td>
+		</tr>
+		<tr>
+			<td >Wellness Zone</td>
+			<td>Yoga</td>
+		</tr>
+		<tr>
+			<td >Active Life</td>
+			<td>Yoga, Zumba</td>
+		</tr>
+	</tbody>
+</table> -->
+
+
+<p><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Interface</strong></span></span></span></p>
+
+<img src="images/example.png" alt="Interface">
+
+<p><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Guidelines for annotations</strong></span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Your task is to write an ambiguous question and its interpretations based on the given templates that will sound natural and grammatical. 
+
+<ol>
+    <li style="list-style-type:decimal; font-size: 13pt;"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>All unformatted table and column names must be replaced with plain words, preferably synonyms.</strong></span></span>
+        <div style="margin-top:10pt">
+            <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><em>Example</em></strong></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">:<br>Let's consider writing <strong>ambiguous question</strong> based on the ambiguous question template above:</span></span></span></div>
+    
+<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ✅ </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What exercise programs does each fitness studio offer?</span></span></span></span>
+    
+    </br><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ❌ </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What Exercise_Programs does each Fitness_Studio offer?</span></span></span></span>
+
+</div>
+</ol>
+
+<ol start="2">
+<li style="list-style-type:decimal; font-size: 13pt;"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">You&rsquo;re welcome to simplify the structure (e.g. remove unnecessary words or paraphrase) but <strong>you must check the relevant tables to ensure that the question and its interpretations express the same request as the templates</strong> and would yield the same answer.</strong></span></span></span>
+    <div style="margin-top:10pt">
+    <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><em>Example</em></strong></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">: You can use &ldquo;</span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">training program</span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&rdquo; and omit the unnecessary word &ldquo;</span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">fitness</span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&rdquo;:</span></span></span>
+</div><div style="margin-top:5pt">
+<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ✅ </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What training programs are available at each studio?</span></span></span></span>
+</div>
+<div style="margin-top:5pt"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">but you can&rsquo;t further simplify &ldquo;<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">training programs</span></span></span></span>&rdquo; to &ldquo;</span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">programs</span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&rdquo; because then the question can be interpreted as a request to show loyalty programs instead of exercise programs (the database has a table </span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#630c9d"><span style="background-color:#f3f3f3">Loyalty_Program</span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">):</span></span></span>
+</div>
+<div style="margin-top:5pt"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ❌ </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What programs are available at each studio?</span></span></span></span>
+</div>    
+<div style="margin-top:5pt"><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Note that if there is no </span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#630c9d"><span style="background-color:#f3f3f3">Loyalty_Program</span></span></span></span><span style="font-size:12pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"> </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">table in the database (or similar), this question would be allowed.</span></span></span>
+</div>  
+<div style="margin-top:5pt">
+<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">You can also write a question in the form of an instruction or command (as you would ask an assistant):</span></span></span> 
+</div>
+<div style="margin-top:5pt">
+<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ✅ </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">Give me the exercise programs that every fitness studio has.</span></span></span></span>
+</div>
+</ol>
+    
+
+<ol start="3">
+    <li style="list-style-type:decimal; font-size: 13pt;"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>You must maintain ambiguity when writing the question and a reading of each interpretation.</strong></strong></span></span></span>
+        <div style="margin-top:10pt">
+            <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><em>Example</em></strong></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">: The following paraphrase of the question template is not ambiguous as it has only one reading (&rdquo;show smth common&ldquo;):</span></span></span>
+        </div><div style="margin-top:5pt">
+        <span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ❌ </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What training programs are offered at all fitness studios?</span></span></span></span>
+        </div>
+    </ol>
+    
+<!-- </br><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ✅ </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What are the training programs offered by every fitness studio?</span></span></span></span>
+</br><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ✅ </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What training programs are available at each studio?</span></span></span></span>
+</br><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ❌ </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">What programs are available at each studio?</span></span></span></span>
+</br><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">The last example is incorrect because if you use &ldquo;<span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">training programs</span></span></span></span>&rdquo; instead of &ldquo;</span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">programs</span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&rdquo;, the question can be read as a request to show loyalty programs instead of exercise programs (the database has a table </span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#630c9d"><span style="background-color:#f3f3f3">Loyalty_Program</span></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">). Note that if there is no </span></span></span><span style="font-size:11pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#630c9d"><span style="background-color:#f3f3f3">Loyalty_Program</span></span></span></span><span style="font-size:12pt"><span style="font-family:'Roboto Mono',monospace"><span style="color:#000000"> </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">table in the database (or similar), this question would have the same meaning as its template and would be allowed.</span></span></span> -->
+
+<p><span style="font-size:13pt; margin-top:5pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>The same rules apply to writing interpretations.</strong></span></span></span>
+    <!-- <div style="margin-top:5pt">
+        <span style="font-size:12pt; margin-left:40px"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong><em>Example</em></strong></span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">:</span></span></span>
+     <div style="margin-top:5pt">
+        <span style="font-size:12pt; margin-left:40px"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>&nbsp; Interpretation 1</strong> (the request to show something <strong>common</strong> for all items):</span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"></span></span></span></span></br>
+        <span style="font-size:12pt; margin-left:40px"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ✅  </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">Show the workout programs that all fitness studios offer.</span></span></span></span>
+        </div>
+        <div style="margin-top:5pt">
+            <span style="font-size:12pt; margin-left:40px"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>&nbsp; Interpretation 2</strong> (the request to show <strong>items and a list</strong> of corresponding properties):</span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5"></span></span></span></span></br>
+            <span style="font-size:12pt; margin-left:40px"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">&nbsp; &nbsp; ✅  </span></span></span><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><span style="background-color:#fffcf5">For each fitness studio, show the exercise programs it offers.</span></span></span></span>
+            </div> -->
+    </p>
+
+    <p><span style="font-size:12pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Example of a completed annotation:</p> 
+
+    <img src="images/example2.png" alt="Interface">
+
+
+<div style="border: 1px solid #000000; padding: 0 20px;">
+<h4><span style="font-size:16pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000"><strong>Process:</strong></span></span></span></h4>
+<ol>
+	<li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:14pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Read the </span></span></span><span style="font-size:14"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">template question.&nbsp;</span></span></span></li>
+	<li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:14pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Replace table and column names with their common-language equivalents. Check formatting.</span></span></span></li>
+	<li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:14pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Rephrase to a more natural question.</span></span></span></li>
+	<li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:14pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Ensure the question reflects the same request as the original template: consider the context of the tables.</span></span></span></li>
+	<li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:14pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">Ensure the question is ambiguous.</strong></span></span></span></li>
+    <li style="list-style-type:decimal; font-size: 14pt;"><span style="font-size:14pt"><span style="font-family:Roboto,sans-serif"><span style="color:#000000">
+    Repeat steps 1-4 to write the two interpretations the question has.</span></span></span></li>
+</ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Degree</span></h2><table><thead>
+<tr><th>degreeID</th><th>title</th><th>major</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bachelor of Arts</td><td>Investigative Journalism</td></tr>
+<tr><td>2</td><td>Master of Science</td><td>Data Journalism</td></tr>
+<tr><td>3</td><td>Doctor of Philosophy</td><td>Mass Communication</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Certificate</span></h2><table><thead>
+<tr><th>certificateID</th><th>name</th><th>issueDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Certified Data Analyst</td><td>2021-06-15</td></tr>
+<tr><td>2</td><td>Advanced Reporting Skills</td><td>2021-08-17</td></tr>
+<tr><td>3</td><td>Investigative Techniques</td><td>2021-09-03</td></tr>
+<tr><td>4</td><td>Public Relations Management</td><td>2021-10-08</td></tr>
+<tr><td>5</td><td>Crisis Communications</td><td>2021-10-20</td></tr>
+</tbody></table></div>
+
+<div><h2>Investigative_Journalist</h2><table><thead>
+<tr><th>journalistID</th><th>firstName</th><th>lastName</th><th>degreeID</th><th>certificateID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Degree.degreeID)</th><th>(&#8594; Certificate.certificateID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Emily</td><td>Johnson</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Lisa</td><td>Brown</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>Chris</td><td>Green</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Article</h2><table><thead>
+<tr><th>articleID</th><th>headline</th><th>content</th><th>publishedDate</th><th>journalistID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Investigative_Journalist.journalistID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Political Scandals Exposed</td><td>A detailed investigation into political scandals.</td><td>2021-11-01</td><td>1</td></tr>
+<tr><td>2</td><td>Environmental Disasters Averted</td><td>An investigative report on how environmental disasters were averted thanks to timely action.</td><td>2021-11-10</td><td>2</td></tr>
+<tr><td>3</td><td>Healthcare System Overhauled</td><td>Exploring the changes in the healthcare system that have led to improved outcomes.</td><td>2021-11-20</td><td>3</td></tr>
+<tr><td>4</td><td>Economic Recovery Underway</td><td>How economic recovery measures are helping businesses and individuals.</td><td>2021-11-25</td><td>4</td></tr>
+<tr><td>5</td><td>Technology Advances Transforming Society</td><td>The impact of rapid technological advancements on society.</td><td>2021-12-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Source</h2><table><thead>
+<tr><th>sourceID</th><th>name</th><th>type</th><th>contactInfo</th><th>articleID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Article.articleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Government Agency</td><td>Official Reports</td><td>www.govagency.com/reports</td><td>1</td></tr>
+<tr><td>2</td><td>Nonprofit Organization</td><td>Research Papers</td><td>www.nonprofitorg.org/papers</td><td>2</td></tr>
+<tr><td>3</td><td>Local Business</td><td>Financial Statements</td><td>www.localbusiness.com/financials</td><td>3</td></tr>
+<tr><td>4</td><td>International NGO</td><td>Annual Reports</td><td>www.internationalgov.org/annuals</td><td>4</td></tr>
+<tr><td>5</td><td>Academic Institution</td><td>Studies & Surveys</td><td>www.acadinst.edu/studies</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

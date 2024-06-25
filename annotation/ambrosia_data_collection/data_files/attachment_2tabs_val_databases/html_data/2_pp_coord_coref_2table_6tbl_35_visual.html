@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Tourist_Attractions</span></h2><table><thead>
+<tr><th>AttractionID</th><th>Name</th><th>Location</th><th>EntranceFee</th><th>OpeningHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Big Ben</td><td><span style="color:#006600">London</span></td><td>10.0</td><td>9am - 7pm</td></tr>
+<tr><td>2</td><td>Eiffel Tower</td><td>Paris</td><td>20.0</td><td>9am - 11pm</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Local_Markets</span></h2><table><thead>
+<tr><th>MarketID</th><th>Name</th><th>Location</th><th>OperatingDays</th><th>ProductsSold</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Borough Market</td><td><span style="color:#006600">London</span></td><td>Mon - Sat</td><td>fruits, vegetables, meats, cheese, baked goods</td></tr>
+<tr><td>2</td><td>Les Halles de Lyon</td><td>Lyon</td><td>Mon - Sun</td><td>seafood, meats, cheeses, produce</td></tr>
+</tbody></table></div>
+
+<div><h2>Accommodations</h2><table><thead>
+<tr><th>AccomodationID</th><th>Name</th><th>Address</th><th>StarRating</th><th>PricePerNight</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hotel Royal</td><td>New York City</td><td>3</td><td>180.0</td></tr>
+<tr><td>2</td><td>Grand Hyatt</td><td>New York City</td><td>5</td><td>360.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>RestaurantID</th><th>Name</th><th>TypeOfCuisine</th><th>Location</th><th>AveragePriceForMeal</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Le Jules Verne</td><td>French</td><td>Paris</td><td>100.0</td></tr>
+<tr><td>2</td><td>The Capital Grille</td><td>Steakhouse</td><td>New York City</td><td>75.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Tours</h2><table><thead>
+<tr><th>TourID</th><th>Name</th><th>Duration</th><th>StartingLocation</th><th>Cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Statue of Liberty Cruise</td><td>2 hours</td><td>New York City</td><td>25.0</td></tr>
+<tr><td>2</td><td>Louvre Museum Guided Tour</td><td>3 hours</td><td>Paris</td><td>40.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>EventID</th><th>Name</th><th>Date</th><th>Time</th><th>Venue</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concert at Madison Square Garden</td><td>2022-11-10</td><td>8PM</td><td>Madison Square Garden</td><td>A live concert by popular music artist.</td></tr>
+<tr><td>2</td><td>Exhibition at MOMA</td><td>2022-11-11</td><td>10AM - 6PM</td><td>MOMA New York</td><td>An art exhibition featuring famous artists.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

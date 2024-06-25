@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Pick_Up_Locations</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">LocationName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Zone A</span></td></tr>
+<tr><td>2</td><td>Zone B</td></tr>
+<tr><td>3</td><td>Zone C</td></tr>
+<tr><td>4</td><td>Zone D</td></tr>
+<tr><td>5</td><td>Zone E</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>AirlineID</th><th>Name</th><th>Code</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>American</td><td>AA</td></tr>
+<tr><td>2</td><td>United</td><td>UA</td></tr>
+<tr><td>3</td><td>Delta</td><td>DL</td></tr>
+<tr><td>4</td><td>Southwest</td><td>WN</td></tr>
+<tr><td>5</td><td>Alaska</td><td>AS</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>FlightNumber</th><th>DepartureTime</th><th>Destination</th><th>Origin</th><th>AirlineID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airlines.AirlineID)</th></tr>
+</thead><tbody>
+<tr><td>101</td><td>2023-04-01 10:00:00</td><td>New York</td><td>Los Angeles</td><td>1</td></tr>
+<tr><td>102</td><td>2023-04-01 11:00:00</td><td>San Francisco</td><td>Chicago</td><td>2</td></tr>
+<tr><td>103</td><td>2023-04-01 12:00:00</td><td>Dallas</td><td>Atlanta</td><td>3</td></tr>
+<tr><td>104</td><td>2023-04-01 13:00:00</td><td>Seattle</td><td>Honolulu</td><td>4</td></tr>
+<tr><td>105</td><td>2023-04-01 14:00:00</td><td>Miami</td><td>Boston</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>PassengerID</th><th>FirstName</th><th>LastName</th><th>PhoneNumber</th><th>Email</th><th>PickedUpFrom</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Pick_Up_Locations.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>+1234567890</td><td>john.doe@example.com</td><td>None</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>+0987654321</td><td>jane.smith@example.com</td><td>None</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>+1112223333</td><td>michael.johnson@example.com</td><td>None</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>+2223334444</td><td>emily.williams@example.com</td><td>None</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>+3334445555</td><td>david.brown@example.com</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Rentals</span></h2><table><thead>
+<tr><th>RentalID</th><th>PickUpDate</th><th>DropOffDate</th><th>CarModel</th><th>CustomerID</th><th>PickUpLocationID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Passengers.PassengerID)</th><th>(&#8594; Pick_Up_Locations.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-04-01 09:00:00</td><td>2023-04-01 18:00:00</td><td>Toyota Camry</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2023-04-02 09:00:00</td><td>2023-04-02 18:00:00</td><td>Ford Explorer</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2023-04-03 09:00:00</td><td>2023-04-03 18:00:00</td><td>Chevrolet Malibu</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>2023-04-04 09:00:00</td><td>2023-04-04 18:00:00</td><td>Nissan Altima</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>2023-04-05 09:00:00</td><td>2023-04-05 18:00:00</td><td>Honda Accord</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Shuttles</span></h2><table><thead>
+<tr><th>ShuttleID</th><th>Schedule</th><th>Terminal</th><th>Capacity</th><th>PickUpLocationID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Pick_Up_Locations.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-04-01 07:00:00</td><td>1</td><td>10</td><td>1</td></tr>
+<tr><td>2</td><td>2023-04-02 07:00:00</td><td>2</td><td>12</td><td>2</td></tr>
+<tr><td>3</td><td>2023-04-03 07:00:00</td><td>3</td><td>8</td><td>3</td></tr>
+<tr><td>4</td><td>2023-04-04 07:00:00</td><td>4</td><td>10</td><td>4</td></tr>
+<tr><td>5</td><td>2023-04-05 07:00:00</td><td>5</td><td>12</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Schools</span></h2><table><thead>
+<tr><th>id</th><th>schoolName</th><th>headTeacher</th><th>address</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Elementary School</span></td><td><span style="color:#006600">Mrs. Thompson</span></td><td>123 Main St.</td><td>555-0198</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Elementary School</span></td><td>Mr. Smith</td><td>456 Elm St.</td><td>555-0199</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Middle School</span></td><td><span style="color:#006600">Mrs. Thompson</span></td><td>789 Oak St.</td><td>555-0200</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Middle School</span></td><td>Ms. Johnson</td><td>101 Pine St.</td><td>555-0201</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>phoneNumber</th><th>subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>johnd@example.com</td><td>555-0111</td><td>Math</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>janes@example.com</td><td>555-0112</td><td>English</td></tr>
+<tr><td>3</td><td>Bob</td><td>White</td><td>bwhite@example.com</td><td>555-0113</td><td>History</td></tr>
+<tr><td>4</td><td>Alice</td><td>Green</td><td>agreen@example.com</td><td>555-0114</td><td>Art</td></tr>
+<tr><td>5</td><td>Tom</td><td>Black</td><td>tblack@example.com</td><td>555-0115</td><td>Physical Education</td></tr>
+</tbody></table></div>
+
+<div><h2>Classes</h2><table><thead>
+<tr><th>id</th><th>className</th><th>teacherId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Teachers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Class1</td><td>1</td></tr>
+<tr><td>2</td><td>Class2</td><td>2</td></tr>
+<tr><td>3</td><td>Class3</td><td>3</td></tr>
+<tr><td>4</td><td>Class4</td><td>4</td></tr>
+<tr><td>5</td><td>Class5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>classId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Classes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>StudentA</td><td>LastA</td><td>1</td></tr>
+<tr><td>2</td><td>StudentB</td><td>LastB</td><td>2</td></tr>
+<tr><td>3</td><td>StudentC</td><td>LastC</td><td>3</td></tr>
+<tr><td>4</td><td>StudentD</td><td>LastD</td><td>4</td></tr>
+<tr><td>5</td><td>StudentE</td><td>LastE</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

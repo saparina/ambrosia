@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Film_Festival</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Location</th><th>Date</th><th>Committee_Member</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cannes Film Festival</td><td>France</td><td>2021-07-06</td><td><span style="color:#006600">Gerardo Prat</span></td></tr>
+<tr><td>2</td><td>Venice Film Festival</td><td>Italy</td><td>2021-09-03</td><td>Jane Doe</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Award</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Description</th><th>Prize_Money</th><th>Committee_Member</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Best Picture</td><td>The best film of the festival.</td><td>100000.0</td><td><span style="color:#006600">Gerardo Prat</span></td></tr>
+<tr><td>2</td><td>Best Director</td><td>The most outstanding directorial work.</td><td>50000.0</td><td>John Smith</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Director</th><th>Year</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Christopher Nolan</td><td>2010</td><td>Science Fiction</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>Quentin Tarantino</td><td>1994</td><td>Crime</td></tr>
+</tbody></table></div>
+
+<div><h2>Festival_Entry</h2><table><thead>
+<tr><th>ID</th><th>Movie_ID</th><th>Festival_ID</th></tr>
+<tr><th></th><th>(&#8594; Movie.ID)</th><th>(&#8594; Film_Festival.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Winner</h2><table><thead>
+<tr><th>ID</th><th>Movie_ID</th><th>Award_ID</th></tr>
+<tr><th></th><th>(&#8594; Movie.ID)</th><th>(&#8594; Award.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

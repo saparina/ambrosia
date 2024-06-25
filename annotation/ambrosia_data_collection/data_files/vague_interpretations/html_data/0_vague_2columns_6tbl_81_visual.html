@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Office</h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000">Office_Address</span></th><th><span style="color:#990000">City</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123 Main St</td><td>New York</td></tr>
+<tr><td>2</td><td>456 Elm St</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>789 Oak St</td><td>Chicago</td></tr>
+<tr><td>4</td><td>012 Pine St</td><td>Miami</td></tr>
+<tr><td>5</td><td>321 Fir St</td><td>Boston</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>ID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering</td></tr>
+<tr><td>2</td><td>Marketing</td></tr>
+<tr><td>3</td><td>Human Resources</td></tr>
+<tr><td>4</td><td>Finance</td></tr>
+<tr><td>5</td><td>IT</td></tr>
+</tbody></table></div>
+
+<div><h2>Internship_Position</h2><table><thead>
+<tr><th>ID</th><th>Position_Title</th><th>Description</th><th>Duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineering Intern</td><td>Help develop software applications.</td><td>12</td></tr>
+<tr><td>2</td><td>Graphic Design Intern</td><td>Create visual designs for marketing materials.</td><td>12</td></tr>
+<tr><td>3</td><td>HR Intern</td><td>Assist with recruitment and onboarding processes.</td><td>12</td></tr>
+<tr><td>4</td><td>Financial Analyst Intern</td><td>Analyze financial data and support decision-making.</td><td>12</td></tr>
+<tr><td>5</td><td>Network Engineer Intern</td><td>Support network infrastructure and troubleshoot issues.</td><td>12</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>ID</th><th>First_Name</th><th>Last_Name</th><th>Email</th><th>Phone_Number</th><th>Hire_Date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>+1 234-567-8901</td><td>2024-02-19 12:27:01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>+1 345-678-9012</td><td>2024-02-19 12:27:01</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>alice.johnson@example.com</td><td>+1 456-789-0123</td><td>2024-02-19 12:27:01</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>bob.williams@example.com</td><td>+1 567-890-1234</td><td>2024-02-19 12:27:01</td></tr>
+<tr><td>5</td><td>Emma</td><td>Brown</td><td>emma.brown@example.com</td><td>+1 678-901-2345</td><td>2024-02-19 12:27:01</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Posting</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Description</th><th>Required_Skills</th><th>Salary</th><th>Application_Deadline</th><th>Office_ID</th><th>Departments_ID</th><th>Internships_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Office.ID)</th><th>(&#8594; Department.ID)</th><th>(&#8594; Internship_Position.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td><td>Design, code, and maintain software systems.</td><td>JavaScript, HTML, CSS</td><td>80000.0</td><td>2023-05-31 23:59:59</td><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Digital Marketing Specialist</td><td>Plan and execute digital marketing campaigns.</td><td>SEO, SEM, Social Media</td><td>60000.0</td><td>2023-05-31 23:59:59</td><td>2</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Recruiter</td><td>Source, screen, and interview candidates.</td><td>Applicant Tracking Systems</td><td>50000.0</td><td>2023-05-31 23:59:59</td><td>3</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Accountant</td><td>Prepare financial reports and analyze data.</td><td>Excel, QuickBooks</td><td>65000.0</td><td>2023-05-31 23:59:59</td><td>4</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>System Administrator</td><td>Install, configure, and maintain computer systems.</td><td>Linux, Windows Server</td><td>70000.0</td><td>2023-05-31 23:59:59</td><td>5</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicant</h2><table><thead>
+<tr><th>ID</th><th>Full_name</th><th>Email</th><th>Phone_number</th><th>Resume_url</th><th>Date_applied</th><th>Job_posting_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Job_Posting.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@email.com</td><td>+1 234-567-8901</td><td>https://www.example.com/resume-john-doe</td><td>2024-02-19 12:27:01</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@email.com</td><td>+1 345-678-9012</td><td>https://www.example.com/resume-jane-smith</td><td>2024-02-19 12:27:01</td><td>2</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alicejohnson@email.com</td><td>+1 456-789-0123</td><td>https://www.example.com/resume-alice-johnson</td><td>2024-02-19 12:27:01</td><td>3</td></tr>
+<tr><td>4</td><td>Bob Williams</td><td>bobwilliams@email.com</td><td>+1 567-890-1234</td><td>https://www.example.com/resume-bob-williams</td><td>2024-02-19 12:27:01</td><td>4</td></tr>
+<tr><td>5</td><td>Emma Brown</td><td>emmabrown@email.com</td><td>+1 678-901-2345</td><td>https://www.example.com/resume-emma-brown</td><td>2024-02-19 12:27:01</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

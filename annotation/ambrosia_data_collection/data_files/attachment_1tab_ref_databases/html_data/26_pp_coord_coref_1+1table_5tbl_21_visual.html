@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>FilmCrewMembers</h2><table><thead>
+<tr><th>MemberID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1987-06-13</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1990-08-20</td></tr>
+<tr><td>3</td><td>Emma</td><td>Nguyen</td><td>1985-10-25</td></tr>
+<tr><td>4</td><td>Michael</td><td>Jackson</td><td>1992-11-21</td></tr>
+<tr><td>5</td><td>Olivia</td><td>Martinez</td><td>1988-03-17</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">VisualDesignRoles</span></h2><table><thead>
+<tr><th>RoleID</th><th><span style="color:#990000"><span style="color:#990000">RoleName</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Art Director</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Set Designer</span></td></tr>
+<tr><td>3</td><td>Production Designer</td></tr>
+<tr><td>4</td><td>Costume Designer</td></tr>
+<tr><td>5</td><td>Lighting Designer</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>FilmID</th><th>Title</th><th>ReleaseYear</th><th>Genre</th><th>Budget</th><th>BoxOffice</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>2008</td><td>Action/Adventure</td><td>185000000.0</td><td>1004053541.0</td></tr>
+<tr><td>2</td><td>Avatar</td><td>2009</td><td>Science Fiction</td><td>237000000.0</td><td>2785000000.0</td></tr>
+<tr><td>3</td><td>Titanic</td><td>1997</td><td>Romance/Drama</td><td>200000000.0</td><td>2202000000.0</td></tr>
+<tr><td>4</td><td>La La Land</td><td>2016</td><td>Musical/Romance</td><td>30000000.0</td><td>445500001.0</td></tr>
+<tr><td>5</td><td>Black Panther</td><td>2018</td><td>Superhero</td><td>200000000.0</td><td>1372213784.0</td></tr>
+</tbody></table></div>
+
+<div><h2>WorksIn</h2><table><thead>
+<tr><th>MemberID</th><th>FilmID</th></tr>
+<tr><th>(&#8594; FilmCrewMembers.MemberID)</th><th>(&#8594; Films.FilmID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">RolesInFilms</span></h2><table><thead>
+<tr><th>RoleID</th><th>FilmID</th><th><span style="color:#006600">NumberOfFilmsWorkedOn</span></th></tr>
+<tr><th>(&#8594; VisualDesignRoles.RoleID)</th><th>(&#8594; Films.FilmID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">25</span></td></tr>
+<tr><td>1</td><td>2</td><td>15</td></tr>
+<tr><td>2</td><td>3</td><td><span style="color:#006600">25</span></td></tr>
+<tr><td>2</td><td>4</td><td>10</td></tr>
+<tr><td>3</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Emma</td><td>Green</td><td>emma.green@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Reservations</span></h2><table><thead>
+<tr><th>reservation_id</th><th>restaurant_type</th><th><span style="color:#006600">year_of_establishment</span></th><th>customer_id</th></tr>
+<tr><th></th><th>(&#8594; Restaurants.restaurant_type)</th><th></th><th>(&#8594; Customers.customer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Steakhouse</td><td><span style="color:#006600">1980</span></td><td>1</td></tr>
+<tr><td>2</td><td>Steakhouse</td><td>2010</td><td>2</td></tr>
+<tr><td>3</td><td>Seafood Restaurant</td><td><span style="color:#006600">1980</span></td><td>3</td></tr>
+<tr><td>4</td><td>Seafood Restaurant</td><td>2005</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Restaurants</span></h2><table><thead>
+<tr><th>restaurant_id</th><th>name</th><th><span style="color:#990000"><span style="color:#990000">restaurant_type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Steak House</td><td><span style="color:#990000">Steakhouse</span></td></tr>
+<tr><td>2</td><td>New York Steak House</td><td><span style="color:#990000">Steakhouse</span></td></tr>
+<tr><td>3</td><td>Fresh Fish Corner</td><td><span style="color:#990000">Seafood Restaurant</span></td></tr>
+<tr><td>4</td><td>Blue Ocean Delights</td><td><span style="color:#990000">Seafood Restaurant</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Years</h2><table><thead>
+<tr><th>year_id</th><th>establishment_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1980</td></tr>
+<tr><td>2</td><td>2010</td></tr>
+<tr><td>3</td><td>2005</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Podcasters</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>years_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alex Johnson</td><td>New York</td><td>10</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>Los Angeles</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Shows</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>genre</th><th>network</th><th>audio_format</th><th>host</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Podcasters.name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The <span style="color:#006600">Alex Johnson</span> Show</td><td>Comedy</td><td>ABC</td><td><span style="color:#990000">Podcast</span></td><td><span style="color:#006600">Alex Johnson</span></td></tr>
+<tr><td>2</td><td>Laughing Matters</td><td>Comedy</td><td>NBC</td><td><span style="color:#990000">Podcast</span></td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>The Morning Rush</td><td>Talk Show</td><td>CBS Radio</td><td><span style="color:#990000">Radio Show</span></td><td><span style="color:#006600">Alex Johnson</span></td></tr>
+<tr><td>4</td><td>Morning Coffee</td><td>Talk Show</td><td>Fox Radio</td><td><span style="color:#990000">Radio Show</span></td><td>Jane Doe</td></tr>
+</tbody></table></div>
+
+<div><h2>Episodes</h2><table><thead>
+<tr><th>id</th><th>show_id</th><th>episode_number</th><th>release_date</th><th>duration</th><th>description</th></tr>
+<tr><th></th><th>(&#8594; Shows.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01</td><td>60</td><td>Episode about comedy.</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2023-01-08</td><td>60</td><td>Episode about coffee.</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>id</th><th>full_name</th><th>occupation</th><th>guest_on</th><th>appearance_episode_number</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Shows.title)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>Actor</td><td>The Alex Johnson Show</td><td>1</td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>Author</td><td>Laughing Matters</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>EpisodeGuests</h2><table><thead>
+<tr><th>id</th><th>episode_id</th><th>guest_id</th><th>role</th><th>appearance_duration</th></tr>
+<tr><th></th><th>(&#8594; Episodes.id)</th><th>(&#8594; Guests.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Interviewee</td><td>25</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Panelist</td><td>25</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>id</th><th>reviewer_name</th><th>rating</th><th>comments</th><th>show_id</th><th>review_date</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Shows.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Brown</td><td>5</td><td>Great podcast!</td><td>1</td><td>2024-03-07 21:13:47</td></tr>
+<tr><td>2</td><td>Bob White</td><td>4</td><td>Funny episodes.</td><td>2</td><td>2024-03-07 21:13:47</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

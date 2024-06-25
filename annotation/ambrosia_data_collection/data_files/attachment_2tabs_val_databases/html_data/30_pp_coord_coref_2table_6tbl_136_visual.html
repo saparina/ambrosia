@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Customer_Service_Advisors</span></h2><table><thead>
+<tr><th>advisorID</th><th>name</th><th>phoneNumber</th><th>emailAddress</th><th>languageProficiency</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>+1234567890</td><td>john@example.com</td><td><span style="color:#006600">Bilingual</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>+0987654321</td><td>jane@example.com</td><td>Multilingual</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>+7654321987</td><td>alice@example.com</td><td>English only</td></tr>
+<tr><td>4</td><td>Michael Brown</td><td>+1357924680</td><td>michael@example.com</td><td><span style="color:#006600">Bilingual</span></td></tr>
+<tr><td>5</td><td>Emma Wilson</td><td>+0246813579</td><td>emma@example.com</td><td>Trilingual</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">IT_Support_Technicians</span></h2><table><thead>
+<tr><th>technicianID</th><th>name</th><th>phoneNumber</th><th>emailAddress</th><th>languageProficiency</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Lee</td><td>+1987654320</td><td>david@example.com</td><td><span style="color:#006600">Bilingual</span></td></tr>
+<tr><td>2</td><td>James White</td><td>+0765432198</td><td>james@example.com</td><td>Multilingual</td></tr>
+<tr><td>3</td><td>Chris Green</td><td>+7543219876</td><td>chris@example.com</td><td>English only</td></tr>
+<tr><td>4</td><td>Steven Black</td><td>+1324681357</td><td>steven@example.com</td><td><span style="color:#006600">Bilingual</span></td></tr>
+<tr><td>5</td><td>Robert Blue</td><td>+0254321986</td><td>robert@example.com</td><td>Trilingual</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>companyID</th><th>companyName</th><th>address</th><th>phoneNumber</th><th>emailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Example Inc.</td><td>123 Main St., New York, NY</td><td>+1123456789</td><td>info@exampleinc.com</td></tr>
+<tr><td>2</td><td>Tech Solutions LLC</td><td>456 Elm St., San Francisco, CA</td><td>+1234567809</td><td>contact@techsolutionsllc.com</td></tr>
+<tr><td>3</td><td>IT Support Services AG</td><td>789 Oak St., Berlin, Germany</td><td>+49301234567</td><td>support@itss.de</td></tr>
+<tr><td>4</td><td>Global Enterprises Ltd.</td><td>135 Pine St., London, UK</td><td>+442012345678</td><td>enquiries@globalenterprises.co.uk</td></tr>
+<tr><td>5</td><td>Software Developers Co.</td><td>246 Maple St., Toronto, Canada</td><td>+16471234567</td><td>inquiry@softdevco.ca</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>jobID</th><th>title</th><th>description</th><th>location</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Customer Service Advisor</td><td>Assist customers with their queries and concerns.</td><td>New York, NY</td><td>50000.0</td></tr>
+<tr><td>2</td><td>IT Support Technician</td><td>Provide technical support to clients via phone and email.</td><td>San Francisco, CA</td><td>60000.0</td></tr>
+<tr><td>3</td><td>Web Developer</td><td>Design and develop web applications using HTML, CSS, JavaScript, and other technologies.</td><td>Berlin, Germany</td><td>70000.0</td></tr>
+<tr><td>4</td><td>Data Analyst</td><td>Analyze data sets and provide insights to improve business performance.</td><td>London, UK</td><td>65000.0</td></tr>
+<tr><td>5</td><td>Network Engineer</td><td>Design, implement, and maintain computer networks for businesses.</td><td>Toronto, Canada</td><td>75000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>applicationID</th><th>applicantID</th><th>jobID</th><th>resumePath</th><th>coverLetterPath</th></tr>
+<tr><th></th><th>(&#8594; Customer_Service_Advisors.advisorID)</th><th>(&#8594; Jobs.jobID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>/path/to/resume1.pdf</td><td>/path/to/coverletter1.docx</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>/path/to/resume2.pdf</td><td>/path/to/coverletter2.docx</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>/path/to/resume3.pdf</td><td>/path/to/coverletter3.docx</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>/path/to/resume4.pdf</td><td>/path/to/coverletter4.docx</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>/path/to/resume5.pdf</td><td>/path/to/coverletter5.docx</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

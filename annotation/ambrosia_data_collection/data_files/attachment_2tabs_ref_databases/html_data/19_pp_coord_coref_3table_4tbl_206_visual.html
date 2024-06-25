@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Airports</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK International</td><td>Queens, NY</td></tr>
+<tr><td>2</td><td>Los Angeles International</td><td>LAX, CA</td></tr>
+<tr><td>3</td><td>Dubai International</td><td>UAE</td></tr>
+<tr><td>4</td><td>Tokyo Haneda</td><td>Tokyo, Japan</td></tr>
+<tr><td>5</td><td>Heathrow Airport</td><td>London, UK</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>flightNumber</th><th>departureTime</th><th>destination</th><th>airport_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>123</td><td>2023-01-01 18:00:00</td><td>Paris</td><td>1</td></tr>
+<tr><td>2</td><td>456</td><td>2023-01-01 21:00:00</td><td>Dublin</td><td>2</td></tr>
+<tr><td>3</td><td>789</td><td>2023-01-01 22:00:00</td><td>Cape Town</td><td>3</td></tr>
+<tr><td>4</td><td>101</td><td>2023-01-01 17:00:00</td><td>Beijing</td><td>4</td></tr>
+<tr><td>5</td><td>111</td><td>2023-01-01 16:00:00</td><td>Hong Kong</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Terminals</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#006600">capacity</span></th><th>airport_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal A</td><td><span style="color:#006600">1000</span></td><td>1</td></tr>
+<tr><td>2</td><td>Terminal B</td><td>1500</td><td>1</td></tr>
+<tr><td>3</td><td>Terminal C</td><td>2000</td><td>2</td></tr>
+<tr><td>4</td><td>Terminal D</td><td>2500</td><td>3</td></tr>
+<tr><td>5</td><td>Terminal E</td><td>3000</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Renovations</span></h2><table><thead>
+<tr><th>id</th><th>startDate</th><th>endDate</th><th>cost</th><th>description</th><th>terminal_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Terminals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01</td><td>2023-01-15</td><td>500000.0</td><td>Upgrading security systems</td><td>1</td></tr>
+<tr><td>2</td><td>2023-01-15</td><td>2023-01-30</td><td>600000.0</td><td>Additional shopping area</td><td>2</td></tr>
+<tr><td>3</td><td>2023-01-30</td><td>2023-02-15</td><td>700000.0</td><td>Improving passenger flow</td><td>3</td></tr>
+<tr><td>4</td><td>2023-02-15</td><td>2023-03-01</td><td>800000.0</td><td>Enhancing lighting and signage</td><td>4</td></tr>
+<tr><td>5</td><td>2023-03-01</td><td>2023-03-15</td><td>900000.0</td><td>Redesigning gate areas</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

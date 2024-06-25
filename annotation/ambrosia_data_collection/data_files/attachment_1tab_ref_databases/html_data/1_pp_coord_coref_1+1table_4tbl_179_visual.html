@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">NewsSourceType</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">news_source_type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Press Release</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Interview</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Source</h2><table><thead>
+<tr><th>id</th><th>source_name</th><th>news_source_type_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; NewsSourceType.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>1</td></tr>
+<tr><td>2</td><td>Journalist B</td><td>2</td></tr>
+<tr><td>3</td><td>Newspaper C</td><td>1</td></tr>
+<tr><td>4</td><td>Radio Station X</td><td>2</td></tr>
+<tr><td>5</td><td>TV Channel Y</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Article</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">title</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Britain Is Cutting Taxes Again. Why Now?</span></td></tr>
+<tr><td>2</td><td>Economic Growth Projections for Next Year</td></tr>
+<tr><td>3</td><td>Government Budget Outlook</td></tr>
+<tr><td>4</td><td>Impact of Recent Tax Cuts on Businesses</td></tr>
+<tr><td>5</td><td>Inflation Rate Forecasts</td></tr>
+</tbody></table></div>
+
+<div><h2>SourceArticle</h2><table><thead>
+<tr><th>source_id</th><th>article_id</th><th>published_date</th></tr>
+<tr><th>(&#8594; Source.id)</th><th>(&#8594; Article.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01 08:00:00</td></tr>
+<tr><td>2</td><td>1</td><td>2023-01-01 10:00:00</td></tr>
+<tr><td>3</td><td>2</td><td>2023-01-02 09:00:00</td></tr>
+<tr><td>4</td><td>3</td><td>2023-01-03 07:00:00</td></tr>
+<tr><td>5</td><td>4</td><td>2023-01-04 16:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Writer</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Author A</td></tr>
+<tr><td>2</td><td>Author B</td></tr>
+<tr><td>3</td><td>Author C</td></tr>
+<tr><td>4</td><td>Author D</td></tr>
+<tr><td>5</td><td>Author E</td></tr>
+</tbody></table></div>
+
+<div><h2>Writes</h2><table><thead>
+<tr><th>writer_id</th><th>article_id</th></tr>
+<tr><th>(&#8594; Writer.id)</th><th>(&#8594; Article.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

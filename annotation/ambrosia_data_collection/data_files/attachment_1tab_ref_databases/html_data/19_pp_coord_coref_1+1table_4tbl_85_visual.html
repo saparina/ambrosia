@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Guest</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alicejohnson@example.com</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bobbrown@example.com</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>charliedavis@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Vacation</h2><table><thead>
+<tr><th>id</th><th>vacation_option</th><th>price</th></tr>
+<tr><th></th><th>(&#8594; VacationType.type)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cruise Ship</td><td>2000.0</td></tr>
+<tr><td>2</td><td>All-Inclusive Resort</td><td>3000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Activity</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">activities</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Dance Class</span></td></tr>
+<tr><td>2</td><td>Hiking Tour</td></tr>
+<tr><td>3</td><td>Beach Volleyball</td></tr>
+<tr><td>4</td><td>Snorkeling</td></tr>
+<tr><td>5</td><td>Wine Tasting</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>id</th><th>guest_id</th><th>vacation_id</th><th>activity_id</th><th>checkin</th><th>checkout</th></tr>
+<tr><th></th><th>(&#8594; Guest.id)</th><th>(&#8594; Vacation.id)</th><th>(&#8594; Activity.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2023-01-01 10:00:00</td><td>2023-01-07 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>2</td><td>2023-01-10 10:00:00</td><td>2023-01-16 10:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>1</td><td>2023-02-01 10:00:00</td><td>2023-02-07 10:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>3</td><td>2023-02-10 10:00:00</td><td>2023-02-16 10:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>4</td><td>2023-03-01 10:00:00</td><td>2023-03-07 10:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">VacationType</span></h2><table><thead>
+<tr><th><span style="color:#990000"><span style="color:#990000">type</span></span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#990000">Cruise Ship</span></td><td>None</td></tr>
+<tr><td><span style="color:#990000">All-Inclusive Resort</span></td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Hotel</h2><table><thead>
+<tr><th>id</th><th>hotel_name</th><th>address</th><th>phone_number</th><th>rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Grand Ocean View</td><td>123 Beach St.</td><td>+1234567890</td><td>4.5</td></tr>
+<tr><td>2</td><td>Coastal Paradise</td><td>456 Coast Rd.</td><td>+987654321</td><td>4.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

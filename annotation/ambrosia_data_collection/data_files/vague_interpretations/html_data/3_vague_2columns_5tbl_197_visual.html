@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td></tr>
+</tbody></table></div>
+
+<div><h2>Programs</h2><table><thead>
+<tr><th>ProgramID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mathematics</td></tr>
+<tr><td>2</td><td>English Literature</td></tr>
+<tr><td>3</td><td>Biology</td></tr>
+<tr><td>4</td><td>History</td></tr>
+<tr><td>5</td><td>Physical Education</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>ProgramID</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Programs.ProgramID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>6</td></tr>
+<tr><td>2</td><td>2</td><td>7</td></tr>
+<tr><td>3</td><td>3</td><td>8</td></tr>
+<tr><td>4</td><td>4</td><td>9</td></tr>
+<tr><td>5</td><td>5</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>GradeID</th><th>EnrollmentID</th><th><span style="color:#990000">Gpa</span></th><th><span style="color:#990000">Standardized_Test_Score</span></th><th>CourseName</th></tr>
+<tr><th></th><th>(&#8594; Enrollments.EnrollmentID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>3.5</td><td>1400</td><td>Algebra I</td></tr>
+<tr><td>2</td><td>2</td><td>3.7</td><td>1500</td><td>Literature II</td></tr>
+<tr><td>3</td><td>3</td><td>3.2</td><td>1350</td><td>Biology III</td></tr>
+<tr><td>4</td><td>4</td><td>3.8</td><td>1450</td><td>World History IV</td></tr>
+<tr><td>5</td><td>5</td><td>3.1</td><td>1300</td><td>Physical Education V</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

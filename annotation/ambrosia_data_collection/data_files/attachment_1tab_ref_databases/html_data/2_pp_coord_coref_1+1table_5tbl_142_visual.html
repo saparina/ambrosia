@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Directors</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#006600">age</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>45</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#006600">30</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>director_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Film A</td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>Film B</td><td>2015</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>45</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>30</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieActors</h2><table><thead>
+<tr><th>movie_id</th><th>actor_id</th><th>role</th></tr>
+<tr><th>(&#8594; Movies.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lead</td></tr>
+<tr><td>1</td><td>2</td><td>Supporting</td></tr>
+<tr><td>2</td><td>1</td><td>Lead</td></tr>
+<tr><td>2</td><td>2</td><td>Supporting</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>department_name</th></tr>
+</thead><tbody>
+<tr><td>Script Supervision</td></tr>
+<tr><td>Costume Design</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">DepartmentMembers</span></h2><table><thead>
+<tr><th>member_id</th><th>department_name</th><th><span style="color:#990000"><span style="color:#990000">role</span></span></th></tr>
+<tr><th>(&#8594; Actors.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Script Supervision</td><td><span style="color:#990000">Supervisor</span></td></tr>
+<tr><td>2</td><td>Script Supervision</td><td>Assistant</td></tr>
+<tr><td>1</td><td>Costume Design</td><td>Head of Costumes</td></tr>
+<tr><td>2</td><td>Costume Design</td><td><span style="color:#990000">Costume Designer</span></td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">FamilySuites</span></h2><table><thead>
+<tr><th>SuiteID</th><th>RoomNumber</th><th>OccupancyLimit</th><th>Amenities</th><th>Price_per_night</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A123</td><td>6</td><td>Air conditioning, TV, WiFi, Mini fridge</td><td><span style="color:#006600">150.0</span></td></tr>
+<tr><td>2</td><td>B456</td><td>8</td><td>Air conditioning, TV, WiFi, Balcony, Microwave</td><td>200.0</td></tr>
+<tr><td>3</td><td>C789</td><td>10</td><td>Air conditioning, TV, WiFi, Kitchenette</td><td>250.0</td></tr>
+<tr><td>4</td><td>D012</td><td>12</td><td>Air conditioning, TV, WiFi, Safe, Bathtub</td><td>300.0</td></tr>
+<tr><td>5</td><td>E345</td><td>14</td><td>Air conditioning, TV, WiFi, Kitchenette, Terrace</td><td>350.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SingleRooms</span></h2><table><thead>
+<tr><th>RoomID</th><th>NumberOfBeds</th><th>View</th><th>Services</th><th>Price_per_night</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>City view</td><td>TV, WiFi, Air conditioning</td><td><span style="color:#006600">150.0</span></td></tr>
+<tr><td>2</td><td>1</td><td>Mountain view</td><td>TV, WiFi, Minibar</td><td>100.0</td></tr>
+<tr><td>3</td><td>2</td><td>Garden view</td><td>TV, WiFi, Air conditioning, Coffee/Tea maker</td><td>120.0</td></tr>
+<tr><td>4</td><td>2</td><td>Pool view</td><td>TV, WiFi, Hairdryer, Ironing facilities</td><td>130.0</td></tr>
+<tr><td>5</td><td>1</td><td>Sea view</td><td>TV, WiFi, Air conditioning, Refrigerator</td><td>180.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Guests</h2><table><thead>
+<tr><th>GuestID</th><th>FullName</th><th>PhoneNumber</th><th>EmailAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>+1234567890</td><td>johndoe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>+0987654321</td><td>janesmith@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>+1234567890</td><td>michaeljohnson@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>+0987654321</td><td>emilydavis@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>+1234567890</td><td>davidbrown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>CheckInDate</th><th>CheckOutDate</th><th>TotalCost</th><th>GuestID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Guests.GuestID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-01</td><td>2023-01-05</td><td>600.0</td><td>1</td></tr>
+<tr><td>2</td><td>2023-01-10</td><td>2023-01-15</td><td>1000.0</td><td>2</td></tr>
+<tr><td>3</td><td>2023-01-15</td><td>2023-01-20</td><td>1500.0</td><td>3</td></tr>
+<tr><td>4</td><td>2023-02-01</td><td>2023-02-05</td><td>400.0</td><td>4</td></tr>
+<tr><td>5</td><td>2023-02-08</td><td>2023-02-12</td><td>750.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Payments</h2><table><thead>
+<tr><th>PaymentID</th><th>Amount</th><th>DatePaid</th><th>CardType</th><th>BookingID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Bookings.BookingID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>600</td><td>2023-01-02</td><td>Visa</td><td>1</td></tr>
+<tr><td>2</td><td>1000</td><td>2023-01-07</td><td>Mastercard</td><td>2</td></tr>
+<tr><td>3</td><td>1500</td><td>2023-01-14</td><td>American Express</td><td>3</td></tr>
+<tr><td>4</td><td>400</td><td>2023-02-01</td><td>Visa</td><td>4</td></tr>
+<tr><td>5</td><td>750</td><td>2023-02-08</td><td>Mastercard</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviews</h2><table><thead>
+<tr><th>ReviewID</th><th>Rating</th><th>Comment</th><th>SubmissionDate</th><th>GuestID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Guests.GuestID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>Great stay! Excellent service.</td><td>2023-01-06</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>Very comfortable room, good location.</td><td>2023-01-12</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>The suite was nice but a bit expensive.</td><td>2023-01-18</td><td>3</td></tr>
+<tr><td>4</td><td>5</td><td>Amazing experience! Highly recommended.</td><td>2023-02-05</td><td>4</td></tr>
+<tr><td>5</td><td>4</td><td>Good value for money, would return.</td><td>2023-02-15</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

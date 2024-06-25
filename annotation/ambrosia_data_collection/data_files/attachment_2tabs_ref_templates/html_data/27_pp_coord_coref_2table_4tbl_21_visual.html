@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Photographers</span></h2><table><thead>
+<tr><th>id</th><th>photographerName</th><th><span style="color:#1430b2">price</span></th><th>experience</th><th>specialization</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td><span style="color:#1430b2">500</span></td><td>10</td><td>Wedding</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>600</td><td>8</td><td>Portraiture</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>700</td><td>5</td><td>Landscape</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Videographers</span></h2><table><thead>
+<tr><th>id</th><th>videographerName</th><th>price</th><th>experience</th><th>specialization</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David Wilson</td><td><span style="color:#1430b2">500</span></td><td>7</td><td>Corporate Events</td></tr>
+<tr><td>2</td><td>Emily Brown</td><td>600</td><td>9</td><td>Documentary</td></tr>
+<tr><td>3</td><td>William Taylor</td><td>700</td><td>3</td><td>Music Video</td></tr>
+</tbody></table></div>
+
+<div><h2>JobPosts</h2><table><thead>
+<tr><th>id</th><th>jobTitle</th><th>description</th><th>requiredSkills</th><th>budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Event Photographer</td><td>Capture photos at a corporate event.</td><td>Adobe Lightroom, Camera Operation</td><td>2000</td></tr>
+<tr><td>2</td><td>Freelance Videographer</td><td>Shoot and edit promotional video for small business.</td><td>Final Cut Pro, Cinematography</td><td>3000</td></tr>
+<tr><td>3</td><td>Product Photographer</td><td>Take high quality images of products for online store.</td><td>Studio Lighting, Retouching</td><td>1500</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>id</th><th>applicantId</th><th>applicationDate</th><th>coverLetter</th><th>status</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01 10:00:00</td><td>Dear Hiring Manager...</td><td>Pending</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-02 10:00:00</td><td>Thank you for considering my application...</td><td>Accepted</td></tr>
+<tr><td>3</td><td>3</td><td>2022-01-03 10:00:00</td><td>I have extensive experience working on projects similar to this one...</td><td>Rejected</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>skillId</th><th>skillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adobe Lightroom</td></tr>
+<tr><td>2</td><td>Camera Operation</td></tr>
+<tr><td>3</td><td>Final Cut Pro</td></tr>
+<tr><td>4</td><td>Cinematography</td></tr>
+<tr><td>5</td><td>Studio Lighting</td></tr>
+<tr><td>6</td><td>Retouching</td></tr>
+</tbody></table></div>
+
+<div><h2>SkillRequirements</h2><table><thead>
+<tr><th>requirementID</th><th>jobPostId</th><th>skillId</th></tr>
+<tr><th></th><th>(&#8594; JobPosts.id)</th><th>(&#8594; Skills.skillId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

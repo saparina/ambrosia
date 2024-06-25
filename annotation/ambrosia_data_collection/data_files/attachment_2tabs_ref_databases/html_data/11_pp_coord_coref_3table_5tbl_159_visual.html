@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Music_Composers</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">composer_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hans Zimmer</td></tr>
+<tr><td>2</td><td><span style="color:#006600">John Williams</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>genre</th></tr>
+<tr><th></th><th></th><th>(&#8594; Genres.type)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Action/Adventure</td></tr>
+<tr><td>2</td><td>Star Wars</td><td>Science Fiction</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Dramas</span></h2><table><thead>
+<tr><th>id</th><th>movie_id</th><th>music_composer_id</th></tr>
+<tr><th></th><th>(&#8594; Movies.id)</th><th>(&#8594; Music_Composers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Romances</span></h2><table><thead>
+<tr><th>id</th><th>movie_id</th><th>music_composer_id</th></tr>
+<tr><th></th><th>(&#8594; Movies.id)</th><th>(&#8594; Music_Composers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Scenes</h2><table><thead>
+<tr><th>id</th><th>scene_description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A thrilling car chase through the streets of Los Angeles.</td></tr>
+<tr><td>2</td><td>The protagonist confronts their inner demons on a deserted mountain top.</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieScenes</h2><table><thead>
+<tr><th>id</th><th>movie_id</th><th>scene_id</th></tr>
+<tr><th></th><th>(&#8594; Movies.id)</th><th>(&#8594; Scenes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>3</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Genres</h2><table><thead>
+<tr><th>type</th><th>id</th></tr>
+</thead><tbody>
+<tr><td>Action/Adventure</td><td>1</td></tr>
+<tr><td>Science Fiction</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

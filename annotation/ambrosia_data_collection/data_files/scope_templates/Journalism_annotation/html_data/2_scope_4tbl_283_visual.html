@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Formats</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">format_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Live</td></tr>
+<tr><td>2</td><td>Online</td></tr>
+<tr><td>3</td><td>Podcast</td></tr>
+<tr><td>4</td><td>Video</td></tr>
+<tr><td>5</td><td>Magazine</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Broadcasts</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tonight's Live News Coverage</td><td>2023-04-01 18:00:00</td></tr>
+<tr><td>2</td><td>Weekly Podcast: Current Affairs</td><td>2023-04-06 09:00:00</td></tr>
+<tr><td>3</td><td>Daily Online Newspaper Update</td><td>2023-04-07 12:00:00</td></tr>
+<tr><td>4</td><td>Monthly Video Magazine Issue</td><td>2023-04-15 17:00:00</td></tr>
+<tr><td>5</td><td>Breaking News Special</td><td>2023-04-20 15:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>mike@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publish_date</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Importance of Journalistic Integrity</td><td>Journalism plays a critical role in society...</td><td>2024-01-30 18:51:09</td><td>1</td></tr>
+<tr><td>2</td><td>Investigative Reporting Techniques</td><td>A look at some effective techniques used by investigative reporters...</td><td>2024-01-30 18:51:09</td><td>2</td></tr>
+<tr><td>3</td><td>Impact of Social Media on News Consumption</td><td>How social media has changed the way people consume news...</td><td>2024-01-30 18:51:09</td><td>3</td></tr>
+<tr><td>4</td><td>Censorship and Freedom of the Press</td><td>Examining the issue of censorship and its impact on freedom of the press...</td><td>2024-01-30 18:51:09</td><td>4</td></tr>
+<tr><td>5</td><td>The Future of Print Journalism</td><td>Can print journalism survive in the digital age?</td><td>2024-01-30 18:51:09</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Comments</h2><table><thead>
+<tr><th>id</th><th>comment</th><th>article_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Articles.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great article! Very informative.</td><td>1</td></tr>
+<tr><td>2</td><td>I agree completely - it's essential that journalists maintain their integrity.</td><td>1</td></tr>
+<tr><td>3</td><td>This is an interesting perspective on how social media affects news consumption.</td><td>3</td></tr>
+<tr><td>4</td><td>Important topic, but I think there should also be a discussion about self-censorship.</td><td>4</td></tr>
+<tr><td>5</td><td>Print journalism will always have a place as long as there is a demand for quality reporting.</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Broadcasts_Formats</h2><table><thead>
+<tr><th>broadcast_id</th><th>format_id</th></tr>
+<tr><th>(&#8594; Broadcasts.id)</th><th>(&#8594; Formats.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>2</td><td>5</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

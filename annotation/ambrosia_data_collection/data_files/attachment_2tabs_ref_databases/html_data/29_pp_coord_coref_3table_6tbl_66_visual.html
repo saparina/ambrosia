@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genre</h2><table><thead>
+<tr><th>GenreID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rock</td></tr>
+<tr><td>2</td><td>Jazz</td></tr>
+<tr><td>3</td><td>Pop</td></tr>
+<tr><td>4</td><td>Classical</td></tr>
+<tr><td>5</td><td>Electronic</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Band</span></h2><table><thead>
+<tr><th>BandID</th><th>Name</th><th><span style="color:#006600">FoundingYear</span></th><th>GenreID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genre.GenreID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Beatles</td><td>1960</td><td>1</td></tr>
+<tr><td>2</td><td>Miles Davis Quintet</td><td>1985</td><td>2</td></tr>
+<tr><td>3</td><td>Pink Floyd</td><td>1965</td><td>3</td></tr>
+<tr><td>4</td><td>Led Zeppelin</td><td><span style="color:#006600">1968</span></td><td>4</td></tr>
+<tr><td>5</td><td>Nirvana</td><td>1987</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">JazzBand</span></h2><table><thead>
+<tr><th>BandID</th><th>BandID_FK</th><th>JazzStyle</th></tr>
+<tr><th></th><th>(&#8594; Band.BandID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Bebop</td></tr>
+<tr><td>2</td><td>2</td><td>Cool Jazz</td></tr>
+<tr><td>3</td><td>3</td><td>Free Jazz</td></tr>
+<tr><td>4</td><td>4</td><td>Hard Bop</td></tr>
+<tr><td>5</td><td>5</td><td>Modern Jazz</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">RockBand</span></h2><table><thead>
+<tr><th>BandID</th><th>BandID_FK</th><th>Instrument</th></tr>
+<tr><th></th><th>(&#8594; Band.BandID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Guitar</td></tr>
+<tr><td>2</td><td>2</td><td>Drums</td></tr>
+<tr><td>3</td><td>3</td><td>Bass Guitar</td></tr>
+<tr><td>4</td><td>4</td><td>Keyboards</td></tr>
+<tr><td>5</td><td>5</td><td>Vocals</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

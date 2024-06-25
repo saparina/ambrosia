@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone</th><th>resume</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td><td>123-456-7890</td><td>path/to/resume</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td><td>098-765-4321</td><td>path/to/resume</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alice.johnson@example.com</td><td>555-123-4567</td><td>path/to/resume</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bob.brown@example.com</td><td>111-222-3333</td><td>path/to/resume</td></tr>
+<tr><td>5</td><td>Carol White</td><td>carol.white@example.com</td><td>444-555-6666</td><td>path/to/resume</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th><th>location</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Develop and maintain software applications.</td><td>New York, NY</td><td>90000.0</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data to provide insights and recommendations.</td><td>Los Angeles, CA</td><td>80000.0</td></tr>
+<tr><td>3</td><td>Product Manager</td><td>Lead product development from concept to launch.</td><td>San Francisco, CA</td><td>100000.0</td></tr>
+<tr><td>4</td><td>UX Designer</td><td>Create user interfaces that enhance usability and user experience.</td><td>Chicago, IL</td><td>75000.0</td></tr>
+<tr><td>5</td><td>Marketing Specialist</td><td>Plan and execute marketing campaigns to increase brand visibility.</td><td>Miami, FL</td><td>65000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>industry</th><th>size</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>Technology</td><td>Large</td></tr>
+<tr><td>2</td><td>FinancialGroup</td><td>Finance</td><td>Medium</td></tr>
+<tr><td>3</td><td>HealthCare</td><td>Healthcare</td><td>Small</td></tr>
+<tr><td>4</td><td>EcoFriendly</td><td>Environment</td><td>Large</td></tr>
+<tr><td>5</td><td>RetailChain</td><td>Retail</td><td>Medium</td></tr>
+</tbody></table></div>
+
+<div><h2>Experiences</h2><table><thead>
+<tr><th>applicant_id</th><th><span style="color:#990000">years_of_experience</span></th><th><span style="color:#990000">number_of_completed_projects</span></th><th>job</th><th>additional_skills</th></tr>
+<tr><th>(&#8594; Applicants.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td><td>15</td><td>Web Developer</td><td>HTML, CSS, JavaScript</td></tr>
+<tr><td>2</td><td>3</td><td>10</td><td>Mobile App Developer</td><td>Swift, Android</td></tr>
+<tr><td>3</td><td>7</td><td>20</td><td>Full Stack Developer</td><td>Node.js, Python</td></tr>
+<tr><td>4</td><td>10</td><td>25</td><td>DevOps Engineer</td><td>AWS, Docker</td></tr>
+<tr><td>5</td><td>8</td><td>30</td><td>Frontend Developer</td><td>React, Angular</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

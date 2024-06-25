@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Sommeliers</span></h2><table><thead>
+<tr><th>ID</th><th>First_Name</th><th>Last_Name</th><th>Birthdate</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Alex</span></td><td>Smith</td><td>2000-06-15</td><td>+123456789</td></tr>
+<tr><td>2</td><td>John</td><td>Doe</td><td>1995-07-20</td><td>+987654321</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Bartenders</span></h2><table><thead>
+<tr><th>ID</th><th>First_Name</th><th>Last_Name</th><th>Birthdate</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Alex</span></td><td>Miller</td><td>2000-06-15</td><td>+123456789</td></tr>
+<tr><td>2</td><td>Jane</td><td>White</td><td>1995-07-20</td><td>+987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>ID</th><th>First_Name</th><th>Last_Name</th><th>Email</th><th>RegistrationDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Zhang</td><td>alice@example.com</td><td>2024-03-13 17:35:22</td></tr>
+<tr><td>2</td><td>Bob</td><td>Li</td><td>bob@example.com</td><td>2024-03-13 17:35:22</td></tr>
+</tbody></table></div>
+
+<div><h2>Orders</h2><table><thead>
+<tr><th>OrderID</th><th>CustomerID</th><th>DateOfOrder</th><th>TotalAmount</th></tr>
+<tr><th></th><th>(&#8594; Customers.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-08-01 12:00:00</td><td>100</td></tr>
+<tr><td>2</td><td>2</td><td>2021-08-01 12:30:00</td><td>150</td></tr>
+</tbody></table></div>
+
+<div><h2>WineList</h2><table><thead>
+<tr><th>WineID</th><th>Name</th><th>Origin</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Merlot</td><td>France</td><td>50</td></tr>
+<tr><td>2</td><td>Chardonnay</td><td>Australia</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2>BeverageList</h2><table><thead>
+<tr><th>BeverageID</th><th>Name</th><th>Type</th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Coke</td><td>Soft Drink</td><td>2</td></tr>
+<tr><td>2</td><td>Beer</td><td>Alcoholic Beverage</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

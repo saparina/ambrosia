@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Owners</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Bob Smith</span></td></tr>
+<tr><td>2</td><td>Alice Johnson</td></tr>
+<tr><td>3</td><td>Mike Brown</td></tr>
+<tr><td>4</td><td>Emily Davis</td></tr>
+<tr><td>5</td><td>James Wilson</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">PianoLessons</span></h2><table><thead>
+<tr><th>id</th><th>owner_id</th><th>date</th><th>level</th></tr>
+<tr><th></th><th>(&#8594; Owners.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2024-03-13 20:43:20</td><td>Beginner</td></tr>
+<tr><td>2</td><td>2</td><td>2024-03-13 20:43:20</td><td>Intermediate</td></tr>
+<tr><td>3</td><td>3</td><td>2024-03-13 20:43:20</td><td>Advanced</td></tr>
+<tr><td>4</td><td>4</td><td>2024-03-13 20:43:20</td><td>Expert</td></tr>
+<tr><td>5</td><td>5</td><td>2024-03-13 20:43:20</td><td>Professional</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">GuitarLessons</span></h2><table><thead>
+<tr><th>id</th><th>owner_id</th><th>date</th><th>skill_level</th></tr>
+<tr><th></th><th>(&#8594; Owners.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2024-03-13 20:43:20</td><td>Beginner</td></tr>
+<tr><td>2</td><td>2</td><td>2024-03-13 20:43:20</td><td>Intermediate</td></tr>
+<tr><td>3</td><td>3</td><td>2024-03-13 20:43:20</td><td>Advanced</td></tr>
+<tr><td>4</td><td>4</td><td>2024-03-13 20:43:20</td><td>Expert</td></tr>
+<tr><td>5</td><td>5</td><td>2024-03-13 20:43:20</td><td>Professional</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

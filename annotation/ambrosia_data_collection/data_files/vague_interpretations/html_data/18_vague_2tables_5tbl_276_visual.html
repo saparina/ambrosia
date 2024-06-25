@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Patient</h2><table><thead>
+<tr><th>patientID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctor</h2><table><thead>
+<tr><th>doctorID</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Aaron</td></tr>
+<tr><td>2</td><td>Dr.</td><td>Elizabeth</td></tr>
+<tr><td>3</td><td>Dr.</td><td>Robert</td></tr>
+<tr><td>4</td><td>Dr.</td><td>Nancy</td></tr>
+<tr><td>5</td><td>Dr.</td><td>Kenneth</td></tr>
+</tbody></table></div>
+
+<div><h2>Prescription</h2><table><thead>
+<tr><th>prescriptionID</th><th>antibioticID</th><th>patientID</th><th>doctorID</th><th>datePrescribed</th></tr>
+<tr><th></th><th>(&#8594; Antibiotic.antibioticID)</th><th>(&#8594; Patient.patientID)</th><th>(&#8594; Doctor.doctorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2024-02-19 12:44:17</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>2024-02-19 12:44:17</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3</td><td>2024-02-19 12:44:17</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>4</td><td>2024-02-19 12:44:17</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>5</td><td>2024-02-19 12:44:17</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Common_Side_Effects</span></h2><table><thead>
+<tr><th>sideEffectID</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Diarrhea</td></tr>
+<tr><td>2</td><td>Vomiting</td></tr>
+<tr><td>3</td><td>Nausea</td></tr>
+<tr><td>4</td><td>Headache</td></tr>
+<tr><td>5</td><td>Dizziness</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Serious_Side_Effects</span></h2><table><thead>
+<tr><th>seriousSideEffectID</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Allergic reactions</td></tr>
+<tr><td>2</td><td>Liver damage</td></tr>
+<tr><td>3</td><td>Stevens-Johnson syndrome</td></tr>
+<tr><td>4</td><td>Anaphylaxis</td></tr>
+<tr><td>5</td><td>Toxic epidermal necrolysis</td></tr>
+</tbody></table></div>
+
+<div><h2>Antibiotic</h2><table><thead>
+<tr><th>antibioticID</th><th>name</th><th>commonSideEffects</th><th>seriousSideEffects</th></tr>
+<tr><th></th><th></th><th>(&#8594; Common_Side_Effects.sideEffectID)</th><th>(&#8594; Serious_Side_Effects.seriousSideEffectID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Amoxicillin</td><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>Azithromycin</td><td>5</td><td>4</td></tr>
+<tr><td>3</td><td>Cephalexin</td><td>5</td><td>4</td></tr>
+<tr><td>4</td><td>Clindamycin</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>Erythromycin</td><td>1</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

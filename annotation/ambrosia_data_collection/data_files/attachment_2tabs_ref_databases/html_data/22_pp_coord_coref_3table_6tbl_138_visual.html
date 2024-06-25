@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Patients</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th><span style="color:#006600">Age</span></th><th>City</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anne Buche</td><td>32</td><td>New York</td></tr>
+<tr><td>2</td><td>John Doe</td><td>40</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Mary Smith</td><td>28</td><td>Chicago</td></tr>
+<tr><td>4</td><td>David Johnson</td><td>36</td><td>Houston</td></tr>
+<tr><td>5</td><td>Emma Brown</td><td><span style="color:#006600">25</span></td><td>Phoenix</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Nurses</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Experience</th><th>Specialty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Green</td><td>10</td><td>Cardiology</td></tr>
+<tr><td>2</td><td>Bob White</td><td>7</td><td>Neurology</td></tr>
+<tr><td>3</td><td>Carol Black</td><td>12</td><td>Orthopedics</td></tr>
+<tr><td>4</td><td>Dave Blue</td><td>9</td><td>Gastroenterology</td></tr>
+<tr><td>5</td><td>Eva Red</td><td>8</td><td>Urology</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Physicians_Assistants</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Experience</th><th>Specialty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank Grey</td><td>5</td><td>Endocrinology</td></tr>
+<tr><td>2</td><td>Grace Pink</td><td>4</td><td>Allergy and Immunology</td></tr>
+<tr><td>3</td><td>Helen Yellow</td><td>6</td><td>Infectious Disease</td></tr>
+<tr><td>4</td><td>Ian Purple</td><td>7</td><td>Rheumatology</td></tr>
+<tr><td>5</td><td>Jackie Orange</td><td>10</td><td>Oncology</td></tr>
+</tbody></table></div>
+
+<div><h2>Job_Postings</h2><table><thead>
+<tr><th>ID</th><th>Position</th><th>Location</th><th>PostedDate</th><th>NurseID</th><th>PAID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Nurses.ID)</th><th>(&#8594; Physicians_Assistants.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Registered Nurse</td><td>San Francisco</td><td>2024-03-13 19:49:18</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Certified Registered Nurse Anesthetist</td><td>Seattle</td><td>2024-03-13 19:49:18</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Staff Nurse</td><td>Denver</td><td>2024-03-13 19:49:18</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Travel Nurse</td><td>Atlanta</td><td>2024-03-13 19:49:18</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>Clinical Research Coordinator</td><td>Philadelphia</td><td>2024-03-13 19:49:18</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Assigned_Jobs</h2><table><thead>
+<tr><th>ID</th><th>PatientID</th><th>JobID</th></tr>
+<tr><th></th><th>(&#8594; Patients.ID)</th><th>(&#8594; Job_Postings.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

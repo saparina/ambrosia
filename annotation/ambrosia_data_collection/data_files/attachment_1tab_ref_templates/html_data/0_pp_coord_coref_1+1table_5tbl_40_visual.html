@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Genres</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16">genre</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Horror</span></td></tr>
+<tr><td>2</td><td>Thriller</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Films</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th>director</th><th><span style="color:#1430b2">budget</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shining</td><td>1980-06-22</td><td>Stanley Kubrick</td><td><span style="color:#1430b2">20000000.0</span></td></tr>
+<tr><td>2</td><td>It Follows</td><td>2014-03-14</td><td>David Robert Mitchell</td><td>5000000.0</td></tr>
+<tr><td>3</td><td>Inception</td><td>2010-07-16</td><td>Christopher Nolan</td><td><span style="color:#1430b2">20000000.0</span></td></tr>
+<tr><td>4</td><td>Gone Girl</td><td>2014-10-03</td><td>David Fincher</td><td>65000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_year</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Stanley Kubrick</td><td>1928</td><td>American</td></tr>
+<tr><td>2</td><td>David Robert Mitchell</td><td>1974</td><td>American</td></tr>
+<tr><td>3</td><td>Christopher Nolan</td><td>1970</td><td>English</td></tr>
+<tr><td>4</td><td>David Fincher</td><td>1962</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Director</h2><table><thead>
+<tr><th>film_id</th><th>director_id</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Genre</h2><table><thead>
+<tr><th>film_id</th><th>genre_id</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employer</h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Email</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>companyA@example.com</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Company B</td><td>companyB@example.com</td><td>098-765-4321</td></tr>
+</tbody></table></div>
+
+<div><h2>Position</h2><table><thead>
+<tr><th>Id</th><th>Title</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Developer</td><td>Develop and maintain software applications.</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyze data to provide insights and recommendations.</td></tr>
+</tbody></table></div>
+
+<div><h2>SalaryDetails</h2><table><thead>
+<tr><th>Id</th><th><span style="color:#990000">Salary_Range</span></th><th><span style="color:#990000">Hourly_Rate</span></th><th>PositionId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Position.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>$50k - $60k</td><td>25.0</td><td>1</td></tr>
+<tr><td>2</td><td>$70k - $80k</td><td>30.0</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>ApplicationDeadline</h2><table><thead>
+<tr><th>Id</th><th>Deadline</th><th>PositionId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Position.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-01-31T00:00:00</td><td>1</td></tr>
+<tr><td>2</td><td>2023-02-15T00:00:00</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Application</h2><table><thead>
+<tr><th>Id</th><th>ApplicationDate</th><th>ApplicantId</th><th>PositionId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Applicant.Id)</th><th>(&#8594; Position.Id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2024-02-19 12:51:33</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>2024-02-19 12:51:33</td><td>None</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

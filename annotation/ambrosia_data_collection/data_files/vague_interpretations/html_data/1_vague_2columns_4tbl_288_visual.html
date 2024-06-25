@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>TV_Shows</h2><table><thead>
+<tr><th>id</th><th>Title</th><th><span style="color:#990000">Released_Seasons</span></th><th><span style="color:#990000">Planned_Seasons</span></th><th>Series</th><th>GenreID</th><th>PlatformID</th><th>RatingID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Genre.id)</th><th>(&#8594; Platforms.id)</th><th>(&#8594; Ratings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking Bad</td><td>6</td><td>8</td><td>Drama</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><td>2</td><td>Game of Thrones</td><td>7</td><td>8</td><td>Fantasy Drama</td><td>3</td><td>3</td><td>5</td></tr>
+<tr><td>3</td><td>Stranger Things</td><td>3</td><td>4</td><td>Mystery Sci-Fi</td><td>1</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>The Witcher</td><td>1</td><td>2</td><td>Adventure Fantasy</td><td>4</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>Ozark</td><td>3</td><td>4</td><td>Crime Drama</td><td>2</td><td>3</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+<tr><td>3</td><td>Horror</td></tr>
+<tr><td>4</td><td>Documentary</td></tr>
+</tbody></table></div>
+
+<div><h2>Platforms</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Netflix</td></tr>
+<tr><td>2</td><td>Hulu</td></tr>
+<tr><td>3</td><td>Disney+</td></tr>
+<tr><td>4</td><td>Amazon Prime Video</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>id</th><th>RateValue</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>9.0</td></tr>
+<tr><td>2</td><td>8.9</td></tr>
+<tr><td>3</td><td>8.6</td></tr>
+<tr><td>4</td><td>8.4</td></tr>
+<tr><td>5</td><td>8.1</td></tr>
+</tbody></table></div>
+
+<div><h2>Users</h2><table><thead>
+<tr><th>id</th><th>Username</th><th>Email</th><th>Password</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>user1</td><td>user1@example.com</td><td>password1</td></tr>
+<tr><td>2</td><td>user2</td><td>user2@example.com</td><td>password2</td></tr>
+<tr><td>3</td><td>user3</td><td>user3@example.com</td><td>password3</td></tr>
+<tr><td>4</td><td>user4</td><td>user4@example.com</td><td>password4</td></tr>
+<tr><td>5</td><td>user5</td><td>user5@example.com</td><td>password5</td></tr>
+</tbody></table></div>
+
+<div><h2>User_Reviews</h2><table><thead>
+<tr><th>id</th><th>UserID</th><th>ShowID</th><th>ReviewText</th><th>RatingID</th></tr>
+<tr><th></th><th>(&#8594; Users.id)</th><th>(&#8594; TV_Shows.id)</th><th></th><th>(&#8594; Ratings.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Great show!</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Best series ever.</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Loved it! Can't wait for season 4.</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Not a fan of this one.</td><td>3</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Interesting storyline and characters.</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

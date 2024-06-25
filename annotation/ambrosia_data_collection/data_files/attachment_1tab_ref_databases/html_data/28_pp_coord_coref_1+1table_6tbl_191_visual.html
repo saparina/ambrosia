@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">TelevisionShows</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#990000"><span style="color:#990000">format</span></span></th></tr>
+<tr><th>(&#8594; AudienceScores.showId)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>MasterChef</td><td><span style="color:#990000">Cooking Show</span></td></tr>
+<tr><td>2</td><td>Bake Off</td><td><span style="color:#990000">Cooking Show</span></td></tr>
+<tr><td>3</td><td>Survivor</td><td><span style="color:#990000">Reality TV Show</span></td></tr>
+<tr><td>4</td><td>Big Brother</td><td><span style="color:#990000">Reality TV Show</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">AudienceScores</span></h2><table><thead>
+<tr><th>showId</th><th><span style="color:#006600">audienceScore</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">7.5</span></td></tr>
+<tr><td>2</td><td>8.3</td></tr>
+<tr><td>3</td><td><span style="color:#006600">7.5</span></td></tr>
+<tr><td>4</td><td>6.9</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>actorID</th><th>fullName</th><th>birthDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2000-01-01</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1999-02-02</td></tr>
+<tr><td>3</td><td>Tom Brown</td><td>1998-03-03</td></tr>
+<tr><td>4</td><td>Emma Johnson</td><td>1997-04-04</td></tr>
+</tbody></table></div>
+
+<div><h2>ShowsAndActors</h2><table><thead>
+<tr><th>showId</th><th>actorID</th><th>role</th></tr>
+<tr><th>(&#8594; TelevisionShows.id)</th><th>(&#8594; Actors.actorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Judge</td></tr>
+<tr><td>2</td><td>2</td><td>Host</td></tr>
+<tr><td>3</td><td>3</td><td>Contestant</td></tr>
+<tr><td>4</td><td>4</td><td>Housemate</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieGenre</h2><table><thead>
+<tr><th>genreId</th><th>genreName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>movieId</th><th>title</th><th>releaseYear</th><th>genreId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; MovieGenre.genreId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>The Hangover</td><td>2009</td><td>2</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

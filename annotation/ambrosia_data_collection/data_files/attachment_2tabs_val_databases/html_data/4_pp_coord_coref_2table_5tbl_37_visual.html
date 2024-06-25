@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Actor</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birth_year</th><th>Nationality</th><th>Height</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#006600">1975</span></td><td>USA</td><td>1.8</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1963</td><td>UK</td><td>1.72</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Director</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birth_year</th><th>Country</th><th>Filmography</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td><span style="color:#006600">1975</span></td><td>France</td><td>La Vie en Rose, Amelie</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>1980</td><td>USA</td><td>The Matrix Trilogy, Inception</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Release_Date</th><th>Genre_id</th><th>Budget</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Genre.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010-07-16</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Avatar</td><td>2009-12-18</td><td>2</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Adventure</td></tr>
+</tbody></table></div>
+
+<div><h2>Casting</h2><table><thead>
+<tr><th>id</th><th>Actor_id</th><th>Movie_id</th><th>Role</th></tr>
+<tr><th></th><th>(&#8594; Actor.id)</th><th>(&#8594; Movie.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Cobb</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>Arthur</td></tr>
+</tbody></table></div>
+
+<div><h2>Reviewer</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birth_year</th><th>Specialization</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Rogers</td><td>1985</td><td>Journalist</td></tr>
+<tr><td>2</td><td>Emma Stone</td><td>1990</td><td>Critic</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

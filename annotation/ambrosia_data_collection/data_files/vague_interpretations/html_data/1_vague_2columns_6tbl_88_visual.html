@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>CompanyID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>TechCorp</td><td>New York</td></tr>
+<tr><td>2</td><td>SoftwareInc</td><td>San Francisco</td></tr>
+<tr><td>3</td><td>AppDevelopers</td><td>Boston</td></tr>
+<tr><td>4</td><td>CodingWorld</td><td>Chicago</td></tr>
+<tr><td>5</td><td>ProgrammingCo</td><td>Los Angeles</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>JobID</th><th><span style="color:#990000">Minimum_Years</span></th><th><span style="color:#990000">Preferred_Years</span></th><th>JobTitle</th><th>Description</th><th>Salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2</td><td>4</td><td>Software Developer</td><td>We are looking for a Software Developer with at least 2 years of experience.</td><td>70000.0</td></tr>
+<tr><td>2</td><td>3</td><td>6</td><td>Data Analyst</td><td>Experienced Data Analyst required to join our team.</td><td>80000.0</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>Graphic Designer</td><td>We need an entry-level Graphic Designer to work on various projects.</td><td>50000.0</td></tr>
+<tr><td>4</td><td>4</td><td>8</td><td>Product Manager</td><td>An experienced Product Manager is needed to manage and lead product development.</td><td>90000.0</td></tr>
+<tr><td>5</td><td>5</td><td>10</td><td>System Administrator</td><td>A System Administrator with extensive experience is required to maintain and improve system performance.</td><td>60000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>EducationRequirements</h2><table><thead>
+<tr><th>RequirementID</th><th>DegreeLevel</th><th>FieldOfStudy</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Masters</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Bachelors</td><td>Information Technology</td></tr>
+<tr><td>3</td><td>PhD</td><td>Artificial Intelligence</td></tr>
+<tr><td>4</td><td>Associates</td><td>Web Development</td></tr>
+<tr><td>5</td><td>Certified</td><td>Project Management</td></tr>
+</tbody></table></div>
+
+<div><h2>RequiredSkills</h2><table><thead>
+<tr><th>SkillID</th><th>SkillName</th><th>ProficiencyLevel</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python Programming</td><td>Advanced</td></tr>
+<tr><td>2</td><td>JavaScript</td><td>Intermediate</td></tr>
+<tr><td>3</td><td>SQL</td><td>Expert</td></tr>
+<tr><td>4</td><td>HTML/CSS</td><td>Beginner</td></tr>
+<tr><td>5</td><td>Agile Methodology</td><td>Proficient</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

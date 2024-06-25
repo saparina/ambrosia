@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Genres</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">genre</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Blockbuster</span></td></tr>
+<tr><td><span style="color:#006600">2</span></td><td><span style="color:#990000">Indie Film</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Festivals</h2><table><thead>
+<tr><th>id</th><th>festivalName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sundance Film Festival</td></tr>
+<tr><td>2</td><td>Cannes Film Festival</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>year</th><th>duration</th><th>budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action Movie</td><td>2019</td><td>120.0</td><td>80000000.0</td></tr>
+<tr><td>2</td><td>Drama Film</td><td>2018</td><td>90.0</td><td>60000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Director</h2><table><thead>
+<tr><th>filmId</th><th>directorId</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Film_Genre</h2><table><thead>
+<tr><th>filmId</th><th>genreId</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Genres.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Film_Festivals</span></h2><table><thead>
+<tr><th>filmId</th><th><span style="color:#006600">festivalId</span></th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Festivals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td><span style="color:#006600">2</span></td></tr>
+<tr><td><span style="color:#006600">2</span></td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

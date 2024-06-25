@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Eco_Lodges</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Green Valley Lodge</td><td>Amazon Rainforest</td></tr>
+<tr><td>2</td><td>Ocean Breeze Lodge</td><td>Costa Rica Coastline</td></tr>
+<tr><td>3</td><td>Mountain Retreat Lodge</td><td>Appalachian Mountains</td></tr>
+<tr><td>4</td><td>Desert Oasis Lodge</td><td>Mojave Desert</td></tr>
+<tr><td>5</td><td>Arctic Igloo Lodge</td><td>North Pole</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Sustainable_Practices</span></h2><table><thead>
+<tr><th>practice_id</th><th><span style="color:#990000">practice_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Solar Power</td></tr>
+<tr><td>2</td><td>Water Conservation</td></tr>
+<tr><td>3</td><td>Waste Management</td></tr>
+<tr><td>4</td><td>Local Sourcing</td></tr>
+<tr><td>5</td><td>Biodiversity Protection</td></tr>
+</tbody></table></div>
+
+<div><h2>Eco_Lodges_Sustainable_Practices</h2><table><thead>
+<tr><th>eco_lodge_id</th><th>practice_id</th></tr>
+<tr><th>(&#8594; Eco_Lodges.id)</th><th>(&#8594; Sustainable_Practices.practice_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

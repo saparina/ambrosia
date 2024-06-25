@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>FilmFestivals</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>Year</th><th>Event</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cannes Film Festival</td><td>France</td><td>2021</td><td>Film Festival</td></tr>
+<tr><td>2</td><td>Venice Film Festival</td><td>Italy</td><td>2021</td><td>Film Festival</td></tr>
+<tr><td>3</td><td>Berlin International Film Festival</td><td>Germany</td><td>2021</td><td>Film Festival</td></tr>
+<tr><td>4</td><td>Toronto International Film Festival</td><td>Canada</td><td>2021</td><td>Film Festival</td></tr>
+<tr><td>5</td><td>Palm Springs International Film Festival</td><td>USA</td><td>2021</td><td>Film Festival</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>ParticipatingIn</th><th>AwardId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; FilmFestivals.id)</th><th>(&#8594; Awards.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>La La Land</td><td>Damien Chazelle</td><td>2016</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Parasite</td><td>Bong Joon-ho</td><td>2019</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>The Shape of Water</td><td>Guillermo del Toro</td><td>2017</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>Roma</td><td>Alfonso Cuarón</td><td>2018</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>Once Upon a Time... in Hollywood</td><td>Quentin Tarantino</td><td>2019</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Committees</span></h2><table><thead>
+<tr><th>id</th><th>CommitteeName</th><th>President</th><th>Member1</th><th>Member2</th><th>Member3</th><th>Member4</th><th><span style="color:#006600">Member5</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cannes Selection Committee</td><td>Thierry Frémaux</td><td>Paweł Pawlikowski</td><td>Jessica Hausner</td><td>Mia Hansen-Love</td><td>Lee Chang-dong</td><td>Andrey Zvyagintsev</td></tr>
+<tr><td>2</td><td>Venice Selection Committee</td><td>Alberto Barbera</td><td>Nuri Bilge Ceylan</td><td>Apichatpong Weerasethakul</td><td>Kornél Mundruczó</td><td>Maren Ade</td><td><span style="color:#006600">Hirokazu Koreeda</span></td></tr>
+<tr><td>3</td><td>Berlin Selection Committee</td><td>Carlo Chatrian</td><td>Meryl Streep</td><td>Valeria Golino</td><td>Tilda Swinton</td><td>Isabelle Huppert</td><td>Martin Scorsese</td></tr>
+<tr><td>4</td><td>Toronto Selection Committee</td><td>Camilla Fronth</td><td>Denis Villeneuve</td><td>Chloe Zhao</td><td>Angelina Jolie</td><td>David Lowery</td><td>Edgar Wright</td></tr>
+<tr><td>5</td><td>Palm Springs Selection Committee</td><td>Claudia Puig</td><td>Christopher Nolan</td><td>Greta Gerwig</td><td>Danny Boyle</td><td>Paul Thomas Anderson</td><td>Ava DuVernay</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Awards</span></h2><table><thead>
+<tr><th>id</th><th>Type</th><th><span style="color:#990000"><span style="color:#990000">Description</span></span></th><th>GivenBy</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Committees.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Golden Palm</td><td>Highest award at Cannes Film Festival</td><td>1</td></tr>
+<tr><td>2</td><td>Golden Lion</td><td>Highest award at Venice Film Festival</td><td>2</td></tr>
+<tr><td>3</td><td>Golden Bear</td><td>Highest award at Berlin International Film Festival</td><td>3</td></tr>
+<tr><td>4</td><td>People's Choice Award</td><td>Most popular film at Toronto International Film Festival</td><td>4</td></tr>
+<tr><td>5</td><td>Best Director</td><td>Recognizes outstanding direction at Palm Springs International Film Festival</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

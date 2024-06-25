@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Online_Learning</span></h2><table><thead>
+<tr><th>id</th><th>Curriculum_Content</th><th>Course_Name</th><th>Duration</th><th>Platform</th><th>Rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Mathematics</span></td><td>Calculus</td><td>1 month</td><td>Udemy</td><td>4.6</td></tr>
+<tr><td>2</td><td>Computer Science</td><td>Web Development</td><td>3 months</td><td>Pluralsight</td><td>4.8</td></tr>
+<tr><td>3</td><td>Science</td><td>Physics</td><td>2 weeks</td><td>Khan Academy</td><td>4.7</td></tr>
+<tr><td>4</td><td>Language Arts</td><td>English Literature</td><td>1 month</td><td>Coursera</td><td>4.9</td></tr>
+<tr><td>5</td><td>Computer Science</td><td>Data Structures & Algorithms</td><td>2 months</td><td>edX</td><td>4.5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Classroom_Teaching</span></h2><table><thead>
+<tr><th>id</th><th>Curriculum_Content</th><th>Teacher_Name</th><th>Subject</th><th>Grade</th><th>Number_of_Students</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Mathematics</span></td><td>Mr. Smith</td><td>Algebra</td><td>9th grade</td><td>20</td></tr>
+<tr><td>2</td><td>History</td><td>Mrs. Johnson</td><td>World History</td><td>10th grade</td><td>25</td></tr>
+<tr><td>3</td><td>Biology</td><td>Ms. Brown</td><td>Life Sciences</td><td>11th grade</td><td>30</td></tr>
+<tr><td>4</td><td>Geography</td><td>Dr. Davis</td><td>Human Geography</td><td>12th grade</td><td>15</td></tr>
+<tr><td>5</td><td>Art</td><td>Ms. Wilson</td><td>Visual Art</td><td>10th grade</td><td>22</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>School_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Classroom_Teaching.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>15</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>16</td><td>1</td></tr>
+<tr><td>3</td><td>Tom Johnson</td><td>15</td><td>1</td></tr>
+<tr><td>4</td><td>Emma Williams</td><td>16</td><td>1</td></tr>
+<tr><td>5</td><td>Michael Brown</td><td>15</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Teacher</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>School_ID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Classroom_Teaching.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr. Smith</td><td>35</td><td>1</td></tr>
+<tr><td>2</td><td>Mrs. Johnson</td><td>34</td><td>1</td></tr>
+<tr><td>3</td><td>Ms. Brown</td><td>33</td><td>1</td></tr>
+<tr><td>4</td><td>Dr. Davis</td><td>36</td><td>1</td></tr>
+<tr><td>5</td><td>Ms. Wilson</td><td>32</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Assignment</h2><table><thead>
+<tr><th>id</th><th>Description</th><th>Due_Date</th><th>Score</th><th>Student_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Student.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Homework on Chapters 1-3</td><td>2022-10-05 23:59:59</td><td>85</td><td>1</td></tr>
+<tr><td>2</td><td>Project on World War II</td><td>2022-11-15 23:59:59</td><td>92</td><td>2</td></tr>
+<tr><td>3</td><td>Essay on Climate Change</td><td>2022-12-05 23:59:59</td><td>88</td><td>3</td></tr>
+<tr><td>4</td><td>Presentation on The Great Depression</td><td>2022-11-30 23:59:59</td><td>95</td><td>4</td></tr>
+<tr><td>5</td><td>Research Paper on Renaissance Art</td><td>2023-01-15 23:59:59</td><td>90</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

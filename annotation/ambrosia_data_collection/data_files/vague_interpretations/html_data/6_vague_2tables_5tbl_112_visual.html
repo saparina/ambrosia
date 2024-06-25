@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Studio</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Warner Bros.</td><td>Burbank, CA</td></tr>
+<tr><td>2</td><td>Disney</td><td>Burbank, CA</td></tr>
+<tr><td>3</td><td>Universal Pictures</td><td>Universal City, CA</td></tr>
+<tr><td>4</td><td>Paramount Pictures</td><td>Hollywood, CA</td></tr>
+<tr><td>5</td><td>20th Century Fox</td><td>Century City, CA</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Director</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>1970</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td><td>1963</td></tr>
+<tr><td>3</td><td>Steven Spielberg</td><td>1946</td></tr>
+<tr><td>4</td><td>James Cameron</td><td>1954</td></tr>
+<tr><td>5</td><td>Martin Scorsese</td><td>1942</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th>studio_id</th><th>director_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Studio.id)</th><th>(&#8594; Director.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010-07-16</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994-10-14</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Schindler's List</td><td>1993-12-15</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Titanic</td><td>1997-12-18</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Goodfellas</td><td>1990-09-22</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>date_of_birth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td></tr>
+<tr><td>2</td><td>Tom</td><td>Cruise</td><td>1962-07-03</td></tr>
+<tr><td>3</td><td>Brad</td><td>Pitt</td><td>1963-12-18</td></tr>
+<tr><td>4</td><td>Joaquin</td><td>Phoenix</td><td>1974-10-28</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>movie_id</th><th>actor_id</th><th>character</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Dom Cobb</td></tr>
+<tr><td>2</td><td>2</td><td>Vincent Vega</td></tr>
+<tr><td>3</td><td>3</td><td>Oskar Schindler</td></tr>
+<tr><td>4</td><td>4</td><td>Jack Dawson</td></tr>
+<tr><td>2</td><td>5</td><td>Jules Winnfield</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>genre_id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Drama</td></tr>
+<tr><td>3</td><td>Romance</td></tr>
+<tr><td>4</td><td>Thriller</td></tr>
+<tr><td>5</td><td>Crime</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieGenre</h2><table><thead>
+<tr><th>movie_id</th><th>genre_id</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Genre.genre_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

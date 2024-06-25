@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Journalist</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td><td>1234567890</td></tr>
+<tr><td>2</td><td>Jane Roe</td><td>jane@example.com</td><td>987654321</td></tr>
+</tbody></table></div>
+
+<div><h2>Source</h2><table><thead>
+<tr><th>id</th><th>name</th><th>type</th><th>contactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Times</td><td>Daily Newspaper</td><td>nytimes@example.com</td></tr>
+<tr><td>2</td><td>Wall Street Journal</td><td>Business Daily</td><td>wsj@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Category</h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td><td>A section dealing with governmental activities at local, national, or international levels.</td></tr>
+<tr><td>2</td><td>Economy</td><td>A section covering economic events such as stock market activity, corporate earnings reports, etc.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">News</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>date</th><th>journalistId</th><th>sourceId</th><th>categoryId</th><th>news_article_structures</th><th>student</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Journalist.id)</th><th>(&#8594; Source.id)</th><th>(&#8594; Category.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First News Article</td><td>This is the first article.</td><td>2024-03-07 23:49:36</td><td>1</td><td>1</td><td>1</td><td><span style="color:#990000">Inverted Pyramid</span></td><td><span style="color:#006600">Anne Smith</span></td></tr>
+<tr><td>2</td><td>Second News Article</td><td>This is the second article.</td><td>2024-03-07 23:49:36</td><td>1</td><td>1</td><td>2</td><td><span style="color:#990000">Inverted Pyramid</span></td><td>Alice Brown</td></tr>
+<tr><td>3</td><td>Third News Article</td><td>This is the third article.</td><td>2024-03-07 23:49:36</td><td>2</td><td>2</td><td>1</td><td><span style="color:#990000">Chronological Structure</span></td><td><span style="color:#006600">Anne Smith</span></td></tr>
+<tr><td>4</td><td>Fourth News Article</td><td>This is the fourth article.</td><td>2024-03-07 23:49:36</td><td>2</td><td>2</td><td>2</td><td><span style="color:#990000">Chronological Structure</span></td><td>Bob Johnson</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

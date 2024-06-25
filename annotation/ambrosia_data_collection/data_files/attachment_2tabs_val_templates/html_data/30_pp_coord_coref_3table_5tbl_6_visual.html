@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Operating_System</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#1430b2">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Windows 10</td></tr>
+<tr><td>2</td><td><span style="color:#1430b2">macOS Big Sur</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Tablet</span></h2><table><thead>
+<tr><th>ID</th><th>Model</th><th>OS_ID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Operating_System.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Surface Pro 7</td><td>1</td></tr>
+<tr><td>2</td><td>iPad Air</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Laptop</span></h2><table><thead>
+<tr><th>ID</th><th>Model</th><th>OS_ID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Operating_System.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dell XPS 13</td><td>1</td></tr>
+<tr><td>2</td><td>MacBook Pro 16'</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

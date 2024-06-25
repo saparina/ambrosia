@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Digital_Tools</span></h2><table><thead>
+<tr><th>id</th><th>Name</th><th><span style="color:#186e16"><span style="color:#186e16">Category</span></span></th><th><span style="color:#1430b2">Access</span></th><th>Price</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adobe Photoshop</td><td><span style="color:#186e16">Graphic Design</span></td><td><span style="color:#1430b2">Subscription</span></td><td>29.99</td></tr>
+<tr><td>2</td><td>Canva</td><td><span style="color:#186e16">Web Design</span></td><td>Free</td><td>0.0</td></tr>
+<tr><td>3</td><td>Illustrator</td><td><span style="color:#186e16">Graphic Design</span></td><td>Perpetual License</td><td>648.75</td></tr>
+<tr><td>4</td><td>Sketch</td><td><span style="color:#186e16">Web Design</span></td><td><span style="color:#1430b2">Subscription</span></td><td>9.99</td></tr>
+<tr><td>5</td><td>InDesign</td><td><span style="color:#186e16">Graphic Design</span></td><td>Perpetual License</td><td>849.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Graphics_Designers</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>Experience</th><th>Digital_Tool_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Digital_Tools.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>25</td><td>1 Year of experience</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>30</td><td>3 Years of experience</td><td>2</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>28</td><td>2 Years of experience</td><td>3</td></tr>
+<tr><td>4</td><td>Emily Williams</td><td>22</td><td>Fresh Graduate</td><td>4</td></tr>
+<tr><td>5</td><td>Robert Brown</td><td>35</td><td>5 Years of experience</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Web_Designers</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>Experience</th><th>Digital_Tool_ID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Digital_Tools.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Miller</td><td>26</td><td>2 Years of experience</td><td>2</td></tr>
+<tr><td>2</td><td>Nancy Davis</td><td>32</td><td>4 Years of experience</td><td>4</td></tr>
+<tr><td>3</td><td>Chris Taylor</td><td>30</td><td>1 Year of experience</td><td>3</td></tr>
+<tr><td>4</td><td>Lisa Jackson</td><td>28</td><td>Fresh Graduate</td><td>5</td></tr>
+<tr><td>5</td><td>David White</td><td>29</td><td>3 Years of experience</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Producers</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Company</th><th>Budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Marvel Studios</td><td>Marvel Cinematic Universe</td><td>1000000000.0</td></tr>
+<tr><td>2</td><td>Disney</td><td>Walt Disney Pictures</td><td>200000000.0</td></tr>
+<tr><td>3</td><td>Warner Bros.</td><td>DC Films</td><td>150000000.0</td></tr>
+<tr><td>4</td><td>Universal Pictures</td><td>Blumhouse Productions</td><td>80000000.0</td></tr>
+<tr><td>5</td><td>Paramount Pictures</td><td>DreamWorks Animation</td><td>120000000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Age</th><th>YearsOfExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>James Cameron</td><td>48</td><td>35 years</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td><td>51</td><td>22 years</td></tr>
+<tr><td>3</td><td>Steven Spielberg</td><td>73</td><td>49 years</td></tr>
+<tr><td>4</td><td>Quentin Tarantino</td><td>57</td><td>29 years</td></tr>
+<tr><td>5</td><td>J. J. Abrams</td><td>54</td><td>19 years</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Producer_ID</th><th>Director_ID</th><th>ReleaseDate</th><th>BoxOfficeCollection</th></tr>
+<tr><th></th><th></th><th>(&#8594; Movie_Producers.id)</th><th>(&#8594; Movie_Directors.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Avengers: Endgame</td><td>1</td><td>2</td><td>2019-04-26</td><td>15000000000.0</td></tr>
+<tr><td>2</td><td>The Lion King</td><td>3</td><td>1</td><td>2019-07-19</td><td>1657000000.0</td></tr>
+<tr><td>3</td><td>Captain Marvel</td><td>1</td><td>1</td><td>2019-03-08</td><td>1022000000.0</td></tr>
+<tr><td>4</td><td>Toy Story 4</td><td>4</td><td>1</td><td>2019-06-21</td><td>1014000000.0</td></tr>
+<tr><td>5</td><td>Star Wars: The Rise of Skywalker</td><td>2</td><td>1</td><td>2019-12-20</td><td>1075000000.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

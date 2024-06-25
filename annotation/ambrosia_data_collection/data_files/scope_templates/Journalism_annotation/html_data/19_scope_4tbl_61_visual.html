@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Fields</span></h2><table><thead>
+<tr><th>field_id</th><th><span style="color:#990000">field_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Biology</td></tr>
+<tr><td>2</td><td>Chemistry</td></tr>
+<tr><td>3</td><td>Physics</td></tr>
+<tr><td>4</td><td>Mathematics</td></tr>
+<tr><td>5</td><td>Astronomy</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Science_Reporters</span></h2><table><thead>
+<tr><th>reporter_id</th><th>email</th><th>full_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>john.doe@example.com</td><td>John Doe</td></tr>
+<tr><td>2</td><td>jane.smith@example.com</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>michael.brown@example.com</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>emily.white@example.com</td><td>Emily White</td></tr>
+<tr><td>5</td><td>william.black@example.com</td><td>William Black</td></tr>
+</tbody></table></div>
+
+<div><h2>Publications</h2><table><thead>
+<tr><th>publication_id</th><th>title</th><th>published_date</th><th>abstract</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Evolution of Life on Earth</td><td>2022-06-01</td><td>This article discusses the history and evolution of life on our planet.</td></tr>
+<tr><td>2</td><td>Breakthroughs in Quantum Physics</td><td>2022-07-01</td><td>Recent advancements in quantum physics have opened up new possibilities for research and technology.</td></tr>
+<tr><td>3</td><td>New Theories on Dark Matter</td><td>2022-08-01</td><td>Scientists are exploring new theories about dark matter and its role in the universe.</td></tr>
+<tr><td>4</td><td>Revolutionizing Mathematical Models</td><td>2022-09-01</td><td>This paper introduces a groundbreaking mathematical model that could change how we understand complex systems.</td></tr>
+<tr><td>5</td><td>Exploring Exoplanets in Our Galaxy</td><td>2022-10-01</td><td>Researchers have discovered several exoplanets within our galaxy that may potentially harbor life.</td></tr>
+</tbody></table></div>
+
+<div><h2>Reporter_Publications</h2><table><thead>
+<tr><th>reporter_publication_id</th><th>science_reporter_id</th><th>publication_id</th></tr>
+<tr><th></th><th>(&#8594; Science_Reporters.reporter_id)</th><th>(&#8594; Publications.publication_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Science_Reporters_Fields</h2><table><thead>
+<tr><th>science_reporters_fields_id</th><th>science_reporter_id</th><th>field_id</th></tr>
+<tr><th></th><th>(&#8594; Science_Reporters.reporter_id)</th><th>(&#8594; Fields.field_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

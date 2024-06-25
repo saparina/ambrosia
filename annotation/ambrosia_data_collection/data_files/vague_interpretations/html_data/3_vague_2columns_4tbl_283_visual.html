@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Patients</h2><table><thead>
+<tr><th>PatientID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2000-01-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1987-06-15</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>1993-11-23</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>1995-09-08</td></tr>
+<tr><td>5</td><td>David</td><td>Martinez</td><td>1981-02-12</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>DoctorID</th><th>DoctorName</th><th>Specialty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Brown</td><td>Cardiology</td></tr>
+<tr><td>2</td><td>Dr. Green</td><td>Neurology</td></tr>
+<tr><td>3</td><td>Dr. White</td><td>Pulmonology</td></tr>
+<tr><td>4</td><td>Dr. Black</td><td>Gastroenterology</td></tr>
+<tr><td>5</td><td>Dr. Gray</td><td>Orthopedics</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>AppointmentID</th><th>PatientID</th><th>DoctorID</th><th>DateAndTime</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; Doctors.DoctorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-10 14:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-02-12 10:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-03-15 16:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-04-05 11:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-05-10 09:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Conditions</h2><table><thead>
+<tr><th>ConditionID</th><th><span style="color:#990000">ConditionName</span></th><th><span style="color:#990000">BodyPartAffected</span></th><th>Medication</th><th>Severity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hypertension</td><td>Heart</td><td>Lisinopril</td><td>Moderate</td></tr>
+<tr><td>2</td><td>Epilepsy</td><td>Brain</td><td>Lamotrigine</td><td>Mild</td></tr>
+<tr><td>3</td><td>Asthma</td><td>Lungs</td><td>Fluticasone</td><td>Mild</td></tr>
+<tr><td>4</td><td>Inflammatory Bowel Disease</td><td>Digestive System</td><td>Prednisone</td><td>Moderate</td></tr>
+<tr><td>5</td><td>Osteoarthritis</td><td>Joints</td><td>Acetaminophen</td><td>Mild</td></tr>
+</tbody></table></div>
+
+<div><h2>Diagnoses</h2><table><thead>
+<tr><th>DiagnosisID</th><th>PatientID</th><th>ConditionID</th><th>DateOfDiagnosis</th></tr>
+<tr><th></th><th>(&#8594; Patients.PatientID)</th><th>(&#8594; Conditions.ConditionID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-12-01</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-12-15</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-01-05</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-02-20</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-03-05</td></tr>
+</tbody></table></div>
+
+<div><h2>Prescriptions</h2><table><thead>
+<tr><th>PrescriptionID</th><th>AppointmentID</th><th>Medication</th><th>Quantity</th><th>Instructions</th></tr>
+<tr><th></th><th>(&#8594; Appointments.AppointmentID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lisinopril</td><td>30</td><td>Take once daily.</td></tr>
+<tr><td>2</td><td>2</td><td>Lamotrigine</td><td>60</td><td>Take twice daily with food.</td></tr>
+<tr><td>3</td><td>3</td><td>Fluticasone</td><td>30</td><td>Use inhaler as directed by your doctor.</td></tr>
+<tr><td>4</td><td>4</td><td>Prednisone</td><td>10</td><td>Take as prescribed by your doctor.</td></tr>
+<tr><td>5</td><td>5</td><td>Acetaminophen</td><td>30</td><td>Take every 6 hours if needed.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

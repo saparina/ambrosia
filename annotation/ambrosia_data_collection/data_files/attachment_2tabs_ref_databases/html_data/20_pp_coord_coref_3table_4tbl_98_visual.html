@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Hotels</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#006600">address</span></th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Grand Hotel</td><td>123 Main St</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Park Plaza Inn</td><td>456 Market St</td><td>+0987654321</td></tr>
+<tr><td>3</td><td>Riverview Suites</td><td><span style="color:#006600">789 River Rd</span></td><td>+1112223333</td></tr>
+<tr><td>4</td><td>Sunset Beach Resort</td><td>321 Ocean Blvd</td><td>+4445556667</td></tr>
+<tr><td>5</td><td>Mountain Retreat Lodge</td><td>654 Mountain Way</td><td>+7778889990</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">HouseKeepers</span></h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>hireDate</th><th>salary</th><th>hotelId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Hotels.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>2021-01-01</td><td>35000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>2021-02-01</td><td>38000.0</td><td>2</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>alice.brown@example.com</td><td>2021-03-01</td><td>40000.0</td><td>3</td></tr>
+<tr><td>4</td><td>Mike</td><td>Johnson</td><td>mike.johnson@example.com</td><td>2021-04-01</td><td>36000.0</td><td>4</td></tr>
+<tr><td>5</td><td>Emma</td><td>Williams</td><td>emma.williams@example.com</td><td>2021-05-01</td><td>39000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">LaundryAttendants</span></h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th><th>hireDate</th><th>salary</th><th>hotelId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Hotels.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>David</td><td>Martin</td><td>david.martin@example.com</td><td>2021-01-01</td><td>32000.0</td><td>1</td></tr>
+<tr><td>2</td><td>Lucy</td><td>Taylor</td><td>lucy.taylor@example.com</td><td>2021-02-01</td><td>33000.0</td><td>2</td></tr>
+<tr><td>3</td><td>Charlie</td><td>Thompson</td><td>charlie.thompson@example.com</td><td>2021-03-01</td><td>34000.0</td><td>3</td></tr>
+<tr><td>4</td><td>Grace</td><td>Miller</td><td>grace.miller@example.com</td><td>2021-04-01</td><td>35000.0</td><td>4</td></tr>
+<tr><td>5</td><td>Samantha</td><td>Wright</td><td>samantha.wright@example.com</td><td>2021-05-01</td><td>36000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>id</th><th>number</th><th>hotelId</th><th>houseKeeperId</th><th>laundryAttendantId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Hotels.id)</th><th>(&#8594; HouseKeepers.id)</th><th>(&#8594; LaundryAttendants.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>201</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>301</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>401</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>501</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>102</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>7</td><td>202</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>8</td><td>302</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>9</td><td>402</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>10</td><td>502</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

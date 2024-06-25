@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Staff</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th><span style="color:#990000"><span style="color:#990000">Position</span></span></th><th>LanguageID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Languages.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#990000">Chef</span></td><td>1</td></tr>
+<tr><td>2</td><td>Mike Smith</td><td><span style="color:#990000">Chef</span></td><td>3</td></tr>
+<tr><td>3</td><td>Emily Johnson</td><td><span style="color:#990000">Server</span></td><td>1</td></tr>
+<tr><td>4</td><td>David Brown</td><td><span style="color:#990000">Server</span></td><td>4</td></tr>
+<tr><td>5</td><td>Anna Davis</td><td>Manager</td><td>2</td></tr>
+<tr><td>6</td><td>Peter Miller</td><td>Bartender</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>ID</th><th>RoomNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td></tr>
+<tr><td>2</td><td>102</td></tr>
+<tr><td>3</td><td>103</td></tr>
+<tr><td>4</td><td>104</td></tr>
+<tr><td>5</td><td>105</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>ID</th><th>GuestName</th><th>CheckInDate</th><th>CheckOutDate</th><th>RoomID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Rooms.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Cooper</td><td>2023-06-01</td><td>2023-06-07</td><td>101</td></tr>
+<tr><td>2</td><td>Bob Marley</td><td>2023-06-08</td><td>2023-06-14</td><td>102</td></tr>
+<tr><td>3</td><td>Carol King</td><td>2023-06-15</td><td>2023-06-21</td><td>103</td></tr>
+<tr><td>4</td><td>Daniel Ricciardo</td><td>2023-06-22</td><td>2023-06-29</td><td>104</td></tr>
+<tr><td>5</td><td>Eva Mendes</td><td>2023-06-30</td><td>2023-07-07</td><td>105</td></tr>
+</tbody></table></div>
+
+<div><h2>StaffRooms</h2><table><thead>
+<tr><th>StaffID</th><th>RoomID</th><th>WorkDays</th></tr>
+<tr><th>(&#8594; Staff.ID)</th><th>(&#8594; Rooms.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>5</td><td>101</td><td>Monday,Wednesday</td></tr>
+<tr><td>6</td><td>102</td><td>Tuesday,Thursday</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Languages</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Language</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Spanish</span></td></tr>
+<tr><td>2</td><td>French</td></tr>
+<tr><td>3</td><td>German</td></tr>
+<tr><td>4</td><td>Italian</td></tr>
+<tr><td>5</td><td>Japanese</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Opera</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Composer</th><th>Year_of_Composition</th><th>Location</th><th>Orchestra</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>La Traviata</td><td>Verdi</td><td>200</td><td>Paris</td><td><span style="color:#006600">LSO</span></td></tr>
+<tr><td>2</td><td>Carmen</td><td>Bizet</td><td>1875</td><td>Madrid</td><td>Royal Concertgebouw</td></tr>
+<tr><td>3</td><td>The Magic Flute</td><td>Mozart</td><td>1984</td><td>New York</td><td>NY Philharmonic</td></tr>
+<tr><td>4</td><td>Tosca</td><td>Puccini</td><td>1896</td><td>Milan</td><td><span style="color:#006600">LSO</span></td></tr>
+<tr><td>5</td><td>Aida</td><td>Verdi</td><td>1871</td><td>Egypt</td><td>Kirov</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Symphony</span></h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Composer</th><th>Year_of_Composition</th><th>Performance_Venue</th><th>Orchestra</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Beethoven Symphony No. 5</td><td>Beethoven</td><td>1808</td><td>Vienna</td><td><span style="color:#006600">LSO</span></td></tr>
+<tr><td>2</td><td>Mahler Symphony No. 2</td><td>Mahler</td><td>1904</td><td>Berlin</td><td>Boston Symphony Orchestra</td></tr>
+<tr><td>3</td><td>Shostakovich Symphony No. 5</td><td>Shostakovich</td><td>1937</td><td>St Petersburg</td><td><span style="color:#006600">LSO</span></td></tr>
+<tr><td>4</td><td>Dvorak Symphony No. 9</td><td>Dvořák</td><td>1896</td><td>Prague</td><td>Wiener Philharmoniker</td></tr>
+<tr><td>5</td><td>Elgar Symphony No. 1</td><td>Elgar</td><td>1908</td><td>London</td><td>Halle</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Lee</td><td>English</td><td>-55</td><td>British</td></tr>
+<tr><td>2</td><td>Sean Connery</td><td>Scottish</td><td>-90</td><td>Scotland</td></tr>
+<tr><td>3</td><td>Pierce Brosnan</td><td>Irish</td><td>1953</td><td>Ireland</td></tr>
+<tr><td>4</td><td>Daniel Craig</td><td>English</td><td>1968</td><td>England</td></tr>
+<tr><td>5</td><td>Idris Elba</td><td>English</td><td>1972</td><td>England</td></tr>
+</tbody></table></div>
+
+<div><h2>Film</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Genre</th><th>CastID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Actor.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dracula</td><td>Francis Ford Coppola</td><td>1992</td><td>Horror/Fantasy</td><td>1</td></tr>
+<tr><td>2</td><td>Goldfinger</td><td>Guy Hamilton</td><td>1964</td><td>Action/Adventure</td><td>2</td></tr>
+<tr><td>3</td><td>Die Another Day</td><td>Lee Tamahori</td><td>2002</td><td>Action/Thriller</td><td>3</td></tr>
+<tr><td>4</td><td>No Time To Die</td><td>Cary Joji Fukunaga</td><td>2021</td><td>Action/Adventure</td><td>4</td></tr>
+<tr><td>5</td><td>Spectre</td><td>Sam Mendes</td><td>2015</td><td>Action/Adventure</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>MusicAlbum</h2><table><thead>
+<tr><th>ID</th><th>Artist</th><th>AlbumTitle</th><th>ReleaseYear</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Abbey Road</td><td>The Beatles</td><td>1969</td><td>Rock</td></tr>
+<tr><td>2</td><td>Revolver</td><td>The Beatles</td><td>1966</td><td>Pop Rock</td></tr>
+<tr><td>3</td><td>Sergeant Pepper's Lonely Hearts Club Band</td><td>The Beatles</td><td>1967</td><td>Rock</td></tr>
+<tr><td>4</td><td>Let It Be</td><td>The Beatles</td><td>1970</td><td>Rock</td></tr>
+<tr><td>5</td><td>Rubber Soul</td><td>The Beatles</td><td>1965</td><td>Indie rock</td></tr>
+</tbody></table></div>
+
+<div><h2>Play</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Author</th><th>Type</th><th>Year_Written</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hamlet</td><td>William Shakespeare</td><td>1603</td><td>Tragedy</td></tr>
+<tr><td>2</td><td>Macbeth</td><td>William Shakespeare</td><td>1606</td><td>Tragedy</td></tr>
+<tr><td>3</td><td>Julius Caesar</td><td>William Shakespeare</td><td>1599</td><td>Tragedy</td></tr>
+<tr><td>4</td><td>King Lear</td><td>William Shakespeare</td><td>1606</td><td>Tragedy</td></tr>
+<tr><td>5</td><td>Othello</td><td>William Shakespeare</td><td>1603</td><td>Tragedy</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

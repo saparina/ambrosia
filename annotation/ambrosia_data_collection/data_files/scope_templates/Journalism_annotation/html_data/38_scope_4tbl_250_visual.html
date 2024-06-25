@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Journalism_Schools</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>University A</td><td>City A</td></tr>
+<tr><td>2</td><td>University B</td><td>City B</td></tr>
+<tr><td>3</td><td>University C</td><td>City C</td></tr>
+<tr><td>4</td><td>University D</td><td>City D</td></tr>
+<tr><td>5</td><td>University E</td><td>City E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Courses</span></h2><table><thead>
+<tr><th>id</th><th>course_name</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Ethics In Journalism</td><td>This course covers ethical considerations in journalism.</td></tr>
+<tr><td>2</td><td>Data Analysis For Journalists</td><td>Learn how to analyze and interpret data to inform news stories.</td></tr>
+<tr><td>3</td><td>Feature Writing</td><td>Master the art of crafting compelling feature articles.</td></tr>
+<tr><td>4</td><td>News Reporting</td><td>Develop skills necessary for effective reporting on current events.</td></tr>
+<tr><td>5</td><td>Media Law</td><td>Understand legal issues related to media and journalism.</td></tr>
+</tbody></table></div>
+
+<div><h2>Journalism_Schools_Courses</h2><table><thead>
+<tr><th>journalism_schools_id</th><th>course_id</th></tr>
+<tr><th>(&#8594; Journalism_Schools.id)</th><th>(&#8594; Courses.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

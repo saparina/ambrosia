@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">University</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>website</th><th>academic_programs</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Harvard</td><td>Cambridge, Massachusetts</td><td>http://www.harvard.edu/</td><td><span style="color:#006600">Business Administration</span></td></tr>
+<tr><td>2</td><td>MIT</td><td>Cambridge, Massachusetts</td><td>https://mit.edu/</td><td>Computer Science</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">College</span></h2><table><thead>
+<tr><th>id</th><th>university_id</th><th>name</th><th>location</th><th>website</th><th>academic_programs</th></tr>
+<tr><th></th><th>(&#8594; University.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>101</td><td>1</td><td>Harvard Business School</td><td>Boston, Massachusetts</td><td>http://hbs.harvard.edu/</td><td><span style="color:#006600">Business Administration</span></td></tr>
+<tr><td>102</td><td>2</td><td>MIT Sloan School of Management</td><td>Cambridge, Massachusetts</td><td>http://mitsloan.mit.edu/</td><td>Management</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>id</th><th>college_id</th><th>department_name</th><th>head_of_department</th><th>faculty_count</th></tr>
+<tr><th></th><th>(&#8594; College.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>301</td><td>101</td><td>Finance</td><td>John Doe</td><td>50</td></tr>
+<tr><td>302</td><td>102</td><td>Marketing</td><td>Jane Smith</td><td>60</td></tr>
+</tbody></table></div>
+
+<div><h2>Course</h2><table><thead>
+<tr><th>id</th><th>department_id</th><th>course_code</th><th>course_title</th><th>credits</th></tr>
+<tr><th></th><th>(&#8594; Department.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>401</td><td>301</td><td>FIN101</td><td>Introduction to Finance</td><td>4</td></tr>
+<tr><td>402</td><td>302</td><td>MKT101</td><td>Principles of Marketing</td><td>4</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>matriculation_number</th><th>first_name</th><th>last_name</th><th>date_of_birth</th><th>email</th><th>enrolled_in_course</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Course.id)</th></tr>
+</thead><tbody>
+<tr><td>701</td><td>Alice</td><td>Smith</td><td>1998-05-15</td><td>alice@example.com</td><td>None</td></tr>
+<tr><td>702</td><td>Bob</td><td>Doe</td><td>1999-06-16</td><td>bob@example.com</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollment</h2><table><thead>
+<tr><th>student_matriculation_number</th><th>course_id</th><th>grade</th></tr>
+<tr><th>(&#8594; Student.matriculation_number)</th><th>(&#8594; Course.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>701</td><td>401</td><td>A</td></tr>
+<tr><td>702</td><td>402</td><td>B</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

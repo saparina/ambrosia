@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Chalets</span></h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Location</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chalet A</td><td>Alps</td><td>10</td></tr>
+<tr><td>2</td><td>Chalet B</td><td>Mountains</td><td>8</td></tr>
+<tr><td>3</td><td>Chalet C</td><td>Beachside</td><td>6</td></tr>
+<tr><td>4</td><td>Chalet D</td><td>City Centre</td><td>12</td></tr>
+<tr><td>5</td><td>Chalet E</td><td>Lakeside</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Cabins</span></h2><table><thead>
+<tr><th>Id</th><th>Name</th><th>Location</th><th>Capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cabin X</td><td>Forest</td><td>4</td></tr>
+<tr><td>2</td><td>Cabin Y</td><td>Desert</td><td>3</td></tr>
+<tr><td>3</td><td>Cabin Z</td><td>Riverbank</td><td>5</td></tr>
+<tr><td>4</td><td>Cabin W</td><td>Coast</td><td>7</td></tr>
+<tr><td>5</td><td>Cabin V</td><td>Hills</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Accommodations</span></h2><table><thead>
+<tr><th>Id</th><th>Type</th><th><span style="color:#006600">Price_per_night</span></th></tr>
+<tr><th></th><th>(&#8594; Chalets.Name)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chalet A</td><td><span style="color:#006600">200.0</span></td></tr>
+<tr><td>2</td><td>Chalet B</td><td>300.0</td></tr>
+<tr><td>3</td><td>Cabin X</td><td><span style="color:#006600">200.0</span></td></tr>
+<tr><td>4</td><td>Cabin Y</td><td>300.0</td></tr>
+<tr><td>5</td><td>Chalet C</td><td>250.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>Id</th><th>Guest_name</th><th>CheckIn</th><th>CheckOut</th><th>Accommodation_id</th><th>Total_price</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Accommodations.Id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2023-01-01</td><td>2023-01-05</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2023-01-10</td><td>2023-01-14</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>2023-01-15</td><td>2023-01-19</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Emma Wilson</td><td>2023-01-20</td><td>2023-01-24</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>David Brown</td><td>2023-01-25</td><td>2023-01-29</td><td>5</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

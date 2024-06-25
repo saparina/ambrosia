@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Entertainment_Hubs</span></h2><table><thead>
+<tr><th>HubID</th><th>Name</th><th>Type</th><th>Hours</th><th>PriceRange</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Cocktail Lounge</span></td><td>Bar</td><td><span style="color:#006600">open from 5 PM to 2 AM</span></td><td>None</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Cocktail Lounge</span></td><td>Bar</td><td>open from 3 PM to midnight</td><td>None</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Sports Bar</span></td><td>Bar</td><td><span style="color:#006600">open from 5 PM to 2 AM</span></td><td>None</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Sports Bar</span></td><td>Bar</td><td>open from noon to 10 PM</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>HotelRooms</h2><table><thead>
+<tr><th>RoomID</th><th>FloorNumber</th><th>View</th><th>Occupancy</th><th>Amenities</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2</td><td>Mountain view</td><td>2</td><td>TV, WiFi, Air conditioning</td></tr>
+<tr><td>2</td><td>1</td><td>City view</td><td>3</td><td>TV, WiFi, Air conditioning</td></tr>
+</tbody></table></div>
+
+<div><h2>Restaurants</h2><table><thead>
+<tr><th>RestaurantID</th><th>Name</th><th>Cuisine</th><th>OpeningTime</th><th>ClosingTime</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Italian Bistro</td><td>Italian</td><td>8 AM</td><td>9 PM</td></tr>
+<tr><td>2</td><td>Japanese Sushi Bar</td><td>Japanese</td><td>11 AM</td><td>9 PM</td></tr>
+</tbody></table></div>
+
+<div><h2>ParkingLots</h2><table><thead>
+<tr><th>LotID</th><th>Location</th><th>Capacity</th><th>Cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Hotel parking lot</td><td>50</td><td>3.0</td></tr>
+<tr><td>2</td><td>Mall parking lot</td><td>300</td><td>2.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Reservations</h2><table><thead>
+<tr><th>ReservationID</th><th>CustomerName</th><th>ContactInfo</th><th>CheckInDate</th><th>CheckOutDate</th><th>TotalCost</th><th>PaymentMethod</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>(555) 555-5555</td><td>2023-01-01</td><td>2023-01-02</td><td>150.0</td><td>Visa</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>(555) 555-6789</td><td>2023-01-15</td><td>2023-01-16</td><td>200.0</td><td>Mastercard</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

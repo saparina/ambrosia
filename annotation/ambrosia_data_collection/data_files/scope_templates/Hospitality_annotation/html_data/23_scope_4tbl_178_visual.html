@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Bed_and_breakfast</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>rating</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Cozy Inn</td><td>123 Main St</td><td>4.7</td></tr>
+<tr><td>2</td><td>Parkside Lodge</td><td>456 Park Ave</td><td>4.9</td></tr>
+<tr><td>3</td><td>Seaside Retreat</td><td>789 Beach Blvd</td><td>4.5</td></tr>
+<tr><td>4</td><td>Mountain Haven</td><td>1011 Skyline Dr</td><td>4.8</td></tr>
+<tr><td>5</td><td>Uptown Manor</td><td>1314 City Center Dr</td><td>4.6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Rooms</span></h2><table><thead>
+<tr><th><span style="color:#990000">room_type</span></th><th>price</th></tr>
+</thead><tbody>
+<tr><td>Single Room</td><td>100</td></tr>
+<tr><td>Double Room</td><td>150</td></tr>
+<tr><td>Suite</td><td>250</td></tr>
+<tr><td>Deluxe Suite</td><td>300</td></tr>
+<tr><td>Family Room</td><td>200</td></tr>
+</tbody></table></div>
+
+<div><h2>Bed_and_breakfast_rooms</h2><table><thead>
+<tr><th>bed_id</th><th>room_id</th></tr>
+<tr><th>(&#8594; Bed_and_breakfast.id)</th><th>(&#8594; Rooms.room_type)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Single Room</td></tr>
+<tr><td>2</td><td>Double Room</td></tr>
+<tr><td>3</td><td>Suite</td></tr>
+<tr><td>4</td><td>Deluxe Suite</td></tr>
+<tr><td>5</td><td>Family Room</td></tr>
+<tr><td>1</td><td>Double Room</td></tr>
+<tr><td>2</td><td>Family Room</td></tr>
+<tr><td>3</td><td>Double Room</td></tr>
+<tr><td>4</td><td>Double Room</td></tr>
+<tr><td>5</td><td>Double Room</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>customer_id</th><th>first_name</th><th>last_name</th><th>email</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td><td>555-1234</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td><td>555-5678</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>alice.wonderland@example.com</td><td>555-9012</td></tr>
+<tr><td>4</td><td>Charlie</td><td>Brown</td><td>charlie.brown@example.com</td><td>555-0123</td></tr>
+<tr><td>5</td><td>David</td><td>White</td><td>david.white@example.com</td><td>555-1357</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>booking_id</th><th>bed_id</th><th>customer_id</th><th>checkin</th><th>checkout</th><th>total_price</th></tr>
+<tr><th></th><th>(&#8594; Bed_and_breakfast_rooms.bed_id)</th><th>(&#8594; Customers.customer_id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01</td><td>2022-01-03</td><td>250</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-01-04</td><td>2022-01-06</td><td>350</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-01-07</td><td>2022-01-09</td><td>300</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-01-10</td><td>2022-01-12</td><td>400</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-01-13</td><td>2022-01-15</td><td>350</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

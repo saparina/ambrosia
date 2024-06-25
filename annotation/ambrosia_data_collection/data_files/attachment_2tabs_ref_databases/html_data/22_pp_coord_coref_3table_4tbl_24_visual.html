@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Screenwriters</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>YearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>32</td><td>7</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>6</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>45</td><td>15</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>39</td><td>10</td></tr>
+<tr><td>5</td><td>Emily Davis</td><td>42</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Editors</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>YearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Chris Evans</td><td>35</td><td>10</td></tr>
+<tr><td>2</td><td>Lisa Miller</td><td>40</td><td>12</td></tr>
+<tr><td>3</td><td>Tom Wilson</td><td>37</td><td>15</td></tr>
+<tr><td>4</td><td>Sarah Taylor</td><td>33</td><td>8</td></tr>
+<tr><td>5</td><td>David Harris</td><td>41</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Projects</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>Genre</th><th>Budget</th><th>ReleaseDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action Movie</td><td>Action</td><td>2500000.0</td><td>2023-06-15</td></tr>
+<tr><td>2</td><td>Comedy Movie</td><td>Comedy</td><td>1500000.0</td><td>2023-08-01</td></tr>
+<tr><td>3</td><td>Drama Movie</td><td>Drama</td><td>1000000.0</td><td>2023-09-15</td></tr>
+<tr><td>4</td><td>Horror Movie</td><td>Horror</td><td>500000.0</td><td>2023-10-01</td></tr>
+<tr><td>5</td><td>Romance Movie</td><td>Romance</td><td>1200000.0</td><td>2023-11-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>YearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Steven Spielberg</td><td>74</td><td>45</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td><td>60</td><td>30</td></tr>
+<tr><td>3</td><td>Christopher Nolan</td><td>50</td><td>20</td></tr>
+<tr><td>4</td><td>Guillermo del Toro</td><td>58</td><td>25</td></tr>
+<tr><td>5</td><td>Martin Scorsese</td><td>79</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>YearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>47</td><td>25</td></tr>
+<tr><td>2</td><td>Denzel Washington</td><td>67</td><td>40</td></tr>
+<tr><td>3</td><td>Scarlett Johansson</td><td>36</td><td>15</td></tr>
+<tr><td>4</td><td>Mark Ruffalo</td><td>54</td><td>20</td></tr>
+<tr><td>5</td><td>Cate Blanchett</td><td>52</td><td>25</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">FilmMakingRoles</span></h2><table><thead>
+<tr><th>ScreenwriterID</th><th>EditorID</th><th>DirectorID</th><th>ActorID</th><th><span style="color:#006600">Number_of_projects_completed</span></th></tr>
+<tr><th>(&#8594; Screenwriters.ID)</th><th>(&#8594; Editors.ID)</th><th>(&#8594; Director.ID)</th><th>(&#8594; Actor.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>15</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>2</td><td>10</td></tr>
+<tr><td>3</td><td>2</td><td>2</td><td>3</td><td>15</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>4</td><td><span style="color:#006600">12</span></td></tr>
+<tr><td>5</td><td>3</td><td>3</td><td>5</td><td>20</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

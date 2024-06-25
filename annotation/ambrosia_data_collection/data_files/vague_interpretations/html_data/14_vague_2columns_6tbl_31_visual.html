@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Artists</h2><table><thead>
+<tr><th>ArtistID</th><th>ArtistName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adele</td></tr>
+<tr><td>2</td><td>Beyonce</td></tr>
+<tr><td>3</td><td>Elton John</td></tr>
+<tr><td>4</td><td>Justin Timberlake</td></tr>
+<tr><td>5</td><td>Lady Gaga</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>AlbumID</th><th>AlbumTitle</th><th>ReleaseDate</th><th>ARTISTID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Artists.ArtistID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>21</td><td>2011-02-24</td><td>1</td></tr>
+<tr><td>2</td><td>Beyonce</td><td>2016-04-07</td><td>2</td></tr>
+<tr><td>3</td><td>Goodbye Yellow Brick Road</td><td>1973-05-08</td><td>3</td></tr>
+<tr><td>4</td><td>FutureSex/LoveSound</td><td>2006-11-12</td><td>4</td></tr>
+<tr><td>5</td><td>The Fame</td><td>2008-09-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Tickets</h2><table><thead>
+<tr><th>TicketID</th><th>EventID</th><th>Quantity</th><th><span style="color:#990000">On_Sale_Date</span></th><th><span style="color:#990000">Pre_sale_Date</span></th><th>Price</th></tr>
+<tr><th></th><th>(&#8594; Events.EventID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>100</td><td>2023-06-01</td><td>2023-06-15</td><td>49.99</td></tr>
+<tr><td>2</td><td>2</td><td>200</td><td>2023-07-01</td><td>2023-07-15</td><td>59.99</td></tr>
+<tr><td>3</td><td>3</td><td>150</td><td>2023-08-01</td><td>2023-08-15</td><td>69.99</td></tr>
+<tr><td>4</td><td>4</td><td>250</td><td>2023-09-01</td><td>2023-09-15</td><td>79.99</td></tr>
+<tr><td>5</td><td>5</td><td>300</td><td>2023-10-01</td><td>2023-10-15</td><td>89.99</td></tr>
+</tbody></table></div>
+
+<div><h2>Venues</h2><table><thead>
+<tr><th>VenueID</th><th>Name</th><th>Address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Madison Square Garden</td><td>New York, NY</td></tr>
+<tr><td>2</td><td>Staples Center</td><td>Los Angeles, CA</td></tr>
+<tr><td>3</td><td>Wembley Stadium</td><td>London, UK</td></tr>
+<tr><td>4</td><td>Royal Arena</td><td>Copenhagen, Denmark</td></tr>
+<tr><td>5</td><td>Barclays Centre</td><td>Brooklyn, NY</td></tr>
+</tbody></table></div>
+
+<div><h2>Events</h2><table><thead>
+<tr><th>EventID</th><th>EventName</th><th>StartDateTime</th><th>EndDateTime</th><th>VenueID</th><th>TICKETID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Venues.VenueID)</th><th>(&#8594; Tickets.TicketID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adele Concert</td><td>2023-06-10 19:00:00</td><td>2023-06-10 22:30:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Beyonce World Tour</td><td>2023-07-15 20:00:00</td><td>2023-07-15 23:30:00</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Elton John Farewell Tour</td><td>2023-08-20 19:00:00</td><td>2023-08-20 22:30:00</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Justin Timberlake Man Of The Woods Tour</td><td>2023-09-15 20:00:00</td><td>2023-09-15 23:30:00</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Lady Gaga Jazz & Piano Tour</td><td>2023-10-20 19:00:00</td><td>2023-10-20 22:30:00</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Performances</h2><table><thead>
+<tr><th>PerformanceID</th><th>EventID</th><th>ArtistID</th><th>PerformanceStartTime</th><th>PerformanceEndTime</th></tr>
+<tr><th></th><th>(&#8594; Events.EventID)</th><th>(&#8594; Artists.ArtistID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-06-10 19:30:00</td><td>2023-06-10 22:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-07-15 20:30:00</td><td>2023-07-15 23:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-08-20 19:30:00</td><td>2023-08-20 22:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-09-15 20:30:00</td><td>2023-09-15 23:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-10-20 19:30:00</td><td>2023-10-20 22:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

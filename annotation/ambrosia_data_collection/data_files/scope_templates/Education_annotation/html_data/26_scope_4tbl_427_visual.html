@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Exam</span></h2><table><thead>
+<tr><th>id</th><th>examName</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Math Test</td><td>2021-10-01</td></tr>
+<tr><td>2</td><td>English Test</td><td>2021-10-02</td></tr>
+<tr><td>3</td><td>History Test</td><td>2021-10-03</td></tr>
+<tr><td>4</td><td>Science Test</td><td>2021-10-04</td></tr>
+<tr><td>5</td><td>Art Test</td><td>2021-10-05</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Type_Of_Question</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">questionType</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Multiple_Choice</td></tr>
+<tr><td>2</td><td>True_False</td></tr>
+<tr><td>3</td><td>Short_Answer</td></tr>
+<tr><td>4</td><td>Essay</td></tr>
+<tr><td>5</td><td>Fill_In_The_Blank</td></tr>
+</tbody></table></div>
+
+<div><h2>Exam_Type_Of_Question</h2><table><thead>
+<tr><th>examID</th><th>questionTypeID</th></tr>
+<tr><th>(&#8594; Exam.id)</th><th>(&#8594; Type_Of_Question.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>studentId</th><th>firstName</th><th>lastName</th><th>enrollmentDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2019-08-16</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2019-08-17</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>2019-08-18</td></tr>
+<tr><td>4</td><td>Mike</td><td>Jackson</td><td>2019-08-19</td></tr>
+<tr><td>5</td><td>Emily</td><td>White</td><td>2019-08-20</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Material</h2><table><thead>
+<tr><th>materialID</th><th>name</th><th>quantity</th><th>cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cement</td><td>100</td><td>39.99</td></tr>
+<tr><td>2</td><td>Steel Rebars</td><td>200</td><td>68.75</td></tr>
+<tr><td>3</td><td>Concrete Blocks</td><td>300</td><td>25.0</td></tr>
+<tr><td>4</td><td>Bricks</td><td>150</td><td>18.5</td></tr>
+<tr><td>5</td><td>Electrical Wiring</td><td>100</td><td>45.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>employeeID</th><th>firstName</th><th>lastName</th><th>hireDate</th><th>position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>2021-01-01</td><td>Project Manager</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>2021-02-01</td><td>Engineer</td></tr>
+<tr><td>3</td><td>Mike</td><td>Johnson</td><td>2021-03-01</td><td>Construction Worker</td></tr>
+<tr><td>4</td><td>Emily</td><td>Brown</td><td>2021-04-01</td><td>Supervisor</td></tr>
+<tr><td>5</td><td>Tom</td><td>White</td><td>2021-05-01</td><td>Architect</td></tr>
+</tbody></table></div>
+
+<div><h2>Project</h2><table><thead>
+<tr><th>projectID</th><th>projectName</th><th>startDate</th><th>endDate</th><th>budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Residential Building</td><td>2021-06-01</td><td>2021-08-01</td><td>300000.0</td></tr>
+<tr><td>2</td><td>Commercial Complex</td><td>2021-07-01</td><td>2021-09-01</td><td>1000000.0</td></tr>
+<tr><td>3</td><td>Road Repair</td><td>2021-08-01</td><td>2021-10-01</td><td>500000.0</td></tr>
+<tr><td>4</td><td>School Renovation</td><td>2021-09-01</td><td>2021-11-01</td><td>600000.0</td></tr>
+<tr><td>5</td><td>Office Building</td><td>2021-10-01</td><td>2021-12-01</td><td>700000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Inventory</h2><table><thead>
+<tr><th>inventoryID</th><th>materialID</th><th>quantity</th></tr>
+<tr><th></th><th>(&#8594; Material.materialID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>50</td></tr>
+<tr><td>2</td><td>2</td><td>100</td></tr>
+<tr><td>3</td><td>3</td><td>200</td></tr>
+<tr><td>4</td><td>4</td><td>100</td></tr>
+<tr><td>5</td><td>5</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2>Safety</h2><table><thead>
+<tr><th>safetyID</th><th>employeeID</th><th><span style="color:#990000">personalProtectiveEquipment</span></th><th><span style="color:#990000">trainingPrograms</span></th><th>constructionWorker</th></tr>
+<tr><th></th><th>(&#8594; Employee.employeeID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Hard Hat, Gloves, Steel-toed Boots</td><td>OSHA Training, First Aid Certification</td><td>Experienced</td></tr>
+<tr><td>2</td><td>2</td><td>Helmet, Earplugs, Safety Glasses</td><td>Fall Protection Training, CPR/First Aid</td><td>Intermediate</td></tr>
+<tr><td>3</td><td>3</td><td>Hard Hat, Gloves, Safety Vest</td><td>Toolbox Talks, Scaffolding Training</td><td>Novice</td></tr>
+<tr><td>4</td><td>4</td><td>Helmet, Safety Shoes, Goggles</td><td>Hazard Communication Training, Forklift Operation</td><td>Skilled</td></tr>
+<tr><td>5</td><td>5</td><td>Hard Hat, Gloves, Knee Pads</td><td>Lockout/Tagout Training, Confined Space Entry</td><td>Expert</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

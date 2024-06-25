@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Feature_Writers</span></h2><table><thead>
+<tr><th>writer_id</th><th>writer_name</th><th>phone_number</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>123-456-7890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>098-765-4321</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>555-555-5555</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>555-123-4567</td></tr>
+<tr><td>5</td><td>David Brown</td><td>555-222-3333</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Themes</span></h2><table><thead>
+<tr><th>theme_id</th><th><span style="color:#990000">theme_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>History</td></tr>
+<tr><td>2</td><td>Politics</td></tr>
+<tr><td>3</td><td>Technology</td></tr>
+<tr><td>4</td><td>Entertainment</td></tr>
+<tr><td>5</td><td>Health</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>article_id</th><th>title</th><th>content</th><th>writer_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Feature_Writers.writer_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Revolutionary War History</td><td>A detailed look at the American Revolution...</td><td>1</td></tr>
+<tr><td>2</td><td>Modern Political Landscape</td><td>An analysis of current political trends...</td><td>2</td></tr>
+<tr><td>3</td><td>AI Impact on Society</td><td>How artificial intelligence is changing our world...</td><td>3</td></tr>
+<tr><td>4</td><td>Top Entertainment News</td><td>Recent updates from Hollywood and beyond...</td><td>4</td></tr>
+<tr><td>5</td><td>Diet Trends and Health Benefits</td><td>Exploring popular diets and their health effects...</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Feature_Writer_Themes</h2><table><thead>
+<tr><th>article_id</th><th>writer_id</th><th>theme_id</th></tr>
+<tr><th>(&#8594; Articles.article_id)</th><th>(&#8594; Feature_Writers.writer_id)</th><th>(&#8594; Themes.theme_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

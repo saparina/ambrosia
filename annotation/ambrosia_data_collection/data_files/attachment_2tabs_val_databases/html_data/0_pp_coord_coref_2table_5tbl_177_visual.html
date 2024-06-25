@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Football_Players</span></h2><table><thead>
+<tr><th>PlayerID</th><th>Name</th><th>Age</th><th>Position</th><th>Fitness_level</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>30</td><td>Defender</td><td><span style="color:#006600">Elite</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>28</td><td>Striker</td><td>Good</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Rugby_players</span></h2><table><thead>
+<tr><th>PlayerID</th><th>Name</th><th>Age</th><th>Position</th><th>Fitness_level</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Brown</td><td>26</td><td>Wing</td><td><span style="color:#006600">Elite</span></td></tr>
+<tr><td>2</td><td>Emma Jones</td><td>27</td><td>Prop</td><td>Average</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>Genre</th><th>Rating</th><th>ReleaseYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>Action/Adventure</td><td>PG-13</td><td>2008</td></tr>
+<tr><td>2</td><td>Inception</td><td>Science Fiction</td><td>PG-13</td><td>2010</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th>Birthdate</th><th>Movies</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movies.MovieID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christian Bale</td><td>1974-01-30</td><td>1</td></tr>
+<tr><td>2</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th><th>Birthdate</th><th>Movies</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Movies.MovieID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>1970-07-30</td><td>1</td></tr>
+<tr><td>2</td><td>Christopher Nolan</td><td>1970-07-30</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Music_Albums</h2><table><thead>
+<tr><th>AlbumID</th><th>ArtistName</th><th>YearReleased</th><th>Genre</th><th>Sales</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AC/DC</td><td>1980</td><td>Hard Rock</td><td>25000000</td></tr>
+<tr><td>2</td><td>Queen</td><td>1980</td><td>Progressive Rock</td><td>15000000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

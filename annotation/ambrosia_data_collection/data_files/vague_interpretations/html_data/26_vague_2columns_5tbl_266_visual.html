@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Annual_Demographics</h2><table><thead>
+<tr><th><span style="color:#990000">Year</span></th><th><span style="color:#990000">Month</span></th><th>Census</th><th>Population</th><th>Area</th><th>Density</th></tr>
+</thead><tbody>
+<tr><td>2020</td><td>1</td><td>US Census</td><td>331489267</td><td>9833517.0</td><td>334.0</td></tr>
+<tr><td>2021</td><td>2</td><td>Estimate</td><td>333000000</td><td>9876543.0</td><td>337.0</td></tr>
+<tr><td>2022</td><td>3</td><td>Estimate</td><td>334000000</td><td>9899432.0</td><td>339.0</td></tr>
+<tr><td>2023</td><td>4</td><td>Estimate</td><td>335000000</td><td>9922321.0</td><td>340.0</td></tr>
+<tr><td>2024</td><td>5</td><td>Estimate</td><td>336000000</td><td>9945201.0</td><td>341.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Age_Groups</h2><table><thead>
+<tr><th>AgeGroupID</th><th>CityName</th><th>PercentageOfTotalPopulation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td><td>0.15</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>0.1</td></tr>
+<tr><td>3</td><td>Chicago</td><td>0.08</td></tr>
+<tr><td>4</td><td>Houston</td><td>0.06</td></tr>
+<tr><td>5</td><td>Philadelphia</td><td>0.05</td></tr>
+</tbody></table></div>
+
+<div><h2>Educational_Levels</h2><table><thead>
+<tr><th>EducationLevelID</th><th>CityName</th><th>BachelorsOrHigher</th><th>HighSchoolGraduate</th><th>LessThanHighSchoolDiploma</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td><td>70</td><td>20</td><td>10</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>60</td><td>25</td><td>15</td></tr>
+<tr><td>3</td><td>Chicago</td><td>55</td><td>25</td><td>20</td></tr>
+<tr><td>4</td><td>Houston</td><td>45</td><td>30</td><td>25</td></tr>
+<tr><td>5</td><td>Philadelphia</td><td>50</td><td>25</td><td>25</td></tr>
+</tbody></table></div>
+
+<div><h2>Income_Brackets</h2><table><thead>
+<tr><th>IncomeBracketID</th><th>CityName</th><th>Under50k</th><th>Between50And100K</th><th>Above100k</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td><td>35</td><td>40</td><td>25</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>30</td><td>45</td><td>25</td></tr>
+<tr><td>3</td><td>Chicago</td><td>25</td><td>40</td><td>35</td></tr>
+<tr><td>4</td><td>Houston</td><td>20</td><td>50</td><td>30</td></tr>
+<tr><td>5</td><td>Philadelphia</td><td>25</td><td>40</td><td>35</td></tr>
+</tbody></table></div>
+
+<div><h2>Ethnicities</h2><table><thead>
+<tr><th>EthnicityID</th><th>CityName</th><th>White</th><th>BlackOrAfricanAmerican</th><th>HispanicOrLatino</th><th>Asian</th><th>NativeAmericanAlaskanNative</th><th>OtherPacificIslander</th><th>TwoOrMoreRaces</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td><td>45</td><td>20</td><td>25</td><td>10</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>25</td><td>10</td><td>40</td><td>15</td><td>2</td><td>1</td><td>3</td></tr>
+<tr><td>3</td><td>Chicago</td><td>30</td><td>25</td><td>25</td><td>10</td><td>3</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>Houston</td><td>20</td><td>25</td><td>40</td><td>10</td><td>3</td><td>1</td><td>2</td></tr>
+<tr><td>5</td><td>Philadelphia</td><td>35</td><td>20</td><td>25</td><td>10</td><td>2</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Occupations</h2><table><thead>
+<tr><th>OccupationID</th><th>CityName</th><th>ManagementOrProfessional</th><th>ServiceIndustry</th><th>Sales</th><th>OfficeAdminSupport</th><th>FarmingFishing</th><th>ConstructionTrades</th><th>ProductionTransportation</th><th>MaterialMoving</th><th>PersonalServices</th><th>HealthcareTechnician</th><th>Teachers</th><th>ArmedForces</th><th>None</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York City</td><td>25</td><td>20</td><td>15</td><td>10</td><td>5</td><td>10</td><td>5</td><td>5</td><td>10</td><td>5</td><td>5</td><td>5</td><td>2</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>20</td><td>25</td><td>15</td><td>10</td><td>5</td><td>10</td><td>5</td><td>5</td><td>10</td><td>5</td><td>5</td><td>5</td><td>3</td></tr>
+<tr><td>3</td><td>Chicago</td><td>15</td><td>20</td><td>15</td><td>10</td><td>5</td><td>10</td><td>5</td><td>5</td><td>10</td><td>5</td><td>5</td><td>5</td><td>4</td></tr>
+<tr><td>4</td><td>Houston</td><td>10</td><td>20</td><td>15</td><td>10</td><td>5</td><td>10</td><td>5</td><td>5</td><td>10</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><td>5</td><td>Philadelphia</td><td>15</td><td>20</td><td>15</td><td>10</td><td>5</td><td>10</td><td>5</td><td>5</td><td>10</td><td>5</td><td>5</td><td>5</td><td>6</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

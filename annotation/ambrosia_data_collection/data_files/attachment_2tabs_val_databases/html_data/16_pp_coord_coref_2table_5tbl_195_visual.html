@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>flightID</th><th>originAirport</th><th>destinationAirport</th><th>departureTime</th><th>arrivalTime</th><th>aircraftType</th><th>passengerCount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>JFK</td><td>LAX</td><td>2023-03-01 07:00:00</td><td>2023-03-01 16:00:00</td><td>Boing 787</td><td>300</td></tr>
+<tr><td>2</td><td>ORD</td><td>SEA</td><td>2023-03-01 09:00:00</td><td>2023-03-01 18:00:00</td><td>Airbus A320</td><td>250</td></tr>
+<tr><td>3</td><td>DFW</td><td>IAD</td><td>2023-03-01 11:00:00</td><td>2023-03-01 20:00:00</td><td>Boeing 737</td><td>275</td></tr>
+<tr><td>4</td><td>YVR</td><td>MCO</td><td>2023-03-01 13:00:00</td><td>2023-03-01 22:00:00</td><td>Embraer E190</td><td>220</td></tr>
+<tr><td>5</td><td>PEK</td><td>LHR</td><td>2023-03-01 05:00:00</td><td>2023-03-01 13:00:00</td><td>Air China A330</td><td>310</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>passengerID</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th><th>gender</th><th>email</th><th>phoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-01-01</td><td>M</td><td>john.doe@example.com</td><td>+1 555-123-4567</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1985-02-01</td><td>F</td><td>jane.smith@example.com</td><td>+1 555-987-6543</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>1992-03-01</td><td>F</td><td>alice.johnson@example.com</td><td>+1 555-654-3219</td></tr>
+<tr><td>4</td><td>Bob</td><td>Williams</td><td>1988-04-01</td><td>M</td><td>bob.williams@example.com</td><td>+1 555-456-7890</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Brown</td><td>1993-05-01</td><td>M</td><td>charlie.brown@example.com</td><td>+1 555-123-4567</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Unaccompanied_Minors</span></h2><table><thead>
+<tr><th>minorID</th><th>passengerID</th><th>unaccompaniedBy</th><th>contactInfo</th><th>assistant</th></tr>
+<tr><th></th><th>(&#8594; Passengers.None)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td><td>None</td><td><span style="color:#006600">Clare Allen</span></td></tr>
+<tr><td>2</td><td>2</td><td>David Johnson</td><td>+1 555-000-0000</td><td>Sam Smith</td></tr>
+<tr><td>3</td><td>3</td><td>Emily Davis</td><td>+1 555-111-2222</td><td>Nancy Jones</td></tr>
+<tr><td>4</td><td>4</td><td>Jack Miller</td><td>+1 555-333-4444</td><td>Paul Thompson</td></tr>
+<tr><td>5</td><td>5</td><td>Lucy Garcia</td><td>+1 555-555-6666</td><td>Rachel Brown</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Special_Needs_Passengers</span></h2><table><thead>
+<tr><th>needsID</th><th>passengerID</th><th>specialNeedDescription</th><th>additionalInstructions</th><th>assistant</th></tr>
+<tr><th></th><th>(&#8594; Passengers.None)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Wheelchair assistance required.</td><td>Please assist with boarding.</td><td><span style="color:#006600">Clare Allen</span></td></tr>
+<tr><td>2</td><td>2</td><td>Hearing impairment.</td><td>Use sign language when communicating.</td><td>Carol White</td></tr>
+<tr><td>3</td><td>3</td><td>Visual impairment.</td><td>Offer verbal guidance during boarding and deplaning.</td><td>Tom Harris</td></tr>
+<tr><td>4</td><td>4</td><td>Diabetes.</td><td>Ensure snacks and insulin are available onboard.</td><td>Michael Green</td></tr>
+<tr><td>5</td><td>5</td><td>Allergic to peanuts.</td><td>No peanuts should be served on this flight.</td><td>Laura King</td></tr>
+</tbody></table></div>
+
+<div><h2>Staff</h2><table><thead>
+<tr><th>staffID</th><th>firstName</th><th>lastName</th><th>role</th><th>hireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>James</td><td>Smith</td><td>Pilot</td><td>2020-06-01</td></tr>
+<tr><td>2</td><td>Anna</td><td>Martin</td><td>Cabin Crew</td><td>2019-08-01</td></tr>
+<tr><td>3</td><td>Steve</td><td>Garner</td><td>Maintenance Engineer</td><td>2021-09-01</td></tr>
+<tr><td>4</td><td>Helen</td><td>Price</td><td>Customer Service Representative</td><td>2022-10-01</td></tr>
+<tr><td>5</td><td>Mark</td><td>Taylor</td><td>Security Officer</td><td>2023-01-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

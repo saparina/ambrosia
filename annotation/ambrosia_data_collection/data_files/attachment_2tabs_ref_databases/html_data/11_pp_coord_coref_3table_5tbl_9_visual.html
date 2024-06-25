@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>Date</th><th>Print_Media_Id</th><th>Online_Media_Id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; PrintMedia.Article_id)</th><th>(&#8594; OnlineMedia.Article_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News Story</td><td>This is a breaking news story...</td><td>2022-10-19 12:00:00</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Political Updates</td><td>Here are today's political updates...</td><td>2022-10-19 15:30:00</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Technology Advancements</td><td>Discover the latest technology advancements...</td><td>2022-10-18 09:00:00</td><td>2</td><td>2</td></tr>
+<tr><td>4</td><td>Health Tips</td><td>Learn about these important health tips...</td><td>2022-10-18 14:00:00</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>Travel Destinations</td><td>Explore these exciting travel destinations...</td><td>2022-10-17 11:00:00</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">PrintMedia</span></h2><table><thead>
+<tr><th>Article_id</th><th>MediaName</th><th>Newspaper_Date</th><th>EditionNumber</th></tr>
+<tr><th></th><th></th><th>(&#8594; AudienceSize.Date)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Times</td><td>2022-10-19</td><td>A</td></tr>
+<tr><td>2</td><td>Daily Mail</td><td>2022-10-18</td><td>B</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">OnlineMedia</span></h2><table><thead>
+<tr><th>Article_id</th><th>URL</th><th>Views</th></tr>
+<tr><th></th><th>(&#8594; AudienceSize.Url)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>https://www.thetimes.com/article/breaking-news</td><td>700000</td></tr>
+<tr><td>2</td><td>https://dailymail.co.uk/latest-news</td><td>600000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">AudienceSize</span></h2><table><thead>
+<tr><th>Date</th><th><span style="color:#006600">Url</span></th><th>Print_Views</th><th>Online_Views</th><th>Total_Views</th></tr>
+</thead><tbody>
+<tr><td>2022-10-19</td><td><span style="color:#006600">https://www.thetimes.com/article/breaking-news</span></td><td>100000</td><td>600000</td><td>700000</td></tr>
+<tr><td>2022-10-18</td><td>https://dailymail.co.uk/latest-news</td><td>150000</td><td>550000</td><td>700000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

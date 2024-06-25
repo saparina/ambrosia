@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>name</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>USA</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>USA</td></tr>
+<tr><td>3</td><td>American Airlines</td><td>USA</td></tr>
+<tr><td>4</td><td>Southwest Airlines</td><td>USA</td></tr>
+<tr><td>5</td><td>Air Canada</td><td>Canada</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>airportName</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John F. Kennedy International Airport</td><td>New York</td><td>USA</td></tr>
+<tr><td>2</td><td>Hartsfield-Jackson Atlanta International Airport</td><td>Atlanta</td><td>USA</td></tr>
+<tr><td>3</td><td>Los Angeles International Airport</td><td>Los Angeles</td><td>USA</td></tr>
+<tr><td>4</td><td>Toronto Pearson International Airport</td><td>Toronto</td><td>Canada</td></tr>
+<tr><td>5</td><td>Vancouver International Airport</td><td>Vancouver</td><td>Canada</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>flightNumber</th><th>departureTime</th><th>arrivalTime</th><th>airlineId</th><th>originAirportId</th><th>destinationAirportId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airlines.id)</th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>UA123</td><td>2022-07-10 08:00:00</td><td>2022-07-10 10:00:00</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>DL456</td><td>2022-07-10 10:00:00</td><td>2022-07-10 12:00:00</td><td>2</td><td>1</td><td>3</td></tr>
+<tr><td>3</td><td>AA789</td><td>2022-07-10 14:00:00</td><td>2022-07-10 16:00:00</td><td>3</td><td>1</td><td>4</td></tr>
+<tr><td>4</td><td>SW101</td><td>2022-07-10 16:00:00</td><td>2022-07-10 18:00:00</td><td>4</td><td>1</td><td>5</td></tr>
+<tr><td>5</td><td>AC246</td><td>2022-07-10 18:00:00</td><td>2022-07-10 20:00:00</td><td>5</td><td>1</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Gates</span></h2><table><thead>
+<tr><th>id</th><th>gateNumber</th><th>terminal</th><th>airportId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Services</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">serviceName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Baggage_Claim</td></tr>
+<tr><td>2</td><td>Food_Court</td></tr>
+<tr><td>3</td><td>Duty_Free</td></tr>
+<tr><td>4</td><td>Car_Rental</td></tr>
+<tr><td>5</td><td>Lost_and_Found</td></tr>
+</tbody></table></div>
+
+<div><h2>Gates_Services</h2><table><thead>
+<tr><th>gateId</th><th>serviceId</th></tr>
+<tr><th>(&#8594; Gates.id)</th><th>(&#8594; Services.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

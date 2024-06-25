@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Photojournalism_Pieces</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Revolutionary Protest</td><td>2021-07-08</td></tr>
+<tr><td>2</td><td>Natural Disaster Aftermath</td><td>2021-06-30</td></tr>
+<tr><td>3</td><td>Economic Crisis Impact</td><td>2021-05-15</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Images</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">image_name</span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Candid_Shots</td><td>A candid shot of a protestor</td></tr>
+<tr><td>2</td><td>Building_Collapse</td><td>Ruins of a building after a natural disaster</td></tr>
+<tr><td>3</td><td>Impoverished_Family</td><td>A family struggling during an economic crisis</td></tr>
+<tr><td>4</td><td>Portrait of a Politician</td><td>Famous politician is giving a speech.</td></tr>
+</tbody></table></div>
+
+<div><h2>Photojournalism_Pieces_Images</h2><table><thead>
+<tr><th>photojournalism_piece_id</th><th>image_id</th></tr>
+<tr><th>(&#8594; Photojournalism_Pieces.id)</th><th>(&#8594; Images.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>4</td></tr>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Photographers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birth_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1980-01-01</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1985-02-20</td></tr>
+<tr><td>3</td><td>Michael Brown</td><td>1988-03-25</td></tr>
+</tbody></table></div>
+
+<div><h2>Photojournalism_Pieces_Photographer</h2><table><thead>
+<tr><th>photojournalism_piece_id</th><th>photographer_id</th></tr>
+<tr><th>(&#8594; Photojournalism_Pieces.id)</th><th>(&#8594; Photographers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

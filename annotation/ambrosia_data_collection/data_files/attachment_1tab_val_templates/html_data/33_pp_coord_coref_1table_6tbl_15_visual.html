@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Movie</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseDate</th><th><span style="color:#186e16"><span style="color:#186e16">Crime_Fiction</span></span></th><th><span style="color:#1430b2">Studio</span></th><th>directorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Director.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>MovieA</td><td>2000-01-01</td><td><span style="color:#186e16">Mystery</span></td><td><span style="color:#1430b2">Warner Bros</span></td><td>1</td></tr>
+<tr><td>2</td><td>MovieB</td><td>2000-01-01</td><td><span style="color:#186e16">Mystery</span></td><td>Universal Studios</td><td>2</td></tr>
+<tr><td>3</td><td>MovieC</td><td>2000-01-01</td><td><span style="color:#186e16">Thriller</span></td><td><span style="color:#1430b2">Warner Bros</span></td><td>3</td></tr>
+<tr><td>4</td><td>MovieD</td><td>2000-01-01</td><td><span style="color:#186e16">Thriller</span></td><td>Disney</td><td>4</td></tr>
+<tr><td>5</td><td>MovieE</td><td>2000-01-01</td><td>Comedy</td><td>Columbia Pictures</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>1960</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1972</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>1983</td></tr>
+<tr><td>4</td><td>Robert Johnson</td><td>1990</td></tr>
+<tr><td>5</td><td>Emma Wilson</td><td>1995</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td></tr>
+<tr><td>2</td><td>Denzel</td><td>Washington</td><td>1954-12-28</td></tr>
+<tr><td>3</td><td>Scarlett</td><td>Johansson</td><td>1984-11-22</td></tr>
+<tr><td>4</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td></tr>
+<tr><td>5</td><td>Mark</td><td>Ruffalo</td><td>1967-11-22</td></tr>
+</tbody></table></div>
+
+<div><h2>Cast</h2><table><thead>
+<tr><th>movieId</th><th>actorId</th><th>role</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lead Role</td></tr>
+<tr><td>1</td><td>2</td><td>Supporting Role</td></tr>
+<tr><td>2</td><td>3</td><td>Lead Role</td></tr>
+<tr><td>2</td><td>4</td><td>Supporting Role</td></tr>
+<tr><td>3</td><td>5</td><td>Lead Role</td></tr>
+<tr><td>3</td><td>6</td><td>Supporting Role</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>genreText</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Adventure</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Family</td></tr>
+<tr><td>5</td><td>Fantasy</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieGenre</h2><table><thead>
+<tr><th>movieId</th><th>genreId</th></tr>
+<tr><th>(&#8594; Movie.id)</th><th>(&#8594; Genre.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

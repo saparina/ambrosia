@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Education_Program</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Driving Basics</td><td>This program covers the basic driving rules</td></tr>
+<tr><td>2</td><td>Advanced Driving Techniques</td><td>Learn advanced techniques such as defensive driving</td></tr>
+<tr><td>3</td><td>Traffic Laws & Regulations</td><td>Understand traffic laws and regulations</td></tr>
+<tr><td>4</td><td>Accident Prevention</td><td>Learn how to prevent accidents on road</td></tr>
+<tr><td>5</td><td>Emergency Handling</td><td>Handling emergencies while driving</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Target_Audiences</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">audience_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Teen Driver Education</td></tr>
+<tr><td>2</td><td>Adult Driver Refresher Course</td></tr>
+<tr><td>3</td><td>Defensive Driving Training</td></tr>
+<tr><td>4</td><td>Road Safety Awareness Program</td></tr>
+<tr><td>5</td><td>Parent-Child Driving Course</td></tr>
+</tbody></table></div>
+
+<div><h2>Education_Program_Target_Audiences</h2><table><thead>
+<tr><th>education_program_id</th><th>target_audience_id</th></tr>
+<tr><th>(&#8594; Education_Program.id)</th><th>(&#8594; Target_Audiences.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

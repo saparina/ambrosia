@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Travel_Agency</span></h2><table><thead>
+<tr><th>AgencyID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Airport Agency</td><td>New York</td></tr>
+<tr><td>2</td><td>Global Travels</td><td>London</td></tr>
+<tr><td>3</td><td>European Adventures</td><td>Paris</td></tr>
+<tr><td>4</td><td>Asia Pacific Tours</td><td>Tokyo</td></tr>
+<tr><td>5</td><td>North American Expeditions</td><td>Los Angeles</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Service</span></h2><table><thead>
+<tr><th>ServiceID</th><th><span style="color:#990000">Description</span></th><th><span style="color:#990000">Price</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cruise Booking</td><td>1000.0</td></tr>
+<tr><td>2</td><td>Hotel Reservation</td><td>200.0</td></tr>
+<tr><td>3</td><td>Flight Ticket Booking</td><td>300.0</td></tr>
+<tr><td>4</td><td>Visa Assistance</td><td>150.0</td></tr>
+<tr><td>5</td><td>Guided Tour</td><td>400.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Travel_Agency_Service</h2><table><thead>
+<tr><th>AgencyID</th><th>ServiceID</th></tr>
+<tr><th>(&#8594; Travel_Agency.AgencyID)</th><th>(&#8594; Service.ServiceID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

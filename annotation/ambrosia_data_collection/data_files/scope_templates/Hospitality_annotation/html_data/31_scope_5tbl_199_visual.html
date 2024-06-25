@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Wine_Regions</span></h2><table><thead>
+<tr><th>RegionID</th><th>Name</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Napa Valley</td><td>A famous wine region known for its Cabernet Sauvignon.</td></tr>
+<tr><td>2</td><td>Bordeaux</td><td>Famous for its red wines, primarily blends of several grape varieties.</td></tr>
+<tr><td>3</td><td>Champagne</td><td>Known for producing some of the world's finest sparkling wines.</td></tr>
+<tr><td>4</td><td>Barossa Valley</td><td>Australia's most renowned wine region, producing a wide variety of styles.</td></tr>
+<tr><td>5</td><td>Marlborough</td><td>New Zealand's largest wine-producing region, specializing in Sauvignon Blanc.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Winery_Tours</span></h2><table><thead>
+<tr><th>TourID</th><th><span style="color:#990000">Type</span></th><th><span style="color:#990000">Duration</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Self_guided_Tours</td><td>2.0</td></tr>
+<tr><td>2</td><td>Group_tours</td><td>3.0</td></tr>
+<tr><td>3</td><td>VIP_tours</td><td>4.0</td></tr>
+<tr><td>4</td><td>Custom_tours</td><td>5.0</td></tr>
+<tr><td>5</td><td>Educational_tours</td><td>6.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Wine_Regions_Winery_Tours</h2><table><thead>
+<tr><th>WineRegionID</th><th>TourType</th></tr>
+<tr><th>(&#8594; Wine_Regions.RegionID)</th><th>(&#8594; Winery_Tours.Type)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Self_guided_Tours</td></tr>
+<tr><td>1</td><td>Group_tours</td></tr>
+<tr><td>2</td><td>Self_guided_Tours</td></tr>
+<tr><td>2</td><td>Group_tours</td></tr>
+<tr><td>3</td><td>Self_guided_Tours</td></tr>
+<tr><td>3</td><td>Group_tours</td></tr>
+<tr><td>4</td><td>Self_guided_Tours</td></tr>
+<tr><td>4</td><td>Group_tours</td></tr>
+<tr><td>5</td><td>Self_guided_Tours</td></tr>
+<tr><td>5</td><td>Group_tours</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

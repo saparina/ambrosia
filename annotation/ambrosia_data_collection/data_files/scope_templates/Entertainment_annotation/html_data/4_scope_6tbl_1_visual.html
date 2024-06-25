@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Conductors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane Doe</td><td>2000-01-01</td></tr>
+<tr><td>2</td><td>John Smith</td><td>1987-03-26</td></tr>
+<tr><td>3</td><td>Emily Johnson</td><td>1995-08-12</td></tr>
+<tr><td>4</td><td>Michael Brown</td><td>1978-10-05</td></tr>
+<tr><td>5</td><td>Rachel White</td><td>1992-06-09</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Orchestras</span></h2><table><thead>
+<tr><th>id</th><th>orchestra_name</th><th>conductor_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Conductors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Philharmonic</td><td>1</td></tr>
+<tr><td>2</td><td>Boston Symphony Orchestra</td><td>2</td></tr>
+<tr><td>3</td><td>Chicago Symphony Orchestra</td><td>3</td></tr>
+<tr><td>4</td><td>Los Angeles Philharmonic</td><td>4</td></tr>
+<tr><td>5</td><td>Berlin Philharmonic</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Instruments</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">instrument_type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Violin</td></tr>
+<tr><td>2</td><td>Cello</td></tr>
+<tr><td>3</td><td>Piano</td></tr>
+<tr><td>4</td><td>Flute</td></tr>
+<tr><td>5</td><td>Trumpet</td></tr>
+</tbody></table></div>
+
+<div><h2>Orchestras_Instruments</h2><table><thead>
+<tr><th>id</th><th>orchestra_id</th><th>instrument_id</th></tr>
+<tr><th></th><th>(&#8594; Orchestras.id)</th><th>(&#8594; Instruments.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>2</td></tr>
+<tr><td>5</td><td>3</td><td>3</td></tr>
+<tr><td>6</td><td>3</td><td>4</td></tr>
+<tr><td>7</td><td>4</td><td>4</td></tr>
+<tr><td>8</td><td>4</td><td>5</td></tr>
+<tr><td>9</td><td>5</td><td>1</td></tr>
+<tr><td>10</td><td>5</td><td>2</td></tr>
+<tr><td>11</td><td>3</td><td>1</td></tr>
+<tr><td>12</td><td>4</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

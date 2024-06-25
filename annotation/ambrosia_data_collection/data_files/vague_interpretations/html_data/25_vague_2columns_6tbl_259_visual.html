@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>People</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>dateOfBirth</th><th>occupation</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1970-06-01</td><td>Engineering</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1983-08-15</td><td>Teaching</td></tr>
+</tbody></table></div>
+
+<div><h2>SalaryData</h2><table><thead>
+<tr><th>personId</th><th>salary</th><th>hireDate</th></tr>
+<tr><th>(&#8594; People.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>90000</td><td>2010-01-01</td></tr>
+<tr><td>2</td><td>60000</td><td>2012-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>OccupationalStats</h2><table><thead>
+<tr><th>occupation</th><th><span style="color:#990000">percentageGap</span></th><th><span style="color:#990000">differenceInSalaries</span></th><th>jobSatisfactionIndex</th></tr>
+<tr><th>(&#8594; People.occupation)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>Engineering</td><td>20.0</td><td>25000</td><td>80</td></tr>
+<tr><td>Teaching</td><td>10.0</td><td>10000</td><td>70</td></tr>
+</tbody></table></div>
+
+<div><h2>EducationLevel</h2><table><thead>
+<tr><th>educationLevel</th><th>avgYearsOfEducation</th><th>avgAnnualIncome</th></tr>
+</thead><tbody>
+<tr><td>PhD</td><td>8.0</td><td>90000</td></tr>
+<tr><td>Masters</td><td>6.0</td><td>75000</td></tr>
+</tbody></table></div>
+
+<div><h2>LocationData</h2><table><thead>
+<tr><th>locationID</th><th>city</th><th>state</th><th>country</th><th>numPeople</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York</td><td>NY</td><td>USA</td><td>8000000</td></tr>
+<tr><td>2</td><td>Los Angeles</td><td>CA</td><td>USA</td><td>3800000</td></tr>
+</tbody></table></div>
+
+<div><h2>CityPopulationByDemographics</h2><table><thead>
+<tr><th>locationID</th><th>ageRange</th><th>gender</th><th>ethnicity</th><th>population</th></tr>
+<tr><th>(&#8594; LocationData.locationID)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>18-35</td><td>Female</td><td>White</td><td>4000000</td></tr>
+<tr><td>1</td><td>36+</td><td>Male</td><td>Black</td><td>2500000</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

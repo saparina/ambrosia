@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Campus_Building</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main Building</td><td>1200</td></tr>
+<tr><td>2</td><td>Library</td><td>800</td></tr>
+<tr><td>3</td><td>Sports Center</td><td>600</td></tr>
+<tr><td>4</td><td>Art Center</td><td>300</td></tr>
+<tr><td>5</td><td>Conference Hall</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Online_Platform</span></h2><table><thead>
+<tr><th>id</th><th>platformName</th><th>URL</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>EdX</td><td>https://www.edx.org</td></tr>
+<tr><td>2</td><td>Coursera</td><td>https://www.coursera.org</td></tr>
+<tr><td>3</td><td>Udacity</td><td>https://www.udacity.com</td></tr>
+<tr><td>4</td><td>Codecademy</td><td>https://www.codecademy.com</td></tr>
+<tr><td>5</td><td>LinkedIn Learning</td><td>https://www.linkedin.com/learning</td></tr>
+</tbody></table></div>
+
+<div><h2>Lecture</h2><table><thead>
+<tr><th>id</th><th>title</th><th>duration</th><th>campusId</th><th>onlineId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Campus_Building.id)</th><th>(&#8594; Online_Platform.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Databases</td><td>90</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Advanced Programming Techniques</td><td>120</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Data Science and Machine Learning</td><td>150</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Network Security Fundamentals</td><td>100</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Project Management Best Practices</td><td>110</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>emily.white@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Green</td><td>david.green@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollment</h2><table><thead>
+<tr><th>studentId</th><th>lectureId</th><th>grade</th></tr>
+<tr><th>(&#8594; Student.id)</th><th>(&#8594; Lecture.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>90</td></tr>
+<tr><td>1</td><td>2</td><td>87</td></tr>
+<tr><td>2</td><td>3</td><td>92</td></tr>
+<tr><td>2</td><td>4</td><td>88</td></tr>
+<tr><td>3</td><td>1</td><td>93</td></tr>
+</tbody></table></div>
+
+<div><h2>Course</h2><table><thead>
+<tr><th>id</th><th>courseCode</th><th>courseTitle</th><th>lecturesInCourse</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Lecture.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CS101</td><td>Fundamental of Computer Science</td><td>5</td></tr>
+<tr><td>2</td><td>DS201</td><td>Applied Data Structures</td><td>4</td></tr>
+<tr><td>3</td><td>ENG301</td><td>Technical Writing</td><td>3</td></tr>
+<tr><td>4</td><td>MGMT401</td><td>Human Resource Management</td><td>3</td></tr>
+<tr><td>5</td><td>IT202</td><td>Web Development</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

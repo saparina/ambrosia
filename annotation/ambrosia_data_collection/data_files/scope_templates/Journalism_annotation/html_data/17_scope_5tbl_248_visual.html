@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Health_Reporters</span></h2><table><thead>
+<tr><th>ReporterID</th><th>Name</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>alice@journalist.com</td></tr>
+<tr><td>2</td><td>Bob Smith</td><td>bob@journalist.com</td></tr>
+<tr><td>3</td><td>Carol Brown</td><td>carol@journalist.com</td></tr>
+<tr><td>4</td><td>David Green</td><td>david@journalist.com</td></tr>
+<tr><td>5</td><td>Eva White</td><td>eva@journalist.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Topics</span></h2><table><thead>
+<tr><th>TopicID</th><th><span style="color:#990000">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Nutrition</td></tr>
+<tr><td>2</td><td>Mental Health</td></tr>
+<tr><td>3</td><td>Diseases</td></tr>
+<tr><td>4</td><td>Prevention</td></tr>
+<tr><td>5</td><td>Treatments</td></tr>
+</tbody></table></div>
+
+<div><h2>Health_Reporters_Topics</h2><table><thead>
+<tr><th>ReporterID</th><th>TopicID</th><th>PrimaryKey</th></tr>
+<tr><th>(&#8594; Health_Reporters.ReporterID)</th><th>(&#8594; Topics.TopicID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>4</td><td>1</td></tr>
+<tr><td>2</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>1</td><td>5</td></tr>
+<tr><td>5</td><td>4</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th><th>ReporterID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Health_Reporters.ReporterID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Understanding Diabetes</td><td>A comprehensive article on diabetes...</td><td>2024-01-30 19:01:54</td><td>1</td></tr>
+<tr><td>2</td><td>The Importance of a Balanced Diet</td><td>An insightful piece about the significance of balanced diets...</td><td>2024-01-30 19:01:54</td><td>5</td></tr>
+<tr><td>3</td><td>Depression and Its Impact on Society</td><td>A thought-provoking exploration of depression...</td><td>2024-01-30 19:01:54</td><td>3</td></tr>
+<tr><td>4</td><td>Cancer Prevention Techniques</td><td>Valuable information on preventing cancer...</td><td>2024-01-30 19:01:54</td><td>4</td></tr>
+<tr><td>5</td><td>Vitamins and Minerals: Essential for Good Health</td><td>A detailed guide on essential vitamins and minerals...</td><td>2024-01-30 19:01:54</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>SourceID</th><th>Name</th><th>URL</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>WebMD</td><td>https://www.webmd.com/</td></tr>
+<tr><td>2</td><td>Mayo Clinic</td><td>https://www.mayoclinic.org/</td></tr>
+<tr><td>3</td><td>Johns Hopkins Medicine</td><td>https://www.hopkinsmedicine.org/</td></tr>
+<tr><td>4</td><td>Harvard Medical School</td><td>https://www.hsph.harvard.edu/</td></tr>
+<tr><td>5</td><td>National Institutes of Health</td><td>https://www.nih.gov/</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

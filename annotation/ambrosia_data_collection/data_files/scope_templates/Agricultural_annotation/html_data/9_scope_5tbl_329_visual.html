@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Pesticides</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>usage_instructions</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>PestiX</td><td>Apply once a month</td></tr>
+<tr><td>2</td><td>EcoGuard</td><td>Use sparingly on sensitive crops</td></tr>
+<tr><td>3</td><td>BugOff</td><td>Apply only when needed</td></tr>
+<tr><td>4</td><td>CropShield</td><td>Apply before pests become a problem</td></tr>
+<tr><td>5</td><td>PlantProtect</td><td>Reapply after heavy rainfall</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Ingredients</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">ingredient_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Malathion</td></tr>
+<tr><td>2</td><td>Pyrethrin</td></tr>
+<tr><td>3</td><td>Neem Oil</td></tr>
+<tr><td>4</td><td>Rotenone</td></tr>
+<tr><td>5</td><td>Spinosad</td></tr>
+</tbody></table></div>
+
+<div><h2>Pesticides_Ingredients</h2><table><thead>
+<tr><th>pesticide_id</th><th>ingredient_id</th></tr>
+<tr><th>(&#8594; Pesticides.id)</th><th>(&#8594; Ingredients.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

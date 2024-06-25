@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Development_Projects</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#186e16"><span style="color:#186e16">ProjectName</span></span></th><th><span style="color:#1430b2">Increased_Capacity</span></th><th>StartDate</th><th>EndDate</th><th>Cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Airport Expansion</span></td><td><span style="color:#1430b2">1000 Passengers per Day</span></td><td>2023-01-01</td><td>2023-12-31</td><td>1000000.0</td></tr>
+<tr><td>2</td><td><span style="color:#186e16">Airport Expansion</span></td><td>500 Passengers per Day</td><td>2024-01-01</td><td>2024-12-31</td><td>800000.0</td></tr>
+<tr><td>3</td><td><span style="color:#186e16">Renovation</span></td><td><span style="color:#1430b2">1000 Passengers per Day</span></td><td>2023-07-01</td><td>2023-12-31</td><td>600000.0</td></tr>
+<tr><td>4</td><td><span style="color:#186e16">Renovation</span></td><td>500 Passengers per Day</td><td>2024-01-01</td><td>2024-12-31</td><td>500000.0</td></tr>
+<tr><td>5</td><td>Terminal Upgrade</td><td>200 Passengers per Day</td><td>2023-09-01</td><td>2023-12-31</td><td>400000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Aircraft</h2><table><thead>
+<tr><th>ID</th><th>Model</th><th>Capacity</th><th>Manufacturer</th><th>Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737 MAX</td><td>230</td><td>Boeing</td><td>2022</td></tr>
+<tr><td>2</td><td>Airbus A320neo</td><td>180</td><td>Airbus</td><td>2021</td></tr>
+<tr><td>3</td><td>Embraer E195-E2</td><td>120</td><td>Embraer</td><td>2019</td></tr>
+<tr><td>4</td><td>Bombardier CRJ900</td><td>90</td><td>Bombardier</td><td>2018</td></tr>
+<tr><td>5</td><td>De Havilland Canada DHC-8 Q400</td><td>78</td><td>De Havilland Canada</td><td>2017</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>ID</th><th>DepartureTime</th><th>ArrivalTime</th><th>Origin</th><th>Destination</th><th>AircraftID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Aircraft.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>07:00 AM</td><td>08:30 AM</td><td>New York</td><td>Los Angeles</td><td>1</td></tr>
+<tr><td>2</td><td>09:00 AM</td><td>10:30 AM</td><td>Chicago</td><td>Miami</td><td>2</td></tr>
+<tr><td>3</td><td>11:00 AM</td><td>12:30 PM</td><td>San Francisco</td><td>Honolulu</td><td>3</td></tr>
+<tr><td>4</td><td>01:00 PM</td><td>03:30 PM</td><td>Dallas</td><td>Atlanta</td><td>4</td></tr>
+<tr><td>5</td><td>03:00 PM</td><td>05:30 PM</td><td>Philadelphia</td><td>Orlando</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Staff</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Position</th><th>Salary</th><th>HireDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Pilot</td><td>75000.0</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Flight Attendant</td><td>50000.0</td><td>2020-07-01</td></tr>
+<tr><td>3</td><td>Tom Johnson</td><td>Mechanic</td><td>55000.0</td><td>2019-01-01</td></tr>
+<tr><td>4</td><td>Emily Brown</td><td>Air Traffic Controller</td><td>60000.0</td><td>2018-01-01</td></tr>
+<tr><td>5</td><td>William Davis</td><td>Security Officer</td><td>40000.0</td><td>2017-01-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

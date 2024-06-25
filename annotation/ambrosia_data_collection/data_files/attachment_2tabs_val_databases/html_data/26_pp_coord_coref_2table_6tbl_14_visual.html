@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Agency</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Expedia</td></tr>
+<tr><td>2</td><td>Booking.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Tour_Guide</span></h2><table><thead>
+<tr><th>id</th><th>guideName</th><th>agencyId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Agency.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>John Doe</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>2</td></tr>
+<tr><td>5</td><td>David Brown</td><td><span style="color:#006600">1</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Travel_Agent</span></h2><table><thead>
+<tr><th>id</th><th>agentName</th><th>agencyId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Agency.id)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#006600">1</span></td><td>Alice Lee</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>2</td><td>Bob White</td><td>2</td></tr>
+<tr><td>3</td><td>Carol Black</td><td><span style="color:#006600">1</span></td></tr>
+<tr><td>4</td><td>Daniel Green</td><td>2</td></tr>
+<tr><td>5</td><td>Eva Blue</td><td><span style="color:#006600">1</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>id</th><th>title</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Developing web applications.</td></tr>
+<tr><td>2</td><td>Data Analyst</td><td>Analyzing customer behavior.</td></tr>
+<tr><td>3</td><td>Graphic Designer</td><td>Creating visuals for marketing materials.</td></tr>
+<tr><td>4</td><td>Marketing Specialist</td><td>Promoting products and services.</td></tr>
+<tr><td>5</td><td>HR Manager</td><td>Managing employees and recruitment.</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>tourGuideId</th><th>travelAgentId</th><th>jobId</th><th>applicationDate</th></tr>
+<tr><th>(&#8594; Tour_Guide.id)</th><th>(&#8594; Travel_Agent.id)</th><th>(&#8594; Jobs.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>3</td><td>1</td><td>2024-03-13 17:41:57</td></tr>
+<tr><td>2</td><td>4</td><td>2</td><td>2024-03-13 17:41:57</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>2024-03-13 17:41:57</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>2024-03-13 17:41:57</td></tr>
+<tr><td>5</td><td>1</td><td>5</td><td>2024-03-13 17:41:57</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>skillId</th><th>skillName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Python Programming</td></tr>
+<tr><td>2</td><td>SQL Database Management</td></tr>
+<tr><td>3</td><td>JavaScript Development</td></tr>
+<tr><td>4</td><td>SEO Optimization</td></tr>
+<tr><td>5</td><td>Customer Relationship Management</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Venue</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th><span style="color:#006600">venue_capacity</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Arena</td><td>123 Street</td><td>500</td></tr>
+<tr><td>2</td><td>Theatre</td><td>456 Avenue</td><td>800</td></tr>
+<tr><td>3</td><td>Cinema Hall</td><td>789 Boulevard</td><td>400</td></tr>
+<tr><td>4</td><td>Performing Arts Center</td><td>000 Lane</td><td>600</td></tr>
+<tr><td>5</td><td>Music Auditorium</td><td>999 Road</td><td><span style="color:#006600">700</span></td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Concert</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>date</th><th>artist_name</th><th>venue_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Venue.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Rock Show</td><td>2022-10-10 19:00:00</td><td>Band A</td><td>1</td></tr>
+<tr><td>2</td><td>Pop Concert</td><td>2022-11-10 20:00:00</td><td>Artist B</td><td>2</td></tr>
+<tr><td>3</td><td>Jazz Night</td><td>2022-12-10 21:00:00</td><td>Musician C</td><td>3</td></tr>
+<tr><td>4</td><td>Classical Symphony</td><td>2022-11-20 18:00:00</td><td>Composer D</td><td>4</td></tr>
+<tr><td>5</td><td>Metal Festival</td><td>2022-12-20 22:00:00</td><td>Group E</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Theater_Play</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>start_date</th><th>end_date</th><th>theater_company</th><th>venue_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Venue.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Shakespeare Play</td><td>2022-10-10 19:00:00</td><td>2022-10-20 22:00:00</td><td>Company F</td><td>1</td></tr>
+<tr><td>2</td><td>Modern Drama</td><td>2022-11-10 20:00:00</td><td>2022-11-20 22:00:00</td><td>Company G</td><td>2</td></tr>
+<tr><td>3</td><td>Children's Musical</td><td>2022-12-10 18:00:00</td><td>2022-12-20 22:00:00</td><td>Company H</td><td>3</td></tr>
+<tr><td>4</td><td>Historical Tragedy</td><td>2022-11-20 19:00:00</td><td>2022-12-20 22:00:00</td><td>Company I</td><td>4</td></tr>
+<tr><td>5</td><td>Romantic Comedy</td><td>2022-12-10 20:00:00</td><td>2022-12-20 22:00:00</td><td>Company J</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_date</th><th>director</th><th>genre</th><th>duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action Film</td><td>2022-09-01 00:00:00</td><td>Director A</td><td>Action</td><td>120</td></tr>
+<tr><td>2</td><td>Animation</td><td>2022-10-01 00:00:00</td><td>Director B</td><td>Animation</td><td>90</td></tr>
+<tr><td>3</td><td>Horror</td><td>2022-11-01 00:00:00</td><td>Director C</td><td>Horror</td><td>105</td></tr>
+<tr><td>4</td><td>Documentary</td><td>2022-12-01 00:00:00</td><td>Director D</td><td>Documentary</td><td>85</td></tr>
+<tr><td>5</td><td>Drama</td><td>2022-12-15 00:00:00</td><td>Director E</td><td>Drama</td><td>130</td></tr>
+</tbody></table></div>
+
+<div><h2>Review</h2><table><thead>
+<tr><th>id</th><th>rating</th><th>reviewer_name</th><th>comment</th><th>movie_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Movie.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>8/10</td><td>User X</td><td>Great action sequences!</td><td>1</td></tr>
+<tr><td>2</td><td>7/10</td><td>User Y</td><td>Interesting storyline.</td><td>2</td></tr>
+<tr><td>3</td><td>6/10</td><td>User Z</td><td>Could have been better.</td><td>3</td></tr>
+<tr><td>4</td><td>9/10</td><td>User W</td><td>An emotional journey!</td><td>4</td></tr>
+<tr><td>5</td><td>5/10</td><td>User V</td><td>Not my cup of tea.</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

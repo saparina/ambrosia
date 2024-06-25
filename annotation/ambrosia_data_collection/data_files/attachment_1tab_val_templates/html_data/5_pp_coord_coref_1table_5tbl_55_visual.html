@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>Company B</td><td>456 Elm St</td></tr>
+<tr><td>3</td><td>Company C</td><td>789 Oak St</td></tr>
+<tr><td>4</td><td>Company D</td><td>098 Maple Ave</td></tr>
+<tr><td>5</td><td>Company E</td><td>543 Pine St</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Department of Geosciences</td></tr>
+<tr><td>2</td><td>Department of Chemistry</td></tr>
+<tr><td>3</td><td>Department of Biology</td></tr>
+<tr><td>4</td><td>Department of Physics</td></tr>
+<tr><td>5</td><td>Department of Mathematics</td></tr>
+</tbody></table></div>
+
+<div><h2>EarthSciencesJobs</h2><table><thead>
+<tr><th>id</th><th>jobTitle</th><th>departmentId</th><th>companyId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Departments.id)</th><th>(&#8594; Companies.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Research Scientist</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Laboratory Technician</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Field Geologist</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>Teaching Assistant</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>Data Analyst</td><td>4</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Employees</span></h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th><span style="color:#186e16"><span style="color:#186e16">title</span></span></th><th>startDate</th><th>endDate</th><th><span style="color:#1430b2">university</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td><span style="color:#186e16">Chemist</span></td><td>2010-01-01</td><td>None</td><td><span style="color:#1430b2">MIT</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td><span style="color:#186e16">Chemist</span></td><td>2015-01-01</td><td>None</td><td>UCLA</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td><span style="color:#186e16">Geoscientist</span></td><td>2010-01-01</td><td>None</td><td><span style="color:#1430b2">MIT</span></td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td><span style="color:#186e16">Geoscientist</span></td><td>2015-01-01</td><td>None</td><td>Stanford</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>Engineer</td><td>2010-01-01</td><td>None</td><td>Caltech</td></tr>
+</tbody></table></div>
+
+<div><h2>Education</h2><table><thead>
+<tr><th>employeeId</th><th>degree</th><th>major</th><th>institution</th><th>yearGraduated</th></tr>
+<tr><th>(&#8594; Employees.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>None</td><td>PhD</td><td>Chemistry</td><td>Harvard</td><td>2008</td></tr>
+<tr><td>None</td><td>MS</td><td>Physics</td><td>Yale</td><td>2010</td></tr>
+<tr><td>None</td><td>BS</td><td>Biology</td><td>Princeton</td><td>2012</td></tr>
+<tr><td>None</td><td>BA</td><td>Mathematics</td><td>Columbia</td><td>2014</td></tr>
+<tr><td>None</td><td>MA</td><td>Computational Science</td><td>Berkeley</td><td>2016</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

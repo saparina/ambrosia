@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Students</span></h2><table><thead>
+<tr><th>StudentID</th><th><span style="color:#006600">FullName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Anne Smith</td></tr>
+<tr><td>2</td><td>John Doe</td></tr>
+<tr><td>3</td><td>Jane Roe</td></tr>
+<tr><td>4</td><td><span style="color:#006600">Michael Brown</span></td></tr>
+<tr><td>5</td><td>Emma Johnson</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>Structure</th><th>AuthorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Students.StudentID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Article</td><td>Content of first article.</td><td>Inverted Pyramid</td><td>1</td></tr>
+<tr><td>2</td><td>Second Article</td><td>Content of second article.</td><td>Inverted Pyramid</td><td>2</td></tr>
+<tr><td>3</td><td>Third Article</td><td>Content of third article.</td><td>Chronological Structure</td><td>3</td></tr>
+<tr><td>4</td><td>Fourth Article</td><td>Content of fourth article.</td><td>Chronological Structure</td><td>4</td></tr>
+<tr><td>5</td><td>Fifth Article</td><td>Content of fifth article.</td><td>Inverted Pyramid</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">InvertedPyramidArticles</span></h2><table><thead>
+<tr><th>IPAID</th><th>ArticleID</th><th>Lead</th><th>Body</th><th>Conclusion</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lead text for first article.</td><td>Body text for first article.</td><td>Conclusion text for first article.</td></tr>
+<tr><td>2</td><td>2</td><td>Lead text for second article.</td><td>Body text for second article.</td><td>Conclusion text for second article.</td></tr>
+<tr><td>3</td><td>3</td><td>Lead text for third article.</td><td>Body text for third article.</td><td>Conclusion text for third article.</td></tr>
+<tr><td>4</td><td>4</td><td>Lead text for fourth article.</td><td>Body text for fourth article.</td><td>Conclusion text for fourth article.</td></tr>
+<tr><td>5</td><td>5</td><td>Lead text for fifth article.</td><td>Body text for fifth article.</td><td>Conclusion text for fifth article.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ChronologicalStructureArticles</span></h2><table><thead>
+<tr><th>CSARTID</th><th>ArticleID</th><th>Intro</th><th>MainBody</th><th>Conclusion</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Intro text for first article.</td><td>Main body text for first article.</td><td>Conclusion text for first article.</td></tr>
+<tr><td>2</td><td>2</td><td>Intro text for second article.</td><td>Main body text for second article.</td><td>Conclusion text for second article.</td></tr>
+<tr><td>3</td><td>3</td><td>Intro text for third article.</td><td>Main body text for third article.</td><td>Conclusion text for third article.</td></tr>
+<tr><td>4</td><td>4</td><td>Intro text for fourth article.</td><td>Main body text for fourth article.</td><td>Conclusion text for fourth article.</td></tr>
+<tr><td>5</td><td>5</td><td>Intro text for fifth article.</td><td>Main body text for fifth article.</td><td>Conclusion text for fifth article.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

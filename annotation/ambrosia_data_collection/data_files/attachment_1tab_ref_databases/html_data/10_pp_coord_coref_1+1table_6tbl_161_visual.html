@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Locations</span></h2><table><thead>
+<tr><th>LocationID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">Snowdonia</span></td></tr>
+<tr><td>2</td><td>Lake District</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Accommodations</span></h2><table><thead>
+<tr><th>AccommodationID</th><th><span style="color:#990000"><span style="color:#990000">Type</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Glamping Pod</span></td></tr>
+<tr><td>2</td><td><span style="color:#990000">Treehouse</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Rooms</h2><table><thead>
+<tr><th>RoomID</th><th>LocationID</th><th>AccommodationID</th></tr>
+<tr><th></th><th>(&#8594; Locations.LocationID)</th><th>(&#8594; Accommodations.AccommodationID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>jane@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>BookingID</th><th>RoomID</th><th>CustomerID</th><th>CheckInDate</th><th>CheckOutDate</th></tr>
+<tr><th></th><th>(&#8594; Rooms.RoomID)</th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-07-01</td><td>2022-07-08</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-07-15</td><td>2022-07-22</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>2022-08-01</td><td>2022-08-08</td></tr>
+<tr><td>4</td><td>4</td><td>2</td><td>2022-08-15</td><td>2022-08-22</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

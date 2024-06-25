@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flight</h2><table><thead>
+<tr><th>flightID</th><th>departureTime</th><th>destination</th><th>duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-03-17 09:00</td><td>Paris</td><td>8</td></tr>
+<tr><td>2</td><td>2023-03-17 11:00</td><td>London</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Gate</h2><table><thead>
+<tr><th>gateID</th><th>gateNumber</th><th>terminal</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>101</td><td>1</td><td>20</td></tr>
+<tr><td>2</td><td>102</td><td>1</td><td>25</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Passenger</span></h2><table><thead>
+<tr><th>passengerID</th><th>firstName</th><th>lastName</th><th><span style="color:#186e16"><span style="color:#186e16">mobilityAids</span></span></th><th><span style="color:#1430b2">pickUpDropOffLocation</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td><span style="color:#186e16">Wheelchair Assistance</span></td><td><span style="color:#1430b2">Entrance A</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td><span style="color:#186e16">Wheelchair Assistance</span></td><td>Exit C</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td><span style="color:#186e16">Mobility Scooter</span></td><td><span style="color:#1430b2">Entrance A</span></td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td><span style="color:#186e16">Mobility Scooter</span></td><td>Gate F</td></tr>
+</tbody></table></div>
+
+<div><h2>ServiceRequest</h2><table><thead>
+<tr><th>requestID</th><th>flightID</th><th>passengerID</th><th>serviceType</th></tr>
+<tr><th></th><th>(&#8594; Flight.flightID)</th><th>(&#8594; Passenger.passengerID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Assisted Boarding</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>Meal Request</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>Extra Luggage Space</td></tr>
+<tr><td>4</td><td>2</td><td>4</td><td>Special Meal</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

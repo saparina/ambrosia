@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">traffic_demand_forecasting_models</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Model1</td><td>This is a basic model</td></tr>
+<tr><td>2</td><td>Model2</td><td>A more advanced version of Model1</td></tr>
+<tr><td>3</td><td>Model3</td><td>Uses machine learning algorithms</td></tr>
+<tr><td>4</td><td>Model4</td><td>Considers weather conditions</td></tr>
+<tr><td>5</td><td>Model5</td><td>Combines multiple models</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">variables</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Population_Growth</td></tr>
+<tr><td>2</td><td>Economic_Development</td></tr>
+<tr><td>3</td><td>Road_Construction</td></tr>
+<tr><td>4</td><td>Public_Transportation</td></tr>
+<tr><td>5</td><td>Weather_Conditions</td></tr>
+</tbody></table></div>
+
+<div><h2>traffic_demand_forecasting_models_variables</h2><table><thead>
+<tr><th>id</th><th>traffic_model_id</th><th>variable_id</th></tr>
+<tr><th></th><th>(&#8594; traffic_demand_forecasting_models.id)</th><th>(&#8594; variables.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

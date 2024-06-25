@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>name</th><th>city</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Airport1</td><td>CityA</td><td>CountryX</td></tr>
+<tr><td>2</td><td>Airport2</td><td>CityB</td><td>CountryY</td></tr>
+<tr><td>3</td><td>Airport3</td><td>CityC</td><td>CountryZ</td></tr>
+<tr><td>4</td><td>Airport4</td><td>CityD</td><td>CountryW</td></tr>
+<tr><td>5</td><td>Airport5</td><td>CityE</td><td>CountryV</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>name</th><th>headquarter_city</th><th>headquarter_country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Airline1</td><td>HeadquartersA</td><td>HQX</td></tr>
+<tr><td>2</td><td>Airline2</td><td>HeadquartersB</td><td>HQY</td></tr>
+<tr><td>3</td><td>Airline3</td><td>HeadquartersC</td><td>HQZ</td></tr>
+<tr><td>4</td><td>Airline4</td><td>HeadquartersD</td><td>HQW</td></tr>
+<tr><td>5</td><td>Airline5</td><td>HeadquartersE</td><td>HQV</td></tr>
+</tbody></table></div>
+
+<div><h2>Planes</h2><table><thead>
+<tr><th>id</th><th>model</th><th><span style="color:#990000">linear_dimensions</span></th><th><span style="color:#990000">weight_restriction</span></th><th>airline_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airlines.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>PlaneModel1</td><td>Dimensions1</td><td>10000.0</td><td>1</td></tr>
+<tr><td>2</td><td>PlaneModel2</td><td>Dimensions2</td><td>20000.0</td><td>2</td></tr>
+<tr><td>3</td><td>PlaneModel3</td><td>Dimensions3</td><td>30000.0</td><td>3</td></tr>
+<tr><td>4</td><td>PlaneModel4</td><td>Dimensions4</td><td>40000.0</td><td>4</td></tr>
+<tr><td>5</td><td>PlaneModel5</td><td>Dimensions5</td><td>50000.0</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Runways</h2><table><thead>
+<tr><th>id</th><th>length</th><th>width</th><th>capacity</th><th>airport_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Airports.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>8000.0</td><td>100.0</td><td>9999</td><td>1</td></tr>
+<tr><td>2</td><td>7000.0</td><td>150.0</td><td>9998</td><td>2</td></tr>
+<tr><td>3</td><td>6000.0</td><td>120.0</td><td>9997</td><td>3</td></tr>
+<tr><td>4</td><td>5000.0</td><td>90.0</td><td>9996</td><td>4</td></tr>
+<tr><td>5</td><td>4000.0</td><td>80.0</td><td>9995</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>departure_time</th><th>arrival_time</th><th>runway_id</th><th>plane_model</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Runways.id)</th><th>(&#8594; Planes.model)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-01-01 08:00:00</td><td>2022-01-01 10:00:00</td><td>1</td><td>PlaneModel1</td></tr>
+<tr><td>2</td><td>2022-01-02 09:00:00</td><td>2022-01-02 11:00:00</td><td>2</td><td>PlaneModel2</td></tr>
+<tr><td>3</td><td>2022-01-03 10:00:00</td><td>2022-01-03 12:00:00</td><td>3</td><td>PlaneModel3</td></tr>
+<tr><td>4</td><td>2022-01-04 11:00:00</td><td>2022-01-04 13:00:00</td><td>4</td><td>PlaneModel4</td></tr>
+<tr><td>5</td><td>2022-01-05 12:00:00</td><td>2022-01-05 14:00:00</td><td>5</td><td>PlaneModel5</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>id</th><th>fullname</th><th>passport</th><th>flight_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Flights.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Passenger1</td><td>Passport1</td><td>1</td></tr>
+<tr><td>2</td><td>Passenger2</td><td>Passport2</td><td>2</td></tr>
+<tr><td>3</td><td>Passenger3</td><td>Passport3</td><td>3</td></tr>
+<tr><td>4</td><td>Passenger4</td><td>Passport4</td><td>4</td></tr>
+<tr><td>5</td><td>Passenger5</td><td>Passport5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

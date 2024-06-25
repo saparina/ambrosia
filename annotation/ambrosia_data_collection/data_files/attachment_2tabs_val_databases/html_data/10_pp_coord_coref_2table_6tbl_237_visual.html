@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Reporters</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>YearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>28</td><td>7</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>31</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>DatePublished</th><th>WordCount</th><th>ReporterId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Reporters.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Political Crisis Explained</td><td>2024-03-13 18:04:43</td><td>600</td><td>1</td></tr>
+<tr><td>2</td><td>Tech Innovations to Watch For</td><td>2024-03-13 18:04:43</td><td>800</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Donors</h2><table><thead>
+<tr><th>DonorId</th><th>FullName</th><th>Email</th><th>PhoneNumber</th><th>Amount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice Johnson</td><td>alice@gmail.com</td><td>+123456789</td><td>None</td></tr>
+<tr><td>2</td><td>Bob Brown</td><td>bob@yahoo.com</td><td>+987654321</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Donations</span></h2><table><thead>
+<tr><th>DonationId</th><th>Amount</th><th>DonorId</th><th>ArticleId</th><th>DonationDate</th></tr>
+<tr><th></th><th></th><th>(&#8594; Donors.DonorId)</th><th>(&#8594; Articles.ArticleId)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">30000.0</span></td><td>1</td><td>1</td><td>2024-03-13 18:04:43</td></tr>
+<tr><td>2</td><td>45000.0</td><td>2</td><td>2</td><td>2024-03-13 18:04:43</td></tr>
+</tbody></table></div>
+
+<div><h2>Grants</h2><table><thead>
+<tr><th>GrantId</th><th>FundingAgency</th><th>ApplicationDate</th><th>ApprovalStatus</th><th>GrantAmount</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>XYZ Foundation</td><td>2021-06-15</td><td>Pending</td><td>10000.0</td></tr>
+<tr><td>2</td><td>ABC Trust</td><td>2021-06-16</td><td>Approved</td><td>30000.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">GrantFundings</span></h2><table><thead>
+<tr><th>GrantFundingId</th><th>GrantId</th><th>Amount</th><th>Description</th></tr>
+<tr><th></th><th>(&#8594; Grants.GrantId)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#006600">30000.0</span></td><td>For hiring new staff</td></tr>
+<tr><td>2</td><td>2</td><td>10000.0</td><td>To improve technology infrastructure</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

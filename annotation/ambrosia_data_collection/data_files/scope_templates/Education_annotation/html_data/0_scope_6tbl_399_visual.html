@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Lessons</span></h2><table><thead>
+<tr><th>id</th><th>lessonName</th><th>teacherId</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Math</td><td>1</td></tr>
+<tr><td>2</td><td>Beginner English Grammar</td><td>2</td></tr>
+<tr><td>3</td><td>Ancient History Timeline</td><td>3</td></tr>
+<tr><td>4</td><td>Cell Structure and Function</td><td>4</td></tr>
+<tr><td>5</td><td>Basics of Physics</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Activities</span></h2><table><thead>
+<tr><th><span style="color:#990000">activityType</span></th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>Group_Work</td><td>Collaborative learning task</td></tr>
+<tr><td>Individual_Project</td><td>Personal project assignment</td></tr>
+<tr><td>Quiz</td><td>Short test to assess understanding</td></tr>
+<tr><td>Lecture</td><td>Instructor-led presentation on a topic</td></tr>
+<tr><td>Discussion</td><td>Classwide conversation about a topic</td></tr>
+</tbody></table></div>
+
+<div><h2>Students</h2><table><thead>
+<tr><th>studentId</th><th>name</th><th>age</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>12</td></tr>
+<tr><td>2</td><td>Bob</td><td>13</td></tr>
+<tr><td>3</td><td>Charlie</td><td>14</td></tr>
+<tr><td>4</td><td>David</td><td>15</td></tr>
+<tr><td>5</td><td>Eva</td><td>16</td></tr>
+</tbody></table></div>
+
+<div><h2>Teachers</h2><table><thead>
+<tr><th>teacherId</th><th>name</th><th>subject</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mr. Smith</td><td>Math</td></tr>
+<tr><td>2</td><td>Ms. Johnson</td><td>English</td></tr>
+<tr><td>3</td><td>Mrs. Lee</td><td>History</td></tr>
+<tr><td>4</td><td>Dr. Brown</td><td>Biology</td></tr>
+<tr><td>5</td><td>Professor White</td><td>Physics</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>enrollmentId</th><th>studentId</th><th>classId</th></tr>
+<tr><th></th><th>(&#8594; Students.studentId)</th><th>(&#8594; Lessons.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Lessons_Activities</h2><table><thead>
+<tr><th>lessonsActivityId</th><th>lessonsId</th><th>activitiesType</th></tr>
+<tr><th></th><th>(&#8594; Lessons.id)</th><th>(&#8594; Activities.activityType)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Group_Work</td></tr>
+<tr><td>2</td><td>1</td><td>Quiz</td></tr>
+<tr><td>3</td><td>2</td><td>Individual_Project</td></tr>
+<tr><td>4</td><td>2</td><td>Lecture</td></tr>
+<tr><td>5</td><td>3</td><td>Quiz</td></tr>
+<tr><td>6</td><td>2</td><td>Quiz</td></tr>
+<tr><td>7</td><td>4</td><td>Quiz</td></tr>
+<tr><td>8</td><td>5</td><td>Quiz</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

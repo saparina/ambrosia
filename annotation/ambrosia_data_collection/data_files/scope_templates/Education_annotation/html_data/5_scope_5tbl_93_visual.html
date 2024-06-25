@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Age_Groups</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">age_group_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Toddler</td></tr>
+<tr><td>2</td><td>Pre-Schooler</td></tr>
+<tr><td>3</td><td>Primary School</td></tr>
+<tr><td>4</td><td>Secondary School</td></tr>
+<tr><td>5</td><td>College/University</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Education_Programs</span></h2><table><thead>
+<tr><th>program_id</th><th>program_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Little Explorers</td><td>An educational program for young children.</td></tr>
+<tr><td>2</td><td>Reading Buddies</td><td>A tutoring program focused on reading skills.</td></tr>
+<tr><td>3</td><td>Math Whiz Kids</td><td>A math enrichment program for primary school students.</td></tr>
+<tr><td>4</td><td>Science Discoveries</td><td>A hands-on science exploration program for middle school students.</td></tr>
+<tr><td>5</td><td>Advanced Learning Academy</td><td>A college preparatory program for high school students.</td></tr>
+</tbody></table></div>
+
+<div><h2>Education_Programs_Age_Groups</h2><table><thead>
+<tr><th>education_program_id</th><th>age_group_id</th></tr>
+<tr><th>(&#8594; Education_Programs.program_id)</th><th>(&#8594; Age_Groups.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

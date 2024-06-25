@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>gender</th><th>majorId</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bob Johnson</td><td>20</td><td>Male</td><td>1</td></tr>
+<tr><td>2</td><td>Emma Wilson</td><td>22</td><td>Female</td><td>2</td></tr>
+<tr><td>3</td><td>Tom Clark</td><td>19</td><td>Male</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Majors</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td></tr>
+<tr><td>2</td><td>Mechanical Engineering</td></tr>
+<tr><td>3</td><td>Electrical Engineering</td></tr>
+</tbody></table></div>
+
+<div><h2>Departments</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Engineering Department</td></tr>
+<tr><td>2</td><td>Art Department</td></tr>
+</tbody></table></div>
+
+<div><h2>Professors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>specialty</th><th>departmentId</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Computer Programming</td><td>1</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Robotics</td><td>3</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>Circuit Design</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Academics</span></h2><table><thead>
+<tr><th>id</th><th>academicCourse</th><th>project</th><th>departmentId</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Engineering Class</span></td><td><span style="color:#006600">Sustainability Project</span></td><td>1</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Engineering Class</span></td><td>Software Development Project</td><td>1</td></tr>
+<tr><td>3</td><td><span style="color:#990000">Design Class</span></td><td><span style="color:#006600">Sustainability Project</span></td><td>2</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Design Class</span></td><td>Web Design Project</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

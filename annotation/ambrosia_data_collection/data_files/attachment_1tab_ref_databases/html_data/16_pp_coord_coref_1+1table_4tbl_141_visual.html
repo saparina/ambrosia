@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Directors</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th><th><span style="color:#990000"><span style="color:#990000">production_role</span></span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2000-01-01</td><td><span style="color:#990000">Stunt Coordinator</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>1985-06-30</td><td><span style="color:#990000">Fight Choreographer</span></td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>1978-03-12</td><td>Director</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Actors</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th><th><span style="color:#006600">work_experience</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike Johnson</td><td>1990-02-27</td><td><span style="color:#006600">5 years</span></td></tr>
+<tr><td>2</td><td>Emily Davis</td><td>1992-05-01</td><td>8 years</td></tr>
+<tr><td>3</td><td>Robert Williams</td><td>1988-06-05</td><td>10 years</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>director_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action Film 1</td><td>2022</td><td>1</td></tr>
+<tr><td>2</td><td>Drama Film</td><td>2020</td><td>2</td></tr>
+<tr><td>3</td><td>Comedy Film</td><td>2021</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>RolesInFilms</h2><table><thead>
+<tr><th>film_id</th><th>actor_id</th><th>role</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Lead Actor</td></tr>
+<tr><td>1</td><td>2</td><td>Supporting Actor</td></tr>
+<tr><td>2</td><td>3</td><td>Villain</td></tr>
+<tr><td>2</td><td>1</td><td>Antagonist</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

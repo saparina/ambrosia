@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Employers</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CompanyA</td><td>New York</td></tr>
+<tr><td>2</td><td>CompanyB</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>CompanyC</td><td>Chicago</td></tr>
+<tr><td>4</td><td>CompanyD</td><td>Miami</td></tr>
+<tr><td>5</td><td>CompanyE</td><td>Seattle</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Economists</span></h2><table><thead>
+<tr><th>id</th><th>employer_id</th><th>economist_name</th><th>data</th></tr>
+<tr><th></th><th>(&#8594; Employers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John Doe</td><td><span style="color:#006600">Demographics</span></td></tr>
+<tr><td>2</td><td>2</td><td>Jane Smith</td><td>Market Trends</td></tr>
+<tr><td>3</td><td>3</td><td>Alice Johnson</td><td>Monetary Policy</td></tr>
+<tr><td>4</td><td>4</td><td>Bob Brown</td><td>Fiscal Policy</td></tr>
+<tr><td>5</td><td>5</td><td>Emma White</td><td>Inflation</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Statisticians</span></h2><table><thead>
+<tr><th>id</th><th>employer_id</th><th>statistician_name</th><th>data</th></tr>
+<tr><th></th><th>(&#8594; Employers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Tom Green</td><td><span style="color:#006600">Demographics</span></td></tr>
+<tr><td>2</td><td>2</td><td>Rick Black</td><td>Consumer Spending</td></tr>
+<tr><td>3</td><td>3</td><td>Steve Silver</td><td>Business Cycles</td></tr>
+<tr><td>4</td><td>4</td><td>Paul Gold</td><td>Unemployment Rates</td></tr>
+<tr><td>5</td><td>5</td><td>Bill Blue</td><td>GDP Growth</td></tr>
+</tbody></table></div>
+
+<div><h2>Applicants</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th><th>phone_number</th><th>application_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alex Anderson</td><td>alex@email.com</td><td>555-123-4567</td><td>2024-03-13 17:10:20</td></tr>
+<tr><td>2</td><td>Laura Baker</td><td>laura@email.com</td><td>555-987-6543</td><td>2024-03-13 17:10:20</td></tr>
+<tr><td>3</td><td>Michael Clark</td><td>michael@email.com</td><td>555-654-3219</td><td>2024-03-13 17:10:20</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@email.com</td><td>555-456-7890</td><td>2024-03-13 17:10:20</td></tr>
+<tr><td>5</td><td>Daniel Evans</td><td>daniel@email.com</td><td>555-321-6547</td><td>2024-03-13 17:10:20</td></tr>
+</tbody></table></div>
+
+<div><h2>Applications</h2><table><thead>
+<tr><th>id</th><th>applicant_id</th><th>job_title</th><th>status</th><th>apply_date</th></tr>
+<tr><th></th><th>(&#8594; Applicants.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Economist</td><td>Pending</td><td>2024-03-13 17:10:20</td></tr>
+<tr><td>2</td><td>2</td><td>Statistician</td><td>Rejected</td><td>2024-03-13 17:10:20</td></tr>
+<tr><td>3</td><td>3</td><td>Economist</td><td>Accepted</td><td>2024-03-13 17:10:20</td></tr>
+<tr><td>4</td><td>4</td><td>Statistician</td><td>Waitlisted</td><td>2024-03-13 17:10:20</td></tr>
+<tr><td>5</td><td>5</td><td>Economist</td><td>Interview Scheduled</td><td>2024-03-13 17:10:20</td></tr>
+</tbody></table></div>
+
+<div><h2>Salaries</h2><table><thead>
+<tr><th>id</th><th>application_id</th><th>salary</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th>(&#8594; Applications.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>60000</td><td>2022-01-01</td><td>2023-12-31</td></tr>
+<tr><td>2</td><td>2</td><td>55000</td><td>2022-01-01</td><td>2023-12-31</td></tr>
+<tr><td>3</td><td>3</td><td>65000</td><td>2022-01-01</td><td>2023-12-31</td></tr>
+<tr><td>4</td><td>4</td><td>50000</td><td>2022-01-01</td><td>2023-12-31</td></tr>
+<tr><td>5</td><td>5</td><td>62000</td><td>2022-01-01</td><td>2023-12-31</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

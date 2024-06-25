@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Film</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>releaseDate</th><th>duration</th><th><span style="color:#186e16"><span style="color:#186e16">animationStudio</span></span></th><th><span style="color:#1430b2">awards</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Studio.name)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Toy Story</td><td>1995-03-26</td><td>82</td><td><span style="color:#186e16">Pixar</span></td><td><span style="color:#1430b2">Golden Globe</span></td></tr>
+<tr><td>2</td><td>Finding Nemo</td><td>2003-07-06</td><td>100</td><td><span style="color:#186e16">Pixar</span></td><td>Oscar</td></tr>
+<tr><td>3</td><td>Shrek</td><td>2001-04-18</td><td>88</td><td><span style="color:#186e16">DreamWorks</span></td><td><span style="color:#1430b2">Golden Globe</span></td></tr>
+<tr><td>4</td><td>Madagascar</td><td>2005-05-04</td><td>89</td><td><span style="color:#186e16">DreamWorks</span></td><td>Nickelodeon Kids Choice Award</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Lasseter</td><td>1957</td></tr>
+<tr><td>2</td><td>Andrew Stanton</td><td>1961</td></tr>
+<tr><td>3</td><td>Adam Foucher</td><td>1970</td></tr>
+<tr><td>4</td><td>Chris Buck</td><td>1960</td></tr>
+<tr><td>5</td><td>Erik de la Espriella</td><td>1970</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td><td>1954</td></tr>
+<tr><td>2</td><td>Tim Allen</td><td>1953</td></tr>
+<tr><td>3</td><td>David Hyde Pierce</td><td>1951</td></tr>
+<tr><td>4</td><td>Ian Holm</td><td>1931</td></tr>
+<tr><td>5</td><td>Billy Crystal</td><td>1941</td></tr>
+</tbody></table></div>
+
+<div><h2>Genre</h2><table><thead>
+<tr><th>id</th><th>genreName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Animated Comedy</td></tr>
+<tr><td>2</td><td>Family Adventure</td></tr>
+<tr><td>3</td><td>Action/Adventure</td></tr>
+<tr><td>4</td><td>Drama</td></tr>
+<tr><td>5</td><td>Mystery</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmActors</h2><table><thead>
+<tr><th>filmID</th><th>actorID</th><th>role</th></tr>
+<tr><th>(&#8594; Film.id)</th><th>(&#8594; Actor.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Woody</td></tr>
+<tr><td>1</td><td>2</td><td>Buzz Lightyear</td></tr>
+<tr><td>2</td><td>3</td><td>Marlin</td></tr>
+<tr><td>2</td><td>4</td><td>Dory</td></tr>
+<tr><td>3</td><td>5</td><td>Donkey</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

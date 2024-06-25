@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Festivals</span></h2><table><thead>
+<tr><th>FestivalID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Summerfest</td><td>Milwaukee</td></tr>
+<tr><td>2</td><td>Coachella Valley Music And Arts Festival</td><td>Indio, California</td></tr>
+<tr><td>3</td><td>Glastonbury Festival</td><td>Pilton, England</td></tr>
+<tr><td>4</td><td>Burning Man</td><td>Black Rock Desert, Nevada</td></tr>
+<tr><td>5</td><td>Electric Daisy Carnival</td><td>Las Vegas</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Performances</span></h2><table><thead>
+<tr><th>PerformanceID</th><th><span style="color:#990000">Type</span></th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Live_Band</td><td>A live music performance featuring multiple bands.</td></tr>
+<tr><td>2</td><td>DJ</td><td>An electronic dance music DJ set.</td></tr>
+<tr><td>3</td><td>Comedy Show</td><td>A stand-up comedy showcase.</td></tr>
+<tr><td>4</td><td>Theatre</td><td>A professional theatre production.</td></tr>
+<tr><td>5</td><td>Circus</td><td>A traditional circus performance.</td></tr>
+</tbody></table></div>
+
+<div><h2>Artists</h2><table><thead>
+<tr><th>ArtistID</th><th>Name</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Beatles</td><td>Rock</td></tr>
+<tr><td>2</td><td>David Bowie</td><td>Rock</td></tr>
+<tr><td>3</td><td>Ellie Goulding</td><td>Pop</td></tr>
+<tr><td>4</td><td>Katy Perry</td><td>Pop</td></tr>
+<tr><td>5</td><td>Michael Jackson</td><td>Pop</td></tr>
+</tbody></table></div>
+
+<div><h2>Festivals_Performances</h2><table><thead>
+<tr><th>FestivalID</th><th>PerformanceID</th><th>Date</th></tr>
+<tr><th>(&#8594; Festivals.FestivalID)</th><th>(&#8594; Performances.PerformanceID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>1</td><td>None</td></tr>
+<tr><td>3</td><td>1</td><td>None</td></tr>
+<tr><td>4</td><td>1</td><td>None</td></tr>
+<tr><td>5</td><td>1</td><td>None</td></tr>
+<tr><td>5</td><td>4</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

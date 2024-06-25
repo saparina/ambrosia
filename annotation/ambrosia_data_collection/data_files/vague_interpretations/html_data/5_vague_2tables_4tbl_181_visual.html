@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Architect</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>Mike Johnson</td><td>mikejohnson@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emilydavis@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>davidbrown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Firm</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Construction</td><td>123 Main St, Anytown, USA</td></tr>
+<tr><td>2</td><td>XYZ Builders</td><td>456 Elm St, Anycity, USA</td></tr>
+<tr><td>3</td><td>PQR Contractors</td><td>789 Oak St, Anothertown, USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Building</h2><table><thead>
+<tr><th>id</th><th>building_name</th><th>firm_id</th><th>architect_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Firm.id)</th><th>(&#8594; Architect.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Highrise Tower</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Residential Complex</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Office Building</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>School Building</td><td>1</td><td>4</td></tr>
+<tr><td>5</td><td>Hospital</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Project</h2><table><thead>
+<tr><th>id</th><th>project_name</th><th>building_id</th><th>start_date</th><th>end_date</th></tr>
+<tr><th></th><th></th><th>(&#8594; Building.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tower Foundation</td><td>1</td><td>2022-01-01</td><td>2022-03-31</td></tr>
+<tr><td>2</td><td>Complex Framework</td><td>2</td><td>2022-02-01</td><td>2022-04-30</td></tr>
+<tr><td>3</td><td>Office Interior</td><td>3</td><td>2022-03-01</td><td>2022-05-31</td></tr>
+<tr><td>4</td><td>School Renovation</td><td>1</td><td>2022-04-01</td><td>2022-06-30</td></tr>
+<tr><td>5</td><td>Hospital Expansion</td><td>2</td><td>2022-05-01</td><td>2022-07-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Material</h2><table><thead>
+<tr><th>id</th><th>material_type</th><th>cost</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Concrete</td><td>100.0</td></tr>
+<tr><td>2</td><td>Steel</td><td>200.0</td></tr>
+<tr><td>3</td><td>Glass</td><td>150.0</td></tr>
+<tr><td>4</td><td>Wood</td><td>50.0</td></tr>
+<tr><td>5</td><td>Bricks</td><td>75.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>employee_name</th><th>position</th><th>firm_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Firm.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Williams</td><td>Project Manager</td><td>1</td></tr>
+<tr><td>2</td><td>Susan Thompson</td><td>Architect</td><td>2</td></tr>
+<tr><td>3</td><td>Chris Jones</td><td>Superintendent</td><td>3</td></tr>
+<tr><td>4</td><td>Lisa Brown</td><td>Engineer</td><td>1</td></tr>
+<tr><td>5</td><td>Mark Taylor</td><td>Electrician</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Hospitals</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>St. Marys Hospital</td><td>123 Main St</td></tr>
+<tr><td>2</td><td>New York General</td><td>456 Broadway St</td></tr>
+<tr><td>3</td><td>Metro Medical Center</td><td>789 Central Ave</td></tr>
+<tr><td>4</td><td>Cedars Sinai</td><td>1011 Ocean Blvd</td></tr>
+<tr><td>5</td><td>John Hopkins</td><td>2020 University Pl</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Departments</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">departmentName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cardiology</td></tr>
+<tr><td>2</td><td>Neurology</td></tr>
+<tr><td>3</td><td>Gastroenterology</td></tr>
+<tr><td>4</td><td>Orthopedics</td></tr>
+<tr><td>5</td><td>Pulmonary Medicine</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>specialtyId</th><th>hospitalId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Departments.id)</th><th>(&#8594; Hospitals.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. Smith</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Dr. Johnson</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>Dr. Brown</td><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>Dr. Davis</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>Dr. Miller</td><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Patients</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>age</th><th>illnessText</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Jane</td><td>Doe</td><td>35</td><td>Flu</td></tr>
+<tr><td>2</td><td>Michael</td><td>Smith</td><td>45</td><td>Broken Arm</td></tr>
+<tr><td>3</td><td>Emily</td><td>Johnson</td><td>25</td><td>Anxiety</td></tr>
+<tr><td>4</td><td>David</td><td>Brown</td><td>65</td><td>Diabetes</td></tr>
+<tr><td>5</td><td>Karen</td><td>Miller</td><td>55</td><td>Asthma</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointments</h2><table><thead>
+<tr><th>id</th><th>patientId</th><th>doctorId</th><th>date</th><th>time</th><th>reasonForVisit</th></tr>
+<tr><th></th><th>(&#8594; Patients.id)</th><th>(&#8594; Doctors.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01 10:00:00</td><td>10:00 AM</td><td>Influenza A</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-01-02 02:00:00 PM</td><td>02:00 PM</td><td>Fractured wrist</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-01-03 03:00:00 PM</td><td>03:00 PM</td><td>Panic attack</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-01-04 04:00:00 PM</td><td>04:00 PM</td><td>Shortness of breath</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-01-05 05:00:00 PM</td><td>05:00 PM</td><td>Allergies</td></tr>
+</tbody></table></div>
+
+<div><h2>Hospitals_Departments</h2><table><thead>
+<tr><th>hospitalId</th><th>departmentId</th></tr>
+<tr><th>(&#8594; Hospitals.id)</th><th>(&#8594; Departments.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Category</h2><table><thead>
+<tr><th>id</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Environment</td></tr>
+<tr><td>2</td><td>Technology</td></tr>
+</tbody></table></div>
+
+<div><h2>ArticleCategoryRelationship</h2><table><thead>
+<tr><th>articleId</th><th>categoryId</th></tr>
+<tr><th>(&#8594; NewsArticle.id)</th><th>(&#8594; Category.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Comments</h2><table><thead>
+<tr><th>id</th><th>content</th><th>authorEmail</th><th>articleId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; NewsArticle.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Great read!</td><td>commenter1@email.com</td><td>1</td></tr>
+<tr><td>2</td><td>Interesting insights.</td><td>commenter2@email.com</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>NewsArticle</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Content</th><th><span style="color:#990000">Platform</span></th><th>News_Agency</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Climate Change and Its Impact on Agriculture</td><td>This article discusses...</td><td>www.example.com</td><td>Global Times</td></tr>
+<tr><td>2</td><td>The Rise of Electric Vehicles</td><td>In this article, we explore...</td><td>www.examplenews.com</td><td>EcoTimes</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

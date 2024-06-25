@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Articles</h2><table><thead>
+<tr><th>ArticleID</th><th>Title</th><th>Content</th><th>PublishDate</th><th>AuthorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.AuthorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking News: Earth Shake</td><td>A powerful earthquake hits California</td><td>2024-03-07 23:25:22</td><td>1</td></tr>
+<tr><td>2</td><td>Tech Giants Merge</td><td>Apple and Google announce a merger</td><td>2024-03-07 23:25:22</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Authors</span></h2><table><thead>
+<tr><th>AuthorID</th><th>Name</th><th>Email</th><th>PhoneNumber</th><th><span style="color:#186e16"><span style="color:#186e16">Classification</span></span></th><th><span style="color:#1430b2">Payment</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>johndoe@example.com</td><td>+1234567890</td><td><span style="color:#186e16">Stringer</span></td><td><span style="color:#1430b2">2000</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>janesmith@example.com</td><td>+0987654321</td><td><span style="color:#186e16">Stringer</span></td><td>3000</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>alicejohnson@example.com</td><td>+1357924680</td><td><span style="color:#186e16">Editor</span></td><td><span style="color:#1430b2">2000</span></td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>bobbrown@example.com</td><td>+2468135790</td><td><span style="color:#186e16">Editor</span></td><td>2500</td></tr>
+</tbody></table></div>
+
+<div><h2>NewsOutlets</h2><table><thead>
+<tr><th>OutletID</th><th>Name</th><th>Location</th><th>Website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Global Times</td><td>New York, USA</td><td>https://www.globaltimes.com</td></tr>
+<tr><td>2</td><td>European Gazette</td><td>London, UK</td><td>https://www.europeangazette.co.uk</td></tr>
+</tbody></table></div>
+
+<div><h2>Submissions</h2><table><thead>
+<tr><th>SubmissionID</th><th>ArticleID</th><th>OutletID</th><th>Accepted</th></tr>
+<tr><th></th><th>(&#8594; Articles.ArticleID)</th><th>(&#8594; NewsOutlets.OutletID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>0</td></tr>
+</tbody></table></div>
+
+<div><h2>Sources</h2><table><thead>
+<tr><th>SourceID</th><th>Name</th><th>ContactInfo</th><th>Reliability</th><th>LastUsed</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Washington Post</td><td>washpost@example.com</td><td>4</td><td>2021-07-01 12:00:00</td></tr>
+<tr><td>2</td><td>Reuters</td><td>reuters@example.com</td><td>5</td><td>2021-07-15 15:30:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

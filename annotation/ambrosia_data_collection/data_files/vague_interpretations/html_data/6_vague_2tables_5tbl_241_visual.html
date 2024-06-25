@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Field_of_study</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>The study of computers and computation.</td></tr>
+<tr><td>2</td><td>Mathematics</td><td>The study of numbers, quantity, structure, space, and change.</td></tr>
+<tr><td>3</td><td>Physics</td><td>The natural science that involves the study of matter and energy.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Degree_program</span></h2><table><thead>
+<tr><th>id</th><th>degree_name</th><th>duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bachelor of Computer Science</td><td>4</td></tr>
+<tr><td>2</td><td>Master of Mathematics</td><td>2</td></tr>
+<tr><td>3</td><td>PhD Physics</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>id</th><th>department_name</th><th>head_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Employee.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>None</td></tr>
+<tr><td>2</td><td>Mathematics</td><td>None</td></tr>
+<tr><td>3</td><td>Physics</td><td>None</td></tr>
+</tbody></table></div>
+
+<div><h2>Faculty</h2><table><thead>
+<tr><th>id</th><th>faculty_name</th><th>department_id</th></tr>
+<tr><th></th><th></th><th>(&#8594; Department.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr. John Smith</td><td>1</td></tr>
+<tr><td>2</td><td>Professor Jane Doe</td><td>2</td></tr>
+<tr><td>3</td><td>Assistant Professor Bob Johnson</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Course</h2><table><thead>
+<tr><th>id</th><th>course_code</th><th>title</th><th>credit</th><th>faculty_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Faculty.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>CS101</td><td>Introduction to Programming</td><td>3</td><td>1</td></tr>
+<tr><td>2</td><td>MATH201</td><td>Calculus I</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>PHYS101</td><td>General Physics</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollment</h2><table><thead>
+<tr><th>id</th><th>student_id</th><th>course_id</th></tr>
+<tr><th></th><th>(&#8594; Student.id)</th><th>(&#8594; Course.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Student</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th><th>field_of_study_id</th><th>degree_program_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Field_of_study.id)</th><th>(&#8594; Degree_program.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Smith</td><td>alice@example.com</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Bob</td><td>Jones</td><td>bob@example.com</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Carol</td><td>Williams</td><td>carol@example.com</td><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

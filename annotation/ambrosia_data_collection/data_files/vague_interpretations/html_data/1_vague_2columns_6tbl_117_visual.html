@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>CivilEngineers</h2><table><thead>
+<tr><th>ProjectID</th><th>Intersection</th><th><span style="color:#990000">Civil_Engineer</span></th><th><span style="color:#990000">Engineering_Firm</span></th><th>StartDate</th><th>EndDate</th><th>Budget</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Main St & Oak Ave</td><td>John Doe</td><td>ABC Engineering</td><td>2021-06-01</td><td>2021-09-30</td><td>500000.0</td></tr>
+<tr><td>2</td><td>Elm St & Pine Ave</td><td>Jane Smith</td><td>XYZ Engineering</td><td>2021-07-01</td><td>2021-10-31</td><td>600000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Roads</h2><table><thead>
+<tr><th>RoadID</th><th>StreetName</th><th>City</th><th>State</th><th>ZipCode</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bridge St</td><td>Springfield</td><td>IL</td><td>62704</td></tr>
+<tr><td>2</td><td>Parkway Dr</td><td>Chicago</td><td>IL</td><td>60616</td></tr>
+</tbody></table></div>
+
+<div><h2>Accidents</h2><table><thead>
+<tr><th>AccidentID</th><th>DateOfAccident</th><th>TimeOfAccident</th><th>LocationText</th><th>Latitude</th><th>Longitude</th><th>Severity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-08-01</td><td>10:30 AM</td><td>Main St & Oak Ave</td><td>40.0</td><td>-89.0</td><td>Minor</td></tr>
+<tr><td>2</td><td>2021-08-02</td><td>11:15 AM</td><td>Elm St & Pine Ave</td><td>41.0</td><td>-90.0</td><td>Moderate</td></tr>
+</tbody></table></div>
+
+<div><h2>VehicleTypes</h2><table><thead>
+<tr><th>TypeID</th><th>Make</th><th>Model</th><th>Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Toyota</td><td>Corolla</td><td>2018</td></tr>
+<tr><td>2</td><td>Honda</td><td>Civic</td><td>2019</td></tr>
+</tbody></table></div>
+
+<div><h2>Drivers</h2><table><thead>
+<tr><th>DriverID</th><th>LicenseNumber</th><th>Name</th><th>Address</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>A1234CD</td><td>Alice Johnson</td><td>123 Main St, Springfield, IL</td><td>555-123-4567</td></tr>
+<tr><td>2</td><td>BCDEFGH</td><td>Bob Smith</td><td>456 Elm St, Chicago, IL</td><td>555-987-6543</td></tr>
+</tbody></table></div>
+
+<div><h2>PoliceReports</h2><table><thead>
+<tr><th>ReportID</th><th>DateReported</th><th>OfficerID</th><th>AccidentID</th><th>OffenseType</th><th>Penalty</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2021-08-01</td><td>1</td><td>1</td><td>Speeding</td><td>Warning</td></tr>
+<tr><td>2</td><td>2021-08-02</td><td>2</td><td>2</td><td>Running Red Light</td><td>$100 Fine</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

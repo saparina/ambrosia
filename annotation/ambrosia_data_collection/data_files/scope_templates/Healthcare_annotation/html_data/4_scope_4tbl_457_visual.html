@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Medical_Center</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>St. Johns Hospital</td><td>New York</td></tr>
+<tr><td>2</td><td>Mercy General Hospital</td><td>Chicago</td></tr>
+<tr><td>3</td><td>Mount Sinai Hospital</td><td>Los Angeles</td></tr>
+<tr><td>4</td><td>Memorial Hermann Hospital</td><td>Houston</td></tr>
+<tr><td>5</td><td>Mayo Clinic</td><td>Rochester</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Specialty</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#990000">Type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Emergency Medicine</td></tr>
+<tr><td>2</td><td>Cardiology</td></tr>
+<tr><td>3</td><td>Gastroenterology</td></tr>
+<tr><td>4</td><td>Neurology</td></tr>
+<tr><td>5</td><td>Orthopedics</td></tr>
+</tbody></table></div>
+
+<div><h2>Medical_Center_Specialty</h2><table><thead>
+<tr><th>Medical_Center_ID</th><th>Specialty_ID</th></tr>
+<tr><th>(&#8594; Medical_Center.ID)</th><th>(&#8594; Specialty.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Doctor</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>LicenseNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>MD123456789</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>MD987654321</td></tr>
+<tr><td>3</td><td>Michael</td><td>Johnson</td><td>MD345678901</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>MD789012345</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>MD234567890</td></tr>
+</tbody></table></div>
+
+<div><h2>Patient</h2><table><thead>
+<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>PhoneNumber</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>Wilson</td><td>1990-01-01</td><td>555-123-4567</td></tr>
+<tr><td>2</td><td>Bob</td><td>Thompson</td><td>1985-02-02</td><td>555-987-6543</td></tr>
+<tr><td>3</td><td>Carol</td><td>Jackson</td><td>1975-03-03</td><td>555-432-1234</td></tr>
+<tr><td>4</td><td>Daniel</td><td>Martin</td><td>1992-04-04</td><td>555-654-3210</td></tr>
+<tr><td>5</td><td>Elizabeth</td><td>Taylor</td><td>1988-05-05</td><td>555-132-4568</td></tr>
+</tbody></table></div>
+
+<div><h2>Appointment</h2><table><thead>
+<tr><th>ID</th><th>Patient_ID</th><th>Doctor_ID</th><th>StartTime</th><th>EndTime</th></tr>
+<tr><th></th><th>(&#8594; Patient.ID)</th><th>(&#8594; Doctor.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2022-01-01 09:00:00</td><td>2022-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2022-01-02 09:00:00</td><td>2022-01-02 10:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2022-01-03 09:00:00</td><td>2022-01-03 10:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2022-01-04 09:00:00</td><td>2022-01-04 10:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2022-01-05 09:00:00</td><td>2022-01-05 10:00:00</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

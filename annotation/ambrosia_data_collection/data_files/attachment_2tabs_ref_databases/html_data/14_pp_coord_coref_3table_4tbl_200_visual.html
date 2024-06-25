@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Capacity</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">CapacityValue</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>180</td></tr>
+<tr><td>2</td><td>300</td></tr>
+<tr><td>3</td><td>250</td></tr>
+<tr><td>4</td><td><span style="color:#006600">400</span></td></tr>
+<tr><td>5</td><td>200</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Banquethalls</span></h2><table><thead>
+<tr><th>ID</th><th>HallName</th><th>CapacityID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Capacity.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Banquet_Hall</td><td>1</td></tr>
+<tr><td>2</td><td>Grand Ballroom</td><td>2</td></tr>
+<tr><td>3</td><td>Rooftop Garden</td><td>3</td></tr>
+<tr><td>4</td><td>Courtyard</td><td>4</td></tr>
+<tr><td>5</td><td>Terrace</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Conferencerooms</span></h2><table><thead>
+<tr><th>ID</th><th>RoomName</th><th>CapacityID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Capacity.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boardroom A</td><td>1</td></tr>
+<tr><td>2</td><td>Meeting Room B</td><td>2</td></tr>
+<tr><td>3</td><td>Seminar C</td><td>3</td></tr>
+<tr><td>4</td><td>Workshop D</td><td>4</td></tr>
+<tr><td>5</td><td>Auditorium E</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Bookings</h2><table><thead>
+<tr><th>ID</th><th>ClientName</th><th>DateOfBooking</th><th>TimeOfBooking</th><th>BanquethallID</th><th>ConferenceRoomID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Banquethalls.ID)</th><th>(&#8594; Conferencerooms.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>2022-06-01</td><td>17:00</td><td>1</td><td>None</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>2022-06-02</td><td>19:00</td><td>2</td><td>None</td></tr>
+<tr><td>3</td><td>Alice Brown</td><td>2022-06-03</td><td>10:00</td><td>3</td><td>None</td></tr>
+<tr><td>4</td><td>Mike Johnson</td><td>2022-06-04</td><td>15:00</td><td>4</td><td>None</td></tr>
+<tr><td>5</td><td>Emma Wilson</td><td>2022-06-05</td><td>11:00</td><td>5</td><td>None</td></tr>
+<tr><td>6</td><td>David Lee</td><td>2022-06-01</td><td>17:00</td><td>1</td><td>1</td></tr>
+<tr><td>7</td><td>Samantha Taylor</td><td>2022-06-02</td><td>19:00</td><td>2</td><td>2</td></tr>
+<tr><td>8</td><td>Chris Evans</td><td>2022-06-03</td><td>10:00</td><td>3</td><td>3</td></tr>
+<tr><td>9</td><td>Kevin Hart</td><td>2022-06-04</td><td>15:00</td><td>4</td><td>4</td></tr>
+<tr><td>10</td><td>Dwayne Johnson</td><td>2022-06-05</td><td>11:00</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

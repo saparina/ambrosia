@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Stockbrokers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>contact_number</th><th>email</th><th><span style="color:#1430b2">fees</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>123-456-7890</td><td>john@example.com</td><td><span style="color:#1430b2">1%</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>987-654-3210</td><td>jane@example.com</td><td>2%</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>555-555-5555</td><td>alice@example.com</td><td>1.5%</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>111-222-3333</td><td>bob@example.com</td><td>0.75%</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Mutual_funds</span></h2><table><thead>
+<tr><th>id</th><th>fund_name</th><th>total_assets</th><th>expense_ratio</th><th>fees</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>ABC Fund</td><td>1000000.0</td><td>0.01</td><td><span style="color:#1430b2">1%</span></td></tr>
+<tr><td>2</td><td>XYZ Fund</td><td>500000.0</td><td>0.02</td><td>1.25%</td></tr>
+<tr><td>3</td><td>PQR Fund</td><td>200000.0</td><td>0.03</td><td>2%</td></tr>
+<tr><td>4</td><td>MNO Fund</td><td>800000.0</td><td>0.005</td><td>0.5%</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>date_of_birth</th><th>phone_number</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-01-01</td><td>123-456-7890</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1992-02-02</td><td>987-654-3210</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Alice</td><td>Johnson</td><td>1988-03-03</td><td>555-555-5555</td><td>alice@example.com</td></tr>
+<tr><td>4</td><td>Bob</td><td>Brown</td><td>1991-04-04</td><td>111-222-3333</td><td>bob@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>account_id</th><th>customer_id</th><th>balance</th><th>interest_rate</th></tr>
+<tr><th></th><th>(&#8594; Customers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td><td>2.5</td></tr>
+<tr><td>2</td><td>2</td><td>2000.0</td><td>3</td></tr>
+<tr><td>3</td><td>3</td><td>3000.0</td><td>2</td></tr>
+<tr><td>4</td><td>4</td><td>4000.0</td><td>3.5</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>transaction_id</th><th>account_id</th><th>amount</th><th>transaction_date</th></tr>
+<tr><th></th><th>(&#8594; Accounts.account_id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>500.0</td><td>2022-01-01 10:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>1000.0</td><td>2022-02-01 11:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>1500.0</td><td>2022-03-01 12:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>2000.0</td><td>2022-04-01 13:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Investments</h2><table><thead>
+<tr><th>investment_id</th><th>stockbroker_id</th><th>mutual_fund_id</th><th>customer_id</th><th>quantity</th><th>purchase_price</th></tr>
+<tr><th></th><th>(&#8594; Stockbrokers.id)</th><th>(&#8594; Mutual_funds.id)</th><th>(&#8594; Customers.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>10</td><td>100.0</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td><td>20</td><td>200.0</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>3</td><td>5</td><td>150.0</td></tr>
+<tr><td>4</td><td>2</td><td>2</td><td>4</td><td>10</td><td>250.0</td></tr>
+<tr><td>5</td><td>3</td><td>3</td><td>1</td><td>20</td><td>300.0</td></tr>
+<tr><td>6</td><td>3</td><td>4</td><td>2</td><td>15</td><td>350.0</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

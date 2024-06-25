@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Independent_Directors</span></h2><table><thead>
+<tr><th>ID</th><th>DirectorName</th><th>Organization</th><th>YearsOfExperience</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td><span style="color:#006600">Global Corp</span></td><td>20</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>ABC Corp</td><td>30</td><td>UK</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ExecutiveManagers</span></h2><table><thead>
+<tr><th>ManagerID</th><th>ManagerName</th><th>Organization</th><th>YearsWithCompany</th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Mike Johnson</td><td><span style="color:#006600">Global Corp</span></td><td>7</td><td>Finance</td></tr>
+<tr><td>2</td><td>Emily Brown</td><td>XYZ Inc.</td><td>5</td><td>Marketing</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerName</th><th>BranchLocation</th><th>OpenDate</th><th>Balance</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice White</td><td>Main Branch</td><td>2020-01-01</td><td>1000.0</td></tr>
+<tr><td>2</td><td>Bob Black</td><td>Downtown Branch</td><td>2020-06-01</td><td>2000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Loans</h2><table><thead>
+<tr><th>LoanId</th><th>BorrowerName</th><th>Amount</th><th>InterestRate</th><th>DueDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Carol Green</td><td>10000</td><td>5.5</td><td>2021-08-01</td></tr>
+<tr><td>2</td><td>David Blue</td><td>8000</td><td>4.9</td><td>2021-08-15</td></tr>
+</tbody></table></div>
+
+<div><h2>SavingsAccounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerName</th><th>BranchLocation</th><th>OpenDate</th><th>Balance</th></tr>
+</thead><tbody>
+<tr><td>3</td><td>Eve Red</td><td>West Branch</td><td>2021-01-15</td><td>500.0</td></tr>
+<tr><td>4</td><td>Frank Yellow</td><td>North Branch</td><td>2021-02-15</td><td>1500.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Investments</h2><table><thead>
+<tr><th>InvestmentId</th><th>CustomerName</th><th>TypeOfInvestment</th><th>AmountToInvest</th><th>DateOfInvestment</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>George Gray</td><td>Stocks</td><td>10000</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>Hannah Pink</td><td>Bonds</td><td>5000</td><td>2021-02-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

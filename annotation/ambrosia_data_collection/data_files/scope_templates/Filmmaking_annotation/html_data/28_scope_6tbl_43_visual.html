@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Movie_Genres</span></h2><table><thead>
+<tr><th>id</th><th>genre_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td><td>High-paced action movies</td></tr>
+<tr><td>2</td><td>Drama</td><td>Emotional stories that focus on character development</td></tr>
+<tr><td>3</td><td>Comedy</td><td>Humorous films designed to entertain</td></tr>
+<tr><td>4</td><td>Horror</td><td>Films that evoke fear or terror</td></tr>
+<tr><td>5</td><td>Romance</td><td>Stories centered around love relationships</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Tropes</span></h2><table><thead>
+<tr><th>id</th><th>trope_value</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Love_Triangle</td><td>A romantic story involving three people who are involved with one another</td></tr>
+<tr><td>2</td><td>Destiny</td><td>The belief that certain events are predestined to happen</td></tr>
+<tr><td>3</td><td>Amnesia</td><td>A character loses their memory and struggles to regain it</td></tr>
+<tr><td>4</td><td>Redemption</td><td>A character seeks redemption from past mistakes</td></tr>
+<tr><td>5</td><td>Time_Travel</td><td>Characters travel back in time or to an alternate timeline</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Genres_Tropes</h2><table><thead>
+<tr><th>movie_genre_id</th><th>trope_id</th></tr>
+<tr><th>(&#8594; Movie_Genres.id)</th><th>(&#8594; Tropes.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>director</th><th>country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Christopher Nolan</td><td>USA</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>Quentin Tarantino</td><td>USA</td></tr>
+<tr><td>3</td><td>Forrest Gump</td><td>1994</td><td>Robert Zemeckis</td><td>USA</td></tr>
+<tr><td>4</td><td>Eternal Sunshine of the Spotless Mind</td><td>2004</td><td>Michel Gondry</td><td>USA</td></tr>
+<tr><td>5</td><td>La La Land</td><td>2016</td><td>Damien Chazelle</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>name</th><th>birthdate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>American</td></tr>
+<tr><td>2</td><td>Brad Pitt</td><td>1963-12-18</td><td>American</td></tr>
+<tr><td>3</td><td>Tom Hanks</td><td>1956-07-09</td><td>American</td></tr>
+<tr><td>4</td><td>Julie Andrews</td><td>1935-10-01</td><td>English</td></tr>
+<tr><td>5</td><td>Cate Blanchett</td><td>1969-05-14</td><td>Australian</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie_Actors</h2><table><thead>
+<tr><th>movie_id</th><th>actor_id</th><th>role</th></tr>
+<tr><th>(&#8594; Movies.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Cobb</td></tr>
+<tr><td>1</td><td>2</td><td>Arthur</td></tr>
+<tr><td>2</td><td>1</td><td>Vincent Vega</td></tr>
+<tr><td>2</td><td>3</td><td>Edward Lewis</td></tr>
+<tr><td>3</td><td>4</td><td>Lorenzo Musetti</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Bank_Branch</span></h2><table><thead>
+<tr><th>BranchID</th><th>BranchName</th><th>BranchAddress</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Branch1</td><td>Address1</td></tr>
+<tr><td>2</td><td>Branch2</td><td>Address2</td></tr>
+<tr><td>3</td><td>Branch3</td><td>Address3</td></tr>
+<tr><td>4</td><td>Branch4</td><td>Address4</td></tr>
+<tr><td>5</td><td>Branch5</td><td>Address5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Facilities</span></h2><table><thead>
+<tr><th>FacilityID</th><th><span style="color:#990000">FacilityType</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Drive_thru_Window</td></tr>
+<tr><td>2</td><td>ATM</td></tr>
+<tr><td>3</td><td>Safe_deposit_box</td></tr>
+<tr><td>4</td><td>Internet_banking</td></tr>
+<tr><td>5</td><td>Mobile_app</td></tr>
+</tbody></table></div>
+
+<div><h2>Bank_Branch_Facilities</h2><table><thead>
+<tr><th>ID</th><th>BranchID</th><th>FacilityID</th></tr>
+<tr><th></th><th>(&#8594; Bank_Branch.BranchID)</th><th>(&#8594; Facilities.FacilityID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>2</td><td>3</td></tr>
+<tr><td>5</td><td>3</td><td>1</td></tr>
+<tr><td>6</td><td>3</td><td>4</td></tr>
+<tr><td>7</td><td>4</td><td>1</td></tr>
+<tr><td>8</td><td>4</td><td>5</td></tr>
+<tr><td>9</td><td>5</td><td>1</td></tr>
+<tr><td>10</td><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

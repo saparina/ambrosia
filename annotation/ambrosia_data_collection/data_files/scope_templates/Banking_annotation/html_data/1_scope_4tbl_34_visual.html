@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerID</th><th>Balance</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1000.0</td></tr>
+<tr><td>2</td><td>2</td><td>800.0</td></tr>
+<tr><td>3</td><td>3</td><td>900.0</td></tr>
+<tr><td>4</td><td>4</td><td>700.0</td></tr>
+<tr><td>5</td><td>5</td><td>600.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Transactions</span></h2><table><thead>
+<tr><th>TransactionID</th><th>AccountNumber</th><th><span style="color:#990000">TransactionType</span></th><th>Amount</th><th><span style="color:#990000">Date</span></th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Subscription_Payments</td><td>150.0</td><td>2024-01-30 18:53:44</td></tr>
+<tr><td>2</td><td>1</td><td>Transfer</td><td>200.0</td><td>2024-01-30 18:53:44</td></tr>
+<tr><td>3</td><td>2</td><td>Subscription_Payments</td><td>130.0</td><td>2024-01-30 18:53:44</td></tr>
+<tr><td>4</td><td>2</td><td>Transfer</td><td>180.0</td><td>2024-01-30 18:53:44</td></tr>
+<tr><td>5</td><td>3</td><td>Subscription_Payments</td><td>140.0</td><td>2024-01-30 18:53:44</td></tr>
+<tr><td>6</td><td>3</td><td>Transfer</td><td>220.0</td><td>2024-01-30 18:53:44</td></tr>
+<tr><td>7</td><td>4</td><td>Subscription_Payments</td><td>120.0</td><td>2024-01-30 18:53:44</td></tr>
+<tr><td>8</td><td>4</td><td>Transfer</td><td>190.0</td><td>2024-01-30 18:53:44</td></tr>
+<tr><td>9</td><td>5</td><td>Subscription_Payments</td><td>110.0</td><td>2024-01-30 18:53:44</td></tr>
+<tr><td>10</td><td>5</td><td>Transfer</td><td>170.0</td><td>2024-01-30 18:53:44</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Bank_Statements</span></h2><table><thead>
+<tr><th>StatementID</th><th>AccountNumber</th><th>StartDate</th><th>EndDate</th><th>TotalAmount</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-01-01</td><td>2021-01-31</td><td>250.0</td></tr>
+<tr><td>2</td><td>2</td><td>2021-02-01</td><td>2021-02-28</td><td>260.0</td></tr>
+<tr><td>3</td><td>3</td><td>2021-03-01</td><td>2021-03-31</td><td>270.0</td></tr>
+<tr><td>4</td><td>4</td><td>2021-04-01</td><td>2021-04-30</td><td>280.0</td></tr>
+<tr><td>5</td><td>5</td><td>2021-05-01</td><td>2021-05-31</td><td>290.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Bank_Statements_Transactions</h2><table><thead>
+<tr><th>StatementTransactionID</th><th>StatementID</th><th>TransactionID</th></tr>
+<tr><th></th><th>(&#8594; Bank_Statements.StatementID)</th><th>(&#8594; Transactions.TransactionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>3</td><td>5</td></tr>
+<tr><td>6</td><td>3</td><td>6</td></tr>
+<tr><td>7</td><td>4</td><td>7</td></tr>
+<tr><td>8</td><td>4</td><td>8</td></tr>
+<tr><td>9</td><td>5</td><td>9</td></tr>
+<tr><td>10</td><td>5</td><td>10</td></tr>
+<tr><td>11</td><td>2</td><td>1</td></tr>
+<tr><td>12</td><td>3</td><td>1</td></tr>
+<tr><td>13</td><td>4</td><td>1</td></tr>
+<tr><td>14</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

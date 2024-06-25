@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Students</h2><table><thead>
+<tr><th>id</th><th>firstName</th><th>lastName</th><th>birthDate</th><th>enrollmentDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1990-06-23</td><td>2018-09-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1992-07-15</td><td>2017-01-10</td></tr>
+<tr><td>3</td><td>Michael</td><td>Brown</td><td>1994-08-18</td><td>2019-02-15</td></tr>
+<tr><td>4</td><td>Emily</td><td>White</td><td>1996-09-20</td><td>2020-05-01</td></tr>
+<tr><td>5</td><td>William</td><td>Black</td><td>1998-10-22</td><td>2016-08-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Programs</h2><table><thead>
+<tr><th>programId</th><th>name</th><th><span style="color:#990000">deadlineMonth</span></th><th><span style="color:#990000">deadlineYear</span></th></tr>
+<tr><th></th><th></th><th>(&#8594; Deadlines.month)</th><th>(&#8594; Deadlines.year)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>10</td><td>2023</td></tr>
+<tr><td>2</td><td>Mechanical Engineering</td><td>9</td><td>2024</td></tr>
+<tr><td>3</td><td>Civil Engineering</td><td>8</td><td>2023</td></tr>
+<tr><td>4</td><td>Electrical Engineering</td><td>11</td><td>2024</td></tr>
+<tr><td>5</td><td>Biomedical Engineering</td><td>5</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Deadlines</h2><table><thead>
+<tr><th>month</th><th>year</th></tr>
+</thead><tbody>
+<tr><td>10</td><td>2023</td></tr>
+<tr><td>9</td><td>2024</td></tr>
+<tr><td>8</td><td>2023</td></tr>
+<tr><td>11</td><td>2024</td></tr>
+<tr><td>5</td><td>2023</td></tr>
+</tbody></table></div>
+
+<div><h2>CourseEnrollments</h2><table><thead>
+<tr><th>courseId</th><th>studentId</th><th>semester</th><th>grade</th></tr>
+<tr><th>(&#8594; Courses.id)</th><th>(&#8594; Students.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Fall</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>Spring</td><td>B+</td></tr>
+<tr><td>3</td><td>3</td><td>Summer</td><td>A-</td></tr>
+<tr><td>4</td><td>4</td><td>Fall</td><td>B</td></tr>
+<tr><td>5</td><td>5</td><td>Winter</td><td>A</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>id</th><th>title</th><th>creditHours</th><th>department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Introduction to Computer Science</td><td>4</td><td>CS</td></tr>
+<tr><td>2</td><td>Calculus I</td><td>3</td><td>Math</td></tr>
+<tr><td>3</td><td>Physics I</td><td>3</td><td>Physics</td></tr>
+<tr><td>4</td><td>English Composition</td><td>3</td><td>Literature</td></tr>
+<tr><td>5</td><td>World History</td><td>3</td><td>History</td></tr>
+</tbody></table></div>
+
+<div><h2>Instructors</h2><table><thead>
+<tr><th>instructorId</th><th>firstName</th><th>lastName</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dr.</td><td>Adams</td><td>adamsa@example.com</td></tr>
+<tr><td>2</td><td>Prof.</td><td>Baker</td><td>bakera@example.com</td></tr>
+<tr><td>3</td><td>Assoc. Prof.</td><td>Clark</td><td>clarka@example.com</td></tr>
+<tr><td>4</td><td>Asst. Prof.</td><td>Davis</td><td>davisa@example.com</td></tr>
+<tr><td>5</td><td>Asst. Prof.</td><td>Evans</td><td>evanse@example.com</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

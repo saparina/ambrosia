@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Economists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>30</td><td>8</td></tr>
+<tr><td>2</td><td>Bob</td><td>28</td><td>6</td></tr>
+<tr><td>3</td><td>Charlie</td><td>32</td><td>10</td></tr>
+<tr><td>4</td><td>David</td><td>40</td><td>7</td></tr>
+<tr><td>5</td><td>Eva</td><td>35</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Statisticians</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>age</th><th>experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Frank</td><td>31</td><td>5</td></tr>
+<tr><td>2</td><td>Grace</td><td>29</td><td>4</td></tr>
+<tr><td>3</td><td>Heidi</td><td>33</td><td>7</td></tr>
+<tr><td>4</td><td>Isaac</td><td>42</td><td>6</td></tr>
+<tr><td>5</td><td>Judy</td><td>34</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">DataTypes</span></h2><table><thead>
+<tr><th>data_type_id</th><th><span style="color:#006600">type_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Demographics</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Financial</span></td></tr>
+<tr><td>3</td><td>Healthcare</td></tr>
+<tr><td>4</td><td>Environmental</td></tr>
+<tr><td>5</td><td>Transportation</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>job_id</th><th>economist_id</th><th>statistician_id</th><th>data_type_id</th></tr>
+<tr><th></th><th>(&#8594; Economists.id)</th><th>(&#8594; Statisticians.id)</th><th>(&#8594; DataTypes.data_type_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>3</td><td>None</td><td>4</td><td>3</td></tr>
+<tr><td>4</td><td>5</td><td>None</td><td>4</td></tr>
+<tr><td>5</td><td>None</td><td>6</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Skills</h2><table><thead>
+<tr><th>skill_id</th><th>skill_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>R Programming</td></tr>
+<tr><td>2</td><td>Python</td></tr>
+<tr><td>3</td><td>SQL</td></tr>
+<tr><td>4</td><td>Excel</td></tr>
+<tr><td>5</td><td>Tableau</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

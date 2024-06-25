@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Sitcom</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Genre</th><th>Number_of_Episodes</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Friends</td><td>Comedy</td><td>10</td></tr>
+<tr><td>2</td><td>The Office</td><td>Comedy</td><td>203</td></tr>
+<tr><td>3</td><td>Parks and Recreation</td><td>Comedy</td><td>125</td></tr>
+<tr><td>4</td><td>Brooklyn Nine-Nine</td><td>Police Procedural, Comedy</td><td>116</td></tr>
+<tr><td>5</td><td>How I Met Your Mother</td><td>Comedy</td><td>208</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Drama</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Director</th><th>Year</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Breaking Bad</td><td>Vince Gilligan</td><td>2008.0</td></tr>
+<tr><td>2</td><td>Game of Thrones</td><td>David Benioff & D.B. Weiss</td><td>2011.0</td></tr>
+<tr><td>3</td><td>Stranger Things</td><td>Matthew Duffer & Ross Duffer</td><td>2016.0</td></tr>
+<tr><td>4</td><td>Westworld</td><td>Jonathan Nolan</td><td>2016.0</td></tr>
+<tr><td>5</td><td>True Detective</td><td>Nic Pizzolatto</td><td>2014.0</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Season</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Number_Of_Seasons</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>5</td></tr>
+<tr><td>2</td><td>7</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td><span style="color:#006600">9</span></td></tr>
+<tr><td>5</td><td>6</td></tr>
+</tbody></table></div>
+
+<div><h2>Show</h2><table><thead>
+<tr><th>ID</th><th>Type</th><th>Sitcom_ID</th><th>Drama_ID</th><th>Season_ID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Sitcom.ID)</th><th>(&#8594; Drama.ID)</th><th>(&#8594; Season.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sitcom</td><td>1</td><td>None</td><td>1</td></tr>
+<tr><td>2</td><td>Sitcom</td><td>2</td><td>None</td><td>2</td></tr>
+<tr><td>3</td><td>Sitcom</td><td>3</td><td>None</td><td>3</td></tr>
+<tr><td>4</td><td>Sitcom</td><td>4</td><td>None</td><td>4</td></tr>
+<tr><td>5</td><td>Sitcom</td><td>5</td><td>None</td><td>5</td></tr>
+<tr><td>6</td><td>Drama</td><td>None</td><td>1</td><td>1</td></tr>
+<tr><td>7</td><td>Drama</td><td>None</td><td>2</td><td>2</td></tr>
+<tr><td>8</td><td>Drama</td><td>None</td><td>3</td><td>3</td></tr>
+<tr><td>9</td><td>Drama</td><td>None</td><td>4</td><td>4</td></tr>
+<tr><td>10</td><td>Drama</td><td>None</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

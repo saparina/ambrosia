@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Comics</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>IssueNumber</th><th>PublicationDate</th><th>PublisherName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Dark Knight</td><td>1</td><td>2023-07-28</td><td><span style="color:#006600">DC</span></td></tr>
+<tr><td>2</td><td>Spider-Man</td><td>695</td><td>2023-08-04</td><td>Marvel</td></tr>
+<tr><td>3</td><td>X-Men Red</td><td>1</td><td>2023-07-30</td><td>Marvel</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">GraphicNovels</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>PageCount</th><th>Author</th><th>PublisherName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>V For Vendetta</td><td>296</td><td>Alan Moore</td><td>Vertigo</td></tr>
+<tr><td>2</td><td>Watchmen</td><td>400</td><td>Alan Moore</td><td><span style="color:#006600">DC</span></td></tr>
+</tbody></table></div>
+
+<div><h2>Characters</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>CharacterType</th><th>AppearanceIn</th><th>Creator</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Batman</td><td>Hero</td><td>1</td><td>Bill Finger</td></tr>
+<tr><td>2</td><td>Wolverine</td><td>Hero</td><td>695</td><td>Mike Fleischer</td></tr>
+</tbody></table></div>
+
+<div><h2>Writers</h2><table><thead>
+<tr><th>id</th><th>FullName</th><th>Genre</th><th>YearsExperience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Geoff Johns</td><td>Superhero comics</td><td>15</td></tr>
+<tr><td>2</td><td>Jeff Lemire</td><td>Indie comics</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2>Publishers</h2><table><thead>
+<tr><th>id</th><th>CompanyName</th><th>FoundedYear</th><th>Country</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>IDW Publishing</td><td>1999</td><td>USA</td></tr>
+<tr><td>2</td><td>Image Comics</td><td>1992</td><td>USA</td></tr>
+</tbody></table></div>
+
+<div><h2>Series</h2><table><thead>
+<tr><th>id</th><th>SeriesTitle</th><th>Description</th><th>FirstIssueId</th><th>LastIssueId</th><th>PublisherId</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Comics.id)</th><th>(&#8594; Comics.id)</th><th>(&#8594; Publishers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Justice League</td><td>A series of comic books featuring DC superheroes.</td><td>1</td><td>50</td><td>1</td></tr>
+<tr><td>2</td><td>Teenage Mutant Ninja Turtles</td><td>A series of comic books about a team of turtle ninjas.</td><td>20</td><td>100</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

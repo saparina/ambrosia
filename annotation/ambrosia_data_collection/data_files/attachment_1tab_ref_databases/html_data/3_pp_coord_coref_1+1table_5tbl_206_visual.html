@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">MediaFranchise</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#006600">audience</span></th><th>business_strategy</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; BusinessStrategy.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Example1</td><td>Liberals</td><td>1</td></tr>
+<tr><td>2</td><td>Example2</td><td><span style="color:#006600">Conservatives</span></td><td>1</td></tr>
+<tr><td>3</td><td>Example3</td><td>Independents</td><td>2</td></tr>
+<tr><td>4</td><td>Example4</td><td>Liberals</td><td>2</td></tr>
+<tr><td>5</td><td>Example5</td><td><span style="color:#006600">Conservatives</span></td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>CrossPlatformExpansion</h2><table><thead>
+<tr><th>id</th><th>media_franchise_name</th><th>platform_type</th><th>expansion_details</th></tr>
+<tr><th></th><th>(&#8594; MediaFranchise.name)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Example1</td><td>Website</td><td>Expanded online presence</td></tr>
+<tr><td>2</td><td>Example2</td><td>Mobile App</td><td>Developed a mobile app for easy access</td></tr>
+<tr><td>3</td><td>Example3</td><td>Podcast</td><td>Launched a podcast series</td></tr>
+<tr><td>4</td><td>Example4</td><td>YouTube Channel</td><td>Created a YouTube channel for video content</td></tr>
+<tr><td>5</td><td>Example5</td><td>Print Magazine</td><td>Published a print magazine</td></tr>
+</tbody></table></div>
+
+<div><h2>AudienceProfile</h2><table><thead>
+<tr><th>id</th><th>political_leaning</th><th>age_group</th><th>gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Liberal</td><td>18</td><td>M</td></tr>
+<tr><td>2</td><td>Conservative</td><td>25</td><td>F</td></tr>
+<tr><td>3</td><td>Independent</td><td>30</td><td>X</td></tr>
+<tr><td>4</td><td>Liberal</td><td>40</td><td>M</td></tr>
+<tr><td>5</td><td>Conservative</td><td>50</td><td>F</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">BusinessStrategy</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000"><span style="color:#990000">strategy_name</span></span></th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Media Franchise</span></td><td>Creating a branded media franchise that appeals to specific audiences</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Cross-Platform Expansion</span></td><td>Expanding the reach of the media franchise across multiple platforms</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

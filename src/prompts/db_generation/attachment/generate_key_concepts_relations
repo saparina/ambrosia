@@ -1,0 +1,82 @@
+Provide 50 examples on different topics in the DOMAIN domain in the following format:
+
+[Class 1] and [Class 2] are subclasses of [General Class]. All [Entities of Class 1] and [Entities of Class 2] have the property "[Common Property]". There might be a [Entity of Class 1] and a [Entity of Class 2] that both have "[Common Property]" equal to "[Common Value]".
+Class 1: [Class 1]
+Class 2: [Class 2]
+General Class: [General Class]
+Common Property: [Common Property]
+Common Value: [Common Value]
+
+Examples in different domains:
+
+Post Office and Library are subclasses of Public Buildings. All Post Offices and Libraries have the property "Open Hours". There might be a Post Office and a Library that both have "Open Hours" equal to "8 a.m.".
+Class 1: Post Office
+Class 2: Library
+General Class: Public Buildings
+Common Property: Open Hours
+Common Value: 8 a.m.
+
+Teacher and Lawyer are subclasses of Professional Occupations. All Teachers and Lawyers have the property "Education Level". There might be a Teacher and a Lawyer that both have "Education Level" equal to "Master's Degree".
+Class 1: Teacher
+Class 2: Lawyer
+General Class: Professional Occupations
+Common Property: Education Level
+Common Value: Master's Degree
+
+Ballet and Musical are subclasses of Performing Arts. All Ballets and Musicals have the property "Performance Venue". There might be a Ballet and a Musical that both have "Performance Venue" equal to "Broadway Theater".
+Class 1: Ballet
+Class 2: Musical
+General Class: Performing Arts
+Common Property: Performance Venue
+Common Value: Broadway Theater
+
+Apartment and Townhouse are subclasses of Residences. All Apartments and Townhouses have the property "Living Space Features". There might be an Apartment and a Townhouse that both have "Living Space Features" equal to "Balcony".
+Class 1: Apartment
+Class 2: Townhouse
+General Class: Residences
+Common Property: Living Space Features
+Common Value: Balcony
+
+Bus and Train are subclasses of Public Transport. All Buses and Trains have the property "Scheduled Routes". There might be a Bus and a Train that both have "Scheduled Routes" equal to "Downtown Loop".
+Class 1: Bus
+Class 2: Train
+General Class: Public Transport
+Common Property: Scheduled Routes
+Common Value: Downtown Loop
+
+Hospital and Ambulatory Surgery Center are subclasses of Healthcare Facilities. All Hospitals and Ambulatory Surgery Centers have the property "Number of Patients". There might be a Hospital and an Ambulatory Surgery Center that both have "Number of Patients" equal to "Over 100 daily".
+Class 1: Hospital
+Class 2: Ambulatory Surgery Center
+General Class: Healthcare Facilities
+Common Property: Number of Patients
+Common Value: Over 100 daily
+
+Thesis and Report are subclasses of Academic Writing. All Theses and Reports have the property "Research Focus". There might be a Thesis and a Report that both have "Research Focus" equal to "Renewable Energy".
+Class 1: Thesis
+Class 2: Report
+General Class: Academic Writing
+Common Property: Research Focus
+Common Value: Renewable Energy
+
+Smartphone and Tablet are subclasses of Electronic Devices. All Smartphones and Tablets have the property "Charger Type". There might be a Smartphone and a Tablet that both have "Charger Type" equal to "USB-C".
+Class 1: Smartphone
+Class 2: Tablet
+General Class: Electronic Devices
+Common Property: Charger Type
+Common Value: USB-C
+
+Documentary and Animation are subclasses of Film Genres. All Documentaries and Animations have the property "Target Audience". There might be a Documentary and an Animation that both have "Target Audience" equal to "Young Adults".
+Class 1: Documentary
+Class 2: Animation
+General Class: Film Genres
+Common Property: Target Audience
+Common Value: Young Adults
+
+Passport and Driving License are subclasses of Identification Documents. All Passports and Driving Licenses have the property "Date of Issue". There might be a Passport and a Driving License that both have "Date of Issue" equal to "June 1, 2018".
+Class 1: Passport
+Class 2: Driving License
+General Class: Identification Documents
+Common Property: Date of Issue
+Common Value: June 1, 2018
+
+Examples in the DOMAIN domain:

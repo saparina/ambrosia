@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Lab_Equipment</span></h2><table><thead>
+<tr><th>id</th><th>EquipmentName</th><th>PurchaseDate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Microscope</td><td>January 2023</td></tr>
+<tr><td>2</td><td>Thermometer</td><td>February 2023</td></tr>
+<tr><td>3</td><td>Scale</td><td>March 2023</td></tr>
+<tr><td>4</td><td>Beaker</td><td>April 2023</td></tr>
+<tr><td>5</td><td>Eyedropper</td><td>May 2023</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Safety_Gear</span></h2><table><thead>
+<tr><th>id</th><th>GearType</th><th>Date_of_Purchase</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Gloves</td><td>January 2023</td></tr>
+<tr><td>2</td><td>Goggles</td><td>February 2023</td></tr>
+<tr><td>3</td><td>Mask</td><td>March 2023</td></tr>
+<tr><td>4</td><td>Hairnet</td><td>April 2023</td></tr>
+<tr><td>5</td><td>Boots</td><td>May 2023</td></tr>
+</tbody></table></div>
+
+<div><h2>Employees</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Position</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Laboratory Technician</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Research Scientist</td></tr>
+<tr><td>3</td><td>Alice Johnson</td><td>Quality Control Officer</td></tr>
+<tr><td>4</td><td>Bob Brown</td><td>Engineer</td></tr>
+<tr><td>5</td><td>Charlie Davis</td><td>Manager</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">Purchases</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">Date_of_Purchase</span></th><th>Lab_EquipmentId</th><th>Safety_GearId</th><th>EmployeeId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Lab_Equipment.id)</th><th>(&#8594; Safety_Gear.id)</th><th>(&#8594; Employees.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#006600">January 2023</span></td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>February 2023</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>March 2023</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>April 2023</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>May 2023</td><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

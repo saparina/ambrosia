@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flight</h2><table><thead>
+<tr><th>flightID</th><th>airline</th><th>departureAirport</th><th>arrivalAirport</th><th>date</th><th>duration</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United</td><td>EWR</td><td>IAH</td><td>2023-08-01 06:00:00</td><td>4</td></tr>
+<tr><td>2</td><td>Delta</td><td>ATL</td><td>LAX</td><td>2023-08-02 07:00:00</td><td>5</td></tr>
+<tr><td>3</td><td>American Airlines</td><td>DFW</td><td>MIA</td><td>2023-08-03 08:00:00</td><td>4</td></tr>
+<tr><td>4</td><td>Southwest</td><td>MCO</td><td>PHX</td><td>2023-08-04 09:00:00</td><td>3</td></tr>
+<tr><td>5</td><td>Alaska Airlines</td><td>SEA</td><td>PDX</td><td>2023-08-05 10:00:00</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>employeeID</th><th>name</th><th>position</th><th>hireDate</th><th>salary</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>Pilot</td><td>2020-06-01</td><td>100000.0</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>Flight Attendant</td><td>2021-05-01</td><td>50000.0</td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td>Mechanic</td><td>2019-07-01</td><td>60000.0</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>Customer Service Representative</td><td>2022-08-01</td><td>40000.0</td></tr>
+<tr><td>5</td><td>Chris Brown</td><td>Security Officer</td><td>2018-09-01</td><td>35000.0</td></tr>
+</tbody></table></div>
+
+<div><h2>Passenger</h2><table><thead>
+<tr><th>passengerID</th><th>firstName</th><th>lastName</th><th>birthdate</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alexander</td><td>Smith</td><td>1990-01-15</td><td>USA</td></tr>
+<tr><td>2</td><td>Samantha</td><td>Johnson</td><td>1995-02-20</td><td>UK</td></tr>
+<tr><td>3</td><td>David</td><td>Williams</td><td>1988-03-25</td><td>Canada</td></tr>
+<tr><td>4</td><td>Emma</td><td>Martinez</td><td>2000-04-05</td><td>Spain</td></tr>
+<tr><td>5</td><td>Michael</td><td>Davis</td><td>1992-05-10</td><td>Australia</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Restaurant</span></h2><table><thead>
+<tr><th>restaurantID</th><th>airportID</th><th>name</th><th>location</th><th>type</th><th>openingHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Grand Central Oyster Bar</td><td>Terminal A</td><td>Seafood</td><td><span style="color:#006600">9 AM to 11 PM</span></td></tr>
+<tr><td>2</td><td>2</td><td>The Flying Pizza</td><td>Terminal B</td><td>Italian</td><td>11 AM to 9 PM</td></tr>
+<tr><td>3</td><td>3</td><td>Taste of Texas BBQ</td><td>Terminal C</td><td>BBQ</td><td>10 AM to 8 PM</td></tr>
+<tr><td>4</td><td>4</td><td>Café de la Maison</td><td>Terminal D</td><td>French</td><td>8 AM to 6 PM</td></tr>
+<tr><td>5</td><td>5</td><td>Green Leaf Salad Bar</td><td>Terminal E</td><td>Salad</td><td>7 AM to 7 PM</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Bar</span></h2><table><thead>
+<tr><th>barID</th><th>airportID</th><th>name</th><th>location</th><th>capacity</th><th>openingHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Gateway Lounge</td><td>Concourse A</td><td>50</td><td><span style="color:#006600">9 AM to 11 PM</span></td></tr>
+<tr><td>2</td><td>2</td><td>Beer Garden</td><td>Concourse B</td><td>75</td><td>11 AM to 9 PM</td></tr>
+<tr><td>3</td><td>3</td><td>Whiskey Sky</td><td>Concourse C</td><td>100</td><td>10 AM to 8 PM</td></tr>
+<tr><td>4</td><td>4</td><td>Rooftop Wine Bar</td><td>Concourse D</td><td>70</td><td>8 AM to 6 PM</td></tr>
+<tr><td>5</td><td>5</td><td>Sunset Margarita Bar</td><td>Concourse E</td><td>80</td><td>7 AM to 7 PM</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

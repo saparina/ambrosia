@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Circles</span></h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Red Nose Circus</td></tr>
+<tr><td>2</td><td>The Magic Show</td></tr>
+<tr><td>3</td><td>Acrobatics Extravaganza</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Performers</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Clown</td></tr>
+<tr><td>2</td><td>Magician</td></tr>
+<tr><td>3</td><td>Juggler</td></tr>
+<tr><td>4</td><td>Singer</td></tr>
+<tr><td>5</td><td>Dancer</td></tr>
+</tbody></table></div>
+
+<div><h2>Shows</h2><table><thead>
+<tr><th>id</th><th>title</th><th>start_date</th><th>end_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Opening Night</td><td>2023-01-01</td><td>2023-01-31</td></tr>
+<tr><td>2</td><td>Midweek Matinee</td><td>2023-02-15</td><td>2023-02-19</td></tr>
+<tr><td>3</td><td>End Of Season Party</td><td>2023-03-30</td><td>2023-03-31</td></tr>
+</tbody></table></div>
+
+<div><h2>Venues</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>City Hall Auditorium</td></tr>
+<tr><td>2</td><td>Big Top Tent</td></tr>
+<tr><td>3</td><td>Riverfront Amphitheater</td></tr>
+</tbody></table></div>
+
+<div><h2>ShowVenues</h2><table><thead>
+<tr><th>show_id</th><th>venue_id</th><th>date</th></tr>
+<tr><th>(&#8594; Shows.id)</th><th>(&#8594; Venues.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>2023-02-16</td></tr>
+<tr><td>3</td><td>3</td><td>2023-03-30</td></tr>
+</tbody></table></div>
+
+<div><h2>CircleShows</h2><table><thead>
+<tr><th>circle_id</th><th>show_id</th></tr>
+<tr><th>(&#8594; Circles.id)</th><th>(&#8594; Shows.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>CirclePerformers</h2><table><thead>
+<tr><th>circle_id</th><th>performer_id</th></tr>
+<tr><th>(&#8594; Circles.id)</th><th>(&#8594; Performers.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>None</td><td>5</td></tr>
+<tr><td>3</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

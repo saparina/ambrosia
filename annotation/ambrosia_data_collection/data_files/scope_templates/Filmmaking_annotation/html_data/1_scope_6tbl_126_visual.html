@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Production_Designers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Smith</td><td>johnsmith@example.com</td></tr>
+<tr><td>2</td><td>Jane Doe</td><td>janedoe@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michaeljohnson@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emilydavis@example.com</td></tr>
+<tr><td>5</td><td>William Brown</td><td>williambrown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Elements</span></h2><table><thead>
+<tr><th>id</th><th>element_type</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Set_Design</td><td>Creates the visual environment for a film scene.</td></tr>
+<tr><td>2</td><td>Costume_Design</td><td>Designs and creates costumes for characters.</td></tr>
+<tr><td>3</td><td>Art_Direction</td><td>Oversees all aspects of the visual style of a film.</td></tr>
+<tr><td>4</td><td>Props</td><td>Objects used by actors during scenes.</td></tr>
+<tr><td>5</td><td>Location_Scouting</td><td>Finds suitable locations for shooting scenes.</td></tr>
+</tbody></table></div>
+
+<div><h2>Production_Designers_Elements</h2><table><thead>
+<tr><th>production_designer_id</th><th>element_id</th></tr>
+<tr><th>(&#8594; Production_Designers.id)</th><th>(&#8594; Elements.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

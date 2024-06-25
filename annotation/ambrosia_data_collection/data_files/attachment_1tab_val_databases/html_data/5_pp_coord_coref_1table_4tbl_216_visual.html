@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Students</span></h2><table><thead>
+<tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Academic_Writing</th><th>Academic_Supervisor</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td><span style="color:#990000">Dissertation</span></td><td><span style="color:#006600">Dr. Jane Smith</span></td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td><span style="color:#990000">Dissertation</span></td><td>Dr. John Doe</td></tr>
+<tr><td>3</td><td>Mary</td><td>Brown</td><td><span style="color:#990000">Thesis Proposal</span></td><td><span style="color:#006600">Dr. Jane Smith</span></td></tr>
+<tr><td>4</td><td>Steve</td><td>White</td><td><span style="color:#990000">Thesis Proposal</span></td><td>Dr. John Doe</td></tr>
+</tbody></table></div>
+
+<div><h2>Courses</h2><table><thead>
+<tr><th>CourseID</th><th>Title</th><th>Department</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Computer Science</td><td>Engineering</td></tr>
+<tr><td>2</td><td>Mathematics</td><td>Science</td></tr>
+<tr><td>3</td><td>Physics</td><td>Science</td></tr>
+<tr><td>4</td><td>English Literature</td><td>Humanities</td></tr>
+<tr><td>5</td><td>History</td><td>Arts</td></tr>
+</tbody></table></div>
+
+<div><h2>Enrollments</h2><table><thead>
+<tr><th>EnrollmentID</th><th>StudentID</th><th>CourseID</th><th>Semester</th></tr>
+<tr><th></th><th>(&#8594; Students.StudentID)</th><th>(&#8594; Courses.CourseID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2023-01-01 00:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2023-01-01 00:00:00</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>2023-01-01 00:00:00</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>2023-01-01 00:00:00</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>2023-01-01 00:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Grades</h2><table><thead>
+<tr><th>GradeID</th><th>EnrollmentID</th><th>Grade</th></tr>
+<tr><th></th><th>(&#8594; Enrollments.EnrollmentID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>A</td></tr>
+<tr><td>2</td><td>2</td><td>B</td></tr>
+<tr><td>3</td><td>3</td><td>C</td></tr>
+<tr><td>4</td><td>4</td><td>A</td></tr>
+<tr><td>5</td><td>5</td><td>B</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

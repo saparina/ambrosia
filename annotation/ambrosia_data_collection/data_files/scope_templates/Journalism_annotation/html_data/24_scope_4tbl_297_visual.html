@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Industries</span></h2><table><thead>
+<tr><th>industryID</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Technology</td></tr>
+<tr><td>2</td><td>Healthcare</td></tr>
+<tr><td>3</td><td>Finance</td></tr>
+<tr><td>4</td><td>Education</td></tr>
+<tr><td>5</td><td>Retail</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Business_Reporters</span></h2><table><thead>
+<tr><th>reporterID</th><th>fullName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td>Michael Brown</td></tr>
+<tr><td>4</td><td>Emily Johnson</td></tr>
+<tr><td>5</td><td>David Williams</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>articleID</th><th>title</th><th>content</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tech Innovations in Healthcare</td><td>A look at the latest technological advancements in healthcare.</td></tr>
+<tr><td>2</td><td>The Future of Finance: Digital Currencies</td><td>Exploring the potential impact of digital currencies on the finance industry.</td></tr>
+<tr><td>3</td><td>Revolutionizing Education Through Technology</td><td>How technology is transforming the education sector.</td></tr>
+<tr><td>4</td><td>Online Shopping Trends in Retail</td><td>An analysis of the growing trend towards online shopping.</td></tr>
+<tr><td>5</td><td>The Impact of AI on Different Industries</td><td>Understanding how artificial intelligence is affecting various industries.</td></tr>
+</tbody></table></div>
+
+<div><h2>Business_Reporters_Articles</h2><table><thead>
+<tr><th>businessReporterID</th><th>articleID</th></tr>
+<tr><th>(&#8594; Business_Reporters.reporterID)</th><th>(&#8594; Articles.articleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Reporters_Industries</h2><table><thead>
+<tr><th>businessReporterID</th><th>industryID</th></tr>
+<tr><th>(&#8594; Business_Reporters.reporterID)</th><th>(&#8594; Industries.industryID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Business_Reporters_Industries</h2><table><thead>
+<tr><th>businessReporterID</th><th>industryID</th></tr>
+<tr><th>(&#8594; Reporters_Industries.businessReporterID)</th><th>(&#8594; Reporters_Industries.industryID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

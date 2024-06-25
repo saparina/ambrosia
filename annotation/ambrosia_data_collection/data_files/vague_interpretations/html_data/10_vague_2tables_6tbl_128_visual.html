@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Author</h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael.johnson@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily.davis@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david.brown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Category</h2><table><thead>
+<tr><th>id</th><th>name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td></tr>
+<tr><td>2</td><td>Technology</td></tr>
+<tr><td>3</td><td>Health</td></tr>
+<tr><td>4</td><td>Education</td></tr>
+<tr><td>5</td><td>Entertainment</td></tr>
+</tbody></table></div>
+
+<div><h2>Article</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>author_id</th><th>category_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Author.id)</th><th>(&#8594; Category.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New Political Laws</td><td>An article discussing new political laws.</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>AI Advancements</td><td>A piece covering recent AI advancements.</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Vaccine Breakthrough</td><td>Discussing a major breakthrough in vaccine development.</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Online Learning Growth</td><td>Exploring the growth of online education during the pandemic.</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Blockbuster Movie Release</td><td>Coverage of an upcoming blockbuster movie release.</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Content_Management_System</span></h2><table><thead>
+<tr><th>id</th><th>system_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>WordPress</td><td>The most popular CMS for creating websites.</td></tr>
+<tr><td>2</td><td>Drupal</td><td>A powerful open-source CMS known for its flexibility and security features.</td></tr>
+<tr><td>3</td><td>Joomla!</td><td>A user-friendly CMS with numerous extensions and templates.</td></tr>
+<tr><td>4</td><td>Typo3</td><td>A widely used enterprise CMS for large projects.</td></tr>
+<tr><td>5</td><td>Joomla!</td><td>A versatile CMS that can be customized to fit various needs.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Web_Framework</span></h2><table><thead>
+<tr><th>id</th><th>framework_name</th><th>description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>React</td><td>A popular JavaScript library for building user interfaces.</td></tr>
+<tr><td>2</td><td>Angular</td><td>A comprehensive frontend framework developed by Google.</td></tr>
+<tr><td>3</td><td>Vue.js</td><td>A progressive JavaScript framework for building user interfaces.</td></tr>
+<tr><td>4</td><td>Backbone.js</td><td>A lightweight JavaScript framework for structuring client-side applications.</td></tr>
+<tr><td>5</td><td>jQuery</td><td>A fast, small, and feature-rich JavaScript library.</td></tr>
+</tbody></table></div>
+
+<div><h2>Online_News_Platform</h2><table><thead>
+<tr><th>id</th><th>platform_name</th><th>url</th><th>cms_id</th><th>web_framework_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Content_Management_System.id)</th><th>(&#8594; Web_Framework.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily News</td><td>https://www.thedailynews.com</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Tech Today</td><td>https://techtoday.net</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Health Insider</td><td>https://healthinsider.org</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>Edu World</td><td>https://eduworld.info</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>Fun Times</td><td>https://funtimesmagazine.com</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

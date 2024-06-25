@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Country</span></h2><table><thead>
+<tr><th>ID</th><th><span style="color:#006600">Name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United States</td></tr>
+<tr><td>2</td><td><span style="color:#006600">Canada</span></td></tr>
+<tr><td>3</td><td>France</td></tr>
+<tr><td>4</td><td>Germany</td></tr>
+<tr><td>5</td><td>Japan</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">ActingSchool</span></h2><table><thead>
+<tr><th>ID</th><th>SchoolName</th><th>Address</th><th>PhoneNumber</th><th>EmailAddress</th><th>CountryID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Country.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York Film Academy</td><td>123 Main St</td><td>555-1234</td><td>nyfa@example.com</td><td>1</td></tr>
+<tr><td>2</td><td>London Film Academy</td><td>456 High St</td><td>555-5678</td><td>lfa@example.co.uk</td><td>2</td></tr>
+<tr><td>3</td><td>Paris Film Academy</td><td>789 Avenue des Champs Elysées</td><td>555-9012</td><td>pfa@example.fr</td><td>3</td></tr>
+<tr><td>4</td><td>Berlin Film Academy</td><td>101 Unter den Linden</td><td>555-8765</td><td>bfa@example.de</td><td>4</td></tr>
+<tr><td>5</td><td>Tokyo Film Academy</td><td>202 Shibuya</td><td>555-7654</td><td>tfa@example.jp</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Festival</span></h2><table><thead>
+<tr><th>ID</th><th>FestivalName</th><th>Location</th><th>Date</th><th>CountryID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Country.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Cannes Film Festival</td><td>Cannes, France</td><td>2023-05-12</td><td>3</td></tr>
+<tr><td>2</td><td>Toronto International Film Festival</td><td>Toronto, Canada</td><td>2023-09-08</td><td>2</td></tr>
+<tr><td>3</td><td>Venice Film Festival</td><td>Venice, Italy</td><td>2023-09-01</td><td>3</td></tr>
+<tr><td>4</td><td>Telluride Film Festival</td><td>Telluride, United States</td><td>2023-08-31</td><td>1</td></tr>
+<tr><td>5</td><td>Busan International Film Festival</td><td>Busan, South Korea</td><td>2023-10-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>ID</th><th>Title</th><th>ReleaseYear</th><th>Director</th><th>Genre</th><th>CountryID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Country.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>Frank Darabont</td><td>Drama</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>Quentin Tarantino</td><td>Crime</td><td>1</td></tr>
+<tr><td>3</td><td>Forrest Gump</td><td>1994</td><td>Robert Zemeckis</td><td>Drama</td><td>1</td></tr>
+<tr><td>4</td><td>Inception</td><td>2010</td><td>Christopher Nolan</td><td>Action</td><td>3</td></tr>
+<tr><td>5</td><td>Amélie</td><td>2001</td><td>Jean-Pierre Jeunet</td><td>Romantic Comedy</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>CastMember</h2><table><thead>
+<tr><th>ID</th><th>ActorName</th><th>BirthDate</th><th>Nationality</th><th>ActingSchoolID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; ActingSchool.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom Hanks</td><td>1956-07-09</td><td>American</td><td>1</td></tr>
+<tr><td>2</td><td>Brad Pitt</td><td>1963-12-18</td><td>American</td><td>1</td></tr>
+<tr><td>3</td><td>Kevin Spacey</td><td>1959-07-26</td><td>American</td><td>1</td></tr>
+<tr><td>4</td><td>Emmanuel Mouret</td><td>1967-10-12</td><td>French</td><td>4</td></tr>
+<tr><td>5</td><td>Natalie Portman</td><td>1981-06-09</td><td>Israeli American</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>MovieCast</h2><table><thead>
+<tr><th>MovieID</th><th>CastID</th><th>Role</th></tr>
+<tr><th>(&#8594; Movie.ID)</th><th>(&#8594; CastMember.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Andy Dufresne</td></tr>
+<tr><td>1</td><td>2</td><td>Ellis Boyd Redding</td></tr>
+<tr><td>1</td><td>3</td><td>Warden Norton</td></tr>
+<tr><td>2</td><td>1</td><td>Jules Winnfield</td></tr>
+<tr><td>2</td><td>2</td><td>Butch Coolidge</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

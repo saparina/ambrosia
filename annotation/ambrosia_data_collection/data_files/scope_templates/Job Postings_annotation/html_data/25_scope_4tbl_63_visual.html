@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Data_Analysts</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alice</td><td>3</td></tr>
+<tr><td>2</td><td>Bob</td><td>2</td></tr>
+<tr><td>3</td><td>Carol</td><td>6</td></tr>
+<tr><td>4</td><td>David</td><td>8</td></tr>
+<tr><td>5</td><td>Eve</td><td>10</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Techniques</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">technique_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Regression Analysis</td></tr>
+<tr><td>2</td><td>Python Programming</td></tr>
+<tr><td>3</td><td>SQL Query Writing</td></tr>
+<tr><td>4</td><td>R Language</td></tr>
+<tr><td>5</td><td>Tableau Dashboard Creation</td></tr>
+</tbody></table></div>
+
+<div><h2>Data_Analysts_Techniques</h2><table><thead>
+<tr><th>data_analyst_id</th><th>technique_id</th></tr>
+<tr><th>(&#8594; Data_Analysts.id)</th><th>(&#8594; Techniques.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

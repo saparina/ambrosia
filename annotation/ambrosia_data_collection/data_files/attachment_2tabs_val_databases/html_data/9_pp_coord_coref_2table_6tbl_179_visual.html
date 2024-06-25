@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">podcast</span></h2><table><thead>
+<tr><th>PodcastName</th><th>Host</th><th>Duration</th><th>Genre</th><th>EpisodeNumber</th></tr>
+</thead><tbody>
+<tr><td>The <span style="color:#006600">Alex Johnson</span> Show</td><td><span style="color:#006600">Alex Johnson</span></td><td>1800</td><td>Comedy</td><td>1</td></tr>
+<tr><td>Funny Stuff</td><td>John Smith</td><td>1200</td><td>Comedy</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">radio_show</span></h2><table><thead>
+<tr><th>RadioShowName</th><th>Host</th><th>Duration</th><th>Genre</th><th>EpisodeNumber</th></tr>
+</thead><tbody>
+<tr><td>Morning With Alex</td><td><span style="color:#006600">Alex Johnson</span></td><td>1800</td><td>News</td><td>1</td></tr>
+<tr><td>Afternoon News</td><td>Jane Doe</td><td>1800</td><td>News</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>actor</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>BirthDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>USA</td></tr>
+<tr><td>2</td><td>Natalie</td><td>Portman</td><td>1981-06-09</td><td>Israel/USA</td></tr>
+</tbody></table></div>
+
+<div><h2>movie</h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>Director</th><th>ReleaseYear</th><th>Language</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Forrest Gump</td><td>Robert Zemeckis</td><td>1994</td><td>English</td></tr>
+<tr><td>2</td><td>Inception</td><td>Christopher Nolan</td><td>2010</td><td>English</td></tr>
+</tbody></table></div>
+
+<div><h2>tvshow</h2><table><thead>
+<tr><th>ShowId</th><th>Name</th><th>Creator</th><th>Network</th><th>Episodes</th><th>Genre</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Game of Thrones</td><td>David Benioff & D.B. Weiss</td><td>HBO</td><td>60</td><td>Fantasy</td></tr>
+<tr><td>2</td><td>Breaking Bad</td><td>Vince Gilligan</td><td>AMC</td><td>62</td><td>Crime Drama</td></tr>
+</tbody></table></div>
+
+<div><h2>episode</h2><table><thead>
+<tr><th>EpisodeId</th><th>TvShowId</th><th>Season</th><th>EpisodeNum</th><th>Title</th><th>Airdate</th></tr>
+<tr><th></th><th>(&#8594; tvshow.ShowId)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>Winter is Coming</td><td>2011-04-17</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>2</td><td>The Kingsroad</td><td>2011-04-24</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

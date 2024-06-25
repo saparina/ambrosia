@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Persons</h2><table><thead>
+<tr><th>person_id</th><th>first_name</th><th>last_name</th><th>birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>1980-06-23</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>1978-09-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Regions</h2><table><thead>
+<tr><th>region_id</th><th>name</th><th>population</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Region A</td><td>5000000</td></tr>
+<tr><td>2</td><td>Region B</td><td>3000000</td></tr>
+</tbody></table></div>
+
+<div><h2>LifeExpectancies</h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">average_years_of_life</span></th><th><span style="color:#990000">gender_specific_life_expectancy</span></th><th>region_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Regions.region_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>75.5</td><td>73.2</td><td>1</td></tr>
+<tr><td>2</td><td>78.1</td><td>75.8</td><td>2</td></tr>
+</tbody></table></div>
+
+<div><h2>Occupations</h2><table><thead>
+<tr><th>occupation_id</th><th>job_title</th><th>industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Technology</td></tr>
+<tr><td>2</td><td>Teacher</td><td>Education</td></tr>
+</tbody></table></div>
+
+<div><h2>EducationLevels</h2><table><thead>
+<tr><th>education_level_id</th><th>level_name</th><th>years_of_education</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>High School Diploma</td><td>12</td></tr>
+<tr><td>2</td><td>Bachelor's Degree</td><td>16</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

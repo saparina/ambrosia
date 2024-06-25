@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Customers</h2><table><thead>
+<tr><th>CustomerID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>01/01/1987</td><td>john.doe@example.com</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>02/02/1996</td><td>jane.smith@example.com</td></tr>
+<tr><td>3</td><td>Mike</td><td>Johnson</td><td>03/03/2000</td><td>mike.johnson@example.com</td></tr>
+<tr><td>4</td><td>Emily</td><td>Williams</td><td>04/04/2001</td><td>emily.williams@example.com</td></tr>
+<tr><td>5</td><td>David</td><td>Brown</td><td>05/05/1998</td><td>david.brown@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Accounts</h2><table><thead>
+<tr><th>AccountNumber</th><th>CustomerID</th><th>Balance</th><th>InterestRate</th></tr>
+<tr><th></th><th>(&#8594; Customers.CustomerID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1001</td><td>1</td><td>1000.0</td><td>0.02</td></tr>
+<tr><td>1002</td><td>2</td><td>2000.0</td><td>0.02</td></tr>
+<tr><td>1003</td><td>3</td><td>3000.0</td><td>0.02</td></tr>
+<tr><td>1004</td><td>4</td><td>4000.0</td><td>0.02</td></tr>
+<tr><td>1005</td><td>5</td><td>5000.0</td><td>0.02</td></tr>
+</tbody></table></div>
+
+<div><h2>Transactions</h2><table><thead>
+<tr><th>TransactionID</th><th>FromAccountNumber</th><th>ToAccountNumber</th><th>Amount</th><th>TransactionDate</th></tr>
+<tr><th></th><th>(&#8594; Accounts.AccountNumber)</th><th>(&#8594; Accounts.AccountNumber)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1001</td><td>1002</td><td>500.0</td><td>2024-03-07 23:46:41</td></tr>
+<tr><td>2</td><td>1003</td><td>1004</td><td>300.0</td><td>2024-03-07 23:46:41</td></tr>
+<tr><td>3</td><td>1002</td><td>1005</td><td>750.0</td><td>2024-03-07 23:46:41</td></tr>
+<tr><td>4</td><td>1004</td><td>1001</td><td>250.0</td><td>2024-03-07 23:46:41</td></tr>
+<tr><td>5</td><td>1005</td><td>1003</td><td>450.0</td><td>2024-03-07 23:46:41</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">StockMarketData</span></h2><table><thead>
+<tr><th>DataId</th><th>BenchmarkIndex</th><th>FactorIndex</th><th>OtherValue1</th><th>OtherValue2</th><th>MarketSegment</th><th>StockMarketIndices</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Customers.Email)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>AAPL</td><td>GOOG</td><td>High</td><td>Medium</td><td><span style="color:#006600">Technology</span></td><td><span style="color:#990000">Benchmark Index</span></td></tr>
+<tr><td>2</td><td>AMZN</td><td>MSFT</td><td>Low</td><td>Medium</td><td>Retail</td><td><span style="color:#990000">Benchmark Index</span></td></tr>
+<tr><td>3</td><td>TSLA</td><td>NVDA</td><td>High</td><td>High</td><td><span style="color:#006600">Technology</span></td><td><span style="color:#990000">Factor Index</span></td></tr>
+<tr><td>4</td><td>FB</td><td>SNAP</td><td>Low</td><td>High</td><td>Advertising</td><td><span style="color:#990000">Factor Index</span></td></tr>
+<tr><td>5</td><td>GOOG</td><td>AAPL</td><td>Medium</td><td>Medium</td><td><span style="color:#006600">Technology</span></td><td>Stock_market_indices</td></tr>
+<tr><td>6</td><td>AMZN</td><td>GOOG</td><td>Low</td><td>High</td><td>Ecommerce</td><td>Stock_market_indices</td></tr>
+<tr><td>7</td><td>TSLA</td><td>NVDA</td><td>High</td><td>Medium</td><td>Automotive</td><td>Stock_market_indices</td></tr>
+<tr><td>8</td><td>FB</td><td>SNAP</td><td>High</td><td>Low</td><td>Social Media</td><td>Stock_market_indices</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

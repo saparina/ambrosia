@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">company</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>type</th><th><span style="color:#006600">Number_of_employees</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Big Studio</td><td>Production Company</td><td><span style="color:#006600">500</span></td></tr>
+<tr><td>2</td><td>Small Studio</td><td>Production Company</td><td>300</td></tr>
+<tr><td>3</td><td>Mega Distribution</td><td>Distribution Company</td><td><span style="color:#006600">500</span></td></tr>
+<tr><td>4</td><td>Local Distribution</td><td>Distribution Company</td><td>200</td></tr>
+<tr><td>5</td><td>Techno Films</td><td>Post Production Company</td><td>75</td></tr>
+</tbody></table></div>
+
+<div><h2>director</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>birth_date</th><th>nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1968-05-15</td><td>USA</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1982-03-23</td><td>Canada</td></tr>
+<tr><td>3</td><td>Alice</td><td>Brown</td><td>1975-08-05</td><td>UK</td></tr>
+<tr><td>4</td><td>Bob</td><td>White</td><td>1990-10-10</td><td>Australia</td></tr>
+<tr><td>5</td><td>Charlie</td><td>Black</td><td>1955-01-12</td><td>New Zealand</td></tr>
+</tbody></table></div>
+
+<div><h2>actor</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>birth_date</th><th>gender</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Tom</td><td>Hanks</td><td>1956-07-09</td><td>M</td></tr>
+<tr><td>2</td><td>Robert</td><td>De Niro</td><td>1943-08-17</td><td>M</td></tr>
+<tr><td>3</td><td>Meryl</td><td>Streep</td><td>1949-06-22</td><td>F</td></tr>
+<tr><td>4</td><td>Julia</td><td>Roberts</td><td>1967-10-28</td><td>F</td></tr>
+<tr><td>5</td><td>Will</td><td>Smith</td><td>1968-09-25</td><td>M</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">film</span></h2><table><thead>
+<tr><th>id</th><th>title</th><th>release_year</th><th>genre</th><th>production_id</th><th>director_id</th><th><span style="color:#990000"><span style="color:#990000">Film_industry_company</span></span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; company.id)</th><th>(&#8594; director.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Shawshank Redemption</td><td>1994</td><td>Drama</td><td>1</td><td>1</td><td><span style="color:#990000">Production Company</span></td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>Crime</td><td>2</td><td>2</td><td><span style="color:#990000">Production Company</span></td></tr>
+<tr><td>3</td><td>Inception</td><td>2010</td><td>Action</td><td>3</td><td>3</td><td><span style="color:#990000">Distribution Company</span></td></tr>
+<tr><td>4</td><td>Interstellar</td><td>2014</td><td>Adventure</td><td>4</td><td>4</td><td><span style="color:#990000">Distribution Company</span></td></tr>
+<tr><td>5</td><td>Avatar</td><td>2009</td><td>Science fiction</td><td>5</td><td>5</td><td>Post Production Company</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Terminal</h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal A</td><td>Gate 1-20</td></tr>
+<tr><td>2</td><td>Terminal B</td><td>Gate 21-39</td></tr>
+<tr><td>3</td><td>Terminal C</td><td>Gate 40-60</td></tr>
+<tr><td>4</td><td>Terminal D</td><td>Gate 61-80</td></tr>
+<tr><td>5</td><td>Terminal E</td><td>Gate 81-100</td></tr>
+</tbody></table></div>
+
+<div><h2>Gate</h2><table><thead>
+<tr><th>id</th><th>terminal_id</th><th>gate_number</th></tr>
+<tr><th></th><th>(&#8594; Terminal.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>7</td></tr>
+<tr><td>2</td><td>1</td><td>14</td></tr>
+<tr><td>3</td><td>2</td><td>25</td></tr>
+<tr><td>4</td><td>2</td><td>38</td></tr>
+<tr><td>5</td><td>3</td><td>50</td></tr>
+</tbody></table></div>
+
+<div><h2>AircraftType</h2><table><thead>
+<tr><th>id</th><th>typeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Boeing 737</td></tr>
+<tr><td>2</td><td>Airbus A320</td></tr>
+<tr><td>3</td><td>Embraer E190</td></tr>
+<tr><td>4</td><td>Bombardier Q400</td></tr>
+<tr><td>5</td><td>De Havilland Canada Dash 8</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>flightNumber</th><th>aircraftTypeId</th><th>departureTime</th><th>arrivalTime</th><th>originTerminalId</th><th>destinationTerminalId</th></tr>
+<tr><th></th><th>(&#8594; AircraftType.id)</th><th></th><th></th><th>(&#8594; Terminal.id)</th><th>(&#8594; Terminal.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2022-01-01 06:00:00</td><td>2022-01-01 08:00:00</td><td>1</td><td>4</td></tr>
+<tr><td>2</td><td>2</td><td>2022-01-01 08:30:00</td><td>2022-01-01 10:30:00</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>3</td><td>2022-01-01 11:00:00</td><td>2022-01-01 13:00:00</td><td>3</td><td>5</td></tr>
+<tr><td>4</td><td>4</td><td>2022-01-01 13:30:00</td><td>2022-01-01 15:30:00</td><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>5</td><td>2022-01-01 16:00:00</td><td>2022-01-01 18:00:00</td><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">ExclusiveArea</span></h2><table><thead>
+<tr><th>areaId</th><th>terminalId</th><th><span style="color:#186e16">exclusiveAreaValue</span></th></tr>
+<tr><th></th><th>(&#8594; Terminal.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td><span style="color:#186e16">Frequent Flyer Lounge</span></td></tr>
+<tr><td>2</td><td>2</td><td>Business Class Lounge</td></tr>
+<tr><td>3</td><td>3</td><td>First Class Lounge</td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#186e16">Frequent Flyer Lounge</span></td></tr>
+<tr><td>5</td><td>5</td><td>VIP Lounge</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Amenity</span></h2><table><thead>
+<tr><th>amenityId</th><th><span style="color:#1430b2">amenityValue</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Complimentary Wi-Fi</span></td></tr>
+<tr><td>2</td><td>Power Outlets</td></tr>
+<tr><td>3</td><td>Charging Stations</td></tr>
+<tr><td>4</td><td>Restrooms</td></tr>
+<tr><td>5</td><td>Luggage Storage</td></tr>
+</tbody></table></div>
+
+<div><h2>AreaAmenityMap</h2><table><thead>
+<tr><th>areaId</th><th>amenityId</th></tr>
+<tr><th>(&#8594; ExclusiveArea.areaId)</th><th>(&#8594; Amenity.amenityId)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

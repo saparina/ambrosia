@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>RoomType</h2><table><thead>
+<tr><th>ID</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Deluxe Suite</td></tr>
+<tr><td>2</td><td>Executive Suite</td></tr>
+<tr><td>3</td><td>Standard Double</td></tr>
+<tr><td>4</td><td>Premium Twin</td></tr>
+<tr><td>5</td><td>Luxury Triple</td></tr>
+</tbody></table></div>
+
+<div><h2>Booking</h2><table><thead>
+<tr><th>ID</th><th>CustomerID</th><th>CheckInDate</th><th>CheckOutDate</th><th>TotalAmount</th></tr>
+<tr><th></th><th>(&#8594; Customer.ID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2023-01-01</td><td>2023-01-07</td><td>1000</td></tr>
+<tr><td>2</td><td>2</td><td>2023-01-15</td><td>2023-01-21</td><td>900</td></tr>
+<tr><td>3</td><td>3</td><td>2023-02-01</td><td>2023-02-07</td><td>600</td></tr>
+<tr><td>4</td><td>4</td><td>2023-02-15</td><td>2023-02-21</td><td>500</td></tr>
+<tr><td>5</td><td>5</td><td>2023-03-01</td><td>2023-03-07</td><td>800</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#006600">PricePerNight</span></h2><table><thead>
+<tr><th>ID</th><th>RoomTypeID</th><th><span style="color:#006600">Price</span></th></tr>
+<tr><th></th><th>(&#8594; RoomType.ID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>150</td></tr>
+<tr><td>2</td><td>2</td><td><span style="color:#006600">200</span></td></tr>
+<tr><td>3</td><td>3</td><td>150</td></tr>
+<tr><td>4</td><td>4</td><td><span style="color:#006600">200</span></td></tr>
+<tr><td>5</td><td>5</td><td>150</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">FamilySuites</span></h2><table><thead>
+<tr><th>ID</th><th>RoomNumber</th><th>Capacity</th><th>Amenities</th></tr>
+<tr><th></th><th>(&#8594; PricePerNight.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>5</td><td>WiFi, Mini Fridge, Balcony</td></tr>
+<tr><td>2</td><td>2</td><td>5</td><td>No WiFi, No Mini Fridge, No Balcony</td></tr>
+<tr><td>3</td><td>3</td><td>5</td><td>WiFi, Mini Fridge, Balcony</td></tr>
+<tr><td>4</td><td>4</td><td>5</td><td>No WiFi, No Mini Fridge, No Balcony</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>WiFi, Mini Fridge, Balcony</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">SingleRooms</span></h2><table><thead>
+<tr><th>ID</th><th>RoomNumber</th><th>Capacity</th><th>Amenities</th></tr>
+<tr><th></th><th>(&#8594; PricePerNight.ID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>WiFi, Mini Fridge, Balcony</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>No WiFi, No Mini Fridge, No Balcony</td></tr>
+<tr><td>3</td><td>3</td><td>1</td><td>WiFi, Mini Fridge, Balcony</td></tr>
+<tr><td>4</td><td>4</td><td>1</td><td>No WiFi, No Mini Fridge, No Balcony</td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>WiFi, Mini Fridge, Balcony</td></tr>
+</tbody></table></div>
+
+<div><h2>Customers</h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>ContactInfo</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>+1234567890</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>+9876543210</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>+0987654321</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>+1357924680</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>+2468013579</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

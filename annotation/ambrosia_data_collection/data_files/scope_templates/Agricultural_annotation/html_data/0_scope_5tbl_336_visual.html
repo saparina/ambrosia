@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Farms</span></h2><table><thead>
+<tr><th>FarmID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Farm A</td><td>Location A</td></tr>
+<tr><td>2</td><td>Farm B</td><td>Location B</td></tr>
+<tr><td>3</td><td>Farm C</td><td>Location C</td></tr>
+<tr><td>4</td><td>Farm D</td><td>Location D</td></tr>
+<tr><td>5</td><td>Farm E</td><td>Location E</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Crops</span></h2><table><thead>
+<tr><th>CropID</th><th>CropName</th><th><span style="color:#990000">YieldPerAcre</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Wheat</td><td>6000.0</td></tr>
+<tr><td>2</td><td>Corn</td><td>18000.0</td></tr>
+<tr><td>3</td><td>Rice</td><td>3500.0</td></tr>
+<tr><td>4</td><td>Barley</td><td>2700.0</td></tr>
+<tr><td>5</td><td>Oats</td><td>1900.0</td></tr>
+</tbody></table></div>
+
+<div><h2>SoilTypes</h2><table><thead>
+<tr><th>TypeID</th><th>TypeName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Clay Loam</td></tr>
+<tr><td>2</td><td>Sandy Loam</td></tr>
+<tr><td>3</td><td>Silty Clay Loam</td></tr>
+<tr><td>4</td><td>Gravelly Sandy Loam</td></tr>
+<tr><td>5</td><td>Loamy Sand</td></tr>
+</tbody></table></div>
+
+<div><h2>WeatherConditions</h2><table><thead>
+<tr><th>ConditionID</th><th>Description</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Sunny</td></tr>
+<tr><td>2</td><td>Cloudy</td></tr>
+<tr><td>3</td><td>Rainy</td></tr>
+<tr><td>4</td><td>Windy</td></tr>
+<tr><td>5</td><td>Stormy</td></tr>
+</tbody></table></div>
+
+<div><h2>FarmsSoil</h2><table><thead>
+<tr><th>FarmID</th><th>SoilTypeID</th></tr>
+<tr><th>(&#8594; Farms.FarmID)</th><th>(&#8594; SoilTypes.TypeID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>CropsWeather</h2><table><thead>
+<tr><th>CropID</th><th>ConditionID</th></tr>
+<tr><th>(&#8594; Crops.CropID)</th><th>(&#8594; WeatherConditions.ConditionID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>FarmsCrops</h2><table><thead>
+<tr><th>FarmID</th><th>CropID</th><th>Quantity</th><th>PlantingDate</th><th>HarvestDate</th></tr>
+<tr><th>(&#8594; Farms.FarmID)</th><th>(&#8594; Crops.CropID)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>500</td><td>2022-04-01</td><td>2022-09-01</td></tr>
+<tr><td>1</td><td>2</td><td>300</td><td>2022-04-01</td><td>2022-09-01</td></tr>
+<tr><td>2</td><td>3</td><td>200</td><td>2022-04-01</td><td>2022-09-01</td></tr>
+<tr><td>3</td><td>1</td><td>400</td><td>2022-04-01</td><td>2022-09-01</td></tr>
+<tr><td>4</td><td>2</td><td>100</td><td>2022-04-01</td><td>2022-09-01</td></tr>
+<tr><td>2</td><td>1</td><td>200</td><td>2022-04-01</td><td>2022-09-01</td></tr>
+<tr><td>4</td><td>1</td><td>100</td><td>2022-04-01</td><td>2022-09-01</td></tr>
+<tr><td>5</td><td>1</td><td>0</td><td>None</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Banks</span></h2><table><thead>
+<tr><th>BankID</th><th>Name</th><th>Location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Bank A</td><td>New York</td></tr>
+<tr><td>2</td><td>Bank B</td><td>Los Angeles</td></tr>
+<tr><td>3</td><td>Bank C</td><td>Chicago</td></tr>
+<tr><td>4</td><td>Bank D</td><td>Miami</td></tr>
+<tr><td>5</td><td>Bank E</td><td>Houston</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Financial_Roles</span></h2><table><thead>
+<tr><th>RoleID</th><th><span style="color:#990000">RoleName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Financial Analyst</td></tr>
+<tr><td>2</td><td>Financial Advisor</td></tr>
+<tr><td>3</td><td>Investment Manager</td></tr>
+<tr><td>4</td><td>Portfolio Manager</td></tr>
+<tr><td>5</td><td>Risk Analyst</td></tr>
+</tbody></table></div>
+
+<div><h2>Banks_Financial_Roles</h2><table><thead>
+<tr><th>BankID</th><th>RoleID</th></tr>
+<tr><th>(&#8594; Banks.BankID)</th><th>(&#8594; Financial_Roles.RoleID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

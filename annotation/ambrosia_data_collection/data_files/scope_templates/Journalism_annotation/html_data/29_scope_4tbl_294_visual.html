@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Courts_Reporters</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>john@example.com</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>jane@example.com</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>michael@example.com</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>emily@example.com</td></tr>
+<tr><td>5</td><td>David Brown</td><td>david@example.com</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Trials</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">caseName</span></th><th>trialType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>High_profile_Criminal_Case_1</td><td>Criminal</td></tr>
+<tr><td>2</td><td>Other_Trial_1</td><td>Civil</td></tr>
+<tr><td>3</td><td>High_profile_Criminal_Case_2</td><td>Criminal</td></tr>
+<tr><td>4</td><td>Other_Trial_2</td><td>Civil</td></tr>
+<tr><td>5</td><td>High_profile_Criminal_Case_3</td><td>Criminal</td></tr>
+</tbody></table></div>
+
+<div><h2>Courts_Reporters_Trials</h2><table><thead>
+<tr><th>reporterId</th><th>trialId</th></tr>
+<tr><th>(&#8594; Courts_Reporters.id)</th><th>(&#8594; Trials.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>1</td><td>6</td></tr>
+<tr><td>2</td><td>7</td></tr>
+<tr><td>3</td><td>8</td></tr>
+<tr><td>4</td><td>9</td></tr>
+<tr><td>5</td><td>10</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

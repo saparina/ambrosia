@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#006600">Authors</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#006600">AuthorName</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Adam Gopnik</td></tr>
+<tr><td>2</td><td>Jane Smith</td></tr>
+<tr><td>3</td><td><span style="color:#006600">John Doe</span></td></tr>
+<tr><td>4</td><td>Emma Watson</td></tr>
+<tr><td>5</td><td>Michael Johnson</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Articles</span></h2><table><thead>
+<tr><th>id</th><th>Headline</th><th>Lede</th><th>AuthorID</th><th>CategoryID</th><th>TagID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Authors.id)</th><th>(&#8594; Categories.id)</th><th>(&#8594; Tags.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>GOPNIK ON TRUMP</td><td>In his latest article...</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>THE ECONOMY SHIFTS LEFT</td><td>Recent economic changes...</td><td>2</td><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>APPLE ANNOUNCES NEW PRODUCT</td><td>Apple Inc. has announced a new product line...</td><td>3</td><td>3</td><td>4</td></tr>
+<tr><td>4</td><td>HOLLYWOOD STAR GETS MARRIED</td><td>The Hollywood star tied the knot last weekend...</td><td>4</td><td>4</td><td>5</td></tr>
+<tr><td>5</td><td>HEALTHCARE COSTS SOAR</td><td>A recent study shows healthcare costs have increased significantly...</td><td>5</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Categories</h2><table><thead>
+<tr><th>id</th><th>CategoryName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Politics</td></tr>
+<tr><td>2</td><td>Economy</td></tr>
+<tr><td>3</td><td>Technology</td></tr>
+<tr><td>4</td><td>Entertainment</td></tr>
+<tr><td>5</td><td>Health</td></tr>
+</tbody></table></div>
+
+<div><h2>Tags</h2><table><thead>
+<tr><th>id</th><th>TagName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Opinion</td></tr>
+<tr><td>2</td><td>News</td></tr>
+<tr><td>3</td><td>Feature</td></tr>
+<tr><td>4</td><td>Analysis</td></tr>
+<tr><td>5</td><td>Interview</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

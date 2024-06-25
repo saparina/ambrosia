@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Flights</h2><table><thead>
+<tr><th>FlightID</th><th>DepartureTime</th><th>ArrivalTime</th><th>Origin</th><th>Destination</th><th>AircraftType</th><th>SeatsAvailable</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2023-07-01 10:00</td><td>2023-07-01 14:00</td><td>LA</td><td>SF</td><td>Boeing 737</td><td>100</td></tr>
+<tr><td>2</td><td>2023-07-01 11:00</td><td>2023-07-01 15:00</td><td>SF</td><td>LA</td><td>Airbus A320</td><td>90</td></tr>
+<tr><td>3</td><td>2023-07-02 08:00</td><td>2023-07-02 12:00</td><td>NY</td><td>MI</td><td>Embraer E175</td><td>100</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>AirlineID</th><th>Name</th><th>Headquarters</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United Airlines</td><td>Chicago</td></tr>
+<tr><td>2</td><td>Delta Airlines</td><td>Atlanta</td></tr>
+<tr><td>3</td><td>Southwest Airlines</td><td>Dallas</td></tr>
+</tbody></table></div>
+
+<div><h2>Pilots</h2><table><thead>
+<tr><th>PilotID</th><th>FirstName</th><th>LastName</th><th>LicenseNumber</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Doe</td><td>ABCD1234</td><td>1980-06-01</td></tr>
+<tr><td>2</td><td>Jane</td><td>Smith</td><td>EFGH5678</td><td>1990-05-01</td></tr>
+<tr><td>3</td><td>Alice</td><td>Wonderland</td><td>XYZL9876</td><td>1985-08-01</td></tr>
+</tbody></table></div>
+
+<div><h2>AssignPilotToFlight</h2><table><thead>
+<tr><th>FlightID</th><th>PilotID</th></tr>
+<tr><th>(&#8594; Flights.FlightID)</th><th>(&#8594; Pilots.PilotID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Hotels</span></h2><table><thead>
+<tr><th>HotelID</th><th>Name</th><th>Location</th><th>Price</th><th>AccomodationType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#990000">Airport Hotel</span></td><td>Inside the airport premises</td><td><span style="color:#006600">150</span></td><td>Hotel</td></tr>
+<tr><td>2</td><td><span style="color:#990000">Sleep Pod</span></td><td>Outside the airport near terminal</td><td><span style="color:#006600">150</span></td><td>Pod</td></tr>
+<tr><td>3</td><td>Another Airport Hotel</td><td>Inside the airport premises</td><td>200</td><td>Hotel</td></tr>
+<tr><td>4</td><td><span style="color:#990000">Sleep Pod</span></td><td>Outside the airport near terminal</td><td>200</td><td>Pod</td></tr>
+<tr><td>5</td><td>Grand Plaza</td><td>Close to the city center</td><td>250</td><td>Resort</td></tr>
+<tr><td>6</td><td>Economy Inn</td><td>Far from the city center</td><td>50</td><td>Motel</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

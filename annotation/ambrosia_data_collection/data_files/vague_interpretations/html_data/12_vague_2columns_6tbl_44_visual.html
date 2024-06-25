@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Genre</h2><table><thead>
+<tr><th>GenreID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Action</td></tr>
+<tr><td>2</td><td>Comedy</td></tr>
+<tr><td>3</td><td>Drama</td></tr>
+<tr><td>4</td><td>Horror</td></tr>
+<tr><td>5</td><td>Romance</td></tr>
+</tbody></table></div>
+
+<div><h2>Movie</h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>ReleaseDate</th><th>Rating</th><th>GenreID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Genre.GenreID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Matrix</td><td>1999-03-31</td><td>8.7</td><td>1</td></tr>
+<tr><td>2</td><td>The Shawshank Redemption</td><td>1994-09-22</td><td>9.3</td><td>3</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>1994-10-14</td><td>8.9</td><td>1</td></tr>
+<tr><td>4</td><td>Inception</td><td>2010-07-16</td><td>8.8</td><td>1</td></tr>
+<tr><td>5</td><td>Forrest Gump</td><td>1994-07-06</td><td>8.8</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>ActorID</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Keanu</td><td>Reeves</td><td>1964-09-02</td><td>Canadian</td></tr>
+<tr><td>2</td><td>Tom Hanks</td><td>1956-07-09</td><td>American</td><td>American</td></tr>
+<tr><td>3</td><td>John Travolta</td><td>1954-02-18</td><td>American</td><td>American</td></tr>
+<tr><td>4</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>American</td><td>American</td></tr>
+<tr><td>5</td><td>Robin Williams</td><td>1951-07-21</td><td>American</td><td>American</td></tr>
+</tbody></table></div>
+
+<div><h2>Cast</h2><table><thead>
+<tr><th>CastID</th><th>MovieID</th><th>ActorID</th><th>Role</th></tr>
+<tr><th></th><th>(&#8594; Movie.MovieID)</th><th>(&#8594; Actor.ActorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Neo</td></tr>
+<tr><td>2</td><td>1</td><td>None</td><td>Morpheus</td></tr>
+<tr><td>3</td><td>3</td><td>None</td><td>Vincent Vega</td></tr>
+<tr><td>4</td><td>4</td><td>None</td><td>Cobb</td></tr>
+<tr><td>5</td><td>5</td><td>None</td><td>Forrest Gump</td></tr>
+</tbody></table></div>
+
+<div><h2>Documentary</h2><table><thead>
+<tr><th>DocumentaryID</th><th>Title</th><th><span style="color:#990000">HistoricalEra</span></th><th><span style="color:#990000">Event</span></th><th>DirectorID</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Director.DirectorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Apollo 11</td><td>Space Race Era</td><td>Apollo 11 Moon Landing</td><td>5</td></tr>
+<tr><td>2</td><td>Blue Planet II</td><td>Anthropocene</td><td>Life on Earth</td><td>4</td></tr>
+<tr><td>3</td><td>Planet Earth</td><td>Holocene</td><td>Life on Earth</td><td>3</td></tr>
+<tr><td>4</td><td>Wild Africa</td><td>Holocene</td><td>African Wildlife</td><td>2</td></tr>
+<tr><td>5</td><td>The Hunt for Bin Laden</td><td>War on Terror Era</td><td>Manhunt of Osama bin Laden</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>DirectorID</th><th>FirstName</th><th>LastName</th><th>BirthYear</th><th>DeathYear</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher</td><td>Nolan</td><td>1970</td><td>None</td></tr>
+<tr><td>2</td><td>Frank</td><td>Darabont</td><td>1959</td><td>None</td></tr>
+<tr><td>3</td><td>Quentin</td><td>Tarantino</td><td>1963</td><td>None</td></tr>
+<tr><td>4</td><td>Christopher</td><td>McQuarrie</td><td>1967</td><td>None</td></tr>
+<tr><td>5</td><td>Robert</td><td>Zemeckis</td><td>1945</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

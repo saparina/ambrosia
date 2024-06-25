@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Runway</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Length</th><th>Width</th><th>Construction_Date</th><th>SurfaceType</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Runway A</td><td>3000.0</td><td>75.0</td><td><span style="color:#006600">2015-06-01</span></td><td>Asphalt</td></tr>
+<tr><td>2</td><td>Runway B</td><td>3500.0</td><td>80.0</td><td>2021-09-01</td><td>Concrete</td></tr>
+<tr><td>3</td><td>Runway C</td><td>2500.0</td><td>70.0</td><td>2010-08-15</td><td>Grass</td></tr>
+<tr><td>4</td><td>Runway D</td><td>2800.0</td><td>65.0</td><td>2005-01-10</td><td>Asphalt</td></tr>
+<tr><td>5</td><td>Runway E</td><td>2700.0</td><td>60.0</td><td>2008-05-01</td><td>Concrete</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Taxiway</span></h2><table><thead>
+<tr><th>ID</th><th>Name</th><th>Length</th><th>Width</th><th>Construction_Date</th><th>ConnectingTo</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Runway.ID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Taxiway X</td><td>2000.0</td><td>30.0</td><td><span style="color:#006600">2015-06-01</span></td><td>1</td></tr>
+<tr><td>2</td><td>Taxiway Y</td><td>2500.0</td><td>40.0</td><td>2021-09-01</td><td>2</td></tr>
+<tr><td>3</td><td>Taxiway Z</td><td>1500.0</td><td>20.0</td><td>2010-08-15</td><td>3</td></tr>
+<tr><td>4</td><td>Taxiway AA</td><td>1800.0</td><td>35.0</td><td>2005-01-10</td><td>4</td></tr>
+<tr><td>5</td><td>Taxiway BB</td><td>1700.0</td><td>30.0</td><td>2008-05-01</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Airplane</h2><table><thead>
+<tr><th>RegistrationNumber</th><th>Model</th><th>Capacity</th><th>ManufactureYear</th><th>LastMaintenanceDate</th></tr>
+</thead><tbody>
+<tr><td>N123AB</td><td>Boeing 737</td><td>200</td><td>2005</td><td>2021-07-15</td></tr>
+<tr><td>N456CD</td><td>Airbus A380</td><td>400</td><td>2010</td><td>2021-08-15</td></tr>
+<tr><td>N789EF</td><td>Embraer E190</td><td>100</td><td>2015</td><td>2021-09-15</td></tr>
+<tr><td>N234GH</td><td>Bombardier CRJ-700</td><td>60</td><td>2007</td><td>2021-10-15</td></tr>
+<tr><td>N567IJ</td><td>Canadair Regional Jet</td><td>70</td><td>2009</td><td>2021-11-15</td></tr>
+</tbody></table></div>
+
+<div><h2>Flight</h2><table><thead>
+<tr><th>FlightId</th><th>OriginAirportName</th><th>DestinationAirportName</th><th>DepartureTime</th><th>ArrivalTime</th><th>Aircraft</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th>(&#8594; Airplane.RegistrationNumber)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>New York JFK</td><td>Los Angeles LAX</td><td>10:00:00</td><td>15:00:00</td><td>N123AB</td></tr>
+<tr><td>2</td><td>Dallas DFW</td><td>Chicago ORD</td><td>11:00:00</td><td>16:00:00</td><td>N456CD</td></tr>
+<tr><td>3</td><td>Miami MIA</td><td>Atlanta ATL</td><td>12:00:00</td><td>17:00:00</td><td>N789EF</td></tr>
+<tr><td>4</td><td>Philadelphia PHL</td><td>Detroit DTW</td><td>13:00:00</td><td>18:00:00</td><td>N234GH</td></tr>
+<tr><td>5</td><td>Seattle SEA</td><td>Phoenix PHX</td><td>14:00:00</td><td>19:00:00</td><td>N567IJ</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

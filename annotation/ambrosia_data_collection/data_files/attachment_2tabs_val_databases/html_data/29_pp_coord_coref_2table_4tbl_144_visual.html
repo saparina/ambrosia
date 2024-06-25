@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Software_Engineers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>experience</th><th>programming_skills</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>New York</td><td>2 years</td><td><span style="color:#006600">Python</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>San Francisco</td><td>3 years</td><td>JavaScript</td></tr>
+<tr><td>3</td><td>Michael Johnson</td><td>Los Angeles</td><td>5 years</td><td>C++</td></tr>
+<tr><td>4</td><td>Emily Brown</td><td>Chicago</td><td>7 years</td><td>Ruby</td></tr>
+<tr><td>5</td><td>David Wilson</td><td>Dallas</td><td>8 years</td><td>Swift</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Data_Scientists</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th><th>experience</th><th>programming_skills</th></tr>
+</thead><tbody>
+<tr><td>6</td><td>William Thompson</td><td>Boston</td><td>4 years</td><td><span style="color:#006600">Python</span></td></tr>
+<tr><td>7</td><td>Linda Martinez</td><td>Washington</td><td>6 years</td><td>R</td></tr>
+<tr><td>8</td><td>Thomas Harris</td><td>Philadelphia</td><td>9 years</td><td>Matlab</td></tr>
+<tr><td>9</td><td>Elizabeth Clark</td><td>Atlanta</td><td>10 years</td><td>Octave</td></tr>
+<tr><td>10</td><td>Charles Young</td><td>Miami</td><td>12 years</td><td>Scala</td></tr>
+</tbody></table></div>
+
+<div><h2>Companies</h2><table><thead>
+<tr><th>id</th><th>company_name</th><th>industry</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Google</td><td>Technology</td></tr>
+<tr><td>2</td><td>Amazon</td><td>E-commerce</td></tr>
+<tr><td>3</td><td>Microsoft</td><td>Technology</td></tr>
+<tr><td>4</td><td>Facebook</td><td>Social Media</td></tr>
+<tr><td>5</td><td>Apple</td><td>Consumer Electronics</td></tr>
+</tbody></table></div>
+
+<div><h2>Jobs</h2><table><thead>
+<tr><th>job_id</th><th>title</th><th>description</th><th>salary</th><th>posted_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Software Engineer</td><td>Design and develop software applications.</td><td>90000.0</td><td>2022-01-01</td></tr>
+<tr><td>2</td><td>Data Scientist</td><td>Analyze complex datasets and provide insights.</td><td>100000.0</td><td>2022-01-02</td></tr>
+<tr><td>3</td><td>Mobile Developer</td><td>Create mobile apps using Swift.</td><td>80000.0</td><td>2022-01-03</td></tr>
+<tr><td>4</td><td>Machine Learning Engineer</td><td>Build machine learning models.</td><td>120000.0</td><td>2022-01-04</td></tr>
+<tr><td>5</td><td>Web Developer</td><td>Develop and maintain websites.</td><td>70000.0</td><td>2022-01-05</td></tr>
+</tbody></table></div>
+
+<div><h2>CompanyJobs</h2><table><thead>
+<tr><th>company_id</th><th>job_id</th></tr>
+<tr><th>(&#8594; Companies.id)</th><th>(&#8594; Jobs.job_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>EngineerJobs</h2><table><thead>
+<tr><th>engineer_id</th><th>job_id</th></tr>
+<tr><th>(&#8594; Software_Engineers.id)</th><th>(&#8594; Jobs.job_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>ScientistJobs</h2><table><thead>
+<tr><th>scientist_id</th><th>job_id</th></tr>
+<tr><th>(&#8594; Data_Scientists.id)</th><th>(&#8594; Jobs.job_id)</th></tr>
+</thead><tbody>
+<tr><td>6</td><td>2</td></tr>
+<tr><td>7</td><td>2</td></tr>
+<tr><td>8</td><td>4</td></tr>
+<tr><td>9</td><td>5</td></tr>
+<tr><td>10</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

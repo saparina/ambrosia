@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Communities</span></h2><table><thead>
+<tr><th>community_id</th><th>community_name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Green Valley</td><td>California</td></tr>
+<tr><td>2</td><td>Sunny Hills</td><td>Florida</td></tr>
+<tr><td>3</td><td>Lakeview Heights</td><td>Texas</td></tr>
+<tr><td>4</td><td>Riverbend</td><td>New York</td></tr>
+<tr><td>5</td><td>Mountain View</td><td>Colorado</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Features</span></h2><table><thead>
+<tr><th>feature_id</th><th><span style="color:#990000">feature_value</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Golf Course</td></tr>
+<tr><td>2</td><td>Park</td></tr>
+<tr><td>3</td><td>School</td></tr>
+<tr><td>4</td><td>Hospital</td></tr>
+<tr><td>5</td><td>Shopping Center</td></tr>
+</tbody></table></div>
+
+<div><h2>Communities_Features</h2><table><thead>
+<tr><th>cf_id</th><th>community_id</th><th>feature_id</th><th>detail_description</th></tr>
+<tr><th></th><th>(&#8594; Communities.community_id)</th><th>(&#8594; Features.feature_id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>The Golf Course is located within walking distance.</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>There is a beautiful park near the community.</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>A golf course can also be seen from this community.</td></tr>
+<tr><td>4</td><td>2</td><td>3</td><td>Nearby schools provide excellent education options.</td></tr>
+<tr><td>5</td><td>3</td><td>2</td><td>This community has its own playground in the park.</td></tr>
+<tr><td>6</td><td>3</td><td>4</td><td>An emergency hospital is just around the corner.</td></tr>
+<tr><td>7</td><td>4</td><td>5</td><td>The shopping center offers various shops and restaurants.</td></tr>
+<tr><td>8</td><td>4</td><td>1</td><td>A stunning golf course lies adjacent to the community.</td></tr>
+<tr><td>9</td><td>5</td><td>3</td><td>A school bus stop is conveniently located here.</td></tr>
+<tr><td>10</td><td>5</td><td>4</td><td>The local hospital provides quick medical assistance.</td></tr>
+<tr><td>11</td><td>3</td><td>1</td><td>This community has its own playground in the park.</td></tr>
+<tr><td>12</td><td>5</td><td>1</td><td>A school bus stop is conveniently located here.</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

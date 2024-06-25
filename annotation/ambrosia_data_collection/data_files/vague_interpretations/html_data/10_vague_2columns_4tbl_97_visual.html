@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Movie</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>Genre</th><th>ReleaseDate</th><th>DirectorId</th><th><span style="color:#990000">LeadActorId</span></th><th><span style="color:#990000">LeadActressId</span></th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Director.id)</th><th>(&#8594; Actor.id)</th><th>(&#8594; Actress.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>Action/Adventure</td><td>2010-07-16</td><td>1</td><td>3</td><td>4</td></tr>
+<tr><td>2</td><td>The Matrix</td><td>Science Fiction</td><td>1999-03-31</td><td>2</td><td>1</td><td>5</td></tr>
+<tr><td>3</td><td>Pulp Fiction</td><td>Crime/Drama</td><td>1994-10-14</td><td>3</td><td>2</td><td>6</td></tr>
+<tr><td>4</td><td>Titanic</td><td>Romance/Disaster</td><td>1997-12-18</td><td>4</td><td>1</td><td>7</td></tr>
+<tr><td>5</td><td>Interstellar</td><td>Science Fiction/Adventure</td><td>2014-11-06</td><td>5</td><td>3</td><td>8</td></tr>
+</tbody></table></div>
+
+<div><h2>Director</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Birthdate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>1970-07-30</td></tr>
+<tr><td>2</td><td>Lana Wachowski</td><td>1969-06-21</td></tr>
+<tr><td>3</td><td>Quentin Tarantino</td><td>1963-03-27</td></tr>
+<tr><td>4</td><td>James Cameron</td><td>1954-08-16</td></tr>
+<tr><td>5</td><td>Christopher McQuarrie</td><td>1968-06-04</td></tr>
+</tbody></table></div>
+
+<div><h2>Actor</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo</td><td>DiCaprio</td><td>1974-11-11</td></tr>
+<tr><td>2</td><td>Keanu</td><td>Reeves</td><td>1964-09-02</td></tr>
+<tr><td>3</td><td>Tom</td><td>Cruise</td><td>1962-07-03</td></tr>
+<tr><td>4</td><td>William</td><td>Defoe</td><td>1961-10-30</td></tr>
+<tr><td>5</td><td>Hugo</td><td>Weaving</td><td>1960-04-04</td></tr>
+</tbody></table></div>
+
+<div><h2>Actress</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Marion</td><td>Cotillard</td><td>1975-09-30</td></tr>
+<tr><td>2</td><td>Karen</td><td>Gillan</td><td>1987-11-28</td></tr>
+<tr><td>3</td><td>Diane</td><td>Kruger</td><td>1976-07-15</td></tr>
+<tr><td>4</td><td>Ellen</td><td>Page</td><td>1987-02-21</td></tr>
+<tr><td>5</td><td>Natalie</td><td>Portman</td><td>1981-06-09</td></tr>
+</tbody></table></div>
+
+<div><h2>Role</h2><table><thead>
+<tr><th>id</th><th>CharacterName</th><th>MovieId</th><th>ActorId</th><th>ActressId</th></tr>
+<tr><th></th><th></th><th>(&#8594; Movie.id)</th><th>(&#8594; Actor.id)</th><th>(&#8594; Actress.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Dom Cobb</td><td>1</td><td>2</td><td>4</td></tr>
+<tr><td>2</td><td>Neo</td><td>2</td><td>1</td><td>5</td></tr>
+<tr><td>3</td><td>Floyd Collins</td><td>3</td><td>3</td><td>6</td></tr>
+<tr><td>4</td><td>Rose DeWitt Bukater</td><td>4</td><td>1</td><td>7</td></tr>
+<tr><td>5</td><td>Cooper</td><td>5</td><td>3</td><td>8</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

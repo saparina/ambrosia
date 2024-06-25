@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">suburbs</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>population</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>SuburbA</td><td>10000</td></tr>
+<tr><td>2</td><td>SuburbB</td><td>8000</td></tr>
+<tr><td>3</td><td>SuburbC</td><td>7000</td></tr>
+<tr><td>4</td><td>SuburbD</td><td>6000</td></tr>
+<tr><td>5</td><td>SuburbE</td><td>5000</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">schools</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">school_type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Elementary School</td></tr>
+<tr><td>2</td><td>High School</td></tr>
+<tr><td>3</td><td>Middle School</td></tr>
+<tr><td>4</td><td>College Prep School</td></tr>
+<tr><td>5</td><td>Vocational School</td></tr>
+</tbody></table></div>
+
+<div><h2>suburbs_schools</h2><table><thead>
+<tr><th>suburb_id</th><th>school_id</th></tr>
+<tr><th>(&#8594; suburbs.id)</th><th>(&#8594; schools.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>houses</h2><table><thead>
+<tr><th>id</th><th>address</th><th>price</th><th>size</th><th>bedrooms</th><th>bathrooms</th><th>suburb_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th></th><th></th><th>(&#8594; suburbs.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1 Main St, SuburbA</td><td>500000</td><td>2000</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>2 Side St, SuburbB</td><td>450000</td><td>1800</td><td>3</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3 Back Alley, SuburbC</td><td>400000</td><td>1600</td><td>2</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>4 Forward Ave, SuburbD</td><td>350000</td><td>1400</td><td>2</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>5 Overlook Blvd, SuburbE</td><td>300000</td><td>1200</td><td>2</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>neighborhoods</h2><table><thead>
+<tr><th>id</th><th>name</th><th>crime_rate</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Safe Neighborhood</td><td>1.5</td></tr>
+<tr><td>2</td><td>Moderate Crime Area</td><td>3.0</td></tr>
+<tr><td>3</td><td>High Crime Zone</td><td>4.5</td></tr>
+<tr><td>4</td><td>Very High Crime Region</td><td>5.0</td></tr>
+<tr><td>5</td><td>Low Crime Community</td><td>2.0</td></tr>
+</tbody></table></div>
+
+<div><h2>suburbs_neighborhoods</h2><table><thead>
+<tr><th>suburb_id</th><th>neighborhood_id</th></tr>
+<tr><th>(&#8594; suburbs.id)</th><th>(&#8594; neighborhoods.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Company</h2><table><thead>
+<tr><th>id</th><th>name</th><th>address</th><th>website</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Company A</td><td>Address A</td><td>www.companya.com</td></tr>
+<tr><td>2</td><td>Company B</td><td>Address B</td><td>www.companyb.com</td></tr>
+<tr><td>3</td><td>Company C</td><td>Address C</td><td>www.companys.com</td></tr>
+<tr><td>4</td><td>Company D</td><td>Address D</td><td>www.companyd.com</td></tr>
+<tr><td>5</td><td>Company E</td><td>Address E</td><td>www.companye.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Department</h2><table><thead>
+<tr><th>id</th><th>company_id</th><th>name</th></tr>
+<tr><th></th><th>(&#8594; Company.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Department A</td></tr>
+<tr><td>2</td><td>1</td><td>Department B</td></tr>
+<tr><td>3</td><td>2</td><td>Department X</td></tr>
+<tr><td>4</td><td>3</td><td>Department Y</td></tr>
+<tr><td>5</td><td>4</td><td>Department Z</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Position</span></h2><table><thead>
+<tr><th>id</th><th>department_id</th><th>title</th><th><span style="color:#186e16"><span style="color:#186e16">creative_industry_profession</span></span></th><th><span style="color:#1430b2">office</span></th><th>salary</th></tr>
+<tr><th></th><th>(&#8594; Department.id)</th><th></th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Position A</td><td><span style="color:#186e16">Graphic Designer</span></td><td><span style="color:#1430b2">2/7 London Street</span></td><td>60000</td></tr>
+<tr><td>2</td><td>1</td><td>Position B</td><td>Software Engineer</td><td>2/9 London Street</td><td>80000</td></tr>
+<tr><td>3</td><td>2</td><td>Position C</td><td><span style="color:#186e16">Graphic Designer</span></td><td>3/4 New York Avenue</td><td>55000</td></tr>
+<tr><td>4</td><td>3</td><td>Position D</td><td>Data Analyst</td><td>3/2 San Francisco Way</td><td>70000</td></tr>
+<tr><td>5</td><td>4</td><td>Position E</td><td><span style="color:#186e16">Web Developer</span></td><td><span style="color:#1430b2">2/7 London Street</span></td><td>75000</td></tr>
+</tbody></table></div>
+
+<div><h2>Employee</h2><table><thead>
+<tr><th>id</th><th>position_id</th><th>employee_name</th><th>hire_date</th></tr>
+<tr><th></th><th>(&#8594; Position.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>John Doe</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>2</td><td>Jane Smith</td><td>2021-02-01</td></tr>
+<tr><td>3</td><td>3</td><td>Alice Johnson</td><td>2021-03-01</td></tr>
+<tr><td>4</td><td>4</td><td>Bob Brown</td><td>2021-04-01</td></tr>
+<tr><td>5</td><td>5</td><td>Charlie Green</td><td>2021-05-01</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

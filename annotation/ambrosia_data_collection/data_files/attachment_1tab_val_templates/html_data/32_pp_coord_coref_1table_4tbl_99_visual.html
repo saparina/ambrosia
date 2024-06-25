@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">TerminalFacility</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#186e16"><span style="color:#186e16">Arrival_Facilities</span></span></th><th><span style="color:#1430b2">Maximum_Capacity</span></th><th>OpeningHours</th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#186e16">Arrival Hall</span></td><td><span style="color:#1430b2">500 passengers</span></td><td>06:00 - 23:00</td></tr>
+<tr><td>2</td><td><span style="color:#186e16">Arrival Hall</span></td><td>1000 passengers</td><td>07:00 - 22:00</td></tr>
+<tr><td>3</td><td><span style="color:#186e16">Baggage Reclaim</span></td><td><span style="color:#1430b2">500 passengers</span></td><td>08:00 - 21:00</td></tr>
+<tr><td>4</td><td><span style="color:#186e16">Baggage Reclaim</span></td><td>800 passengers</td><td>09:00 - 20:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Airports</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Location</th><th>NumberOfTerminals</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; TerminalFacility.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Los Angeles International Airport</td><td>California, USA</td><td>9</td></tr>
+<tr><td>2</td><td>Dubai International Airport</td><td>United Arab Emirates</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Airlines</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>Headquarters</th><th>IATA_Code</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Emirates</td><td>Dubai, United Arab Emirates</td><td>EK</td></tr>
+<tr><td>2</td><td>American Airlines</td><td>Fort Worth, Texas, U.S.</td><td>AA</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>id</th><th>FlightNo</th><th>DepartureAirportId</th><th>DestinationAirportId</th><th>AirlineId</th><th>Departs</th><th>Arrives</th></tr>
+<tr><th></th><th></th><th>(&#8594; Airports.id)</th><th>(&#8594; Airports.id)</th><th>(&#8594; Airlines.id)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>2</td><td>1</td><td>2023-04-01 10:00:00</td><td>2023-04-01 14:00:00</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>3</td><td>2</td><td>2023-04-01 11:00:00</td><td>2023-04-01 15:00:00</td></tr>
+</tbody></table></div>
+
+<div><h2>Passengers</h2><table><thead>
+<tr><th>id</th><th>FirstName</th><th>LastName</th><th>DateOfBirth</th><th>FlightId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Flights.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John</td><td>Smith</td><td>1990-01-01</td><td>1</td></tr>
+<tr><td>2</td><td>Jane</td><td>Doe</td><td>1992-02-02</td><td>2</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

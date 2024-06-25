@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2>Directors</h2><table><thead>
+<tr><th>DirectorID</th><th>Name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td></tr>
+<tr><td>2</td><td>Quentin Tarantino</td></tr>
+<tr><td>3</td><td>Martin Scorsese</td></tr>
+<tr><td>4</td><td>Steven Spielberg</td></tr>
+<tr><td>5</td><td>Guillermo del Toro</td></tr>
+</tbody></table></div>
+
+<div><h2>Countries</h2><table><thead>
+<tr><th>CountryID</th><th>CountryName</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>United States</td></tr>
+<tr><td>2</td><td>UK</td></tr>
+<tr><td>3</td><td>Canada</td></tr>
+<tr><td>4</td><td>Australia</td></tr>
+<tr><td>5</td><td>Germany</td></tr>
+</tbody></table></div>
+
+<div><h2>Movies</h2><table><thead>
+<tr><th>MovieID</th><th>Title</th><th>ReleaseYear</th><th>DirectorID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Directors.DirectorID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>Pulp Fiction</td><td>1994</td><td>2</td></tr>
+<tr><td>3</td><td>Taxi Driver</td><td>1976</td><td>3</td></tr>
+<tr><td>4</td><td>Jaws</td><td>1975</td><td>4</td></tr>
+<tr><td>5</td><td>Pan's Labyrinth</td><td>2006</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>ActorID</th><th>Name</th><th>BirthDate</th><th>CountryID</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Countries.CountryID)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>1</td></tr>
+<tr><td>2</td><td>Brad Pitt</td><td>1963-12-18</td><td>2</td></tr>
+<tr><td>3</td><td>Robert DeNiro</td><td>1943-08-17</td><td>3</td></tr>
+<tr><td>4</td><td>Ellen Page</td><td>1987-02-21</td><td>4</td></tr>
+<tr><td>5</td><td>Kate Winslet</td><td>1975-10-05</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Roles</h2><table><thead>
+<tr><th>RoleID</th><th>MovieID</th><th>ActorID</th><th>CharacterName</th></tr>
+<tr><th></th><th>(&#8594; Movies.MovieID)</th><th>(&#8594; Actors.ActorID)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>Dom Cobb</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>Vincent Vega</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>Travis Bickle</td></tr>
+<tr><td>4</td><td>4</td><td>4</td><td>Lorraine Gary</td></tr>
+<tr><td>5</td><td>5</td><td>5</td><td>Ofelia</td></tr>
+</tbody></table></div>
+
+<div><h2>Ratings</h2><table><thead>
+<tr><th>RatingID</th><th>MovieID</th><th>Score</th><th>ReviewText</th></tr>
+<tr><th></th><th>(&#8594; Movies.MovieID)</th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>8.8</td><td>A masterpiece.</td></tr>
+<tr><td>2</td><td>2</td><td>9.2</td><td>Tarantino at his best.</td></tr>
+<tr><td>3</td><td>3</td><td>8.1</td><td>An all-time classic.</td></tr>
+<tr><td>4</td><td>4</td><td>8.7</td><td>Excellent shark movie.</td></tr>
+<tr><td>5</td><td>5</td><td>8.5</td><td>A dark fairy tale.</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">Performance_Metrics</span></h2><table><thead>
+<tr><th>MetricType</th><th>Value</th><th>MovieID</th><th>CountryID</th></tr>
+<tr><th></th><th></th><th>(&#8594; Movies.MovieID)</th><th>(&#8594; Countries.CountryID)</th></tr>
+</thead><tbody>
+<tr><td><span style="color:#990000">Box Office</span></td><td>8294020</td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td><span style="color:#990000">Box Office</span></td><td>7<span style="color:#006600">1</span>44000</td><td><span style="color:#006600">1</span></td><td>3</td></tr>
+<tr><td><span style="color:#990000">Critics' Reviews</span></td><td>93</td><td><span style="color:#006600">1</span></td><td><span style="color:#006600">1</span></td></tr>
+<tr><td><span style="color:#990000">Critics' Reviews</span></td><td>89</td><td><span style="color:#006600">1</span></td><td>5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

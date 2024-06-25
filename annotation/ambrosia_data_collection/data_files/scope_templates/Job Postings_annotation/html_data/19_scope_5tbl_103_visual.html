@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Project_Managers</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>years_of_experience</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td>10</td></tr>
+<tr><td>2</td><td>Jane Smith</td><td>8</td></tr>
+<tr><td>3</td><td>Mike Brown</td><td>6</td></tr>
+<tr><td>4</td><td>Emily Davis</td><td>7</td></tr>
+<tr><td>5</td><td>David Johnson</td><td>9</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Methodologies</span></h2><table><thead>
+<tr><th>methodology_id</th><th><span style="color:#990000">name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Agile</td></tr>
+<tr><td>2</td><td>Waterfall</td></tr>
+<tr><td>3</td><td>Scrum</td></tr>
+<tr><td>4</td><td>Kanban</td></tr>
+<tr><td>5</td><td>Lean</td></tr>
+</tbody></table></div>
+
+<div><h2>Project_Managers_Methodologies</h2><table><thead>
+<tr><th>project_manager_id</th><th>methodology_id</th></tr>
+<tr><th>(&#8594; Project_Managers.id)</th><th>(&#8594; Methodologies.methodology_id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+</tbody></table></div>
+
+<div><h2>Other_Tables1</h2><table><thead>
+<tr><th>id</th><th>column2</th><th>column3</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Data A</td><td>2021-01-01</td></tr>
+<tr><td>2</td><td>Data B</td><td>2021-02-01</td></tr>
+<tr><td>3</td><td>Data C</td><td>2021-03-01</td></tr>
+<tr><td>4</td><td>Data D</td><td>2021-04-01</td></tr>
+<tr><td>5</td><td>Data E</td><td>2021-05-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Other_Tables2</h2><table><thead>
+<tr><th>id</th><th>columnA</th><th>columnB</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2.5</td></tr>
+<tr><td>2</td><td>2</td><td>3.5</td></tr>
+<tr><td>3</td><td>3</td><td>4.5</td></tr>
+<tr><td>4</td><td>4</td><td>5.5</td></tr>
+<tr><td>5</td><td>5</td><td>6.5</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

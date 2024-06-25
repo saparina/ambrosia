@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#186e16">Musicians</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th><span style="color:#186e16">musician_type</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>John Doe</td><td><span style="color:#186e16">Country Singer</span></td></tr>
+<tr><td>2</td><td>Jane Smith</td><td><span style="color:#186e16">Country Singer</span></td></tr>
+<tr><td>3</td><td>Bob Johnson</td><td>Bluegrass Singer</td></tr>
+<tr><td>4</td><td>Alice Brown</td><td>Bluegrass Singer</td></tr>
+<tr><td>5</td><td>Tom Green</td><td>Rock Star</td></tr>
+<tr><td>6</td><td>Emily White</td><td>Pop Singer</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#1430b2">Instruments</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#1430b2">instrument_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td><span style="color:#1430b2">Guitar</span></td></tr>
+<tr><td>2</td><td>Violin</td></tr>
+<tr><td>3</td><td>Piano</td></tr>
+<tr><td>4</td><td>Drums</td></tr>
+<tr><td>5</td><td>Bass Guitar</td></tr>
+</tbody></table></div>
+
+<div><h2>Songs</h2><table><thead>
+<tr><th>id</th><th>song_title</th><th>release_date</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>My Favorite Song</td><td>2018-07-01</td></tr>
+<tr><td>2</td><td>Another Great Song</td><td>2019-06-30</td></tr>
+<tr><td>3</td><td>Awesome Tune</td><td>2020-05-15</td></tr>
+<tr><td>4</td><td>Amazing Melody</td><td>2021-04-10</td></tr>
+<tr><td>5</td><td>Fantastic Track</td><td>2022-03-01</td></tr>
+</tbody></table></div>
+
+<div><h2>Albums</h2><table><thead>
+<tr><th>id</th><th>album_title</th><th>release_year</th><th>artist_id</th></tr>
+<tr><th></th><th></th><th></th><th>(&#8594; Musicians.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Album</td><td>2010</td><td>1</td></tr>
+<tr><td>2</td><td>Second Album</td><td>2011</td><td>1</td></tr>
+<tr><td>3</td><td>Third Album</td><td>2012</td><td>2</td></tr>
+<tr><td>4</td><td>Fourth Album</td><td>2013</td><td>2</td></tr>
+<tr><td>5</td><td>Fifth Album</td><td>2014</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>SongAlbum</h2><table><thead>
+<tr><th>id</th><th>song_id</th><th>album_id</th></tr>
+<tr><th></th><th>(&#8594; Songs.id)</th><th>(&#8594; Albums.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>MusicianInstrument</h2><table><thead>
+<tr><th>id</th><th>musician_id</th><th>instrument_id</th></tr>
+<tr><th></th><th>(&#8594; Musicians.id)</th><th>(&#8594; Instruments.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>3</td><td>1</td></tr>
+<tr><td>5</td><td>4</td><td>4</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

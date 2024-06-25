@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#990000">Adaptations</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>Genre</th><th>AdaptationOf</th><th>WrittenBy</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; OriginalWorks.Title)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Carrie</td><td>2002</td><td>Horror</td><td>Carrie</td><td><span style="color:#006600">Stephen King</span></td></tr>
+<tr><td>2</td><td>Game of Thrones</td><td>2011</td><td>TV Series</td><td>A Game of Thrones</td><td>David Benioff & D.B. Weiss</td></tr>
+<tr><td>3</td><td>Brideshead Revisited</td><td>2008</td><td>Drama</td><td>Pride and Prejudice</td><td>Charles Bryant & Jeannie Deutsch</td></tr>
+<tr><td>4</td><td>Heart of Darkness</td><td>1993</td><td>Drama</td><td>Things Fall Apart</td><td>Francis Ford Coppola</td></tr>
+<tr><td>5</td><td>Love in the Time of Cholera</td><td>2007</td><td>Drama</td><td>One Hundred Years of Solitude</td><td>Jeffrey Hirschfield</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#990000">OriginalWorks</span></h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>Genre</th><th>WrittenBy</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Authors.Name)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Carrie</td><td>1974</td><td>Horror</td><td><span style="color:#006600">Stephen King</span></td></tr>
+<tr><td>2</td><td>A Game of Thrones</td><td>1996</td><td>Fantasy</td><td>George R.R. Martin</td></tr>
+<tr><td>3</td><td>Pride and Prejudice</td><td>1813</td><td>Romance</td><td>Jane Austen</td></tr>
+<tr><td>4</td><td>Things Fall Apart</td><td>1958</td><td>Drama</td><td>Chinua Achebe</td></tr>
+<tr><td>5</td><td>One Hundred Years of Solitude</td><td>1967</td><td>Magical Realism</td><td>Gabriel Garcia Marquez</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>Name</th><th>BirthDate</th><th>DeathDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>Stephen King</td><td>1947-09-21</td><td>20XX-XX-XX</td><td>American</td></tr>
+<tr><td>George R.R. Martin</td><td>1948-09-20</td><td>20XX-XX-XX</td><td>American</td></tr>
+<tr><td>Jane Austen</td><td>1775-16-16</td><td>1817-07-18</td><td>English</td></tr>
+<tr><td>Chinua Achebe</td><td>1930-11-16</td><td>2013-03-21</td><td>Nigerian</td></tr>
+<tr><td>Gabriel Garcia Marquez</td><td>1928-06-06</td><td>2014-04-17</td><td>Colombian</td></tr>
+</tbody></table></div>
+
+<div><h2>Directors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>BirthDate</th><th>DeathDate</th><th>Nationality</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Christopher Nolan</td><td>1970-07-30</td><td>20XX-XX-XX</td><td>English</td></tr>
+<tr><td>2</td><td>Martin Scorsese</td><td>1942-11-22</td><td>20XX-XX-XX</td><td>American</td></tr>
+<tr><td>3</td><td>Guillermo del Toro</td><td>1964-03-09</td><td>20XX-XX-XX</td><td>Mexican</td></tr>
+<tr><td>4</td><td>Ang Lee</td><td>1954-11-23</td><td>20XX-XX-XX</td><td>Taiwanese-American</td></tr>
+<tr><td>5</td><td>Peter Jackson</td><td>1961-10-31</td><td>20XX-XX-XX</td><td>New Zealand</td></tr>
+</tbody></table></div>
+
+<div><h2>Actors</h2><table><thead>
+<tr><th>id</th><th>Name</th><th>DateOfBirth</th><th>PlaceOfBirth</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Leonardo DiCaprio</td><td>1974-11-11</td><td>Los Angeles, California, U.S.</td></tr>
+<tr><td>2</td><td>Kate Winslet</td><td>1975-10-05</td><td>Reading, Berkshire, England</td></tr>
+<tr><td>3</td><td>Tom Hanks</td><td>1956-07-09</td><td>Concord, California, U.S.</td></tr>
+<tr><td>4</td><td>Denzel Washington</td><td>1954-12-28</td><td>Mount Vernon, New York, U.S.</td></tr>
+<tr><td>5</td><td>Scarlett Johansson</td><td>1984-11-22</td><td>New York City, New York, U.S.</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmCast</h2><table><thead>
+<tr><th>filmID</th><th>actorID</th><th>role</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Actors.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Cobb</td></tr>
+<tr><td>1</td><td>2</td><td>Arthur</td></tr>
+<tr><td>2</td><td>3</td><td>Colonel Williams</td></tr>
+<tr><td>2</td><td>4</td><td>Madam Gao</td></tr>
+<tr><td>3</td><td>5</td><td>Sméagol</td></tr>
+<tr><td>3</td><td>6</td><td>Gollum</td></tr>
+<tr><td>4</td><td>7</td><td>Pi</td></tr>
+<tr><td>4</td><td>8</td><td>Richard Parker</td></tr>
+<tr><td>5</td><td>9</td><td>Frodo Baggins</td></tr>
+<tr><td>5</td><td>10</td><td>Samwise Gamgee</td></tr>
+</tbody></table></div>
+
+<div><h2>Films</h2><table><thead>
+<tr><th>id</th><th>Title</th><th>ReleaseYear</th><th>Genre</th><th>DirectorId</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Directors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Inception</td><td>2010</td><td>Action/Science Fiction</td><td>1</td></tr>
+<tr><td>2</td><td>The Departed</td><td>2006</td><td>Crime/Thriller</td><td>2</td></tr>
+<tr><td>3</td><td>Pan's Labyrinth</td><td>2006</td><td>Fantasy/Drama</td><td>3</td></tr>
+<tr><td>4</td><td>Life of Pi</td><td>2012</td><td>Adventure/Drama</td><td>4</td></tr>
+<tr><td>5</td><td>The Lord of the Rings: The Fellowship of the Ring</td><td>2001</td><td>Adventure/Fantasy</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>FilmCrew</h2><table><thead>
+<tr><th>filmID</th><th>directorID</th><th>cinematographer</th><th>editor</th><th>composer</th></tr>
+<tr><th>(&#8594; Films.id)</th><th>(&#8594; Directors.id)</th><th></th><th></th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>Wally Pfister</td><td>Lee Smith</td><td>Hans Zimmer</td></tr>
+<tr><td>2</td><td>2</td><td>Roger Deakins</td><td>William Goldenberg</td><td>Howard Shore</td></tr>
+<tr><td>3</td><td>3</td><td>Guillermo Navarro</td><td>Javier Otegui</td><td>Javier Navarrete</td></tr>
+<tr><td>4</td><td>4</td><td>Claudio Miranda</td><td>Daniel Rebert</td><td>Alexandre Desplat</td></tr>
+<tr><td>5</td><td>5</td><td>Andrew Lesnie</td><td>John Williams</td><td>Howard Shore</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

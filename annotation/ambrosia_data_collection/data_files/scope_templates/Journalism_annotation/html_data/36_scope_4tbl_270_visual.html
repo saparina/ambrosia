@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Magazines</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>publication_date</th><th>editor_name</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>The Daily Times</td><td>2021-06-01</td><td>John Smith</td></tr>
+<tr><td>2</td><td>Weekly News Digest</td><td>2021-07-01</td><td>Jane Doe</td></tr>
+<tr><td>3</td><td>Monthly Business Review</td><td>2021-08-01</td><td>Tom Brown</td></tr>
+<tr><td>4</td><td>Technology Insider</td><td>2021-09-01</td><td>Emily White</td></tr>
+<tr><td>5</td><td>Fashion World</td><td>2021-10-01</td><td>Michael Black</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Columns</span></h2><table><thead>
+<tr><th>id</th><th><span style="color:#990000">column_name</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Editor's Letter</td></tr>
+<tr><td>2</td><td>Feature Story</td></tr>
+<tr><td>3</td><td>Opinion Piece</td></tr>
+<tr><td>4</td><td>Book Reviews</td></tr>
+<tr><td>5</td><td>Travel Guide</td></tr>
+</tbody></table></div>
+
+<div><h2>Authors</h2><table><thead>
+<tr><th>id</th><th>first_name</th><th>last_name</th><th>email</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Alex</td><td>Smith</td><td>alex@gmail.com</td></tr>
+<tr><td>2</td><td>Linda</td><td>Doe</td><td>linda@yahoo.com</td></tr>
+<tr><td>3</td><td>Robert</td><td>Brown</td><td>robert@hotmail.com</td></tr>
+<tr><td>4</td><td>Cathy</td><td>White</td><td>cathy@aol.com</td></tr>
+<tr><td>5</td><td>David</td><td>Black</td><td>david@protonmail.com</td></tr>
+</tbody></table></div>
+
+<div><h2>Articles</h2><table><thead>
+<tr><th>id</th><th>title</th><th>content</th><th>publish_date</th><th>magazine_id</th><th>author_id</th></tr>
+<tr><th></th><th></th><th></th><th></th><th>(&#8594; Magazines.id)</th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>First Article Title</td><td>Content of First Article...</td><td>2021-06-01</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Second Article Title</td><td>Content of Second Article...</td><td>2021-06-03</td><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>Third Article Title</td><td>Content of Third Article...</td><td>2021-06-05</td><td>2</td><td>3</td></tr>
+<tr><td>4</td><td>Fourth Article Title</td><td>Content of Fourth Article...</td><td>2021-06-07</td><td>2</td><td>4</td></tr>
+<tr><td>5</td><td>Fifth Article Title</td><td>Content of Fifth Article...</td><td>2021-06-09</td><td>2</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Magazine_Authors</h2><table><thead>
+<tr><th>magazine_id</th><th>author_id</th></tr>
+<tr><th>(&#8594; Magazines.id)</th><th>(&#8594; Authors.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>4</td></tr>
+<tr><td>3</td><td>5</td></tr>
+</tbody></table></div>
+
+<div><h2>Magazines_Columns</h2><table><thead>
+<tr><th>magazine_id</th><th>column_id</th><th>issue_date</th></tr>
+<tr><th>(&#8594; Magazines.id)</th><th>(&#8594; Columns.id)</th><th></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td><td>2021-06-01</td></tr>
+<tr><td>1</td><td>2</td><td>2021-06-01</td></tr>
+<tr><td>2</td><td>1</td><td>2021-07-01</td></tr>
+<tr><td>2</td><td>2</td><td>2021-07-01</td></tr>
+<tr><td>3</td><td>1</td><td>2021-08-01</td></tr>
+<tr><td>3</td><td>2</td><td>2021-08-01</td></tr>
+<tr><td>4</td><td>1</td><td>None</td></tr>
+<tr><td>5</td><td>1</td><td>None</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>

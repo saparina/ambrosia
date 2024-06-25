@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Database Tables</title>
+<style>
+.table-container div {
+display: inline-block;
+vertical-align: top;
+margin-right: 20px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+border: 1px solid black;
+}
+th, td {
+border: 1px solid black;
+padding: 5px;
+}
+th {
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class='table-container'><div><h2><span style="color:#1430b2">Meteorological_Offices</span></h2><table><thead>
+<tr><th>id</th><th>name</th><th>location</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Office A</td><td>New York</td></tr>
+<tr><td>2</td><td>Office B</td><td>Chicago</td></tr>
+<tr><td>3</td><td>Office C</td><td>Los Angeles</td></tr>
+<tr><td>4</td><td>Office D</td><td>Dallas</td></tr>
+<tr><td>5</td><td>Office E</td><td>Atlanta</td></tr>
+</tbody></table></div>
+
+<div><h2><span style="color:#186e16">Data_Sources</span></h2><table><thead>
+<tr><th>id</th><th>source_type</th><th><span style="color:#990000">description</span></th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Automated_Weather_Station</td><td>Collects real-time weather data.</td></tr>
+<tr><td>2</td><td>Radar_System</td><td>Tracks precipitation and storm systems.</td></tr>
+<tr><td>3</td><td>Satellite</td><td>Monitors global atmospheric conditions.</td></tr>
+<tr><td>4</td><td>Wind_Sensor</td><td>Measures wind speed and direction.</td></tr>
+<tr><td>5</td><td>Temperature_Sensor</td><td>Records ambient temperature.</td></tr>
+</tbody></table></div>
+
+<div><h2>Meteorological_Offices_Data_Sources</h2><table><thead>
+<tr><th>meteo_office_id</th><th>data_source_id</th></tr>
+<tr><th>(&#8594; Meteorological_Offices.id)</th><th>(&#8594; Data_Sources.id)</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>3</td><td>1</td></tr>
+<tr><td>4</td><td>1</td></tr>
+<tr><td>5</td><td>1</td></tr>
+<tr><td>5</td><td>3</td></tr>
+</tbody></table></div>
+
+<div><h2>Terminals</h2><table><thead>
+<tr><th>id</th><th>terminal_name</th><th>capacity</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>Terminal 1</td><td>5000</td></tr>
+<tr><td>2</td><td>Terminal 2</td><td>4500</td></tr>
+<tr><td>3</td><td>Terminal 3</td><td>4000</td></tr>
+<tr><td>4</td><td>Terminal 4</td><td>3500</td></tr>
+<tr><td>5</td><td>Terminal 5</td><td>3000</td></tr>
+</tbody></table></div>
+
+<div><h2>Flights</h2><table><thead>
+<tr><th>flight_number</th><th>departure_time</th><th>arrival_time</th><th>destination_airport</th><th>airline_company</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>2022-12-01 10:00:00</td><td>2022-12-01 13:00:00</td><td>JFK</td><td>American Airlines</td></tr>
+<tr><td>2</td><td>2022-12-01 12:00:00</td><td>2022-12-01 16:00:00</td><td>ORD</td><td>United Airlines</td></tr>
+<tr><td>3</td><td>2022-12-01 14:00:00</td><td>2022-12-01 18:00:00</td><td>LAX</td><td>Delta Airlines</td></tr>
+<tr><td>4</td><td>2022-12-01 16:00:00</td><td>2022-12-01 20:00:00</td><td>DFW</td><td>Southwest Airlines</td></tr>
+<tr><td>5</td><td>2022-12-01 18:00:00</td><td>2022-12-01 22:00:00</td><td>ATL</td><td>Spirit Airlines</td></tr>
+</tbody></table></div>
+
+</div>
+</body>
+</html>
