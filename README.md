@@ -8,7 +8,7 @@ This repository contains data and code used for data collection and evaluation.
 
 
 ## Data
-The dataset is available on the website. Please download and extract it into the `data` directory.
+The dataset is available at [ambrosia-benchmark.github.io](https://ambrosia-benchmark.github.io/). Please download and extract it into the `data` directory.
 
 ## Setup
 To speed up inference, we use various toolkits: [TGI](https://github.com/huggingface/text-generation-inference), [VLLM](https://github.com/vllm-project/vllm), and [OpenChat server](https://github.com/imoneoi/openchat). These libraries can be easily accessed using Docker. To run Docker, first build and run the custom image (it will install additional packages and copy data to the base image):
@@ -132,3 +132,10 @@ The config options are:
 
 We provide examples of raw data in  ```annotation/ambrosia_data_collection/data_files```.
 Instructions for annotators can be found in  ```annotation/ambrosia_data_collection/instructions```
+
+## Paper
+
+More details on data collection and evaluation results are provided in the paper:
+> [𝔸𝕄𝔹ℝ𝕆𝕊𝕀𝔸: A Benchmark for Parsing Ambiguous Questions into Database Queries](https://arxiv.org/abs/2406.19073)
+> 
+> Irina Saparina and Mirella Lapata
