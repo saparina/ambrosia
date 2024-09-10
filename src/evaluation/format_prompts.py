@@ -29,7 +29,7 @@ def merge_all_insert_statements(db_path, db_dump):
         match = pattern.search(line)
         if "INSERT INTO " in line:
             table_name = line[line.find("INSERT INTO ") + len("INSERT INTO "):line.find(" VALUES(")]
-            line = line[line.find("VALUES")+ len("VALUES"):-2]
+            line = line[line.find("VALUES")+ len("VALUES"):-1]
 
             # Append values to the corresponding table's list
             if table_name != '"sqlite_sequence"':
@@ -37,7 +37,7 @@ def merge_all_insert_statements(db_path, db_dump):
         elif "BEGIN TRANSACTION" in line or "COMMIT" in line or "DELETE" in line:
             continue
         else:
-            new_content += line
+            new_content += line + "\n"
 
     # Create a single INSERT INTO statement for each table
     for table_name, values in table_inserts.items():
@@ -50,7 +50,9 @@ def merge_all_insert_statements(db_path, db_dump):
 def filter_db_dump(db_dump, gold_ambig_queries):
     # filter dump
     db_dump_filtered = ''
-    all_queries_str = " ".join(gold_ambig_queries).lower()
+    if isinstance(gold_ambig_queries, list):
+        gold_ambig_queries = " ".join(gold_ambig_queries)
+    all_queries_str = gold_ambig_queries.lower()
     skip = False
     for line in db_dump.split('\n'):
         if line.startswith("CREATE TABLE"):
