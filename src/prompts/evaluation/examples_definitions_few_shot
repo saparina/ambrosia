@@ -1,0 +1,17 @@
+Type 1: Scope Ambiguity
+
+Definition: Scope ambiguity issue arises when it is unclear which elements a quantifier, such as "each", "every" or "all", refers to.
+
+SCOPE_EXAMPLE
+
+Type 2: Attachment Ambiguity
+
+Definition: Attachment ambiguity occurs when it is unclear how a modifier or phrase is attached to the rest of the sentence.
+
+ATTACHMENT_EXAMPLE
+
+Type 3: Vagueness
+
+Definition: Vagueness occurs when context creates uncertainty about which set of entities is being referred to.
+
+VAGUENESS_EXAMPLE

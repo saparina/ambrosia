@@ -11,19 +11,12 @@ This repository contains data and code used for data collection and evaluation.
 The dataset is available at [ambrosia-benchmark.github.io](https://ambrosia-benchmark.github.io/). Please download and extract it into the `data` directory.
 
 ## Setup
-To speed up inference, we use various toolkits: [TGI](https://github.com/huggingface/text-generation-inference), [VLLM](https://github.com/vllm-project/vllm), and [OpenChat server](https://github.com/imoneoi/openchat). These libraries can be easily accessed using Docker. To run Docker, first build and run the custom image (it will install additional packages and copy data to the base image):
+To speed up inference, we use various toolkits: [TGI](https://github.com/huggingface/text-generation-inference), [VLLM](https://github.com/vllm-project/vllm), and [OpenChat server](https://github.com/imoneoi/openchat). Dockerfiles for TGI, OpenChat and VLLM inference are available in the [docker](docker/) directory. The Docker image starts the server with the model pre-loaded and has all necessary data and code.
 
-```
-docker build -t <image_name> -f <Dockerfile> .
-docker run -it <image_name> <args_for_base_image> /bin/bash
-```
-
-Dockerfiles for TGI, OpenChat and VLLM inference are available in the [docker](docker/) directory.
-
-Build and run the customized TGI image (for Llama3 and CodeLlama *Prompt*):
+Pull and run the customized TGI image (for Llama3 and CodeLlama *Prompt*):
 
 ```bash
-docker build -t ambrosia-docker-image-tgi -f docker/Dockerfile_tgi .
+docker pull irisaparina/ambrosia-eval-tgi
 docker run -it ambrosia-docker-image-tgi --gpus all \
     --shm-size 1g \
     --env "HUGGING_FACE_HUB_TOKEN=<secret>" \
@@ -32,10 +25,10 @@ docker run -it ambrosia-docker-image-tgi --gpus all \
     /bin/bash
 ```
 
-Build and run the customized VLLM image (for Llama3, CodeLlama and OpenChat *Beam*):
+Pull and run the customized VLLM image (for Llama3, CodeLlama and OpenChat *Beam*):
 
 ```bash
-docker build -t ambrosia-docker-image-vllm -f docker/Dockerfile_vllm .
+docker pull irisaparina/ambrosia-eval-vllm
 docker run -it ambrosia-docker-image-vllm --runtime nvidia --gpus all \
     --shm-size 1g \
     --env "HUGGING_FACE_HUB_TOKEN=<secret>" \
@@ -45,10 +38,10 @@ docker run -it ambrosia-docker-image-vllm --runtime nvidia --gpus all \
     /bin/bash
 ```
 
-Build and run the customized OpenChat image (for OpenChat *Prompt* and database generation):
+Pull and run the customized OpenChat image (for OpenChat *Prompt* and database generation):
 
 ```bash
-docker build -t ambrosia-docker-image-openchat -f docker/Dockerfile_openchat .
+docker pull irisaparina/ambrosia-eval-openchat
 docker run -it ambrosia-docker-image-openchat --gpus all /bin/bash
 ```
 

@@ -8,7 +8,7 @@ import concurrent.futures
 import numpy as np
 
 from evaluation_utils import Dataset, EvaluatorConfig, generate
-from format_prompts import write_icl_prompt, format_prompt, merge_all_insert_statements
+from format_prompts import write_icl_prompt, format_prompt
 from metrics import evaluate_predicted_statements
 
 def parse_args():
@@ -21,6 +21,8 @@ def parse_args():
     parser.add_argument("--experiment_name", type=str, default="", help="Optional name of experiment")
 
     parser.add_argument("--icl_pairs", type=int, default=0, help="Number of ICL examples")
+    parser.add_argument("--icl_strategy", type=str, default="random", choices=["random", "all_ambig_types"])
+    parser.add_argument("--icl_format_file", type=str, default="src/prompts/evaluation/examples_definitions_few_shot", help="File with the format for ICL examples with definitions.")
 
     parser.add_argument("--type_of_questions", type=str, choices=["ambig", "unambig"], help="Type of questions: 'ambig' or 'unambig'")
 
@@ -83,10 +85,7 @@ def setup_generation(args, generator, dataset, tokenizer=None):
 def evaluate(df_one_db_examples, eval_config):
     file_name = df_one_db_examples['db_file'].iloc[0]
     db_dump = df_one_db_examples['db_dump'].iloc[0]
-    db_file = df_one_db_examples["db_file"].iloc[0]
     is_ambiguous = df_one_db_examples['is_ambiguous'].iloc[0]
-
-    db_dump = merge_all_insert_statements(db_file, db_dump)
 
     metrics, results = [], []
     for _, row in df_one_db_examples.iterrows():
@@ -215,7 +214,7 @@ def save_results_to_file(args, all_metrics, all_results):
     else:
         args.experiment_name = args.prompt_file.split('/')[-1]
 
-    suffix = f"_{args.icl_pairs}" if args.icl_pairs else ""
+    suffix = f"_{args.icl_strategy}{args.icl_pairs}" if args.icl_pairs else ""
     suffix += "_detect"  if args.ambig_detection else ""
     suffix += f"_rs{args.seed}" if args.seed else ""
 

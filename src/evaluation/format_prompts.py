@@ -1,51 +1,6 @@
 import os
-import re
 import copy
 import random
-import sqlite3
-from collections import defaultdict
-
-def get_column_names(db_path, table_name):
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    
-    cursor.execute(f"PRAGMA table_info({table_name});")
-    rows = cursor.fetchall()
-    column_names = [row[1] for row in rows]
-    conn.close()
-    return column_names
-
-def merge_all_insert_statements(db_path, db_dump):
-    # Regex to find all INSERT INTO statements
-    pattern = re.compile(r"INSERT INTO \"(\w+)\" VALUES (\(.*?\));", re.IGNORECASE)
-    
-    # Dictionary to store values for each table
-    table_inserts = defaultdict(list)
-
-    new_content = ""
-
-    # Process the dump line by line
-    for line in db_dump.split('\n'):
-        match = pattern.search(line)
-        if "INSERT INTO " in line:
-            table_name = line[line.find("INSERT INTO ") + len("INSERT INTO "):line.find(" VALUES(")]
-            line = line[line.find("VALUES")+ len("VALUES"):-1]
-
-            # Append values to the corresponding table's list
-            if table_name != '"sqlite_sequence"':
-                table_inserts[table_name].append(line)
-        elif "BEGIN TRANSACTION" in line or "COMMIT" in line or "DELETE" in line:
-            continue
-        else:
-            new_content += line + "\n"
-
-    # Create a single INSERT INTO statement for each table
-    for table_name, values in table_inserts.items():
-        if values:
-            col_names = get_column_names(db_path, table_name)
-            new_content += f"INSERT INTO {table_name} (" + ",".join(col_names) + ") VALUES " + ",".join(values) + ";\n"
-
-    return new_content
 
 def filter_db_dump(db_dump, gold_ambig_queries):
     # filter dump
@@ -86,11 +41,12 @@ def format_prompt(args, prompt_template, db_dump, question, tokenizer=None):
     else:
         return cur_prompt
         
-def format_icl_example_one_item_sql(ambig_item, unambig_items, num_ex):
-    db_dump = merge_all_insert_statements(ambig_item["db_file"], ambig_item["db_dump"])
-    db_dump = filter_db_dump(db_dump, ambig_item['ambig_queries'])
+def format_icl_example_one_item_sql(ambig_item, unambig_items, num_ex=None):
+    db_dump = filter_db_dump(ambig_item["db_dump"], ambig_item['ambig_queries'])
     
-    icl_prompt = f"Example {num_ex}:\nGiven the following SQLite database schema:\n\n{db_dump}"
+    num_ex_str = f" {num_ex}" if num_ex else ""
+
+    icl_prompt = f"Example{num_ex_str}:\nGiven the following SQLite database schema:\n\n{db_dump}"
     icl_prompt += f"Answer the following:\n{ambig_item['question']}\n\nSQL query(s):\n"
     for _, gold_query in enumerate(ambig_item["gold_queries"]):
         icl_prompt += f"{gold_query}\n\n"
@@ -105,8 +61,7 @@ def format_icl_example_one_item_sql(ambig_item, unambig_items, num_ex):
     return icl_prompt
 
 def format_icl_example_one_item_detect(ambig_item, unambig_items, num_ex):
-    db_dump = merge_all_insert_statements(ambig_item["db_file"], ambig_item["db_dump"])
-    db_dump = filter_db_dump(db_dump, ambig_item['ambig_queries'])
+    db_dump = filter_db_dump(ambig_item["db_dump"], ambig_item['ambig_queries'])
 
     icl_prompt = f"Example {num_ex}:\nGiven the following SQLite database schema:\n\n{db_dump}"
     icl_prompt += f"Is the following question ambiguous:\n{ambig_item['question']}\n\nYes\n\n"
@@ -127,7 +82,7 @@ def write_icl_prompt(args, prompt_template, df_few_shot_examples):
     if args.seed:
         suffix += f"_rs{args.seed}"
 
-    path_to_icl_file = os.path.join('data/icl_examples', f"icl_{args.icl_pairs}{suffix}")
+    path_to_icl_file = os.path.join('data/icl_examples', f"icl_{args.icl_strategy}{args.icl_pairs}{suffix}")
 
     assert "EXAMPLES" in prompt_template        
 
@@ -135,25 +90,48 @@ def write_icl_prompt(args, prompt_template, df_few_shot_examples):
         datasets_ambig = df_few_shot_examples[df_few_shot_examples['is_ambiguous'] == True]
         datasets_unambig = df_few_shot_examples[df_few_shot_examples['is_ambiguous'] == False]
 
-        icl_prompt = ""
+        if args.icl_strategy == "random":
+            icl_prompt = ""
 
-        for idx in range(args.icl_pairs):
-            # choose ambig question
-            random_ambig_question = random.choice(datasets_ambig['ambig_question'].unique())
-            ambig_item = datasets_ambig[datasets_ambig['ambig_question'] == random_ambig_question]
-            ambig_item = ambig_item.iloc[0].to_dict()
-            unambig_items = datasets_unambig[datasets_unambig['ambig_question'] == random_ambig_question]
+            for idx in range(args.icl_pairs):
+                # choose ambig question
+                random_ambig_question = random.choice(datasets_ambig['ambig_question'].unique())
+                ambig_item = datasets_ambig[datasets_ambig['ambig_question'] == random_ambig_question]
+                ambig_item = ambig_item.iloc[0].to_dict()
+                unambig_items = datasets_unambig[datasets_unambig['ambig_question'] == random_ambig_question]
 
-            # filter out this question
-            datasets_ambig = datasets_ambig[datasets_ambig['ambig_question'] != random_ambig_question]
-            
-            if args.ambig_detection:
-                icl_prompt += format_icl_example_one_item_detect(ambig_item, unambig_items, 1 + idx)
-            else:
-                icl_prompt += format_icl_example_one_item_sql(ambig_item, unambig_items, 1 + idx)
+                # filter out this question
+                datasets_ambig = datasets_ambig[datasets_ambig['ambig_question'] != random_ambig_question]
+                
+                if args.ambig_detection:
+                    icl_prompt += format_icl_example_one_item_detect(ambig_item, unambig_items, 1 + idx)
+                else:
+                    icl_prompt += format_icl_example_one_item_sql(ambig_item, unambig_items, 1 + idx)
+  
+            icl_examples_prompt = icl_prompt[:-2]
+    
+        else:
+            icl_prompt = {'vague': "", 'attachment': "", 'scope': ""}
 
-    if not os.path.exists(path_to_icl_file):    
-        icl_examples_prompt = icl_prompt[:-2]
+            for idx in range(args.icl_pairs):
+                for ambig_type in ['vague', 'attachment', 'scope']:
+                    cur_datasets_ambig = datasets_ambig[datasets_ambig['ambig_type'] == ambig_type]
+
+                    random_ambig_question = random.choice(cur_datasets_ambig['ambig_question'].unique())
+                    ambig_item = datasets_ambig[datasets_ambig['ambig_question'] == random_ambig_question]
+                    ambig_item = ambig_item.iloc[0].to_dict()
+                    unambig_items = datasets_unambig[datasets_unambig['ambig_question'] == random_ambig_question]
+
+                    datasets_ambig = datasets_ambig[datasets_ambig['ambig_question'] != random_ambig_question]
+
+                    icl_prompt[ambig_type] += format_icl_example_one_item_sql(ambig_item, unambig_items, 1 + idx)
+
+            with open(args.icl_format_file, 'r') as f:
+                examples_template = f.read()
+        
+            examples_template = examples_template.replace("SCOPE_EXAMPLE", icl_prompt['scope'][:-2])
+            examples_template = examples_template.replace("ATTACHMENT_EXAMPLE", icl_prompt['attachment'][:-2])
+            icl_examples_prompt = examples_template.replace("VAGUENESS_EXAMPLE", icl_prompt['vague'][:-2])
 
         with open(path_to_icl_file, 'w') as f:
             f.write(icl_examples_prompt)
@@ -163,7 +141,7 @@ def read_icl_prompt(args, prompt_template):
     if args.seed:
         suffix += f"_rs{args.seed}"
 
-    path_to_icl_file = os.path.join('data/icl_examples', f"icl_{args.icl_pairs}{suffix}")
+    path_to_icl_file = os.path.join('data/icl_examples', f"icl_{args.icl_strategy}{args.icl_pairs}{suffix}")
     with open(path_to_icl_file, 'r') as f:
         icl_examples_prompt = f.read()
 

@@ -11,6 +11,17 @@ def parse_statements_openchat(text):
         for stat in statements:
             new_statements.append(stat.replace("\\", "").replace("```sql\n", "").replace("```", ""))
         statements = new_statements
+
+    new_statements = []
+    for code in statements:
+        if "\n\n" in code or ";" in code:
+            split = re.split(r';|\n\n', code)
+            new_statements += [
+                x.strip() for x in split 
+                if x.strip() and (x.strip().lower().startswith("select") or x.strip().lower().startswith("with"))
+            ]
+    if new_statements:
+        statements = new_statements
     return statements
 
 def parse_statements_mistral(text):

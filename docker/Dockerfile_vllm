@@ -1,6 +1,7 @@
-FROM vllm/vllm-openai:latest
+FROM vllm/vllm-openai:v0.6.1
 
-RUN pip install inflect mlcroissant sqlparse
+RUN pip install inflect sqlparse
+RUN pip3 install mlcroissant==1.0.8
 
 COPY src /app/src
 COPY data /app/data
